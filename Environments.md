@@ -15,6 +15,8 @@ This automatic insertion of `\item` can be deactivated by setting `latex-worksho
 
 <img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/auto item.gif" alt="auto \item demo" height="80px">
 
+In any case, you can use the shortcut <kbd>ctrl</kbd>+<kbd>l</kbd>, <kbd>ctrl</kbd>+<kbd>Enter</kbd> to insert a newline and `\item`. On Mac, <kbd>ctrl</kbd> is replaced by <kbd>⌘</kbd>.
+
 ## Navigation
 
 - To navigate from `\begin/\end` to the corresponding `\end/\begin`, while on the `begin` or `end` keywords, call _LaTeX Workshop: Navigate to matching begin/end_ from the **Command Palette** (command `latex-workshop.navigate-envpair`).

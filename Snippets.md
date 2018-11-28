@@ -132,6 +132,6 @@ Some common mathematical symbols or commands have a dedicated snippet.
 
 ## Miscellaneous Actions
 
-| Shortcut                                                       | Does         |
-| -------------------------------------------------------------- | ------------ |
-| <kbd>ctrl</kbd>+<kbd>l</kbd>, <kbd>ctrl</kbd>+<kbd>Enter</kbd> | Insert `\item` |
+| Shortcut                                                       | Action                   |
+| -------------------------------------------------------------- | ------------------------ |
+| <kbd>ctrl</kbd>+<kbd>l</kbd>, <kbd>ctrl</kbd>+<kbd>Enter</kbd> | Insert newline + `\item` |
