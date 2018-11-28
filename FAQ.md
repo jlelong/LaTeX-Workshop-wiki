@@ -2,7 +2,7 @@
 
 - [Known incompatible extensions](#Known-incompatible-extensions)
 - [The Problem Pane displays wrong messages](#The-Problem-Pane-displays-wrong-messages)
-- [I cannot use `ctrl`+`alt` in a shortcut](#I-cannot-use-ctrl+alt-in-a-shortcut)
+- [I cannot use `ctrl`+`alt` in a shortcut](#I-cannot-use-ctrlalt-in-a-shortcut)
 
 ## Known incompatible Extensions
 
