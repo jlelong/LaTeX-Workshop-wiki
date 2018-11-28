@@ -5,8 +5,6 @@
 - [Viewing & synctex](View)
 - [Linters](Linters)
 - [Muti file projects](Multi-File-Projects)
-  - [Auto detection of the "main" file](Multi-File-Projects#Auto-detection-of-the-main-file)
-  - [Setting the main file manually](Multi-File-Projects#Setting-the-main-file-manually)
 - [Intellisense](Intellisense)
   - [Citation](Intellisense#Citation)
   - [Label](Intellisense#Label)
