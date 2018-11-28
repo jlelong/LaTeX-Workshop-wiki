@@ -49,8 +49,6 @@ As most LaTeX compiler accepts root file name without extension, `%DOC%` and `%D
 
 ## Magic comments
 
-### Magic comments?
-
 LaTeX Workshop supports `% !TEX program` magic comment to specify the compiler program. However, it is advised to use the recipe system instead of magic program to define the building process, since the latter is only implemented for backward compatibility.
 
 For `% !TEX program` magic comment, its arguments are defined in `latex-workshop.latex.magic.args`:
