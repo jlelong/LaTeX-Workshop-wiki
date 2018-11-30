@@ -6,7 +6,7 @@
 
 ## Known incompatible Extensions
 
-The following extensions are known to cause issues when active at the same time as LaTeX-Workshop, namely a significant delay when using the Enter key.
+The following extensions are known to cause issues when active at the same time as LaTeX-Workshop, namely a significant delay when using the Enter key in large files.
 
 - [Spell Right](https://marketplace.visualstudio.com/items?itemName=ban.spellright)
 - [Brackets Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
