@@ -5,6 +5,7 @@
 - [I cannot use `ctrl`+`alt` in a shortcut](#I-cannot-use-ctrlalt-in-a-shortcut)
 - [Disable automatic build on save](#disable-automatic-build-on-save)
 - [My file is built when I paste](#my-file-is-built-when-I-paste)
+- [Format on save does not work](#format-on-save-does-not-work)
 
 ## Known incompatible Extensions
 
@@ -35,4 +36,10 @@ Set the configuration variable `latex-workshop.latex.autoBuild.onSave.enabled` t
 
 Set `editor.formatOnPaste` to `false`.
 
-The formatter programm `latexindent` changes the file on disk when formatting and not only the buffer content. VSCode interprets it as a file save and triggers a build if `latex-workshop.latex.autoBuild.onSave.enabled` to `true`
+The formatting programm `latexindent` changes the file on disk when formatting and not only the buffer content. VSCode interprets it as a file save and triggers a build if `latex-workshop.latex.autoBuild.onSave.enabled` to `true`
+
+## Format on save does not work
+
+This is a known issue but we cannot do much from the extension side.
+
+The formatting utility `latexindent` reads its input from the file on the disk and not from the content of the editor. So when using _Format on Save_, first you format the file on the disk and then you save the content of the buffer. This is obviously done in the wrong order, but we cannot do much from the extension side to fix this. Note that if you save twice, the editor content is indeed formatted. When using _RightClick->Format Document_, we first save the buffer before calling the formatting program.
