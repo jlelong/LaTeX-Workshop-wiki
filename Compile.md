@@ -7,6 +7,8 @@
 
 By default, the shortcuts are set according to the first column. You may switch to an alternative keymap by setting `latex-workshop.bind.altKeymap.enabled` to `true` and reload/reopen vscode. See also [the FAQ](FAQ#i-cannot-use-ctrlalt-in-a-shortcut).
 
+By default, the extension compiles the project upon saving any tex files. If you want to disable this feature, set the configuration variable `latex-workshop.latex.autoBuild.onSave.enabled` to `false`.
+
 ## LaTeX recipe
 
 A LaTeX recipe refers to a sequence/array of commands which LaTeX Workshop executes sequentially when building LaTeX projects. It is defined by `latex-workshop.latex.recipes`. By default, LaTeX Workshop includes two basic recipes: one simply running the `latexmk` command, and an other one running the typical sequence of commands `pdflatex` → `bibtex` → `pdflatex` → `pdflatex`.
