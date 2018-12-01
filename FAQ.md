@@ -3,6 +3,7 @@
 - [Known incompatible extensions](#Known-incompatible-extensions)
 - [The Problem Pane displays wrong messages](#The-Problem-Pane-displays-wrong-messages)
 - [I cannot use `ctrl`+`alt` in a shortcut](#I-cannot-use-ctrlalt-in-a-shortcut)
+- [Disable automatic build on save](#disable-automatic-build-on-save)
 
 ## Known incompatible Extensions
 
@@ -24,3 +25,9 @@ Note that when log messages are hard wrapped, the _Problems Pane_ may be messed 
 ## I cannot use `ctrl`+`alt` in a shortcut
 
 The default shortcuts for commands related to build and view use the modifiers <kbd>ctrl</kbd>+<kbd>alt</kbd>. On some keyboard layouts, <kbd>ctrl</kbd>+<kbd>alt</kbd> is used to emulate <kbd>AltrGr</kbd>, which makes these shortcuts unusable. Alternatively, you can use <kbd>ctrl</kbd>+<kbd>l</kbd>, <kbd>alt</kbd>+<kbd>letter</kbd> instead of <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>letter</kbd> by setting `latex-workshop.bind.altKeymap.enabled` to `true` (you need reload/reopen vscode for the change to be taken into account).
+
+## Disable automatic build on save
+
+Set the configuration variable `latex-workshop.latex.autoBuild.onSave.enabled` to `false`.
+
+
