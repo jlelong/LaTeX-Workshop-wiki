@@ -4,6 +4,7 @@
 - [Compiling](Compile)
 - [Viewing & synctex](View)
 - [Linters](Linters)
+- [Formatting](Format)
 - [Muti file projects](Multi-File-Projects)
 - [Intellisense](Intellisense)
   - [Citation](Intellisense#Citation)
