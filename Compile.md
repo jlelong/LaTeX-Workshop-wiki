@@ -11,8 +11,11 @@ By default, the shortcuts are set according to the first column. You may switch 
 
 |                     Setting key                      |                    Description                    | Default |  Type   |
 | ---------------------------------------------------- | ------------------------------------------------- | ------- | ------- |
-| `latex-workshop.latex.autoBuild.onSave.enabled`      | Enable automatic build when saving any tex file   | `true`  | boolean |
-| `latex-workshop.latex.autoBuild.onTexChange.enabled` | Enable LaTeX build after any tex file has changed | `false` | boolean |
+| `latex-workshop.latex.autoBuild.onSave.enabled`      | Enable automatic build when saving any tex file   | `true`  | _boolean_ |
+| `latex-workshop.latex.autoBuild.onTexChange.enabled` | Enable LaTeX build after any tex file has changed | `false` | _boolean_ |
+| [`latex-workshop.latex.recipes`](#latex-recipe)      | Sequence of tools to run for building             |        | _JSON object_ |
+| [`latex-workshop.latex.tools`](#latex-recipe)        | Tools available for building                      |        | _JSON object_ |
+| [`latex-workshop.latex.magic.args`](#magic-comments) | Arguments for `TeX program`                       |      | _array of strings_ |
 
 
 ## LaTeX recipe
