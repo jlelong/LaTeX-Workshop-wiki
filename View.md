@@ -22,9 +22,9 @@ This extension will automatically look for synctex in the expected location (see
 
 | Setting key                                                                                  | Description                               | Default       | Type          |
 | -------------------------------------------------------------------------------------------- | ----------------------------------------- | ------------- | ------------- |
-| [`latex-workshop​.synctex​.afterBuild​.enabled`](#latex-workshop.synctex.afterBuild.enabled) | Forward synxtex at cursor after compiling | `false`       | _boolean_     |
-| [`latex-workshop​.synctex​.path`](#latex-workshop.synctex.path)                              | SyncTeX location                          | `"synctex"`   | _string_      |
-| [`latex-workshop​.view.pdf​.external​.synctex`](#latex-workshop.view.pdf.external.synctex)   | SyncTeX command for the extenal viewer    | (see details) | _JSON object_ |  |  |
+| [`latex-workshop​.synctex​.afterBuild​.enabled`](#latex-workshopsynctexafterBuildenabled) | Forward synxtex at cursor after compiling | `false`       | _boolean_     |
+| [`latex-workshop​.synctex​.path`](#latex-workshopsynctexpath)                              | SyncTeX location                          | `"synctex"`   | _string_      |
+| [`latex-workshop​.view.pdf​.external​.synctex`](#latex-workshopviewpdfexternalsynctex)   | SyncTeX command for the extenal viewer    | (see details) | _JSON object_ |  |  |
 
 ### Details
 
