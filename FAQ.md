@@ -4,6 +4,7 @@
 - [The Problem Pane displays wrong messages](#The-Problem-Pane-displays-wrong-messages)
 - [I cannot use `ctrl`+`alt` in a shortcut](#I-cannot-use-ctrlalt-in-a-shortcut)
 - [Disable automatic build on save](#disable-automatic-build-on-save)
+- [My file is built when I paste](#my-file-is-built-when-I-paste)
 
 ## Known incompatible Extensions
 
@@ -30,4 +31,8 @@ The default shortcuts for commands related to build and view use the modifiers <
 
 Set the configuration variable `latex-workshop.latex.autoBuild.onSave.enabled` to `false`.
 
+## My file is built when I paste
 
+Set `editor.formatOnPaste` to `false`.
+
+The formatter programm `latexindent` changes the file on disk when formatting and not only the buffer content. VSCode interprets it as a file save and triggers a build if `latex-workshop.latex.autoBuild.onSave.enabled` to `true`
