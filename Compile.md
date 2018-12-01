@@ -1,9 +1,9 @@
 # Compiling
 
-| Shortcut                                    | Alternative                                               | Does                               |
+| Shortcut                                    | Alternative                                               | Action                               |
 | ------------------------------------------- | --------------------------------------------------------- | ---------------------------------- |
-| <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>b</kbd> | <kbd>ctrl</kbd>+<kbd>l</kbd>, <kbd>alt</kbd>+<kbd>b</kbd> | Builds current file                |
-| <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>c</kbd> | <kbd>ctrl</kbd>+<kbd>l</kbd>, <kbd>alt</kbd>+<kbd>c</kbd> | clean latex build files            |
+| <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>b</kbd> | <kbd>ctrl</kbd>+<kbd>l</kbd>, <kbd>alt</kbd>+<kbd>b</kbd> | Build current file                |
+| <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>c</kbd> | <kbd>ctrl</kbd>+<kbd>l</kbd>, <kbd>alt</kbd>+<kbd>c</kbd> | Clean latex build files            |
 
 By default, the shortcuts are set according to the first column. You may switch to an alternative keymap by setting `latex-workshop.bind.altKeymap.enabled` to `true` and reload/reopen vscode. See also [the FAQ](FAQ#i-cannot-use-ctrlalt-in-a-shortcut).
 
