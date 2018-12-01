@@ -6,6 +6,7 @@
 - [Disable automatic build on save](#disable-automatic-build-on-save)
 - [My file is built when I paste](#my-file-is-built-when-I-paste)
 - [Format on save does not work](#format-on-save-does-not-work)
+- [My file gets messed up](#my-file-gets-messed-up)
 
 ## Known incompatible Extensions
 
@@ -43,3 +44,9 @@ The formatting programm `latexindent` changes the file on disk when formatting a
 This is a known issue but we cannot do much from the extension side.
 
 The formatting utility `latexindent` reads its input from the file on the disk and not from the content of the editor. So when using _Format on Save_, first you format the file on the disk and then you save the content of the buffer. This is obviously done in the wrong order, but we cannot do much from the extension side to fix this. Note that if you save twice, the editor content is indeed formatted. When using _RightClick->Format Document_, we first save the buffer before calling the formatting program.
+
+## My file gets messed up.
+
+This is most likely related to the two following variables being set together `latex-workshop.latex.autoBuild.onTexChange.enabled: true` and `editor.formatOnSave: true`. 
+
+Formatting a .tex file actually changes it on the disk and then if `latex-workshop.latex.autoBuild.onTexChange.enabled` is true it saves the file and triggers a build. You will get two formatting processes running together and using the same temporary file. Hence, the mess you see in your file.
