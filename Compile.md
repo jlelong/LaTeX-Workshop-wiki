@@ -7,9 +7,13 @@
 
 By default, the shortcuts are set according to the first column. You may switch to an alternative keymap by setting `latex-workshop.bind.altKeymap.enabled` to `true` and reload/reopen vscode. See also [the FAQ](FAQ#i-cannot-use-ctrlalt-in-a-shortcut).
 
-By default, the extension compiles the project upon saving any tex files. If you want to disable this feature, set `latex-workshop.latex.autoBuild.onSave.enabled` to `false`.
+## Relevant Settings
 
-You can automatically build a file anytime it is modified by setting `latex-workshop.latex.autoBuild.onTexChange.enabled` to `true`.
+|                     Setting key                      |                    Description                    | Default |  Type   |
+| ---------------------------------------------------- | ------------------------------------------------- | ------- | ------- |
+| `latex-workshop.latex.autoBuild.onSave.enabled`      | Enable automatic build when saving any tex file   | `true`  | boolean |
+| `latex-workshop.latex.autoBuild.onTexChange.enabled` | Enable LaTeX build after any tex file has changed | `false` | boolean |
+
 
 ## LaTeX recipe
 
