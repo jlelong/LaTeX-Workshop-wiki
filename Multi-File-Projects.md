@@ -8,3 +8,5 @@ To find the root file, LaTeX Workshop will follow the steps below, stopping when
 3. **Root directory check** LaTeX Workshop iterates through all `.tex` files in the root folder of the workspace. The first one with `\begin{document}` is set as root.
 
 If no root file is found, most of the features in LaTeX Workshop will not work.
+
+Once the root file is determined, it is parse to discover all files it includes using `input`, `include`, `InputIfFileExists`, `subfile`, `import` and `subimport` and the process goes on recursively. All these files are considered to define a LaTeX project.
