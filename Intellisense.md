@@ -4,31 +4,45 @@ This extension provides a variety of intellisense completions for different LaTe
 
 ## Citation
 
-When citing a bibliography entry, figure, table or other labelled document element via `\ref`, `\autoref`, `\cite` etc. the extension provides suggestions based on a list of possible values gathered in the background. This happens automatically and does not need to be enabled in settings.
+Every file of a LaTeX project is parsed to look for bibliography resources, either directly in a `thebibliography` environment or given by the `bibliography` or `addbibresource` commands or variants of them. If some of these resources are located outside the project directly, you need to list them in [`latex-workshop.latex.additionalBib`](#latex-workshoplatexadditionalBib). When loading the extension, the files listed in latex-workshop.latex.additionalBib are set up for watching if they exist and then thanks to the watching process any modification to these files are visible inside the extension. No need to restart/reload vscode.
+
+Then, when citation commands like `\cite` and its derivatives are automatically completed with bibliography entries found in the various resources.
+
+If you use very large bibtex files, you may experience temporary freezing. Hence, files larger than 5MB are ignored (see [`latex-workshop.intellisense.citation.maxfilesizeMB"`](#latex-workshopintellisensecitationmaxfilesizeMB)).
+
+|                                                 Setting key                                                  |                                      Description                                       |    Default     |           Type           |                           |           |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- | -------------- | ------------------------ | ------------------------- | --------- |
+| [`latex-workshop.intellisense.citation.label`](#latex-workshopintellisensecitationlabel)                  | Citation property used as suggestion                                                   | `"bibtex key"` | _string_: "bibtex key" \ | "title" \                 | "authors" |
+| [`latex-workshop.intellisense.citation.maxfilesizeMB"`](#latex-workshopintellisensecitationmaxfilesizeMB) | Maximum bibtex file size (in MB)                                                       | `5`            | _float_                  |                           |           |
+| [`latex-workshop.intellisense.citation.type`](#latex-workshopintellisensecitationtype)                    | Type of vs code suggestion to use                                                      | `"inline"`     | _string_: "inline" \     | "browser" (dropdown menu) |           |
+| [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled)                | Enabling of auto-completion for commands and environments from loaded packages         | `false`        | _boolean_                |                           |           |
+| [`latex-workshop.latex.additionalBib`](#latex-workshoplatexadditionalBib)                                  | Additional bib paths to watch, both relative and absolute paths (with globs) supported | `[]`           | _array_ of _strings_     |                           |           |
+
+
+## Reference
+
+Similarly as for the citation mechanism, all files of a LaTeX project are search for labels. Then, any `\ref` related command is automatically completed with label keys.
 
 <img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/ref.gif" alt="intellisense demo" height="80px">
 
-## Label
+## Commands
 
-## Filenames
+The key `\` automatically triggers completion of LaTeX commands. Several mechanism play together to build the list of available commands.
 
-## Relevant Settings
+- A set of standard LaTeX commands is provided.
+- The files of a LaTeX project are searched for any already used commands in the form `mycommand` followed by several `{}` groups. Then, a snippet is dynamically built for each of them and they are added to command completion list.
+- When [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled) is `true`, the command completion list is also populated with the commands provided by all the package used in the project (through `\usepackage`). The list of commands provided by every package is described [here](https://github.com/LaTeXing/LaTeX-cwl).
 
-### Overview
 
-| Setting key                                                                                                      | Description                                                                                    | Default        | Type                                            |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | -------------- | ----------------------------------------------- |
-| [`latex-workshop​.intellisense​.citation​.label`](#latex-workshop.intellisense.citation.label)                   | Citation property used as suggestion                                                           | `"bibtex key"` | _string_: "bibtex key" \| "title" \| "authors"  |
-| [`latex-workshop​.intellisense​.citation​.maxfilesizeMB"`](#latex-workshop.intellisense.citation.maxfilesizeMB)  | Maximum bibtex file size (in MB)                                                               | `5`            | _float_                                         |
-| [`latex-workshop​.intellisense​.citation​.type`](#latex-workshop.intellisense.citation.type)                     | Type of vs code suggestion to use                                                              | `"inline"`     | _string_: "inline" \| "browser" (dropdown menu) |
-| [`latex-workshop​.intellisense​.package​.enabled`](#latex-workshop.intellisense.package.enabled)                 | Enabling of auto-completion for commands and environments from loaded packages                 | `false`        | _boolean_                                       |
-| [`latex-workshop​.intellisense​.surroundCommand​.enabled`](#latex-workshop.intellisense.surroundCommand.enabled) | When text selected, set hotkey `\` surround selection with LaTeX command | `false` | _boolean_ |
-| [`latex-workshop​.intellisense​.unimathsymbols​.enabled`](#latex-workshop.intellisense.unimathsymbols.enabled)   | Show unimath symbols as suggestions when `\` pressed | `false` | _boolean_                     |
-| [`latex-workshop​.latex​.additionalBib`](#latex-workshop.latex.additionalBib)                                    | Additional bib paths to watch, both relative and absolute paths (with globs) supported         | `[]`           | _array_ of _strings_                            |
+|                                                  Setting key                                                  |                                  Description                                   | Default |   Type    |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ------- | --------- |
+| [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled)                 | Enabling of auto-completion for commands and environments from loaded packages | `false` | _boolean_ |
+| [`latex-workshop.intellisense.surroundCommand.enabled`](#latex-workshopintellisensesurroundCommandenabled) | When text selected, set hotkey `\` surround selection with LaTeX command       | `false` | _boolean_ |
+| [`latex-workshop.intellisense.unimathsymbols.enabled`](#latex-workshopintellisenseunimathsymbolsenabled)   | Show unimath symbols as suggestions when `\` pressed                           | `false` | _boolean_ |
 
-### Details
+## Configuration variables
 
-#### latex-workshop.intellisense.citation.label
+### latex-workshop.intellisense.citation.label
 
 Defines what to show as suggestion labels when intellisense provides citation suggestions.
 
@@ -40,7 +54,7 @@ Defines what to show as suggestion labels when intellisense provides citation su
 | -------- | -------------- |
 | _string_ | `"bibtex key"` |
 
-#### latex-workshop.intellisense.citation.maxfilesizeMB
+### latex-workshop.intellisense.citation.maxfilesizeMB
 
 Defines the maximum bibtex file size for the extension to parse in MB.
 
@@ -48,7 +62,7 @@ Defines the maximum bibtex file size for the extension to parse in MB.
 | ------- | ------------- |
 | _float_ | `5`           |
 
-#### latex-workshop.intellisense.citation.type
+### latex-workshop.intellisense.citation.type
 
 Defines which type of hint to show when intellisense provides citation suggestions.
 
@@ -59,7 +73,7 @@ Defines which type of hint to show when intellisense provides citation suggestio
 | ------ | ------------- |
 | string | `"inline"`    |
 
-#### latex-workshop.intellisense.package.enabled
+### latex-workshop.intellisense.package.enabled
 
 Auto-complete commands and environments from used packages.
 
@@ -67,7 +81,7 @@ Auto-complete commands and environments from used packages.
 | --------- | ------------- |
 | _boolean_ | `false`       |
 
-#### latex-workshop.intellisense.surroundCommand.enabled
+### latex-workshop.intellisense.surroundCommand.enabled
 
 When `\` is typed with text selected, surround the selection with LaTeX command.
 
@@ -75,7 +89,7 @@ When `\` is typed with text selected, surround the selection with LaTeX command.
 | --------- | ------------- |
 | _boolean_ | `false`       |
 
-#### latex-workshop.intellisense.unimathsymbols.enabled
+### latex-workshop.intellisense.unimathsymbols.enabled
 
 When `\` is typed, show unimath symbols in the dropdown selector.
 
@@ -83,7 +97,7 @@ When `\` is typed, show unimath symbols in the dropdown selector.
 | --------- | ------------- |
 | _boolean_ | `false`       |
 
-#### latex-workshop.latex.additionalBib
+### latex-workshop.latex.additionalBib
 
 Addition bibliography files to watch.
 
