@@ -7,6 +7,7 @@
 - [My file is built when I paste](#my-file-is-built-when-I-paste)
 - [Format on save does not work](#format-on-save-does-not-work)
 - [My file gets messed up](#my-file-gets-messed-up)
+- [Large bibtex files are ignored](#large-bibtex-files-are-ignored)
 
 ## Known incompatible Extensions
 
@@ -50,3 +51,7 @@ The formatting utility `latexindent` reads its input from the file on the disk a
 This is most likely related to the two following variables being set together `latex-workshop.latex.autoBuild.onTexChange.enabled: true` and `editor.formatOnSave: true`. 
 
 Formatting a .tex file actually changes it on the disk and then if `latex-workshop.latex.autoBuild.onTexChange.enabled` is true it saves the file and triggers a build. You will get two formatting processes running together and using the same temporary file. Hence, the mess you see in your file.
+
+## Large bibtex files are ignored
+
+Bibtex files listed in a project are parsed for citation completion. This may induce significant slow down with large bibtex files. You can configure the maximum size of bibtex files parsed by the extension with [`latex-workshop​.intellisense​.citation​.maxfilesizeMB"`](Intelissense#latex-workshopintellisensecitationmaxfilesizeMB).
