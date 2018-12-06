@@ -90,7 +90,7 @@ Auto-complete commands and environments from used packages.
 | _boolean_ | `false`       |
 
 
-### latex-workshop.intellisense.optionalArgsEntries.enabled"
+### latex-workshop.intellisense.optionalArgsEntries.enabled
 
 Many LaTeX commands can have several signatures, each with different arguments. If set to True, the intellisense completion list will have one entry for each form of a given command.
 
@@ -100,7 +100,7 @@ Many LaTeX commands can have several signatures, each with different arguments. 
 
 Reload vscode after change.
 
-### latex-workshop.intellisense.useTabStops.enabled"
+### latex-workshop.intellisense.useTabStops.enabled
 
 Use tabstops instead of placeholders in intellisense. Tabstops enable us to directly trigger autocompletion again (particularly useful for citations and references). On the contrary, placeholders prevent any direct call to autocompletion but they provide more information on the arguments meaning.
 
