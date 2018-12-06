@@ -1,5 +1,6 @@
 # Table of Contents
 
+- [Home](Home)
 - [Installation and basic settings](Install)
 - [Compiling](Compile)
 - [Viewing & synctex](View)
