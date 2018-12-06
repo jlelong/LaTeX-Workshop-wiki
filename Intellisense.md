@@ -2,7 +2,7 @@
 
 This extension provides a variety of intellisense completions for different LaTeX features; notably for citations, labels, and file names.
 
-## Citation
+## Citations
 
 Every file of a LaTeX project is parsed to look for bibliography resources, either directly in a `thebibliography` environment or given by the `bibliography` or `addbibresource` commands or variants of them. If some of these resources are located outside the project directly, you need to list them in [`latex-workshop.latex.additionalBib`](#latex-workshoplatexadditionalBib). When loading the extension, the files listed in latex-workshop.latex.additionalBib are set up for watching if they exist and then thanks to the watching process any modification to these files are visible inside the extension. No need to restart/reload vscode.
 
@@ -19,7 +19,7 @@ If you use very large bibtex files, you may experience temporary freezing. Hence
 | [`latex-workshop.latex.additionalBib`](#latex-workshoplatexadditionalBib)                                  | Additional bib paths to watch, both relative and absolute paths (with globs) supported | `[]`           | _array_ of _strings_     |                           |           |
 
 
-## Reference
+## References
 
 Similarly as for the citation mechanism, all files of a LaTeX project are search for labels. Then, any `\ref` related command is automatically completed with label keys.
 
