@@ -12,9 +12,9 @@ This extension will automatically look for synctex in the expected location (see
 
 ### Usage
 
-**Forwards** synctex (pdf to source) is activated by right-clicking on the relevant element of the pdf preview.
+**Forwards** synctex (source to pdf) can either be activated by selecting 'Navigate, select, and edit' > 'SyncTeX from cursor' in the side bar, or by the shortcut <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>j</kbd> (<kbd>cmd</kbd>+<kbd>option</kbd>+<kbd>j</kbd> on Mac).
 
-**Reverse** synctex (source to pdf) can either be activated by selecting the option from right-clicking
+**Reverse** synctex (pdf to source) is activated by <kbd>ctrl</kbd> + left-clicking (<kbd>cmd</kbd> + left-clicking on Mac) on the relevant element of the pdf preview.
 
 ## Relevant Settings
 
