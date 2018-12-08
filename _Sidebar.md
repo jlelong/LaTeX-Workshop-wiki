@@ -6,7 +6,7 @@
 - [Viewing & synctex](View)
 - [Linters](Linters)
 - [Formatting](Format)
-- [Muti file projects](Multi-File-Projects)
+- [Multi file projects](Multi-File-Projects)
 - [Intellisense](Intellisense)
   - [Citations](Intellisense#Citations)
   - [References](Intellisense#References)
