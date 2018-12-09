@@ -16,7 +16,7 @@ By default, the shortcuts are set according to the first column. You may switch 
 | `latex-workshop.latex.autoBuild.cleanAndRetry.enabled` | Enable cleaning and building once more after errors in the build toolchain | `true` | _boolean_ |
 | `latex-workshop.latex.clean.enabled` | Enable cleaning LaTeX auxillary files after building project | `false` | _boolean_ |
 | `latex-workshop.latex.clean.onFailBuild.enabled` | Enable cleaning LaTeX auxillary files after a failed build | `false` | _boolean_ |
-| `latex-workshop.latex.clean.fileTypes` | Extensions of files to clean | `["*.aux", "*.bbl", "*.blg", "*.idx", "*.ind", "*.lof", "*.lot", "*.out", "*.toc", "*.acn", "*.acr", "*.alg", "*.glg", "*.glo", "*.gls", "*.ist", "*.fls", "*.log", "*.fdb_latexmk"]`, | _array of strings_ |
+| `latex-workshop.latex.clean.fileTypes` | Extensions of files to clean |  | _array of strings_ |
 | [`latex-workshop.latex.recipes`](#latex-recipe)      | Sequence of tools to run for building             |        | _JSON object_ |
 | [`latex-workshop.latex.tools`](#latex-recipe)        | Tools available for building                      |        | _JSON object_ |
 | [`latex-workshop.latex.magic.args`](#magic-comments) | Arguments for `TeX program`                       |      | _array of strings_ |
