@@ -10,13 +10,13 @@ Then, when citation commands like `\cite` and its derivatives are automatically 
 
 If you use very large bibtex files, you may experience temporary freezing. Hence, files larger than 5MB are ignored (see [`latex-workshop.intellisense.citation.maxfilesizeMB"`](#latex-workshopintellisensecitationmaxfilesizeMB)).
 
-|                                                 Setting key                                                  |                                      Description                                       |    Default     |           Type           |                           |           |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- | -------------- | ------------------------ | ------------------------- | --------- |
-| [`latex-workshop.intellisense.citation.label`](#latex-workshopintellisensecitationlabel)                  | Citation property used as suggestion                                                   | `"bibtex key"` | _string_: "bibtex key" \ | "title" \                 | "authors" |
-| [`latex-workshop.intellisense.citation.maxfilesizeMB"`](#latex-workshopintellisensecitationmaxfilesizeMB) | Maximum bibtex file size (in MB)                                                       | `5`            | _float_                  |                           |           |
-| [`latex-workshop.intellisense.citation.type`](#latex-workshopintellisensecitationtype)                    | Type of vs code suggestion to use                                                      | `"inline"`     | _string_: "inline" \     | "browser" (dropdown menu) |           |
-| [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled)                | Enabling of auto-completion for commands and environments from loaded packages         | `false`        | _boolean_                |                           |           |
-| [`latex-workshop.latex.additionalBib`](#latex-workshoplatexadditionalBib)                                  | Additional bib paths to watch, both relative and absolute paths (with globs) supported | `[]`           | _array_ of _strings_     |                           |           |
+|                                                 Setting key                                                  |                                      Description                                       |    Default     |           Type           | 
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- | -------------- | ------------------------ |
+| [`latex-workshop.intellisense.citation.label`](#latex-workshopintellisensecitationlabel)                  | Citation property used as suggestion                                                   | `"bibtex key"` | _string_: "bibtex key" \| "title" \| "authors" |
+| [`latex-workshop.intellisense.citation.maxfilesizeMB"`](#latex-workshopintellisensecitationmaxfilesizeMB) | Maximum bibtex file size (in MB)                                                       | `5`            | _float_                  |
+| [`latex-workshop.intellisense.citation.type`](#latex-workshopintellisensecitationtype)                    | Type of vs code suggestion to use                                                      | `"inline"`     | _string_: "inline" \| "browser" (dropdown menu) |
+| [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled)                | Enabling of auto-completion for commands and environments from loaded packages         | `false`        | _boolean_|
+| [`latex-workshop.latex.additionalBib`](#latex-workshoplatexadditionalBib)                                  | Additional bib paths to watch, both relative and absolute paths (with globs) supported | `[]`           | _array_ of _strings_     |
 
 
 ## References
