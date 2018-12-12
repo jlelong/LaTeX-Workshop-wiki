@@ -98,7 +98,6 @@ Many LaTeX commands can have several signatures, each with different arguments. 
 | --------- | ------------- |
 | _boolean_ | `true`       |
 
-Reload vscode after change.
 
 ### latex-workshop.intellisense.useTabStops.enabled
 
