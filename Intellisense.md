@@ -96,7 +96,7 @@ Many LaTeX commands can have several signatures, each with different arguments. 
 
 | type      | default value |
 | --------- | ------------- |
-| _boolean_ | `true`       |
+| _boolean_ | `true`        |
 
 
 ### latex-workshop.intellisense.useTabStops.enabled
