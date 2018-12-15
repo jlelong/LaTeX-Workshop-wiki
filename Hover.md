@@ -6,6 +6,14 @@ To open a package documentation, hover the package name inside the `\usepackage`
 
 ## Preview equations
 
+When you move the mouse cursor over inline math,  `\[`,  `\begin{align}`, and `\begin{...}` of other math environments, math preview on hover is rendered. When you move the mouse cursor over `\ref`, and other reference commands referring math equations, math preview on hover is also rendered.
+
+ <img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/hover.gif" alt="auto \item demo" height="120px">
+
+Supported math environments are `align`, `align*`, `alignat`, `alignat*`, `aligned`, `alignedat`, `array`, `Bmatrix`, `bmatrix`, `cases`, `CD`, `eqnarray`, `eqnarray*`, `equation`, `equation*`, `gather`, `gather*`, `gathered`, `matrix`, `multline`, `multline*`, `pmatrix`, `smallmatrix`, `split`, `subarray`, `Vmatrix`, `vmatrix`.
+
+`$$` is not supported. `tabular` not supported.
+
 ## View citation details
 
 ## Preview references
@@ -40,7 +48,7 @@ Enable Hover on Commands to show the possible signatures.
 
 ### latex-workshop.hoverPreview.enabled
 
-Enable Hover Preview.
+Enable math preview on hover.
 
 | type      | default value |
 | --------- | ------------- |
@@ -48,7 +56,7 @@ Enable Hover Preview.
 
 ### latex-workshop.hoverPreview.scale
 
-Scale of Hover Preview.
+Scale of math preview on hover.
 
 | type      | default value |
 | --------- | ------------- |
@@ -56,7 +64,7 @@ Scale of Hover Preview.
 
 ### latex-workshop.hoverPreview.cursor.enabled
 
-Render cursor in Hover Preview at the current position.
+Render cursor in math preview on hover at the current position.
 
 | type      | default value |
 | --------- | ------------- |
@@ -64,7 +72,7 @@ Render cursor in Hover Preview at the current position.
 
 ### latex-workshop.hoverPreview.cursor.symbol
 
-Define the cursor symbol in Hover Preview.
+Define the cursor symbol in math preview on hover.
 
 | type      | default value |
 | --------- | ------------- |
@@ -72,7 +80,7 @@ Define the cursor symbol in Hover Preview.
 
 ### latex-workshop.hoverPreview.cursor.color
 
-Define the color of the cursor in Hover Preview.
+Define the color of the cursor in math preview on hover.
 
 | type      | default value |
 | --------- | ------------- |
@@ -82,8 +90,18 @@ The possible values are : ` "auto" | "black" | "blue" | "brown" | "cyan" | "dark
 
 ### latex-workshop.hoverPreview.ref.enabled
 
-Render Hover Preview on `\\ref` commands.
+Render math preview on hover over `\ref`, and other reference commands.
 
 | type      | default value |
 | --------- | ------------- |
 | _boolean_ | `true`        |
+
+### latex-workshop.view.pdf.ref.viewer
+
+PDF viewer used for `[View on PDF]` link on hover over `\ref`, and other reference commands.
+
+| type      | default value |
+| --------- | ------------- |
+| _string_  | "auto"        |
+
+The possible values are : `"auto" | "tabOrBrowser" | "external"`.
