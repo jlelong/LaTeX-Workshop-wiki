@@ -37,7 +37,7 @@ Enable Hover on References.
 | type      | default value |
 | --------- | ------------- |
 | _boolean_ | `true`        |
-P
+
 ### latex-workshop.hoverCitation.enabled
 
 Enable Hover on Citations.
