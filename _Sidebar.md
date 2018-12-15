@@ -23,7 +23,7 @@
   - [Access a package documentation](Hover#Access-a-package-documentation)
   - [Preview equations](Hover#preview-equations)
   - [Preview references](Hover#preview-references)
-  - [View the signatures for a command](Hover#view-the-signatures-for-a-command)
+  - [View the signatures of a command](Hover#view-the-signatures-of-a-command)
 - [Playing with environments](Environments)
   - [Itemize](Environments#Itemize)
   - [Navigation](Environments#Navigation)

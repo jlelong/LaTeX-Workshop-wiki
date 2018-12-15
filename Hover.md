@@ -12,13 +12,21 @@ When you move the mouse cursor over inline math,  `\[`,  `\begin{align}`, and `\
 
 Supported math environments are `align`, `align*`, `alignat`, `alignat*`, `aligned`, `alignedat`, `array`, `Bmatrix`, `bmatrix`, `cases`, `CD`, `eqnarray`, `eqnarray*`, `equation`, `equation*`, `gather`, `gather*`, `gathered`, `matrix`, `multline`, `multline*`, `pmatrix`, `smallmatrix`, `split`, `subarray`, `Vmatrix`, `vmatrix`.
 
-`$$` is not supported. `tabular` not supported.
+`$$` is not supported. The `tabular` environment is not supported.
 
 ## View citation details
 
+When [`latex-workshop.hoverCitation.enabled`](#latex-workshophoverCitationenabled) is set to `true`, moving the mouse over an argument of a `\cite` related command displays the details of the bibliography as a tooltip.
+
 ## Preview references
 
-## View the signatures for a command
+When [`latex-workshop.hoverReference.enabled`](#latex-workshophoverReferenceenabled) is set to `true`, moving the mouse over a `\ref` related command displays the piece of `tex` with the corresponding label as a tooltip.
+
+
+
+## View the signatures of a command
+
+When [`latex-workshop.hoverCommandDoc.enabled`](#latex-workshophoverCommandDocenabled) is set to `true`, moving the mouse over a command displays the different forms of the command with their arguments as a tooltip. Moreover, if the label refers to a maths environment as described in [Preview equations](#Preview-equations) and [`latex-workshop.hoverPreview.ref.enabled`](#latex-workshophoverPreviewrefenabled) is set to `true`, math preview is rendered instead of showing the tex content.
 
 ## Configuration variables
 
