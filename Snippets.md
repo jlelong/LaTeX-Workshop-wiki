@@ -6,17 +6,19 @@ To have intellisense automatically triggered inside snippets, set "editor.sugges
 
 ## Environments
 
-| Prefix |                          Command                           |
-| ------ | ---------------------------------------------------------- |
-| `BEQ`  | `\begin{equation}\n  \label{${1}}\n  $0\n\end{equation}`   |
-| `BSEQ` | `\begin{equation*}\n  $0\n\end{equation*}`                 |
-| `BAL`  | `\begin{align}\n  \label{${1}}\n  $0\n\end{align}`         |
-| `BSAL` | `\begin{align*}\n  $0\n\end{align*}`                       |
-| `BIT`  | `\begin{itemize}\n  \item $0\n\end{itemize}`               |
-| `BEN`  | `\begin{enumerate}\n  \item $0\n\end{enumerate}`           |
-| `BSPL` | `\begin{split}\n  $0\n\end{split}`                         |
-| `BCAS` | `\begin{cases}\n  $0\n\end{cases}`                         |
-| `BFR`  | `\begin{frame}\n  \frametitle{${1}\n\n  $0\n\n\end{frame}` |
+Some environments have a dedicated snippet in the form `BXY` where `XY` are the two first letters of the environment name. The starred versions use the prefix `BSXY`.
+
+| Prefix | Environment name |
+| ------ | ---------------- |
+| `BEQ`  | `equation`       |
+| `BSEQ` | `equation*`      |
+| `BAL`  | `align`          |
+| `BSAL` | `align*`         |
+| `BIT`  | `itemize`        |
+| `BEN`  | `enumerate`      |
+| `BSPL` | `split`          |
+| `BCAS` | `cases`          |
+| `BFR`  | `frame`          |
 
 ## Inserting Greek letters
 
