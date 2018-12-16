@@ -4,11 +4,13 @@
 
 To open a package documentation, hover the package name inside the `\usepackage` call and click on the _View documentation_ link. As it internally calls `texdoc`, if it is not in your path you may need to set [`latex-workshop.texdoc.path`](latex-workshoptexdocpath) to the full path of `texdoc`.
 
+<img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/hover-command-doc.gif" alt="Hover on a command demo" height="180px">
+
 ## Preview equations
 
 When you move the mouse cursor over inline math,  `\[`,  `\begin{align}`, and `\begin{...}` of other math environments, math preview on hover is rendered. When you move the mouse cursor over `\ref`, and other reference commands referring math equations, math preview on hover is also rendered.
 
- <img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/hover.gif" alt="auto \item demo" height="120px">
+<img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/hover.gif" alt="Preview maths demo" height="120px">
 
 Supported math environments are `align`, `align*`, `alignat`, `alignat*`, `aligned`, `alignedat`, `array`, `Bmatrix`, `bmatrix`, `cases`, `CD`, `eqnarray`, `eqnarray*`, `equation`, `equation*`, `gather`, `gather*`, `gathered`, `matrix`, `multline`, `multline*`, `pmatrix`, `smallmatrix`, `split`, `subarray`, `Vmatrix`, `vmatrix`.
 
@@ -18,15 +20,20 @@ Supported math environments are `align`, `align*`, `alignat`, `alignat*`, `align
 
 When [`latex-workshop.hoverCitation.enabled`](#latex-workshophoverCitationenabled) is set to `true`, moving the mouse over an argument of a `\cite` related command displays the details of the bibliography as a tooltip.
 
+<img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/hover-cite.gif" alt="Hover on \cite demo" height="240px">
+
 ## Preview references
 
 When [`latex-workshop.hoverReference.enabled`](#latex-workshophoverReferenceenabled) is set to `true`, moving the mouse over a `\ref` related command displays the piece of `tex` with the corresponding label as a tooltip.
 
+<img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/hover-ref.gif" alt="Hover on \ref demo" height="240px">
 
 
 ## View the signatures of a command
 
 When [`latex-workshop.hoverCommandDoc.enabled`](#latex-workshophoverCommandDocenabled) is set to `true`, moving the mouse over a command displays the different forms of the command with their arguments as a tooltip. Moreover, if the label refers to a maths environment as described in [Preview equations](#Preview-equations) and [`latex-workshop.hoverPreview.ref.enabled`](#latex-workshophoverPreviewrefenabled) is set to `true`, math preview is rendered instead of showing the tex content.
+
+
 
 ## Configuration variables
 
