@@ -4,7 +4,7 @@
 
 To open a package documentation, hover the package name inside the `\usepackage` call and click on the _View documentation_ link. As it internally calls `texdoc`, if it is not in your path you may need to set [`latex-workshop.texdoc.path`](latex-workshoptexdocpath) to the full path of `texdoc`.
 
-<img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/hover-package.gif" alt="Hover on a package demo" height="180px">
+<img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/hover-package.gif" alt="Hover on a package demo">
 
 ## Preview equations
 
@@ -20,20 +20,20 @@ Supported math environments are `align`, `align*`, `alignat`, `alignat*`, `align
 
 When [`latex-workshop.hoverCitation.enabled`](#latex-workshophoverCitationenabled) is set to `true`, moving the mouse over an argument of a `\cite` related command displays the details of the bibliography as a tooltip.
 
-<img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/hover-cite.gif" alt="Hover on \cite demo" height="240px">
+<img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/hover-cite.gif" alt="Hover on \cite demo">
 
 ## Preview references
 
 When [`latex-workshop.hoverReference.enabled`](#latex-workshophoverReferenceenabled) is set to `true`, moving the mouse over a `\ref` related command displays the piece of `tex` with the corresponding label as a tooltip. Moreover, if the label refers to a maths environment as described in [Preview equations](#Preview-equations) and [`latex-workshop.hoverPreview.ref.enabled`](#latex-workshophoverPreviewrefenabled) is set to `true`, math preview is rendered instead of showing the tex content.
 
-<img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/hover-ref.gif" alt="Hover on \ref demo" height="240px">
+<img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/hover-ref.gif" alt="Hover on \ref demo" height="300px">
 
 
 ## View the signatures of a command
 
 When [`latex-workshop.hoverCommandDoc.enabled`](#latex-workshophoverCommandDocenabled) is set to `true`, moving the mouse over a command displays the different forms of the command with their arguments as a tooltip. You can directly access the documentation of the package(s) defining the command by clicking on the package name(s).
 
-<img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/hover-command.gif" alt="Hover on a command demo" height="180px">
+<img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/hover-command.gif" alt="Hover on a command demo">
 
 ## Configuration variables
 
