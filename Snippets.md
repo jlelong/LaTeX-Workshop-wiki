@@ -2,7 +2,7 @@
 
 All commands are listed as <kbd>ctrl</kbd>+<kbd>some key</kbd>. If you're on Mac, don't worry we have written equivalents, so every time you see <kbd>ctrl</kbd>  just imagine it's <kbd>⌘</kbd>.
 
-To have intellisense automatically triggered inside snippets, set "editor.suggest.snippetsPreventQuickSuggestions": false. This is useful for instance if you want to enter `\sqrt{x_{1}}{2}` using `@/`+ `x` + `__` + `1`+ `2` using <kbd>TAB</kbd> to move from tabstop to the next.
+To have intellisense automatically triggered inside snippets, set "editor.suggest.snippetsPreventQuickSuggestions": false. This is useful for instance if you want to enter `\frac{x_{1}}{2}` using `@/`+ `x` + `__` + `1`+ `2` using <kbd>TAB</kbd> to move from tabstop to the next.
 
 ## Environments
 
