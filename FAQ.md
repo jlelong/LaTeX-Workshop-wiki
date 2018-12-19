@@ -8,6 +8,7 @@
 - [Format on save does not work](#format-on-save-does-not-work)
 - [My file gets messed up](#my-file-gets-messed-up)
 - [Large bibtex files are ignored](#large-bibtex-files-are-ignored)
+- [Path containing Chinese characters](#Path-containing-Chinese-characters)
 
 ## Known incompatible Extensions
 
@@ -55,3 +56,8 @@ Formatting a .tex file actually changes it on the disk and then if `latex-worksh
 ## Large bibtex files are ignored
 
 Bibtex files listed in a project are parsed for citation completion. This may induce significant slow down with large bibtex files. You can configure the maximum size of bibtex files parsed by the extension with [`latex-workshop​.intellisense​.citation​.maxfilesizeMB"`](Intelissense#latex-workshopintellisensecitationmaxfilesizeMB).
+
+## Path containing Chinese characters
+
+On some platforms, when the path of a TeX file contains Chinese characters or other non-ASCII characters,
+the compilation does not work well. In such cases, please use `%DOCFILE%` instead of `%DOC` in your recipes. See also [LaTeX recipe](Compile#LaTeX-recipe).
