@@ -22,12 +22,25 @@ This extension will automatically look for synctex in the expected location (see
 
 | Setting key                                                                                  | Description                               | Default       | Type          |
 | -------------------------------------------------------------------------------------------- | ----------------------------------------- | ------------- | ------------- |
-| [`latex-workshop​.synctex​.afterBuild​.enabled`](#latex-workshopsynctexafterBuildenabled) | Forward synxtex at cursor after compiling | `false`       | _boolean_     |
+| [`latex-workshop​.latex.outputDir`](#latex-workshoplatexoutputDir) | Where to find synctex and PDF files | `"./"`       | _string_     |
+| [`latex-workshop​.synctex​.afterBuild​.enabled`](#latex-workshopsynctexafterBuildenabled) | Forward synctex at cursor after compiling | `false`       | _boolean_     |
 | [`latex-workshop​.synctex​.path`](#latex-workshopsynctexpath)                              | SyncTeX location                          | `"synctex"`   | _string_      |
-| [`latex-workshop​.view.pdf​.external​.synctex`](#latex-workshopviewpdfexternalsynctex)   | SyncTeX command for the extenal viewer    | (see details) | _JSON object_ |
+| [`latex-workshop​.view.pdf​.external​.synctex`](#latex-workshopviewpdfexternalsynctex)   | SyncTeX command for the external viewer    | (see details) | _JSON object_ |
 | [`latex-workshop.synctex.synctexjs.enabled`](#latex-workshopsynctexsynctexjsenabled) | Enable using a built-in synctex function. | `false` | _boolean_ |
 
 ### Details
+
+### latex-workshop​.latex.outputDir
+
+The directory where the extension tries to find project files (e.g., PDF and SyncTeX files).
+
+Both relative and absolute paths are supported. Relative path start from the root file location, so beware if it is located in sub-directory. Note that the LaTeX toolchain should output files to this path. The default [recipe](Compile#Latex-recipe), which relies on `latexmk`, takes care of putting all the generated files to the directory specified by `latex-workshop​.latex.outputDir`.
+The following placeholders `%DOC%`, `%DOCFILE`, `%DIR%` and `%TMPDIR%` can be used.
+
+| type     | default value |
+| -------- | ------------- |
+| _string_ | `"./"`        |
+
 
 #### latex-workshop.synctex.afterBuild.enabled
 
