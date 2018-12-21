@@ -24,7 +24,8 @@ This extension will automatically look for synctex in the expected location (see
 | -------------------------------------------------------------------------------------------- | ----------------------------------------- | ------------- | ------------- |
 | [`latex-workshop​.synctex​.afterBuild​.enabled`](#latex-workshopsynctexafterBuildenabled) | Forward synxtex at cursor after compiling | `false`       | _boolean_     |
 | [`latex-workshop​.synctex​.path`](#latex-workshopsynctexpath)                              | SyncTeX location                          | `"synctex"`   | _string_      |
-| [`latex-workshop​.view.pdf​.external​.synctex`](#latex-workshopviewpdfexternalsynctex)   | SyncTeX command for the extenal viewer    | (see details) | _JSON object_ |  |  |
+| [`latex-workshop​.view.pdf​.external​.synctex`](#latex-workshopviewpdfexternalsynctex)   | SyncTeX command for the extenal viewer    | (see details) | _JSON object_ |
+| [`latex-workshop.synctex.synctexjs.enabled`](#latex-workshopsynctexsynctexjsenabled) | Enable using a built-in synctex function. | `false` | _boolean_ |
 
 ### Details
 
@@ -55,3 +56,8 @@ This function is not officially supported. %LINE% is the line number, %PDF% is t
 | type          | default value                                                          |
 | ------------- | ---------------------------------------------------------------------- |
 | _JSON object_ | `{ "command": "SumatraPDF.exe" "args": ["%LINE%", "%PDF%", "%TEX%"] }` |
+
+#### latex-workshop.synctex.synctexjs.enabled
+
+Enable using a builtin synctex function. The command set in latex-workshop.synctex.path will not be used.
+This builtin synctex works well even if the path of TeX files contains non-ASCII characters.
