@@ -23,7 +23,6 @@ This extension will automatically look for synctex in the expected location (see
 | Setting key                                                                                  | Description                               | Default       | Type          |
 | -------------------------------------------------------------------------------------------- | ----------------------------------------- | ------------- | ------------- |
 | [`latex-workshop​.latex.outputDir`](#latex-workshoplatexoutputDir) | Where to find synctex and PDF files | `"./"`       | _string_     |
-
 | [`latex-workshop​.synctex​.afterBuild​.enabled`](#latex-workshopsynctexafterBuildenabled) | Forward synctex at cursor after compiling | `false`       | _boolean_     |
 | [`latex-workshop​.synctex​.path`](#latex-workshopsynctexpath)                              | SyncTeX location                          | `"synctex"`   | _string_      |
 | [`latex-workshop​.view.pdf​.external​.synctex`](#latex-workshopviewpdfexternalsynctex)   | SyncTeX command for the external viewer    | (see details) | _JSON object_ |
@@ -81,7 +80,7 @@ This builtin synctex works well even if the path of TeX files contains non-ASCII
 The default PDF viewer.
 
 |   type   | default value                                |
-| -------- | ------------ ------------------------------- |
+| -------- | -------------------------------------------- |
 | _string_ | `"none" \| "browser" \| "tab" \| "external"` |
 
 - `"none"`: Undetermined viewer. A viewer selector will pop up upon viewing PDF.
@@ -94,7 +93,7 @@ The default PDF viewer.
 PDF viewer used for [View on PDF] link on `\ref`.
 
 |   type   | default value                            |
-| -------- | ------------ --------------------------- |
+| -------- | ---------------------------------------- |
 | _string_ | `"auto" \| "tabOrBrowser" \| "external"` |
 
 ### latex-workshop.view.pdf.external.command
