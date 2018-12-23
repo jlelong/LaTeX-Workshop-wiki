@@ -28,4 +28,5 @@
   - [Itemize](Environments#Itemize)
   - [Navigation](Environments#Navigation)
   - [Close the current environment](Environments#Close-the-current-environment)
+  - [Surround selection with an environment](Environments#Surround-selection-with-an-environment)
 - [FAQ and common issues](FAQ)
