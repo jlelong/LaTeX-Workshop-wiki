@@ -7,7 +7,7 @@
 
 By default, the shortcuts are set according to the first column. You may switch to an alternative keymap by setting `latex-workshop.bind.altKeymap.enabled` to `true` and reload/reopen vscode. See also [the FAQ](FAQ#i-cannot-use-ctrlalt-in-a-shortcut).
 
-## Relevant Settings
+The following settings are helpful to customize how to build a project and how to deal with failures.
 
 |                     Setting key                      |                    Description                    | Default |  Type   |
 | ---------------------------------------------------- | ------------------------------------------------- | ------- | ------- |
@@ -113,12 +113,12 @@ When building the project, the first recipe is used. You can compile with anothe
 
 As you may notice, there is a mystic `%DOC%` in the arguments. Symbols surrounded by `%` are placeholders, which are replaced with its representing string on-the-fly. LaTeX Workshop registers the following placeholders:
 
-| Placeholder |                             Replaced by                             |
-| ----------- | ------------------------------------------------------------------- |
-| `%DOC%`     | The LaTeX root file path and name without `.tex` extension          |
-| `%DOCFILE%` | The LaTeX root file name without `.tex` extension                   |
-| `%DIR%`     | The LaTeX root file path                                            |
-| `%TMPDIR%`  | A temporary folder for storing ancillary files                      |
+| Placeholder |                                               Replaced by                                                |
+| ----------- | -------------------------------------------------------------------------------------------------------- |
+| `%DOC%`     | The LaTeX root file path and name without the `.tex` extension                                           |
+| `%DOCFILE%` | The LaTeX root file name without the `.tex` extension                                                    |
+| `%DIR%`     | The LaTeX root file path                                                                                 |
+| `%TMPDIR%`  | A temporary folder for storing ancillary files                                                           |
 | `%OUTDIR%`  | The output directory configured in [`latex-workshop.latex.outputDir`](View#latex-workshoplatexoutputDir) |
 
 Alternatively, you can also set your commands without the placeholder, just like what you may input in a terminal.
@@ -142,3 +142,63 @@ For `% !TEX program` magic comment, its arguments are defined in `latex-workshop
 Suppose there is a line `% !TEX program = xelatex` in the root file. Upon building the project, LaTeX Workshop will parse the root file and figure out that `xelatex` should be used. Arguments are included to invoke the compiler.
 
 When using `% !TEX program` with bibliographies, a `bib` compiler must be defined with `% !BIB program` comment, e.g., `% !BIB program = bibtex`. Otherwise the extension will only run one-pass compilation with the specified LaTeX compiler.
+
+## Relevant Settings
+
+The warnings and errors issued by the compiling toolchain are rendered in the _Problems Pane_. The following settings enable you to customize what you want to get in that panel. If the messages displayed in the panel seem to be wrong, see the [FAQ](#The-Problem-Pane-displays-wrong-messages).
+
+### latex-workshop.message.badbox.show
+
+Show badbox information in the problems panel.
+
+| type      | default value |
+| --------- | ------------- |
+| _boolean_ | `true`        |
+
+### latex-workshop.message.latexlog.exclude
+
+Exclude log messages that matches the given regexp from the problems panel.
+
+|       type        | default value |
+| ----------------- | ------------- |
+| _array of strings | `[]`          |
+
+### latex-workshop.message.information.show
+
+Display information messages in popup notifications.
+
+| type      | default value |
+| --------- | ------------- |
+| _boolean_ | `false`       |
+
+### latex-workshop.message.warning.show
+
+Display warning messages in popup notifications.
+
+| type      | default value |
+| --------- | ------------- |
+| _boolean_ | `true`        |
+
+### latex-workshop.message.error.show
+
+Display error messages in popup notifications.
+
+| type      | default value |
+| --------- | ------------- |
+| _boolean_ | `true`        |
+
+### latex-workshop.message.update.show
+
+Display LaTeX Workshop update message on new versions.
+
+| type      | default value |
+| --------- | ------------- |
+| _boolean_ | `true`        |
+
+### latex-workshop.message.log.show
+
+Display LaTeX Workshop debug log in output panel.\nThis property defines whether LaTeX Workshop will output its debug log to the log panel.
+
+| type      | default value |
+| --------- | ------------- |
+| _boolean_ | `true`        |
