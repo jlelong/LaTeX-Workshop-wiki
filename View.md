@@ -23,6 +23,7 @@ This extension will automatically look for synctex in the expected location (see
 | Setting key                                                                                  | Description                               | Default       | Type          |
 | -------------------------------------------------------------------------------------------- | ----------------------------------------- | ------------- | ------------- |
 | [`latex-workshop​.latex.outputDir`](#latex-workshoplatexoutputDir) | Where to find synctex and PDF files | `"./"`       | _string_     |
+
 | [`latex-workshop​.synctex​.afterBuild​.enabled`](#latex-workshopsynctexafterBuildenabled) | Forward synctex at cursor after compiling | `false`       | _boolean_     |
 | [`latex-workshop​.synctex​.path`](#latex-workshopsynctexpath)                              | SyncTeX location                          | `"synctex"`   | _string_      |
 | [`latex-workshop​.view.pdf​.external​.synctex`](#latex-workshopviewpdfexternalsynctex)   | SyncTeX command for the external viewer    | (see details) | _JSON object_ |
@@ -74,3 +75,34 @@ This function is not officially supported. %LINE% is the line number, %PDF% is t
 
 Enable using a builtin synctex function. The command set in latex-workshop.synctex.path will not be used.
 This builtin synctex works well even if the path of TeX files contains non-ASCII characters.
+
+### latex-workshop.view.pdf.viewer
+
+The default PDF viewer.
+
+|   type   | default value                                |
+| -------- | ------------ ------------------------------- |
+| _string_ | `"none" \| "browser" \| "tab" \| "external"` |
+
+- `"none"`: Undetermined viewer. A viewer selector will pop up upon viewing PDF.
+- `"browser"`: Open PDF with the default web browser.
+- `"tab"`: Open PDF with the built-in tab viewer.
+- `"external"`: **Experimental** Open PDF with the external viewer set in "View > Pdf > External: command"
+
+### latex-workshop.view.pdf.ref.viewer
+
+PDF viewer used for [View on PDF] link on `\ref`.
+
+|   type   | default value                            |
+| -------- | ------------ --------------------------- |
+| _string_ | `"auto" \| "tabOrBrowser" \| "external"` |
+
+### latex-workshop.view.pdf.external.command
+
+The command to execute when using external viewer. When left empty, the default PDF viewer provided by the operating system is used.
+
+This function is not officially supported. `%PDF%` is the placeholder for the absolute path to the generated PDF file.
+
+|     type      |         default value          |
+| ------------- | ------------------------------ |
+| _JSON object_ | `{ "command": "" "args": [] }` |
