@@ -49,7 +49,7 @@ The formatting utility `latexindent` reads its input from the file on the disk a
 
 ## My file gets messed up
 
-This is most likely related to the two following variables being set together `latex-workshop.latex.autoBuild.onTexChange.enabled: true` and `editor.formatOnSave: true`. 
+This is most likely related to the two following variables being set together `latex-workshop.latex.autoBuild.onTexChange.enabled: true` and `editor.formatOnSave: true`.
 
 Formatting a .tex file actually changes it on the disk and then if `latex-workshop.latex.autoBuild.onTexChange.enabled` is true it saves the file and triggers a build. You will get two formatting processes running together and using the same temporary file. Hence, the mess you see in your file.
 
@@ -62,5 +62,5 @@ Bibtex files listed in a project are parsed for citation completion. This may in
 On some platforms, when the path of a TeX file contains Chinese characters or other non-ASCII characters,
 the compilation does not work well. In such cases, please use `%DOCFILE%` instead of `%DOC%` in your recipes. See also [LaTeX recipe](Compile#LaTeX-recipe).
 
-On some platforms, synctex doesn't work well with the path containing non-ASCII characters either. In such cases, please use a built-in synctex functionality.
+On some platforms, `synctex` does not work well with the path containing non-ASCII characters either. In such cases, please use a built-in `synctex` functionality.
 See [Viewing & Synctex](View##latex-workshopsynctexsynctexjsenabled).
