@@ -1,8 +1,8 @@
-# Linters
+# Linting
 
 ## ChkTeX
 
-Once ChkTeX is installed, and the relevant setting enabled it is automatically ran on any open TeX documents.
+Once ChkTeX is installed, and the relevant setting enabled it is automatically run on any open TeX documents.
 
 ## Relevant Settings
 
@@ -14,7 +14,7 @@ Once ChkTeX is installed, and the relevant setting enabled it is automatically r
 | [`latex-workshop​.chktex​.args​.root`](#latex-workshop.chktex.args.root)     | Arguments to be passed to ChkTeX for **entire project** | `["-wall", "-n22", "-n30", "-e16", "-q"]` | _array_ of _strings_ |
 | [`latex-workshop​.chktex​.enabled`](#latex-workshop.chktex.enabled)          | Enable LaTeX linting with ChkTeX                        | `false`                                   | _boolean_            |
 | [`latex-workshop​.chktex​.interval`](#latex-workshop.chktex.interval)        | Time interval in ms that ChkTeX is run                  | 300                                       | _integer_            |
-| [`latex-workshop​.chktex​.path`](#latex-workshop.chktex.path)                | Location of ChkTeX file                                 | `"chktex"`                                | _string_             |
+| [`latex-workshop​.chktex​.path`](#latex-workshop.chktex.path)                | Location of ChkTeX executable                           | `"chktex"`                                | _string_             |
 
 ### Details
 
