@@ -84,6 +84,10 @@ This function is not officially supported. %LINE% is the line number, %PDF% is t
 Enable using a builtin synctex function. The command set in latex-workshop.synctex.path will not be used.
 This builtin synctex works well even if the path of TeX files contains non-ASCII characters.
 
+| type      | default value |
+| --------- | ------------- |
+| _boolean_ | `false`       |
+
 ### latex-workshop.view.pdf.viewer
 
 The default PDF viewer.
