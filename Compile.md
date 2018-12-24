@@ -1,11 +1,10 @@
-# Compiling
+# Compiling features
 
-| Shortcut                                    | Alternative                                               | Action                               |
-| ------------------------------------------- | --------------------------------------------------------- | ---------------------------------- |
-| <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>b</kbd> | <kbd>ctrl</kbd>+<kbd>l</kbd>, <kbd>alt</kbd>+<kbd>b</kbd> | Build current file                |
-| <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>c</kbd> | <kbd>ctrl</kbd>+<kbd>l</kbd>, <kbd>alt</kbd>+<kbd>c</kbd> | Clean latex build files            |
+## Building the document
 
-By default, the shortcuts are set according to the first column. You may switch to an alternative keymap by setting `latex-workshop.bind.altKeymap.enabled` to `true` and reload/reopen vscode. See also [the FAQ](FAQ#i-cannot-use-ctrlalt-in-a-shortcut).
+A LaTeX file is typically built by calling the command _Build LaTeX project_ from the _Command Palette_ or from the _TeX_ badge. This command is bind to <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>b</kbd>. If you cannot use <kbd>ctrl</kbd>+<kbd>alt</kbd> in a keybinding, see[the FAQ](FAQ#i-cannot-use-ctrlalt-in-a-shortcut).
+
+You can define several compiling toolchains to build LaTeX projects using [LaTeX recipes](#latex-recipes) and then call the command _Build with recipe_ to choose the appropriate toolchain for actually building the project. Alternatively, you can directly select the appropriate recipe from the _TeX_ badge.
 
 The following settings are helpful to customize how to build a project and how to deal with failures.
 
@@ -13,15 +12,22 @@ The following settings are helpful to customize how to build a project and how t
 | ---------------------------------------------------- | ------------------------------------------------- | ------- | ------- |
 | `latex-workshop.latex.autoBuild.onSave.enabled`      | Enable automatic building when saving any tex file   | `true`  | _boolean_ |
 | `latex-workshop.latex.autoBuild.onTexChange.enabled` | Enable LaTeX building after any tex file has changed | `false` | _boolean_ |
-| `latex-workshop.latex.autoBuild.cleanAndRetry.enabled` | Enable cleaning and building once more after errors in the build toolchain | `true` | _boolean_ |
-| `latex-workshop.latex.clean.enabled` | Enable cleaning LaTeX auxillary files after building project | `false` | _boolean_ |
-| `latex-workshop.latex.clean.onFailBuild.enabled` | Enable cleaning LaTeX auxillary files after a failed build | `false` | _boolean_ |
-| `latex-workshop.latex.clean.fileTypes` | Extensions of files to clean |  | _array of strings_ |
 | [`latex-workshop.latex.recipes`](#latex-recipe)      | Sequence of tools to run for building             |        | _JSON object_ |
 | [`latex-workshop.latex.tools`](#latex-recipe)        | Tools available for building                      |        | _JSON object_ |
 | [`latex-workshop.latex.magic.args`](#magic-comments) | Arguments for `TeX program`                       |      | _array of strings_ |
 
-## LaTeX recipe
+## Cleaning generated files
+
+LaTeX compilation typically generates several auxiliary files. They can be removed by calling _Clean up auxiliary files_ from the _Command Palette_ or from the _TeX_ badge. This command is bind to <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>c</kbd>. If you cannot use <kbd>ctrl</kbd>+<kbd>alt</kbd> in a keybinding, see[the FAQ](FAQ#i-cannot-use-ctrlalt-in-a-shortcut).
+
+|                     Setting key                      |                    Description                    | Default |  Type   |
+| ---------------------------------------------------- | ------------------------------------------------- | ------- | ------- |
+| `latex-workshop.latex.autoBuild.cleanAndRetry.enabled` | Enable cleaning and building once more after errors in the build toolchain | `true` | _boolean_ |
+| `latex-workshop.latex.clean.enabled` | Enable cleaning LaTeX auxillary files after building project | `false` | _boolean_ |
+| `latex-workshop.latex.clean.onFailBuild.enabled` | Enable cleaning LaTeX auxillary files after a failed build | `false` | _boolean_ |
+| `latex-workshop.latex.clean.fileTypes` | Extensions of files to clean |  | _array of strings_ |
+
+## LaTeX recipes
 
 A LaTeX recipe refers to a sequence/array of commands which LaTeX Workshop executes sequentially when building LaTeX projects. It is defined by `latex-workshop.latex.recipes`. By default, LaTeX Workshop includes two basic recipes defined by the variables `latex-workshop.latex.recipes` and `latex-workshop.latex.tools`:
 
