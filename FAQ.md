@@ -63,4 +63,4 @@ On some platforms, when the path of a TeX file contains Chinese characters or ot
 the compilation does not work well. In such cases, please use `%DOCFILE%` instead of `%DOC%` in your recipes. See also [LaTeX recipe](Compile#LaTeX-recipe).
 
 On some platforms, `synctex` does not work well with the path containing non-ASCII characters either. In such cases, please use a built-in `synctex` functionality.
-See [Viewing & Synctex](View##latex-workshopsynctexsynctexjsenabled).
+See [Viewing & Synctex](View#latex-workshopsynctexsynctexjsenabled).
