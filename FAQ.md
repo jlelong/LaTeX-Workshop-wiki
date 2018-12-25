@@ -63,7 +63,7 @@ Bibtex files listed in a project are parsed for citation completion. This may in
 ## Path containing Chinese characters
 
 On some platforms, when the path of a TeX file contains Chinese characters or other non-ASCII characters,
-the compilation does not work well. In such cases, please use `%DOCFILE%` instead of `%DOC%` in your recipes. See also [LaTeX recipe](Compile#LaTeX-recipe).
+the compilation does not work well. In such cases, please use `%DOCFILE%` instead of `%DOC%` in your recipes. See also [LaTeX recipes](Compile#LaTeX-recipes).
 
 On some platforms, `synctex` does not work well with the path containing non-ASCII characters either. In such cases, please use a built-in `synctex` functionality.
 See [Viewing & Synctex](View#latex-workshopsynctexsynctexjsenabled).
