@@ -2,6 +2,10 @@
 
 - [Home](Home)
 - [Installation and basic settings](Install)
+  - [Requirements](#requirements)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Using Docker](#using-docker)
 - [Compiling](Compile)
   - [Building the document](Compile#building-the-document)
   - [Cleaning generated files](Compile#cleaning-generated-files)
