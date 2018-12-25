@@ -15,6 +15,69 @@ A document can previewed a number of ways, namely the icon that appears in the t
 | [`latex-workshop.view.pdf.external.command`](#latex-workshopviewpdfexternalcommand) | The command to execute when using external viewer | (see details) | _JSON object_ |
 | [`latex-workshop.view.pdf.ref.viewer`](#latex-workshopviewpdfrefviewer)             | The PDF viewer to preview `\ref`                  | (see details) | _string_      |
 
+## Internal PDF viewer
+
+ you can customize the look and feel of the internal PDF viewer. Of course, this is only relevant when using the internal PDF viewer for viewing the PDF produced by the building toolchain, ie when `latex-workshop.view.pdf.viewer` is set to `tab`.
+
+Below are the detailed explanations for the different possible settings
+
+|                               Setting key                                |                Description                |
+| ------------------------------------------------------------------------ | ----------------------------------------- |
+| [`latex-workshop.view.pdf.zoom`](#latex-workshopviewpdfzoom)             | The default zoom level of the PDF viewer  |
+| [`latex-workshop.view.pdf.scrollMode`](#latex-workshopviewpdfscrollMode) | The default scroll mode of the PDF viewer |
+| [`latex-workshop.view.pdf.spreadMode`](#latex-workshopviewpdfspreadMode) | The default spread mode of the PDF viewer  |
+| [`latex-workshop.view.pdf.hand`](#latex-workshopviewpdfhand)             | Enable the hand tool                      |
+| [`latex-workshop.view.pdf.invert`](#latex-workshopviewpdfinvert)         | Define the CSS invert filter level        |
+
+
+### latex-workshop.view.pdf.zoom
+
+The default zoom level of the PDF viewer.
+
+This default value will be passed to the viewer upon opening. Possible values are `auto`, `page-actual`, `page-fit`, `page-width`, and one-based scale values (e.g., 0.5 for 50%, 2.0 for 200%).
+
+|   type   | default value |
+| -------- | ------------- |
+| _string_ | `"auto"`      |
+
+### latex-workshop.view.pdf.scrollMode
+
+The default scroll mode of the PDF viewer.
+
+This default value will be passed to the viewer upon opening. Possible values are `0` (vertical), `1`(horizontal) and `2` (wrapped).
+
+|   type   | default value |
+| -------- | ------------- |
+| _number_ | `0`           |
+
+### latex-workshop.view.pdf.spreadMode
+
+The default spread mode of the PDF viewer.
+
+This default value will be passed to the viewer upon opening. Possible values are `0` (none), `1` (odd) and `2` (even).
+
+|   type   | default value |
+| -------- | ------------- |
+| _number_ | `0`           |
+
+### latex-workshop.view.pdf.hand
+
+Define if the hand tool is enabled by default in the PDF viewer.
+
+| type      | default value |
+| --------- | ------------- |
+| _boolean_ | `false`       |
+
+### latex-workshop.view.pdf.invert
+
+Define the CSS invert filter level of the PDF viewer.
+
+This config can invert the color of PDF. Possible values are from 0 to 1.
+
+|   type   | default value |
+| -------- | ------------- |
+| _number_ | `0`           |
+
 ## Synctex
 
 This extension will automatically look for `synctex` in the expected location (see [settings](#latex-workshopsynctexpath)) and will alert the user if it is not found. Alternatively, you can use the javascript built-in version of `synctex`, see [settings](#latex-workshopsynctexsynctexjsenabled).
