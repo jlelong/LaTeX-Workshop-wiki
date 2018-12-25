@@ -7,6 +7,7 @@
   - [Cleaning generated files](Compile#cleaning-generated-files)
   - [LaTeX recipes](Compile#latex-recipes)
   - [Magic comments](Compile#magic-comments)
+  - [Catching errors](Compile#catching-errors-and-warnings)
 - [Linting](Linters)
 - [Viewing & synctex](View)
 - [Formatting](Format)

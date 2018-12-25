@@ -149,9 +149,19 @@ Suppose there is a line `% !TEX program = xelatex` in the root file. Upon buildi
 
 When using `% !TEX program` with bibliographies, a `bib` compiler must be defined with `% !BIB program` comment, e.g., `% !BIB program = bibtex`. Otherwise the extension will only run one-pass compilation with the specified LaTeX compiler.
 
-## Relevant Settings
+## Catching errors and warnings
 
-The warnings and errors issued by the compiling toolchain are rendered in the _Problems Pane_. The following settings enable you to customize what you want to get in that panel. If the messages displayed in the panel seem to be wrong, see the [FAQ](#The-Problem-Pane-displays-wrong-messages).
+The warnings and errors issued by the compiling toolchain are rendered in the _Problems_ Pane. The following settings enable you to customize what you want to get in that panel. If the messages displayed in the panel seem to be wrong, see the [FAQ](#The-Problem-Pane-displays-wrong-messages).
+
+### latex-workshop.message.log.show
+
+Display LaTeX Workshop debug log in output panel.
+
+This property defines whether LaTeX Workshop will output its debug log to the log panel.
+
+| type      | default value |
+| --------- | ------------- |
+| _boolean_ | `true`        |
 
 ### latex-workshop.message.badbox.show
 
@@ -196,14 +206,6 @@ Display error messages in popup notifications.
 ### latex-workshop.message.update.show
 
 Display LaTeX Workshop update message on new versions.
-
-| type      | default value |
-| --------- | ------------- |
-| _boolean_ | `true`        |
-
-### latex-workshop.message.log.show
-
-Display LaTeX Workshop debug log in output panel.\nThis property defines whether LaTeX Workshop will output its debug log to the log panel.
 
 | type      | default value |
 | --------- | ------------- |

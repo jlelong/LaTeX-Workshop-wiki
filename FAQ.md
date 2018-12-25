@@ -25,7 +25,7 @@ LaTeX compilers usually produce hard wrapped log messages, which makes them real
 - by setting the environment variable `max_print_line`. This is automatically done within the extension and works for the TeXLive distribution.
 - by adding the `--max-print-line` option to the compilers. This is automatically done within the extension and works for the MiKTeX distribution. Unfortunately, some compilers such as `lualatex` or `xelatex` do not understand this option and may therefore fail. To disable the automatic addition of this option, set `latex-workshop.latex.option.maxPrintLine.enabled` to `false`.
 
-Note that when log messages are hard wrapped, the _Problems Pane_ may be messed up.
+Note that when log messages are hard wrapped, the _Problems Pane_ is likely to be messed up.
 
 ## I cannot use `ctrl`+`alt` in a shortcut
 

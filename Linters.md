@@ -2,7 +2,7 @@
 
 ## ChkTeX
 
-Once ChkTeX is installed, and the relevant setting enabled it is automatically run on any open TeX documents.
+The [ChkTeX](http://www.nongnu.org/chktex/) utility is a LaTeX semantic checker. Once installed, and the relevant setting enabled it is automatically run on any open TeX documents. It output is parsed by the extension and displayed in the _Problems_ panel.
 
 ## Relevant Settings
 
