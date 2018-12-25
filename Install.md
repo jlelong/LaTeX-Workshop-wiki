@@ -14,12 +14,18 @@ Installing LaTeX Workshop is simple. You can find it in [Visual Studio Code Mark
 
 ## Usage
 
-- Open a `.tex` file, right click to build, SyncTeX, or show all features.
-- For a complete list, select `LaTeX Workshop Actions` entry.
-- For reverse SyncTeX from PDF to LaTeX, `ctrl`/`cmd` + left mouse click in the PDF.
-- Alternatively, VS Code commands are provided in VS Code Command Palette (`ctrl`/`cmd` + `shift` + `P`).
-- Type `latex workshop` to show all related commands.
-- To view an arbitrary PDF file, just click on the file in the explorer.
+The typical usage is to open a `.tex` file and have a look at the _TeX_ sidebar to access all the extension features
+
+- [Building](Compile#building-the-document)
+- [Viewing and going from source to PDF back and forth](View)
+- [Catching errors and warnings](Compile#catching-errors-and-warnings)
+- [Navigating in environments](Environments#Navigating)
+- Navigating the document structure. The section names of LaTeX outline hierarchy are defined in `latex-workshop.view.outline.sections`. This property is an array of case-sensitive strings in the order of document structure hierarchy. For multiple tags in the same level, separate the tags with `|` as delimiters, e.g., `section|alternative`. It is also used by the folding mechanism.
+- Miscellaneous actions
+  - Open citation browser, see also [Intellisense for citations](Intellisense#Citations)
+  - Count words the `.tex` file. It uses the `texcount` utility. Use `latex-workshop.texcount.path` to set the path to the `texcount` executable and `latex-workshop.texcount.args` to supply extra arguments.
+
+If you prefer to access some all the most common actions through a right click menu, set `latex-workshop.showContextMenu` to `true`. Default is `false`.
 
 ## Using Docker
 
