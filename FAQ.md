@@ -10,6 +10,7 @@
 - [Large bibtex files are ignored](#large-bibtex-files-are-ignored)
 - [Path containing Chinese characters](#Path-containing-Chinese-characters)
 - [The LaTeX sidebar keeps reopening](#the-latex-sidebar-keeps-reopening)
+- [Spell check](#spell-check)
 
 ## Known incompatible Extensions
 
@@ -69,3 +70,7 @@ See [Viewing & Synctex](View#latex-workshopsynctexsynctexjsenabled).
 ## The LaTeX sidebar keeps reopening
 
 If you like to work with no sidebar in Visual Studio Code and yet the LaTeX sidebar keeps showing up each time you switch focus from a non TeX file to a TeX file, you need to set `latex-workshop.view.autoActivateLatex.enabled` to `false`.
+
+## Spell check
+
+[Code Spellchecker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) did a great job. Users may also find other extensions better alternatives, e.g., [LanguageTool](https://marketplace.visualstudio.com/items?itemName=adamvoss.vscode-languagetool) credited for its multi-lingual support.
