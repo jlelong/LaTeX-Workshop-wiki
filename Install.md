@@ -20,3 +20,9 @@ Installing LaTeX Workshop is simple. You can find it in [Visual Studio Code Mark
 - Alternatively, VS Code commands are provided in VS Code Command Palette (`ctrl`/`cmd` + `shift` + `P`).
 - Type `latex workshop` to show all related commands.
 - To view an arbitrary PDF file, just click on the file in the explorer.
+
+## Using Docker
+
+Starting with release 5.3.0, there is an experimental implementation on Docker support following the idea of [@Arxisos](https://github.com/Arxisos). You can set `latex-workshop.docker.enabled` to `true` to use `tianon/latex`. It is advised that the image is 'pre-'pulled.
+
+[@Arxisos](https://github.com/Arxisos) created [snippets](https://github.com/Arxisos/LaTex-Workshop-Docker) for LaTeX binaries in docker, and [@lippertmarkus](https://github.com/lippertmarkus) had another [short description](https://github.com/James-Yu/LaTeX-Workshop/issues/302) on how to use Docker with LaTeX Workshop.
