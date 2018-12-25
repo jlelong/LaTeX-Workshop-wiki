@@ -17,7 +17,9 @@ A document can previewed a number of ways, namely the icon that appears in the t
 
 ## Internal PDF viewer
 
- you can customize the look and feel of the internal PDF viewer. Of course, this is only relevant when using the internal PDF viewer for viewing the PDF produced by the building toolchain, ie when `latex-workshop.view.pdf.viewer` is set to `tab`.
+The PDF viewer provided with the extension internally uses [pdf.js](https://github.com/mozilla/pdf.js). The keybindings support by pdf.js are documented [here](https://github.com/mozilla/pdf.js/wiki/Frequently-Asked-Questions#faq-shortcuts).
+
+You can customize the look and feel of the internal PDF viewer. Of course, this is only relevant when using the internal PDF viewer for viewing the PDF produced by the building toolchain, ie when `latex-workshop.view.pdf.viewer` is set to `tab`.
 
 Below are the detailed explanations for the different possible settings
 
@@ -28,7 +30,6 @@ Below are the detailed explanations for the different possible settings
 | [`latex-workshop.view.pdf.spreadMode`](#latex-workshopviewpdfspreadMode) | The default spread mode of the PDF viewer  |
 | [`latex-workshop.view.pdf.hand`](#latex-workshopviewpdfhand)             | Enable the hand tool                      |
 | [`latex-workshop.view.pdf.invert`](#latex-workshopviewpdfinvert)         | Define the CSS invert filter level        |
-
 
 ### latex-workshop.view.pdf.zoom
 
