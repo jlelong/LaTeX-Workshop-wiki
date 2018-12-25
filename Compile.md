@@ -8,13 +8,14 @@ You can define several compiling toolchains to build LaTeX projects using [LaTeX
 
 The following settings are helpful to customize how to build a project and how to deal with failures.
 
-|                     Setting key                      |                    Description                    | Default |  Type   |
-| ---------------------------------------------------- | ------------------------------------------------- | ------- | ------- |
-| `latex-workshop.latex.autoBuild.onSave.enabled`      | Enable automatic building when saving any tex file   | `true`  | _boolean_ |
-| `latex-workshop.latex.autoBuild.onTexChange.enabled` | Enable LaTeX building after any tex file has changed | `false` | _boolean_ |
-| [`latex-workshop.latex.recipes`](#latex-recipe)      | Sequence of tools to run for building             |        | _JSON object_ |
-| [`latex-workshop.latex.tools`](#latex-recipe)        | Tools available for building                      |        | _JSON object_ |
-| [`latex-workshop.latex.magic.args`](#magic-comments) | Arguments for `TeX program`                       |      | _array of strings_ |
+|                       Setting key                        |                     Description                      | Default |        Type        |
+| -------------------------------------------------------- | ---------------------------------------------------- | ------- | ------------------ |
+| `latex-workshop.latex.autoBuild.onSave.enabled`          | Enable automatic building when saving any tex file   | `true`  | _boolean_          |
+| `latex-workshop.latex.autoBuild.onTexChange.enabled`     | Enable LaTeX building after any tex file has changed | `false` | _boolean_          |
+| [`latex-workshop.latex.recipes`](#latex-recipe)          | Sequence of tools to run for building                |         | _JSON object_      |
+| [`latex-workshop.latex.tools`](#latex-recipe)            | Tools available for building                         |         | _JSON object_      |
+| [`latex-workshop.latex.magic.args`](#magic-comments)     | Arguments for the `TeX program`                      |         | _array of strings_ |
+| [`latex-workshop.latex.magic.bib.args`](#magic-comments) | Arguments for the `BIB program`                      |         | _array of strings_ |
 
 ## Cleaning generated files
 
@@ -147,7 +148,13 @@ For `% !TEX program` magic comment, its arguments are defined in `latex-workshop
 
 Suppose there is a line `% !TEX program = xelatex` in the root file. Upon building the project, LaTeX Workshop will parse the root file and figure out that `xelatex` should be used. Arguments are included to invoke the compiler.
 
-When using `% !TEX program` with bibliographies, a `bib` compiler must be defined with `% !BIB program` comment, e.g., `% !BIB program = bibtex`. Otherwise the extension will only run one-pass compilation with the specified LaTeX compiler.
+When using `% !TEX program` with bibliographies, a `bib` compiler must be defined with `% !BIB program` comment, e.g., `% !BIB program = bibtex`. Otherwise the extension will only run one-pass compilation with the specified LaTeX compiler. If needed, you can pass extra arguments to the `!BIB program` using the `latex-workshop.latex.magic.bib.args` variable:
+
+```
+"latex-workshop.latex.magic.bib.args": [
+  "%DOCFILE%"
+]
+```
 
 ## Catching errors and warnings
 
