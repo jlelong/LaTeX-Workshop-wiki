@@ -4,6 +4,12 @@
 
 The [ChkTeX](http://www.nongnu.org/chktex/) utility is a LaTeX semantic checker. Once installed, and the relevant setting enabled it is automatically run on any open TeX documents. It output is parsed by the extension and displayed in the _Problems_ panel.
 
+Auto load of `.chktexrc` configuration files is performed in the following order
+
+1. Manually configured `-l` setting in `chktex.args` 
+1. The `.chktexrc` file (if exists) in the same folder as the main LaTeX file
+1. The `.chktexrc` file (if exists) at the project root folder.
+
 ## Relevant Settings
 
 ### Overview
