@@ -9,6 +9,7 @@
 - [My file gets messed up](#my-file-gets-messed-up)
 - [Large bibtex files are ignored](#large-bibtex-files-are-ignored)
 - [Path containing Chinese characters](#Path-containing-Chinese-characters)
+- [The LaTeX sidebar keeps reopening](#the-latex-sidebar-keeps-reopening)
 
 ## Known incompatible Extensions
 
@@ -64,3 +65,7 @@ the compilation does not work well. In such cases, please use `%DOCFILE%` instea
 
 On some platforms, `synctex` does not work well with the path containing non-ASCII characters either. In such cases, please use a built-in `synctex` functionality.
 See [Viewing & Synctex](View#latex-workshopsynctexsynctexjsenabled).
+
+## The LaTeX sidebar keeps reopening
+
+If you like to work with no sidebar in Visual Studio Code and yet the LaTeX sidebar keeps showing up each time you switch focus from a non TeX file to a TeX file, you need to set `latex-workshop.view.autoActivateLatex.enabled` to `false`.
