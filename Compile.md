@@ -24,8 +24,8 @@ LaTeX compilation typically generates several auxiliary files. They can be remov
 |                     Setting key                      |                    Description                    | Default |  Type   |
 | ---------------------------------------------------- | ------------------------------------------------- | ------- | ------- |
 | `latex-workshop.latex.autoBuild.cleanAndRetry.enabled` | Enable cleaning and building once more after errors in the build toolchain | `true` | _boolean_ |
-| `latex-workshop.latex.clean.enabled` | Enable cleaning LaTeX auxillary files after building project | `false` | _boolean_ |
-| `latex-workshop.latex.clean.onFailBuild.enabled` | Enable cleaning LaTeX auxillary files after a failed build | `false` | _boolean_ |
+| `latex-workshop.latex.clean.enabled` | Enable cleaning LaTeX auxiliary files after building project | `false` | _boolean_ |
+| `latex-workshop.latex.clean.onFailBuild.enabled` | Enable cleaning LaTeX auxiliary files after a failed build | `false` | _boolean_ |
 | `latex-workshop.latex.clean.fileTypes` | Extensions of files to clean |  | _array of strings_ |
 
 ## LaTeX recipes
