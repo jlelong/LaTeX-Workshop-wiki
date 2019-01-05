@@ -160,6 +160,10 @@ When using `% !TEX program` with bibliographies, a `bib` compiler must be define
 
 The warnings and errors issued by the compiling toolchain are rendered in the _Problems_ Pane. The following settings enable you to customize what you want to get in that panel. If the messages displayed in the panel seem to be wrong, see the [FAQ](#The-Problem-Pane-displays-wrong-messages).
 
+The raw compiler logs can be accessed in the _Output Pane_, choose _LaTeX Compiler_. The default is to clear the logs before calling every tool of a recipe. If you prefer to keep the logs from all the tools of a recipe, set [`latex-workshop.latex.build.clearLog.everyRecipeStep.enabled`](latex-workshoplatexbuildclearLogeveryRecipeStepenabled) to `false`.
+
+to true.
+
 ### latex-workshop.message.log.show
 
 Display LaTeX Workshop debug log in output panel.
@@ -213,6 +217,16 @@ Display error messages in popup notifications.
 ### latex-workshop.message.update.show
 
 Display LaTeX Workshop update message on new versions.
+
+| type      | default value |
+| --------- | ------------- |
+| _boolean_ | `true`        |
+
+### latex-workshop.latex.build.clearLog.everyRecipeStep.enabled
+
+Clear the LaTeX Compiler logs before every step of a recipe.
+
+Set this property to false to keep the logs of all tools in a recipe.
 
 | type      | default value |
 | --------- | ------------- |
