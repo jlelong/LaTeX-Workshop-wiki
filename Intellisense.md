@@ -4,7 +4,7 @@ This extension provides a variety of intellisense completions for different LaTe
 
 ## Citations
 
-Every file of a LaTeX project is parsed to look for bibliography resources, either directly in a `thebibliography` environment or given by the `bibliography` or `addbibresource` commands or variants of them. If some of these resources are located outside the project directly, you need to list them in [`latex-workshop.latex.additionalBib`](#latex-workshoplatexadditionalBib). When loading the extension, the files listed in latex-workshop.latex.additionalBib are set up for watching if they exist and then thanks to the watching process any modification to these files are visible inside the extension. No need to restart/reload vscode.
+Every file of a LaTeX project is parsed to look for bibliography resources, either directly in a `thebibliography` environment or given by the `bibliography` or `addbibresource` commands or variants of them. If some of these resources are located outside the project directly, you need to list them in [`latex-workshop.latex.additionalBib`](#latex-workshoplatexadditionalBib). When loading the extension, the files listed in `latex-workshop.latex.additionalBib` are set up for watching if they exist and then thanks to the watching process any modification to these files are visible inside the extension. No need to restart/reload vscode.
 
 Then, when citation commands like `\cite` and its derivatives are automatically completed with bibliography entries found in the various resources.
 
