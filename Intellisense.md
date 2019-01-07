@@ -43,7 +43,7 @@ The key `\` automatically triggers completion of LaTeX commands. Several mechani
 |                                                 Setting key                                                  |                                  Description                                   | Default |   Type    |
 | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------- | --------- |
 | [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled)                   | Enabling of auto-completion for commands and environments from loaded packages | `false` | _boolean_ |
-| [`latex-workshop.intellisense.surroundCommand.enabled`](#latex-workshopintellisensesurroundCommandenabled)   | When text selected, set hotkey `\` surround selection with LaTeX command       | `false` | _boolean_ |
+| [`latex-workshop.intellisense.surroundCommand.enabled`](#latex-workshopintellisensesurroundCommandenabled) **Deprecated see [there](https://github.com/James-Yu/LaTeX-Workshop/wiki/Snippets#surrounding-text)**  | When text selected, set hotkey `\` surround selection with LaTeX command       | `false` | _boolean_ |
 | [`latex-workshop.intellisense.unimathsymbols.enabled`](#latex-workshopintellisenseunimathsymbolsenabled)     | Show unimath symbols as suggestions when `\` pressed                           | `false` | _boolean_ |
 | [`latex-workshop.intellisense.useTabStops.enabled`](#latex-workshopintellisenseuseTabStopsenabled)           | Use tabstops in intellisense completion                                        | `true`  | _boolean_ |
 | [`latex-workshop.intellisense.optionalArgsEntries.enabled`](#latex-workshopintellisenseoptionalArgsEntries)  | Add one completion item per command signature                                  | `true`  | _boolean_ |
@@ -110,6 +110,8 @@ Use tabstops instead of placeholders in intellisense. Tabstops enable us to dire
 Reload vscode after change.
 
 ### latex-workshop.intellisense.surroundCommand.enabled
+
+**The use `\` to surround selected text has been deprecated and may be removed in future releases, see [there](https://github.com/James-Yu/LaTeX-Workshop/wiki/Snippets#surrounding-text) for the new approach.**
 
 When `\` is typed with text selected, surround the selection with LaTeX command.
 
