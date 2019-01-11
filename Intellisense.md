@@ -4,7 +4,7 @@ This extension provides a variety of intellisense completions for different LaTe
 
 ## Citations
 
-Every file of a LaTeX project is parsed to look for bibliography resources, either directly in a `thebibliography` environment or given by the `bibliography` or `addbibresource` commands or variants of them. If some of these resources are located outside the project directly, you need to list them in [`latex-workshop.latex.additionalBib`](#latex-workshoplatexadditionalBib). When loading the extension, the files listed in `latex-workshop.latex.additionalBib` are set up for watching if they exist and then thanks to the watching process any modification to these files are visible inside the extension. No need to restart/reload vscode.
+Every file of a LaTeX project is parsed to look for bibliography resources, either directly in a `thebibliography` environment or given by the `bibliography` or `addbibresource` commands or variants of them. If some of these resources are located outside the project directly, you need to list the directories where to look for them in [`latex-workshop.latex.bibDirs`](#latex-workshoplatexbibDirs). When loading the extension, the files listed in `latex-workshop.latex.additionalBib` are set up for watching if they exist and then thanks to the watching process any modification to these files are visible inside the extension. No need to restart/reload vscode.
 
 Then, when citation commands like `\cite` and its derivatives are automatically completed with bibliography entries found in the various resources.
 
@@ -16,7 +16,8 @@ If you use very large bibtex files, you may experience temporary freezing. Hence
 | [`latex-workshop.intellisense.citation.maxfilesizeMB"`](#latex-workshopintellisensecitationmaxfilesizeMB) | Maximum bibtex file size (in MB)                                                       | `5`            | _float_                  |
 | [`latex-workshop.intellisense.citation.type`](#latex-workshopintellisensecitationtype)                    | Type of vs code suggestion to use                                                      | `"inline"`     | _string_: "inline" \| "browser" (dropdown menu) |
 | [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled)                | Enabling of auto-completion for commands and environments from loaded packages         | `false`        | _boolean_|
-| [`latex-workshop.latex.additionalBib`](#latex-workshoplatexadditionalBib)                                  | Additional bib paths to watch, both relative and absolute paths (with globs) supported | `[]`           | _array_ of _strings_     |
+| [`latex-workshop.latex.additionalBib`](#latex-workshoplatexadditionalBib)                                 | Additional bib paths to watch, both relative and absolute paths (with globs) supported ** Deprecated in favor of [`latex-workshop.latex.bibDirs`](#latex-workshoplatexbibDirs) **  | `[]`           | _array_ of _strings_     |
+| [`latex-workshop.latex.bibDirs`](#latex-workshoplatexbibDirs)                                             | List of paths to look for `.bib` files.  | `[]`           | _array_ of _strings_     |
 
 
 ## References
@@ -132,6 +133,18 @@ When `\` is typed, show unimath symbols in the dropdown selector.
 Addition bibliography files to watch.
 
 Both relative and absolute paths/globs are supported, but absolute ones are suggested. Relative path start from the root file location, so be ware if it is located in sub-directory.
+
+** Deprecated in favor of [`latex-workshop.latex.bibDirs`](#latex-workshoplatexbibDirs).**
+
+| type                 | default value |
+| -------------------- | ------------- |
+| _array_ of _strings_ | `[]`          |
+
+### latex-workshop.latex.bibDirs
+
+List of directories where to look for `.bib` files.
+
+Absolute paths are required. This setting is only used by the intellisense feature, you may also need to set the environment variable `BIBINPUTS` properly for the LaTeX compiler to find the `.bib` files.
 
 | type                 | default value |
 | -------------------- | ------------- |
