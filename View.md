@@ -98,7 +98,7 @@ Synctex may fail if the path contains non-ASCII characters, see [FAQ](FAQ#Path-c
 | [`latex-workshop​.synctex​.afterBuild​.enabled`](#latex-workshopsynctexafterBuildenabled) | Forward synctex at cursor after compiling | `false`       | _boolean_     |
 | [`latex-workshop​.synctex​.path`](#latex-workshopsynctexpath)                             | SyncTeX location                          | `"synctex"`   | _string_      |
 | [`latex-workshop​.view.pdf​.external​.synctex`](#latex-workshopviewpdfexternalsynctex)    | SyncTeX command for the external viewer   | (see details) | _JSON object_ |
-| [`latex-workshop.synctex.synctexjs.enabled`](#latex-workshopsynctexsynctexjsenabled)      | Enable using a built-in synctex function. | `false`       | _boolean_     |
+| [`latex-workshop.synctex.synctexjs.enabled`](#latex-workshopsynctexsynctexjsenabled)      | Enable using a built-in synctex function. | `true`       | _boolean_     |
 
 
 ## Relevant Settings
@@ -139,9 +139,9 @@ The command to execute when forward synctex to external viewer.
 
 This function is not officially supported. %LINE% is the line number, %PDF% is the placeholder for the absolute path to the generated PDF file, and %TEX% is the source LaTeX file path with `.tex` extension from which syncTeX is fired.
 
-| type          | default value                                                          |
-| ------------- | ---------------------------------------------------------------------- |
-| _JSON object_ | `{ "command": "SumatraPDF.exe" "args": ["%LINE%", "%PDF%", "%TEX%"] }` |
+| type          | default value                                                        |
+| ------------- | -------------------------------------------------------------------- |
+| _JSON object_ | `{"command": "SumatraPDF.exe" "args": ["%LINE%", "%PDF%", "%TEX%"]}` |
 
 #### latex-workshop.synctex.synctexjs.enabled
 
@@ -150,7 +150,7 @@ This builtin synctex works well even if the path of TeX files contains non-ASCII
 
 | type      | default value |
 | --------- | ------------- |
-| _boolean_ | `false`       |
+| _boolean_ | `true`       |
 
 ### latex-workshop.view.pdf.viewer
 
