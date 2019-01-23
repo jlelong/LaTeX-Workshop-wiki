@@ -5,7 +5,7 @@ While it is fine to write all contents in one `.tex` file, it is common to split
 To find the root file, LaTeX Workshop will follow the steps below, stopping whenever one is found:
 1. **Magic comment** `% !TEX root = relative/or/absolute/path/to/root/file.tex`. If such comments exist in the currently active editor, the referred file is set as root.
 2. **Self check** If current active editor contains `\begin{document}`, it is set as root.
-3. **Root directory check** LaTeX Workshop iterates through all `.tex` files in the root folder of the workspace. The first one with `\begin{document}` is set as root.
+3. **Root directory check** LaTeX Workshop iterates through all `.tex` files in the root folder of the workspace. The first one containing `\begin{document}` and which includes the file in the active editor is set as the root file.
 
 If no root file is found, most of the features in LaTeX Workshop will not work.
 
