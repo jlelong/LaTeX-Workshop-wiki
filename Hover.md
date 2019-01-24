@@ -6,6 +6,8 @@ To open a package documentation, hover the package name inside the `\usepackage`
 
 <img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/hover-package.gif" alt="Hover on a package demo">
 
+You may also directly run the _LaTex Workshop: Show package documentation_ command from the Command Palette and type in the package name.
+
 ## Previewing equations
 
 When you move the mouse cursor over inline math,  `\[`,  `\begin{align}`, and `\begin{...}` of other math environments, math preview on hover is rendered. When you move the mouse cursor over `\ref`, and other reference commands referring math equations, math preview on hover is also rendered.
