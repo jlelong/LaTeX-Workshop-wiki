@@ -10,7 +10,7 @@ A document can previewed a number of ways, namely the icon that appears in the t
 
 |                                     Setting key                                     |                    Description                    |    Default    |     Type      |
 | ----------------------------------------------------------------------------------- | ------------------------------------------------- | ------------- | ------------- |
-| [`latex-workshop​.latex.outputDir`](#latex-workshoplatexoutputDir)                   | Where to find the PDF files                       | `"./"`        | _string_      |
+| [`latex-workshop​.latex.outDir`](#latex-workshoplatexoutDir)                   | Where to find the PDF files                       | `"%DIR%"`        | _string_      |
 | [`latex-workshop.view.pdf.viewer`](#latex-workshopviewpdfviewer)                    | The default PDF viewer                            | (see details) | _string_      |
 | [`latex-workshop.view.pdf.external.command`](#latex-workshopviewpdfexternalcommand) | The command to execute when using external viewer | (see details) | _JSON object_ |
 | [`latex-workshop.view.pdf.ref.viewer`](#latex-workshopviewpdfrefviewer)             | The PDF viewer to preview `\ref`                  | (see details) | _string_      |
@@ -103,16 +103,16 @@ Synctex may fail if the path contains non-ASCII characters, see [FAQ](FAQ#Path-c
 
 ## Relevant Settings
 
-### latex-workshop​.latex.outputDir
+### latex-workshop​.latex.outDir
 
 The directory where the extension tries to find project files (e.g., PDF and SyncTeX generated files).
 
-Both relative and absolute paths are supported. Relative path start from the root file location, so beware if it is located in sub-directory. Note that the LaTeX toolchain should output files to this path. The default [recipe](Compile#Latex-recipe), which relies on `latexmk`, takes care of putting all the generated files to the directory specified by `latex-workshop​.latex.outputDir`. The path given to this option must not contain a trailing slash.
+Both relative and absolute paths are supported. Relative path start from the root file location, so beware if it is located in sub-directory. Note that the LaTeX toolchain should output files to this path. The default [recipe](Compile#Latex-recipe), which relies on `latexmk`, takes care of putting all the generated files to the directory specified by `latex-workshop​.latex.outDir`. The path given to this option must not contain a trailing slash.
 The following placeholders `%DOC%`, `%DOCFILE`, `%DIR%` and `%TMPDIR%` can be used.
 
 | type     | default value |
 | -------- | ------------- |
-| _string_ | `"."`        |
+| _string_ | `"%DIR%"`     |
 
 
 #### latex-workshop.synctex.afterBuild.enabled
