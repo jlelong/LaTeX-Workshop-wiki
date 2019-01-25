@@ -98,7 +98,7 @@ Synctex may fail if the path contains non-ASCII characters, see [FAQ](FAQ#Path-c
 | [`latex-workshop​.synctex​.afterBuild​.enabled`](#latex-workshopsynctexafterBuildenabled) | Forward synctex at cursor after compiling | `false`       | _boolean_     |
 | [`latex-workshop​.synctex​.path`](#latex-workshopsynctexpath)                             | SyncTeX location                          | `"synctex"`   | _string_      |
 | [`latex-workshop​.view.pdf​.external​.synctex`](#latex-workshopviewpdfexternalsynctex)    | SyncTeX command for the external viewer   | (see details) | _JSON object_ |
-| [`latex-workshop.synctex.synctexjs.enabled`](#latex-workshopsynctexsynctexjsenabled)      | Enable using a built-in synctex function. | `true`        | _boolean_     |
+| [`latex-workshop​.synctex​.synctexjs​.enabled`](#latex-workshopsynctexsynctexjsenabled)   | Enable using a built-in synctex function. | `true`        | _boolean_     |
 
 ## Relevant Settings
 
