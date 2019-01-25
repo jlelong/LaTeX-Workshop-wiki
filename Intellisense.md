@@ -10,15 +10,14 @@ Then, when citation commands like `\cite` and its derivatives are automatically 
 
 If you use very large bibtex files, you may experience temporary freezing. Hence, files larger than 5MB are ignored (see [`latex-workshop.intellisense.citation.maxfilesizeMB"`](#latex-workshopintellisensecitationmaxfilesizeMB)).
 
-|                                                 Setting key                                                  |                                      Description                                       |    Default     |           Type           | 
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- | -------------- | ------------------------ |
-| [`latex-workshop.intellisense.citation.label`](#latex-workshopintellisensecitationlabel)                  | Citation property used as suggestion                                                   | `"bibtex key"` | _string_: "bibtex key" \| "title" \| "authors" |
-| [`latex-workshop.intellisense.citation.maxfilesizeMB"`](#latex-workshopintellisensecitationmaxfilesizeMB) | Maximum bibtex file size (in MB)                                                       | `5`            | _float_                  |
-| [`latex-workshop.intellisense.citation.type`](#latex-workshopintellisensecitationtype)                    | Type of vs code suggestion to use                                                      | `"inline"`     | _string_: "inline" \| "browser" (dropdown menu) |
-| [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled)                | Enabling of auto-completion for commands and environments from loaded packages         | `false`        | _boolean_|
-| [`latex-workshop.latex.additionalBib`](#latex-workshoplatexadditionalBib)                                 | Additional bib paths to watch, both relative and absolute paths (with globs) supported ** Deprecated in favor of [`latex-workshop.latex.bibDirs`](#latex-workshoplatexbibDirs) **  | `[]`           | _array_ of _strings_     |
-| [`latex-workshop.latex.bibDirs`](#latex-workshoplatexbibDirs)                                             | List of paths to look for `.bib` files.  | `[]`           | _array_ of _strings_     |
-
+| Setting key                                                                                                  | Description                                                                                                                                                                         | Default        | Type                                            |
+| ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- | ----------------------------------------------- |
+| [`latex-workshop​.intellisense​.citation​.label`](#latex-workshopintellisensecitationlabel)                  | Citation property used as suggestion                                                                                                                                                | `"bibtex key"` | _string_: "bibtex key" \| "title" \| "authors"  |
+| [`latex-workshop​.intellisense​.citation​.maxfilesizeMB"`](#latex-workshopintellisensecitationmaxfilesizeMB) | Maximum bibtex file size (in MB)                                                                                                                                                    | `5`            | _float_                                         |
+| [`latex-workshop​.intellisense​.citation​.type`](#latex-workshopintellisensecitationtype)                    | Type of vs code suggestion to use                                                                                                                                                   | `"inline"`     | _string_: "inline" \| "browser" (dropdown menu) |
+| [`latex-workshop​.intellisense​.package​.enabled`](#latex-workshopintellisensepackageenabled)                | Enabling of auto-completion for commands and environments from loaded packages                                                                                                      | `false`        | _boolean_                                       |
+| [`latex-workshop​.latex​.additionalBib`](#latex-workshoplatexadditionalBib)                                  | Additional bib paths to watch, both relative and absolute paths (with globs) supported ** Deprecated in favor of [`latex-workshop​.latex​.bibDirs`](#latex-workshoplatexbibDirs) ** | `[]`           | _array_ of _strings_                            |
+| [`latex-workshop​.latex​.bibDirs`](#latex-workshoplatexbibDirs)                                              | List of paths to look for `​.bib` files​.                                                                                                                                           | `[]`           | _array_ of _strings_                            |
 
 ## References
 
@@ -32,22 +31,19 @@ The key `\` automatically triggers completion of LaTeX commands. Several mechani
 
 - A set of standard LaTeX commands is provided.
 - The files of a LaTeX project are searched for any already used commands in the form `mycommand` followed by several `{}` groups. Then, a snippet is dynamically built for each of them and they are added to command completion list.
-- When [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled) is `true`, the command completion list is also populated with the commands provided by all the package used in the project (through `\usepackage`). The list of commands provided by every package is described [here](https://github.com/LaTeXing/LaTeX-cwl).
+- When [`latex-workshop​.intellisense​.package​.enabled`](#latex-workshopintellisensepackageenabled) is `true`, the command completion list is also populated with the commands provided by all the package used in the project (through `\usepackage`). The list of commands provided by every package is described [here](https://github.com/LaTeXing/LaTeX-cwl).
 - The completion list can use either placeholders or tabstops. The default is to use tabstops, but it can be changed using [`latex-workshop.intellisense.useTabStops.enabled`](#latex-workshopintellisenseuseTabStopsenabled).
-    - placeholders: they provide meaningful information on the arguments but prevent any autocompletion trigger.
-    - tabstops: they enable us to directly trigger autocompletion again for citations and references.
+  - placeholders: they provide meaningful information on the arguments but prevent any autocompletion trigger.
+  - tabstops: they enable us to directly trigger autocompletion again for citations and references.
 - We provide one entry in the intellisense completion list per LaTeX command signature. If you feel, it makes the completion list too long, set [`latex-workshop.intellisense.optionalArgsEntries.enabled`](#latex-workshopintellisenseoptionalArgsEntries) to `false`.
 
-
-
-
-|                                                 Setting key                                                  |                                  Description                                   | Default |   Type    |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------- | --------- |
-| [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled)                   | Enabling of auto-completion for commands and environments from loaded packages | `false` | _boolean_ |
-| [`latex-workshop.intellisense.surroundCommand.enabled`](#latex-workshopintellisensesurroundCommandenabled) **Deprecated see [there](https://github.com/James-Yu/LaTeX-Workshop/wiki/Snippets#surrounding-text)**  | When text selected, set hotkey `\` surround selection with LaTeX command       | `false` | _boolean_ |
-| [`latex-workshop.intellisense.unimathsymbols.enabled`](#latex-workshopintellisenseunimathsymbolsenabled)     | Show unimath symbols as suggestions when `\` pressed                           | `false` | _boolean_ |
-| [`latex-workshop.intellisense.useTabStops.enabled`](#latex-workshopintellisenseuseTabStopsenabled)           | Use tabstops in intellisense completion                                        | `true`  | _boolean_ |
-| [`latex-workshop.intellisense.optionalArgsEntries.enabled`](#latex-workshopintellisenseoptionalArgsEntries)  | Add one completion item per command signature                                  | `true`  | _boolean_ |
+| Setting key                                                                                                                                                                                                          | Description                                                                                    | Default | Type      |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ------- | --------- |
+| [`latex-workshop​.intellisense​.package​.enabled`](#latex-workshopintellisensepackageenabled)                                                                                                                        | Enabling of auto-completion for commands and environments from loaded packages                 | `false` | _boolean_ |
+| [`latex-workshop​.intellisense​.surroundCommand​.enabled`](#latex-workshopintellisensesurroundCommandenabled) **Deprecated see [there](https://github​.com/James-Yu/LaTeX-Workshop/wiki/Snippets#surrounding-text)** | When text selected, set hotkey `\` surround selection with LaTeX command | `false` | _boolean_ |
+| [`latex-workshop​.intellisense​.unimathsymbols​.enabled`](#latex-workshopintellisenseunimathsymbolsenabled)                                                                                                          | Show unimath symbols as suggestions when `\` pressed | `false` | _boolean_                     |
+| [`latex-workshop​.intellisense​.useTabStops​.enabled`](#latex-workshopintellisenseuseTabStopsenabled)                                                                                                                | Use tabstops in intellisense completion                                                        | `true`  | _boolean_ |
+| [`latex-workshop​.intellisense​.optionalArgsEntries​.enabled`](#latex-workshopintellisenseoptionalArgsEntries)                                                                                                       | Add one completion item per command signature                                                  | `true`  | _boolean_ |
 
 ## Configuration variables
 
@@ -90,7 +86,6 @@ Auto-complete commands and environments from used packages.
 | --------- | ------------- |
 | _boolean_ | `false`       |
 
-
 ### latex-workshop.intellisense.optionalArgsEntries.enabled
 
 Many LaTeX commands can have several signatures, each with different arguments. If set to True, the intellisense completion list will have one entry for each form of a given command.
@@ -99,14 +94,13 @@ Many LaTeX commands can have several signatures, each with different arguments. 
 | --------- | ------------- |
 | _boolean_ | `true`        |
 
-
 ### latex-workshop.intellisense.useTabStops.enabled
 
 Use tabstops instead of placeholders in intellisense. Tabstops enable us to directly trigger autocompletion again (particularly useful for citations and references). On the contrary, placeholders prevent any direct call to autocompletion but they provide more information on the arguments meaning.
 
 | type      | default value |
 | --------- | ------------- |
-| _boolean_ | `true`       |
+| _boolean_ | `true`        |
 
 Reload vscode after change.
 

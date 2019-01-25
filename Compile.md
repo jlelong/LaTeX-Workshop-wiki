@@ -8,26 +8,26 @@ You can define several compiling toolchains to build LaTeX projects using [LaTeX
 
 The following settings are helpful to customize how to build a project and how to deal with failures.
 
-|                       Setting key                        |                     Description                      | Default |        Type        |
-| -------------------------------------------------------- | ---------------------------------------------------- | ------- | ------------------ |
-| `latex-workshop.latex.autoBuild.onSave.enabled`          | Enable automatic building when saving any tex file   | `true`  | _boolean_          |
-| `latex-workshop.latex.autoBuild.onTexChange.enabled`     | Enable LaTeX building after any tex file has changed | `false` | _boolean_          |
-| [`latex-workshop.latex.recipes`](#latex-recipe)          | Sequence of tools to run for building                |         | _JSON object_      |
-| [`latex-workshop.latex.tools`](#latex-recipe)            | Tools available for building                         |         | _JSON object_      |
-| [`latex-workshop.latex.magic.args`](#magic-comments)     | Arguments for the `TeX program`                      |         | _array of strings_ |
-| [`latex-workshop.latex.magic.bib.args`](#magic-comments) | Arguments for the `BIB program`                      |         | _array of strings_ |
+| Setting key                                                  | Description                                          | Default | Type               |
+| ------------------------------------------------------------ | ---------------------------------------------------- | ------- | ------------------ |
+| `latex-workshop​.latex​.autoBuild​.onSave​.enabled`          | Enable automatic building when saving any tex file   | `true`  | _boolean_          |
+| `latex-workshop​.latex​.autoBuild​.onTexChange​.enabled`     | Enable LaTeX building after any tex file has changed | `false` | _boolean_          |
+| [`latex-workshop​.latex​.recipes`](#latex-recipe)            | Sequence of tools to run for building                |         | _JSON object_      |
+| [`latex-workshop​.latex​.tools`](#latex-recipe)              | Tools available for building                         |         | _JSON object_      |
+| [`latex-workshop​.latex​.magic​.args`](#magic-comments)      | Arguments for the `TeX program`                      |         | _array of strings_ |
+| [`latex-workshop​.latex​.magic​.bib​.args`](#magic-comments) | Arguments for the `BIB program`                      |         | _array of strings_ |
 
 ## Cleaning generated files
 
 LaTeX compilation typically generates several auxiliary files. They can be removed by calling _Clean up auxiliary files_ from the _Command Palette_ or from the _TeX_ badge. This command is bind to <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>c</kbd>. If you cannot use <kbd>ctrl</kbd>+<kbd>alt</kbd> in a keybinding, see[the FAQ](FAQ#i-cannot-use-ctrlalt-in-a-shortcut).
 
-|                     Setting key                      |                    Description                    | Default |  Type   |
-| ---------------------------------------------------- | ------------------------------------------------- | ------- | ------- |
-| `latex-workshop.latex.autoBuild.cleanAndRetry.enabled` | Enable cleaning and building once more after errors in the build toolchain | `true` | _boolean_ |
-| `latex-workshop.latex.clean.enabled` | Enable cleaning LaTeX auxiliary files after building project | `false` | _boolean_ |
-| `latex-workshop.latex.clean.onFailBuild.enabled` | Enable cleaning LaTeX auxiliary files after a failed build | `false` | _boolean_ |
-| `latex-workshop.latex.clean.fileTypes` | Extensions of files to clean |  | _array of strings_ |
-| `latex-workshop.latex.clean.subfolder.enabled` | Clean LaTeX auxillary files recursively in sub-folders of [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutDir) | false | _boolean_ |
+| Setting key                                                | Description                                                                                                                 | Default | Type               |
+| ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | ------- | ------------------ |
+| `latex-workshop​.latex​.autoBuild​.cleanAndRetry​.enabled` | Enable cleaning and building once more after errors in the build toolchain                                                  | `true`  | _boolean_          |
+| `latex-workshop​.latex​.clean​.enabled`                    | Enable cleaning LaTeX auxiliary files after building project                                                                | `false` | _boolean_          |
+| `latex-workshop​.latex​.clean​.onFailBuild​.enabled`       | Enable cleaning LaTeX auxiliary files after a failed build                                                                  | `false` | _boolean_          |
+| `latex-workshop​.latex​.clean​.fileTypes`                  | Extensions of files to clean                                                                                                |         | _array of strings_ |
+| `latex-workshop​.latex​.clean​.subfolder​.enabled`         | Clean LaTeX auxillary files recursively in sub-folders of [`latex-workshop​.latex​.outDir`](View#latex-workshoplatexoutDir) | false   | _boolean_          |
 
 ## LaTeX recipes
 
@@ -96,7 +96,6 @@ You can create multiple recipes with different tools. Each recipe is an object i
 
 The `tools` in recipes can be defined in `latex-workshop.latex.tools`, in which each command is a `tool`. Each tool is an object consists of a `name`, a `command` to be spawned, and its arguments (`args`). To include a tool in a recipe, the tool's `name` should be included in the recipe's `tools` list.
 
-
 When building the project, the first recipe is used. You can compile with another recipe by command `latex-workshop.recipes`. By default [`latexmk`](http://personal.psu.edu/jcc8/software/latexmk/) is used. This tool is bundled in most LaTeX distributions, and requires perl to execute. For non-perl users, the following `texify` toolchain from MikTeX may worth a try:
 
 ```
@@ -121,13 +120,13 @@ When building the project, the first recipe is used. You can compile with anothe
 
 As you may notice, there is a mystic `%DOC%` in the arguments. Symbols surrounded by `%` are placeholders, which are replaced with its representing string on-the-fly. LaTeX Workshop registers the following placeholders:
 
-| Placeholder |                                               Replaced by                                                |
-| ----------- | -------------------------------------------------------------------------------------------------------- |
-| `%DOC%`     | The LaTeX root file path and name without the `.tex` extension                                           |
-| `%DOCFILE%` | The LaTeX root file name without the `.tex` extension                                                    |
-| `%DIR%`     | The LaTeX root file path                                                                                 |
-| `%TMPDIR%`  | A temporary folder for storing ancillary files                                                           |
-| `%OUTDIR%`  | The output directory configured in [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutDir) |
+| Placeholder | Replaced by                                                                                          |
+| ----------- | ---------------------------------------------------------------------------------------------------- |
+| `%DOC%`     | The LaTeX root file path and name without the `.tex` extension                                       |
+| `%DOCFILE%` | The LaTeX root file name without the `.tex` extension                                                |
+| `%DIR%`     | The LaTeX root file path                                                                             |
+| `%TMPDIR%`  | A temporary folder for storing ancillary files                                                       |
+| `%OUTDIR%`  | The output directory configured in [`latex-workshop​.latex​.outDir`](View#latex-workshoplatexoutDir) |
 
 Alternatively, you can also set your commands without the placeholder, just like what you may input in a terminal.
 As most LaTeX compiler accepts root file name without extension, `%DOC%` and `%DOCFILE%` do not include `.tex` extension. Meanwhile, `texify` requires the extension. So in the above tool `%DOC%` and `.tex` are concatenated for completeness.
@@ -187,9 +186,9 @@ Show badbox information in the problems panel.
 
 Exclude log messages that matches the given regexp from the problems panel.
 
-|       type        | default value |
-| ----------------- | ------------- |
-| _array of strings | `[]`          |
+| type               | default value |
+| ------------------ | ------------- |
+| \_array of strings | `[]`          |
 
 ### latex-workshop.message.information.show
 
