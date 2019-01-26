@@ -6,7 +6,7 @@ The [ChkTeX](http://www.nongnu.org/chktex/) utility is a LaTeX semantic checker.
 
 Auto load of `.chktexrc` configuration files is performed in the following order
 
-1. Manually configured `-l` setting in `chktex.args` 
+1. Manually configured `-l` setting in `chktex.args`
 1. The `.chktexrc` file (if exists) in the same folder as the main LaTeX file
 1. The `.chktexrc` file (if exists) at the project root folder.
 
@@ -14,13 +14,13 @@ Auto load of `.chktexrc` configuration files is performed in the following order
 
 ### Overview
 
-| Setting key                                                                  | Description                                             | Default                                   | Type                 |
-| ---------------------------------------------------------------------------- | ------------------------------------------------------- | ----------------------------------------- | -------------------- |
-| [`latex-workshop​.chktex​.args​.active`](#latex-workshop.chktex.args.active) | Arguments to be passed to ChkTeX for **current file**   | `["-wall", "-n22", "-n30", "-e16", "-q"]` | _array_ of _strings_ |
-| [`latex-workshop​.chktex​.args​.root`](#latex-workshop.chktex.args.root)     | Arguments to be passed to ChkTeX for **entire project** | `["-wall", "-n22", "-n30", "-e16", "-q"]` | _array_ of _strings_ |
-| [`latex-workshop​.chktex​.enabled`](#latex-workshop.chktex.enabled)          | Enable LaTeX linting with ChkTeX                        | `false`                                   | _boolean_            |
-| [`latex-workshop​.chktex​.interval`](#latex-workshop.chktex.interval)        | Time interval in ms that ChkTeX is run                  | 300                                       | _integer_            |
-| [`latex-workshop​.chktex​.path`](#latex-workshop.chktex.path)                | Location of ChkTeX executable                           | `"chktex"`                                | _string_             |
+| Setting key                                                               | Description                                             | Default                                   | Type                 |
+| ------------------------------------------------------------------------- | ------------------------------------------------------- | ----------------------------------------- | -------------------- |
+| [`latex-workshop.chktex.args.active`](#latex-workshop.chktex.args.active) | Arguments to be passed to ChkTeX for **current file**   | `["-wall", "-n22", "-n30", "-e16", "-q"]` | _array_ of _strings_ |
+| [`latex-workshop.chktex.args.root`](#latex-workshop.chktex.args.root)     | Arguments to be passed to ChkTeX for **entire project** | `["-wall", "-n22", "-n30", "-e16", "-q"]` | _array_ of _strings_ |
+| [`latex-workshop.chktex.enabled`](#latex-workshop.chktex.enabled)         | Enable LaTeX linting with ChkTeX                        | `false`                                   | _boolean_            |
+| [`latex-workshop.chktex.interval`](#latex-workshop.chktex.interval)       | Time interval in ms that ChkTeX is run                  | 300                                       | _integer_            |
+| [`latex-workshop.chktex.path`](#latex-workshop.chktex.path)               | Location of ChkTeX executable                           | `"chktex"`                                | _string_             |
 
 ### Details
 
