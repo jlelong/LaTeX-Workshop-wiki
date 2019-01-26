@@ -8,9 +8,9 @@ A document can previewed a number of ways, namely the icon that appears in the t
 
 ## Overview
 
-|                                     Setting key                                     |                    Description                    |    Default    |     Type      |
+| Setting key                                                                         | Description                                       | Default       | Type          |
 | ----------------------------------------------------------------------------------- | ------------------------------------------------- | ------------- | ------------- |
-| [`latex-workshop​.latex.outDir`](#latex-workshoplatexoutDir)                   | Where to find the PDF files                       | `"%DIR%"`        | _string_      |
+| [`latex-workshop.latex.outDir`](#latex-workshoplatexoutDir)                         | Where to find the PDF files                       | `"%DIR%"`     | _string_      |
 | [`latex-workshop.view.pdf.viewer`](#latex-workshopviewpdfviewer)                    | The default PDF viewer                            | (see details) | _string_      |
 | [`latex-workshop.view.pdf.external.command`](#latex-workshopviewpdfexternalcommand) | The command to execute when using external viewer | (see details) | _JSON object_ |
 | [`latex-workshop.view.pdf.ref.viewer`](#latex-workshopviewpdfrefviewer)             | The PDF viewer to preview `\ref`                  | (see details) | _string_      |
@@ -23,11 +23,11 @@ You can customize the look and feel of the internal PDF viewer. Of course, this 
 
 Below are the detailed explanations for the different possible settings
 
-|                               Setting key                                |                Description                |
+| Setting key                                                              | Description                               |
 | ------------------------------------------------------------------------ | ----------------------------------------- |
 | [`latex-workshop.view.pdf.zoom`](#latex-workshopviewpdfzoom)             | The default zoom level of the PDF viewer  |
 | [`latex-workshop.view.pdf.scrollMode`](#latex-workshopviewpdfscrollMode) | The default scroll mode of the PDF viewer |
-| [`latex-workshop.view.pdf.spreadMode`](#latex-workshopviewpdfspreadMode) | The default spread mode of the PDF viewer  |
+| [`latex-workshop.view.pdf.spreadMode`](#latex-workshopviewpdfspreadMode) | The default spread mode of the PDF viewer |
 | [`latex-workshop.view.pdf.hand`](#latex-workshopviewpdfhand)             | Enable the hand tool                      |
 | [`latex-workshop.view.pdf.invert`](#latex-workshopviewpdfinvert)         | Define the CSS invert filter level        |
 
@@ -37,7 +37,7 @@ The default zoom level of the PDF viewer.
 
 This default value will be passed to the viewer upon opening. Possible values are `auto`, `page-actual`, `page-fit`, `page-width`, and one-based scale values (e.g., 0.5 for 50%, 2.0 for 200%).
 
-|   type   | default value |
+| type     | default value |
 | -------- | ------------- |
 | _string_ | `"auto"`      |
 
@@ -47,7 +47,7 @@ The default scroll mode of the PDF viewer.
 
 This default value will be passed to the viewer upon opening. Possible values are `0` (vertical), `1`(horizontal) and `2` (wrapped).
 
-|   type   | default value |
+| type     | default value |
 | -------- | ------------- |
 | _number_ | `0`           |
 
@@ -57,7 +57,7 @@ The default spread mode of the PDF viewer.
 
 This default value will be passed to the viewer upon opening. Possible values are `0` (none), `1` (odd) and `2` (even).
 
-|   type   | default value |
+| type     | default value |
 | -------- | ------------- |
 | _number_ | `0`           |
 
@@ -75,7 +75,7 @@ Define the CSS invert filter level of the PDF viewer.
 
 This config can invert the color of PDF. Possible values are from 0 to 1.
 
-|   type   | default value |
+| type     | default value |
 | -------- | ------------- |
 | _number_ | `0`           |
 
@@ -93,27 +93,25 @@ Synctex may fail if the path contains non-ASCII characters, see [FAQ](FAQ#Path-c
 
 ### Overview
 
-|                                        Setting key                                        |                Description                |    Default    |     Type      |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------- | ------------- | ------------- |
-| [`latex-workshop​.synctex​.afterBuild​.enabled`](#latex-workshopsynctexafterBuildenabled) | Forward synctex at cursor after compiling | `false`       | _boolean_     |
-| [`latex-workshop​.synctex​.path`](#latex-workshopsynctexpath)                             | SyncTeX location                          | `"synctex"`   | _string_      |
-| [`latex-workshop​.view.pdf​.external​.synctex`](#latex-workshopviewpdfexternalsynctex)    | SyncTeX command for the external viewer   | (see details) | _JSON object_ |
-| [`latex-workshop.synctex.synctexjs.enabled`](#latex-workshopsynctexsynctexjsenabled)      | Enable using a built-in synctex function. | `true`       | _boolean_     |
-
+| Setting key                                                                            | Description                               | Default       | Type          |
+| -------------------------------------------------------------------------------------- | ----------------------------------------- | ------------- | ------------- |
+| [`latex-workshop.synctex.afterBuild.enabled`](#latex-workshopsynctexafterBuildenabled) | Forward synctex at cursor after compiling | `false`       | _boolean_     |
+| [`latex-workshop.synctex.path`](#latex-workshopsynctexpath)                            | SyncTeX location                          | `"synctex"`   | _string_      |
+| [`latex-workshop.view.pdf.external.synctex`](#latex-workshopviewpdfexternalsynctex)    | SyncTeX command for the external viewer   | (see details) | _JSON object_ |
+| [`latex-workshop.synctex.synctexjs.enabled`](#latex-workshopsynctexsynctexjsenabled)   | Enable using a built-in synctex function. | `true`        | _boolean_     |
 
 ## Relevant Settings
 
-### latex-workshop​.latex.outDir
+### latex-workshop.latex.outDir
 
 The directory where the extension tries to find project files (e.g., PDF and SyncTeX generated files).
 
-Both relative and absolute paths are supported. Relative path start from the root file location, so beware if it is located in sub-directory. Note that the LaTeX toolchain should output files to this path. The default [recipe](Compile#Latex-recipe), which relies on `latexmk`, takes care of putting all the generated files to the directory specified by `latex-workshop​.latex.outDir`. The path given to this option must not contain a trailing slash.
+Both relative and absolute paths are supported. Relative path start from the root file location, so beware if it is located in sub-directory. Note that the LaTeX toolchain should output files to this path. The default [recipe](Compile#Latex-recipe), which relies on `latexmk`, takes care of putting all the generated files to the directory specified by `latex-workshop.latex.outDir`. The path given to this option must not contain a trailing slash.
 The following placeholders `%DOC%`, `%DOCFILE`, `%DIR%` and `%TMPDIR%` can be used.
 
 | type     | default value |
 | -------- | ------------- |
 | _string_ | `"%DIR%"`     |
-
 
 #### latex-workshop.synctex.afterBuild.enabled
 
@@ -150,13 +148,13 @@ This builtin synctex works well even if the path of TeX files contains non-ASCII
 
 | type      | default value |
 | --------- | ------------- |
-| _boolean_ | `true`       |
+| _boolean_ | `true`        |
 
 ### latex-workshop.view.pdf.viewer
 
 The default PDF viewer.
 
-|   type   | default value                                |
+| type     | default value                                |
 | -------- | -------------------------------------------- |
 | _string_ | `"none" \| "browser" \| "tab" \| "external"` |
 
@@ -169,7 +167,7 @@ The default PDF viewer.
 
 PDF viewer used for [View on PDF] link on `\ref`.
 
-|   type   | default value                            |
+| type     | default value                            |
 | -------- | ---------------------------------------- |
 | _string_ | `"auto" \| "tabOrBrowser" \| "external"` |
 
@@ -179,6 +177,6 @@ The command to execute when using external viewer. When left empty, the default 
 
 This function is not officially supported. `%PDF%` is the placeholder for the absolute path to the generated PDF file.
 
-|     type      |         default value          |
+| type          | default value                  |
 | ------------- | ------------------------------ |
 | _JSON object_ | `{ "command": "" "args": [] }` |
