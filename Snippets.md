@@ -1,6 +1,6 @@
 # Snippets and shortcuts
 
-All commands are listed as <kbd>ctrl</kbd>+<kbd>some key</kbd>. If you're on Mac, don't worry we have written equivalents, so every time you see <kbd>ctrl</kbd>  just imagine it's <kbd>⌘</kbd>.
+All commands are listed as <kbd>ctrl</kbd>+<kbd>some key</kbd>. If you're on Mac, don't worry we have written equivalents, so every time you see <kbd>ctrl</kbd> just imagine it's <kbd>⌘</kbd>.
 
 To have intellisense automatically triggered inside snippets, set `editor.suggest.snippetsPreventQuickSuggestions` to `false`. This is useful for instance if you want to enter `\frac{x_{1}}{2}` using `@/`+ `x` + `__` + `1`+ `2` using <kbd>TAB</kbd> to move from one tabstop to the next.
 
@@ -24,7 +24,7 @@ Some environments have a dedicated snippet in the form `BXY` where `XY` are the 
 
 Greek Letters can be inserted using the LaTeX command, which will autocomplete or using `@` + letter
 
-| Prefix |    Letter     |
+| Prefix | Letter        |
 | ------ | ------------- |
 | `@a`   | `\alpha`      |
 | `@b`   | `\beta`       |
@@ -70,41 +70,40 @@ Greek Letters can be inserted using the LaTeX command, which will autocomplete o
 
 Some common mathematical symbols or commands have a dedicated snippet.
 
-
-| Prefix |       Command        |
-| ------ | -------------------- |
-| `@(`   | `\left( $1 \right)`  |
-| `@{`   | `\left\{ $1 \right\}`|
-| `@[`   | `\left[ $1 \right]`  |
-| `__`   | `_{$1}`              |
-| `**`   | `^{$1}`              |
-| `...`  | `\dots`              |
-| `@.`   | `\cdot`              |
-| `@8`   | `\infty`             |
-| `@6`   | `\partial`           |
-| `@/`   | `\frac{$1}{$2}`      |
-| `@%`   | `\frac{$1}{$2}`      |
-| `@^`   | `\Hat{$1}`           |
-| `@_`   | `\bar{$1}`           |
-| `@@`   | `\circ`              |
-| `@0`   | `^\circ`             |
-| `@;`   | `\dot{$1}`           |
-| `@:`   | `\ddot{$1}`          |
-| `@=`   | `\equiv`             |
-| `@*`   | `\times`             |
-| `@<`   | `\leq`               |
-| `@>`   | `\geq`               |
-| `@2`   | `\sqrt{$1}`          |
-| `@I`   | `\int_{$1}^{$2}`     |
-| <code>@&#124;</code>  | <code>\Big &#124;</code>            |
-| `@\`   | `\setminus`          |
-| `@+`   | `\bigcup`            |
-| `@-`   | `\bigcap`            |
-| `@,`   | `\nonumber`          |
+| Prefix               | Command                  |
+| -------------------- | ------------------------ |
+| `@(`                 | `\left( $1 \right)`      |
+| `@{`                 | `\left\{ $1 \right\}`    |
+| `@[`                 | `\left[ $1 \right]`      |
+| `__`                 | `_{$1}`                  |
+| `**`                 | `^{$1}`                  |
+| `...`                | `\dots`                  |
+| `@.`                 | `\cdot`                  |
+| `@8`                 | `\infty`                 |
+| `@6`                 | `\partial`               |
+| `@/`                 | `\frac{$1}{$2}`          |
+| `@%`                 | `\frac{$1}{$2}`          |
+| `@^`                 | `\Hat{$1}`               |
+| `@_`                 | `\bar{$1}`               |
+| `@@`                 | `\circ`                  |
+| `@0`                 | `^\circ`                 |
+| `@;`                 | `\dot{$1}`               |
+| `@:`                 | `\ddot{$1}`              |
+| `@=`                 | `\equiv`                 |
+| `@*`                 | `\times`                 |
+| `@<`                 | `\leq`                   |
+| `@>`                 | `\geq`                   |
+| `@2`                 | `\sqrt{$1}`              |
+| `@I`                 | `\int_{$1}^{$2}`         |
+| <code>@&#124;</code> | <code>\Big &#124;</code> |
+| `@\` | `\setminus`   |
+| `@+`                 | `\bigcup`                |
+| `@-`                 | `\bigcap`                |
+| `@,`                 | `\nonumber`              |
 
 ## Font commands
 
-|   Prefix   |                            Shortcut                            |         Command          |
+| Prefix     | Shortcut                                                       | Command                  |
 | ---------- | -------------------------------------------------------------- | ------------------------ |
 | `fontsize` |                                                                | Opens font size select   |
 | `FNO`      |                                                                | `\textnormal{${1}}`      |
@@ -122,10 +121,9 @@ Some common mathematical symbols or commands have a dedicated snippet.
 | `FSS`      | <kbd>ctrl</kbd>+<kbd>l</kbd>, <kbd>ctrl</kbd>+<kbd>6</kbd>     | `\textsuperscript{${1}}` |
 | `FBS`      | <kbd>ctrl</kbd>+<kbd>l</kbd>, <kbd>ctrl</kbd>+<kbd>minus</kbd> | `\textsubscript{${1}}`   |
 
-
 ## Mathematical font commands
 
-| Prefix |                                Shortcut                                 |     Command      |
+| Prefix | Shortcut                                                                | Command          |
 | ------ | ----------------------------------------------------------------------- | ---------------- |
 | `MRM`  | <kbd>ctrl</kbd>+<kbd>m</kbd>, <kbd>ctrl</kbd>+<kbd>r</kbd>              | `\mathrm{${1}}`  |
 | `MBF`  | <kbd>ctrl</kbd>+<kbd>m</kbd>, <kbd>ctrl</kbd>+<kbd>S</kbd>+<kbd>b</kbd> | `\mathbf{${1}}`  |
