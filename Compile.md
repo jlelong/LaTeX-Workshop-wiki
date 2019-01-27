@@ -8,14 +8,14 @@ You can define several compiling toolchains to build LaTeX projects using [LaTeX
 
 The following settings are helpful to customize how to build a project and how to deal with failures.
 
-| Setting key                                              | Description                                          | Default | Type               |
-| -------------------------------------------------------- | ---------------------------------------------------- | ------- | ------------------ |
-| `latex-workshop.latex.autoBuild.onSave.enabled`          | Enable automatic building when saving any tex file   | `true`  | _boolean_          |
-| `latex-workshop.latex.autoBuild.onTexChange.enabled`     | Enable LaTeX building after any tex file has changed | `false` | _boolean_          |
-| [`latex-workshop.latex.recipes`](#latex-recipe)          | Sequence of tools to run for building                |         | _JSON object_      |
-| [`latex-workshop.latex.tools`](#latex-recipe)            | Tools available for building                         |         | _JSON object_      |
-| [`latex-workshop.latex.magic.args`](#magic-comments)     | Arguments for the `TeX program`                      |         | _array of strings_ |
-| [`latex-workshop.latex.magic.bib.args`](#magic-comments) | Arguments for the `BIB program`                      |         | _array of strings_ |
+| Setting key                                              | Description                                          | Default | Type                 |
+| -------------------------------------------------------- | ---------------------------------------------------- | ------- | -------------------- |
+| `latex-workshop.latex.autoBuild.onSave.enabled`          | Enable automatic building when saving any tex file   | `true`  | _boolean_            |
+| `latex-workshop.latex.autoBuild.onTexChange.enabled`     | Enable LaTeX building after any tex file has changed | `false` | _boolean_            |
+| [`latex-workshop.latex.recipes`](#latex-recipes)         | Sequence of tools to run for building                |         | _JSON object_        |
+| [`latex-workshop.latex.tools`](#latex-recipes)           | Tools available for building                         |         | _JSON object_        |
+| [`latex-workshop.latex.magic.args`](#magic-comments)     | Arguments for the `TeX program`                      |         | _array_ of _strings_ |
+| [`latex-workshop.latex.magic.bib.args`](#magic-comments) | Arguments for the `BIB program`                      |         | _array_ of _strings_ |
 
 ## Cleaning generated files
 
@@ -39,13 +39,13 @@ A LaTeX recipe refers to a sequence/array of commands which LaTeX Workshop execu
 ```
 [
   {
-    "name": "latexmk",
+    "name": "latexmk 🔃",
     "tools": [
       "latexmk"
     ]
   },
   {
-    "name": "pdflatex -> bibtex -> pdflatex*2",
+    "name": "pdflatex ➞ bibtex ➞ pdflatex`×2",
     "tools": [
       "pdflatex",
       "bibtex",
@@ -163,6 +163,8 @@ The warnings and errors issued by the compiling toolchain are rendered in the _P
 The raw compiler logs can be accessed in the _Output Pane_, choose _LaTeX Compiler_. The default is to clear the logs before calling every tool of a recipe. If you prefer to keep the logs from all the tools of a recipe, set [`latex-workshop.latex.build.clearLog.everyRecipeStep.enabled`](latex-workshoplatexbuildclearLogeveryRecipeStepenabled) to `false`.
 
 to true.
+
+## Settings Details
 
 ### latex-workshop.message.log.show
 
