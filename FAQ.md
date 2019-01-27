@@ -13,6 +13,7 @@
 - [The LaTeX sidebar keeps reopening](#the-latex-sidebar-keeps-reopening)
 - [Spell check](#spell-check)
 - [I cannot nest snippets](#i-cannot-nest-snippets)
+- [How to pass `-shell-escape` to `latexmk`](#how-to-pass--shell-escape-to-latexmk)
 
 ## Known incompatible Extensions
 
@@ -84,3 +85,45 @@ If you like to work with no sidebar in Visual Studio Code and yet the LaTeX side
 ## I cannot nest snippets
 
 Nesting snippets requires to have intellisense automatically triggered inside snippets. This can be achieved by setting `editor.suggest.snippetsPreventQuickSuggestions` to `false`.
+
+## How to pass `-shell-escape` to `latexmk`
+
+Some packages such as `minted` requires `LaTeX` compilers to use the `-shell-escape` flag. Passing this flag can be achieved in several different ways.
+
+1. Modify the section of `latex-workshop.latex.tools` related to `latexmk` in the following way
+
+    ````
+    "name": "latexmk",
+    "command": "latexmk",
+    "args": [
+        "-shell-escape",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+    ]
+    ````
+
+1. Directly specify `-shell-escape` in the compiler flag of `latexmk`. Modify the section of `latex-workshop.latex.tools` related to `latexmk` in the following way
+
+    ````
+    "name": "latexmk",
+    "command": "latexmk",
+    "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "-pdflatex=pdflatex -shell-escape %O %S",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+    ]
+    ````
+
+1. Create a `.latexmkrc` config file (in your home directory or in the working directory) containing at least
+
+    ````
+    $pdflatex='pdflatex -shell-escape';
+    ````
