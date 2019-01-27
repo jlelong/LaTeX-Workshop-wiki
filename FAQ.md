@@ -1,6 +1,7 @@
 # FAQ and common issues
 
 - [Known incompatible extensions](#Known-incompatible-extensions)
+- [Cygwin is not supported](#Cygwin-is-not-supported)
 - [The Problem Pane displays wrong messages](#The-Problem-Pane-displays-wrong-messages)
 - [I cannot use `ctrl`+`alt` in a shortcut](#I-cannot-use-ctrlalt-in-a-shortcut)
 - [Disable automatic build on save](#disable-automatic-build-on-save)
@@ -22,6 +23,10 @@ The following extensions are known to cause issues when active at the same time 
 - [Brackets Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
 - [Prettify Symbols Mode](https://marketplace.visualstudio.com/items?itemName=siegebell.prettify-symbols-mode)
 
+## Cygwin is not supported
+
+LaTeX Workshop does not support TeX Live installed through Cygwin. Please install TeX Live and other TeX distributions independently of Cygwin.
+
 ## The Problem Pane displays wrong messages
 
 LaTeX compilers usually produce hard wrapped log messages, which makes them really hard to parse. To hopefully deal with complex log messages, we have decided to rely on non hard wrapped log messages. This can be achieved either
@@ -37,13 +42,13 @@ The default shortcuts for commands related to build and view use the modifiers <
 
 ## Disable automatic build on save
 
-Set the configuration variable `latex-workshop.latex.autoBuild.onSave.enabled` to `false`.
+Set the configuration variable `latex-workshop.latex.autoBuild.run` to `"never"`.
 
 ## My file is built when I paste
 
 Set `editor.formatOnPaste` to `false`.
 
-The formatting program `latexindent` changes the file on disk when formatting and not only the buffer content. VSCode interprets it as a file save and triggers a build if `latex-workshop.latex.autoBuild.onSave.enabled` to `true`
+The formatting program `latexindent` changes the file on disk when formatting and not only the buffer content. VSCode interprets it as a file save and triggers a build if `latex-workshop.latex.autoBuild.run` to `"onSave"`
 
 ## Format on save does not work
 
@@ -53,9 +58,9 @@ The formatting utility `latexindent` reads its input from the file on the disk a
 
 ## My file gets messed up
 
-This is most likely related to the two following variables being set together `latex-workshop.latex.autoBuild.onTexChange.enabled: true` and `editor.formatOnSave: true`.
+This is most likely related to the two following variables being set together `latex-workshop.latex.autoBuild.run: "onFileChange"` and `editor.formatOnSave: true`.
 
-Formatting a .tex file actually changes it on the disk and then if `latex-workshop.latex.autoBuild.onTexChange.enabled` is true it saves the file and triggers a build. You will get two formatting processes running together and using the same temporary file. Hence, the mess you see in your file.
+Formatting a .tex file actually changes it on the disk and then if `latex-workshop.latex.autoBuild.run` is `"onFileChange"` it saves the file and triggers a build. You will get two formatting processes running together and using the same temporary file. Hence, the mess you see in your file.
 
 ## Large bibtex files are ignored
 
@@ -71,7 +76,7 @@ See [Viewing & Synctex](View#latex-workshopsynctexsynctexjsenabled).
 
 ## The LaTeX sidebar keeps reopening
 
-If you like to work with no sidebar in Visual Studio Code and yet the LaTeX sidebar keeps showing up each time you switch focus from a non TeX file to a TeX file, you need to set `latex-workshop.view.autoActivateLatex.enabled` to `false`.
+If you like to work with no sidebar in Visual Studio Code and yet the LaTeX sidebar keeps showing up each time you switch focus from a non TeX file to a TeX file, you need to set `latex-workshop.view.autoFocus.enabled` to `false`.
 
 ## Spell check
 

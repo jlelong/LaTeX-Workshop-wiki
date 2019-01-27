@@ -20,25 +20,25 @@ Supported math environments are `align`, `align*`, `alignat`, `alignat*`, `align
 
 ## Previewing citation details
 
-When [`latex-workshop.hoverCitation.enabled`](#latex-workshophoverCitationenabled) is set to `true`, moving the mouse over an argument of a `\cite` related command displays the details of the bibliography as a tooltip.
+When [`latex-workshop.hover.citation.enabled`](#latex-workshophovercitationenabled) is set to `true`, moving the mouse over an argument of a `\cite` related command displays the details of the bibliography as a tooltip.
 
 <img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/hover-cite.gif" alt="Hover on \cite demo">
 
 ## Previewing references
 
-When [`latex-workshop.hoverReference.enabled`](#latex-workshophoverReferenceenabled) is set to `true`, moving the mouse over a `\ref` related command displays the piece of `tex` with the corresponding label as a tooltip. Moreover, if the label refers to a maths environment as described in [Preview equations](#Preview-equations) and [`latex-workshop.hoverPreview.ref.enabled`](#latex-workshophoverPreviewrefenabled) is set to `true`, math preview is rendered instead of showing the tex content.
+When [`latex-workshop.hover.reference.enabled`](#latex-workshophoverreferenceenabled) is set to `true`, moving the mouse over a `\ref` related command displays the piece of `tex` with the corresponding label as a tooltip. Moreover, if the label refers to a maths environment as described in [Preview equations](#Preview-equations) and [`latex-workshop.hover.preview.ref.enabled`](#latex-workshophoverpreviewrefenabled) is set to `true`, math preview is rendered instead of showing the tex content.
 
 <img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/hover-ref.gif" alt="Hover on \ref demo" height="300px">
 
 ## Documentation of a command
 
-When [`latex-workshop.hoverCommandDoc.enabled`](#latex-workshophoverCommandDocenabled) is set to `true`, moving the mouse over a command displays the different forms (signatures) of the command with their arguments as a tooltip. You can directly access the documentation of the package(s) defining the command by clicking on the package name(s).
+When [`latex-workshop.hover.command.enabled`](#latex-workshophovercommandenabled) is set to `true`, moving the mouse over a command displays the different forms (signatures) of the command with their arguments as a tooltip. You can directly access the documentation of the package(s) defining the command by clicking on the package name(s).
 
 <img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/hover-command.gif" alt="Hover on a command demo">
 
 ## Configuration variables
 
-### latex-workshop.hoverReference.enabled
+### latex-workshop.hover.reference.enabled
 
 Enable Hover on References.
 
@@ -46,7 +46,7 @@ Enable Hover on References.
 | --------- | ------------- |
 | _boolean_ | `true`        |
 
-### latex-workshop.hoverCitation.enabled
+### latex-workshop.hover.citation.enabled
 
 Enable Hover on Citations.
 
@@ -54,7 +54,7 @@ Enable Hover on Citations.
 | --------- | ------------- |
 | _boolean_ | `true`        |
 
-### latex-workshop.hoverCommandDoc.enabled
+### latex-workshop.hover.command.enabled
 
 Enable Hover on Commands to show the possible signatures.
 
@@ -62,7 +62,7 @@ Enable Hover on Commands to show the possible signatures.
 | --------- | ------------- |
 | _boolean_ | `true`        |
 
-### latex-workshop.hoverPreview.enabled
+### latex-workshop.hover.preview.enabled
 
 Enable math preview on hover.
 
@@ -70,7 +70,7 @@ Enable math preview on hover.
 | --------- | ------------- |
 | _boolean_ | `true`        |
 
-### latex-workshop.hoverPreview.scale
+### latex-workshop.hover.preview.scale
 
 Scale of math preview on hover.
 
@@ -78,7 +78,7 @@ Scale of math preview on hover.
 | -------- | ------------- |
 | _number_ | 1             |
 
-### latex-workshop.hoverPreview.cursor.enabled
+### latex-workshop.hover.preview.cursor.enabled
 
 Render cursor in math preview on hover at the current position.
 
@@ -86,7 +86,7 @@ Render cursor in math preview on hover at the current position.
 | --------- | ------------- |
 | _boolean_ | `true`        |
 
-### latex-workshop.hoverPreview.cursor.symbol
+### latex-workshop.hover.preview.cursor.symbol
 
 Define the cursor symbol in math preview on hover.
 
@@ -94,17 +94,15 @@ Define the cursor symbol in math preview on hover.
 | -------- | ------------- |
 | _string_ | `\ddagger`    |
 
-### latex-workshop.hoverPreview.cursor.color
+### latex-workshop.hover.preview.cursor.color
 
 Define the color of the cursor in math preview on hover.
 
-| type     | default value |
-| -------- | ------------- |
-| _string_ | "auto"        |
+| type     | default value | possible values                                                                                                                                                                                                                |
+| -------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| _string_ | "auto"        | `"auto"`, `"black"`, `"blue"`, `"brown"`, `"cyan"`, `"darkgray"`, `"gray"`, `"green"`, `"lightgray"`, `"lime"`, `"magenta"`, `"olive"`, `"orange"`, `"pink"`, `"purple"`, `"red"`, `"teal"`, `"violet"`, `"white"`, `"yellow"` |
 
-The possible values are : `"auto" | "black" | "blue" | "brown" | "cyan" | "darkgray" | "gray" | "green" | "lightgray" | "lime" | "magenta" | "olive" | "orange" | "pink" | "purple" | "red" | "teal" | "violet" | "white" | "yellow"`.
-
-### latex-workshop.hoverPreview.ref.enabled
+### latex-workshop.hover.preview.ref.enabled
 
 Render math preview on hover over `\ref`, and other reference commands.
 
@@ -116,8 +114,6 @@ Render math preview on hover over `\ref`, and other reference commands.
 
 PDF viewer used for `[View on PDF]` link on hover over `\ref`, and other reference commands.
 
-| type     | default value |
-| -------- | ------------- |
-| _string_ | "auto"        |
-
-The possible values are : `"auto" | "tabOrBrowser" | "external"`.
+| type     | default value | possible values                          |
+| -------- | ------------- | ---------------------------------------- |
+| _string_ | "auto"        | `"auto"`, `"tabOrBrowser"`, `"external"` |

@@ -33,33 +33,35 @@ Below are the detailed explanations for the different possible settings
 
 ### latex-workshop.view.pdf.zoom
 
-The default zoom level of the PDF viewer.
+The default zoom level of the PDF viewer. This default value will be passed to the viewer upon opening.
 
-This default value will be passed to the viewer upon opening. Possible values are `auto`, `page-actual`, `page-fit`, `page-width`, and one-based scale values (e.g., 0.5 for 50%, 2.0 for 200%).
-
-| type     | default value |
-| -------- | ------------- |
-| _string_ | `"auto"`      |
+| type     | default value | possible values                                                                                                   |
+| -------- | ------------- | ----------------------------------------------------------------------------------------------------------------- |
+| _string_ | `"auto"`      | `"auto"`, `"page-actual"`, `"page-fit"`, `"page-width"`, one-based scale values (e.g., 0.5 for 50%, 2.0 for 200%) |
 
 ### latex-workshop.view.pdf.scrollMode
 
-The default scroll mode of the PDF viewer.
+The default scroll mode of the PDF viewer. This default value will be passed to the viewer upon opening.
 
-This default value will be passed to the viewer upon opening. Possible values are `0` (vertical), `1`(horizontal) and `2` (wrapped).
+| type     | default value | possible values |
+| -------- | ------------- | --------------- |
+| _number_ | `0`           | `0`, `1`, `2`   |
 
-| type     | default value |
-| -------- | ------------- |
-| _number_ | `0`           |
+- `0`: Vertical scroll
+- `1`: Horizontal scroll
+- `2`: Wrapped display
 
 ### latex-workshop.view.pdf.spreadMode
 
-The default spread mode of the PDF viewer.
-
-This default value will be passed to the viewer upon opening. Possible values are `0` (none), `1` (odd) and `2` (even).
+The default spread mode of the PDF viewer. This default value will be passed to the viewer upon opening.
 
 | type     | default value |
 | -------- | ------------- |
 | _number_ | `0`           |
+
+- `0`: No spread
+- `1`: Odd spread
+- `2`: Even spread
 
 ### latex-workshop.view.pdf.hand
 
@@ -73,7 +75,7 @@ Define if the hand tool is enabled by default in the PDF viewer.
 
 Define the CSS invert filter level of the PDF viewer.
 
-This config can invert the color of PDF. Possible values are from 0 to 1.
+This config can invert the color of PDF. Possible values are any floating point numbers from 0 to 1.
 
 | type     | default value |
 | -------- | ------------- |
