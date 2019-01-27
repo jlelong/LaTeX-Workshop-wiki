@@ -49,7 +49,7 @@ LaTeX compilation typically generates several auxiliary files. They can be remov
 
 - `"never"`: Disable the auto cleaning feature
 - `"onFailed"`: Clean the project upon failed compilation.
-- `"onBuilt"`: Build the project upon completing a compilation, whether it is successful or not.
+- `"onBuilt"`: Clean the project upon completing a compilation, whether it is successful or not.
 
 ## LaTeX recipes
 
