@@ -35,8 +35,8 @@ Below are the detailed explanations for the different possible settings
 
 The default zoom level of the PDF viewer. This default value will be passed to the viewer upon opening.
 
-| type     | default value | possible values |
-| -------- | ------------- | --------------- |
+| type     | default value | possible values                                                                                                   |
+| -------- | ------------- | ----------------------------------------------------------------------------------------------------------------- |
 | _string_ | `"auto"`      | `"auto"`, `"page-actual"`, `"page-fit"`, `"page-width"`, one-based scale values (e.g., 0.5 for 50%, 2.0 for 200%) |
 
 ### latex-workshop.view.pdf.scrollMode

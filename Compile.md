@@ -8,13 +8,13 @@ You can define several compiling toolchains to build LaTeX projects using [LaTeX
 
 The following settings are helpful to customize how to build a project and how to deal with failures.
 
-|                       Setting key                        |                     Description                      | Default |        Type        |
-| -------------------------------------------------------- | ---------------------------------------------------- | ------- | ------------------ |
-| [`latex-workshop.latex.autoBuild.run`](#auto-build-latex)     | When the extension shall auto build LaTeX project using [the default (first) recipe](#latex-recipes).  | `onSave` | _string_          |
-| [`latex-workshop.latex.recipes`](#latex-recipes)          | Sequence of tools to run for building                |         | _JSON object_      |
-| [`latex-workshop.latex.tools`](#latex-recipes)            | Tools available for building                         |         | _JSON object_      |
-| [`latex-workshop.latex.magic.args`](#magic-comments)     | Arguments for the `TeX program`                      |         | _array of strings_ |
-| [`latex-workshop.latex.magic.bib.args`](#magic-comments) | Arguments for the `BIB program`                      |         | _array of strings_ |
+| Setting key                                               | Description                                                                                           | Default  | Type                 |
+| --------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | -------- | -------------------- |
+| [`latex-workshop.latex.autoBuild.run`](#auto-build-latex) | When the extension shall auto build LaTeX project using [the default (first) recipe](#latex-recipes). | `onSave` | _string_             |
+| [`latex-workshop.latex.recipes`](#latex-recipes)          | Sequence of tools to run for building                                                                 |          | _JSON object_        |
+| [`latex-workshop.latex.tools`](#latex-recipes)            | Tools available for building                                                                          |          | _JSON object_        |
+| [`latex-workshop.latex.magic.args`](#magic-comments)      | Arguments for the `TeX program`                                                                       |          | _array_ of _strings_ |
+| [`latex-workshop.latex.magic.bib.args`](#magic-comments)  | Arguments for the `BIB program`                                                                       |          | _array_ of _strings_ |
 
 ## Auto build LaTeX
 
@@ -22,9 +22,9 @@ Besides manually use the `Build LaTeX Project` command to compile a document, yo
 
 ### latex-workshop.latex.autoBuild.run
 
-| type      | default value | possible values |
-| --------- | ------------- | -------------- |
-| _string_  | `"onSave"`    | `"never"`,`"onSave"`, `"onFileChange"` |
+| type     | default value | possible values                        |
+| -------- | ------------- | -------------------------------------- |
+| _string_ | `"onSave"`    | `"never"`,`"onSave"`, `"onFileChange"` |
 
 - `"never"`: Disable the auto build feature
 - `"onSave"`: Build the project upon saving a `tex` file in vscode.
@@ -34,18 +34,18 @@ Besides manually use the `Build LaTeX Project` command to compile a document, yo
 
 LaTeX compilation typically generates several auxiliary files. They can be removed by calling _Clean up auxiliary files_ from the _Command Palette_ or from the _TeX_ badge. This command is bind to <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>c</kbd>. If you cannot use <kbd>ctrl</kbd>+<kbd>alt</kbd> in a keybinding, see [the FAQ](FAQ#i-cannot-use-ctrlalt-in-a-shortcut).
 
-|                     Setting key                      |                    Description                    | Default |  Type   |
-| ---------------------------------------------------- | ------------------------------------------------- | ------- | ------- |
-| `latex-workshop.latex.autoBuild.cleanAndRetry.enabled` | Enable cleaning and building once more after errors in the build toolchain | `true` | _boolean_ |
-| `latex-workshop.latex.autoClean.run` | Define when LaTeX auxillary files should be deleted. | `"never"` | _string_ |
-| `latex-workshop.latex.clean.fileTypes` | Extensions of files to clean |  | _array of strings_ |
-| `latex-workshop.latex.clean.subfolder.enabled` | Clean LaTeX auxillary files recursively in sub-folders of [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutDir) | false | _boolean_ |
+| Setting key                                            | Description                                                                                                               | Default   | Type               |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------- | --------- | ------------------ |
+| `latex-workshop.latex.autoBuild.cleanAndRetry.enabled` | Enable cleaning and building once more after errors in the build toolchain                                                | `true`    | _boolean_          |
+| `latex-workshop.latex.autoClean.run`                   | Define when LaTeX auxillary files should be deleted.                                                                      | `"never"` | _string_           |
+| `latex-workshop.latex.clean.fileTypes`                 | Extensions of files to clean                                                                                              |           | _array of strings_ |
+| `latex-workshop.latex.clean.subfolder.enabled`         | Clean LaTeX auxillary files recursively in sub-folders of [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutDir) | false     | _boolean_          |
 
 ### latex-workshop.latex.autoClean.run
 
-| type      | default value | possible values |
-| --------- | ------------- | -------------- |
-| _string_  | `"never"`    | `"never"`,`"onFailed"`, `"onBuilt"` |
+| type     | default value | possible values                     |
+| -------- | ------------- | ----------------------------------- |
+| _string_ | `"never"`     | `"never"`,`"onFailed"`, `"onBuilt"` |
 
 - `"never"`: Disable the auto cleaning feature
 - `"onFailed"`: Clean the project upon failed compilation.
@@ -61,13 +61,13 @@ A LaTeX recipe refers to a sequence/array of commands which LaTeX Workshop execu
 ```
 [
   {
-    "name": "latexmk",
+    "name": "latexmk 🔃",
     "tools": [
       "latexmk"
     ]
   },
   {
-    "name": "pdflatex -> bibtex -> pdflatex*2",
+    "name": "pdflatex ➞ bibtex ➞ pdflatex`×2",
     "tools": [
       "pdflatex",
       "bibtex",
@@ -118,7 +118,6 @@ You can create multiple recipes with different tools. Each recipe is an object i
 
 The `tools` in recipes can be defined in `latex-workshop.latex.tools`, in which each command is a `tool`. Each tool is an object consists of a `name`, a `command` to be spawned, and its arguments (`args`). To include a tool in a recipe, the tool's `name` should be included in the recipe's `tools` list.
 
-
 When building the project, the first recipe is used. You can compile with another recipe by command `latex-workshop.recipes`. By default [`latexmk`](http://personal.psu.edu/jcc8/software/latexmk/) is used. This tool is bundled in most LaTeX distributions, and requires perl to execute. For non-perl users, the following `texify` toolchain from MikTeX may worth a try:
 
 ```
@@ -143,12 +142,12 @@ When building the project, the first recipe is used. You can compile with anothe
 
 As you may notice, there is a mystic `%DOC%` in the arguments. Symbols surrounded by `%` are placeholders, which are replaced with its representing string on-the-fly. LaTeX Workshop registers the following placeholders:
 
-| Placeholder |                                               Replaced by                                                |
-| ----------- | -------------------------------------------------------------------------------------------------------- |
-| `%DOC%`     | The LaTeX root file path and name without the `.tex` extension                                           |
-| `%DOCFILE%` | The LaTeX root file name without the `.tex` extension                                                    |
-| `%DIR%`     | The LaTeX root file path                                                                                 |
-| `%TMPDIR%`  | A temporary folder for storing ancillary files                                                           |
+| Placeholder | Replaced by                                                                                        |
+| ----------- | -------------------------------------------------------------------------------------------------- |
+| `%DOC%`     | The LaTeX root file path and name without the `.tex` extension                                     |
+| `%DOCFILE%` | The LaTeX root file name without the `.tex` extension                                              |
+| `%DIR%`     | The LaTeX root file path                                                                           |
+| `%TMPDIR%`  | A temporary folder for storing ancillary files                                                     |
 | `%OUTDIR%`  | The output directory configured in [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutDir) |
 
 Alternatively, you can also set your commands without the placeholder, just like what you may input in a terminal.
@@ -187,6 +186,8 @@ The raw compiler logs can be accessed in the _Output Pane_, choose _LaTeX Compil
 
 to true.
 
+## Settings Details
+
 ### latex-workshop.message.log.show
 
 Display LaTeX Workshop debug log in output panel.
@@ -209,9 +210,9 @@ Show badbox information in the problems panel.
 
 Exclude log messages that matches the given regexp from the problems panel.
 
-|       type        | default value |
-| ----------------- | ------------- |
-| _array of strings_ | `[]`          |
+| type                 | default value |
+| -------------------- | ------------- |
+| _array_ of _strings_ | `[]`          |
 
 ### latex-workshop.message.information.show
 

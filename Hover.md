@@ -98,10 +98,9 @@ Define the cursor symbol in math preview on hover.
 
 Define the color of the cursor in math preview on hover.
 
-| type     | default value | possible values |
-| -------- | ------------- | -------------- |
+| type     | default value | possible values                                                                                                                                                                                                                |
+| -------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | _string_ | "auto"        | `"auto"`, `"black"`, `"blue"`, `"brown"`, `"cyan"`, `"darkgray"`, `"gray"`, `"green"`, `"lightgray"`, `"lime"`, `"magenta"`, `"olive"`, `"orange"`, `"pink"`, `"purple"`, `"red"`, `"teal"`, `"violet"`, `"white"`, `"yellow"` |
-
 
 ### latex-workshop.hover.preview.ref.enabled
 
@@ -115,6 +114,6 @@ Render math preview on hover over `\ref`, and other reference commands.
 
 PDF viewer used for `[View on PDF]` link on hover over `\ref`, and other reference commands.
 
-| type     | default value | possible values |
-| -------- | ------------- | -------------- |
+| type     | default value | possible values                          |
+| -------- | ------------- | ---------------------------------------- |
 | _string_ | "auto"        | `"auto"`, `"tabOrBrowser"`, `"external"` |
