@@ -21,13 +21,13 @@ The following settings are helpful to customize how to build a project and how t
 
 LaTeX compilation typically generates several auxiliary files. They can be removed by calling _Clean up auxiliary files_ from the _Command Palette_ or from the _TeX_ badge. This command is bind to <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>c</kbd>. If you cannot use <kbd>ctrl</kbd>+<kbd>alt</kbd> in a keybinding, see[the FAQ](FAQ#i-cannot-use-ctrlalt-in-a-shortcut).
 
-| Setting key                                            | Description                                                                                                               | Default | Type               |
-| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------- | ------- | ------------------ |
-| `latex-workshop.latex.autoBuild.cleanAndRetry.enabled` | Enable cleaning and building once more after errors in the build toolchain                                                | `true`  | _boolean_          |
-| `latex-workshop.latex.clean.enabled`                   | Enable cleaning LaTeX auxiliary files after building project                                                              | `false` | _boolean_          |
-| `latex-workshop.latex.clean.onFailBuild.enabled`       | Enable cleaning LaTeX auxiliary files after a failed build                                                                | `false` | _boolean_          |
-| `latex-workshop.latex.clean.fileTypes`                 | Extensions of files to clean                                                                                              |         | _array of strings_ |
-| `latex-workshop.latex.clean.subfolder.enabled`         | Clean LaTeX auxillary files recursively in sub-folders of [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutDir) | false   | _boolean_          |
+| Setting key                                            | Description                                                                                                               | Default | Type                 |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------- | ------- | -------------------- |
+| `latex-workshop.latex.autoBuild.cleanAndRetry.enabled` | Enable cleaning and building once more after errors in the build toolchain                                                | `true`  | _boolean_            |
+| `latex-workshop.latex.clean.enabled`                   | Enable cleaning LaTeX auxiliary files after building project                                                              | `false` | _boolean_            |
+| `latex-workshop.latex.clean.onFailBuild.enabled`       | Enable cleaning LaTeX auxiliary files after a failed build                                                                | `false` | _boolean_            |
+| `latex-workshop.latex.clean.fileTypes`                 | Extensions of files to clean                                                                                              |         | _array_ of _strings_ |
+| `latex-workshop.latex.clean.subfolder.enabled`         | Clean LaTeX auxillary files recursively in sub-folders of [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutDir) | `false` | _boolean_            |
 
 ## LaTeX recipes
 
