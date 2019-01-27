@@ -34,23 +34,12 @@ Besides manually use the `Build LaTeX Project` command to compile a document, yo
 
 LaTeX compilation typically generates several auxiliary files. They can be removed by calling _Clean up auxiliary files_ from the _Command Palette_ or from the _TeX_ badge. This command is bind to <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>c</kbd>. If you cannot use <kbd>ctrl</kbd>+<kbd>alt</kbd> in a keybinding, see [the FAQ](FAQ#i-cannot-use-ctrlalt-in-a-shortcut).
 
-<<<<<<< HEAD
-| Setting key | Description | Default | Type |
-| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------- | ------- | -------------------- |
-| `latex-workshop.latex.autoBuild.cleanAndRetry.enabled` | Enable cleaning and building once more after errors in the build toolchain | `true` | _boolean_ |
-| `latex-workshop.latex.clean.enabled` | Enable cleaning LaTeX auxiliary files after building project | `false` | _boolean_ |
-| `latex-workshop.latex.clean.onFailBuild.enabled` | Enable cleaning LaTeX auxiliary files after a failed build | `false` | _boolean_ |
-| `latex-workshop.latex.clean.fileTypes` | Extensions of files to clean | | _array_ of _strings_ |
-| `latex-workshop.latex.clean.subfolder.enabled` | Clean LaTeX auxillary files recursively in sub-folders of [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutDir) | `false` | _boolean_ |
-=======
-| Setting key | Description | Default | Type |
-| ---------------------------------------------------- | ------------------------------------------------- | ------- | ------- |
-| `latex-workshop.latex.autoBuild.cleanAndRetry.enabled` | Enable cleaning and building once more after errors in the build toolchain | `true` | _boolean_ |
-| `latex-workshop.latex.autoClean.run` | Define when LaTeX auxillary files should be deleted. | `"never"` | _string_ |
-| `latex-workshop.latex.clean.fileTypes` | Extensions of files to clean | | _array of strings_ |
-| `latex-workshop.latex.clean.subfolder.enabled` | Clean LaTeX auxillary files recursively in sub-folders of [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutDir) | false | _boolean_ |
-
-> > > > > > > 560dcc2fd7006176a7b75bd54bdcaf14dad9f258
+| Setting key                                            | Description                                                                                                               | Default   | Type               |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------- | --------- | ------------------ |
+| `latex-workshop.latex.autoBuild.cleanAndRetry.enabled` | Enable cleaning and building once more after errors in the build toolchain                                                | `true`    | _boolean_          |
+| `latex-workshop.latex.autoClean.run`                   | Define when LaTeX auxillary files should be deleted.                                                                      | `"never"` | _string_           |
+| `latex-workshop.latex.clean.fileTypes`                 | Extensions of files to clean                                                                                              |           | _array of strings_ |
+| `latex-workshop.latex.clean.subfolder.enabled`         | Clean LaTeX auxillary files recursively in sub-folders of [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutDir) | false     | _boolean_          |
 
 ### latex-workshop.latex.autoClean.run
 
@@ -221,16 +210,9 @@ Show badbox information in the problems panel.
 
 Exclude log messages that matches the given regexp from the problems panel.
 
-<<<<<<< HEAD
-| type | default value |
+| type                 | default value |
 | -------------------- | ------------- |
-| _array_ of _strings_ | `[]` |
-=======
-| type | default value |
-| ----------------- | ------------- |
-| _array of strings_ | `[]` |
-
-> > > > > > > 560dcc2fd7006176a7b75bd54bdcaf14dad9f258
+| _array_ of _strings_ | `[]`          |
 
 ### latex-workshop.message.information.show
 
