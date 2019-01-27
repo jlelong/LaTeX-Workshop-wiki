@@ -1,6 +1,7 @@
 # FAQ and common issues
 
 - [Known incompatible extensions](#Known-incompatible-extensions)
+- [Cygwin is not supported](#Cygwin-is-not-supported)
 - [The Problem Pane displays wrong messages](#The-Problem-Pane-displays-wrong-messages)
 - [I cannot use `ctrl`+`alt` in a shortcut](#I-cannot-use-ctrlalt-in-a-shortcut)
 - [Disable automatic build on save](#disable-automatic-build-on-save)
