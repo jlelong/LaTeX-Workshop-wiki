@@ -10,24 +10,46 @@ The following settings are helpful to customize how to build a project and how t
 
 |                       Setting key                        |                     Description                      | Default |        Type        |
 | -------------------------------------------------------- | ---------------------------------------------------- | ------- | ------------------ |
-| `latex-workshop.latex.autoBuild.onSave.enabled`          | Enable automatic building when saving any tex file   | `true`  | _boolean_          |
-| `latex-workshop.latex.autoBuild.onTexChange.enabled`     | Enable LaTeX building after any tex file has changed | `false` | _boolean_          |
-| [`latex-workshop.latex.recipes`](#latex-recipe)          | Sequence of tools to run for building                |         | _JSON object_      |
-| [`latex-workshop.latex.tools`](#latex-recipe)            | Tools available for building                         |         | _JSON object_      |
+| [`latex-workshop.latex.autoBuild.run`](#auto-build-latex)     | When the extension shall auto build LaTeX project using [the default (first) recipe](#latex-recipes).  | `onSave` | _string_          |
+| [`latex-workshop.latex.recipes`](#latex-recipes)          | Sequence of tools to run for building                |         | _JSON object_      |
+| [`latex-workshop.latex.tools`](#latex-recipes)            | Tools available for building                         |         | _JSON object_      |
 | [`latex-workshop.latex.magic.args`](#magic-comments)     | Arguments for the `TeX program`                      |         | _array of strings_ |
 | [`latex-workshop.latex.magic.bib.args`](#magic-comments) | Arguments for the `BIB program`                      |         | _array of strings_ |
 
+## Auto build LaTeX
+
+Besides manually use the `Build LaTeX Project` command to compile a document, you may also let the extension automatically start compiling it upon specific events. This can be defined in `latex-workshop.latex.autoBuild.run`.
+
+### latex-workshop.latex.autoBuild.run
+
+| type      | default value | possible values |
+| --------- | ------------- | -------------- |
+| _string_  | `"onSave"`    | `"never"`,`"onSave"`, `"onFileChange"` |
+
+- `"never"`: Disable the auto build feature
+- `"onSave"`: Build the project upon saving a `tex` file in vscode.
+- `"onFileChange"`: Build the project upon detecting a `tex` file change, which can be modified by either vscode or other applications.
+
 ## Cleaning generated files
 
-LaTeX compilation typically generates several auxiliary files. They can be removed by calling _Clean up auxiliary files_ from the _Command Palette_ or from the _TeX_ badge. This command is bind to <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>c</kbd>. If you cannot use <kbd>ctrl</kbd>+<kbd>alt</kbd> in a keybinding, see[the FAQ](FAQ#i-cannot-use-ctrlalt-in-a-shortcut).
+LaTeX compilation typically generates several auxiliary files. They can be removed by calling _Clean up auxiliary files_ from the _Command Palette_ or from the _TeX_ badge. This command is bind to <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>c</kbd>. If you cannot use <kbd>ctrl</kbd>+<kbd>alt</kbd> in a keybinding, see [the FAQ](FAQ#i-cannot-use-ctrlalt-in-a-shortcut).
 
 |                     Setting key                      |                    Description                    | Default |  Type   |
 | ---------------------------------------------------- | ------------------------------------------------- | ------- | ------- |
 | `latex-workshop.latex.autoBuild.cleanAndRetry.enabled` | Enable cleaning and building once more after errors in the build toolchain | `true` | _boolean_ |
-| `latex-workshop.latex.clean.enabled` | Enable cleaning LaTeX auxiliary files after building project | `false` | _boolean_ |
-| `latex-workshop.latex.clean.onFailBuild.enabled` | Enable cleaning LaTeX auxiliary files after a failed build | `false` | _boolean_ |
+| `latex-workshop.latex.autoClean.run` | Define when LaTeX auxillary files should be deleted. | `"never"` | _string_ |
 | `latex-workshop.latex.clean.fileTypes` | Extensions of files to clean |  | _array of strings_ |
 | `latex-workshop.latex.clean.subfolder.enabled` | Clean LaTeX auxillary files recursively in sub-folders of [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutDir) | false | _boolean_ |
+
+### latex-workshop.latex.autoClean.run
+
+| type      | default value | possible values |
+| --------- | ------------- | -------------- |
+| _string_  | `"never"`    | `"never"`,`"onFailed"`, `"onBuilt"` |
+
+- `"never"`: Disable the auto cleaning feature
+- `"onFailed"`: Clean the project upon failed compilation.
+- `"onBuilt"`: Build the project upon completing a compilation, whether it is successful or not.
 
 ## LaTeX recipes
 
@@ -189,7 +211,7 @@ Exclude log messages that matches the given regexp from the problems panel.
 
 |       type        | default value |
 | ----------------- | ------------- |
-| _array of strings | `[]`          |
+| _array of strings_ | `[]`          |
 
 ### latex-workshop.message.information.show
 

@@ -4,7 +4,7 @@ This extension provides a variety of intellisense completions for different LaTe
 
 ## Citations
 
-Every file of a LaTeX project is parsed to look for bibliography resources, either directly in a `thebibliography` environment or given by the `bibliography` or `addbibresource` commands or variants of them. If some of these resources are located outside the project directly, you need to list the directories where to look for them in [`latex-workshop.latex.bibDirs`](#latex-workshoplatexbibDirs). When loading the extension, the files listed in `latex-workshop.latex.additionalBib` are set up for watching if they exist and then thanks to the watching process any modification to these files are visible inside the extension. No need to restart/reload vscode.
+Every file of a LaTeX project is parsed to look for bibliography resources, either directly in a `thebibliography` environment or given by the `bibliography` or `addbibresource` commands or variants of them. If some of these resources are located outside the project directly, you need to list the directories where to look for them in [`latex-workshop.latex.bibDirs`](#latex-workshoplatexbibDirs).
 
 Then, when citation commands like `\cite` and its derivatives are automatically completed with bibliography entries found in the various resources.
 
@@ -16,7 +16,6 @@ If you use very large bibtex files, you may experience temporary freezing. Hence
 | [`latex-workshop.intellisense.citation.maxfilesizeMB"`](#latex-workshopintellisensecitationmaxfilesizeMB) | Maximum bibtex file size (in MB)                                                                                                                                                  | `5`            | _float_                                         |
 | [`latex-workshop.intellisense.citation.type`](#latex-workshopintellisensecitationtype)                    | Type of vs code suggestion to use                                                                                                                                                 | `"inline"`     | _string_: "inline" \| "browser" (dropdown menu) |
 | [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled)                | Enabling of auto-completion for commands and environments from loaded packages                                                                                                    | `false`        | _boolean_                                       |
-| [`latex-workshop.latex.additionalBib`](#latex-workshoplatexadditionalBib)                                 | Additional bib paths to watch, both relative and absolute paths (with globs) supported ** Deprecated in favor of [`latex-workshop.latex.bibDirs`](#latex-workshoplatexbibDirs) ** | `[]`           | _array_ of _strings_                            |
 | [`latex-workshop.latex.bibDirs`](#latex-workshoplatexbibDirs)                                             | List of paths to look for `.bib` files.                                                                                                                                           | `[]`           | _array_ of _strings_                            |
 
 ## References
@@ -40,7 +39,6 @@ The key `\` automatically triggers completion of LaTeX commands. Several mechani
 | Setting key                                                                                                                                                                                                      | Description                                                                                    | Default | Type      |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ------- | --------- |
 | [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled)                                                                                                                       | Enabling of auto-completion for commands and environments from loaded packages                 | `false` | _boolean_ |
-| [`latex-workshop.intellisense.surroundCommand.enabled`](#latex-workshopintellisensesurroundCommandenabled) **Deprecated see [there](https://github.com/James-Yu/LaTeX-Workshop/wiki/Snippets#surrounding-text)** | When text selected, set hotkey `\` surround selection with LaTeX command | `false` | _boolean_ |
 | [`latex-workshop.intellisense.unimathsymbols.enabled`](#latex-workshopintellisenseunimathsymbolsenabled)                                                                                                         | Show unimath symbols as suggestions when `\` pressed | `false` | _boolean_                     |
 | [`latex-workshop.intellisense.useTabStops.enabled`](#latex-workshopintellisenseuseTabStopsenabled)                                                                                                               | Use tabstops in intellisense completion                                                        | `true`  | _boolean_ |
 | [`latex-workshop.intellisense.optionalArgsEntries.enabled`](#latex-workshopintellisenseoptionalArgsEntries)                                                                                                      | Add one completion item per command signature                                                  | `true`  | _boolean_ |
@@ -104,16 +102,6 @@ Use tabstops instead of placeholders in intellisense. Tabstops enable us to dire
 
 Reload vscode after change.
 
-### latex-workshop.intellisense.surroundCommand.enabled
-
-**The use `\` to surround selected text has been deprecated and may be removed in future releases, see [there](https://github.com/James-Yu/LaTeX-Workshop/wiki/Snippets#surrounding-text) for the new approach.**
-
-When `\` is typed with text selected, surround the selection with LaTeX command.
-
-| type      | default value |
-| --------- | ------------- |
-| _boolean_ | `false`       |
-
 ### latex-workshop.intellisense.unimathsymbols.enabled
 
 When `\` is typed, show unimath symbols in the dropdown selector.
@@ -121,18 +109,6 @@ When `\` is typed, show unimath symbols in the dropdown selector.
 | type      | default value |
 | --------- | ------------- |
 | _boolean_ | `false`       |
-
-### latex-workshop.latex.additionalBib
-
-Addition bibliography files to watch.
-
-Both relative and absolute paths/globs are supported, but absolute ones are suggested. Relative path start from the root file location, so be ware if it is located in sub-directory.
-
-** Deprecated in favor of [`latex-workshop.latex.bibDirs`](#latex-workshoplatexbibDirs).**
-
-| type                 | default value |
-| -------------------- | ------------- |
-| _array_ of _strings_ | `[]`          |
 
 ### latex-workshop.latex.bibDirs
 

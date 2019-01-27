@@ -41,13 +41,13 @@ The default shortcuts for commands related to build and view use the modifiers <
 
 ## Disable automatic build on save
 
-Set the configuration variable `latex-workshop.latex.autoBuild.onSave.enabled` to `false`.
+Set the configuration variable `latex-workshop.latex.autoBuild.run` to `"never"`.
 
 ## My file is built when I paste
 
 Set `editor.formatOnPaste` to `false`.
 
-The formatting program `latexindent` changes the file on disk when formatting and not only the buffer content. VSCode interprets it as a file save and triggers a build if `latex-workshop.latex.autoBuild.onSave.enabled` to `true`
+The formatting program `latexindent` changes the file on disk when formatting and not only the buffer content. VSCode interprets it as a file save and triggers a build if `latex-workshop.latex.autoBuild.run` to `"onSave"`
 
 ## Format on save does not work
 
@@ -57,9 +57,9 @@ The formatting utility `latexindent` reads its input from the file on the disk a
 
 ## My file gets messed up
 
-This is most likely related to the two following variables being set together `latex-workshop.latex.autoBuild.onTexChange.enabled: true` and `editor.formatOnSave: true`.
+This is most likely related to the two following variables being set together `latex-workshop.latex.autoBuild.run: "onFileChange"` and `editor.formatOnSave: true`.
 
-Formatting a .tex file actually changes it on the disk and then if `latex-workshop.latex.autoBuild.onTexChange.enabled` is true it saves the file and triggers a build. You will get two formatting processes running together and using the same temporary file. Hence, the mess you see in your file.
+Formatting a .tex file actually changes it on the disk and then if `latex-workshop.latex.autoBuild.run` is `"onFileChange"` it saves the file and triggers a build. You will get two formatting processes running together and using the same temporary file. Hence, the mess you see in your file.
 
 ## Large bibtex files are ignored
 
@@ -75,7 +75,7 @@ See [Viewing & Synctex](View#latex-workshopsynctexsynctexjsenabled).
 
 ## The LaTeX sidebar keeps reopening
 
-If you like to work with no sidebar in Visual Studio Code and yet the LaTeX sidebar keeps showing up each time you switch focus from a non TeX file to a TeX file, you need to set `latex-workshop.view.autoActivateLatex.enabled` to `false`.
+If you like to work with no sidebar in Visual Studio Code and yet the LaTeX sidebar keeps showing up each time you switch focus from a non TeX file to a TeX file, you need to set `latex-workshop.view.autoFocus.enabled` to `false`.
 
 ## Spell check
 
