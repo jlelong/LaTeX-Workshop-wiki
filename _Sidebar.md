@@ -15,6 +15,7 @@
 - [Linting](Linters)
 - [Viewing & synctex](View)
 - [Formatting](Format)
+- [Sectioning](Sectioning)
 - [Multi file projects](Multi-File-Projects)
 - [Intellisense](Intellisense)
   - [Citations](Intellisense#Citations)
