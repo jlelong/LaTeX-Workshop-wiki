@@ -20,6 +20,57 @@ Some environments have a dedicated snippet in the form `BXY` where `XY` are the 
 | `BCAS` | `cases`          |
 | `BFR`  | `frame`          |
 
+## Sectioning
+
+### Inserting a sectioning command
+
+Sectioning commands can of course be inserted by just typing them as they are automatically completed by the intellisense mechanism. One can also use the following snippets.
+
+| Prefix | Sectioning level |
+| ------ | ---------------- |
+| SPA    | part             |
+| SCH    | chapter          |
+| SSE    | section          |
+| SSS    | subsection       |
+| SS2    | subsubsection    |
+| SPG    | paragraph        |
+| SSP    | subparagraph     |
+
+For instance, typing `SSE` + `TAB` expands to `\section{}` with the cursor inside the brackets.
+
+### Incrementing/decrementing sectioning levels
+
+Adjusting sectioning levels can be done using `latex-workshop.increment-sectioning` and `latex-workshop.decrement-sectioning`.
+
+These methods replace all sectioning commands with the sectioning command one level higher or lower. They apply either to the current line or to every selected line.
+
+#### Example
+
+Applying `latex-workshop.increment-sectioning` to the following selection,
+
+```
+\subsection{Demo}
+\paragraph{Content}
+```
+
+yields
+
+```
+\section{Demo}
+\subsubsection{Content}
+```
+
+#### Keybindings
+
+This functionality has two keybindings
+
+| Method               | Shortcut                                    | Alternate                                 |
+| -------------------- | ------------------------------------------- | ----------------------------------------- |
+| Increment Sectioning | <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>]</kbd> | <kbd>ctrl</kbd>+<kbd>l</kbd> <kbd>]</kbd> |
+| Decrement Sectioning | <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>[</kbd> | <kbd>ctrl</kbd>+<kbd>l</kbd> <kbd>]</kbd> |
+
+To use the alternate shortcuts, set `latex-workshop.bind.altKeymap.enabled` to `true` (you need reload/reopen vscode for the change to be taken into account).
+
 ## Inserting Greek letters
 
 Greek Letters can be inserted using the LaTeX command, which will autocomplete or using `@` + letter
