@@ -153,6 +153,19 @@ As you may notice, there is a mystic `%DOC%` in the arguments. Symbols surrounde
 Alternatively, you can also set your commands without the placeholder, just like what you may input in a terminal.
 As most LaTeX compiler accepts root file name without extension, `%DOC%` and `%DOCFILE%` do not include `.tex` extension. Meanwhile, `texify` requires the extension. So in the above tool `%DOC%` and `.tex` are concatenated for completeness.
 
+## External build command
+
+Versatile though the recipe mechanism described above may be, it may fail to match your needs when building the whole LaTeX project is done by a personal script or a Makefile. For this particular case, we provide an external build command mechanism, which completely bypasses the recipe machinery. Just define your command along with its arguments using
+
+```
+"latex-workshop.latex.external.build.command": {
+  "command": "",
+  "args": [
+    ""
+  ]
+}
+```
+
 ## Magic comments
 
 LaTeX Workshop supports `% !TEX program` magic comment to specify the compiler program. However, it is advised to use the recipe system instead of magic program to define the building process, since the latter is only implemented for backward compatibility.
