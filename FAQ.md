@@ -27,6 +27,10 @@ The following extensions are known to cause issues when active at the same time 
 
 LaTeX Workshop does not support TeX Live installed through Cygwin. Please install TeX Live and other TeX distributions independently of Cygwin.
 
+## The directory ~/node_modules/ may cause errors
+
+The directory ~/node_modules/ in the home directory may cause errors on Mac and Linux. Modules in the directory might be unintentionally loaded by VSCode because of the [default behavior](https://nodejs.org/api/modules.html#modules_loading_from_node_modules_folders) of node.js, which would cause errors. We recommend moving the directory ~/node_modules/ to ~/npm/node_modules/.
+
 ## The Problem Pane displays wrong messages
 
 LaTeX compilers usually produce hard wrapped log messages, which makes them really hard to parse. To hopefully deal with complex log messages, we have decided to rely on non hard wrapped log messages. This can be achieved either
