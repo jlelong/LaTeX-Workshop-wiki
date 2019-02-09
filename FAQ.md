@@ -2,6 +2,7 @@
 
 - [Known incompatible extensions](#Known-incompatible-extensions)
 - [Cygwin is not supported](#Cygwin-is-not-supported)
+- [The directory ~/node_modules/ may cause errors](#The-directory-node_modules-may-cause-errors)
 - [The Problem Pane displays wrong messages](#The-Problem-Pane-displays-wrong-messages)
 - [I cannot use `ctrl`+`alt` in a shortcut](#I-cannot-use-ctrlalt-in-a-shortcut)
 - [Disable automatic build on save](#disable-automatic-build-on-save)
@@ -26,6 +27,10 @@ The following extensions are known to cause issues when active at the same time 
 ## Cygwin is not supported
 
 LaTeX Workshop does not support TeX Live installed through Cygwin. Please install TeX Live and other TeX distributions independently of Cygwin.
+
+## The directory ~/node_modules/ may cause errors
+
+The directory `~/node_modules/` in the home directory may cause errors on Mac and Linux. The modules in the directory might be unintentionally loaded by VSCode because of the [default behavior](https://nodejs.org/api/modules.html#modules_loading_from_node_modules_folders) of node.js, which would cause errors such as _Extension host terminated unexpectedly_. We recommend moving the directory `~/node_modules/` to `~/npm/node_modules/`.
 
 ## The Problem Pane displays wrong messages
 
