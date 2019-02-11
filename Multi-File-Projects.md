@@ -11,3 +11,5 @@ To find the root file, LaTeX Workshop will follow the steps below, stopping when
 If no root file is found, most of the features in LaTeX Workshop will not work.
 
 Once the root file is determined, it is parse to discover all files it includes using `input`, `include`, `InputIfFileExists`, `subfile`, `import` and `subimport` and the process goes on recursively. All these files are considered to define a LaTeX project.
+
+**Note**: for all this to work, you have to open the directory (or one of its antecedents) containing the whole LaTeX project.

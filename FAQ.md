@@ -3,6 +3,7 @@
 - [Known incompatible extensions](#Known-incompatible-extensions)
 - [Cygwin is not supported](#Cygwin-is-not-supported)
 - [The directory ~/node_modules/ may cause errors](#The-directory-node_modules-may-cause-errors)
+- [I cannot build from a subfile](#I-cannot-build-from-a-subfile)
 - [The Problem Pane displays wrong messages](#The-Problem-Pane-displays-wrong-messages)
 - [I cannot use `ctrl`+`alt` in a shortcut](#I-cannot-use-ctrlalt-in-a-shortcut)
 - [Disable automatic build on save](#disable-automatic-build-on-save)
@@ -31,6 +32,10 @@ LaTeX Workshop does not support TeX Live installed through Cygwin. Please instal
 ## The directory ~/node_modules/ may cause errors
 
 The directory `~/node_modules/` in the home directory may cause errors on Mac and Linux. The modules in the directory might be unintentionally loaded by VSCode because of the [default behavior](https://nodejs.org/api/modules.html#modules_loading_from_node_modules_folders) of node.js, which would cause errors such as _Extension host terminated unexpectedly_. We recommend moving the directory `~/node_modules/` to `~/npm/node_modules/`.
+
+## I cannot build from a subfile
+
+If you cannot build a multi file LaTeX project from a subfile, it means that the root file is not detected properly. See the [Multi file projects](multi-file-projects) page for details on how the root file is discovered. Note that you must open the directory (or one of its antecedents) containing all the project files in vscode for this mechanism to work.
 
 ## The Problem Pane displays wrong messages
 
