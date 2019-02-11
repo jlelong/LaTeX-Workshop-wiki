@@ -92,7 +92,8 @@ and each tool appearing in the `tools` field is defined `latex-workshop.latex.to
       "-pdf",
       "-outdir=%OUTDIR%",
       "%DOC%"
-    ]
+    ],
+    "env": {}
   },
   {
     "name": "pdflatex",
@@ -102,21 +103,31 @@ and each tool appearing in the `tools` field is defined `latex-workshop.latex.to
       "-interaction=nonstopmode",
       "-file-line-error",
       "%DOC%"
-    ]
+    ],
+    "env": {}
   },
   {
     "name": "bibtex",
     "command": "bibtex",
     "args": [
       "%DOCFILE%"
-    ]
+    ],
+    "env": {}
   }
 ]
 ```
 
 You can create multiple recipes with different tools. Each recipe is an object in the configuration list, consisting of a `name` field and a list of `tools` to be invoked in the recipe.
 
-The `tools` in recipes can be defined in `latex-workshop.latex.tools`, in which each command is a `tool`. Each tool is an object consists of a `name`, a `command` to be spawned, and its arguments (`args`). To include a tool in a recipe, the tool's `name` should be included in the recipe's `tools` list.
+The `tools` in recipes can be defined in `latex-workshop.latex.tools`, in which each command is a `tool`. Each tool is an object consisting of a `name`, a `command` to be spawned, its arguments (`args`) and some specific environment variables (`env`). The `env` entry is a dictionary. Imagine you want to use a `texmf` subdirectory local to your home project, just write
+
+```
+  "env": {
+      "TEXMFHOME": "%DIR%/texmf"
+  }
+```
+
+To include a tool in a recipe, the tool's `name` should be included in the recipe's `tools` list.
 
 When building the project, the first recipe is used. You can compile with another recipe by command `latex-workshop.recipes`. By default [`latexmk`](http://personal.psu.edu/jcc8/software/latexmk/) is used. This tool is bundled in most LaTeX distributions, and requires perl to execute. For non-perl users, the following `texify` toolchain from MikTeX may worth a try:
 
@@ -136,11 +147,12 @@ When building the project, the first recipe is used. You can compile with anothe
     "--tex-option=\"-interaction=nonstopmode\"",
     "--tex-option=\"-file-line-error\"",
     "%DOC%.tex"
-  ]
+  ],
+    "env": {}
 }]
 ```
 
-As you may notice, there is a mystic `%DOC%` in the arguments. Symbols surrounded by `%` are placeholders, which are replaced with its representing string on-the-fly. LaTeX Workshop registers the following placeholders:
+The `args` and `env` parameters can contain symbols surrounded by `%`. These placeholders are replaced on-the-fly. LaTeX Workshop registers the following placeholders:
 
 | Placeholder | Replaced by                                                                                        |
 | ----------- | -------------------------------------------------------------------------------------------------- |
