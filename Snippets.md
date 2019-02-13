@@ -22,6 +22,24 @@ Some environments have a dedicated snippet in the form `BXY` where `XY` are the 
 
 ## Sectioning
 
+### An overview of the document
+
+The structure of the LaTeX project (`\chapter`, `\section`, `\subsection`, ...) is accessible via the TeX panel on the left of the editor. The entry corresponding to the cursor position in the editor is automatically selected and follows the cursor. The outline hierarchy is defined by [`latex-workshop.view.outline.sections`](latex-workshopviewoutlinesections).
+
+Note that the Explorer panel also contains an outline view but it only shows the structure of the current file and does not take into account any included file.
+
+#### latex-workshop.view.outline.sections
+
+The section names of LaTeX outline hierarchy. It is also used by the folding mechanism.
+
+This property is an array of case-sensitive strings in the order of the document structure hierarchy. For multiple tags of the same level, separate the tags with `|` as delimiters, e.g., `section|alternative`.
+
+|    type    |                           default value                           |
+| ---------- | ----------------------------------------------------------------- |
+| `string[]` | `[ "part", "chapter", "section", "subsection", "subsubsection" ]` |
+| ---------- | ----------------------------------------------------------------- |
+
+
 ### Inserting a sectioning command
 
 Sectioning commands can of course be inserted by just typing them as they are automatically completed by the intellisense mechanism. One can also use the following snippets.
