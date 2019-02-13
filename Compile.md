@@ -180,6 +180,8 @@ Versatile though the recipe mechanism described above may be, it may fail to mat
 
 ## Magic comments
 
+### TeX programm and options
+
 LaTeX Workshop supports `% !TEX program` magic comment to specify the compiler program. However, it is advised to use the recipe system instead of magic program to define the building process, since the latter is only implemented for backward compatibility.
 
 For `% !TEX program` magic comment, its arguments are defined in `latex-workshop.latex.magic.args`:
@@ -193,7 +195,15 @@ For `% !TEX program` magic comment, its arguments are defined in `latex-workshop
 ]
 ```
 
-Suppose there is a line `% !TEX program = xelatex` in the root file. Upon building the project, LaTeX Workshop will parse the root file and figure out that `xelatex` should be used. Arguments are included to invoke the compiler.
+Alternatively, you can directly define the args in the `.tex` file by using the magic comment `! %TEX options`, which overrides `latex-workshop.latex.magic.args`. Note that it must contain the file to proceed. For instance, to reproduce the default behavior, you should use
+
+```
+! %TEX options = -synctex=1 -interaction=nonstopmode -file-line-error "%DOC%"
+```
+
+Suppose there is a line `% !TEX program = xelatex` in the root file. Upon building the project, LaTeX Workshop will parse the root file and figure out that `xelatex` should be used.
+
+### BIB program and options
 
 When using `% !TEX program` with bibliographies, a `bib` compiler must be defined with `% !BIB program` comment, e.g., `% !BIB program = bibtex`. Otherwise the extension will only run one-pass compilation with the specified LaTeX compiler. If needed, you can pass extra arguments to the `!BIB program` using the `latex-workshop.latex.magic.bib.args` variable:
 
@@ -203,17 +213,19 @@ When using `% !TEX program` with bibliographies, a `bib` compiler must be define
 ]
 ```
 
+Alternatively, you can directly define the args in the `.tex` file by using the magic comment `! %BIB options`, which overrides `latex-workshop.latex.magic.bib.args`. Note that it must contain the file to proceed. For instance, to reproduce the default behavior, you should use `! %BIB options = "%DOCFILE%"`.
+
+
+
 ## Catching errors and warnings
 
 The warnings and errors issued by the compiling toolchain are rendered in the _Problems_ Pane. The following settings enable you to customize what you want to get in that panel. If the messages displayed in the panel seem to be wrong, see the [FAQ](#The-Problem-Pane-displays-wrong-messages).
 
 The raw compiler logs can be accessed in the _Output Pane_, choose _LaTeX Compiler_. The default is to clear the logs before calling every tool of a recipe. If you prefer to keep the logs from all the tools of a recipe, set [`latex-workshop.latex.build.clearLog.everyRecipeStep.enabled`](latex-workshoplatexbuildclearLogeveryRecipeStepenabled) to `false`.
 
-to true.
+### Settings Details
 
-## Settings Details
-
-### latex-workshop.message.log.show
+#### latex-workshop.message.log.show
 
 Display LaTeX Workshop debug log in output panel.
 
@@ -223,7 +235,7 @@ This property defines whether LaTeX Workshop will output its debug log to the lo
 | --------- | ------------- |
 | _boolean_ | `true`        |
 
-### latex-workshop.message.badbox.show
+#### latex-workshop.message.badbox.show
 
 Show badbox information in the problems panel.
 
@@ -231,7 +243,7 @@ Show badbox information in the problems panel.
 | --------- | ------------- |
 | _boolean_ | `true`        |
 
-### latex-workshop.message.latexlog.exclude
+#### latex-workshop.message.latexlog.exclude
 
 Exclude log messages that matches the given regexp from the problems panel.
 
@@ -239,7 +251,7 @@ Exclude log messages that matches the given regexp from the problems panel.
 | -------------------- | ------------- |
 | _array_ of _strings_ | `[]`          |
 
-### latex-workshop.message.information.show
+#### latex-workshop.message.information.show
 
 Display information messages in popup notifications.
 
@@ -247,7 +259,7 @@ Display information messages in popup notifications.
 | --------- | ------------- |
 | _boolean_ | `false`       |
 
-### latex-workshop.message.warning.show
+#### latex-workshop.message.warning.show
 
 Display warning messages in popup notifications.
 
@@ -255,7 +267,7 @@ Display warning messages in popup notifications.
 | --------- | ------------- |
 | _boolean_ | `true`        |
 
-### latex-workshop.message.error.show
+#### latex-workshop.message.error.show
 
 Display error messages in popup notifications.
 
@@ -263,7 +275,7 @@ Display error messages in popup notifications.
 | --------- | ------------- |
 | _boolean_ | `true`        |
 
-### latex-workshop.message.update.show
+#### latex-workshop.message.update.show
 
 Display LaTeX Workshop update message on new versions.
 
@@ -271,7 +283,7 @@ Display LaTeX Workshop update message on new versions.
 | --------- | ------------- |
 | _boolean_ | `true`        |
 
-### latex-workshop.latex.build.clearLog.everyRecipeStep.enabled
+#### latex-workshop.latex.build.clearLog.everyRecipeStep.enabled
 
 Clear the LaTeX Compiler logs before every step of a recipe.
 
