@@ -37,7 +37,6 @@ This property is an array of case-sensitive strings in the order of the document
 |    type    |                           default value                           |
 | ---------- | ----------------------------------------------------------------- |
 | `string[]` | `[ "part", "chapter", "section", "subsection", "subsubsection" ]` |
-| ---------- | ----------------------------------------------------------------- |
 
 
 ### Inserting a sectioning command
