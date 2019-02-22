@@ -198,7 +198,7 @@ For `% !TEX program` magic comment, its arguments are defined in `latex-workshop
 Alternatively, you can directly define the args in the `.tex` file by using the magic comment `! %TEX options`, which overrides `latex-workshop.latex.magic.args`. Note that it must contain the file to proceed. For instance, to reproduce the default behavior, you should use
 
 ```
-! %TEX options = -synctex=1 -interaction=nonstopmode -file-line-error "%DOC%"
+% !TEX options = -synctex=1 -interaction=nonstopmode -file-line-error "%DOC%"
 ```
 
 Suppose there is a line `% !TEX program = xelatex` in the root file. Upon building the project, LaTeX Workshop will parse the root file and figure out that `xelatex` should be used.
