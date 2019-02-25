@@ -15,7 +15,7 @@
 - [The LaTeX sidebar keeps reopening](#the-latex-sidebar-keeps-reopening)
 - [Spell check](#spell-check)
 - [I cannot nest snippets](#i-cannot-nest-snippets)
-- [Some `@` snippets are not `TAB` completed](#some-snippets-are-not-tab-completed)
+- [Some `@` snippets are not `TAB` completed](#some--snippets-are-not-tab-completed)
 - [How to pass `-shell-escape` to `latexmk`](#how-to-pass--shell-escape-to-latexmk)
 
 ## Known incompatible Extensions
