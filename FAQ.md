@@ -15,6 +15,7 @@
 - [The LaTeX sidebar keeps reopening](#the-latex-sidebar-keeps-reopening)
 - [Spell check](#spell-check)
 - [I cannot nest snippets](#i-cannot-nest-snippets)
+- [Some `@` snippets are not `TAB` completed](#some-snippets-are-not-tab-completed)
 - [How to pass `-shell-escape` to `latexmk`](#how-to-pass--shell-escape-to-latexmk)
 
 ## Known incompatible Extensions
@@ -95,6 +96,20 @@ If you like to work with no sidebar in Visual Studio Code and yet the LaTeX side
 ## I cannot nest snippets
 
 Nesting snippets requires to have intellisense automatically triggered inside snippets. This can be achieved by setting `editor.suggest.snippetsPreventQuickSuggestions` to `false`.
+
+## Some `@` snippets are not `TAB` completed
+
+This is mostly related to the `editor.quickSuggestions` setting. The following value works well
+
+```
+"editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": false
+      }
+```
+
+It is known that setting `"other": false` will prevent some `@` snippets from being `TAB` expanded.
 
 ## How to pass `-shell-escape` to `latexmk`
 
