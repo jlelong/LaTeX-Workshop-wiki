@@ -18,7 +18,7 @@ The following settings are helpful to customize how to build a project and how t
 
 ## Auto build LaTeX
 
-Besides manually use the `Build LaTeX Project` command to compile a document, you may also let the extension automatically start compiling it upon specific events. This can be defined in `latex-workshop.latex.autoBuild.run`.
+Besides manually calling the `Build LaTeX Project` command to compile a document, you may also let the extension automatically start compiling it upon specific events. This can be defined in `latex-workshop.latex.autoBuild.run`.
 
 ### latex-workshop.latex.autoBuild.run
 
