@@ -34,9 +34,9 @@ The section names of LaTeX outline hierarchy. It is also used by the folding mec
 
 This property is an array of case-sensitive strings in the order of the document structure hierarchy. For multiple tags of the same level, separate the tags with `|` as delimiters, e.g., `section|alternative`.
 
-|    type    |                           default value                           |
-| ---------- | ----------------------------------------------------------------- |
-| `string[]` | `[ "part", "chapter", "section", "subsection", "subsubsection" ]` |
+|         type         |                           default value                           |
+| -------------------- | ----------------------------------------------------------------- |
+| _array_ of _strings_ | `[ "part", "chapter", "section", "subsection", "subsubsection" ]` |
 
 
 ### Inserting a sectioning command

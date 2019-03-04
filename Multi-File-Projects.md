@@ -22,9 +22,9 @@ Patterns of files to consider for the root detection mechanism.
 
 Relative paths are computed from the workspace folder. To detect the root file and the tex file tree, we parse all the `.tex` listed here.\nIf you want to specify all `.tex` files inside directory, say `foo`, and all its subdirectories recursively, you need to use `**/foo/**/*.tex`. If you only want to match `.tex` files at the top level of the workspace, use `*.tex`. For more details on glob patterns, see [here](https://code.visualstudio.com/docs/editor/codebasics#_advanced-search-options).
 
-| type       | default value  |
-| ---------- | -------------- |
-| _string[]_ | `["**/*.tex"]` |
+|         type         | default value  |
+| -------------------- | -------------- |
+| _array_ of _strings_ | `["**/*.tex"]` |
 
 ### latex-workshop.latex.search.rootFiles.exclude
 
@@ -32,6 +32,6 @@ Patterns of files to exclude from the root detection mechanism.
 
 See also `latex-workshop.latex.search.rootFiles.include`. For more details on glob patterns, see [here](https://code.visualstudio.com/docs/editor/codebasics#_advanced-search-options).
 
-| type       | default value  |
-| ---------- | -------------- |
-| _string[]_ | `[]`           |
+|         type         | default value |
+| -------------------- | ------------- |
+| _array_ of _strings_ | `[]`          |
