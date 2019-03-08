@@ -27,7 +27,7 @@ Besides manually calling the `Build LaTeX Project` command to compile a document
 | _string_ | `"onFileChange"` | `"never"`,`"onFileChange"` |
 
 - `"never"`: Disable the auto build feature
-- `"onFileChange"`: Build the project upon detecting a file change in any of the dependencies. The file can even be modified outside vscode. See [here](Multi-File-Projects) for explanations on what dependencies are.
+- `"onFileChange"`: Build the project upon detecting a file change in any of the dependencies. The file can even be modified outside vscode. See [here](Multi-File-Projects) for explanations on what dependencies are and how some of them can be ignored.
 
 ## Cleaning generated files
 
