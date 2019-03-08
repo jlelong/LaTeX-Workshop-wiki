@@ -10,7 +10,7 @@ The following settings are helpful to customize how to build a project and how t
 
 | Setting key                                               | Description                                                                                           | Default  | Type                 |
 | --------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | -------- | -------------------- |
-| [`latex-workshop.latex.autoBuild.run`](#auto-build-latex) | When the extension shall auto build LaTeX project using [the default (first) recipe](#latex-recipes). | `onSave` | _string_             |
+| [`latex-workshop.latex.autoBuild.run`](#auto-build-latex) | When the extension shall auto build LaTeX project using [the default (first) recipe](#latex-recipes). | `onFileChange` | _string_             |
 | [`latex-workshop.latex.recipes`](#latex-recipes)          | Sequence of tools to run for building                                                                 |          | _JSON object_        |
 | [`latex-workshop.latex.tools`](#latex-recipes)            | Tools available for building                                                                          |          | _JSON object_        |
 | [`latex-workshop.latex.magic.args`](#magic-comments)      | Arguments for the `TeX program`                                                                       |          | _array_ of _strings_ |
@@ -18,17 +18,16 @@ The following settings are helpful to customize how to build a project and how t
 
 ## Auto build LaTeX
 
-Besides manually calling the `Build LaTeX Project` command to compile a document, you may also let the extension automatically start compiling it upon specific events. This can be defined in `latex-workshop.latex.autoBuild.run`.
+Besides manually calling the `Build LaTeX Project` command to compile a document, you may also let the extension automatically start compiling it upon file change. This can be defined in `latex-workshop.latex.autoBuild.run`.
 
 ### latex-workshop.latex.autoBuild.run
 
-| type     | default value | possible values                        |
-| -------- | ------------- | -------------------------------------- |
-| _string_ | `"onSave"`    | `"never"`,`"onSave"`, `"onFileChange"` |
+|   type   |  default value   |      possible values       |
+| -------- | ---------------- | -------------------------- |
+| _string_ | `"onFileChange"` | `"never"`,`"onFileChange"` |
 
 - `"never"`: Disable the auto build feature
-- `"onSave"`: Build the project upon saving a `tex` file in vscode.
-- `"onFileChange"`: Build the project upon detecting a `tex` file change, which can be modified by either vscode or other applications.
+- `"onFileChange"`: Build the project upon detecting a file change in any of the dependencies. The file can even be modified outside vscode. See [here](Multi-File-Projects) for explanations on what dependencies are.
 
 ## Cleaning generated files
 
