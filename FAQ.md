@@ -59,7 +59,7 @@ Set the configuration variable `latex-workshop.latex.autoBuild.run` to `"never"`
 
 Set `editor.formatOnPaste` to `false`.
 
-The formatting program `latexindent` changes the file on disk when formatting and not only the buffer content. VSCode interprets it as a file save and triggers a build if `latex-workshop.latex.autoBuild.run` to `"onSave"`
+The formatting program `latexindent` changes the file on disk when formatting and not only the buffer content. VSCode interprets it as a file change and triggers a build if `latex-workshop.latex.autoBuild.run` to `"onFileChange"`
 
 ## Format on save does not work
 
