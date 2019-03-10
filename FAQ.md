@@ -17,6 +17,7 @@
 - [I cannot nest snippets](#i-cannot-nest-snippets)
 - [Some `@` snippets are not `TAB` completed](#some--snippets-are-not-tab-completed)
 - [How to pass `-shell-escape` to `latexmk`](#how-to-pass--shell-escape-to-latexmk)
+- [LaTeX-Workshop shadows vscode's default keybindings][#latex-workshop-shadows-vscodes-default-keybindings]
 
 ## Known incompatible Extensions
 
@@ -152,3 +153,13 @@ Some packages such as `minted` requires `LaTeX` compilers to use the `-shell-esc
     ````
     $pdflatex='pdflatex -shell-escape';
     ````
+
+## LaTeX-Workshop shadows vscode's default keybindings
+
+### LaTeX-Workshop uses <kbd>Ctrl</kbd>+<kbd>L</kbd> as the first key of many keybindings
+
+Since vscode 1.32.0, <kbd>Ctrl</kbd>+<kbd>L</kbd> has been set to `expandLineSelection`. We define a new keybinding for `expandLineSelection`: <kbd>Ctrl</kbd>+<kbd>L</kbd>, <kbd>Ctrl</kbd>+<kbd>L</kbd>.
+
+### LaTeX-Workshop uses <kbd>Ctrl</kbd>+<kbd>M</kbd> for fonts keybindings
+
+vscode sets <kbd>Ctrl</kbd>+<kbd>M</kbd> to `editor.action.toggleTabFocusMode`. We define a new keybinding for `editor.action.toggleTabFocusMode`: <kbd>Ctrl</kbd>+<kbd>L</kbd>, <kbd>Ctrl</kbd>+<kbd>M</kbd>.
