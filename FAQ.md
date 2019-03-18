@@ -7,6 +7,7 @@
 - [The Problem Pane displays wrong messages](#The-Problem-Pane-displays-wrong-messages)
 - [I cannot use `ctrl`+`alt` in a shortcut](#I-cannot-use-ctrlalt-in-a-shortcut)
 - [Disable automatic build on save](#disable-automatic-build-on-save)
+- [I use build on save but I occasionally want to save without building](#I-use-build-on-save-but-I-occasionally-want-to-save-without-building)
 - [My file is built when I paste](#my-file-is-built-when-I-paste)
 - [Format on save does not work](#format-on-save-does-not-work)
 - [My file gets messed up](#my-file-gets-messed-up)
@@ -55,6 +56,10 @@ The default shortcuts for commands related to build and view use the modifiers <
 ## Disable automatic build on save
 
 Set the configuration variable `latex-workshop.latex.autoBuild.run` to `"never"`.
+
+## I use build on save but I occasionally want to save without building
+
+When `latex-workshop.latex.autoBuild.run` is set to `onFileChange`, building is triggered every time a file is saved. If you want to save a file without building it, you can use the `Save without Building` command from the _Command Palette_.
 
 ## My file is built when I paste
 
