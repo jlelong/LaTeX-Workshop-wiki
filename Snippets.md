@@ -19,6 +19,7 @@ Some environments have a dedicated snippet in the form `BXY` where `XY` are the 
 | `BSPL` | `split`          |
 | `BCAS` | `cases`          |
 | `BFR`  | `frame`          |
+| `BFI`  | `figure`         |
 
 ## Sectioning
 
