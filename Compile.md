@@ -16,6 +16,10 @@ The following settings are helpful to customize how to build a project and how t
 | [`latex-workshop.latex.magic.args`](#magic-comments)      | Arguments for the `TeX program`                                                                       |          | _array_ of _strings_ |
 | [`latex-workshop.latex.magic.bib.args`](#magic-comments)  | Arguments for the `BIB program`                                                                       |          | _array_ of _strings_ |
 
+## Terminating the current compilation
+
+It is possible to terminate the current compilation by calling `Kill LaTeX compiler process` from the _Command Palette_ or calling `Terminate current compilation` from the TeX badge in the Build LaTeX project item.
+
 ## Auto build LaTeX
 
 Besides manually calling the `Build LaTeX Project` command to compile a document, you may also let the extension automatically start compiling it upon file change. This can be defined in `latex-workshop.latex.autoBuild.run`.

@@ -8,6 +8,8 @@
   - [Using Docker](Install#using-docker)
 - [Compiling](Compile)
   - [Building the document](Compile#building-the-document)
+  - [Terminating the current compilation](Compile#terminating-the-current-compilation)
+  - [Auto build](Compile#auto-build-latex)
   - [Cleaning generated files](Compile#cleaning-generated-files)
   - [LaTeX recipes](Compile#latex-recipes)
   - [Magic comments](Compile#magic-comments)
