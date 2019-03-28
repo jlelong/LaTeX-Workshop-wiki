@@ -45,6 +45,19 @@ The key `\` automatically triggers completion of LaTeX commands. Several mechani
 | [`latex-workshop.intellisense.optionalArgsEntries.enabled`](#latex-workshopintellisenseoptionalArgsEntries) | Add one completion item per command signature                                  | `true`  | _boolean_ |
 | [`latex-workshop.latex.texDirs`](#latex-workshoplatextexDirs)                                               | List of paths to look for input `.tex` files.                                   | `[]`    | _array_ of _strings_ |
 
+## Environments
+
+Completion for environments works similarly as for commands. It is based on a set of predefined environments enriched with those defined by the included packages when [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled) is `true`. Moreover, any custom environment is added to the list after being used once.
+
+## Files
+
+We support intellisense for file completion inside the following commands : `include`, `includegraphics`, `input`, and all the commands from the `import` package. For the `includegraphics` command, we take into account the paths defined by `\graphicspath` if any.
+
+### Related settings
+
+- [`latex-workshop.intellisense.file.exclude`](#latex-workshopintellisensefileexclude)
+- [`latex-workshop.intellisense.file.base`](#latex-workshopintellisensefilebase)
+
 ## Configuration variables
 
 ### latex-workshop.intellisense.citation.label
@@ -131,12 +144,6 @@ Absolute paths are required. This setting is only used by the intellisense featu
 | type                 | default value |
 | -------------------- | ------------- |
 | _array_ of _strings_ | `[]`          |
-
-## Files
-
-We support intellisense for file completion inside the following commands : `include`, `includegraphics`, `input`, and all the commands from the `import` package. For the `includegraphics` command, we take into account the paths defined by `\graphicspath` if any.
-
-## Configuration variables
 
 ### latex-workshop.intellisense.file.exclude
 
