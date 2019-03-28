@@ -131,3 +131,29 @@ Absolute paths are required. This setting is only used by the intellisense featu
 | type                 | default value |
 | -------------------- | ------------- |
 | _array_ of _strings_ | `[]`          |
+
+## Files
+
+We support intellisense for file completion inside the following commands : `include`, `includegraphics`, `input`, and all the commands from the `import` package. For the `includegraphics` command, we take into account the paths defined by `\graphicspath` if any.
+
+## Configuration variables
+
+### latex-workshop.intellisense.file.exclude
+
+Patterns to ignore in file completion
+
+| type                 | default value |
+| -------------------- | ------------- |
+| _array_ of _strings_ | `[ "**/*.aux", "**/*.bbl", "**/*.bcf", "**/*.blg", "**/*.idx", "**/*.ind", "**/*.lof", "**/*.lot", "**/*.out", "**/*.toc", "**/*.acn", "**/*.acr", "**/*.alg", "**/*.glg", "**/*.glo", "**/*.gls", "**/*.ist", "**/*.fls", "**/*.log", "**/*.fdb_latexmk", "**/*.synctex.gz", "**/*.run.xml" ]`          |
+
+### latex-workshop.intellisense.file.base
+
+Specify the base directory for file completion. The possible choices are
+
+- Completion from the root file directory
+- Completion from the current file directory
+- both
+
+| type                 | default value |
+| -------------------- | ------------- |
+| _enum_               | `"root relative"|"file relative"|"both"` |

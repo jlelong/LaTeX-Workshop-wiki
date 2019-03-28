@@ -22,6 +22,7 @@
   - [Citations](Intellisense#Citations)
   - [References](Intellisense#References)
   - [Commands](Intellisense#Commands)
+  - [Files](Intellisens#files)
 - [Snippets and shortcuts](Snippets)
   - [Environments](Snippets#Environments)
   - [Sectioning](Snippets#Sectioning)
