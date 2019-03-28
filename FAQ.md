@@ -2,6 +2,7 @@
 
 - [Known incompatible extensions](#Known-incompatible-extensions)
 - [Cygwin is not supported](#Cygwin-is-not-supported)
+- [WSL is not officially supported](#WSL-is-not-officially-supported)
 - [The directory ~/node_modules/ may cause errors](#The-directory-node_modules-may-cause-errors)
 - [I cannot build from a subfile](#I-cannot-build-from-a-subfile)
 - [The Problem Pane displays wrong messages](#The-Problem-Pane-displays-wrong-messages)
@@ -31,6 +32,10 @@ The following extensions are known to cause issues when active at the same time 
 ## Cygwin is not supported
 
 LaTeX Workshop does not support TeX Live installed through Cygwin. Please install TeX Live and other TeX distributions independently of Cygwin.
+
+## WSL is not officially supported
+
+LaTeX Workshop does not officially support TeX Live installed through WSL. You can refer to a [setting](https://github.com/James-Yu/LaTeX-Workshop/issues/904#issuecomment-476741279) for TeX Live on WSL. Even with the setting, synctex does not work well. You have to write a wrapper command to make synctex work. We recommend you to install TeX Live and other TeX distributions independently of WSL.
 
 ## The directory ~/node_modules/ may cause errors
 
