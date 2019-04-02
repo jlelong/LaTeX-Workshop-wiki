@@ -26,7 +26,6 @@
   - [Files](Intellisense#files)
 - [Snippets and shortcuts](Snippets)
   - [Environments](Snippets#Environments)
-  - [Sectioning](Snippets#Sectioning)
   - [Inserting Greek letters](Snippets#Inserting-Greek-letters)
   - [Handy mathematical snippets](Snippets#Handy-mathematical-snippets)
   - [Font commands](Snippets#Font-commands)
