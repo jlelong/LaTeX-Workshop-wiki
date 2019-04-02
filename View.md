@@ -93,6 +93,57 @@ Synctex may fail if the path contains non-ASCII characters, see [FAQ](FAQ#Path-c
 
 **Backward/Reverse** synctex (pdf to source) is activated by <kbd>ctrl</kbd> + left-clicking (<kbd>cmd</kbd> + left-clicking on Mac) on the relevant element of the pdf preview.
 
+### Using synctex with an external viewer
+
+#### Windows
+
+The solution is simple, and works with `sumatraPDF`. Just add the following option to your configuration
+
+```
+"latex-workshop.view.pdf.external.synctex": {
+    "command": "C:/Program Files/SumatraPDF/SumatraPDF.exe",
+    "args": [
+        "-forward-search",
+        "%TEX%",
+	"%LINE%",
+	"-reuse-instance",
+	"-inverse-search",
+        "code \"C:\\Users\\<name>\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\out\\cli.js\" -r -g \"%f:%l\"",
+	"%PDF%",
+    ]
+}
+```
+
+Do not forget to set the paths according to your installation.  You can also replace `code` with the `Code.exe` path.
+
+#### Linux
+
+This is trickier, but works. See [here](https://ubuntuforums.org/showthread.php?t=1716268).
+
+1. Download this file (modified to work with VScode): [evince_synctex.zip](https://github.com/James-Yu/LaTeX-Workshop/files/3032338/evince_synctex.zip)
+1. Unzip it in any folder in your PATH (for instance, `$HOME/bin/` or `$HOME/.local/bin`).
+1. Add the following options to your configuration:
+
+    ```
+    "latex-workshop.view.pdf.external.command":
+    {
+        "command": "evince2",
+        "args": [
+            "%PDF%"
+        ]
+    },
+    "latex-workshop.view.pdf.external.synctex": {
+        "command": "evince_forward_search",
+        "args": [
+            "%PDF%",
+            "%LINE%",
+            "%TEX%"
+        ]
+    },
+    ```
+
+To make this work both ways, first open the pdf file with the external viewer.
+
 ### Overview
 
 | Setting key                                                                            | Description                               | Default       | Type          |
