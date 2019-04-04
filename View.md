@@ -36,9 +36,9 @@ Below are the detailed explanations for the different possible settings
 
 When set to true, the viewer is opened in a new editor group, otherwise the current group is used.
 
-| type     | default value |
-| -------- | ------------- |
-| _boolean | `true`        |
+| type      | default value |
+| --------- | ------------- |
+| _boolean_ | `true`        |
 
 ### latex-workshop.view.pdf.zoom
 
