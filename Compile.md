@@ -51,7 +51,7 @@ Define which recipe auto build uses.
 | -------- | ------------- | ---------------------- |
 | _string_ | `"first"`     | `"first"`,`"lastUsed"` |
 
-- `"first"`: Use the first recipe defined in [`latex-workshoplatexrecipes`](#LaTeX-recipes).
+- `"first"`: Use the first recipe defined in [`latex-workshop.latex.recipes`](#LaTeX-recipes).
 - `"lastUsed"`: Use the last used recipe by the command _LaTeX Workshop: Build with recipe_.
 
 
