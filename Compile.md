@@ -26,12 +26,34 @@ Besides manually calling the `Build LaTeX Project` command to compile a document
 
 ### latex-workshop.latex.autoBuild.run
 
+When to trigger automatic building.
+
 |   type   |  default value   |      possible values       |
 | -------- | ---------------- | -------------------------- |
 | _string_ | `"onFileChange"` | `"never"`,`"onFileChange"` |
 
 - `"never"`: Disable the auto build feature
 - `"onFileChange"`: Build the project upon detecting a file change in any of the dependencies. The file can even be modified outside vscode. See [here](Multi-File-Projects) for explanations on what dependencies are and how some of them can be ignored.
+
+### latex-workshop.latex.autoBuild.interval
+
+The minimal time interval between two consecutive auto builds in milliseconds.
+
+|   type    |  default value   |
+| --------- | ---------------- |
+| _integer_ | `1000`           |
+
+### latex-workshop.latex.autoBuild.recipe
+
+Define which recipe auto build uses.
+
+|   type   | default value |    possible values     |
+| -------- | ------------- | ---------------------- |
+| _string_ | `"first"`     | `"first"`,`"lastUsed"` |
+
+- `"first"`: Use the first recipe defined in [`latex-workshoplatexrecipes`](#LaTeX-recipes).
+- `"lastUsed"`: Use the last used recipe by the command _LaTeX Workshop: Build with recipe_.
+
 
 ## Cleaning generated files
 
