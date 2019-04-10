@@ -2,7 +2,9 @@
 
 ## Building the document
 
-A LaTeX file is typically built by calling the command _Build LaTeX project_ from the _Command Palette_ or from the _TeX_ badge. This command is bind to <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>b</kbd>. If you cannot use <kbd>ctrl</kbd>+<kbd>alt</kbd> in a keybinding, see [the FAQ](FAQ#i-cannot-use-ctrlalt-in-a-shortcut). If you have a multi-file project, see [multi-files-projects](Multi-File-Projects.md) for more details on how the root file is discovered. 
+A LaTeX file is typically built by calling the command _Build LaTeX project_ from the _Command Palette_ or from the _TeX_ badge. This command is bind to <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>b</kbd>. If you cannot use <kbd>ctrl</kbd>+<kbd>alt</kbd> in a keybinding, see [the FAQ](FAQ#i-cannot-use-ctrlalt-in-a-shortcut). The recipe called by this command is defined by [`latex-workshop.latex.recipe.default`](#latex-workshop.latex.recipe.default).
+
+If you have a multi-file project, see [multi-files-projects](Multi-File-Projects.md) for more details on how the root file is discovered.
 
 You can define several compiling toolchains to build LaTeX projects using [LaTeX recipes](#latex-recipes) and then call the command _Build with recipe_ to choose the appropriate toolchain for actually building the project. Alternatively, you can directly select the appropriate recipe from the _TeX_ badge.
 
@@ -22,7 +24,7 @@ It is possible to terminate the current compilation by calling `Kill LaTeX compi
 
 ## Auto build LaTeX
 
-Besides manually calling the `Build LaTeX Project` command to compile a document, you may also let the extension automatically start compiling it upon file change. This can be defined in `latex-workshop.latex.autoBuild.run`.
+Besides manually calling the `Build LaTeX Project` command to compile a document, you may also let the extension automatically start compiling it upon file change. This can be defined in `latex-workshop.latex.autoBuild.run`. The recipe called by auto build is defined by [`latex-workshop.latex.recipe.default`](#latex-workshop.latex.recipe.default).
 
 ### latex-workshop.latex.autoBuild.run
 
@@ -42,18 +44,6 @@ The minimal time interval between two consecutive auto builds in milliseconds.
 |   type    |  default value   |
 | --------- | ---------------- |
 | _integer_ | `1000`           |
-
-### latex-workshop.latex.autoBuild.recipe
-
-Define which recipe auto build uses.
-
-|   type   | default value |    possible values     |
-| -------- | ------------- | ---------------------- |
-| _string_ | `"first"`     | `"first"`,`"lastUsed"` |
-
-- `"first"`: Use the first recipe defined in [`latex-workshop.latex.recipes`](#LaTeX-recipes).
-- `"lastUsed"`: Use the last used recipe by the command _LaTeX Workshop: Build with recipe_.
-
 
 ## Cleaning generated files
 
@@ -189,6 +179,18 @@ The `args` and `env` parameters can contain symbols surrounded by `%`. These pla
 
 Alternatively, you can also set your commands without the placeholder, just like what you may input in a terminal.
 As most LaTeX compiler accepts root file name without extension, `%DOC%` and `%DOCFILE%` do not include `.tex` extension. Meanwhile, `texify` requires the extension. So in the above tool `%DOC%` and `.tex` are concatenated for completeness.
+
+### latex-workshop.latex.recipe.default
+
+Define which recipe is used by the _Build LaTeX project_ command.
+
+|   type   | default value |    possible values     |
+| -------- | ------------- | ---------------------- |
+| _string_ | `"first"`     | `"first"`,`"lastUsed"` |
+
+- `"first"`: Use the first recipe defined in [`latex-workshop.latex.recipes`](#LaTeX-recipes).
+- `"lastUsed"`: Use the last used recipe by the command _LaTeX Workshop: Build with recipe_.
+
 
 ## External build command
 
