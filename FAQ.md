@@ -1,19 +1,19 @@
 # FAQ and common issues
 
-- [Known incompatible extensions](#Known-incompatible-extensions)
-- [Cygwin is not supported](#Cygwin-is-not-supported)
-- [WSL is not officially supported](#WSL-is-not-officially-supported)
-- [The directory ~/node_modules/ may cause errors](#The-directory-node_modules-may-cause-errors)
-- [I cannot build from a subfile](#I-cannot-build-from-a-subfile)
-- [The Problem Pane displays wrong messages](#The-Problem-Pane-displays-wrong-messages)
-- [I cannot use `ctrl`+`alt` in a shortcut](#I-cannot-use-ctrlalt-in-a-shortcut)
+- [Known incompatible extensions](#known-incompatible-extensions)
+- [Cygwin is not supported](#cygwin-is-not-supported)
+- [WSL is not officially supported](#wsl-is-not-officially-supported)
+- [The directory ~/node_modules/ may cause errors](#the-directory-node_modules-may-cause-errors)
+- [I cannot build from a subfile](#i-cannot-build-from-a-subfile)
+- [The Problem Pane displays wrong messages](#the-Problem-Pane-displays-wrong-messages)
+- [I cannot use `ctrl`+`alt` in a shortcut](#i-cannot-use-ctrlalt-in-a-shortcut)
 - [Disable automatic build on save](#disable-automatic-build-on-save)
 - [I use build on save but I occasionally want to save without building](#I-use-build-on-save-but-I-occasionally-want-to-save-without-building)
 - [My file is built when I paste](#my-file-is-built-when-I-paste)
 - [Format on save does not work](#format-on-save-does-not-work)
 - [My file gets messed up](#my-file-gets-messed-up)
 - [Large bibtex files are ignored](#large-bibtex-files-are-ignored)
-- [Path containing Chinese characters](#Path-containing-Chinese-characters)
+- [Path containing Chinese or `~` characters](#path-containing-chinese-or--characters)
 - [The LaTeX sidebar keeps reopening](#the-latex-sidebar-keeps-reopening)
 - [Spell check](#spell-check)
 - [I cannot nest snippets](#i-cannot-nest-snippets)
@@ -88,10 +88,10 @@ Formatting a .tex file actually changes it on the disk and then if `latex-worksh
 
 Bibtex files listed in a project are parsed for citation completion. This may induce significant slow down with large bibtex files. You can configure the maximum size of bibtex files parsed by the extension with [`latex-workshop.intellisense.citation.maxfilesizeMB"`](Intelissense#latex-workshopintellisensecitationmaxfilesizeMB).
 
-## Path containing Chinese characters
+## Path containing Chinese or `~` characters
 
 On some platforms, when the path of a TeX file contains Chinese characters or other non-ASCII characters,
-the compilation does not work well. In such cases, please use `%DOCFILE%` instead of `%DOC%` in your recipes. See also [LaTeX recipes](Compile#LaTeX-recipes).
+the compilation does not work well. In such cases, please use `%DOCFILE%` instead of `%DOC%` in your recipes. See also [LaTeX recipes](Compile#LaTeX-recipes). Note that using relevant paths instead of absolute ones may lead to other issues, see the following issues for a discussion on this: [1070](https://github.com/James-Yu/LaTeX-Workshop/issues/1070) and [1137](https://github.com/James-Yu/LaTeX-Workshop/issues/1137).
 
 On some platforms, `synctex` does not work well with the path containing non-ASCII characters either. In such cases, please use a built-in `synctex` functionality.
 See [Viewing & Synctex](View#latex-workshopsynctexsynctexjsenabled).
