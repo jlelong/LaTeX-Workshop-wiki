@@ -38,13 +38,21 @@ When [`latex-workshop.hover.command.enabled`](#latex-workshophovercommandenabled
 
 ## Configuration variables
 
-### latex-workshop.hover.reference.enabled
+### latex-workshop.hover.ref.enabled
 
 Enable Hover on References.
 
 | type      | default value |
 | --------- | ------------- |
 | _boolean_ | `true`        |
+
+### latex-workshop.hover.ref.numberAtLastCompilation.enabled
+
+Show number given to ref at the last compilation.
+
+| type      | default value |
+| --------- | ------------- |
+| _boolean_ | `false`        |
 
 ### latex-workshop.hover.citation.enabled
 
@@ -77,6 +85,22 @@ Scale of math preview on hover.
 | type     | default value |
 | -------- | ------------- |
 | _number_ | 1             |
+
+### latex-workshop.hover.preview.newcommand.parseTeXFile.enabled
+
+Enable newcommands defined in the current TeX file to be included in Hover Preview.
+
+| type      | default value |
+| --------- | ------------- |
+| _boolean_ | `true`        |
+
+### latex-workshop.hover.preview.newcommand.newcommandFile
+
+Set the path of a file containing newcommands to be used in Hover Preview. If the path is relative, it is joined with the root dir.
+
+| type     | default value |
+| -------- | ------------- |
+| _string_ | ""    |
 
 ### latex-workshop.hover.preview.cursor.enabled
 
