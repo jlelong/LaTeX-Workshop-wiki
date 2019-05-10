@@ -25,7 +25,7 @@ The typical usage is to open a `.tex` file and have a look at the _TeX_ sidebar 
   - Open citation browser, see also [Intellisense for citations](Intellisense#Citations)
   - Count words the `.tex` file. It uses the `texcount` utility. Use `latex-workshop.texcount.path` to set the path to the `texcount` executable and `latex-workshop.texcount.args` to supply extra arguments.
 
-If you prefer to access some all the most common actions through a right click menu, set `latex-workshop.showContextMenu` to `true`. Default is `false`.
+If you prefer to access some of the most common actions through a right click menu, set `latex-workshop.showContextMenu` to `true`. Default is `false`.
 
 ## Using Docker
 
