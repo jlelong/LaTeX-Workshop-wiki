@@ -18,6 +18,14 @@ Supported math environments are `align`, `align*`, `alignat`, `alignat*`, `align
 
 `$$` is not supported. The `tabular` environment is not supported.
 
+| Setting key | Description |
+|------------|------------|
+| [`latex-workshop.hover.preview.enabled`](#latex-workshophoverpreviewenabled) | Enable math preview |
+| [`latex-workshop.hover.preview.scale`](#latex-workshophoverpreviewscale) | Scale of math preview |
+| [`latex-workshop.hover.preview.cursor.enabled`](#latex-workshophoverpreviewcursorenabled) | Render cursor in math preview |
+[`latex-workshop.hover.preview.cursor.symbol`](#latex-workshophoverpreviewcursorsymbol) | Define the cursor symbol |
+[`latex-workshop.hover.preview.cursor.color`](#latex-workshophoverpreviewcursorcolor) | Define the cursor color |
+
 ## Previewing citation details
 
 When [`latex-workshop.hover.citation.enabled`](#latex-workshophovercitationenabled) is set to `true`, moving the mouse over an argument of a `\cite` related command displays the details of the bibliography as a tooltip.
@@ -26,9 +34,14 @@ When [`latex-workshop.hover.citation.enabled`](#latex-workshophovercitationenabl
 
 ## Previewing references
 
-When [`latex-workshop.hover.reference.enabled`](#latex-workshophoverreferenceenabled) is set to `true`, moving the mouse over a `\ref` related command displays the piece of `tex` with the corresponding label as a tooltip. Moreover, if the label refers to a maths environment as described in [Preview equations](#Preview-equations) and [`latex-workshop.hover.preview.ref.enabled`](#latex-workshophoverpreviewrefenabled) is set to `true`, math preview is rendered instead of showing the tex content.
+When [`latex-workshop.hover.reference.enabled`](#latex-workshophoverreferenceenabled) is set to `true`, moving the mouse over a `\ref` related command displays the piece of `tex` with the corresponding label as a tooltip. Moreover, if the label refers to a math environment as described in [Preview equations](#Preview-equations) and [`latex-workshop.hover.preview.ref.enabled`](#latex-workshophoverpreviewrefenabled) is set to `true`, math preview is rendered instead of showing the tex content.
 
 <img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/hover-ref.gif" alt="Hover on \ref demo" height="300px">
+
+| Setting key | Description |
+|------------|------------|
+| [`latex-workshop.hover.ref.enabled`](#latex-workshophoverrefenabled) | Enable hover on references |
+| [`latex-workshop.hover.ref.numberAtLastCompilation.enabled`](#latex-workshophoverrefnumberAtLastCompilationenabled) | Show number the given to ref at the last compilation. |
 
 ## Documentation of a command
 
@@ -48,7 +61,7 @@ Enable Hover on References.
 
 ### latex-workshop.hover.ref.numberAtLastCompilation.enabled
 
-Show number given to ref at the last compilation.
+Show number the given to ref at the last compilation.
 
 | type      | default value |
 | --------- | ------------- |
