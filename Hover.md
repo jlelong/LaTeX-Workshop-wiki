@@ -1,5 +1,7 @@
 # Hovering features
 
+Hover can also be triggered using `C-k C-i`.
+
 ## Documentation of a package
 
 To open a package documentation, hover the package name inside the `\usepackage` call and click on the _View documentation_ link. As it internally calls `texdoc`, if it is not in your path you may need to set [`latex-workshop.texdoc.path`](latex-workshoptexdocpath) to the full path of `texdoc`.
