@@ -31,6 +31,7 @@ Below are the detailed explanations for the different possible settings
 | [`latex-workshop.view.pdf.spreadMode`](#latex-workshopviewpdfspreadMode)          | The default spread mode of the PDF viewer |
 | [`latex-workshop.view.pdf.hand`](#latex-workshopviewpdfhand)                      | Enable the hand tool                      |
 | [`latex-workshop.view.pdf.invert`](#latex-workshopviewpdfinvert)                  | Define the CSS invert filter level        |
+| [`latex-workshop.view.pdf.trim`](#latex-workshopviewpdftrim)                      | The default trim mode of the PDF viewer   |
 
 ### latex-workshop.view.pdf.tab.useNewGroup
 
@@ -52,9 +53,9 @@ The default zoom level of the PDF viewer. This default value will be passed to t
 
 The default scroll mode of the PDF viewer. This default value will be passed to the viewer upon opening.
 
-| type     | default value | possible values |
-| -------- | ------------- | --------------- |
-| _number_ | `0`           | `0`, `1`, `2`   |
+| type   | default value | possible values |
+| ------ | ------------- | --------------- |
+| _enum_ | `0`           | `0`, `1`, `2`   |
 
 - `0`: Vertical scroll
 - `1`: Horizontal scroll
@@ -64,9 +65,9 @@ The default scroll mode of the PDF viewer. This default value will be passed to 
 
 The default spread mode of the PDF viewer. This default value will be passed to the viewer upon opening.
 
-| type     | default value |
-| -------- | ------------- |
-| _number_ | `0`           |
+| type   | default value | possible values |
+| ------ | ------------- |-----------------|
+| _enum_ | `0`           | `0`, `1`, `2`   |
 
 - `0`: No spread
 - `1`: Odd spread
@@ -89,6 +90,19 @@ This config can invert the color of PDF. Possible values are any floating point 
 | type     | default value |
 | -------- | ------------- |
 | _number_ | `0`           |
+
+### latex-workshop.view.pdf.trim
+
+The default trim mode of the PDF viewer
+
+| type   | default value | possible values    |
+| ------ | ------------- |--------------------|
+| _enum_ | `0`           | `0`, `1`, `2`, `3` |
+
+- `0`: No page trimming
+- `1`: Trim 5% at margin
+- `2`: Trim 10% at margin
+- `3`: Trim 15% at margin
 
 ## Synctex
 
