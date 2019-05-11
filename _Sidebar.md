@@ -42,6 +42,7 @@
   - [Inserting an environment](Environments#inserting-an-environments)
   - [Itemize like environments](Environments#Itemize-like-environments)
   - [Navigating](Environments#Navigating)
+  - [Changing between `\[...\]` and `\begin{}...\end{}`](Environments#changing-between--and-beginend)
   - [Closing the current environment](Environments#Closing-the-current-environment)
   - [Surrounding selection with an environment](Environments#Surrounding-selection-with-an-environment)
 - [VS Code Remote Development](Remote)
