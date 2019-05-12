@@ -44,4 +44,5 @@
   - [Navigating](Environments#Navigating)
   - [Closing the current environment](Environments#Closing-the-current-environment)
   - [Surrounding selection with an environment](Environments#Surrounding-selection-with-an-environment)
+- [VS Code Remote Development](Remote)
 - [FAQ and common issues](FAQ)
