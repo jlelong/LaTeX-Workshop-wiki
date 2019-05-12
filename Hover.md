@@ -12,13 +12,13 @@ You may also directly run the _LaTex Workshop: Show package documentation_ comma
 
 ## Previewing equations
 
-When you move the mouse cursor over inline math, `\[`, `\begin{align}`, and `\begin{...}` of other math environments, math preview on hover is rendered. When you move the mouse cursor over `\ref`, and other reference commands referring math equations, math preview on hover is also rendered.
+When you move the mouse cursor over inline math, `\[`, `$$`, `\begin{align}`, and `\begin{...}` of other math environments, math preview on hover is rendered. When you move the mouse cursor over `\ref`, and other reference commands referring math equations, math preview on hover is also rendered.
 
 <img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/hover.gif" alt="Preview maths demo" height="120px">
 
 Supported math environments are `align`, `align*`, `alignat`, `alignat*`, `aligned`, `alignedat`, `array`, `Bmatrix`, `bmatrix`, `cases`, `CD`, `eqnarray`, `eqnarray*`, `equation`, `equation*`, `gather`, `gather*`, `gathered`, `matrix`, `multline`, `multline*`, `pmatrix`, `smallmatrix`, `split`, `subarray`, `Vmatrix`, `vmatrix`.
 
-`$$` is not supported. The `tabular` environment is not supported.
+The `tabular` environment is not supported.
 
 | Setting key | Description |
 |------------|------------|
