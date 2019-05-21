@@ -87,7 +87,7 @@ This functionality has two keybindings
 | Increment Sectioning | <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>]</kbd> | <kbd>ctrl</kbd>+<kbd>l</kbd> <kbd>]</kbd> |
 | Decrement Sectioning | <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>[</kbd> | <kbd>ctrl</kbd>+<kbd>l</kbd> <kbd>]</kbd> |
 
-To use the alternate shortcuts, set `latex-workshop.bind.altKeymap.enabled` to `true` (you need reload/reopen vscode for the change to be taken into account).
+To use the alternate shortcuts, set `latex-workshop.bind.altKeymap.enabled` to `true`.
 
 ## Inserting Greek letters
 
