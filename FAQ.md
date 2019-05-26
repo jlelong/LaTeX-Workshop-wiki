@@ -20,6 +20,7 @@
 - [Some `@` snippets are not `TAB` completed](#some--snippets-are-not-tab-completed)
 - [How to pass `-shell-escape` to `latexmk`](#how-to-pass--shell-escape-to-latexmk)
 - [LaTeX-Workshop shadows vscode's default keybindings](#latex-workshop-shadows-vscodes-default-keybindings)
+- [Customizing a Color Theme](#customizing-a-color-theme)
 
 ## Known incompatible Extensions
 
@@ -173,3 +174,22 @@ Since vscode 1.32.0, <kbd>Ctrl</kbd>+<kbd>L</kbd> has been set to `expandLineSel
 ### LaTeX-Workshop uses <kbd>Ctrl</kbd>+<kbd>M</kbd> for fonts keybindings
 
 vscode sets <kbd>Ctrl</kbd>+<kbd>M</kbd> to `editor.action.toggleTabFocusMode`. We define a new keybinding for `editor.action.toggleTabFocusMode`: <kbd>Ctrl</kbd>+<kbd>L</kbd>, <kbd>Ctrl</kbd>+<kbd>M</kbd>.
+
+### Customizing a Color Theme
+
+On customizing a color theme, you can refer to an [official document](https://code.visualstudio.com/docs/getstarted/themes). The following is an example to make fonts black in math environment. Writing it in your `settings.json`, you can enable that. To find an appropriate scope for each element in a TeX document, you can use the scope inspector of VS Code. Please refer to [this document](https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide#scope-inspector).
+
+```json
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": [
+                    "support.class.math.block.environment.latex",
+                ],
+                "settings": {
+                    "foreground": "#000000"
+                }
+            }
+        ]
+    }
+```
