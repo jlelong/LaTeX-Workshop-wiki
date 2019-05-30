@@ -20,6 +20,7 @@
 - [Some `@` snippets are not `TAB` completed](#some--snippets-are-not-tab-completed)
 - [How to pass `-shell-escape` to `latexmk`](#how-to-pass--shell-escape-to-latexmk)
 - [LaTeX-Workshop shadows vscode's default keybindings](#latex-workshop-shadows-vscodes-default-keybindings)
+- [Syntax Highlighting does not work for most elements](#syntax-highlighting-does-not-work-for-most-elements)
 
 ## Known incompatible Extensions
 
@@ -173,3 +174,7 @@ Since vscode 1.32.0, <kbd>Ctrl</kbd>+<kbd>L</kbd> has been set to `expandLineSel
 ### LaTeX-Workshop uses <kbd>Ctrl</kbd>+<kbd>M</kbd> for fonts keybindings
 
 vscode sets <kbd>Ctrl</kbd>+<kbd>M</kbd> to `editor.action.toggleTabFocusMode`. We define a new keybinding for `editor.action.toggleTabFocusMode`: <kbd>Ctrl</kbd>+<kbd>L</kbd>, <kbd>Ctrl</kbd>+<kbd>M</kbd>.
+
+## Syntax Highlighting does not work for most elements
+
+Please change VS Code theme you are using. For example, **Visual Studio Dark** and **Visual Studio Light** do not work with LaTeX Workshop.
