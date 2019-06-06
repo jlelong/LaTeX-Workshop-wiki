@@ -143,9 +143,9 @@ Do not forget to set the paths according to your installation.  You can also rep
 
 This is trickier, but works. See [here](https://ubuntuforums.org/showthread.php?t=1716268).
 
-1. Download this file (modified to work with VScode): 
-    - for Python 2: [evince_synctex.zip](https://github.com/James-Yu/LaTeX-Workshop/files/3032338/evince_synctex.zip)
-    - for Python 3: [evince_synctex.zip](https://github.com/James-Yu/LaTeX-Workshop/files/3042526/evince_synctex.zip)
+1. Download this file (modified to work with VScode):
+    - for Python 2: [evince_synctex2.zip](files/evince_synctex2.zip)
+    - for Python 3: [evince_synctex3.zip](files/evince_synctex3.zip)
 1. Unzip it in any folder in your PATH (for instance, `$HOME/bin/` or `$HOME/.local/bin`).
 1. Add the following options to your configuration:
 
