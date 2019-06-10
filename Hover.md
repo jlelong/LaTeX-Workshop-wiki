@@ -25,8 +25,10 @@ The `tabular` environment is not supported.
 | [`latex-workshop.hover.preview.enabled`](#latex-workshophoverpreviewenabled) | Enable math preview |
 | [`latex-workshop.hover.preview.scale`](#latex-workshophoverpreviewscale) | Scale of math preview |
 | [`latex-workshop.hover.preview.cursor.enabled`](#latex-workshophoverpreviewcursorenabled) | Render cursor in math preview |
-[`latex-workshop.hover.preview.cursor.symbol`](#latex-workshophoverpreviewcursorsymbol) | Define the cursor symbol |
-[`latex-workshop.hover.preview.cursor.color`](#latex-workshophoverpreviewcursorcolor) | Define the cursor color |
+| [`latex-workshop.hover.preview.cursor.symbol`](#latex-workshophoverpreviewcursorsymbol) | Define the cursor symbol |
+| [`latex-workshop.hover.preview.cursor.color`](#latex-workshophoverpreviewcursorcolor) | Define the cursor color |
+| [`latex-workshop.hover.preview.newcommand.parseTeXFile.enabled`](#latex-workshophoverpreviewnewcommandparseTeXFileenabled) | Add newcommands to preview |
+| [`latex-workshop.hover.preview.newcommand.newcommandFile`](#latex-workshophoverpreviewnewcommandnewcommandFile) | Path of a file containing newcommands |
 
 ## Previewing citation details
 
@@ -104,7 +106,7 @@ Scale of math preview on hover.
 
 ### latex-workshop.hover.preview.newcommand.parseTeXFile.enabled
 
-Enable newcommands defined in the current TeX file to be included in Hover Preview.
+Enable newcommands defined in the current TeX file to be included in Hover Preview. We currently only support commands defined on **a single line**.
 
 | type      | default value |
 | --------- | ------------- |
