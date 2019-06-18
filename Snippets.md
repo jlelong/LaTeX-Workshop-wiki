@@ -175,7 +175,7 @@ Some common mathematical symbols or commands have a dedicated snippet.
 | Prefix     | Shortcut                                                       | Command                  |
 | ---------- | -------------------------------------------------------------- | ------------------------ |
 | `fontsize` |                                                                | Opens font size select   |
-| `FNO`      |                                                                | `\textnormal{${1}}`      |
+| `FNO`      | <kbd>ctrl</kbd>+<kbd>l</kbd>, <kbd>ctrl</kbd>+<kbd>n</kbd>     | `\textnormal{${1}}`      |
 | `FRM`      | <kbd>ctrl</kbd>+<kbd>l</kbd>, <kbd>ctrl</kbd>+<kbd>r</kbd>     | `\textrm{${1}}`          |
 | `FEM`      | <kbd>ctrl</kbd>+<kbd>l</kbd>, <kbd>ctrl</kbd>+<kbd>e</kbd>     | `\emph{${1}}`            |
 | `FSF`      |                                                                | `\textsf{${1}}`          |
