@@ -17,6 +17,7 @@ The following settings are helpful to customize how to build a project and how t
 | [`latex-workshop.latex.tools`](#latex-recipes)            | Tools available for building                                                                          |          | _JSON object_        |
 | [`latex-workshop.latex.magic.args`](#magic-comments)      | Arguments for the `TeX program`                                                                       |          | _array_ of _strings_ |
 | [`latex-workshop.latex.magic.bib.args`](#magic-comments)  | Arguments for the `BIB program`                                                                       |          | _array_ of _strings_ |
+| [`latex-workshop.latex.build.forceRecipeUsage`](#latex-workshoplatexbuildforceRecipeUsage) | Force the use of recipes | false | _boolean_ |
 
 ## Terminating the current compilation
 
@@ -190,6 +191,14 @@ Define which recipe is used by the _Build LaTeX project_ command.
 
 - `"first"`: Use the first recipe defined in [`latex-workshop.latex.recipes`](#LaTeX-recipes).
 - `"lastUsed"`: Use the last used recipe by the command _LaTeX Workshop: Build with recipe_.
+
+### latex-workshop.latex.build.forceRecipeUsage
+
+Force the use of the recipe system even when a magic comment defines a TeX command.
+
+|   type    |  default value   |
+| --------- | ---------------- |
+| _boolean_ | `false`          |
 
 
 ## External build command
