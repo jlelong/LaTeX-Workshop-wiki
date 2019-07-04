@@ -4,7 +4,7 @@ Hover can also be triggered using `C-k C-i`.
 
 ## Documentation of a package
 
-To open a package documentation, hover the package name inside the `\usepackage` call and click on the _View documentation_ link. As it internally calls `texdoc`, if it is not in your path you may need to set [`latex-workshop.texdoc.path`](latex-workshoptexdocpath) to the full path of `texdoc`.
+To open a package documentation, hover the package name inside the `\usepackage` call and click on the _View documentation_ link. As it internally calls `texdoc`, if it is not in your path you may need to set [`latex-workshop.texdoc.path`](latex-workshoptexdocpath) to the full path of `texdoc` and tweak [`latex-workshop.texdoc.args`](latex-workshoptexdocargs).
 
 <img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/hover-package.gif" alt="Hover on a package demo">
 
@@ -159,3 +159,21 @@ PDF viewer used for `[View on PDF]` link on hover over `\ref`, and other referen
 | type     | default value | possible values                          |
 | -------- | ------------- | ---------------------------------------- |
 | _string_ | "auto"        | `"auto"`, `"tabOrBrowser"`, `"external"` |
+
+### latex-workshop.latex.texdoc.path
+
+Define the location of texdoc executable.
+
+| type      | default value |
+| --------- | ------------- |
+| _string_  | "texdoc"      |
+
+### latex-workshop.latex.texdoc.args
+
+Texdoc arguments to see a package documentation.
+
+| type      | default value |
+| --------- | ------------- |
+| _array_   | `["--view"]`  |
+
+The package name is automatically appended to the arguments.
