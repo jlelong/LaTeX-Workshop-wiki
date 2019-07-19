@@ -1,4 +1,4 @@
-# Hovering features
+# Hovering and previewing features
 
 Hover can also be triggered using `C-k C-i`.
 
@@ -29,6 +29,12 @@ The `tabular` environment is not supported.
 | [`latex-workshop.hover.preview.cursor.color`](#latex-workshophoverpreviewcursorcolor) | Define the cursor color |
 | [`latex-workshop.hover.preview.newcommand.parseTeXFile.enabled`](#latex-workshophoverpreviewnewcommandparseTeXFileenabled) | Add newcommands to preview |
 | [`latex-workshop.hover.preview.newcommand.newcommandFile`](#latex-workshophoverpreviewnewcommandnewcommandFile) | Path of a file containing newcommands |
+
+## Tikz preview
+
+You can preview a `tikzpicture` environment without rebuilding the main document by clicking on the "View TikzPicture" codelense above the environment. When clicked, LaTeX workshop launches a tab containing the tikzpicture PDF and tracks changes made inside the `tikzpicture` environment. The PDF is updated as you type.
+
+<img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/tikz-preview.gif" alt="tikz preview demo">
 
 ## Previewing citation details
 
