@@ -169,6 +169,24 @@ This is trickier, but works. See [here](https://ubuntuforums.org/showthread.php?
 
 To make this work both ways, first open the pdf file with the external viewer.
 
+##### [Zathura](https://en.wikipedia.org/wiki/Zathura_(document_viewer)) support 
+
+Forward: `--synctex-forward` flag
+
+Backward: Use `%{input}` and `%{line}` as placeholders.
+
+```
+ "latex-workshop.view.pdf.viewer": "external",
+    "latex-workshop.view.pdf.external.command": {
+        "command": "zathura",
+        "args": [ "--synctex-editor-command", "code --reuse-window -g \"%{input}:%{line}\"", "%PDF%" ]
+    },
+    "latex-workshop.view.pdf.external.synctex": {
+        "command": "zathura",
+        "args": [ "--synctex-forward=%LINE%:0:%TEX%", "%PDF%" ]
+    }
+```
+
 ### Overview
 
 | Setting key                                                                            | Description                               | Default       | Type          |
