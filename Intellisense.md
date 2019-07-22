@@ -40,6 +40,7 @@ The key `\` automatically triggers completion of LaTeX commands. Several mechani
 | Setting key                                                                                                 | Description                                                                    | Default | Type      |
 | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ------- | --------- |
 | [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled)                  | Enabling of auto-completion for commands and environments from loaded packages | `false` | _boolean_ |
+| [`latex-workshop.intellisense.package.extra`](#latex-workshopintellisensepackageextra)                  | Extra packages to load for intellisense | `[]` | _array_ of _strings_ |
 | [`latex-workshop.intellisense.unimathsymbols.enabled`](#latex-workshopintellisenseunimathsymbolsenabled)    | Show unimath symbols as suggestions when `\` pressed | `false` | _boolean_     |
 | [`latex-workshop.intellisense.useTabStops.enabled`](#latex-workshopintellisenseuseTabStopsenabled)          | Use tabstops in intellisense completion                                        | `true`  | _boolean_ |
 | [`latex-workshop.intellisense.optionalArgsEntries.enabled`](#latex-workshopintellisenseoptionalArgsEntries) | Add one completion item per command signature                                  | `true`  | _boolean_ |
@@ -87,9 +88,9 @@ Define which type of hint to show when intellisense provides citation suggestion
 - inline: Use the inline intellisense to provide citation completion items.
 - browser: Use a dropdown menu to provide citation completion items.
 
-| type   | default value |
-| ------ | ------------- |
-| string | `"inline"`    |
+| type     | default value |
+| -------- | ------------- |
+| _string_ | `"inline"`    |
 
 ### latex-workshop.intellisense.package.enabled
 
@@ -98,6 +99,16 @@ Auto-complete commands and environments from used packages.
 | type      | default value |
 | --------- | ------------- |
 | _boolean_ | `false`       |
+
+### latex-workshop.intellisense.package.extra
+
+List of extra packages to always add to the auto-completion mechanism.
+
+When `latex-workshop.intellisense.package.enabled` is set to `true`, the commands and environments defined in these extra packages will be added to the intellisense suggestions
+
+|         type         | default value |
+| -------------------- | ------------- |
+| _array_ of _strings_ | `[]`          |
 
 ### latex-workshop.intellisense.optionalArgsEntries.enabled
 
