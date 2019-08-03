@@ -2,7 +2,7 @@
 
 - [Known incompatible extensions](#known-incompatible-extensions)
 - [Cygwin is not supported](#cygwin-is-not-supported)
-- [WSL is not officially supported](#wsl-is-not-officially-supported)
+- [Using LaTeX Workshop with WSL](#using-latex-workshop-with-wsl)
 - [The directory ~/node_modules/ may cause errors](#the-directory-node_modules-may-cause-errors)
 - [I cannot build from a subfile](#i-cannot-build-from-a-subfile)
 - [The Problem Pane displays wrong messages](#the-Problem-Pane-displays-wrong-messages)
@@ -34,9 +34,9 @@ The following extensions are known to cause issues when active at the same time 
 
 LaTeX Workshop does not support TeX Live installed through Cygwin. Please install TeX Live and other TeX distributions independently of Cygwin.
 
-## WSL is not officially supported
+## Using LaTeX Workshop with WSL
 
-LaTeX Workshop does not officially support TeX Live installed through WSL. You can refer to a [setting](https://github.com/James-Yu/LaTeX-Workshop/issues/904#issuecomment-476741279) for TeX Live on WSL. Even with the setting, synctex does not work well. You have to write a wrapper command to make synctex work. We recommend you to install TeX Live and other TeX distributions independently of WSL.
+Starting with 1.35.0, VS Code supports WSL through [Remote - WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl). LaTeX Workshop works well with the extension.
 
 ## The directory ~/node_modules/ may cause errors
 
