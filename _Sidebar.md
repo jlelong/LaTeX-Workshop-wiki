@@ -6,6 +6,7 @@
   - [Installation](Install#installation)
   - [Usage](Install#usage)
   - [Using Docker](Install#using-docker)
+  - [Using WSL](Install#using-wsl)
 - [Compiling](Compile)
   - [Building the document](Compile#building-the-document)
   - [Terminating the current compilation](Compile#terminating-the-current-compilation)
