@@ -35,7 +35,6 @@
 - [Hovering and previewing features](Hover)
   - [Documentation of a package](Hover#documentation-of-a-package)
   - [Previewing equations](Hover#previewing-equations)
-  - [Tikz preview](Hover#tikz-preview)
   - [Previewing citation details](Hover#previewing-citation-details)
   - [Previewing references](Hover#previewing-references)
   - [Documentation of a command](Hover#documentation-of-a-command)
