@@ -38,8 +38,7 @@ When [`latex-workshop.hover.citation.enabled`](#latex-workshophovercitationenabl
 
 ## Previewing references
 
-When [`latex-workshop.hover.reference.enabled`](#latex-workshophoverreferenceenabled) is set to `true`, moving the mouse over a `\ref` related command displays the piece of `tex` with the corresponding label as a tooltip. Moreover, if the label refers to a math environment as described in [Preview equations](#Preview-equations) and [`latex-workshop.hover.preview.ref.enabled`](#latex-workshophoverpreviewrefenabled) is set to `true`, math preview is rendered instead of showing the tex content. The tooltip has a `View on pdf` link to jump to the corresponding location in the `PDF` viewer. It only calls `synctex` 
-as if you were directly calling _SyncTeX from cursor_ and therefore it requires a PDF viewer for the current `.tex` file to be opened.
+When [`latex-workshop.hover.ref.enabled`](#latex-workshophoverrefenabled) is set to `true`, moving the mouse over a `\ref` related command displays the piece of `tex` with the corresponding label as a tooltip. Moreover, if the label refers to a math environment as described in [Preview equations](#Preview-equations), math preview is rendered instead of showing the tex content. The tooltip has a `View on pdf` link to jump to the corresponding location in the `PDF` viewer. It only calls `synctex` as if you were directly calling _SyncTeX from cursor_ and therefore it requires a PDF viewer for the current `.tex` file to be opened.
 
 <img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/hover-ref.gif" alt="Hover on \ref demo" height="300px">
 
@@ -143,14 +142,6 @@ Define the color of the cursor in math preview on hover.
 | type     | default value | possible values                                                                                                                                                                                                                |
 | -------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | _string_ | "auto"        | `"auto"`, `"black"`, `"blue"`, `"brown"`, `"cyan"`, `"darkgray"`, `"gray"`, `"green"`, `"lightgray"`, `"lime"`, `"magenta"`, `"olive"`, `"orange"`, `"pink"`, `"purple"`, `"red"`, `"teal"`, `"violet"`, `"white"`, `"yellow"` |
-
-### latex-workshop.hover.preview.ref.enabled
-
-Render math preview on hover over `\ref`, and other reference commands.
-
-| type      | default value |
-| --------- | ------------- |
-| _boolean_ | `true`        |
 
 ### latex-workshop.view.pdf.ref.viewer
 
