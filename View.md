@@ -275,4 +275,23 @@ This function is not officially supported. `%PDF%` is the placeholder for the ab
 
 | type          | default value                  |
 | ------------- | ------------------------------ |
-| _JSON object_ | `{ "command": "" "args": [] }` |
+| _string_ | "\<path to external pdf viewer\>" |
+	
+```
+    "latex-workshop.view.pdf.external.viewer.command": "/usr/bin/okular",
+```
+
+### latex-workshop.view.pdf.external.viewer.args
+This works with the `latex-workshop.view.pdf.external.command` to provide the arguments to the external viewer. 
+
+| type          | default value                  |
+| ------------- | ------------------------------ |
+| _array_ | "comma separated list of arguments"  |
+
+e.g. 
+```
+   "latex-workshop.view.pdf.external.viewer.args": [
+        "--unique",
+        "%PDF%"
+    ],
+```
