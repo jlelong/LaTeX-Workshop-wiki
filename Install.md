@@ -23,7 +23,6 @@ The typical usage is to open a `.tex` file and have a look at the _TeX_ sidebar 
 - Navigating the document structure. The section names of LaTeX outline hierarchy are defined in `latex-workshop.view.outline.sections`. This property is an array of case-sensitive strings in the order of document structure hierarchy. For multiple tags in the same level, separate the tags with `|` as delimiters, e.g., `section|alternative`. It is also used by the folding mechanism.
 - Miscellaneous actions
   - Open citation browser, see also [Intellisense for citations](Intellisense#Citations)
-  - Count words the `.tex` file. It uses the `texcount` utility. Use `latex-workshop.texcount.path` to set the path to the `texcount` executable and `latex-workshop.texcount.args` to supply extra arguments.
 
 If you prefer to access some of the most common actions through a right click menu, set `latex-workshop.showContextMenu` to `true`. Default is `false`.
 
