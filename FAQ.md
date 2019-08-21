@@ -21,6 +21,7 @@
 - [How to pass `-shell-escape` to `latexmk`](#how-to-pass--shell-escape-to-latexmk)
 - [LaTeX-Workshop shadows vscode's default keybindings](#latex-workshop-shadows-vscodes-default-keybindings)
 - [Syntax Highlighting does not work for most elements](#syntax-highlighting-does-not-work-for-most-elements)
+- [Install older version](#install-older-version)
 
 ## Known incompatible Extensions
 
@@ -178,3 +179,7 @@ vscode sets <kbd>Ctrl</kbd>+<kbd>M</kbd> to `editor.action.toggleTabFocusMode`. 
 ## Syntax Highlighting does not work for most elements
 
 Please change VS Code theme you are using. For example, **Visual Studio Dark** and **Visual Studio Light** do not work with LaTeX Workshop.
+
+## Install older version
+
+You can install older versions of LaTeX Workshop by right-clicking it in the extension panel of VS Code and selecting `Install Another Version`.
