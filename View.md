@@ -114,7 +114,9 @@ Synctex may fail if the path contains non-ASCII characters, see [FAQ](FAQ#Path-c
 
 **Forward/Direct** synctex (source to pdf) can either be activated by selecting 'Navigate, select, and edit' > 'SyncTeX from cursor' in the side bar, or by the shortcut <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>j</kbd> (<kbd>cmd</kbd>+<kbd>option</kbd>+<kbd>j</kbd> on Mac), see also the [FAQ](https://github.com/James-Yu/LaTeX-Workshop/wiki/FAQ#i-cannot-use-ctrlalt-in-a-shortcut) for an alternative shortcut.
 
-**Backward/Reverse** synctex (pdf to source) is activated by <kbd>ctrl</kbd> + left-clicking (<kbd>cmd</kbd> + left-clicking on Mac) on the relevant element of the pdf preview.
+**Backward/Reverse** synctex (pdf to source) is activated by a keybinding configured in `latex-workshop.view.pdf.internal.synctex.keybinding`.
+The default option is <kbd>ctrl</kbd> + left-click (<kbd>cmd</kbd> + left-click on Mac) on the relevant element of the pdf preview.
+Alternatively, the keybinding can be set to double-click.
 
 ### Using synctex with an external viewer
 
