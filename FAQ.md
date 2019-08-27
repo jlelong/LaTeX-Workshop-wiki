@@ -22,6 +22,7 @@
 - [LaTeX-Workshop shadows vscode's default keybindings](#latex-workshop-shadows-vscodes-default-keybindings)
 - [Syntax Highlighting does not work for most elements](#syntax-highlighting-does-not-work-for-most-elements)
 - [Install older version](#install-older-version)
+- [Customizing a Color Theme](#customizing-a-color-theme)
 
 ## Known incompatible Extensions
 
@@ -183,3 +184,22 @@ Please change VS Code theme you are using. For example, **Visual Studio Dark** a
 ## Install older version
 
 You can install older versions of LaTeX Workshop by right-clicking it in the extension panel of VS Code and selecting `Install Another Version`.
+
+### Customizing a Color Theme
+
+To customize a color theme, you can refer to the [official documentation](https://code.visualstudio.com/docs/getstarted/themes). The following is an example to make fonts black in math environment. Writing it in your `settings.json`, you can enable that. To find an appropriate scope for each element in a TeX document, you can use the scope inspector of VS Code. Please refer to [this document](https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide#scope-inspector).
+
+```json
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": [
+                    "support.class.math.block.environment.latex",
+                ],
+                "settings": {
+                    "foreground": "#000000"
+                }
+            }
+        ]
+    }
+```
