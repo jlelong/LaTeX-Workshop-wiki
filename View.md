@@ -128,11 +128,11 @@ The solution is simple, and works with `sumatraPDF`. Just add the following opti
     "args": [
         "-forward-search",
         "%TEX%",
-	"%LINE%",
-	"-reuse-instance",
-	"-inverse-search",
+    "%LINE%",
+    "-reuse-instance",
+    "-inverse-search",
         "code \"C:\\Users\\<name>\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\out\\cli.js\" -r -g \"%f:%l\"",
-	"%PDF%",
+    "%PDF%",
     ]
 }
 ```
@@ -209,7 +209,7 @@ The following placeholders `%DOC%`, `%DOCFILE`, `%DIR%` and `%TMPDIR%` can be us
 | -------- | ------------- |
 | _string_ | `"%DIR%"`     |
 
-#### latex-workshop.synctex.afterBuild.enabled
+### latex-workshop.synctex.afterBuild.enabled
 
 Execute forward synctex at cursor position after compiling LaTeX project.
 
@@ -217,7 +217,7 @@ Execute forward synctex at cursor position after compiling LaTeX project.
 | --------- | ------------- |
 | _boolean_ | `false`       |
 
-#### latex-workshop.synctex.path
+### latex-workshop.synctex.path
 
 Define the location of SyncTeX executive file.
 
@@ -227,7 +227,7 @@ Additional arguments, e.g., synctex modes and position of click, will be appende
 | -------- | ------------- |
 | _string_ | `"synctex"`   |
 
-#### latex-workshop.view.pdf.external.synctex
+### latex-workshop.view.pdf.external.synctex
 
 The command to execute when forward synctex to external viewer.
 
@@ -237,7 +237,7 @@ This function is not officially supported. %LINE% is the line number, %PDF% is t
 | ------------- | -------------------------------------------------------------------- |
 | _JSON object_ | `{"command": "SumatraPDF.exe" "args": ["%LINE%", "%PDF%", "%TEX%"]}` |
 
-#### latex-workshop.synctex.synctexjs.enabled
+### latex-workshop.synctex.synctexjs.enabled
 
 Enable using a builtin synctex function. The command set in latex-workshop.synctex.path will not be used.
 This builtin synctex works well even if the path of TeX files contains non-ASCII characters.
@@ -273,22 +273,24 @@ The command to execute when using external viewer. When left empty, the default 
 
 This function is not officially supported. `%PDF%` is the placeholder for the absolute path to the generated PDF file.
 
-| type          | default value                  |
-| ------------- | ------------------------------ |
-| _string_ | "\<path to external pdf viewer\>" |
-	
+| type          | default value                     |
+| ------------- | --------------------------------- |
+| _string_      | "\<path to external pdf viewer\>" |
+
 ```
     "latex-workshop.view.pdf.external.viewer.command": "/usr/bin/okular",
 ```
 
 ### latex-workshop.view.pdf.external.viewer.args
-This works with the `latex-workshop.view.pdf.external.command` to provide the arguments to the external viewer. 
+
+This works with the `latex-workshop.view.pdf.external.command` to provide the arguments to the external viewer.
 
 | type          | default value                  |
 | ------------- | ------------------------------ |
 | _array_ | "comma separated list of arguments"  |
 
-e.g. 
+e.g.
+
 ```
    "latex-workshop.view.pdf.external.viewer.args": [
         "--unique",
