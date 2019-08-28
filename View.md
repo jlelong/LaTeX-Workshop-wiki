@@ -312,7 +312,7 @@ This function is not officially supported. `%PDF%` is the placeholder for the ab
 
 ### latex-workshop.view.pdf.external.viewer.args
 
-This works with the `latex-workshop.pdf.external.viewer.args` to provide the arguments to the external viewer.
+This works with `latex-workshop.view.pdf.external.viewer.command` to provide the arguments to the external viewer.
 
 | type          | default value |
 | ------------- | ------------- |
