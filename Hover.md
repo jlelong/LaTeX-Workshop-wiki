@@ -151,7 +151,7 @@ PDF viewer used for `[View on PDF]` link on hover over `\ref`, and other referen
 | -------- | ------------- | ---------------------------------------- |
 | _string_ | "auto"        | `"auto"`, `"tabOrBrowser"`, `"external"` |
 
-### latex-workshop.latex.texdoc.path
+### latex-workshop.texdoc.path
 
 Define the location of texdoc executable.
 
@@ -159,7 +159,7 @@ Define the location of texdoc executable.
 | --------- | ------------- |
 | _string_  | "texdoc"      |
 
-### latex-workshop.latex.texdoc.args
+### latex-workshop.texdoc.args
 
 Texdoc arguments to see a package documentation.
 
