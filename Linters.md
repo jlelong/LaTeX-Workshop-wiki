@@ -20,6 +20,7 @@ Auto load of `.chktexrc` configuration files is performed in the following order
 | [`latex-workshop.chktex.args.root`](#latex-workshopchktexargsroot)     | Arguments to be passed to ChkTeX for **entire project** | `["-wall", "-n22", "-n30", "-e16", "-q"]` | _array_ of _strings_ |
 | [`latex-workshop.chktex.enabled`](#latex-workshopchktexenabled)        | Enable LaTeX linting with ChkTeX                        | `false`                                   | _boolean_            |
 | [`latex-workshop.chktex.path`](#latex-workshopchktexpath)              | Location of ChkTeX executable                           | `"chktex"`                                | _string_             |
+| [`latex-workshop.chktex.run`](#latex-workshopchktexrun)                | When to run ChkTeX (on file save or while typing)       | `"onSave"`                                | _enum_               |
 
 ### Details
 
@@ -66,3 +67,19 @@ This command will be joint with `latex-workshop.chktex.args.*` and required argu
 | type     | default value |
 | -------- | ------------- |
 | _string_ | `"chktex"`    |
+
+### latex-workshop.chktex.run
+
+When LaTeX should be linted by ChkTeX. If set to `onSave`, the whole LaTeX project will be linted upon saving. If set to `onType`, the active document will be linted when input is stopped for a period of time defined in `latex-workshop.chktex.delay`, in addition to the behavior of `onSave`.
+
+| type   | default value |
+| ------ | ------------- |
+| _enum_ | `"onSave"`    |
+
+### latex-workshop.chktex.delay
+
+When `latex-workshop.chktex.run` is set to `onType`, defines the delay in milliseconds for chktex to wait after stopped typing. 
+
+| type     | default value |
+| -------- | ------------- |
+| _number_ | 500           |
