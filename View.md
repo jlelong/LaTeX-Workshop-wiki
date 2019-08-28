@@ -34,6 +34,13 @@ Below are the detailed explanations for the different possible settings
 | [`latex-workshop.view.pdf.invert`](#latex-workshopviewpdfinvert)                  | Define the CSS invert filter level        |
 | [`latex-workshop.view.pdf.trim`](#latex-workshopviewpdftrim)                      | The default trim mode of the PDF viewer   |
 
+Additional settings for the internal viewer:
+
+| Setting key                                                                                              | Description                                            |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| [`latex-workshop.view.pdf.internal.synctex.keybinding`](#latex-workshopviewpdfinternalsynctexkeybinding) | How to trigger synctex with the internal viewer        |
+| [`latex-workshop.viewer.pdf.internal.port`](#latex-workshopviewerpdfinternalport)                        | Which port internal viewer server communicates through |
+
 ### latex-workshop.view.pdf.tab.useNewGroup
 
 When set to true, the viewer is opened in a new editor group, otherwise the current group is used.
@@ -105,6 +112,16 @@ The default trim mode of the PDF viewer
 - `2`: Trim 10% at margin
 - `3`: Trim 15% at margin
 
+### latex-workshop.viewer.pdf.internal.port
+
+Defines the port on which the internal viewer listens for events such as synctex or refreshing the viewer. The default value of `0` means that the port is chosen randomly by the extension.
+
+| type     | default value |
+| -------- | ------------- |
+| _number_ | `0`           |
+
+Note: keep this value set to `0` unless you know what you are doing.
+
 ## Synctex
 
 This extension will automatically look for `synctex` in the expected location (see [settings](#latex-workshopsynctexpath)) and will alert the user if it is not found. Alternatively, you can use the javascript built-in version of `synctex`, see [settings](#latex-workshopsynctexsynctexjsenabled).
@@ -115,9 +132,13 @@ Synctex may fail if the path contains non-ASCII characters, see [FAQ](FAQ#Path-c
 
 **Forward/Direct** synctex (source to pdf) can either be activated by selecting 'Navigate, select, and edit' > 'SyncTeX from cursor' in the side bar, or by the shortcut <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>j</kbd> (<kbd>cmd</kbd>+<kbd>option</kbd>+<kbd>j</kbd> on Mac), see also the [FAQ](https://github.com/James-Yu/LaTeX-Workshop/wiki/FAQ#i-cannot-use-ctrlalt-in-a-shortcut) for an alternative shortcut.
 
-**Backward/Reverse** synctex (pdf to source) is activated by a keybinding configured in `latex-workshop.view.pdf.internal.synctex.keybinding`.
-The default option is <kbd>ctrl</kbd> + left-click (<kbd>cmd</kbd> + left-click on Mac) on the relevant element of the pdf preview.
-Alternatively, the keybinding can be set to double-click.
+**Backward/Reverse** synctex (pdf to source) is activated by using the following keybinding on the relevant element of the pdf preview.
+
+#### latex-workshop.view.pdf.internal.synctex.keybinding
+
+| type   | default value  | possible values                    |
+| ------ | -------------- |----------------------------------- |
+| _enum_ | `"ctrl-click"` | `"ctrl-click"` or `"double-click"` |
 
 ### Using synctex with an external viewer
 
