@@ -8,12 +8,13 @@ A document can previewed a number of ways, namely the icon that appears in the t
 
 ## Overview
 
-| Setting key                                                                         | Description                                       | Default       | Type          |
-| ----------------------------------------------------------------------------------- | ------------------------------------------------- | ------------- | ------------- |
-| [`latex-workshop.latex.outDir`](#latex-workshoplatexoutDir)                         | Where to find the PDF files                       | `"%DIR%"`     | _string_      |
-| [`latex-workshop.view.pdf.viewer`](#latex-workshopviewpdfviewer)                    | The default PDF viewer                            | (see details) | _string_      |
-| [`latex-workshop.view.pdf.external.command`](#latex-workshopviewpdfexternalcommand) | The command to execute when using external viewer | (see details) | _JSON object_ |
-| [`latex-workshop.view.pdf.ref.viewer`](#latex-workshopviewpdfrefviewer)             | The PDF viewer to preview `\ref`                  | (see details) | _string_      |
+| Setting key                                                                                      | Description                                       | Default       | Type     |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------- | ------------- | -------- |
+| [`latex-workshop.latex.outDir`](#latex-workshoplatexoutDir)                                      | Where to find the PDF files                       | `"%DIR%"`     | _string_ |
+| [`latex-workshop.view.pdf.viewer`](#latex-workshopviewpdfviewer)                                 | The default PDF viewer                            | (see details) | _string_ |
+| [`latex-workshop.view.pdf.external.viewer.command`](#latex-workshopviewpdfexternalviewercommand) | The command to execute when using external viewer | (see details) | _string_ |
+| [`latex-workshop.view.pdf.external.viewer.args`](#latex-workshopviewpdfexternalviewerargs)       | The arguments to supply to the above command      | (see details) | _array_  |
+| [`latex-workshop.view.pdf.ref.viewer`](#latex-workshopviewpdfrefviewer)                          | The PDF viewer to preview `\ref`                  | (see details) | _string_ |
 
 ## Internal PDF viewer
 
@@ -152,13 +153,10 @@ This is trickier, but works. See [here](https://ubuntuforums.org/showthread.php?
 1. Add the following options to your configuration:
 
     ```
-    "latex-workshop.view.pdf.external.command":
-    {
-        "command": "evince2",
-        "args": [
-            "%PDF%"
-        ]
-    },
+    "latex-workshop.view.pdf.external.viewer.command": "evince2".
+    "latex-workshop.view.pdf.external.viewer.args": [
+        "%PDF%"
+    ],
     "latex-workshop.view.pdf.external.synctex": {
         "command": "evince_forward_search",
         "args": [
@@ -178,15 +176,17 @@ Forward: `--synctex-forward` flag
 Backward: Use `%{input}` and `%{line}` as placeholders.
 
 ```
- "latex-workshop.view.pdf.viewer": "external",
-    "latex-workshop.view.pdf.external.command": {
-        "command": "zathura",
-        "args": [ "--synctex-editor-command", "code --reuse-window -g \"%{input}:%{line}\"", "%PDF%" ]
-    },
-    "latex-workshop.view.pdf.external.synctex": {
-        "command": "zathura",
-        "args": [ "--synctex-forward=%LINE%:0:%TEX%", "%PDF%" ]
-    }
+"latex-workshop.view.pdf.viewer": "external",
+"latex-workshop.pdf.external.viewer.command": "zathura",
+"latex-workshop.pdf.external.viewer.args": [
+    "--synctex-editor-command",
+    "code --reuse-window -g \"%{input}:%{line}\"",
+    "%PDF%"
+],
+"latex-workshop.view.pdf.external.synctex": {
+    "command": "zathura",
+    "args": [ "--synctex-forward=%LINE%:0:%TEX%", "%PDF%" ]
+}
 ```
 
 ### Overview
@@ -269,7 +269,7 @@ PDF viewer used for [View on PDF] link on `\ref`.
 | -------- | ---------------------------------------- |
 | _string_ | `"auto" \| "tabOrBrowser" \| "external"` |
 
-### latex-workshop.view.pdf.external.command
+### latex-workshop.view.pdf.external.viewer.command
 
 The command to execute when using external viewer. When left empty, the default PDF viewer provided by the operating system is used.
 
@@ -285,11 +285,11 @@ This function is not officially supported. `%PDF%` is the placeholder for the ab
 
 ### latex-workshop.view.pdf.external.viewer.args
 
-This works with the `latex-workshop.view.pdf.external.command` to provide the arguments to the external viewer.
+This works with the `latex-workshop.pdf.external.viewer.args` to provide the arguments to the external viewer.
 
-| type          | default value                  |
-| ------------- | ------------------------------ |
-| _array_ | "comma separated list of arguments"  |
+| type          | default value                       |
+| ------------- | ----------------------------------- |
+| _array_       | "comma separated list of arguments" |
 
 e.g.
 
