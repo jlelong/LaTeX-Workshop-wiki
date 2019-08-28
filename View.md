@@ -271,9 +271,9 @@ The default PDF viewer.
 
 PDF viewer used for [View on PDF] link on `\ref`.
 
-| type     | default value                            |
-| -------- | ---------------------------------------- |
-| _string_ | `"auto" \| "tabOrBrowser" \| "external"` |
+| type    | default value | possible values                          |
+| ------- | ------------- | ---------------------------------------- |
+| _enum_  | `"auto"`      | `"auto" \| "tabOrBrowser" \| "external"` |
 
 ### latex-workshop.view.pdf.external.viewer.command
 
@@ -281,9 +281,9 @@ The command to execute when using external viewer. When left empty, the default 
 
 This function is not officially supported. `%PDF%` is the placeholder for the absolute path to the generated PDF file.
 
-| type          | default value                     |
-| ------------- | --------------------------------- |
-| _string_      | "\<path to external pdf viewer\>" |
+| type          | default value |
+| ------------- | ------------- |
+| _string_      | ""            |
 
 ```
     "latex-workshop.view.pdf.external.viewer.command": "/usr/bin/okular",
@@ -293,9 +293,9 @@ This function is not officially supported. `%PDF%` is the placeholder for the ab
 
 This works with the `latex-workshop.pdf.external.viewer.args` to provide the arguments to the external viewer.
 
-| type          | default value                       |
-| ------------- | ----------------------------------- |
-| _array_       | "comma separated list of arguments" |
+| type          | default value |
+| ------------- | ------------- |
+| _array_       | [ "%PDF%" ]   |
 
 e.g.
 
