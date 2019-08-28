@@ -19,7 +19,6 @@ Auto load of `.chktexrc` configuration files is performed in the following order
 | [`latex-workshop.chktex.args.active`](#latex-workshopchktexargsactive) | Arguments to be passed to ChkTeX for **current file**   | `["-wall", "-n22", "-n30", "-e16", "-q"]` | _array_ of _strings_ |
 | [`latex-workshop.chktex.args.root`](#latex-workshopchktexargsroot)     | Arguments to be passed to ChkTeX for **entire project** | `["-wall", "-n22", "-n30", "-e16", "-q"]` | _array_ of _strings_ |
 | [`latex-workshop.chktex.enabled`](#latex-workshopchktexenabled)        | Enable LaTeX linting with ChkTeX                        | `false`                                   | _boolean_            |
-| [`latex-workshop.chktex.interval`](#latex-workshopchktexinterval)      | Time interval in ms that ChkTeX is run                  | 300                                       | _integer_            |
 | [`latex-workshop.chktex.path`](#latex-workshopchktexpath)              | Location of ChkTeX executable                           | `"chktex"`                                | _string_             |
 
 ### Details
@@ -55,14 +54,6 @@ The full project will be linted from the root on file save.
 | type      | default value |
 | --------- | ------------- |
 | _boolean_ | `false`       |
-
-#### latex-workshop.chktex.interval
-
-Defines the time interval in milliseconds between invoking LaTeX linter on the active file.
-
-| type      | default value |
-| --------- | ------------- |
-| _integer_ | 300           |
 
 #### latex-workshop.chktex.path
 
