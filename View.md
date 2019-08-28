@@ -126,18 +126,16 @@ Alternatively, the keybinding can be set to double-click.
 The solution is simple, and works with `sumatraPDF`. Just add the following option to your configuration
 
 ```
-"latex-workshop.view.pdf.external.synctex": {
-    "command": "C:/Program Files/SumatraPDF/SumatraPDF.exe",
-    "args": [
-        "-forward-search",
-        "%TEX%",
+"latex-workshop.view.pdf.external.synctex.command": "C:/Program Files/SumatraPDF/SumatraPDF.exe",
+"latex-workshop.view.pdf.external.synctex.args": [
+    "-forward-search",
+    "%TEX%",
     "%LINE%",
     "-reuse-instance",
     "-inverse-search",
-        "code \"C:\\Users\\<name>\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\out\\cli.js\" -r -g \"%f:%l\"",
+    "code \"C:\\Users\\<name>\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\out\\cli.js\" -r -g \"%f:%l\"",
     "%PDF%",
-    ]
-}
+],
 ```
 
 Do not forget to set the paths according to your installation.  You can also replace `code` with the `Code.exe` path.
@@ -157,14 +155,12 @@ This is trickier, but works. See [here](https://ubuntuforums.org/showthread.php?
     "latex-workshop.view.pdf.external.viewer.args": [
         "%PDF%"
     ],
-    "latex-workshop.view.pdf.external.synctex": {
-        "command": "evince_forward_search",
-        "args": [
-            "%PDF%",
-            "%LINE%",
-            "%TEX%"
-        ]
-    },
+    "latex-workshop.view.pdf.external.synctex.command": "evince_forward_search",
+    "latex-workshop.view.pdf.external.synctex.args": [
+        "%PDF%",
+        "%LINE%",
+        "%TEX%"
+    ],
     ```
 
 To make this work both ways, first open the pdf file with the external viewer.
@@ -183,20 +179,22 @@ Backward: Use `%{input}` and `%{line}` as placeholders.
     "code --reuse-window -g \"%{input}:%{line}\"",
     "%PDF%"
 ],
-"latex-workshop.view.pdf.external.synctex": {
-    "command": "zathura",
-    "args": [ "--synctex-forward=%LINE%:0:%TEX%", "%PDF%" ]
-}
+"latex-workshop.view.pdf.external.synctex.command": "zathura",
+"latex-workshop.view.pdf.external.synctex.args": [
+    "--synctex-forward=%LINE%:0:%TEX%",
+    "%PDF%"
+],
 ```
 
 ### Overview
 
-| Setting key                                                                            | Description                               | Default       | Type          |
-| -------------------------------------------------------------------------------------- | ----------------------------------------- | ------------- | ------------- |
-| [`latex-workshop.synctex.afterBuild.enabled`](#latex-workshopsynctexafterBuildenabled) | Forward synctex at cursor after compiling | `false`       | _boolean_     |
-| [`latex-workshop.synctex.path`](#latex-workshopsynctexpath)                            | SyncTeX location                          | `"synctex"`   | _string_      |
-| [`latex-workshop.view.pdf.external.synctex`](#latex-workshopviewpdfexternalsynctex)    | SyncTeX command for the external viewer   | (see details) | _JSON object_ |
-| [`latex-workshop.synctex.synctexjs.enabled`](#latex-workshopsynctexsynctexjsenabled)   | Enable using a built-in synctex function. | `true`        | _boolean_     |
+| Setting key                                                                                        | Description                               | Default       | Type      |
+| -------------------------------------------------------------------------------------------------- | ----------------------------------------- | ------------- | --------- |
+| [`latex-workshop.synctex.afterBuild.enabled`](#latex-workshopsynctexafterBuildenabled)             | Forward synctex at cursor after compiling | `false`       | _boolean_ |
+| [`latex-workshop.synctex.path`](#latex-workshopsynctexpath)                                        | SyncTeX location                          | `"synctex"`   | _string_  |
+| [`latex-workshop.view.pdf.external.synctex.command`](#latex-workshopviewpdfexternalsynctexcommand) | SyncTeX command for the external viewer   | (see details) | _string_  |
+| [`latex-workshop.view.pdf.external.synctex.args`](#latex-workshopviewpdfexternalsynctexargs)       | Arguments to use for the above command    | (see details) | _array_   |
+| [`latex-workshop.synctex.synctexjs.enabled`](#latex-workshopsynctexsynctexjsenabled)               | Enable using a built-in synctex function. | `true`        | _boolean_ |
 
 ## Relevant Settings
 
@@ -229,15 +227,23 @@ Additional arguments, e.g., synctex modes and position of click, will be appende
 | -------- | ------------- |
 | _string_ | `"synctex"`   |
 
-### latex-workshop.view.pdf.external.synctex
+### latex-workshop.view.pdf.external.synctex.command
 
 The command to execute when forward synctex to external viewer.
 
-This function is not officially supported. %LINE% is the line number, %PDF% is the placeholder for the absolute path to the generated PDF file, and %TEX% is the source LaTeX file path with `.tex` extension from which syncTeX is fired.
+| type     | default value |
+| -------- | ------------- |
+| _string_ | ""            |
 
-| type          | default value                                                        |
-| ------------- | -------------------------------------------------------------------- |
-| _JSON object_ | `{"command": "SumatraPDF.exe" "args": ["%LINE%", "%PDF%", "%TEX%"]}` |
+Note: this function is not officially supported.
+
+### latex-workshop.view.pdf.external.synctex.args
+
+The arguments to apply to the external forward synctex command. %LINE% is the line number, %PDF% is the placeholder for the absolute path to the generated PDF file, and %TEX% is the source LaTeX file path with `.tex` extension from which syncTeX is fired.
+
+| type          | default value                 |
+| ------------- | ----------------------------- |
+| _array_       | ["%LINE%", "%PDF%", "%TEX%" ] |
 
 ### latex-workshop.synctex.synctexjs.enabled
 
