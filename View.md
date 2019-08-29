@@ -194,8 +194,8 @@ Backward: Use `%{input}` and `%{line}` as placeholders.
 
 ```
 "latex-workshop.view.pdf.viewer": "external",
-"latex-workshop.pdf.external.viewer.command": "zathura",
-"latex-workshop.pdf.external.viewer.args": [
+"latex-workshop.view.pdf.external.viewer.command": "zathura",
+"latex-workshop.view.pdf.external.viewer.args": [
     "--synctex-editor-command",
     "code --reuse-window -g \"%{input}:%{line}\"",
     "%PDF%"
