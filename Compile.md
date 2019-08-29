@@ -2,7 +2,7 @@
 
 ## Building the document
 
-A LaTeX file is typically built by calling the command _Build LaTeX project_ from the _Command Palette_ or from the _TeX_ badge. This command is bind to <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>b</kbd>. If you cannot use <kbd>ctrl</kbd>+<kbd>alt</kbd> in a keybinding, see [the FAQ](FAQ#i-cannot-use-ctrlalt-in-a-shortcut). The recipe called by this command is defined by [`latex-workshop.latex.recipe.default`](#latex-workshop.latex.recipe.default).
+A LaTeX file is typically built by calling the command _Build LaTeX project_ from the _Command Palette_ or from the _TeX_ badge. This command is bind to <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>b</kbd>. If you cannot use <kbd>ctrl</kbd>+<kbd>alt</kbd> in a keybinding, see [the FAQ](FAQ#i-cannot-use-ctrlalt-in-a-shortcut). The recipe called by this command is defined by [`latex-workshop.latex.recipe.default`](#latex-workshoplatexrecipedefault).
 
 If you have a multi-file project, see [multi-files-projects](Multi-File-Projects) for more details on how the root file is discovered.
 
@@ -25,7 +25,7 @@ It is possible to terminate the current compilation by calling `Kill LaTeX compi
 
 ## Auto build LaTeX
 
-Besides manually calling the `Build LaTeX Project` command to compile a document, you may also let the extension automatically start compiling it upon file change. This can be defined in `latex-workshop.latex.autoBuild.run`. The recipe called by auto build is defined by [`latex-workshop.latex.recipe.default`](#latex-workshop.latex.recipe.default).
+Besides manually calling the `Build LaTeX Project` command to compile a document, you may also let the extension automatically start compiling it upon file change. This can be defined in `latex-workshop.latex.autoBuild.run`. The recipe called by auto build is defined by [`latex-workshop.latex.recipe.default`](#latex-workshoplatexrecipedefault).
 
 ### latex-workshop.latex.autoBuild.run
 
