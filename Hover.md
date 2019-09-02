@@ -45,7 +45,7 @@ When [`latex-workshop.hover.ref.enabled`](#latex-workshophoverrefenabled) is set
 | Setting key | Description |
 |------------|------------|
 | [`latex-workshop.hover.ref.enabled`](#latex-workshophoverrefenabled) | Enable hover on references |
-| [`latex-workshop.hover.ref.numberAtLastCompilation.enabled`](#latex-workshophoverrefnumberAtLastCompilationenabled) | Show number the given to ref at the last compilation. |
+| [`latex-workshop.hover.ref.number.enabled`](#latex-workshophoverrefnumberenabled) | Show number assigned to the reference in the previous compilation |
 
 ## Documentation of a command
 
@@ -63,13 +63,13 @@ Enable Hover on References.
 | --------- | ------------- |
 | _boolean_ | `true`        |
 
-### latex-workshop.hover.ref.numberAtLastCompilation.enabled
+### latex-workshop.hover.ref.number.enabled
 
-Show number the given to ref at the last compilation.
+Show the number assigned to the reference in the previous compilation.
 
 | type      | default value |
 | --------- | ------------- |
-| _boolean_ | `false`        |
+| _boolean_ | `true`        |
 
 ### latex-workshop.hover.citation.enabled
 
