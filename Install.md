@@ -12,6 +12,12 @@
 
 Installing LaTeX Workshop is simple. You can find it in [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop), or simply run `ext install latex-workshop` in VS Code Quick Open (`ctrl`/`cmd` + `P`).
 
+## Setting PATH environment variable
+
+Usually, you do **NOT** have to set PATH environment variable. TeX distributions appropriately set the variable on your system. And, LaTeX Workshop never touches the variable. If VS Code cannot find executables of TeX, it means that **the setting of your system is broken**. For the ways of setting environment variables on Windows, see [link](https://docs.telerik.com/teststudio/features/test-runners/add-path-environment-variables) or [link](https://www.computerhope.com/issues/ch000549.htm). On macOS and Linux, refer to a [document](https://github.com/rbenv/rbenv/wiki/unix-shell-initialization) by the rbenv dev team.
+
+If you can not fix the setting of your system, you can also override PATH with the `env` property of [LaTeX recipes](Compile#latex-recipes).
+
 ## Usage
 
 The typical usage is to open a `.tex` file and have a look at the _TeX_ sidebar to access all the extension features
