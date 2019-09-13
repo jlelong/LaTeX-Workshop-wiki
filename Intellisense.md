@@ -1,6 +1,6 @@
 # Intellisense
 
-This extension provides a variety of intellisense completions for different LaTeX features; notably for citations, labels, and file names.
+This extension provides a variety of intellisense completions for different LaTeX features; notably for citations, labels, and file names. Intellisense suggestions are updated on file save but a more aggressive updating strategy can be used by setting [`intellisense.update.aggressive.enabled`](#latex-workshopintellisenseupdateaggressiveenabled) to `true`.
 
 ## Citations
 
@@ -166,3 +166,23 @@ Specify the base directory for file completion. The possible choices are
 | type                 | default value |
 | -------------------- | ------------- |
 | _enum_               | `"root relative"|"file relative"|"both"` |
+
+### latex-workshop.intellisense.update.aggressive.enabled
+
+Defines whether the extension aggressively parses the changed content after stopped typing.
+
+Disable this config will let the extension only update intellisense after saving changed files.
+
+| type      | default value |
+| --------- | ------------- |
+| _boolean_ | `false`       |
+
+### latex-workshop.intellisense.update.delay
+
+Defines the delay in milliseconds for the extension to update current active file content for intellisense after stopped typing.
+
+This config works only when [`intellisense.update.aggressive.enabled`](#latex-workshopintellisenseupdateaggressiveenabled) is enabled. Lower this value will let the extension to know newly defined commands/references/environments more quickly, at the cost of more frequent content parsing: more computation burden.
+
+| type      | default value |
+| --------- | ------------- |
+| _number_  | `1000`        |
