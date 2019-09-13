@@ -19,6 +19,12 @@ The following settings are helpful to customize how to build a project and how t
 | [`latex-workshop.latex.magic.bib.args`](#magic-comments)  | Arguments for the `BIB program`                                                                       |          | _array_ of _strings_ |
 | [`latex-workshop.latex.build.forceRecipeUsage`](#latex-workshoplatexbuildforceRecipeUsage) | Force the use of recipes | false | _boolean_ |
 
+A progress bar indicates the building progress. It can be customized using the following configuration variables
+
+- [`latex-workshop.progress.runIconType`](#latex-workshopprogressrunIconType)
+- [`latex-workshop.progress.barLength`](#latex-workshopprogressbarLength)
+- [`latex-workshop.progress.barStyle`](#latex-workshopprogressbarStyle)
+
 ## Terminating the current compilation
 
 It is possible to terminate the current compilation by calling `Kill LaTeX compiler process` from the _Command Palette_ or calling `Terminate current compilation` from the TeX badge in the Build LaTeX project item.
@@ -338,3 +344,39 @@ Set this property to false to keep the logs of all tools in a recipe.
 | type      | default value |
 | --------- | ------------- |
 | _boolean_ | `true`        |
+
+### latex-workshop.progress.runIconType
+
+The style of number to use to indicate the run number"
+
+| type      | default value            |
+| --------- | ------------------------ |
+| _enum_    | `"Parenthesised"`        |
+
+The possible values are
+
+- `"Parenthesised"`: "⑴ ⑵ ⑶ …",
+- `"Circled"`: "① ② ③ …",
+- `"Solid Circled"`: "❶ ❷ ❸ …",
+- `"Full Stop"`: "⒈ ⒉ ⒊ …"
+
+### latex-workshop.progress.barLength
+
+The length in characters of the progress bar.
+
+| type      | default value |
+| --------- | ------------- |
+| _number_  | `15`          |
+
+### latex-workshop.progress.barStyle
+
+| type   | default value    |
+| ------ | ---------------- |
+| _enum_ | `"Block Shading` |
+
+The possible values are
+
+- `"Block Width"`: "█████▋░░░ (8 levels per block)",
+- `"Block Shading"`: "█████▓░░░ (4 levels per block)",
+- `"Block Quadrants"`: "█████▙░░░ (4 levels per block)",
+- `"none"`: No bar.
