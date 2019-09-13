@@ -203,16 +203,26 @@ Force the use of the recipe system even when a magic comment defines a TeX comma
 
 ## External build command
 
-Versatile though the recipe mechanism described above may be, it may fail to match your needs when building the whole LaTeX project is done by a personal script or a Makefile. For this particular case, we provide an external build command mechanism, which completely bypasses the recipe machinery. Just define your command along with its arguments using
+Versatile though the recipe mechanism described above may be, it may fail to match your needs when building the whole LaTeX project is done by a personal script or a Makefile. For this particular case, we provide an external build command mechanism, which completely bypasses the recipe machinery. Just define your command along with its arguments using the following two configuration variables
 
-```
-"latex-workshop.latex.external.build.command": {
-  "command": "",
-  "args": [
-    ""
-  ]
-}
-```
+### latex-workshop.latex.external.build.command
+
+The external command to execute when calling `latex-workshop.build`.
+
+This is useful when compiling relies on a Makefile or a bespoke script. When defined, it completely bypasses the recipes and root file detection mechanism.
+
+|   type    |  default value   |
+| --------- | ---------------- |
+| _string_  | `""`             |
+
+### latex-workshop.latex.external.build.args
+
+The arguments of [`latex-workshop.latex.external.build.command`](#latex-workshoplatexexternalbuild.command) when calling `latex-workshop.build`
+
+|   type      |  default value   |
+| ---------   | ---------------- |
+| _string[]_  | `[]`             |
+
 
 ## Magic comments
 
