@@ -9,6 +9,7 @@ To find the root file, LaTeX Workshop will follow the steps below, stopping when
 1. **Magic comment** `% !TEX root = relative/or/absolute/path/to/root/file.tex`. If such comments exist in the currently active editor, the referred file is set as root.
 1. **Self check** If current active editor contains `\begin{document}`, it is set as root.
 1. **Root directory check** LaTeX Workshop iterates through all `.tex` files in the root folder of the workspace. The first one containing `\begin{document}` and which includes the file in the active editor is set as the root file. To avoid parsing all `.tex` files in the workspace, you can narrow the search by specifying [`latex-workshop.latex.search.rootFiles.include`](#latex-workshoplatexsearchrootFilesinclude) and/or [`latex-workshop.latex.search.rootFiles.exclude`](#latex-workshoplatexsearchrootFilesexclude).
+1. **The `subfiles` package case** The main file is used to provide intellisense. All the interactive commands `build`, `clean` and `view` use a quick pick box to ask the user which file is to be considered as the root File. The non-interactive functions `autobuild`, `autoclean` and forward `synctex` rely on the value of the configuration variable [`latex-workshop.latex.rootFile.useSubFile`](#latex-workshoplatexrootFileuseSubFile`) to choose between the main file and the subfile.
 1. **The `.fls` files** LaTeX compilers when called with the `-recoder` option produce a file with `.fls` extension containing all the files _input_ and _output_ during compilation. The list of _input_ files contains all classes, packages, fonts, input `.tex` files, listings, graphs, ... Using `latexmk` always produces a `.fls` file.
 
 If no root file is found, most of the features in LaTeX Workshop will not work.
@@ -64,3 +65,11 @@ Absolute paths are required. You may also need to set the environment variable `
 | type                 | default value |
 | -------------------- | ------------- |
 | _array_ of _strings_ | `[]`          |
+
+### latex-workshop.latex.rootFile.useSubFile
+
+When the `subfile` package is used, either the main file or any subfile containing `\\documentclass[main.tex]{subfile}` can be LaTeXing. When set to `true`, the extension uses the subfile as the rootFile for the `autobuild`, `clean` and `synctex` commands. Note that this setting does not affect the `build` and `view` command as they both ask the user's choice first.
+
+| type                 | default value |
+| -------------------- | ------------- |
+| _boolean_            | `true`        |
