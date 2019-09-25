@@ -31,7 +31,7 @@ Note that the Explorer panel also contains an outline view but it only shows the
 
 #### latex-workshop.view.outline.sections
 
-The section names of LaTeX outline hierarchy. It is also used by the folding mechanism.
+The section names of LaTeX outline hierarchy. It is also used by the folding mechanism. See [Code folding](Environments.md##Code-folding) for more details.
 
 This property is an array of case-sensitive strings in the order of the document structure hierarchy. For multiple tags of the same level, separate the tags with `|` as delimiters, e.g., `section|alternative`.
 
