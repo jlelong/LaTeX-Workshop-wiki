@@ -39,3 +39,24 @@ These three functions are directly available from the TeX badge.
 To surround some selected text with an environment, call _LaTeX Workshop: Surround/wrap selection with \\begin{}...\\end{}_ from the **Command Palette** (command `latex-workshop.wrap-env`). A multi-cursor is added inside the braces, to insert the environment name.
 
 <img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/surround-env.gif" alt="Surround with environment demo">
+
+## Code folding
+
+The following regions (along with their `*`-starred versions) can be folded.
+
+|                          Region                         |
+| ------------------------------------------------------- |
+|         `\documentclass{} ... \begin{document}`         |
+|                        `\part{}`                        |
+|                       `\chapter{}`                      |
+| `\section{}`, `\subsection{}`, `\subsubsection{}`, etc. |
+|           `\begin{<envname>} ... \end{<envname>}`       |
+|                 `\begingroup ... \endgroup`             |
+
+The folding mechanism ignores comments, so comments can be used to fold code using the same keywords as above. This means commented out sections and the like can be easily folded for easier editing. To fold arbitrary regions, we recommend using the following comment.
+
+```latex
+%\begingroup
+...
+%\endgroup
+```
