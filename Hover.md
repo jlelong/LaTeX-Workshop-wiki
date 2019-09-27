@@ -8,7 +8,10 @@ To open a package documentation, hover the package name inside the `\usepackage`
 
 <img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/hover-package.gif" alt="Hover on a package demo">
 
-You may also directly run the _LaTex Workshop: Show package documentation_ command from the Command Palette and type in the package name.
+You may also directly call one the following commands
+
+- _LaTex Workshop: Show package documentation_: you will get an input box to type in the package name
+- _LaTex Workshop: Show package documentation actually used_ : you can select the package name within a list.
 
 ## Previewing equations
 
