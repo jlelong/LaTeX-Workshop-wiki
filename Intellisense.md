@@ -28,7 +28,7 @@ Similarly as for the citation mechanism, all files of a LaTeX project are search
 
 The key `\` automatically triggers completion of LaTeX commands. Several mechanisms play together to build the list of available commands.
 
-- A set of standard LaTeX commands is provided.
+- A set of standard LaTeX commands is provided in the file [`data/commands.json`](https://github.com/James-Yu/LaTeX-Workshop/blob/master/data/commands.json). You may overwrite some of these commands by using the [`latex-workshop.intellisense.commandsJSON.replace`](#latex-workshopintellisensecommandsJSONreplace) configuration variable.
 - The files of a LaTeX project are searched for any already used commands in the form `mycommand` followed by several `{}` groups. Then, a snippet is dynamically built for each of them and they are added to the command completion list.
 - When [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled) is `true`, the command completion list is also populated with the commands provided by all the _standard_ packages used in the project (through `\usepackage`). The list of commands provided by every package is described [here](https://github.com/LaTeXing/LaTeX-cwl). Note that homemade packages are ignored in this mechanism because they do not come with a `.cwl` file.
 - If you use personal macro files and want them to be taken into account by intellisense but store them in some `texmf` structure or dedicated directory. Just add the directory containing the file to [`latex-workshop.latex.texDirs`](Multi-File-Projects#latex-workshoplatextexDirs). The file must be loaded in the LaTeX project through the `\input` macro.
@@ -135,6 +135,14 @@ When `\` is typed, show unimath symbols in the dropdown selector.
 | type      | default value |
 | --------- | ------------- |
 | _boolean_ | `false`       |
+
+### latex-workshop.intellisense.commandsJSON.replace
+
+Array of pairs `[\"snippet name\", \"snippet action\"]` to replace the default snippets in `data/commands.json`. Snippet actions should not begin with a `\\`. See `data/commands.json` for the list of snippet names. An empty action removes the snippet. E.g. `[ [\"latexdisplaymath\", \"[ ${1} \\\\]\"], [\"figure\", \"\"] ]`. Reload vscode to make any change in this configuration effective
+
+| type               | default value |
+|--------------------|---------------|
+| _array_ of _pairs_ | `[]`          |
 
 ### latex-workshop.latex.bibDirs
 
