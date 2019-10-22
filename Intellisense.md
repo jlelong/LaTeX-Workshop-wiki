@@ -138,11 +138,11 @@ When `\` is typed, show unimath symbols in the dropdown selector.
 
 ### latex-workshop.intellisense.commandsJSON.replace
 
-Array of pairs `[\"snippet name\", \"snippet action\"]` to replace the default snippets in `data/commands.json`. Snippet actions should not begin with a `\\`. See `data/commands.json` for the list of snippet names. An empty action removes the snippet. E.g. `[ [\"latexdisplaymath\", \"[ ${1} \\\\]\"], [\"figure\", \"\"] ]`. Reload vscode to make any change in this configuration effective
+Dictionary of `"snippet name": "snippet action"` to replace the default snippets in `data/commands.json`. Snippet actions should not begin with a `\`. See `data/commands.json` for the list of snippet names. An empty action removes the snippet. E.g. `{ "latexdisplaymath": "[ ${1} \\]", "figure": "" }`. Reload vscode to make any change in this configuration effective
 
-| type               | default value |
-|--------------------|---------------|
-| _array_ of _pairs_ | `[]`          |
+| type                               | default value |
+|------------------------------------|---------------|
+| _dictionary_ of _string_: _string_ | `{}`          |
 
 ### latex-workshop.latex.bibDirs
 
