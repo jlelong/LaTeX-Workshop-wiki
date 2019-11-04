@@ -1,8 +1,9 @@
 # FAQ and common issues
 
 - [Known incompatible extensions](#known-incompatible-extensions)
-- [Cygwin is not supported](#cygwin-is-not-supported)
 - [Using LaTeX Workshop with WSL](#using-latex-workshop-with-wsl)
+- [Cygwin is not supported](#cygwin-is-not-supported)
+- [code-server is not supported](#code-server-is-not-supported)
 - [The directory ~/node_modules/ may cause errors](#the-directory-node_modules-may-cause-errors)
 - [I cannot build from a subfile](#i-cannot-build-from-a-subfile)
 - [The Problem Pane displays wrong messages](#the-Problem-Pane-displays-wrong-messages)
@@ -34,13 +35,18 @@ The following extensions are known to cause issues when active at the same time 
 - [Brackets Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
 - [Prettify Symbols Mode](https://marketplace.visualstudio.com/items?itemName=siegebell.prettify-symbols-mode)
 
-## Cygwin is not supported
-
-LaTeX Workshop does not support TeX Live installed through Cygwin. Please install TeX Live and other TeX distributions independently of Cygwin.
 
 ## Using LaTeX Workshop with WSL
 
 Starting with 1.35.0, VS Code supports WSL through [Remote - WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl). LaTeX Workshop works well with the extension.
+
+## Cygwin is not supported
+
+LaTeX Workshop does not support TeX Live installed through Cygwin. Please install TeX Live and other TeX distributions independently of Cygwin.
+
+## code-server is not supported
+
+LaTeX Workshop does not support [code-server](https://github.com/cdr/code-server).
 
 ## The directory ~/node_modules/ may cause errors
 
