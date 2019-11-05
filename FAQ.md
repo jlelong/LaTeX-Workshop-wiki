@@ -4,6 +4,8 @@
 - [Using LaTeX Workshop with WSL](#using-latex-workshop-with-wsl)
 - [Cygwin is not supported](#cygwin-is-not-supported)
 - [code-server is not supported](#code-server-is-not-supported)
+- [Visual Studio Online with self-hosted environments is not supported](#visual-studio-online-with-self-hosted-environments-is-not-supported)
+- [Visual Studio Live Share is not supported](#visual-studio-live-share-is-not-supported)
 - [The directory ~/node_modules/ may cause errors](#the-directory-node_modules-may-cause-errors)
 - [I cannot build from a subfile](#i-cannot-build-from-a-subfile)
 - [The Problem Pane displays wrong messages](#the-Problem-Pane-displays-wrong-messages)
@@ -47,6 +49,14 @@ LaTeX Workshop does not support TeX Live installed through Cygwin. Please instal
 ## code-server is not supported
 
 LaTeX Workshop does not support [code-server](https://github.com/cdr/code-server).
+
+## Visual Studio Online with self-hosted environments is not supported
+
+Visual Studio Online with [self-hosted environments](https://docs.microsoft.com/en-us/visualstudio/online/how-to/vscode#self-hosted) is not supported.
+
+## Visual Studio Live Share is not supported
+
+[Visual Studio Live Share](https://marketplace.visualstudio.com/items?itemName=ms-vsliveshare.vsliveshare) is not supported.
 
 ## The directory ~/node_modules/ may cause errors
 
