@@ -18,6 +18,7 @@
   - [Catching errors](Compile#catching-errors-and-warnings)
 - [Linting](Linters)
 - [Viewing & synctex](View)
+- [Bibtex actions](Bibtex)
 - [Formatting](Format)
 - [Multi file projects](Multi-File-Projects)
 - [Intellisense](Intellisense)
