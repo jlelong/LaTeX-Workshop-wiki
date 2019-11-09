@@ -19,6 +19,8 @@
 - [Linting](Linters)
 - [Viewing & synctex](View)
 - [Formatting](Format)
+  - [LaTeX files](Format#LaTeX-files)
+  - [Bibtex files](Format#Bibtex-files)
 - [Multi file projects](Multi-File-Projects)
 - [Intellisense](Intellisense)
   - [Citations](Intellisense#Citations)
