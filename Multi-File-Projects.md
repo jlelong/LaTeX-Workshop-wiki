@@ -56,6 +56,24 @@ With the default value, we do not watch files inside the `texmf` tree of the LaT
 | -------------------- | -------------- |
 | _array_ of _strings_ | `["**/*.bbx", "**/*.cbx", "**/*.cfg", "**/*.clo", "**/*.cnf", "**/*.def", "**/*.fmt", "**/*.lbx", "**/*.map", "**/*.pfb", "**/*.tfm", "**/texmf-{dist,var}/**", "C:/**texmf/**", "/usr/local/share/miktex-texmf/**", "/Library/Application Support/MiKTeX/texmfs/**"]` |
 
+### latex-workshop.latex.watch.usePolling
+
+Use polling watch changes on files.
+
+When TeX files are placed on network drives or OneDrive, this option should be turned on. Setting this option to true might lead to high CPU utilization.
+
+| type                 | default value |
+| -------------------- | ------------- |
+| _boolean_            | `false`       |
+
+### latex-workshop.latex.watch.interval
+
+Interval of polling, in milliseconds.
+
+| type               | default value |
+| ------------------ | ------------- |
+| _number            | `300`         |
+
 ### latex-workshop.latex.texDirs
 
 List of directories where to look for extra input `.tex` files.
