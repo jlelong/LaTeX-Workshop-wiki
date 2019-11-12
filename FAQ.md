@@ -62,7 +62,7 @@ Visual Studio Online with [self-hosted environments](https://docs.microsoft.com/
 
 ## File watcher does not work when used with OneDrive or a network drive
 
-When your files are located inside `OneDrive` or a network drive, you have to set [`latex-workshop.latex.watch.usePolling`](multi-file-projects#latex-workshoplatexwatchusePolling) to `true`.
+When your files are located inside `OneDrive` or a network drive, you have to set [`latex-workshop.latex.watch.usePolling`](multi-file-projects#latex-workshoplatexwatchusePolling) to `true`, and restart VS Code.
 
 ## The directory ~/node_modules/ may cause errors
 
