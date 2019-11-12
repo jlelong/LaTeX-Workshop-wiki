@@ -6,6 +6,7 @@
 - [code-server is not supported](#code-server-is-not-supported)
 - [Visual Studio Online with self-hosted environments is not supported](#visual-studio-online-with-self-hosted-environments-is-not-supported)
 - [Visual Studio Live Share is not supported](#visual-studio-live-share-is-not-supported)
+- [File watcher does not work when used with OneDrive or a network drive](#file-watcher-does-not-work-when-used-with-onedrive-or-a-network-drive)
 - [The directory ~/node_modules/ may cause errors](#the-directory-node_modules-may-cause-errors)
 - [The extension freezes when used with a network drive](#The-extension-freezes-when-used-with-a-network-drive)
 - [I cannot build from a subfile](#i-cannot-build-from-a-subfile)
@@ -59,9 +60,9 @@ Visual Studio Online with [self-hosted environments](https://docs.microsoft.com/
 
 [Visual Studio Live Share](https://marketplace.visualstudio.com/items?itemName=ms-vsliveshare.vsliveshare) is not supported.
 
-## The extension freezes when used with a network drive
+## File watcher does not work when used with OneDrive or a network drive
 
-When your files are located inside a network drive such as `OneDrive`, you have to set [`latex-workshop.latex.watch.usePolling`](multi-file-projects#latex-workshoplatexwatchusePolling) to `true`.
+When your files are located inside `OneDrive` or a network drive, you have to set [`latex-workshop.latex.watch.usePolling`](multi-file-projects#latex-workshoplatexwatchusePolling) to `true`.
 
 ## The directory ~/node_modules/ may cause errors
 
