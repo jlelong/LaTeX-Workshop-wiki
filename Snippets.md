@@ -56,15 +56,15 @@ Sectioning commands can of course be inserted by just typing them as they are au
 
 For instance, typing `SSE` + `TAB` expands to `\section{}` with the cursor inside the brackets.
 
-### Incrementing/decrementing sectioning levels
+### Promoting/demoting sectioning levels
 
-Adjusting sectioning levels can be done using `latex-workshop.increment-sectioning` and `latex-workshop.decrement-sectioning`.
+Adjusting sectioning levels can be done by calling one of the two commands `latex-workshop.promote-sectioning` and `latex-workshop.demote-sectioning` from the _Command Palette_.
 
-These methods replace all sectioning commands with the sectioning command one level higher or lower. They apply either to the current line or to every selected line.
+These methods replace all sectioning commands with the sectioning command one level higher or lower. They apply either to the current line or to a selection.
 
 #### Example
 
-Applying `latex-workshop.increment-sectioning` to the following selection,
+Applying `latex-workshop.promote-sectioning` to the following selection,
 
 ```
 \subsection{Demo}
@@ -84,8 +84,8 @@ This functionality has two keybindings
 
 | Method               | Shortcut                                    | Alternate                                 |
 | -------------------- | ------------------------------------------- | ----------------------------------------- |
-| Increment Sectioning | <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>]</kbd> | <kbd>ctrl</kbd>+<kbd>l</kbd> <kbd>]</kbd> |
-| Decrement Sectioning | <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>[</kbd> | <kbd>ctrl</kbd>+<kbd>l</kbd> <kbd>]</kbd> |
+| Promote Sectioning | <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>[</kbd> | <kbd>ctrl</kbd>+<kbd>l</kbd> <kbd>[</kbd> |
+| Demote Sectioning | <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>]</kbd> | <kbd>ctrl</kbd>+<kbd>l</kbd> <kbd>]</kbd> |
 
 To use the alternate shortcuts, set `latex-workshop.bind.altKeymap.enabled` to `true`.
 
