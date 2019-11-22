@@ -33,11 +33,13 @@
 
 ## Known incompatible Extensions
 
-The following extensions are known to cause issues when active at the same time as LaTeX-Workshop, namely high CPU load issues, and a significant delay when using the Enter key in large files.
+The following extensions are known to cause issues when active at the same time as LaTeX-Workshop
 
-- [Spell Right](https://marketplace.visualstudio.com/items?itemName=ban.spellright)
-- [Brackets Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
-- [Prettify Symbols Mode](https://marketplace.visualstudio.com/items?itemName=siegebell.prettify-symbols-mode)
+- [Spell Right](https://marketplace.visualstudio.com/items?itemName=ban.spellright): high CPU load, Enter key delay
+- [Brackets Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2): high CPU load, Enter key delay
+- [Prettify Symbols Mode](https://marketplace.visualstudio.com/items?itemName=siegebell.prettify-symbols-mode): high CPU load, Enter key delay
+- [Path Autocomplete](ihttps://marketplace.visualstudio.com/items?itemName=ionutvmi.path-autocomplete): it may break autocompletion for bibliography citations.
+
 
 
 ## Using LaTeX Workshop with WSL
