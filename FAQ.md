@@ -38,7 +38,7 @@ The following extensions are known to cause issues when active at the same time 
 - [Spell Right](https://marketplace.visualstudio.com/items?itemName=ban.spellright): high CPU load, Enter key delay
 - [Brackets Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2): high CPU load, Enter key delay
 - [Prettify Symbols Mode](https://marketplace.visualstudio.com/items?itemName=siegebell.prettify-symbols-mode): high CPU load, Enter key delay
-- [Path Autocomplete](ihttps://marketplace.visualstudio.com/items?itemName=ionutvmi.path-autocomplete): it may break autocompletion for bibliography citations.
+- [Path Autocomplete](https://marketplace.visualstudio.com/items?itemName=ionutvmi.path-autocomplete): it may break autocompletion for bibliography citations.
 
 
 
