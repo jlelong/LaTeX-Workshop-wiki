@@ -24,15 +24,15 @@ You can customize the look and feel of the internal PDF viewer. Of course, this 
 
 Below are the detailed explanations for the different possible settings
 
-|                                    Setting key                                    |                Description                |
-| --------------------------------------------------------------------------------- | ----------------------------------------- |
-| [`latex-workshop.view.pdf.tab.useNewGroup`](#latex-workshopviewpdftabuseNewGroup) | Use new editor group for the tab viewer   |
-| [`latex-workshop.view.pdf.zoom`](#latex-workshopviewpdfzoom)                      | The default zoom level of the PDF viewer  |
-| [`latex-workshop.view.pdf.scrollMode`](#latex-workshopviewpdfscrollMode)          | The default scroll mode of the PDF viewer |
-| [`latex-workshop.view.pdf.spreadMode`](#latex-workshopviewpdfspreadMode)          | The default spread mode of the PDF viewer |
-| [`latex-workshop.view.pdf.hand`](#latex-workshopviewpdfhand)                      | Enable the hand tool                      |
-| [`latex-workshop.view.pdf.invert`](#latex-workshopviewpdfinvert)                  | Define the CSS invert filter level        |
-| [`latex-workshop.view.pdf.trim`](#latex-workshopviewpdftrim)                      | The default trim mode of the PDF viewer   |
+|                                    Setting key                                    |                Description                   |
+| --------------------------------------------------------------------------------- | -----------------------------------------    |
+| [`latex-workshop.view.pdf.tab.editorGroup`](#latex-workshopviewpdftabeditorGroup) | Define the editor group for the tab viewer   |
+| [`latex-workshop.view.pdf.zoom`](#latex-workshopviewpdfzoom)                      | The default zoom level of the PDF viewer     |
+| [`latex-workshop.view.pdf.scrollMode`](#latex-workshopviewpdfscrollMode)          | The default scroll mode of the PDF viewer    |
+| [`latex-workshop.view.pdf.spreadMode`](#latex-workshopviewpdfspreadMode)          | The default spread mode of the PDF viewer    |
+| [`latex-workshop.view.pdf.hand`](#latex-workshopviewpdfhand)                      | Enable the hand tool                         |
+| [`latex-workshop.view.pdf.invert`](#latex-workshopviewpdfinvert)                  | Define the CSS invert filter level           |
+| [`latex-workshop.view.pdf.trim`](#latex-workshopviewpdftrim)                      | The default trim mode of the PDF viewer      |
 
 Additional settings for the internal viewer:
 
@@ -41,13 +41,17 @@ Additional settings for the internal viewer:
 | [`latex-workshop.view.pdf.internal.synctex.keybinding`](#latex-workshopviewpdfinternalsynctexkeybinding) | How to trigger synctex with the internal viewer        |
 | [`latex-workshop.viewer.pdf.internal.port`](#latex-workshopviewerpdfinternalport)                        | Which port internal viewer server communicates through |
 
-### latex-workshop.view.pdf.tab.useNewGroup
+### latex-workshop.view.pdf.tab.editorGroup
 
-When set to true, the viewer is opened in a new editor group, otherwise the current group is used.
+Define the editor group to use for the viewer tab.
 
 | type      | default value |
 | --------- | ------------- |
-| _boolean_ | `true`        |
+| _string_  | `"right"`     |
+
+- `"current"`: Use the current editor group
+- `"left"`: Put the viewer tab in a new group on the left of the current one
+- `"right"`: Put the viewer tab in a new group on the right of the current one
 
 ### latex-workshop.view.pdf.zoom
 
