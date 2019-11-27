@@ -21,6 +21,7 @@ The following settings are helpful to customize how to build a project and how t
 
 A progress bar indicates the building progress. It can be customized using the following configuration variables
 
+- [`latex-workshop.progress.location`](#latex-workshopprogresslocation)
 - [`latex-workshop.progress.runIconType`](#latex-workshopprogressrunIconType)
 - [`latex-workshop.progress.barLength`](#latex-workshopprogressbarLength)
 - [`latex-workshop.progress.barStyle`](#latex-workshopprogressbarStyle)
@@ -347,6 +348,14 @@ Set this property to false to keep the logs of all tools in a recipe.
 | --------- | ------------- |
 | _boolean_ | `true`        |
 
+### latex-workshop.progress.location
+
+Optionally display the compilation progress in a pop-up notification dialogue.
+
+| type   | default value   | Possible values                           |
+| ------ | --------------- | ----------------------------------------- |
+| _enum_ | `"Status Bar"`  | `"Status Bar"`, `"Notification Dialogue"` |
+
 ### latex-workshop.progress.runIconType
 
 The style of number to use to indicate the run number"
@@ -364,6 +373,8 @@ The possible values are
 
 ### latex-workshop.progress.barLength
 
+_Only applies if `latex-workshop.progress.location` is set to `Status Bar`._
+
 The length in characters of the progress bar.
 
 | type      | default value |
@@ -371,6 +382,8 @@ The length in characters of the progress bar.
 | _number_  | `15`          |
 
 ### latex-workshop.progress.barStyle
+
+_Only applies if `latex-workshop.progress.location` is set to `Status Bar`._
 
 | type   | default value    |
 | ------ | ---------------- |
