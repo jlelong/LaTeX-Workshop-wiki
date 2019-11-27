@@ -61,6 +61,14 @@ We support intellisense for file completion inside the following commands : `inc
 
 ## Configuration variables
 
+### latex-workshop.intellisense.preview.enabled
+
+Whether or not to preview graphics for `\includegraphics`.
+
+| type      | default value |
+| --------- | ------------- |
+| _boolean_ | `true`        |
+
 ### latex-workshop.intellisense.citation.label
 
 Defines what to show as suggestion labels when intellisense provides citation suggestions.
