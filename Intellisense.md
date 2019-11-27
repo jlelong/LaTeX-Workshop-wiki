@@ -61,7 +61,7 @@ We support intellisense for file completion inside the following commands : `inc
 
 ## Configuration variables
 
-### latex-workshop.intellisense.preview.enabled
+### latex-workshop.intellisense.includegraphics.preview.enabled
 
 Whether or not to preview graphics for `\includegraphics`.
 
