@@ -33,7 +33,7 @@ Below are the detailed explanations for the different possible settings
 | [`latex-workshop.view.pdf.hand`](#latex-workshopviewpdfhand)                      | Enable the hand tool                         |
 | [`latex-workshop.view.pdf.invert`](#latex-workshopviewpdfinvert)                  | Define the CSS invert filter level           |
 | [`latex-workshop.view.pdf.trim`](#latex-workshopviewpdftrim)                      | The default trim mode of the PDF viewer      |
-| [`latex-workshop.view.pdf.backgroundColor`](latex-workshopviewpdfbackgroundColor) | The background color |
+| [`latex-workshop.view.pdf.backgroundColor`](latex-workshopviewpdfbackgroundColor) | The background color of the PDF viewer |
 
 Additional settings for the internal viewer:
 
