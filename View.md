@@ -33,6 +33,7 @@ Below are the detailed explanations for the different possible settings
 | [`latex-workshop.view.pdf.hand`](#latex-workshopviewpdfhand)                      | Enable the hand tool                         |
 | [`latex-workshop.view.pdf.invert`](#latex-workshopviewpdfinvert)                  | Define the CSS invert filter level           |
 | [`latex-workshop.view.pdf.trim`](#latex-workshopviewpdftrim)                      | The default trim mode of the PDF viewer      |
+| [`latex-workshop.view.pdf.backgroundColor`](latex-workshopviewpdfbackgroundColor) | The background color |
 
 Additional settings for the internal viewer:
 
@@ -102,6 +103,16 @@ This config can invert the color of PDF. Possible values are any floating point 
 | type     | default value |
 | -------- | ------------- |
 | _number_ | `0`           |
+
+### latex-workshop.view.pdf.backgroundColor
+
+Define the background color for the PDF viewer.
+
+Possible values are any strings representing a color in CSS.
+
+| type     | default value |
+| -------- | ------------- |
+| _string_ | `"#525659"`   |
 
 ### latex-workshop.view.pdf.trim
 
