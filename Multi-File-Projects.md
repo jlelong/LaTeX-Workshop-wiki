@@ -6,7 +6,7 @@ While it is fine to write all contents in one `.tex` file, it is common to split
 
 To find the root file, LaTeX Workshop will follow the steps below, stopping whenever one is found:
 
-1. **Magic comment** `% !TEX root = relative/or/absolute/path/to/root/file.tex`. If such comments exist in the currently active editor, the referred file is set as root.
+1. **Magic comment** `% !TEX root = relative/or/absolute/path/to/root/file.tex`. If such comments exist in the currently active editor, the referred file is set as root. You can use the command `latex-workshop.addtexroot` to help you insert the magic comment.
 1. **Self check** If current active editor contains `\begin{document}`, it is set as root.
 1. **Root directory check** LaTeX Workshop iterates through all `.tex` files in the root folder of the workspace. The first one containing `\begin{document}` and which includes the file in the active editor is set as the root file. To avoid parsing all `.tex` files in the workspace, you can narrow the search by specifying [`latex-workshop.latex.search.rootFiles.include`](#latex-workshoplatexsearchrootFilesinclude) and/or [`latex-workshop.latex.search.rootFiles.exclude`](#latex-workshoplatexsearchrootFilesexclude).
 1. **The `subfiles` package case** The main file is used to provide intellisense. All the interactive commands `build`, `clean` and `view` use a quick pick box to ask the user which file is to be considered as the root File. The non-interactive functions `autobuild`, `autoclean` and forward `synctex` rely on the value of the configuration variable [`latex-workshop.latex.rootFile.useSubFile`](#latex-workshoplatexrootFileuseSubFile`) to choose between the main file and the subfile.
