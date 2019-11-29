@@ -20,7 +20,7 @@ If you can not fix the setting of your system, you can also override PATH with t
 
 ## Usage
 
-The typical usage is to open a `.tex` file and have a look at the _TeX_ sidebar to access all the extension features
+The typical usage is to open a `.tex` file and have a look at the _TeX_ sidebar to access all the extension features. If you wish to use a keybinding to open the _TeX_ sidebar, you just need to associate one with the command `latex-workshop.actions`.
 
 - [Building](Compile#building-the-document)
 - [Viewing and going from source to PDF back and forth](View)
