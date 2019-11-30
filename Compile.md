@@ -28,7 +28,7 @@ A progress bar indicates the building progress. It can be customized using the f
 
 ## Terminating the current compilation
 
-It is possible to terminate the current compilation by calling `Kill LaTeX compiler process` from the _Command Palette_ or calling `Terminate current compilation` from the TeX badge in the Build LaTeX project item.
+It is possible to terminate the current compilation by calling `Kill LaTeX compiler process` from the _Command Palette_ (command `latex-workshop.kill`) or calling `Terminate current compilation` from the TeX badge in the Build LaTeX project item.
 
 ## Auto build LaTeX
 
