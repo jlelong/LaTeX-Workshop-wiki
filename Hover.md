@@ -10,8 +10,8 @@ To open a package documentation, hover the package name inside the `\usepackage`
 
 You may also directly call one the following commands
 
-- _LaTex Workshop: Show package documentation_: you will get an input box to type in the package name
-- _LaTex Workshop: Show package documentation actually used_ : you can select the package name within a list.
+- _LaTex Workshop: Show package documentation_: you will get an input box to type in the package name. If you want to define a keybinding for this feature, associate it to the internal command `latex-workshop.texdoc`.
+- _LaTex Workshop: Show package documentation actually used_ : you can select the package name within a list. If you want to define a keybinding for this feature, associate it to the internal command `latex-workshop.texdocUsepackages`.
 
 ## Previewing equations
 
