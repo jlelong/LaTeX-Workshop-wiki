@@ -1,5 +1,7 @@
 # Snippets and shortcuts
 
+Many snippets are available to help users enter LaTeX commands or symbols. They are accessible from the _Snippet Panel_ (either from the TeX badge or from the _Command Palette_). If you want to associate a keybinding to the snippet panel, use the internal command `latex-workshop.showSnippetPanel`.
+
 All commands are listed as <kbd>ctrl</kbd>+<kbd>some key</kbd>. If you're on Mac, don't worry we have written equivalents, so every time you see <kbd>ctrl</kbd> just imagine it's <kbd>⌘</kbd>.
 
 To have intellisense automatically triggered inside snippets, set `editor.suggest.snippetsPreventQuickSuggestions` to `false`. This is useful for instance if you want to enter `\frac{x_{1}}{2}` using `@/`+ `x` + `__` + `1`+ `2` using <kbd>TAB</kbd> to move from one tabstop to the next.
@@ -38,7 +40,6 @@ This property is an array of case-sensitive strings in the order of the document
 |         type         |                           default value                           |
 | -------------------- | ----------------------------------------------------------------- |
 | _array_ of _strings_ | `[ "part", "chapter", "section", "subsection", "subsubsection" ]` |
-
 
 ### Inserting a sectioning command
 
@@ -209,7 +210,7 @@ Some common mathematical symbols or commands have a dedicated snippet.
 
 ## Surrounding text
 
-### with a command
+### With a command
 
 To surround text with a command, just select some text and use <kbd>ctrl</kbd>+<kbd>l</kbd>, <kbd>ctrl</kbd>+<kbd>w</kbd> (<kbd>⌘</kbd>+<kbd>l</kbd>, <kbd>⌘</kbd>+<kbd>w</kbd> on Mac). A new menu pops up to select the command. This works with multi selections.
 
