@@ -97,7 +97,7 @@ Set the configuration variable `latex-workshop.latex.autoBuild.run` to `"never"`
 
 ## I use build on save but I occasionally want to save without building
 
-When `latex-workshop.latex.autoBuild.run` is set to `onFileChange`, building is triggered every time a file is saved. If you want to save a file without building it, you can use the `Save without Building` command from the _Command Palette_.
+When `latex-workshop.latex.autoBuild.run` is set to `onFileChange`, building is triggered every time a file is saved. If you want to save a file without building it, you can use the `Save without Building` command from the _Command Palette_. A keybinding can be associated to the internal command `latex-workshop.saveWithoutBuilding` to access this feature more easily.
 
 ## My file is built when I paste
 

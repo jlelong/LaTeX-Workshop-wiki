@@ -43,7 +43,7 @@ When to trigger automatic building.
 | _string_ | `"onFileChange"` | `"never"`,`"onFileChange"` |
 
 - `"never"`: Disable the auto build feature
-- `"onFileChange"`: Build the project upon detecting a file change in any of the dependencies. The file can even be modified outside vscode. See [here](Multi-File-Projects) for explanations on what dependencies are and how some of them can be ignored.
+- `"onFileChange"`: Build the project upon detecting a file change in any of the dependencies. The file can even be modified outside vscode. See [here](Multi-File-Projects) for explanations on what dependencies are and how some of them can be ignored. See the [FAQ](FAQ#I-use-build-on-save-but-I-occasionally-want-to-save-without-building) for how to save without triggering the build when this feature is on.
 
 ### latex-workshop.latex.autoBuild.interval
 
@@ -232,10 +232,9 @@ The arguments of [`latex-workshop.latex.external.build.command`](#latex-workshop
 | ---------   | ---------------- |
 | _string[]_  | `[]`             |
 
-
 ## Magic comments
 
-### TeX programm and options
+### TeX program and options
 
 LaTeX Workshop supports `% !TEX program` magic comment to specify the compiler program. However, it is advised to use the recipe system instead of magic program to define the building process, since the latter is only implemented for backward compatibility.
 
@@ -269,8 +268,6 @@ When using `% !TEX program` with bibliographies, a `bib` compiler must be define
 ```
 
 Alternatively, you can directly define the args in the `.tex` file by using the magic comment `! %BIB options`, which overrides `latex-workshop.latex.magic.bib.args`. Note that it must contain the file to proceed. For instance, to reproduce the default behavior, you should use `! %BIB options = "%DOCFILE%"`.
-
-
 
 ## Catching errors and warnings
 
