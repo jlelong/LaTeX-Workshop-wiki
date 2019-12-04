@@ -181,7 +181,7 @@ Specify the base directory for file completion. The possible choices are
 
 | type                 | default value |
 | -------------------- | ------------- |
-| _enum_               | `"root relative"|"file relative"|"both"` |
+| _enum_               | `"root relative"\|"file relative"\|"both"` |
 
 ### latex-workshop.intellisense.update.aggressive.enabled
 
