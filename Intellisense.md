@@ -20,7 +20,9 @@ If you use very large bibtex files, you may experience temporary freezing. Hence
 
 ## References
 
-Similarly as for the citation mechanism, all files of a LaTeX project are search for labels. Then, any `\ref` related command is automatically completed with label keys.
+Similarly as for the citation mechanism, all files of a LaTeX project are search for labels. We scan labels defined as `\label{...}` or `label={...}`. If you do prefer to ignore `label={...}`, set [`latex-workshop.intellisense.label.keyval`](#latex-workshopintellisenselabelkeyval) to false.
+
+Any `\ref` related command is automatically completed with label keys.
 
 <img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/ref.gif" alt="intellisense demo" height="80px">
 
@@ -135,6 +137,14 @@ Use tabstops instead of placeholders in intellisense. Tabstops enable us to dire
 | _boolean_ | `true`        |
 
 Reload vscode after change.
+
+### latex-workshop.intellisense.label.keyval
+
+Scan for labels defined as `label={some tex}` to add to the reference intellisense menu. The braces are mandatory.
+
+| type      | default value |
+| --------- | ------------- |
+| _boolean_ | `true`        |
 
 ### latex-workshop.intellisense.unimathsymbols.enabled
 
