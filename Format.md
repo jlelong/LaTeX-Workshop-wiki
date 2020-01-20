@@ -54,6 +54,14 @@ For example, set this to `["author", "year-desc", "title"]` to sort by `author`,
 | ------------------ | ------------- |
 | _array of strings_ | `[ "key" ]`   |
 
+#### latex-workshop.bibtex-format.handleDuplicates
+
+When sorting BibTeX files, how to handle duplicates that appear. Duplicates are decided by `latex-workshop.bibtex-format.sortby`.
+
+|        Type       |      Default Value       | Possible Values                                                         |
+| ----------------- | ------------------------ | ----------------------------------------------------------------------- |
+| _enum of string_  | `"Highlight Duplicates"` | `"Ignore Duplicates"`, `"Highlight Duplicates"`, `"Comment Duplicates"` |
+
 ### Aligning
 
 The commands `latex-workshop.bibalign` and `latex-workshop.bibalignsort` provide basic alignment of bibliography entries. This action can be configured through the following options.
