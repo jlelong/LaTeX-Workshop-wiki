@@ -249,7 +249,7 @@ For `% !TEX program` magic comment, its arguments are defined in `latex-workshop
 ]
 ```
 
-Alternatively, you can directly define the args in the `.tex` file by using the magic comment `! %TEX options`, which overrides `latex-workshop.latex.magic.args`. Note that it must contain the file to proceed. For instance, to reproduce the default behavior, you should use
+Alternatively, you can directly define the args in the `.tex` file by using the magic comment `% !TEX options`, which overrides `latex-workshop.latex.magic.args`. Note that it must contain the file to proceed. For instance, to reproduce the default behavior, you should use
 
 ```
 % !TEX options = -synctex=1 -interaction=nonstopmode -file-line-error "%DOC%"
@@ -259,7 +259,7 @@ Suppose there is a line `% !TEX program = xelatex` in the root file. Upon buildi
 
 ### BIB program and options
 
-When using `% !TEX program` with bibliographies, a `bib` compiler must be defined with `% !BIB program` comment, e.g., `% !BIB program = bibtex`. Otherwise the extension will only run one-pass compilation with the specified LaTeX compiler. If needed, you can pass extra arguments to the `!BIB program` using the `latex-workshop.latex.magic.bib.args` variable:
+When using `% !TEX program` with bibliographies, a `bib` compiler must be defined with `% !BIB program` comment, e.g., `% !BIB program = bibtex`. Otherwise the extension will only run one-pass compilation with the specified LaTeX compiler. If needed, you can pass extra arguments to the `% !BIB program` using the `latex-workshop.latex.magic.bib.args` variable:
 
 ```
 "latex-workshop.latex.magic.bib.args": [
@@ -267,7 +267,7 @@ When using `% !TEX program` with bibliographies, a `bib` compiler must be define
 ]
 ```
 
-Alternatively, you can directly define the args in the `.tex` file by using the magic comment `! %BIB options`, which overrides `latex-workshop.latex.magic.bib.args`. Note that it must contain the file to proceed. For instance, to reproduce the default behavior, you should use `! %BIB options = "%DOCFILE%"`.
+Alternatively, you can directly define the args in the `.tex` file by using the magic comment `% !BIB options`, which overrides `latex-workshop.latex.magic.bib.args`. Note that it must contain the file to proceed. For instance, to reproduce the default behavior, you should use `% !BIB options = "%DOCFILE%"`.
 
 ## Catching errors and warnings
 
