@@ -15,9 +15,6 @@
 - [I cannot use `ctrl`+`alt` in a shortcut](#i-cannot-use-ctrlalt-in-a-shortcut)
 - [Disable automatic build on save](#disable-automatic-build-on-save)
 - [I use build on save but I occasionally want to save without building](#I-use-build-on-save-but-I-occasionally-want-to-save-without-building)
-- [My file is built when I paste](#my-file-is-built-when-I-paste)
-- [Format on save does not work](#format-on-save-does-not-work)
-- [My file gets messed up](#my-file-gets-messed-up)
 - [Large bibtex files are ignored](#large-bibtex-files-are-ignored)
 - [Path containing Chinese or `~` characters](#path-containing-chinese-or--characters)
 - [The LaTeX sidebar keeps reopening](#the-latex-sidebar-keeps-reopening)
@@ -100,24 +97,6 @@ Set the configuration variable `latex-workshop.latex.autoBuild.run` to `"never"`
 ## I use build on save but I occasionally want to save without building
 
 When `latex-workshop.latex.autoBuild.run` is set to `onFileChange`, building is triggered every time a file is saved. If you want to save a file without building it, you can use the `Save without Building` command from the _Command Palette_. A keybinding can be associated to the internal command `latex-workshop.saveWithoutBuilding` to access this feature more easily.
-
-## My file is built when I paste
-
-Set `editor.formatOnPaste` to `false`.
-
-The formatting program `latexindent` changes the file on disk when formatting and not only the buffer content. VSCode interprets it as a file change and triggers a build if `latex-workshop.latex.autoBuild.run` to `"onFileChange"`
-
-## Format on save does not work
-
-This is a known issue but we cannot do much from the extension side.
-
-The formatting utility `latexindent` reads its input from the file on the disk and not from the content of the editor. So when using _Format on Save_, first you format the file on the disk and then you save the content of the buffer. This is obviously done in the wrong order, but we cannot do much from the extension side to fix this. Note that if you save twice, the editor content is indeed formatted. When using _RightClick->Format Document_, we first save the buffer before calling the formatting program.
-
-## My file gets messed up
-
-This is most likely related to the two following variables being set together `latex-workshop.latex.autoBuild.run: "onFileChange"` and `editor.formatOnSave: true`.
-
-Formatting a .tex file actually changes it on the disk and then if `latex-workshop.latex.autoBuild.run` is `"onFileChange"` it saves the file and triggers a build. You will get two formatting processes running together and using the same temporary file. Hence, the mess you see in your file.
 
 ## Large bibtex files are ignored
 
