@@ -212,7 +212,9 @@ Force the use of the recipe system even when a magic comment defines a TeX comma
 
 ## External build command
 
-Versatile though the recipe mechanism described above may be, it may fail to match your needs when building the whole LaTeX project is done by a personal script or a Makefile. For this particular case, we provide an external build command mechanism, which completely bypasses the recipe machinery. Just define your command along with its arguments using the following two configuration variables
+Versatile though the recipe mechanism described above may be, it may fail to match your needs when building the whole LaTeX project is done by a personal script or a Makefile. For this particular case, we provide an external build command mechanism, which completely bypasses the recipe machinery. Just define your command along with its arguments using the following two configuration variables.
+
+Note that the output of the external command is not passed to the message parser, hence no error/warning message will be displayed in the Problems pane.
 
 ### latex-workshop.latex.external.build.command
 
