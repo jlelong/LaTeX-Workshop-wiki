@@ -35,7 +35,7 @@ The `tabular` environment is not supported.
 
 ## Previewing citation details
 
-When [`latex-workshop.hover.citation.enabled`](#latex-workshophovercitationenabled) is set to `true`, moving the mouse over an argument of a `\cite` related command displays the details of the bibliography as a tooltip.
+When [`latex-workshop.hover.citation.enabled`](#latex-workshophovercitationenabled) is set to `true`, moving the mouse over an argument of a `\cite` related command displays the details of the bibliography as a tooltip. See [`latex-workshop.intellisense.citation.forma`](Intelissense##latex-workshopintellisensecitationformat)
 
 <img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/hover-cite.gif" alt="Hover on \cite demo">
 
