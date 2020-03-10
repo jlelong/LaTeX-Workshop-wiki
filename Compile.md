@@ -271,9 +271,9 @@ Alternatively, you can directly define the args in the `.tex` file by using the 
 
 ## Catching errors and warnings
 
-The warnings and errors issued by the compiling toolchain are rendered in the _Problems_ Pane. The following settings enable you to customize what you want to get in that panel. If the messages displayed in the panel seem to be wrong, see the [FAQ](#The-Problem-Pane-displays-wrong-messages).
+The warnings and errors issued by the compiling toolchain are rendered in the _Problems_ Pane. The following settings enable you to customize what you want to get in that panel. If the messages displayed in the panel seem to be wrong, see the [FAQ](FAQ#The-Problem-Pane-displays-wrong-messages).
 
-The raw compiler logs can be accessed in the _Output Pane_, choose _LaTeX Compiler_. The default is to clear the logs before calling every tool of a recipe. If you prefer to keep the logs from all the tools of a recipe, set [`latex-workshop.latex.build.clearLog.everyRecipeStep.enabled`](latex-workshoplatexbuildclearLogeveryRecipeStepenabled) to `false`.
+The raw compiler logs can be accessed in the _Output Pane_, choose _LaTeX Compiler_. The default is to clear the logs before calling every tool of a recipe. If you prefer to keep the logs from all the tools of a recipe, set [`latex-workshop.latex.build.clearLog.everyRecipeStep.enabled`](#latex-workshoplatexbuildclearLogeveryRecipeStepenabled) to `false`.
 
 ### Settings Details
 
