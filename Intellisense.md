@@ -13,6 +13,7 @@ If you use very large bibtex files, you may experience temporary freezing. Hence
 | Setting key                                                                                               | Description                                                                    | Default        | Type                                            |
 | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | -------------- | ----------------------------------------------- |
 | [`latex-workshop.intellisense.citation.label`](#latex-workshopintellisensecitationlabel)                  | Citation property used as suggestion                                           | `"bibtex key"` | _string_: "bibtex key" \| "title" \| "authors"  |
+| [`latex-workshop.intellisense.citation.format`](latex-workshopintellisensecitationformat) | List of fields to display | | _array_ of _strings_ |
 | [`latex-workshop.intellisense.citation.maxfilesizeMB"`](#latex-workshopintellisensecitationmaxfilesizeMB) | Maximum bibtex file size (in MB)                                               | `5`            | _float_                                         |
 | [`latex-workshop.intellisense.citation.type`](#latex-workshopintellisensecitationtype)                    | Type of vs code suggestion to use                                              | `"inline"`     | _string_: "inline" \| "browser" (dropdown menu) |
 | [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled)                | Enabling of auto-completion for commands and environments from loaded packages | `false`        | _boolean_                                       |
@@ -82,6 +83,14 @@ Defines what to show as suggestion labels when intellisense provides citation su
 | type     | default value  |
 | -------- | -------------- |
 | _string_ | `"bibtex key"` |
+
+### latex-workshop.intellisense.citation.format
+
+List of fields to display for citation preview and intellisense. You must reload VSCode to take into account a change in this configuration.
+
+|         type         | default value |
+| -------------------- | ------------- |
+| _array_ of _strings_ | `["author", "title", "journal", "publisher", "booktitle", "year"]`          |
 
 ### latex-workshop.intellisense.citation.maxfilesizeMB
 
