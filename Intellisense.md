@@ -38,7 +38,7 @@ The key `\` automatically triggers completion of LaTeX commands. Several mechani
 - The completion list can use either placeholders or tabstops. The default is to use tabstops, but it can be changed using [`latex-workshop.intellisense.useTabStops.enabled`](#latex-workshopintellisenseuseTabStopsenabled).
   - placeholders: they provide meaningful information on the arguments but prevent any autocompletion trigger.
   - tabstops: they enable us to directly trigger autocompletion again for citations and references.
-- We provide one entry in the intellisense completion list per LaTeX command signature. If you feel, it makes the completion list too long, set [`latex-workshop.intellisense.optionalArgsEntries.enabled`](#latex-workshopintellisenseoptionalArgsEntries) to `false`.
+- We provide one entry in the intellisense completion list per LaTeX command signature. If you feel, it makes the completion list too long, set [`latex-workshop.intellisense.optionalArgsEntries.enabled`](#latex-workshopintellisenseoptionalArgsEntriesenabled) to `false`.
 
 | Setting key                                                                                                 | Description                                                                    | Default | Type      |
 | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ------- | --------- |
