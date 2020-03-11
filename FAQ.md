@@ -101,7 +101,7 @@ When `latex-workshop.latex.autoBuild.run` is set to `onFileChange`, building is 
 
 ## Large bibtex files are ignored
 
-Bibtex files listed in a project are parsed for citation completion. This may induce significant slow down with large bibtex files. You can configure the maximum size of bibtex files parsed by the extension with [`latex-workshop.intellisense.citation.maxfilesizeMB"`](Intelissense#latex-workshopintellisensecitationmaxfilesizeMB).
+Bibtex files listed in a project are parsed for citation completion. This may induce significant slow down with large bibtex files. You can configure the maximum size of bibtex files parsed by the extension with [`latex-workshop.intellisense.citation.maxfilesizeMB`](Intellisense#latex-workshopintellisensecitationmaxfilesizeMB).
 
 ## Path containing Chinese or `~` characters
 
