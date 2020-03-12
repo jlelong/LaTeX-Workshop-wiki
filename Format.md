@@ -4,8 +4,6 @@
 
 Install [latexindent.pl](https://github.com/cmhughes/latexindent.pl) for formatting support if it is not provided by your LaTeX distribution.
 
-See the [FAQ](FAQ#my-file-gets-messed-up) for possible issues with formatting.
-
 ### Relevant settings
 
 #### latex-workshop.latexindent.path
