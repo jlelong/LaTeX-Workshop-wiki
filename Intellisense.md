@@ -8,13 +8,13 @@ Every file of a LaTeX project is parsed to look for bibliography resources, eith
 
 Then, when citation commands like `\cite` and its derivatives are automatically completed with bibliography entries found in the various resources.
 
-If you use very large bibtex files, you may experience temporary freezing. Hence, files larger than 5MB are ignored (see [`latex-workshop.intellisense.citation.maxfilesizeMB"`](#latex-workshopintellisensecitationmaxfilesizeMB)).
+If you use very large bibtex files, you may experience temporary freezing. Hence, files larger than 5MB are ignored (see [`latex-workshop.intellisense.citation.maxfilesizeMB`](#latex-workshopintellisensecitationmaxfilesizeMB)).
 
 | Setting key                                                                                               | Description                                                                    | Default        | Type                                            |
 | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | -------------- | ----------------------------------------------- |
 | [`latex-workshop.intellisense.citation.label`](#latex-workshopintellisensecitationlabel)                  | Citation property used as suggestion                                           | `"bibtex key"` | _string_: "bibtex key" \| "title" \| "authors"  |
 | [`latex-workshop.intellisense.citation.format`](#latex-workshopintellisensecitationformat) | List of fields to display | | _array_ of _strings_ |
-| [`latex-workshop.intellisense.citation.maxfilesizeMB"`](#latex-workshopintellisensecitationmaxfilesizeMB) | Maximum bibtex file size (in MB)                                               | `5`            | _float_                                         |
+| [`latex-workshop.intellisense.citation.maxfilesizeMB`](#latex-workshopintellisensecitationmaxfilesizeMB)  | Maximum bibtex file size (in MB)                                               | `5`            | _float_                                         |
 | [`latex-workshop.intellisense.citation.type`](#latex-workshopintellisensecitationtype)                    | Type of vs code suggestion to use                                              | `"inline"`     | _string_: "inline" \| "browser" (dropdown menu) |
 | [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled)                | Enabling of auto-completion for commands and environments from loaded packages | `false`        | _boolean_                                       |
 | [`latex-workshop.latex.bibDirs`](#latex-workshoplatexbibDirs)                                             | List of paths to look for `.bib` files.                                        | `[]`           | _array_ of _strings_                            |
@@ -46,8 +46,8 @@ The key `\` automatically triggers completion of LaTeX commands. Several mechani
 | [`latex-workshop.intellisense.package.extra`](#latex-workshopintellisensepackageextra)                  | Extra packages to load for intellisense | `[]` | _array_ of _strings_ |
 | [`latex-workshop.intellisense.unimathsymbols.enabled`](#latex-workshopintellisenseunimathsymbolsenabled)    | Show unimath symbols as suggestions when `\` pressed | `false` | _boolean_     |
 | [`latex-workshop.intellisense.useTabStops.enabled`](#latex-workshopintellisenseuseTabStopsenabled)          | Use tabstops in intellisense completion                                        | `true`  | _boolean_ |
-| [`latex-workshop.intellisense.optionalArgsEntries.enabled`](#latex-workshopintellisenseoptionalArgsEntries) | Add one completion item per command signature                                  | `true`  | _boolean_ |
-| [`latex-workshop.latex.texDirs`](#latex-workshoplatextexDirs)                                               | List of paths to look for input `.tex` files.                                   | `[]`    | _array_ of _strings_ |
+| [`latex-workshop.intellisense.optionalArgsEntries.enabled`](#latex-workshopintellisenseoptionalArgsEntriesenabled) | Add one completion item per command signature                                  | `true`  | _boolean_ |
+| [`latex-workshop.latex.texDirs`](Multi-File-Projects#latex-workshoplatextexDirs)                            | List of paths to look for input `.tex` files.                                  | `[]`    | _array_ of _strings_ |
 
 ## Environments
 
