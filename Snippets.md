@@ -27,7 +27,7 @@ Some environments have a dedicated snippet in the form `BXY` where `XY` are the 
 
 ### An overview of the document
 
-The structure of the LaTeX project (`\chapter`, `\section`, `\subsection`, ...) is accessible via the TeX panel on the left of the editor. The entry corresponding to the cursor position in the editor is automatically selected and follows the cursor. The outline hierarchy is defined by [`latex-workshop.view.outline.sections`](latex-workshopviewoutlinesections).
+The structure of the LaTeX project (`\chapter`, `\section`, `\subsection`, ...) is accessible via the TeX panel on the left of the editor. The entry corresponding to the cursor position in the editor is automatically selected and follows the cursor. The outline hierarchy is defined by [`latex-workshop.view.outline.sections`](#latex-workshopviewoutlinesections).
 
 Note that the Explorer panel also contains an outline view but it only shows the structure of the current file and does not take into account any included file.
 
