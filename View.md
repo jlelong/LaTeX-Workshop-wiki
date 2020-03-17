@@ -294,13 +294,13 @@ This builtin synctex works well even if the path of TeX files contains non-ASCII
 
 The default PDF viewer.
 
-| type     | default value                                |
-| -------- | -------------------------------------------- |
-| _string_ | `"none" \| "browser" \| "tab" \| "external"` |
+| type     | default value  | possible values                              |
+| -------- | -------------- | -------------------------------------------- |
+| _string_ | `"none"`       | `"none" | "browser" | "tab" | "external"`    |
 
 - `"none"`: Undetermined viewer. A viewer selector will pop up upon viewing PDF.
-- `"browser"`: Open PDF with the default web browser.
-- `"tab"`: Open PDF with the built-in tab viewer.
+- `"browser"`: Open PDF with the default web browser. SyncTeX and other features available.
+- `"tab"`: Open PDF with the built-in tab viewer. SyncTeX and other features available.
 - `"external"`: **Experimental** Open PDF with the external viewer set in "View > Pdf > External: command"
 
 ### latex-workshop.view.pdf.ref.viewer
@@ -309,7 +309,7 @@ PDF viewer used for [View on PDF] link on `\ref`.
 
 | type    | default value | possible values                          |
 | ------- | ------------- | ---------------------------------------- |
-| _enum_  | `"auto"`      | `"auto" \| "tabOrBrowser" \| "external"` |
+| _enum_  | `"auto"`      | `"auto" | "tabOrBrowser" | "external"`   |
 
 ### latex-workshop.view.pdf.external.viewer.command
 
