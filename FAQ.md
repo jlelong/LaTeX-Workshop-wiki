@@ -2,6 +2,7 @@
 
 - [Known incompatible extensions](#known-incompatible-extensions)
 - [Using LaTeX Workshop with WSL](#using-latex-workshop-with-wsl)
+- [Using with Linux under Virtual Box, VM Workstation Player, Crostini, and others.](#using-with-linux-under-virtual-box-vm-workstation-player-crostini-and-others)
 - [Cygwin is not supported](#cygwin-is-not-supported)
 - [code-server is not supported](#code-server-is-not-supported)
 - [Visual Studio Online with self-hosted environments is not supported](#visual-studio-online-with-self-hosted-environments-is-not-supported)
@@ -45,6 +46,10 @@ The following extensions are known to cause issues when active at the same time 
 Starting with 1.35.0, VS Code supports WSL through [Remote - WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl). LaTeX Workshop works well with the extension.
 
 Also, in WSL2 file watchers might not work. For now, you have to set [`latex-workshop.latex.watch.usePolling`](multi-file-projects#latex-workshoplatexwatchusePolling) to `true`, and restart VS Code. See https://github.com/microsoft/WSL/issues/4739 for more information about the issue.
+
+## Using with Linux under Virtual Box, VM Workstation Player, [Crostini](https://chromium.googlesource.com/chromiumos/docs/+/master/containers_and_vms.md), and others.
+
+Display problems can occur. In that case, start VS Code with `--disable-gpu`. See [official doc](https://code.visualstudio.com/docs/supporting/FAQ#_vs-code-is-blank), [realted issue](https://github.com/microsoft/vscode/issues/92970), and [another issue](https://github.com/James-Yu/LaTeX-Workshop/issues/1935).
 
 ## Cygwin is not supported
 
