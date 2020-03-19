@@ -193,14 +193,15 @@ Some common mathematical symbols or commands have a dedicated snippet.
 
 ## Mathematical font commands
 
-| Prefix | Shortcut                                                                | Command          |
-| ------ | ----------------------------------------------------------------------- | ---------------- |
-| `MRM`  | <kbd>ctrl</kbd>+<kbd>m</kbd>, <kbd>ctrl</kbd>+<kbd>r</kbd>              | `\mathrm{${1}}`  |
-| `MBF`  | <kbd>ctrl</kbd>+<kbd>m</kbd>, <kbd>ctrl</kbd>+<kbd>s</kbd>              | `\mathbf{${1}}`  |
-| `MBB`  | <kbd>ctrl</kbd>+<kbd>m</kbd>, <kbd>ctrl</kbd>+<kbd>b</kbd>              | `\mathbb{${1}}`  |
-| `MCA`  | <kbd>ctrl</kbd>+<kbd>m</kbd>, <kbd>ctrl</kbd>+<kbd>c</kbd>              | `\mathcal{${1}}` |
-| `MIT`  | <kbd>ctrl</kbd>+<kbd>m</kbd>, <kbd>ctrl</kbd>+<kbd>i</kbd>              | `\mathit{${1}}`  |
-| `MTT`  | <kbd>ctrl</kbd>+<kbd>m</kbd>, <kbd>ctrl</kbd>+<kbd>t</kbd>              | `\mathtt{${1}}`  |
+| Prefix | Shortcut                                                                    | Command          |
+|--------|-----------------------------------------------------------------------------|------------------|
+| `MRM`  | <kbd>ctrl</kbd>+<kbd>m</kbd>, <kbd>ctrl</kbd>+<kbd>r</kbd>                  | `\mathrm{${1}}`  |
+| `MBF`  | <kbd>ctrl</kbd>+<kbd>m</kbd>, <kbd>ctrl</kbd>+<kbd>s</kbd>                  | `\mathsf{${1}}`  |
+| `MBF`  | <kbd>ctrl</kbd>+<kbd>m</kbd>, <kbd>ctrl</kbd>+<kbd>b</kbd>                  | `\mathbf{${1}}`  |
+| `MBB`  | <kbd>ctrl</kbd>+<kbd>m</kbd>, <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>b</kbd> | `\mathbb{${1}}`  |
+| `MCA`  | <kbd>ctrl</kbd>+<kbd>m</kbd>, <kbd>ctrl</kbd>+<kbd>c</kbd>                  | `\mathcal{${1}}` |
+| `MIT`  | <kbd>ctrl</kbd>+<kbd>m</kbd>, <kbd>ctrl</kbd>+<kbd>i</kbd>                  | `\mathit{${1}}`  |
+| `MTT`  | <kbd>ctrl</kbd>+<kbd>m</kbd>, <kbd>ctrl</kbd>+<kbd>t</kbd>                  | `\mathtt{${1}}`  |
 
 ## Miscellaneous Actions
 
