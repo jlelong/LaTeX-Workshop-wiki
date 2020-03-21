@@ -91,7 +91,7 @@ Absolute paths are required. You may also need to set the environment variable `
 
 ### latex-workshop.latex.rootFile.useSubFile
 
-When the `subfile` package is used, either the main file or any subfile containing `\\documentclass[main.tex]{subfile}` can be LaTeXing. When set to `true`, the extension uses the subfile as the rootFile for the `autobuild`, `clean` and `synctex` commands.
+When the `subfiles` package is used, either the main file or any subfile containing `\\documentclass[main.tex]{subfiles}` can be LaTeXing. When set to `true`, the extension uses the subfile as the rootFile for the `autobuild`, `clean` and `synctex` commands.
 
 | type                 | default value |
 | -------------------- | ------------- |
@@ -99,7 +99,7 @@ When the `subfile` package is used, either the main file or any subfile containi
 
 ### latex-workshop.latex.rootFile.doNotPrompt
 
-When the `subfile` package is used, either the main file or any subfile containing `\\documentclass[main.tex]{subfile}` can be LaTeXing. When set to `false`, the `build` and `view` commands  ask the user's choice first. When set to `true`, the subfile is used when `latex-workshop.latex.rootFile.useSubFile` is also `true`, otherwise the rootFile is used.
+When the `subfiles` package is used, either the main file or any subfile containing `\\documentclass[main.tex]{subfiles}` can be LaTeXing. When set to `false`, the `build` and `view` commands  ask the user's choice first. When set to `true`, the subfile is used when `latex-workshop.latex.rootFile.useSubFile` is also `true`, otherwise the rootFile is used.
 
 | type                 | default value |
 | -------------------- | ------------- |
