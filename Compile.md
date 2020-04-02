@@ -179,12 +179,12 @@ When building the project, the [magic comments](#magic-comments) in the root fil
 
 The `args` and `env` parameters can contain symbols surrounded by `%`. These placeholders are replaced on-the-fly. LaTeX Workshop registers the following placeholders:
 
-| Placeholder | Replaced by                                                                                        |
-| ----------- | -------------------------------------------------------------------------------------------------- |
-| `%DOC%`     | The LaTeX root file path and name without the `.tex` extension                                     |
-| `%DOCFILE%` | The LaTeX root file name without the `.tex` extension                                              |
-| `%DIR%`     | The LaTeX root file path                                                                           |
-| `%TMPDIR%`  | A temporary folder for storing ancillary files                                                     |
+| Placeholder | Replaced by  |
+| ----------- | ------------------------------------------------------------ |
+| `%DOC%`     | The LaTeX root file path and name without the `.tex` extension |
+| `%DOCFILE%` | The LaTeX root file name without the `.tex` extension |
+| `%DIR%`     | The LaTeX root file path |
+| `%TMPDIR%`  | A temporary folder for storing ancillary files |
 | `%OUTDIR%`  | The output directory configured in [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutDir) |
 
 Alternatively, you can also set your commands without the placeholder, just like what you may input in a terminal.
@@ -218,7 +218,7 @@ Versatile though the recipe mechanism described above may be, it may fail to mat
 
 The external command to execute when calling `latex-workshop.build`.
 
-This is useful when compiling relies on a Makefile or a bespoke script. When defined, it completely bypasses the recipes and root file detection mechanism.
+This is useful when compiling relies on a Makefile or a bespoke script. When defined, it completely bypasses the recipes and root file detection mechanism. The command is launched from the workspace directory.
 
 |   type    |  default value   |
 | --------- | ---------------- |
@@ -227,6 +227,8 @@ This is useful when compiling relies on a Makefile or a bespoke script. When def
 ### latex-workshop.latex.external.build.args
 
 The arguments of [`latex-workshop.latex.external.build.command`](#latex-workshoplatexexternalbuild.command) when calling `latex-workshop.build`
+
+If the rootFile is defined, you can use any of the placeholders defined in the [section on LaTeX Recipes](#LaTeX-recipes).
 
 |   type      |  default value   |
 | ---------   | ---------------- |
