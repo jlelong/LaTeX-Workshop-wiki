@@ -57,6 +57,14 @@ Completion for environments works similarly as for commands. It is based on a se
 
 We support intellisense for file completion inside the following commands : `include`, `includegraphics`, `input`, and all the commands from the `import` package. For the `includegraphics` command, we take into account the paths defined by `\graphicspath` if any.
 
+Note that any file matching one of the patterns listed in the following variables is removed from the list: `files.exclude`, `latex-wokrshop.intellisense.file.exclude`. Moreover, if `search.useIgnoreFiles` is true, any file listed in a `.gitignore` is also removed from the completion list.
+
+To check if a file is indeed listed by a `.gitignore` file, you can run
+
+```
+git check-ignore -v full_path_to_the_file
+```
+
 ### Related settings
 
 - [`latex-workshop.intellisense.file.exclude`](#latex-workshopintellisensefileexclude)
