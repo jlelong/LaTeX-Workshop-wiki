@@ -18,6 +18,13 @@ Usually, you do **NOT** have to set PATH environment variable. TeX distributions
 
 If you can not fix the setting of your system, you can also override PATH with the `env` property of [LaTeX recipes](Compile#latex-recipes).
 
+## Settings
+
+You can modify settings through the menu of VS Code, `Preferences > Settings`.
+You can also modify settings by directly editing `settings.json`. See an [official doc](https://code.visualstudio.com/docs/getstarted/settings#_settings-file-locations) for the location of `settings.json`.
+
+You can also have different settings for each project with `.vscode/settings.json` at the root of each project workspace. See an [official doc](https://code.visualstudio.com/docs/getstarted/settings#_settings-file-locations).
+
 ## Usage
 
 The typical usage is to open a `.tex` file and have a look at the _TeX_ sidebar to access all the extension features. If you wish to use a keybinding to open the _TeX_ sidebar, you just need to associate one with the command `latex-workshop.actions`.
