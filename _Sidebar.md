@@ -5,6 +5,7 @@
   - [Requirements](Install#requirements)
   - [Installation](Install#installation)
   - [Setting PATH environment variable](Install#setting-path-environment-variable)
+  - [Settings](Install#settings)
   - [Usage](Install#usage)
   - [Using Docker](Install#using-docker)
   - [Using WSL](Install#using-wsl)
