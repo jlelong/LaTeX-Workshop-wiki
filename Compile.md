@@ -181,9 +181,11 @@ The `args` and `env` parameters can contain symbols surrounded by `%`. These pla
 
 | Placeholder | Replaced by  |
 | ----------- | ------------------------------------------------------------ |
-| `%DOC%`     | The LaTeX root file path and name without the `.tex` extension |
-| `%DOCFILE%` | The LaTeX root file name without the `.tex` extension |
-| `%DIR%`     | The LaTeX root file path |
+| `%DOC%`     | The root file full path without the extension |
+| `%DOCFILE%` | The root file name without the extension |
+| `%DOC_EXT%`     | The root file full path with the extension |
+| `%DOCFILE_EXT%` | The root file name with the extension |
+| `%DIR%`     | The root file directory |
 | `%TMPDIR%`  | A temporary folder for storing ancillary files |
 | `%OUTDIR%`  | The output directory configured in [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutDir) |
 

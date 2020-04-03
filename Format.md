@@ -18,9 +18,9 @@ Define the path of the `latexindent` executable. If `latexindent` is in the `PAT
 
 Define the command line arguments for latexindent. Available placeholders are:
 
-- `%DOC%`: The LaTeX root file path and name without the `.tex` extension.
-- `%DOCFILE%`: The LaTeX root file name without the `.tex` extension.
-- `%DIR%`: The LaTeX root file path.
+- `%DOC%`: The root file path and name without the extension.
+- `%DOCFILE%`: The root file name without the extension.
+- `%DIR%`: The root file path.
 - `%TMPFILE%`: would be replaced with the path of file which contains raw TeX source to be formatted. At this moment you need to use it as an input file of `latexindent`.
 - `%INDENT%`: The indent character of the file, typically `\t`, `' '`, `' '`.
 
