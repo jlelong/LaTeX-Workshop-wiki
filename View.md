@@ -239,7 +239,7 @@ Backward: Use `%{input}` and `%{line}` as placeholders.
 The directory where the extension tries to find project files (e.g., PDF and SyncTeX generated files).
 
 Both relative and absolute paths are supported. Relative path start from the root file location, so beware if it is located in sub-directory. Note that the LaTeX toolchain should output files to this path. The default [recipes](Compile#Latex-recipes), which relies on `latexmk`, takes care of putting all the generated files to the directory specified by `latex-workshop.latex.outDir`. The path given to this option must not contain a trailing slash.
-The following placeholders `%DOC%`, `%DOCFILE`, `%DIR%` and `%TMPDIR%` can be used.
+The following placeholders defined in the [recipes section](Compile#placeholders) can be used.
 
 | type     | default value |
 | -------- | ------------- |

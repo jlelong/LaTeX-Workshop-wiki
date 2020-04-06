@@ -171,26 +171,34 @@ When building the project, the [magic comments](#magic-comments) in the root fil
     "--pdf",
     "--tex-option=\"-interaction=nonstopmode\"",
     "--tex-option=\"-file-line-error\"",
-    "%DOC%.tex"
+    "%DOC_EXT%"
   ],
     "env": {}
 }]
 ```
 
-The `args` and `env` parameters can contain symbols surrounded by `%`. These placeholders are replaced on-the-fly. LaTeX Workshop registers the following placeholders:
+The `args` and `env` parameters can contain symbols surrounded by `%`. These placeholders are replaced on-the-fly. 
 
-| Placeholder | Replaced by  |
-| ----------- | ------------------------------------------------------------ |
-| `%DOC%`     | The root file full path without the extension |
-| `%DOCFILE%` | The root file name without the extension |
+### Placeholders
+
+LaTeX Workshop registers the following placeholders
+| Placeholder     | Replaced by  |
+| --------------- | ------------------------------------------------------------ |
+| `%DOC%`         | The root file full path without the extension |
+| `%DOC_W32%`     | The root file full path without the extension with `\` path separator on Windows|
+| `%DOCFILE%`     | The root file name without the extension |
 | `%DOC_EXT%`     | The root file full path with the extension |
+| `%DOC_EXT_W32%` | The root file full path with the extension with `\` path separator on Windows |
 | `%DOCFILE_EXT%` | The root file name with the extension |
-| `%DIR%`     | The root file directory |
-| `%TMPDIR%`  | A temporary folder for storing ancillary files |
-| `%OUTDIR%`  | The output directory configured in [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutDir) |
+| `%DIR%`         | The root file directory |
+| `%DIR_W32%`     | The root file directory with `\` path separator on Windows |
+| `%TMPDIR%`      | A temporary folder for storing ancillary files |
+| `%OUTDIR%`      | The output directory configured in [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutDir) |
+| `%OUTDIR_W32%`  | The output directory configured in [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutDir) with `\` path separator on Windows |
 
-Alternatively, you can also set your commands without the placeholder, just like what you may input in a terminal.
-As most LaTeX compiler accepts root file name without extension, `%DOC%` and `%DOCFILE%` do not include `.tex` extension. Meanwhile, `texify` requires the extension. So in the above tool `%DOC%` and `.tex` are concatenated for completeness.
+As most LaTeX compiler accepts root file name without extension, `%DOC%` and `%DOCFILE%` do not include the filename extension. Meanwhile, the `texify` tool requires the complete filename with its extension, hence the use of `%DOC_EXT%` in the configuration of `texify`.
+
+Most commands accept the use of the `/` path separator even on Windows and most LaTeX tools even require its use. On the contrary, some Windows commands only work with the `\` path separator. So, we propose two versions of the placeholders. All placeholders without the `_W32` suffix always use the `/` path separator even on Windows. All placeholders with the `_W32` suffix use the `\` path separator on Windows. Note on Linux and Unix systems, placeholders with and without the `_W32` suffix are equivalent.
 
 ### latex-workshop.latex.recipe.default
 

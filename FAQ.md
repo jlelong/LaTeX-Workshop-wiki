@@ -224,3 +224,7 @@ To customize a color theme, you can refer to the [official documentation](https:
 ## Overriding snippets
 
 You can override some snippets provided by the extension by using the [`latex-workshop.intellisense.commandsJSON.replace`](Intellisense#latex-workshopintellisensecommandsJSONreplace) configuration variable.
+
+## Where can I find the definitions of the placeholders
+
+[Compile#placeholders](Compile#Placeholders)

@@ -16,12 +16,9 @@ Define the path of the `latexindent` executable. If `latexindent` is in the `PAT
 
 #### latex-workshop.latexindent.args
 
-Define the command line arguments for latexindent. Available placeholders are:
+Define the command line arguments for latexindent. In the addition to the placeholders defined for [recipes](Compile#placeholders), the following placeholders are accepted
 
-- `%DOC%`: The root file path and name without the extension.
-- `%DOCFILE%`: The root file name without the extension.
-- `%DIR%`: The root file path.
-- `%TMPFILE%`: would be replaced with the path of file which contains raw TeX source to be formatted. At this moment you need to use it as an input file of `latexindent`.
+- `%TMPFILE%`: The full path of the raw TeX file to be formatted. At this moment you need to use it as an input file of `latexindent`.
 - `%INDENT%`: The indent character of the file, typically `\t`, `' '`, `' '`.
 
 **Note**: For the moment the `-c` option requires trailing slash."
