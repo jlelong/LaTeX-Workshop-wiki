@@ -229,3 +229,22 @@ This config works only when [`intellisense.update.aggressive.enabled`](#latex-wo
 | type      | default value |
 | --------- | ------------- |
 | _number_  | `1000`        |
+
+## Bibtex files
+
+While editing a .bib file, hitting `@` triggers completion for adding a new entry.
+
+The available completions are described in [data/bibtex-entries.json](https://github.com/James-Yu/LaTeX-Workshop/blob/master/data/bibtex-entries.json). The user can override any entry by redefining it in the variable [`latex-workshop.intellisense.bibtexJSON.replace`].
+The entries are formatted according to the variables already used for bibtex formatting:
+
+- [`latex-workshop.bibtex-format.tab`](Format#latex-workshopbibtex-formattab)
+- [`latex-workshop.bibtex-format.surround`](Format#latex-workshopbibtex-formatsurround)
+- [`latex-workshop.bibtex-format.case`](Format#latex-workshopbibtex-formatcase)
+
+### latex-workshop.intellisense.bibtexJSON.replace
+
+Dictionary of `"entry name": ["array", "of", "fields"]` to replace the default fields used in [data/bibtex-entries.json](https://github.com/James-Yu/LaTeX-Workshop/blob/master/data/bibtex-entries.json). Reload vscode to make any change in this configuration effective.
+
+| type                               | default value |
+|------------------------------------|---------------|
+| _dictionary_ of _string_: _string_ | `{}`          |
