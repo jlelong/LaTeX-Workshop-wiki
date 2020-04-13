@@ -29,7 +29,7 @@
   - [Commands](Intellisense#Commands)
   - [Environments](Intellisense#Environments)
   - [Files](Intellisense#files)
-  - [Bibtex Files](Intellisense#bibtexfiles)
+  - [Bibtex Files](Intellisense#bibtex-files)
 - [Snippets and shortcuts](Snippets)
   - [Environments](Snippets#Environments)
   - [Sectioning](Snippets#Sectioning)
