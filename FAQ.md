@@ -28,6 +28,7 @@
 - [Install older version](#install-older-version)
 - [Customizing a Color Theme](#customizing-a-color-theme)
 - [Overriding snippets](#overriding-snippets)
+- [Autocompletion for `\includegraphics` seems incomplete](#autocompletion-for-includegraphics-seems-incomplete)
 
 ## Known incompatible Extensions
 
@@ -228,3 +229,7 @@ You can override some snippets provided by the extension by using the [`latex-wo
 ## Where can I find the definitions of the placeholders
 
 [Compile#placeholders](Compile#Placeholders)
+
+## Autocompletion for `\includegraphics` seems incomplete
+
+Autocompletion for `includegraphics` takes into account the paths listed by the `\graphicspath` command if any. In such a case, we only list the files located under these directories. See also the configuration variables referenced [here](Intellisense#files)
