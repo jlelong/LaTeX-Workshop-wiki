@@ -2,9 +2,23 @@
 
 <img src="https://raw.githubusercontent.com/James-Yu/LaTeX-Workshop/master/demo_media/synctex.gif" alt="intellisense demo" height="180px">
 
-## Viewing Documents
+## Viewing the PDF file generated from a LaTeX project
 
 A document can previewed a number of ways, namely the icon that appears in the top left of an open TeX document (see gif) <img src="https://raw.githubusercontent.com/James-Yu/LaTeX-Workshop/master/icons/view-pdf-light.svg" height="1em">, or by the shortcut <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>v</kbd> (see also the [FAQ](https://github.com/James-Yu/LaTeX-Workshop/wiki/FAQ#i-cannot-use-ctrlalt-in-a-shortcut) for an alternative shortcut). The command associated to these keybindings is `latex-workshop.view`. Note that each call to this command opens a new viewer.
+
+## Viewing a PDF file
+
+The extension also allows to view any PDF file possibly not related to a LaTeX project. To open such a PDF file, it is sufficient to open from the _Explorer_. Any PDF file opened this is way is monitored by a file watcher to be automatically reloaded when it changes on disk. Note that this is a different mechanism as the one used for PDF files related to LaTeX projects, which get reloaded after every successful building.
+
+#### latex-workshop.latex.pdfWatch.delay
+
+Delay before reloading a PDF file after last change, in milliseconds.
+
+You must reload VSCode to take into account a change in this configuration.
+
+| type               | default value |
+| ------------------ | ------------- |
+| _number            | `250`         |
 
 ## Overview
 
