@@ -15,7 +15,7 @@ To find the root file, LaTeX Workshop will follow the steps below, stopping when
 
     Note that each subfile has to be compiled from its respective directory, where LaTeX is able to locate all included text files or images. However, following the discussion in [1895](https://github.com/James-Yu/LaTeX-Workshop/issues/1895) we decided that all paths should be relative to the root file directory. Hence, the recipe is launched from the root file directory and the `-cd` option must be added to `latexmk`. As discussed in [1932](https://github.com/James-Yu/LaTeX-Workshop/issues/1932), this option breaks `makeindex` (this should be solved in the next release of `latexmk`). So the solution is to add a `.latexmkrc` file in the root file directory containing `$do_cd = 1;`
 
-1. **The `.fls` files** LaTeX compilers when called with the `-recoder` option produce a file with `.fls` extension containing all the files _input_ and _output_ during compilation. The list of _input_ files contains all classes, packages, fonts, input `.tex` files, listings, graphs, ... Using `latexmk` always produces a `.fls` file.
+1. **The `.fls` files** LaTeX compilers when called with the `-recorder` option produce a file with `.fls` extension containing all the files _input_ and _output_ during compilation. The list of _input_ files contains all classes, packages, fonts, input `.tex` files, listings, graphs, ... Using `latexmk` always produces a `.fls` file.
 
 If no root file is found, most of the features in LaTeX Workshop will not work.
 
