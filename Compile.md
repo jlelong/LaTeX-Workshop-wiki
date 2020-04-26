@@ -103,6 +103,36 @@ A progress bar indicates the building progress. It can be customized using the f
 - [`latex-workshop.progress.barLength`](#latex-workshopprogressbarLength)
 - [`latex-workshop.progress.barStyle`](#latex-workshopprogressbarStyle)
 
+## Building a `.rnw` file
+
+`.rnw` files can be automatically compiling using the following recipe definition
+
+```
+  {
+    "name": "Compile Rnw files",
+    "tools": [
+      "rnw2tex",
+      "latexmk"
+    ]
+  }
+```
+
+with the `rnw2tex` tool defined by
+
+```
+  {
+    "name": "rnw2tex",
+    "command": "Rscript",
+    "args": [
+      "-e",
+      "knitr::opts_knit$set(concordance = TRUE); knitr::knit('%DOCFILE_EXT%')"
+    ],
+    "env": {}
+  }
+```
+
+When using auto-build and the file has not been compiled inside the extension yet, we use the first recipe with name (converted to lowercase) containing either `rnw` or `rsweave`.
+
 ## Terminating the current compilation
 
 It is possible to terminate the current compilation by calling `Kill LaTeX compiler process` from the _Command Palette_ (command `latex-workshop.kill`) or calling `Terminate current compilation` from the TeX badge in the Build LaTeX project item.
