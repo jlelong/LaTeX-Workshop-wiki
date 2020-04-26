@@ -12,6 +12,7 @@
 - [Compiling](Compile)
   - [Multi file projects](Compile#Multi-File-Projects)
   - [Building the document](Compile#building-the-document)
+  - [Building a `.rnw` file](Compile#building-a-rnw-file)
   - [Terminating the current compilation](Compile#terminating-the-current-compilation)
   - [Auto build](Compile#auto-build-latex)
   - [Cleaning generated files](Compile#cleaning-generated-files)
