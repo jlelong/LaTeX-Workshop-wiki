@@ -51,7 +51,7 @@ The key `\` automatically triggers completion of LaTeX commands. Several mechani
 
 ## Environments
 
-Completion for environments works similarly as for commands. It is based on a set of predefined environments enriched with those defined by the included packages when [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled) is `true`. Moreover, any custom environment is added to the list after being used once.
+Completion for environments works similarly as for commands. It is based on a set of predefined environments enriched with those defined by the included packages when [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled) is `true`. Moreover, any custom environment is added to the list after being used once. When [`latex-workshop.intellisense.package.env.enabled`](#latex-workshopintellisensepackageenvenabled) is `true`, environments can be inserted by using snippets of the form `\envname`
 
 ## Files
 
@@ -136,6 +136,15 @@ When `latex-workshop.intellisense.package.enabled` is set to `true`, the command
 |         type         | default value |
 | -------------------- | ------------- |
 | _array_ of _strings_ | `[]`          |
+
+### latex-workshop.intellisense.package.env.enabled
+
+If true, every environment provided by an included package is available by a snippet `\envname`. Only applies when `latex-workshop.intellisense.package.enabled` is true.
+
+| type      | default value |
+| --------- | ------------- |
+| _boolean_ | `true`        |
+
 
 ### latex-workshop.intellisense.optionalArgsEntries.enabled
 
