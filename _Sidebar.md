@@ -47,7 +47,7 @@
   - [Previewing references](Hover#previewing-references)
   - [Documentation of a command](Hover#documentation-of-a-command)
 - [Playing with environments](Environments)
-  - [Inserting an environment](Environments#inserting-an-environments)
+  - [Inserting an environment](Environments#inserting-an-environment)
   - [Itemize like environments](Environments#Itemize-like-environments)
   - [Navigating](Environments#Navigating)
   - [Changing between `\[...\]` and `\begin{}...\end{}`](Environments#changing-between--and-beginend)

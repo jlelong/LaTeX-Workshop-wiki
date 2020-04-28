@@ -2,8 +2,8 @@
 
 ## Inserting an environment
 
-- To start a new environment, you can type `\begin` and select the _begin a new environment_ snippet. A multi-cursor is added to enter the environment name simultaneously in the `begin` and `end` commands.
-- Most environments can also be started by simply typing `\` followed by the environment name. For instance, to start en `equation` environment, type `\equation` and choose the `\begin{equation}...\end{equation}` snippet.
+- To start a new environment, you can type `\begin` and use intellisense. See [Intellisense for Environments](Intellisense#environments) for a detailed explanation of the different mechanisms.
+- Most environments can also be started by simply typing `\` followed by the environment name. For instance, to start en `equation` environment, type `\equation` and choose the `\begin{equation}...\end{equation}` snippet. See [Intellisense for Environments](Intellisense#environments)
 - Some common environments have specific snippets of the form `B` + the first two or three letters of the environment name, see [the full list](Snippets#Environments).
 - To surround some selected text with an environment, call _LaTeX Workshop: Surround/wrap selection with \\begin{}...\\end{}_ from the **Command Palette** (command `latex-workshop.wrap-env`). A multi-cursor is added inside the braces, to insert the environment name.
 
