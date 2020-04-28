@@ -56,15 +56,15 @@ There are three different ways to insert a new environment
 
 - **The `\begin / \end` snippet**. Type `\begin` and autocomplete with _Begin a new environment_ and then _Complete with `\end`_. It will leave you with a multi-cursor inside the braces of `\begin{}` and `\end{}` and a list of environments will pop up.
 
-<img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/begin-end.gif" alt="begin/end with multi-cursor demo" height="80px">
+  <img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/begin-end.gif" alt="begin/end with multi-cursor demo"> 
 
 - **The `\begin` only approach**. Type `\begin` and directly choose the environment name from the list. It will automatically add the closing command. Note that this approach enables us to take into account extra arguments. For instance, the `alignat*` environment takes the number of "equation columns" `{n}` as a mandatory argument. Note that dealing with extra arguments is not possible with the `\begin / \end` snippet.
 
-<img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/begin-options.gif" alt="begin with options demo" height="80px">
+  <img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/begin-options.gif" alt="begin with options demo">
 
 - **The `\envname` approach**. Standard environments can be inserted by typing `\` followed by the environment name. This approach can deal with extra arguments
 
-<img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/env-cmd.gif" alt="\envname demo" height="80px">
+  <img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/env-cmd.gif" alt="\envname demo">
 
 Completion for environments is based on a set of predefined environments enriched with those defined by the included packages when [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled) is `true`. Moreover, when [`latex-workshop.intellisense.package.env.enabled`](#latex-workshopintellisensepackageenvenabled) is also `true`, environments provided by used packages can be inserted by using the `\envname` approach. On top of this, any custom environment is added to the completion list after being used once.
 
