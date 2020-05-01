@@ -174,7 +174,7 @@ With the default value, we do not watch files inside the `texmf` tree of the LaT
 
 ### latex-workshop.latex.watch.usePolling
 
-Use polling watch changes on files.
+Use polling to watch changes on files.
 
 When TeX files are placed on network drives or OneDrive, this option should be turned on. Setting this option to true might lead to high CPU utilization.
 
