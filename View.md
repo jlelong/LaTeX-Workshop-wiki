@@ -151,6 +151,14 @@ Defines the port on which the internal viewer listens for events such as synctex
 
 Note: keep this value set to `0` unless you know what you are doing.
 
+### latex-workshop.viewer.pdf.internal.keyboardEvent
+
+Rebroadcast KeyboardEvent on the internal PDF viewers. If the keyboard shortcuts of VS Code do not work well on the internal viewer, change this setting.
+
+| type   | default value | possible values    |
+| ------ | ------------- |--------------------|
+| _enum_ | `auto`        | `auto`, `force`, `never` |
+
 ## Synctex
 
 This extension will automatically look for `synctex` in the expected location (see [settings](#latex-workshopsynctexpath)) and will alert the user if it is not found. Alternatively, you can use the javascript built-in version of `synctex`, see [settings](#latex-workshopsynctexsynctexjsenabled).
