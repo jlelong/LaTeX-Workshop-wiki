@@ -153,7 +153,7 @@ Note: keep this value set to `0` unless you know what you are doing.
 
 ### latex-workshop.viewer.pdf.internal.keyboardEvent
 
-Rebroadcast KeyboardEvent on the internal PDF viewers. If the keyboard shortcuts of VS Code do not work well on the internal viewer, change this setting.
+Rebroadcast KeyboardEvent on the internal PDF viewers. If the keyboard shortcuts of VS Code do not work well on the internal viewer, change this setting. You must reopen the internal viewers or restart VS Code to take into account a change in this configuration.
 
 | type   | default value | possible values    |
 | ------ | ------------- |--------------------|
