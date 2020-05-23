@@ -354,13 +354,15 @@ Most commands accept the use of the `/` path separator even on Windows and most 
 ### latex-workshop.latex.recipe.default
 
 Define which recipe is used by the _Build LaTeX project_ command.
-
-|   type   | default value |    possible values     |
-| -------- | ------------- | ---------------------- |
-| _string_ | `"first"`     | `"first"`,`"lastUsed"` |
+It also applies to auto build. Recipes are refered to by their names as defined in `latex-workshop.latex.recipes`. Note there are two particular values:
 
 - `"first"`: Use the first recipe defined in [`latex-workshop.latex.recipes`](#LaTeX-recipes).
 - `"lastUsed"`: Use the last used recipe by the command _LaTeX Workshop: Build with recipe_.
+
+|   type   | default value |
+| -------- | ------------- |
+| _string_ | `"first"`     |
+
 
 ### latex-workshop.latex.build.forceRecipeUsage
 
