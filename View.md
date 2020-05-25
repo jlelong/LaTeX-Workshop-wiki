@@ -199,7 +199,9 @@ The solution is simple, and works with `sumatraPDF`. Just add the following opti
 
 Do not forget to set the paths according to your installation.  You can also replace `code` with the `Code.exe` path.
 
-#### Linux
+#### Linux 
+
+##### [Evince](https://wiki.gnome.org/Apps/Evince) support
 
 This is trickier, but works. See [here](https://ubuntuforums.org/showthread.php?t=1716268).
 
@@ -207,6 +209,7 @@ This is trickier, but works. See [here](https://ubuntuforums.org/showthread.php?
     - for Python 2: [evince_synctex2.zip](files/evince_synctex2.zip)
     - for Python 3: [evince_synctex3.zip](files/evince_synctex3.zip)
 1. Unzip it in any folder in your PATH (for instance, `$HOME/bin/` or `$HOME/.local/bin`).
+1. Make sure that all files are executable with `chmod +rx evince2 evince_forward_search evince_backward_search`
 1. Add the following options to your configuration:
 
     ```
