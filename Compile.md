@@ -186,7 +186,7 @@ You must reload VSCode to take into account a change in this configuration.
 
 ### latex-workshop.latex.watch.interval
 
-Delay before starting builds, in milliseconds.
+Interval of polling, in milliseconds.
 
 You must reload VSCode to take into account a change in this configuration.
 
