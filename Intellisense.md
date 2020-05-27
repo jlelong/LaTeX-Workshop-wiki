@@ -254,16 +254,18 @@ This config works only when [`intellisense.update.aggressive.enabled`](#latex-wo
 | --------- | ------------- |
 | _number_  | `1000`        |
 
-## Bibtex files
+## BibTeX files
 
-While editing a .bib file, hitting `@` triggers completion for adding a new entry.
+Two types of completion are available for BibTeX files
 
-The available completions are described in [data/bibtex-entries.json](https://github.com/James-Yu/LaTeX-Workshop/blob/master/data/bibtex-entries.json). The user can override any entry by redefining it in the variable [`latex-workshop.intellisense.bibtexJSON.replace`].
+- Hitting `@` triggers completion for adding a new entry. The available completions are described in [data/bibtex-entries.json](https://github.com/James-Yu/LaTeX-Workshop/blob/master/data/bibtex-entries.json). The user can override any entry by redefining it in the variable [`latex-workshop.intellisense.bibtexJSON.replace`].
 The entries are formatted according to the variables already used for bibtex formatting:
 
-- [`latex-workshop.bibtex-format.tab`](Format#latex-workshopbibtex-formattab)
-- [`latex-workshop.bibtex-format.surround`](Format#latex-workshopbibtex-formatsurround)
-- [`latex-workshop.bibtex-format.case`](Format#latex-workshopbibtex-formatcase)
+  - [`latex-workshop.bibtex-format.tab`](Format#latex-workshopbibtex-formattab)
+  - [`latex-workshop.bibtex-format.surround`](Format#latex-workshopbibtex-formatsurround)
+  - [`latex-workshop.bibtex-format.case`](Format#latex-workshopbibtex-formatcase)
+
+- Inside an entry, when at the beginning of a line, intellisense suggests optional fields. the completion menu pops up after typing two characters but can also be manually triggered using <kbd>ctrl</kbd> + <kbd>space</kbd>. The available completions are described in [data/bibtex-optional-entries.json](https://github.com/James-Yu/LaTeX-Workshop/blob/master/data/bibtex-optional-entries.json).
 
 ### latex-workshop.intellisense.bibtexJSON.replace
 
