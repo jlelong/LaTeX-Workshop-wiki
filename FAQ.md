@@ -78,7 +78,7 @@ The directory `~/node_modules/` in the home directory may cause errors on Mac an
 
 ## I cannot build from a subfile
 
-If you cannot build a multi file LaTeX project from a subfile, it means that the root file is not detected properly. See the [Multi file projects](Compile#multi-file-projects) section for details on how the root file is discovered. Note that you must open the directory (multi-or one of its antecedents) containing all the project files in vscode for this mechanism to work.
+If you cannot build a multi file LaTeX project from a subfile, it means that the root file is not detected properly. See the [Multi file projects](Compile#multi-file-projects) section for details on how the root file is discovered. Note that you must open the directory (or one of its antecedents) containing all the project files in vscode for this mechanism to work.
 
 ## The Problem Pane displays wrong messages
 
