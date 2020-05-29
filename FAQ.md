@@ -46,7 +46,7 @@ The following extensions are known to cause issues when active at the same time 
 
 Starting with 1.35.0, VS Code supports WSL through [Remote - WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl). LaTeX Workshop works well with the extension.
 
-Also, in WSL2 file watchers might not work. For now, you have to set [`latex-workshop.latex.watch.usePolling`](multi-file-projects#latex-workshoplatexwatchusePolling) to `true`, and restart VS Code. See https://github.com/microsoft/WSL/issues/4739 for more information about the issue.
+Also, in WSL2 file watchers might not work. For now, you have to set [`latex-workshop.latex.watch.usePolling`](Compile#latex-workshoplatexwatchusepolling) to `true`, and restart VS Code. See https://github.com/microsoft/WSL/issues/4739 for more information about the issue.
 
 ## Using with Linux under Virtual Box, VM Workstation Player, [Crostini](https://chromium.googlesource.com/chromiumos/docs/+/master/containers_and_vms.md), and others.
 
@@ -70,7 +70,7 @@ Visual Studio Online with [self-hosted environments](https://docs.microsoft.com/
 
 ## File watcher does not work when used with OneDrive or a network drive
 
-When your files are located inside `OneDrive` or a network drive, you have to set [`latex-workshop.latex.watch.usePolling`](multi-file-projects#latex-workshoplatexwatchusePolling) to `true`, and restart VS Code.
+When your files are located inside `OneDrive` or a network drive, you have to set [`latex-workshop.latex.watch.usePolling`](Compile#latex-workshoplatexwatchusepolling) to `true`, and restart VS Code.
 
 ## The directory ~/node_modules/ may cause errors
 
@@ -78,7 +78,7 @@ The directory `~/node_modules/` in the home directory may cause errors on Mac an
 
 ## I cannot build from a subfile
 
-If you cannot build a multi file LaTeX project from a subfile, it means that the root file is not detected properly. See the [Multi file projects](multi-file-projects) page for details on how the root file is discovered. Note that you must open the directory (or one of its antecedents) containing all the project files in vscode for this mechanism to work.
+If you cannot build a multi file LaTeX project from a subfile, it means that the root file is not detected properly. See the [Multi file projects](Compile#multi-file-projects) section for details on how the root file is discovered. Note that you must open the directory (multi-or one of its antecedents) containing all the project files in vscode for this mechanism to work.
 
 ## The Problem Pane displays wrong messages
 
