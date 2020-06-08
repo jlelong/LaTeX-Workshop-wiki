@@ -389,7 +389,7 @@ This is useful when compiling relies on a Makefile or a bespoke script. When def
 
 ### latex-workshop.latex.external.build.args
 
-The arguments of [`latex-workshop.latex.external.build.command`](#latex-workshoplatexexternalbuild.command) when calling `latex-workshop.build`
+The arguments of [`latex-workshop.latex.external.build.command`](#latex-workshoplatexexternalbuildcommand) when calling `latex-workshop.build`
 
 If the rootFile is defined, you can use any of the placeholders defined in the [section on LaTeX Recipes](#LaTeX-recipes).
 
