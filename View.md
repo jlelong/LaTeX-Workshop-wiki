@@ -248,6 +248,26 @@ Backward: Use `%{input}` and `%{line}` as placeholders.
 ],
 ```
 
+#### macOS
+
+##### [Skim](https://skim-app.sourceforge.io)
+
+Backward: In `Skim > Preferences > Sync`, select `Visual Studio Code` in the `Preset` tab
+
+Forward: Edit `settings.json` as follows, then use `<kbd>cmd</kbd>+<kbd>option</kbd>+<kbd>j</kbd>` to jump the viewer.
+```
+"latex-workshop.view.pdf.viewer": "external",
+"latex-workshop.view.pdf.external.synctex.command": "/Applications/Skim.app/Contents/SharedSupport/displayline",
+"latex-workshop.view.pdf.external.synctex.args": [
+    "-r",
+    "-b",
+    "%LINE%",
+    "%PDF%",
+    "%TEX%",
+],
+```
+
+
 ### Overview
 
 | Setting key                                                                                        | Description                               | Default       | Type      |
