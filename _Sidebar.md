@@ -53,5 +53,8 @@
   - [Changing between `\[...\]` and `\begin{}...\end{}`](Environments#changing-between--and-beginend)
   - [Closing the current environment](Environments#Closing-the-current-environment)
   - [Surrounding selection with an environment](Environments#Surrounding-selection-with-an-environment)
+- [Extra features](ExtraFeatures)
+  - [Structure of the document](ExtraFeatures#structure-of-the-document)
+  - [Counting words](ExtraFeatures#counting-words)
 - [VS Code Remote Development](Remote)
 - [FAQ and common issues](FAQ)

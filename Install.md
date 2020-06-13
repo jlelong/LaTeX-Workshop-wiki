@@ -33,7 +33,7 @@ The typical usage is to open a `.tex` file and have a look at the _TeX_ sidebar 
 - [Viewing and going from source to PDF back and forth](View)
 - [Catching errors and warnings](Compile#catching-errors-and-warnings)
 - [Navigating in environments](Environments#Navigating)
-- Navigating the document structure. The section names of LaTeX outline hierarchy are defined in `latex-workshop.view.outline.sections`. This property is an array of case-sensitive strings in the order of document structure hierarchy. For multiple tags in the same level, separate the tags with `|` as delimiters, e.g., `section|alternative`. It is also used by the folding mechanism.
+- Navigating the document structure. The section names of LaTeX outline hierarchy are defined in [`latex-workshop.view.outline.sections`](ExtraFeatures#latex-workshopviewoutlinesections). This property is an array of case-sensitive strings in the order of document structure hierarchy. For multiple tags in the same level, separate the tags with `|` as delimiters, e.g., `section|alternative`. It is also used by the folding mechanism.
 - Miscellaneous actions
   - Open citation browser, see also [Intellisense for citations](Intellisense#Citations)
 
