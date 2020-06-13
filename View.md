@@ -46,6 +46,10 @@ Below are the detailed explanations for the different possible settings
 | [`latex-workshop.view.pdf.spreadMode`](#latex-workshopviewpdfspreadMode)          | The default spread mode of the PDF viewer    |
 | [`latex-workshop.view.pdf.hand`](#latex-workshopviewpdfhand)                      | Enable the hand tool                         |
 | [`latex-workshop.view.pdf.invert`](#latex-workshopviewpdfinvert)                  | Define the CSS invert filter level           |
+| [`latex-workshop.view.pdf.invertMode.brightness`](#latex-workshopviewpdfinvertmodebrightness) | brightness filter level          |
+| [`latex-workshop.view.pdf.invertMode.grayscale`](#latex-workshopviewpdfinvertmodegrayscale)   | grayscale filter level           |
+| [`latex-workshop.view.pdf.invertMode.hueRotate`](#latex-workshopviewpdfinvertmodehuerotate)   | hue-rotate filter angle          |
+| [`latex-workshop.view.pdf.invertMode.sepia`](#latex-workshopviewpdfinvertmodesepia)           | sepia filter level               |
 | [`latex-workshop.view.pdf.trim`](#latex-workshopviewpdftrim)                      | The default trim mode of the PDF viewer      |
 | [`latex-workshop.view.pdf.backgroundColor`](#latex-workshopviewpdfbackgroundcolor)| The background color of the PDF viewer       |
 
