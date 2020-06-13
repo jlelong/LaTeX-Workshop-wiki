@@ -119,6 +119,41 @@ This config can invert the color of PDF. Possible values are any floating point 
 | -------- | ------------- |
 | _number_ | `0`           |
 
+
+### latex-workshop.view.pdf.invertMode.brightness
+
+Define the CSS brightness filter level of the PDF viewer when the invert mode is enabled. Possible values are from 0 to 2.
+
+| type     | default value |
+| -------- | ------------- |
+| _number_ | `1`           |
+
+
+### latex-workshop.view.pdf.invertMode.grayscale
+
+Define the CSS grayscale filter level of the PDF viewer when the invert mode is enabled. Possible values are from 0 to 1.
+
+| type     | default value |
+| -------- | ------------- |
+| _number_ | `0.6`         |
+
+### latex-workshop.view.pdf.invertMode.hueRotate
+
+Define the CSS hue-rotate filter angle of the PDF viewer when the invert mode is enabled. Possible values are from 0 to 360.
+
+| type     | default value |
+| -------- | ------------- |
+| _number_ | `180`         |
+
+### latex-workshop.view.pdf.invertMode.sepia
+
+Define the CSS sepia filter level of the PDF viewer when the invert mode is enabled. Possible values are from 0 to 1.
+
+| type     | default value |
+| -------- | ------------- |
+| _number_ | `0`           |
+
+
 ### latex-workshop.view.pdf.backgroundColor
 
 Define the background color for the PDF viewer.
@@ -127,7 +162,7 @@ Possible values are any strings representing a color in CSS.
 
 | type     | default value |
 | -------- | ------------- |
-| _string_ | `"#525659"`   |
+| _string_ | `"#ffffff"`   |
 
 ### latex-workshop.view.pdf.trim
 
