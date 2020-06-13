@@ -96,7 +96,7 @@ The following settings are helpful to customize how to build a project and how t
 | [`latex-workshop.latex.magic.bib.args`](#magic-comments)  | Arguments for the `BIB program`                                                                       |          | _array_ of _strings_ |
 | [`latex-workshop.latex.build.forceRecipeUsage`](#latex-workshoplatexbuildforceRecipeUsage) | Force the use of recipes | false | _boolean_ |
 
-A progress bar indicates the building progress. It can be customized using the following configuration variables
+when [`latex-workshop.progress.enabled`](latex-workshopprogressenabled) is set, a progress bar indicates the building progress. It can be customized using the following configuration variables
 
 - [`latex-workshop.progress.location`](#latex-workshopprogresslocation)
 - [`latex-workshop.progress.runIconType`](#latex-workshopprogressrunIconType)
@@ -505,6 +505,14 @@ Display LaTeX Workshop update message on new versions.
 Clear the LaTeX Compiler logs before every step of a recipe.
 
 Set this property to false to keep the logs of all tools in a recipe.
+
+| type      | default value |
+| --------- | ------------- |
+| _boolean_ | `true`        |
+
+#### latex-workshop.progress.enabled
+
+Enable the progress bar and the LaTeX compilation info panel.
 
 | type      | default value |
 | --------- | ------------- |
