@@ -1,4 +1,4 @@
-# Viewing & Synctex
+# Viewing & SyncTeX
 
 <img src="https://raw.githubusercontent.com/James-Yu/LaTeX-Workshop/master/demo_media/synctex.gif" alt="intellisense demo" height="180px">
 
@@ -18,7 +18,7 @@ You must reload VSCode to take into account a change in this configuration.
 
 | type               | default value |
 | ------------------ | ------------- |
-| _number            | `250`         |
+| _number_            | `250`         |
 
 ## Overview
 
@@ -32,7 +32,7 @@ You must reload VSCode to take into account a change in this configuration.
 
 ## Internal PDF viewer
 
-The PDF viewer provided with the extension internally uses [pdf.js](https://github.com/mozilla/pdf.js). The keybindings support by pdf.js are documented [here](https://github.com/mozilla/pdf.js/wiki/Frequently-Asked-Questions#faq-shortcuts).
+The PDF viewer provided with the extension internally uses [PDF.js](https://github.com/mozilla/pdf.js). The keybindings support by PDF.js are documented [here](https://github.com/mozilla/pdf.js/wiki/Frequently-Asked-Questions#faq-shortcuts).
 
 You can customize the look and feel of the internal PDF viewer. Of course, this is only relevant when using the internal PDF viewer for viewing the PDF produced by the building toolchain, ie when `latex-workshop.view.pdf.viewer` is set to `tab`. Although the PDF viewer should refresh automatically when needed, you can request it explicitly by calling the command `latex-workshop.refresh-viewer`.
 
@@ -199,7 +199,7 @@ Rebroadcast KeyboardEvent on the internal PDF viewers. If the keyboard shortcuts
 | ------ | ------------- |--------------------|
 | _enum_ | `auto`        | `auto`, `force`, `never` |
 
-## Synctex
+## SyncTeX
 
 This extension will automatically look for `synctex` in the expected location (see [settings](#latex-workshopsynctexpath)) and will alert the user if it is not found. Alternatively, you can use the javascript built-in version of `synctex`, see [settings](#latex-workshopsynctexsynctexjsenabled).
 
@@ -217,7 +217,9 @@ Synctex may fail if the path contains non-ASCII characters, see [FAQ](FAQ#Path-c
 | ------ | -------------- |----------------------------------- |
 | _enum_ | `"ctrl-click"` | `"ctrl-click"` or `"double-click"` |
 
-### Using synctex with an external viewer
+### Using SyncTeX with an external viewer
+
+Note: this function is not officially supported.
 
 #### Windows
 
@@ -372,6 +374,8 @@ The arguments to apply to the external forward synctex command. %LINE% is the li
 | type          | default value                 |
 | ------------- | ----------------------------- |
 | _array_       | ["%LINE%", "%PDF%", "%TEX%" ] |
+
+Note: this function is not officially supported.
 
 ### latex-workshop.synctex.synctexjs.enabled
 
