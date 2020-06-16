@@ -57,3 +57,12 @@ TeXCount arguments to count words in LaTeX document of the entire project from t
 | _array_ of _strings_ | `[]`          |
 
 Arguments must be in separate strings in the array. Additional arguments, i.e., `-merge %DOC%` for the project and the current document path for counting current file will be appended when constructing the command.
+
+## Literate programming support using LaTeX
+
+We support the following the programming languages inside a LaTeX document
+
+- `Julia` code using [Weave.jl](https://github.com/JunoLab/Weave.jl). See [Building a `.jnw` file](Compile#Building-a-jnw-file). We use the `jlweave` language mode for this and recognize the following file extensions   `.jnw`, and `.jtexw`.
+- `R` code using [knitr](https://yihui.org/knitr/) or [Sweave](https://stat.ethz.ch/R-manual/R-devel/library/utils/doc/Sweave.pdf). See [Building a `.rnw` file](Compile#Building-a-rnw-file) for how to compile LaTeX files using Sweave. We use the `rsweave` language mode for this and recognize the following file extensions   `.rnw`, `.Rnw`, `.Rtex`, `.rtex`, `.snw` and `.Snw`.
+
+For syntax highlighting to be properly working, you need to install the VSCode extension that gives support for the corresponding programming language.

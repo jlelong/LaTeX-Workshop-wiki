@@ -103,11 +103,93 @@ when [`latex-workshop.progress.enabled`](latex-workshopprogressenabled) is set, 
 - [`latex-workshop.progress.barLength`](#latex-workshopprogressbarLength)
 - [`latex-workshop.progress.barStyle`](#latex-workshopprogressbarStyle)
 
+## Building a `.jnw` file
+
+Files associated to the `jlweave` language mode can be compiled using two different approaches, depending on how you would like code to be rendered
+
+1. **Using the `Verbatim` environment.** Once executed the Julia code and its output are rendered using the `Verbatim` environment. This approach requires to add the following instructions to the `.jnw` file
+
+    ```latex
+    \usepackage{fancyvrb}
+
+    \DefineVerbatimEnvironment{juliaout}{Verbatim}{}
+    \DefineVerbatimEnvironment{juliacode}{Verbatim}{fontshape=sl}
+    \DefineVerbatimEnvironment{juliaterm}{Verbatim}{}
+    ```
+
+    Then, the file can be compiled using the following recipe
+
+    ```json
+      {
+        "name": "Compile jnw files",
+        "tools": [
+          "jnw2tex",
+          "latexmk"
+        ]
+      }
+    ```
+
+    with the `jnw2tex` tool defined by
+
+    ```json
+      {
+        "name": "jnw2tex",
+        "command": "julia",
+        "args": [
+          "-e",
+          "using Weave; weave(\"%DOC_EXT%\", doctype=\"tex\")"
+        ],
+        "env": {}
+      }
+    ```
+
+1. **Using the `minted` environment.** Once executed the Julia code and its output are rendered using the `minted` environment. This approach requires to add the following instructions to the `.jnw` file
+
+    ```latex
+    \usepackage{minted}
+    ```
+
+    and to pass the `-shell-escape` to the LaTeX compiler. See the [FAQ](FAQ#how-to-pass--shell-escape-to-latexmk) for explanations on how to add this flag.
+
+    Then, the file can be compiled using the following recipe
+
+    ```json
+      {
+        "name": "Compile jnw files",
+        "tools": [
+          "jnw2texminted",
+          "latexmk"
+        ]
+      }
+    ```
+
+    with the `jnw2tex` tool defined by
+
+    ```json
+      {
+        "name": "jnw2texminted",
+        "command": "julia",
+        "args": [
+          "-e",
+          "using Weave; weave(\"%DOC_EXT%\", doctype=\"texminted\")"
+        ],
+        "env": {}
+      }
+    ```
+
+    and create a `.latexmkrc` file in the workspace directory containing
+
+    ```perl
+    $pdflatex='pdflatex -shell-escape';
+    ```
+
+When using auto-build and the file has not been compiled inside the extension yet, we use the first recipe with name (converted to lowercase) containing either `jnw` or `jlweave`.
+
 ## Building a `.rnw` file
 
-`.rnw` files can be automatically compiling using the following recipe definition
+Files associated to the `rsweave` language mode can be automatically compiled using the following recipe definition
 
-```
+```json
   {
     "name": "Compile Rnw files",
     "tools": [
@@ -119,7 +201,7 @@ when [`latex-workshop.progress.enabled`](latex-workshopprogressenabled) is set, 
 
 with the `rnw2tex` tool defined by
 
-```
+```json
   {
     "name": "rnw2tex",
     "command": "Rscript",
@@ -328,7 +410,7 @@ When building the project, the [magic comments](#magic-comments) in the root fil
 }]
 ```
 
-The `args` and `env` parameters can contain symbols surrounded by `%`. These placeholders are replaced on-the-fly. 
+The `args` and `env` parameters can contain symbols surrounded by `%`. These placeholders are replaced on-the-fly.
 
 ### Placeholders
 
@@ -363,7 +445,6 @@ It also applies to auto build. Recipes are refered to by their names as defined 
 | -------- | ------------- |
 | _string_ | `"first"`     |
 
-
 ### latex-workshop.latex.build.forceRecipeUsage
 
 Force the use of the recipe system even when a magic comment defines a TeX command.
@@ -371,7 +452,6 @@ Force the use of the recipe system even when a magic comment defines a TeX comma
 |   type    |  default value   |
 | --------- | ---------------- |
 | _boolean_ | `false`          |
-
 
 ## External build command
 
