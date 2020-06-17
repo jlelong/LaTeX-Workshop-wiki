@@ -26,14 +26,6 @@ Show the labels in the outline/structure views. Reload VSCode after changing the
 |----------|---------------|
 | _boolean | `true`        |
 
-### latex-workshop.view.outline.numbers.enabled
-
-Show the sectioning numbers in the outline/structure views.
-
-| type     | default value |
-|----------|---------------|
-| _boolean | `true`        |
-
 ## Counting words
 
 To count the number of words in the current document, call _Count words in LaTeX document_ from the Command Palette (the associated command is `latex-workshop.wordcount`)
