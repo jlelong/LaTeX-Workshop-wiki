@@ -201,9 +201,7 @@ Rebroadcast KeyboardEvent on the internal PDF viewers. If the keyboard shortcuts
 
 ## SyncTeX
 
-This extension will automatically look for `synctex` in the expected location (see [settings](#latex-workshopsynctexpath)) and will alert the user if it is not found. Alternatively, you can use the javascript built-in version of `synctex`, see [settings](#latex-workshopsynctexsynctexjsenabled).
-
-Synctex may fail if the path contains non-ASCII characters, see [FAQ](FAQ#Path-containing-Chinese-characters).
+The javascript built-in version of SyncTeX is used by default. See [settings](#latex-workshopsynctexsynctexjsenabled).
 
 ### Usage
 
@@ -363,7 +361,7 @@ The command to execute when forward synctex to external viewer.
 
 | type     | default value |
 | -------- | ------------- |
-| _string_ | ""            |
+| _string_ | `""`            |
 
 Note: this function is not officially supported.
 
@@ -371,9 +369,9 @@ Note: this function is not officially supported.
 
 The arguments to apply to the external forward synctex command. %LINE% is the line number, %PDF% is the placeholder for the absolute path to the generated PDF file, and %TEX% is the source LaTeX file path with `.tex` extension from which syncTeX is fired.
 
-| type          | default value                 |
-| ------------- | ----------------------------- |
-| _array_       | ["%LINE%", "%PDF%", "%TEX%" ] |
+| type          | default value                   |
+| ------------- | -----------------------------   |
+| _array_       | `["%LINE%", "%PDF%", "%TEX%" ]` |
 
 Note: this function is not officially supported.
 
@@ -413,9 +411,9 @@ The command to execute when using external viewer. When left empty, the default 
 
 This function is not officially supported. `%PDF%` is the placeholder for the absolute path to the generated PDF file.
 
-| type          | default value |
-| ------------- | ------------- |
-| _string_      | ""            |
+| type          | default value   |
+| ------------- | -------------   |
+| _string_      | `""`            |
 
 ```
     "latex-workshop.view.pdf.external.viewer.command": "/usr/bin/okular",
@@ -425,9 +423,9 @@ This function is not officially supported. `%PDF%` is the placeholder for the ab
 
 This works with `latex-workshop.view.pdf.external.viewer.command` to provide the arguments to the external viewer.
 
-| type          | default value |
-| ------------- | ------------- |
-| _array_       | [ "%PDF%" ]   |
+| type          | default value   |
+| ------------- | -------------   |
+| _array_       | `[ "%PDF%" ]`   |
 
 e.g.
 
