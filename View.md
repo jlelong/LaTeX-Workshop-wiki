@@ -1,4 +1,4 @@
-# Viewing & Synctex
+# Viewing & SyncTeX
 
 <img src="https://raw.githubusercontent.com/James-Yu/LaTeX-Workshop/master/demo_media/synctex.gif" alt="intellisense demo" height="180px">
 
@@ -18,7 +18,7 @@ You must reload VSCode to take into account a change in this configuration.
 
 | type               | default value |
 | ------------------ | ------------- |
-| _number            | `250`         |
+| _number_            | `250`         |
 
 ## Overview
 
@@ -32,7 +32,7 @@ You must reload VSCode to take into account a change in this configuration.
 
 ## Internal PDF viewer
 
-The PDF viewer provided with the extension internally uses [pdf.js](https://github.com/mozilla/pdf.js). The keybindings support by pdf.js are documented [here](https://github.com/mozilla/pdf.js/wiki/Frequently-Asked-Questions#faq-shortcuts).
+The PDF viewer provided with the extension internally uses [PDF.js](https://github.com/mozilla/pdf.js). The keybindings support by PDF.js are documented [here](https://github.com/mozilla/pdf.js/wiki/Frequently-Asked-Questions#faq-shortcuts).
 
 You can customize the look and feel of the internal PDF viewer. Of course, this is only relevant when using the internal PDF viewer for viewing the PDF produced by the building toolchain, ie when `latex-workshop.view.pdf.viewer` is set to `tab`. Although the PDF viewer should refresh automatically when needed, you can request it explicitly by calling the command `latex-workshop.refresh-viewer`.
 
@@ -46,6 +46,10 @@ Below are the detailed explanations for the different possible settings
 | [`latex-workshop.view.pdf.spreadMode`](#latex-workshopviewpdfspreadMode)          | The default spread mode of the PDF viewer    |
 | [`latex-workshop.view.pdf.hand`](#latex-workshopviewpdfhand)                      | Enable the hand tool                         |
 | [`latex-workshop.view.pdf.invert`](#latex-workshopviewpdfinvert)                  | Define the CSS invert filter level           |
+| [`latex-workshop.view.pdf.invertMode.brightness`](#latex-workshopviewpdfinvertmodebrightness) | brightness filter level          |
+| [`latex-workshop.view.pdf.invertMode.grayscale`](#latex-workshopviewpdfinvertmodegrayscale)   | grayscale filter level           |
+| [`latex-workshop.view.pdf.invertMode.hueRotate`](#latex-workshopviewpdfinvertmodehuerotate)   | hue-rotate filter angle          |
+| [`latex-workshop.view.pdf.invertMode.sepia`](#latex-workshopviewpdfinvertmodesepia)           | sepia filter level               |
 | [`latex-workshop.view.pdf.trim`](#latex-workshopviewpdftrim)                      | The default trim mode of the PDF viewer      |
 | [`latex-workshop.view.pdf.backgroundColor`](#latex-workshopviewpdfbackgroundcolor)| The background color of the PDF viewer       |
 
@@ -195,11 +199,9 @@ Rebroadcast KeyboardEvent on the internal PDF viewers. If the keyboard shortcuts
 | ------ | ------------- |--------------------|
 | _enum_ | `auto`        | `auto`, `force`, `never` |
 
-## Synctex
+## SyncTeX
 
-This extension will automatically look for `synctex` in the expected location (see [settings](#latex-workshopsynctexpath)) and will alert the user if it is not found. Alternatively, you can use the javascript built-in version of `synctex`, see [settings](#latex-workshopsynctexsynctexjsenabled).
-
-Synctex may fail if the path contains non-ASCII characters, see [FAQ](FAQ#Path-containing-Chinese-characters).
+The javascript built-in version of SyncTeX is used by default. See [settings](#latex-workshopsynctexsynctexjsenabled).
 
 ### Usage
 
@@ -213,7 +215,9 @@ Synctex may fail if the path contains non-ASCII characters, see [FAQ](FAQ#Path-c
 | ------ | -------------- |----------------------------------- |
 | _enum_ | `"ctrl-click"` | `"ctrl-click"` or `"double-click"` |
 
-### Using synctex with an external viewer
+### Using SyncTeX with an external viewer
+
+Note: this function is not officially supported.
 
 #### Windows
 
@@ -357,7 +361,7 @@ The command to execute when forward synctex to external viewer.
 
 | type     | default value |
 | -------- | ------------- |
-| _string_ | ""            |
+| _string_ | `""`            |
 
 Note: this function is not officially supported.
 
@@ -365,9 +369,11 @@ Note: this function is not officially supported.
 
 The arguments to apply to the external forward synctex command. %LINE% is the line number, %PDF% is the placeholder for the absolute path to the generated PDF file, and %TEX% is the source LaTeX file path with `.tex` extension from which syncTeX is fired.
 
-| type          | default value                 |
-| ------------- | ----------------------------- |
-| _array_       | ["%LINE%", "%PDF%", "%TEX%" ] |
+| type          | default value                   |
+| ------------- | -----------------------------   |
+| _array_       | `["%LINE%", "%PDF%", "%TEX%" ]` |
+
+Note: this function is not officially supported.
 
 ### latex-workshop.synctex.synctexjs.enabled
 
@@ -405,9 +411,9 @@ The command to execute when using external viewer. When left empty, the default 
 
 This function is not officially supported. `%PDF%` is the placeholder for the absolute path to the generated PDF file.
 
-| type          | default value |
-| ------------- | ------------- |
-| _string_      | ""            |
+| type          | default value   |
+| ------------- | -------------   |
+| _string_      | `""`            |
 
 ```
     "latex-workshop.view.pdf.external.viewer.command": "/usr/bin/okular",
@@ -417,9 +423,9 @@ This function is not officially supported. `%PDF%` is the placeholder for the ab
 
 This works with `latex-workshop.view.pdf.external.viewer.command` to provide the arguments to the external viewer.
 
-| type          | default value |
-| ------------- | ------------- |
-| _array_       | [ "%PDF%" ]   |
+| type          | default value   |
+| ------------- | -------------   |
+| _array_       | `[ "%PDF%" ]`   |
 
 e.g.
 
