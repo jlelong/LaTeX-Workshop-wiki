@@ -104,7 +104,7 @@ Scale of math preview on hover.
 
 | type     | default value |
 | -------- | ------------- |
-| _number_ | 1             |
+| _number_ | `1`           |
 
 ### latex-workshop.hover.preview.newcommand.parseTeXFile.enabled
 
@@ -120,7 +120,7 @@ Set the path of a file containing newcommands to be used in Hover Preview. If th
 
 | type     | default value |
 | -------- | ------------- |
-| _string_ | ""    |
+| _string_ | ""            |
 
 ### latex-workshop.hover.preview.cursor.enabled
 
