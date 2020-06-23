@@ -35,7 +35,7 @@ There are three commands for formatting `.bib` files:
 - `latex-workshop.bibalign`: to align fields,
 - `latex-workshop.bibalignsort`: to perform both at once.
 
-These commands can be accessed through Visual Studio Code's **Command Pallet** (default <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>p</kbd> or <kbd>⌘</kbd>+<kbd>shift</kbd>+<kbd>p</kbd>).
+These commands can be accessed through Visual Studio Code's **Command Palette** (default <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>p</kbd> or <kbd>⌘</kbd>+<kbd>shift</kbd>+<kbd>p</kbd>).
 
 ### Sorting
 
