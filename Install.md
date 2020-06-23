@@ -39,6 +39,12 @@ The typical usage is to open a `.tex` file and have a look at the _TeX_ sidebar 
 
 If you prefer to access some of the most common actions through a right click menu, set `latex-workshop.showContextMenu` to `true`. Default is `false`.
 
+### Supported languages
+
+In addtions to `LaTeX`, [LaTeX-expl3](https://www.latex-project.org/latex3/code/) is supported. You can change the language mode from `LaTeX` to `LaTeX-expl3` clicking on the language indicator, `LaTeX`, of the satus bar and selecting `LaTeX-expl3` from the drop-down. See an [official document](https://code.visualstudio.com/docs/languages/overview#_changing-the-language-for-the-selected-file).
+
+[Sweave](https://stat.ethz.ch/R-manual/R-patched/library/utils/doc/Sweave.pdf), [knitr](https://yihui.org/knitr/), and [Weave.jl](https://github.com/JunoLab/Weave.jl) are also supported. See [Building a .rnw file](Compile#building-a-rnw-file) and [Building a .jnw file](Compile#building-a-jnw-file) for the details.
+
 ## Using Docker
 
 Starting with 1.35.0, VS Code supports Docker with [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers). LaTeX Workshop works well with the extension. Try the extension at first.
