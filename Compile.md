@@ -274,7 +274,7 @@ You must reload VSCode to take into account a change in this configuration.
 
 | type               | default value |
 | ------------------ | ------------- |
-| _number            | `300`         |
+| _number_           | `300`         |
 
 ### latex-workshop.latex.watch.delay
 
@@ -284,7 +284,7 @@ You must reload VSCode to take into account a change in this configuration.
 
 | type               | default value |
 | ------------------ | ------------- |
-| _number            | `250`         |
+| _number_           | `250`         |
 
 ## Cleaning generated files
 
@@ -295,7 +295,7 @@ LaTeX compilation typically generates several auxiliary files. They can be remov
 | `latex-workshop.latex.autoBuild.cleanAndRetry.enabled` | Enable cleaning and building once more after errors in the build toolchain                                                | `true`    | _boolean_          |
 | `latex-workshop.latex.autoClean.run`                   | Define when LaTeX auxillary files should be deleted.                                                                      | `"never"` | _string_           |
 | `latex-workshop.latex.clean.fileTypes`                 | Extensions of files to clean                                                                                              |           | _array of strings_ |
-| `latex-workshop.latex.clean.subfolder.enabled`         | Clean LaTeX auxillary files recursively in sub-folders of [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutDir) | false     | _boolean_          |
+| `latex-workshop.latex.clean.subfolder.enabled`         | Clean LaTeX auxillary files recursively in sub-folders of [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutDir) | `false`   | _boolean_          |
 
 ### latex-workshop.latex.autoClean.run
 

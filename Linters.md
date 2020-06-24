@@ -82,4 +82,4 @@ When `latex-workshop.chktex.run` is set to `onType`, defines the delay in millis
 
 | type     | default value |
 | -------- | ------------- |
-| _number_ | 500           |
+| _number_ | `500`         |
