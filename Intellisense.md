@@ -225,9 +225,9 @@ Define the location of the kpsewhich executable file.
 
 ### latex-workshop.kpsewhich.enabled"
 
-Use `kpsewhich -format=.bib` to resolve bibliography files in addition to looking into the directories listed in [`latex-workshop.latex.bibDirs`](latex-workshoplatexbibDirs).
+Use `kpsewhich -format=.bib` to resolve bibliography files in addition to looking into the directories listed in [`latex-workshop.latex.bibDirs`](#latex-workshoplatexbibDirs).
 
-The `ksepwhich` executable is defined by [`latex-workshop.kpsewhich.path`](latex-workshopkpsewhichpath).
+The `ksepwhich` executable is defined by [`latex-workshop.kpsewhich.path`](#latex-workshopkpsewhichpath).
 
 | type      | default value |
 | --------- | ------------- |
