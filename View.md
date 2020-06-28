@@ -335,7 +335,7 @@ Rebroadcast KeyboardEvent on the internal PDF viewers. If the keyboard shortcuts
 
 Define the CSS invert filter level of the PDF viewer.
 
-This config can invert the color of PDF. Possible values are any floating point numbers from 0 to 1.
+This config can invert the color of PDF. Possible values are any floating point numbers from `0` to `1`.
 
 | type     | default value |
 | -------- | ------------- |
@@ -344,7 +344,7 @@ This config can invert the color of PDF. Possible values are any floating point 
 
 ### latex-workshop.view.pdf.invertMode.brightness
 
-Define the CSS brightness filter level of the PDF viewer when the invert mode is enabled. Possible values are from 0 to 2.
+Define the CSS brightness filter level of the PDF viewer when the invert mode is enabled. Possible values are from `0` to `2`.
 
 | type     | default value |
 | -------- | ------------- |
@@ -353,7 +353,7 @@ Define the CSS brightness filter level of the PDF viewer when the invert mode is
 
 ### latex-workshop.view.pdf.invertMode.grayscale
 
-Define the CSS grayscale filter level of the PDF viewer when the invert mode is enabled. Possible values are from 0 to 1.
+Define the CSS grayscale filter level of the PDF viewer when the invert mode is enabled. Possible values are from `0` to `1`.
 
 | type     | default value |
 | -------- | ------------- |
@@ -361,7 +361,7 @@ Define the CSS grayscale filter level of the PDF viewer when the invert mode is 
 
 ### latex-workshop.view.pdf.invertMode.hueRotate
 
-Define the CSS hue-rotate filter angle of the PDF viewer when the invert mode is enabled. Possible values are from 0 to 360.
+Define the CSS hue-rotate filter angle of the PDF viewer when the invert mode is enabled. Possible values are from `0` to `360`.
 
 | type     | default value |
 | -------- | ------------- |
@@ -369,7 +369,7 @@ Define the CSS hue-rotate filter angle of the PDF viewer when the invert mode is
 
 ### latex-workshop.view.pdf.invertMode.sepia
 
-Define the CSS sepia filter level of the PDF viewer when the invert mode is enabled. Possible values are from 0 to 1.
+Define the CSS sepia filter level of the PDF viewer when the invert mode is enabled. Possible values are from `0` to `1`.
 
 | type     | default value |
 | -------- | ------------- |
@@ -378,6 +378,8 @@ Define the CSS sepia filter level of the PDF viewer when the invert mode is enab
 
 
 ### latex-workshop.view.pdf.internal.synctex.keybinding
+
+Which keybinding to use for the internal PDF viewer for reverse SyncTeX.
 
 | type   | default value  | possible values                    |
 | ------ | -------------- |----------------------------------- |

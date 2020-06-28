@@ -4,7 +4,7 @@ This extension provides a variety of intellisense completions for different LaTe
 
 ## Citations
 
-Every file of a LaTeX project is parsed to look for bibliography resources, either directly in a `thebibliography` environment or given by the `bibliography` or `addbibresource` commands or variants of them. If some of these resources are located outside the project directly, you need to list the directories where to look for them in [`latex-workshop.latex.bibDirs`](#latex-workshoplatexbibDirs).
+Every file of a LaTeX project is parsed to look for bibliography resources, either directly in a `thebibliography` environment or given by the `bibliography` or `addbibresource` commands or variants of them. If some of these resources are located outside the project directly, you need to list the directories where to look for them in [`latex-workshop.latex.bibDirs`](#latex-workshoplatexbibDirs). You can also rely on the `kpsewhich` command to resolve bibliography files by setting [`latex-workshop.kpsewhich.enabled`](#latex-workshopkpsewhichenabled) to true.
 
 Then, when citation commands like `\cite` and its derivatives are automatically completed with bibliography entries found in the various resources.
 
@@ -18,6 +18,8 @@ If you use very large bibtex files, you may experience temporary freezing. Hence
 | [`latex-workshop.intellisense.citation.type`](#latex-workshopintellisensecitationtype)                    | Type of vs code suggestion to use                                              | `"inline"`     | _string_: "inline" \| "browser" (dropdown menu) |
 | [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled)                | Enabling of auto-completion for commands and environments from loaded packages | `false`        | _boolean_                                       |
 | [`latex-workshop.latex.bibDirs`](#latex-workshoplatexbibDirs)                                             | List of paths to look for `.bib` files.                                        | `[]`           | _array_ of _strings_                            |
+| [`latex-workshop.kpsewhich.enabled`](#latex-workshopkpsewhichenabled)                | Use `kpsewhich` to resolve `.bib` files.                                        | `false`           | _boolean_                            |
+| [`latex-workshop.kpsewhich.path`](#latex-workshopkpsewhichpath)                                             | location of the kpsewhich executable file.  | `"kpsewhich"`           | _string_ |
 
 ## References
 
@@ -212,6 +214,24 @@ Absolute paths are required. This setting is only used by the intellisense featu
 | type                 | default value |
 | -------------------- | ------------- |
 | _array_ of _strings_ | `[]`          |
+
+### latex-workshop.kpsewhich.path
+
+Define the location of the kpsewhich executable file.
+
+| type      | default value     |
+| --------- | ----------------- |
+| _string_  | `"kpsewhich"`     |
+
+### latex-workshop.kpsewhich.enabled"
+
+Use `kpsewhich -format=.bib` to resolve bibliography files in addition to looking into the directories listed in [`latex-workshop.latex.bibDirs`](latex-workshoplatexbibDirs).
+
+The `ksepwhich` executable is defined by [`latex-workshop.kpsewhich.path`](latex-workshopkpsewhichpath).
+
+| type      | default value |
+| --------- | ------------- |
+| _boolean_ | `false`       |
 
 
 ### latex-workshop.intellisense.file.exclude

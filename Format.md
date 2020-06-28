@@ -1,5 +1,7 @@
 # Formatting
 
+If you want to format a file on save, you have to set `"editor.formatOnSave": true`. See an [official document](https://code.visualstudio.com/docs/getstarted/settings).
+
 ## LaTeX files
 
 Install [latexindent.pl](https://github.com/cmhughes/latexindent.pl) for formatting support if it is not provided by your LaTeX distribution.
