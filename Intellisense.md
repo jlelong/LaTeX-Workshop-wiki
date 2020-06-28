@@ -223,7 +223,7 @@ Define the location of the kpsewhich executable file.
 | --------- | ----------------- |
 | _string_  | `"kpsewhich"`     |
 
-### latex-workshop.kpsewhich.enabled"
+### latex-workshop.kpsewhich.enabled
 
 Use `kpsewhich -format=.bib` to resolve bibliography files in addition to looking into the directories listed in [`latex-workshop.latex.bibDirs`](#latex-workshoplatexbibDirs).
 
