@@ -5,7 +5,7 @@
 - [Using with Linux under Virtual Box, VM Workstation Player, Crostini, and others.](#using-with-linux-under-virtual-box-vm-workstation-player-crostini-and-others)
 - [Cygwin is not supported](#cygwin-is-not-supported)
 - [code-server is not supported](#code-server-is-not-supported)
-- [Visual Studio Online with self-hosted environments is not supported](#visual-studio-online-with-self-hosted-environments-is-not-supported)
+- [Visual Studio Codespaces with self-hosted environments is not supported](#visual-studio-online-with-self-hosted-environments-is-not-supported)
 - [Visual Studio Live Share is not supported](#visual-studio-live-share-is-not-supported)
 - [File watcher does not work when used with OneDrive or a network drive](#file-watcher-does-not-work-when-used-with-onedrive-or-a-network-drive)
 - [The directory ~/node_modules/ may cause errors](#the-directory-node_modules-may-cause-errors)
@@ -60,9 +60,17 @@ LaTeX Workshop does not support TeX Live installed through Cygwin. Please instal
 
 LaTeX Workshop does not support [code-server](https://github.com/cdr/code-server).
 
-## Visual Studio Online with self-hosted environments is not supported
+## Visual Studio Codespaces with self-hosted environments is not supported
 
-Visual Studio Online with [self-hosted environments](https://docs.microsoft.com/en-us/visualstudio/online/how-to/vscode#self-hosted) is not supported.
+Visual Studio Codespaces with [self-hosted environments](https://docs.microsoft.com/en-us/visualstudio/online/how-to/vscode#self-hosted) is not supported.
+
+## Visual Studio Codespaces has an issue with the internal PDF viewer
+
+Visual Studio Codespaces does not work well with the internal PDF viewer. See the [issue](https://github.com/MicrosoftDocs/vsonline/issues/11).
+
+## VSCodium is not officially supported
+
+[VSCodium](https://github.com/VSCodium/vscodium) is not officially supported. We do not help to resolve issues related to VSCodium.
 
 ## Visual Studio Live Share is not supported
 
