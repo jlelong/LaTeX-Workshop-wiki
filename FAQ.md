@@ -148,7 +148,7 @@ Nesting snippets requires to have intellisense automatically triggered inside sn
 
 This is mostly related to the `editor.quickSuggestions` setting. The following value works well
 
-```
+```json
 "editor.quickSuggestions": {
         "other": true,
         "comments": false,
@@ -164,7 +164,7 @@ Some packages such as `minted` requires `LaTeX` compilers to use the `-shell-esc
 
 1. Modify the section of `latex-workshop.latex.tools` related to `latexmk` in the following way
 
-    ````
+    ```json
     "name": "latexmk",
     "command": "latexmk",
     "args": [
@@ -176,11 +176,11 @@ Some packages such as `minted` requires `LaTeX` compilers to use the `-shell-esc
         "-outdir=%OUTDIR%",
         "%DOC%"
     ]
-    ````
+    ```
 
 1. Directly specify `-shell-escape` in the compiler flag of `latexmk`. Modify the section of `latex-workshop.latex.tools` related to `latexmk` in the following way
 
-    ````
+    ```json
     "name": "latexmk",
     "command": "latexmk",
     "args": [
@@ -192,13 +192,13 @@ Some packages such as `minted` requires `LaTeX` compilers to use the `-shell-esc
         "-outdir=%OUTDIR%",
         "%DOC%"
     ]
-    ````
+    ```
 
 1. Create a `.latexmkrc` config file (in your home directory or in the working directory) containing at least
 
-    ````
+    ```perl
     $pdflatex='pdflatex -shell-escape';
-    ````
+    ```
 
 ## LaTeX-Workshop shadows vscode's default keybindings
 

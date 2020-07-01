@@ -428,7 +428,7 @@ This function is not officially supported. `%PDF%` is the placeholder for the ab
 | ------------- | -------------   |
 | _string_      | `""`            |
 
-```
+```json
     "latex-workshop.view.pdf.external.viewer.command": "/usr/bin/okular",
 ```
 

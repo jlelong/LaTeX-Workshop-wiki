@@ -51,14 +51,14 @@ These methods replace all sectioning commands with the sectioning command one le
 
 Applying `latex-workshop.promote-sectioning` to the following selection,
 
-```
+```latex
 \subsection{Demo}
 \paragraph{Content}
 ```
 
 yields
 
-```
+```latex
 \section{Demo}
 \subsubsection{Content}
 ```

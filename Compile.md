@@ -314,7 +314,7 @@ A LaTeX recipe refers to a sequence/array of commands which LaTeX Workshop execu
 - The first one simply relies on the `latexmk` command
 - The second one run the following sequence of commands `pdflatex` → `bibtex` → `pdflatex` → `pdflatex`.
 
-```
+```json
 [
   {
     "name": "latexmk 🔃",
@@ -336,7 +336,7 @@ A LaTeX recipe refers to a sequence/array of commands which LaTeX Workshop execu
 
 and each tool appearing in the `tools` field is defined `latex-workshop.latex.tools`. Its default value is given by
 
-```
+```json
 [
   {
     "name": "latexmk",
@@ -377,7 +377,7 @@ You can create multiple recipes with different tools. Each recipe is an object i
 
 The `tools` in recipes can be defined in `latex-workshop.latex.tools`, in which each command is a `tool`. Each tool is an object consisting of a `name`, a `command` to be spawned, its arguments (`args`) and some specific environment variables (`env`). The `env` entry is a dictionary. Imagine you want to use a `texmf` subdirectory local to your home project, just write
 
-```
+```json
   "env": {
       "TEXMFHOME": "%DIR%/texmf"
   }
@@ -389,7 +389,7 @@ To include a tool in a recipe, the tool's `name` should be included in the recip
 
 When building the project, the [magic comments](#magic-comments) in the root file are used if present, otherwise the first recipe is used. You can compile with another recipe by command `latex-workshop.recipes`. By default [`latexmk`](http://personal.psu.edu/jcc8/software/latexmk/) is used. This tool is bundled in most LaTeX distributions, and requires perl to execute. For non-perl users, the following `texify` toolchain from MikTeX may worth a try:
 
-```
+```json
 "latex-workshop.latex.recipes": [{
   "name": "texify",
   "tools": [
@@ -485,7 +485,7 @@ LaTeX Workshop supports `% !TEX program` magic comment to specify the compiler p
 
 For `% !TEX program` magic comment, its arguments are defined in `latex-workshop.latex.magic.args`:
 
-```
+```json
 "latex-workshop.latex.magic.args": [
   "-synctex=1",
   "-interaction=nonstopmode",
@@ -506,7 +506,7 @@ Suppose there is a line `% !TEX program = xelatex` in the root file. Upon buildi
 
 When using `% !TEX program` with bibliographies, a `bib` compiler must be defined with `% !BIB program` comment, e.g., `% !BIB program = bibtex`. Otherwise the extension will only run one-pass compilation with the specified LaTeX compiler. If needed, you can pass extra arguments to the `% !BIB program` using the `latex-workshop.latex.magic.bib.args` variable:
 
-```
+```json
 "latex-workshop.latex.magic.bib.args": [
   "%DOCFILE%"
 ]
