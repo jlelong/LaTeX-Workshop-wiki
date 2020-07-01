@@ -41,7 +41,7 @@ If you prefer to access some of the most common actions through a right click me
 
 ### Supported languages
 
-In addtions to `LaTeX`, [LaTeX-expl3](https://www.latex-project.org/latex3/code/) is supported. You can change the language mode from `LaTeX` to `LaTeX-expl3` clicking on the language indicator, `LaTeX`, of the satus bar and selecting `LaTeX-expl3` from the drop-down. See an [official document](https://code.visualstudio.com/docs/languages/overview#_changing-the-language-for-the-selected-file).
+In addtions to `LaTeX`, [LaTeX-Expl3](https://www.latex-project.org/latex3/code/) is supported. You can change the language mode from `LaTeX` to `LaTeX-Expl3` clicking on the language indicator, `LaTeX`, of the satus bar and selecting `LaTeX-Expl3` from the drop-down. See an [official document](https://code.visualstudio.com/docs/languages/overview#_changing-the-language-for-the-selected-file).
 
 [Sweave](https://stat.ethz.ch/R-manual/R-patched/library/utils/doc/Sweave.pdf), [knitr](https://yihui.org/knitr/), and [Weave.jl](https://github.com/JunoLab/Weave.jl) are also supported. See [Building a .rnw file](Compile#building-a-rnw-file) and [Building a .jnw file](Compile#building-a-jnw-file) for the details.
 

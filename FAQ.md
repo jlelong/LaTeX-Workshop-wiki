@@ -5,7 +5,10 @@
 - [Using with Linux under Virtual Box, VM Workstation Player, Crostini, and others.](#using-with-linux-under-virtual-box-vm-workstation-player-crostini-and-others)
 - [Cygwin is not supported](#cygwin-is-not-supported)
 - [code-server is not supported](#code-server-is-not-supported)
-- [Visual Studio Online with self-hosted environments is not supported](#visual-studio-online-with-self-hosted-environments-is-not-supported)
+- [Eclipse Theia is not supported](#eclipse-theia-is-not-supported)
+- [Visual Studio Codespaces with self-hosted environments is not supported](#visual-studio-online-with-self-hosted-environments-is-not-supported)
+- [Visual Studio Codespaces has an issue with the internal PDF viewer](#visual-studio-codespaces-has-an-issue-with-the-internal-pdf-viewer)
+- [VSCodium is not officially supported](#vscodium-is-not-officially-supported)
 - [Visual Studio Live Share is not supported](#visual-studio-live-share-is-not-supported)
 - [File watcher does not work when used with OneDrive or a network drive](#file-watcher-does-not-work-when-used-with-onedrive-or-a-network-drive)
 - [The directory ~/node_modules/ may cause errors](#the-directory-node_modules-may-cause-errors)
@@ -60,9 +63,21 @@ LaTeX Workshop does not support TeX Live installed through Cygwin. Please instal
 
 LaTeX Workshop does not support [code-server](https://github.com/cdr/code-server).
 
-## Visual Studio Online with self-hosted environments is not supported
+## Eclipse Theia is not supported
 
-Visual Studio Online with [self-hosted environments](https://docs.microsoft.com/en-us/visualstudio/online/how-to/vscode#self-hosted) is not supported.
+LaTeX Workshop does not support [Eclipse Theia](https://github.com/eclipse-theia/theia).
+
+## Visual Studio Codespaces with self-hosted environments is not supported
+
+Visual Studio Codespaces with [self-hosted environments](https://docs.microsoft.com/en-us/visualstudio/online/how-to/vscode#self-hosted) is not supported.
+
+## Visual Studio Codespaces has an issue with the internal PDF viewer
+
+Visual Studio Codespaces does not work well with the internal PDF viewer. See the [issue](https://github.com/MicrosoftDocs/vsonline/issues/11).
+
+## VSCodium is not officially supported
+
+[VSCodium](https://github.com/VSCodium/vscodium) is not officially supported. We do not help to resolve issues related to VSCodium.
 
 ## Visual Studio Live Share is not supported
 
@@ -133,7 +148,7 @@ Nesting snippets requires to have intellisense automatically triggered inside sn
 
 This is mostly related to the `editor.quickSuggestions` setting. The following value works well
 
-```
+```json
 "editor.quickSuggestions": {
         "other": true,
         "comments": false,
@@ -149,7 +164,7 @@ Some packages such as `minted` requires `LaTeX` compilers to use the `-shell-esc
 
 1. Modify the section of `latex-workshop.latex.tools` related to `latexmk` in the following way
 
-    ````
+    ```json
     "name": "latexmk",
     "command": "latexmk",
     "args": [
@@ -161,11 +176,11 @@ Some packages such as `minted` requires `LaTeX` compilers to use the `-shell-esc
         "-outdir=%OUTDIR%",
         "%DOC%"
     ]
-    ````
+    ```
 
 1. Directly specify `-shell-escape` in the compiler flag of `latexmk`. Modify the section of `latex-workshop.latex.tools` related to `latexmk` in the following way
 
-    ````
+    ```json
     "name": "latexmk",
     "command": "latexmk",
     "args": [
@@ -177,13 +192,13 @@ Some packages such as `minted` requires `LaTeX` compilers to use the `-shell-esc
         "-outdir=%OUTDIR%",
         "%DOC%"
     ]
-    ````
+    ```
 
 1. Create a `.latexmkrc` config file (in your home directory or in the working directory) containing at least
 
-    ````
+    ```perl
     $pdflatex='pdflatex -shell-escape';
-    ````
+    ```
 
 ## LaTeX-Workshop shadows vscode's default keybindings
 

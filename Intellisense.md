@@ -44,12 +44,12 @@ The key `\` automatically triggers completion of LaTeX commands. Several mechani
 
 | Setting key                                                                                                 | Description                                                                    | Default | Type      |
 | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ------- | --------- |
-| [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled)                  | Enabling of auto-completion for commands and environments from loaded packages | `false` | _boolean_ |
-| [`latex-workshop.intellisense.package.env.enabled`](#latex-workshopintellisensepackageenvenabled)      | Enable `\envname` snippets | `true` | _boolean_ |
-| [`latex-workshop.intellisense.package.extra`](#latex-workshopintellisensepackageextra)                  | Extra packages to load for intellisense | `[]` | _array_ of _strings_ |
-| [`latex-workshop.intellisense.unimathsymbols.enabled`](#latex-workshopintellisenseunimathsymbolsenabled)    | Show unimath symbols as suggestions when `\` pressed | `false` | _boolean_     |
+| [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled)                  | Enabling of auto-completion for commands and environments from loaded packages | `true`  | _boolean_ |
+| [`latex-workshop.intellisense.package.env.enabled`](#latex-workshopintellisensepackageenvenabled)           | Enable `\envname` snippets                                                     | `true`  | _boolean_ |
+| [`latex-workshop.intellisense.package.extra`](#latex-workshopintellisensepackageextra)                      | Extra packages to load for intellisense                                        | `[]` | _array_ of _strings_ |
+| [`latex-workshop.intellisense.unimathsymbols.enabled`](#latex-workshopintellisenseunimathsymbolsenabled)    | Show unimath symbols as suggestions when `\` pressed                           | `false` | _boolean_     |
 | [`latex-workshop.intellisense.useTabStops.enabled`](#latex-workshopintellisenseuseTabStopsenabled)          | Use tabstops in intellisense completion                                        | `true`  | _boolean_ |
-| [`latex-workshop.intellisense.optionalArgsEntries.enabled`](#latex-workshopintellisenseoptionalArgsEntriesenabled) | Add one completion item per command signature                                  | `true`  | _boolean_ |
+| [`latex-workshop.intellisense.optionalArgsEntries.enabled`](#latex-workshopintellisenseoptionalArgsEntriesenabled) | Add one completion item per command signature                           | `true`  | _boolean_ |
 | [`latex-workshop.latex.texDirs`](Multi-File-Projects#latex-workshoplatextexDirs)                            | List of paths to look for input `.tex` files.                                  | `[]`    | _array_ of _strings_ |
 
 ## Environments
@@ -142,7 +142,7 @@ Auto-complete commands and environments from used packages.
 
 | type      | default value |
 | --------- | ------------- |
-| _boolean_ | `false`       |
+| _boolean_ | `true`        |
 
 ### latex-workshop.intellisense.package.extra
 
@@ -199,7 +199,7 @@ When `\` is typed, show unimath symbols in the dropdown selector.
 
 ### latex-workshop.intellisense.commandsJSON.replace
 
-Dictionary of `"snippet name": "snippet action"` to replace the default snippets in `data/commands.json`. Snippet actions should not begin with a `\`. See `data/commands.json` for the list of snippet names. An empty action removes the snippet. E.g. `{ "latexdisplaymath": "[ ${1} \\]", "figure": "" }`. Reload vscode to make any change in this configuration effective
+Dictionary of `"snippet name": "snippet action"` to replace the default snippets in `data/commands.json`. Snippet actions should not begin with a `\`. See `data/commands.json` for the list of snippet names. An empty action removes the snippet. E.g. `{ "[": "[ ${1} \\]", "figure": "" }`. Reload vscode to make any change in this configuration effective
 
 | type                               | default value |
 |------------------------------------|---------------|
