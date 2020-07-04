@@ -70,6 +70,7 @@ A kind of dark mode for the PDF viewer is available. Set `latex-workshop.view.pd
 
 |                                    Setting key                                    |                Description                   |
 | --------------------------------------------------------------------------------- | -----------------------------------------    |
+| [`latex-workshop.view.pdf.invertMode.enabled`](#latex-workshopviewpdfinvertmodeenabled)       | Enable the CSS invert filter.    |
 | [`latex-workshop.view.pdf.invert`](#latex-workshopviewpdfinvert)                  | Define the CSS invert filter level           |
 | [`latex-workshop.view.pdf.invertMode.brightness`](#latex-workshopviewpdfinvertmodebrightness) | brightness filter level          |
 | [`latex-workshop.view.pdf.invertMode.grayscale`](#latex-workshopviewpdfinvertmodegrayscale)   | grayscale filter level           |
@@ -330,6 +331,19 @@ Rebroadcast KeyboardEvent on the internal PDF viewers. If the keyboard shortcuts
 | ------ | ------------- |--------------------|
 | _enum_ | `auto`        | `auto`, `force`, `never` |
 
+
+### latex-workshop.view.pdf.invertMode.enabled
+
+Enable the CSS invert filter. The possible choices are
+
+- `auto`: Enable the invert filter when using a dark theme.
+- `always`: Always enable invert filter.
+- `compat`: Enable the invert filter only if `invert > 0`.
+- `never`: Disable the invert filter.
+
+| type   | default value | possible values                     |
+| ------ | ------------- | ---------------                     |
+| _enum_ | `compat`      | `auto`, `always`, `compat`, `never` |
 
 ### latex-workshop.view.pdf.invert
 
