@@ -17,11 +17,12 @@ This automatic insertion of `\item` can be deactivated by setting `latex-worksho
 
 In any case, you can use the shortcut <kbd>ctrl</kbd>+<kbd>l</kbd>, <kbd>ctrl</kbd>+<kbd>Enter</kbd> to insert a newline and `\item`. On Mac, <kbd>ctrl</kbd> is replaced by <kbd>⌘</kbd>.
 
-## Navigating
+## Navigating and selecting
 
-- To navigate from `\begin/\end` to the corresponding `\end/\begin`, while on the `begin` or `end` keywords, call _LaTeX Workshop: Navigate to matching begin/end_ from the **Command Palette** (command `latex-workshop.navigate-envpair`).
-- To select the current environment name, call _LaTeX Workshop: Select the current environment name_ from the **Command Palette** (command `latex-workshop.select-envname`). For this command to work, the cursor must be strictly between `\begin{...}` and `\end{...}`. If the current environment is `\[...\]`, this function will automatically convert it into `\begin{equation*}...\end{equation*}`. Repeated calls result in selecting the outer environment. **Note**: this function _does not_ work with the [Vim](https://github.com/VSCodeVim/Vim) extension.
-- To add a multi-cursor to the current environment name, call _LaTeX Workshop: Add a multi-cursor to the current environment name_ from the **Command Palette** (command `latex-workshop.multicursor-envname`). If the current environment is `\[...\]`, this function will automatically convert it into `\begin{}...\end{}`. For this command to work, the cursor must be strictly between `\begin{...}` and `\end{...}`. Repeated calls result in selecting the outer environments.
+- To navigate from `\begin/\end` to the corresponding `\end/\begin`, while on the `begin` or `end` keywords, call _LaTeX Workshop: Navigate to matching begin/end_ from the _Command Palette_ (command `latex-workshop.navigate-envpair`).
+- To select the full content of an environment, including the opening and clair statement, call _LaTeX Workshop: Select the current environment content_ from the _Command Palette_ (command `latex-workshop.select-envcontent`). This function considers blocks surrounded by `\[...\]` and `\(...\)` as environments. Repeated calls result in selecting the outer environments.
+- To select the current environment name, call _LaTeX Workshop: Select the current environment name_ from the _Command Palette_ (command `latex-workshop.select-envname`). For this command to work, the cursor must be strictly between `\begin{...}` and `\end{...}`. If the current environment is `\[...\]`, this function will automatically convert it into `\begin{equation*}...\end{equation*}`. Repeated calls result in selecting the outer environments. **Note**: this function _does not_ work with the [Vim](https://github.com/VSCodeVim/Vim) extension.
+- To add a multi-cursor to the current environment name, call _LaTeX Workshop: Add a multi-cursor to the current environment name_ from the _Command Palette_ (command `latex-workshop.multicursor-envname`). If the current environment is `\[...\]`, this function will automatically convert it into `\begin{}...\end{}`. For this command to work, the cursor must be strictly between `\begin{...}` and `\end{...}`. Repeated calls result in selecting the outer environments.
 
 These three functions are directly available from the TeX badge.
 

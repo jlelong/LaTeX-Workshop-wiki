@@ -55,7 +55,7 @@
 - [Playing with environments](Environments)
   - [Inserting an environment](Environments#inserting-an-environment)
   - [Itemize like environments](Environments#Itemize-like-environments)
-  - [Navigating](Environments#Navigating)
+  - [Navigating and selecting](Environments#Navigating-and-selecting)
   - [Changing between `\[...\]` and `\begin{}...\end{}`](Environments#changing-between--and-beginend)
   - [Closing the current environment](Environments#Closing-the-current-environment)
   - [Surrounding selection with an environment](Environments#Surrounding-selection-with-an-environment)
