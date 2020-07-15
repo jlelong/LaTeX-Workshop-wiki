@@ -249,6 +249,8 @@ Define the editor group to use for the viewer tab.
 - `"current"`: Use the current editor group
 - `"left"`: Put the viewer tab in a new group on the left of the current one
 - `"right"`: Put the viewer tab in a new group on the right of the current one
+- `"above"`: Put the viewer tab in a new group above the current one
+- `"below"`: Put the viewer tab in a new group below the current one
 
 ### latex-workshop.view.pdf.zoom
 
