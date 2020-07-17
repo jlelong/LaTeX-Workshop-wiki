@@ -27,7 +27,7 @@ If no root file is found, most of the features in LaTeX Workshop will not work.
 
 Once the root file is determined, it is parsed to discover all the files it includes using `input`, `include`, `InputIfFileExists`, `subfile`, `import` and `subimport` and the process goes on recursively. All these files are called dependencies and are considered to define a LaTeX project. If you include some files located in some external directories, you can list these extra directories in [`latex-workshop.latex.texDirs`](#latex-workshoplatextexDirs).
 
-Moreover, when a `.fls` file with the same basename as the root file exists, it is used to compute the full list of dependencies, ie all classes, packages, fonts, input `.tex` files, listings, graphs, ... All these files are parsed to provide intellisense completion. When  [`latex-workshop.latex.autoBuild.run`](Compile#auto-build-latex) is set to `onFileChange`, building is automatically triggered whenever any of the dependencies is modified.  You can use [`latex-workshop.latex.watch.files.ignore`](#latex-workshoplatexwatchfilesignore) to prevent some files from being watched. The default is to ignore files inside your TeX distribution and files with `.code.tex` or `.sty` suffix.
+Moreover, when a `.fls` file with the same basename as the root file exists, it is used to compute the full list of dependencies, ie all classes, packages, fonts, input `.tex` files, listings, graphs, ... All these files are parsed to provide intellisense completion. When  [`latex-workshop.latex.autoBuild.run`](Compile#auto-build-latex) is set to `onFileChange`, building is automatically triggered whenever any of the dependencies is modified. You can use [`latex-workshop.latex.watch.files.ignore`](#latex-workshoplatexwatchfilesignore) to prevent some files from being watched. The default is to ignore files inside your TeX distribution and files with `.code.tex` or `.sty` suffix.
 
 ### Relevant settings
 
@@ -227,11 +227,12 @@ Besides manually calling the `Build LaTeX Project` command to compile a document
 
 When to trigger automatic building.
 
-|   type   |  default value   |      possible values       |
-| -------- | ---------------- | -------------------------- |
-| _string_ | `"onFileChange"` | `"never"`,`"onFileChange"` |
+|   type   |  default value   |      possible values                    |
+| -------- | ---------------- | --------------------------------------- |
+| _string_ | `"onFileChange"` | `"never"`, `"onSave"`, `"onFileChange"` |
 
 - `"never"`: Disable the auto build feature
+- `"onSave"`: Build the project upon saving a `.tex` file.
 - `"onFileChange"`: Build the project upon detecting a file change in any of the dependencies. The file can even be modified outside vscode. See [here](Multi-File-Projects) for explanations on what dependencies are and how some of them can be ignored. See the [FAQ](FAQ#I-use-build-on-save-but-I-occasionally-want-to-save-without-building) for how to save without triggering the build when this feature is on. When a file changes, we wait for a delay before triggering the build. This delay is configured by [`latex-workshop.latex.watch.delay`](Multi-File-Projects#latex-workshoplatexwatchdelay)
 
 ### latex-workshop.latex.autoBuild.interval
