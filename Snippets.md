@@ -41,6 +41,13 @@ Sectioning commands can of course be inserted by just typing them as they are au
 
 For instance, typing `SSE` + `TAB` expands to `\section{}` with the cursor inside the brackets.
 
+### Selecting a whole section
+
+The current section along with all its subsections can be selected by calling the command `latex-workshop.select-section`. Repeated calls ends in expanding the selection in two ways:
+
+- First, outer sections are selected
+- If there is not outer section, the selection is expanded upwards be selection the previous section.
+
 ### Promoting/demoting sectioning levels
 
 Adjusting sectioning levels can be done by calling one of the two commands `latex-workshop.promote-sectioning` and `latex-workshop.demote-sectioning` from the _Command Palette_.
@@ -62,6 +69,8 @@ yields
 \section{Demo}
 \subsubsection{Content}
 ```
+
+To recursively promote/demote a section and and all its subsections, first call `latex-workshop.select-section` to select the section and all its subsections and then call `latex-workshop.promote-sectioning` or `latex-workshop.demote-sectioning`.
 
 #### Keybindings
 
