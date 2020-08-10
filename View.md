@@ -183,8 +183,8 @@ Backward: Use `%{input}` and `%{line}` as placeholders.
 Backward: In `Skim > Preferences > Sync`, select `Visual Studio Code` in the `Preset` tab
 
 Forward: Edit `settings.json` as follows, then use
-- `<kbd>cmd</kbd>+<kbd>option</kbd>+<kbd>v</kbd>` to open Skim at the beginning of the PDF
-- `<kbd>cmd</kbd>+<kbd>option</kbd>+<kbd>j</kbd>` to jump to Skim at the current line
+- <kbd>cmd</kbd>+<kbd>option</kbd>+<kbd>v</kbd> to open Skim at the beginning of the PDF
+- <kbd>cmd</kbd>+<kbd>option</kbd>+<kbd>j</kbd> to jump to Skim at the current line
 ```json
 "latex-workshop.view.pdf.viewer": "external",
 "latex-workshop.view.pdf.external.viewer.command": "/Applications/Skim.app/Contents/SharedSupport/displayline",
