@@ -32,6 +32,7 @@
 - [Customizing a Color Theme](#customizing-a-color-theme)
 - [Overriding snippets](#overriding-snippets)
 - [Autocompletion for `\includegraphics` seems incomplete](#autocompletion-for-includegraphics-seems-incomplete)
+- [Environment variables in `.zshrc` don't take effect with VS Code Remote](#environment-variables-in-zshrc-dont-take-effect-with-vs-code-remote)
 
 ## Known incompatible Extensions
 
@@ -246,3 +247,7 @@ You can override some snippets provided by the extension by using the [`latex-wo
 ## Autocompletion for `\includegraphics` seems incomplete
 
 Autocompletion for `includegraphics` takes into account the paths listed by the `\graphicspath` command if any. In such a case, we only list the files located under these directories. See also the configuration variables referenced [here](Intellisense#files)
+
+## Environment variables in `.zshrc` don't take effect with VS Code Remote
+
+Use `.zshenv` or `.zprofile` instead of `.zshrc`. See [stackexchange](https://unix.stackexchange.com/questions/71253/what-should-shouldnt-go-in-zshenv-zshrc-zlogin-zprofile-zlogout).
