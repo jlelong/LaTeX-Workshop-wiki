@@ -91,7 +91,7 @@ git check-ignore -v full_path_to_the_file
 
 ### latex-workshop.intellisense.includegraphics.preview.enabled
 
-Whether or not to preview graphics for `\includegraphics`.
+Enable preview for `\includegraphics` completion.
 
 | type      | default value |
 | --------- | ------------- |
