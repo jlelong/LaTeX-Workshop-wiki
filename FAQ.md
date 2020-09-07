@@ -2,7 +2,7 @@
 
 - [Known incompatible extensions](#known-incompatible-extensions)
 - [Using LaTeX Workshop with WSL](#using-latex-workshop-with-wsl)
-- [Using with Linux under Virtual Box, VM Workstation Player, Crostini, and others.](#using-with-linux-under-virtual-box-vm-workstation-player-crostini-and-others)
+- [Graphical glitches with Linux under Virtual Box, VM Workstation Player, Crostini, and others.](#graphical-glitches-with-linux-under-virtual-box-vm-workstation-player-crostini-and-others)
 - [Cygwin is not supported](#cygwin-is-not-supported)
 - [code-server is not supported](#code-server-is-not-supported)
 - [Eclipse Theia is not supported](#eclipse-theia-is-not-supported)
@@ -51,9 +51,9 @@ Starting with 1.35.0, VS Code supports WSL through [Remote - WSL](https://market
 
 Also, in WSL2 file watchers might not work. For now, you have to set [`latex-workshop.latex.watch.usePolling`](Compile#latex-workshoplatexwatchusepolling) to `true`, and restart VS Code. See https://github.com/microsoft/WSL/issues/4739 for more information about the issue. Alternatively, you can set `latex-workshop.saveWithoutBuilding: onSave` to only trigger a build upon saving a file as it does not require file watchers to work.
 
-## Using with Linux under Virtual Box, VM Workstation Player, [Crostini](https://chromium.googlesource.com/chromiumos/docs/+/master/containers_and_vms.md), and others
+## Graphical glitches with Linux under Virtual Box, VM Workstation Player, [Crostini](https://chromium.googlesource.com/chromiumos/docs/+/master/containers_and_vms.md), and others
 
-Display problems can occur. In that case, start VS Code with `--disable-gpu`. See [official doc](https://code.visualstudio.com/docs/supporting/FAQ#_vs-code-is-blank), [realted issue](https://github.com/microsoft/vscode/issues/92970), and [another issue](https://github.com/James-Yu/LaTeX-Workshop/issues/1935).
+Display problems, e.g., on the PDF viewer, can occur with Linux, especially under Virtual Box and others. In that case, start VS Code with `--disable-gpu`. See [the official document](https://code.visualstudio.com/docs/supporting/FAQ#_vs-code-is-blank), [realted issue](https://github.com/microsoft/vscode/issues/92970), and [another issue](https://github.com/James-Yu/LaTeX-Workshop/issues/1935).
 
 ## Cygwin is not supported
 
