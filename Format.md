@@ -31,13 +31,15 @@ Define the command line arguments for latexindent. In the addition to the placeh
 
 ## Bibtex files
 
-There are three commands for formatting `.bib` files:
+BibTeX files can be formatted either by using the VSCode _Format Document_ or _Format Selection_ commands or by calling one of the following three commands
 
 - `latex-workshop.bibsort`: to sort the file,
 - `latex-workshop.bibalign`: to align fields,
 - `latex-workshop.bibalignsort`: to perform both at once.
 
 These commands can be accessed through Visual Studio Code's **Command Palette** (default <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>p</kbd> or <kbd>⌘</kbd>+<kbd>shift</kbd>+<kbd>p</kbd>).
+
+Whether to sort the file when calling VSCode formatting commands is set by [`latex-workshop.bibtex-format.sort.enabled`](latex-workshopbibtex-formatsortenabled)
 
 ### Sorting
 
@@ -58,6 +60,14 @@ When sorting BibTeX files, how to handle duplicates that appear. Duplicates are 
 |        Type       |      Default Value       | Possible Values                                                         |
 | ----------------- | ------------------------ | ----------------------------------------------------------------------- |
 | _enum of string_  | `"Highlight Duplicates"` | `"Ignore Duplicates"`, `"Highlight Duplicates"`, `"Comment Duplicates"` |
+
+#### latex-workshop.bibtex-format.sort.enabled
+
+Sort content when calling VSCode formatter on a .bib file.
+
+|        Type        | Default Value |
+| ------------------ | ------------- |
+| _boolean_          | `false`       |
 
 ### Aligning
 
