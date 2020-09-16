@@ -35,6 +35,7 @@
 - [Autocompletion for `\includegraphics` seems incomplete](#autocompletion-for-includegraphics-seems-incomplete)
 - [Environment variables in `.bashhrc` don't take effect with VS Code Remote](#environment-variables-in-bashrc-dont-take-effect-with-vs-code-remote)
 - [Environment variables in `.zshrc` don't take effect with VS Code Remote](#environment-variables-in-zshrc-dont-take-effect-with-vs-code-remote)
+- [Environment variables in these files still don't take effect with VS Code Remote](#environment-variables-in-these-files-still-dont-take-effect-with-vs-code-remote)
 
 ## Known incompatible Extensions
 
@@ -262,3 +263,7 @@ Use `.bash_profile` or `.profile` instead of `.bashrc`. See [superuser](https://
 ## Environment variables in `.zshrc` don't take effect with VS Code Remote
 
 Use `.zshenv` or `.zprofile` instead of `.zshrc`. See [stackexchange](https://unix.stackexchange.com/questions/71253/what-should-shouldnt-go-in-zshenv-zshrc-zlogin-zprofile-zlogout).
+
+## Environment variables in these files still don't take effect with VS Code Remote
+
+After editing these files, you have to kill `vscode-server`  on the remote host and restart it. Select `Remote-SSH: Kill VS Code Server on Host...` from the Command Palette (F1).
