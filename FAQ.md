@@ -33,6 +33,7 @@
 - [Customizing a Color Theme](#customizing-a-color-theme)
 - [Overriding snippets](#overriding-snippets)
 - [Autocompletion for `\includegraphics` seems incomplete](#autocompletion-for-includegraphics-seems-incomplete)
+- [Environment variables in `.bashhrc` don't take effect with VS Code Remote](#environment-variables-in-bashrc-dont-take-effect-with-vs-code-remote)
 - [Environment variables in `.zshrc` don't take effect with VS Code Remote](#environment-variables-in-zshrc-dont-take-effect-with-vs-code-remote)
 
 ## Known incompatible Extensions
@@ -252,6 +253,11 @@ You can override some snippets provided by the extension by using the [`latex-wo
 ## Autocompletion for `\includegraphics` seems incomplete
 
 Autocompletion for `includegraphics` takes into account the paths listed by the `\graphicspath` command if any. In such a case, we only list the files located under these directories. See also the configuration variables referenced [here](Intellisense#files)
+
+## Environment variables in `.bashrc` don't take effect with VS Code Remote
+
+Use `.bash_profile` or `.profile` instead of `.bashrc`. See [superuser](https://superuser.com/questions/183870/difference-between-bashrc-and-bash-profile) and the [reference manual](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Bash-Startup-Files).
+
 
 ## Environment variables in `.zshrc` don't take effect with VS Code Remote
 
