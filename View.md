@@ -395,7 +395,7 @@ Define the CSS sepia filter level of the PDF viewer when the invert mode is enab
 
 ### latex-workshop.view.pdf.internal.synctex.keybinding
 
-Which keybinding to use for the internal PDF viewer for reverse SyncTeX.
+Which keybinding to use for the internal PDF viewer for reverse SyncTeX. You must reload VSCode or the PDF viewer to take into account a change in this configuration.
 
 | type   | default value  | possible values                    |
 | ------ | -------------- |----------------------------------- |
