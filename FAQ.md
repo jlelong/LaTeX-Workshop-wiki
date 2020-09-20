@@ -35,6 +35,7 @@
 - [Autocompletion for `\includegraphics` seems incomplete](#autocompletion-for-includegraphics-seems-incomplete)
 - [Environment variables in `.bashhrc` don't take effect with VS Code Remote](#environment-variables-in-bashrc-dont-take-effect-with-vs-code-remote)
 - [Environment variables in `.zshrc` don't take effect with VS Code Remote](#environment-variables-in-zshrc-dont-take-effect-with-vs-code-remote)
+- [You cannot use a tilde `~` in `PATH`](#you-cannot-use-a-tilde--in-path)
 
 
 ## Known incompatible Extensions
@@ -266,3 +267,7 @@ After editing these files, you have to kill `vscode-server`  on the remote host 
 Use `.zshenv` or `.zprofile` instead of `.zshrc`. See [stackexchange](https://unix.stackexchange.com/questions/71253/what-should-shouldnt-go-in-zshenv-zshrc-zlogin-zprofile-zlogout).
 
 After editing these files, you have to kill `vscode-server`  on the remote host and restart it. Select `Remote-SSH: Kill VS Code Server on Host...` from the Command Palette (F1).
+
+## You cannot use a tilde `~` in `PATH`
+
+You can not use a tilde `~` in the environment variable `PATH` as an abbreviation of your home directory.
