@@ -113,6 +113,7 @@ Note: this function is not officially supported.
 The solution is simple, and works with `sumatraPDF`. Just add the following option to your configuration
 
 ```json
+"latex-workshop.view.pdf.viewer": "external",
 "latex-workshop.view.pdf.external.synctex.command": "C:/Program Files/SumatraPDF/SumatraPDF.exe",
 "latex-workshop.view.pdf.external.synctex.args": [
     "-forward-search",
@@ -141,6 +142,7 @@ This is trickier, but works. See [here](https://ubuntuforums.org/showthread.php?
 1. Add the following options to your configuration:
 
     ```json
+    "latex-workshop.view.pdf.viewer": "external",
     "latex-workshop.view.pdf.external.viewer.command": "evince2".
     "latex-workshop.view.pdf.external.viewer.args": [
         "%PDF%"
