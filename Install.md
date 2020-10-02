@@ -18,6 +18,24 @@ Usually, you do **NOT** have to set PATH environment variable. TeX distributions
 
 If you can not fix the setting of your system, you can also override PATH with the `env` property of [LaTeX recipes](Compile#latex-recipes).
 
+## macOS
+
+Sometimes the formatter doesn't work on macOS, and doesn't give an error. Run this to confirm that Perl is the problem:
+```sh
+# Adjust paths as necessary to reflect your install
+$ /usr/local/texlive/2020/texmf-dist/scripts/latexindent/latexindent.pl -c '/tmp' -o 'example.tex' -y="defaultIndent: ' '" 'example.tex'
+```
+
+If you get a bunch of Perl errors, then run this:
+```sh
+$ brew install perl
+$ PERL_MM_OPT='INSTALL_BASE='"$HOME"'/perl5' cpan local::lib
+$ echo 'eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"' >> "$HOME"'/.bash_profile'
+# Start a new shell, then:
+$ cpan install CPAN
+$ cpan install Log::Log4perl Log::Dispatch::File YAML::Tiny Unicode::GCString
+```
+
 ## Settings
 
 You can modify settings through the menu of VS Code, `Preferences > Settings`.
