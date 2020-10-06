@@ -6,6 +6,7 @@
 - [Cygwin is not supported](#cygwin-is-not-supported)
 - [code-server is not supported](#code-server-is-not-supported)
 - [Eclipse Theia is not supported](#eclipse-theia-is-not-supported)
+- [Onivim 2 is not supported](#onivim-2-is-not-supported)
 - [Visual Studio Codespaces with self-hosted environments is not supported](#visual-studio-codespaces-with-self-hosted-environments-is-not-supported)
 - [Visual Studio Codespaces has an issue with the internal PDF viewer](#visual-studio-codespaces-has-an-issue-with-the-internal-pdf-viewer)
 - [VSCodium is not officially supported](#vscodium-is-not-officially-supported)
@@ -69,6 +70,10 @@ LaTeX Workshop does not support [code-server](https://github.com/cdr/code-server
 ## Eclipse Theia is not supported
 
 LaTeX Workshop does not support [Eclipse Theia](https://github.com/eclipse-theia/theia).
+
+## Onivim 2 is not supported
+
+LaTeX Workshop does not support [Onivim 2](https://github.com/onivim/oni2).
 
 ## Visual Studio Codespaces with self-hosted environments is not supported
 
