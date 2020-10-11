@@ -16,6 +16,10 @@ Some environments have a dedicated snippet in the form `BXY` where `XY` are the 
 | `BSEQ` | `equation*`      |
 | `BAL`  | `align`          |
 | `BSAL` | `align*`         |
+| `BGA`  | `gather`         |
+| `BSGA` | `gather*`        |
+| `BMU`  | `multline`       |
+| `BSMU` | `multline*`      |
 | `BIT`  | `itemize`        |
 | `BEN`  | `enumerate`      |
 | `BSPL` | `split`          |
