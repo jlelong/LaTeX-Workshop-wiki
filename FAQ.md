@@ -32,9 +32,10 @@
 - [Install an older version of LaTeX Workshop](#install-an-older-version-of-latex-workshop)
 - [Donwgrade VS Code to an older version](#donwgrade-vs-code-to-an-older-version)
 - [Customizing a Color Theme](#customizing-a-color-theme)
+- [Move the structure view and others to other places](#move-the-structure-view-and-others-to-other-places)
 - [Overriding snippets](#overriding-snippets)
 - [Autocompletion for `\includegraphics` seems incomplete](#autocompletion-for-includegraphics-seems-incomplete)
-- [Environment variables in `.bashhrc` don't take effect with VS Code Remote](#environment-variables-in-bashrc-dont-take-effect-with-vs-code-remote)
+- [Environment variables in `.bashrc` don't take effect with VS Code Remote](#environment-variables-in-bashrc-dont-take-effect-with-vs-code-remote)
 - [Environment variables in `.zshrc` don't take effect with VS Code Remote](#environment-variables-in-zshrc-dont-take-effect-with-vs-code-remote)
 - [You cannot use a tilde `~` in `PATH`](#you-cannot-use-a-tilde--in-path)
 
@@ -248,6 +249,10 @@ To customize a color theme, you can refer to the [official documentation](https:
         ]
     }
 ```
+
+## Move the structure view and others to other places
+
+You can move the structure view and others with dragging and dropping. See the [release note](https://code.visualstudio.com/updates/v1_46#_flexible-layout).
 
 ## Overriding snippets
 
