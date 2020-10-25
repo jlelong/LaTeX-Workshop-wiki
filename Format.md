@@ -45,9 +45,7 @@ Whether to sort the file when calling VSCode formatting commands is set by [`lat
 
 #### latex-workshop.bibtex-format.sortby
 
-The commands `latex-workshop.bibsort` and `latex-workshop.bibalignsort` will sort a `.bib` file according to an array of sorting keys specified in `latex-workshop.bibtex-format.sortby`. Valid keys are: any bibtex field (e.g. `author`, `year`, `title`) or `year-desc` for the year in descending order, or `key` for the bibtex key.
-
-For example, set this to `["author", "year-desc", "title"]` to sort by `author`, then `year` in descending order, then `title`
+The commands `latex-workshop.bibsort` and `latex-workshop.bibalignsort` will sort a `.bib` file according to an array of sorting keys specified in `latex-workshop.bibtex-format.sortby`. Valid keys are either a bibtex field name (title, author, year, etc.), or `\"year-desc\"` to sort by year in descending order, or `\"key\"` for the entry key, or `\"type\"` for the entry type (article, book, misc, etc.). E.g. `[\"author\", \"year-desc\", \"title\"]`.". For example, set this to `["author", "year-desc", "title"]` to sort by `author`, then `year` in descending order, then `title`
 
 |        Type        | Default Value |
 | ------------------ | ------------- |
