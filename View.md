@@ -85,7 +85,7 @@ The javascript built-in version of SyncTeX is used by default. See [settings](#l
 
 **Forward/Direct** synctex (source to pdf) can either be activated by selecting 'Navigate, select, and edit' > 'SyncTeX from cursor' in the side bar, or by the shortcut <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>j</kbd> (<kbd>cmd</kbd>+<kbd>option</kbd>+<kbd>j</kbd> on Mac), see also the [FAQ](https://github.com/James-Yu/LaTeX-Workshop/wiki/FAQ#i-cannot-use-ctrlalt-in-a-shortcut) for an alternative shortcut.
 
-**Backward/Reverse** synctex (pdf to source) is activated by using the following keybinding on the relevant element of the pdf preview.
+**Backward/Reverse** synctex (pdf to source) is activated by using the following keybinding on the relevant element of the internal pdf preview: <kbd>ctrl</kbd>+<kbd>click</kbd>
 
 | Setting key                                                                                        | Description                               | Default       | Type      |
 | -------------------------------------------------------------------------------------------------- | ----------------------------------------- | ------------- | --------- |
