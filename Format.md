@@ -39,7 +39,7 @@ BibTeX files can be formatted either by using the VSCode _Format Document_ or _F
 
 These commands can be accessed through Visual Studio Code's **Command Palette** (default <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>p</kbd> or <kbd>⌘</kbd>+<kbd>shift</kbd>+<kbd>p</kbd>).
 
-Whether to sort the file when calling VSCode formatting commands is set by [`latex-workshop.bibtex-format.sort.enabled`](latex-workshopbibtex-formatsortenabled)
+Whether to sort the file when calling VSCode formatting commands is set by [`latex-workshop.bibtex-format.sort.enabled`](latex-workshopbibtex-formatsortenabled). When formatting bibtex entries, you can decide to keep the trailing comma of the last field in each entry by setting [`latex-workshop.bibtex-format.trailingComma`](#latex-workshopbibtex-formattrailingComma) to `true`
 
 ### Sorting
 
@@ -87,10 +87,18 @@ Whether to surround each field value in quotation marks or curly braces.
 | ---------------- | ---------------- | ------------------------------------- |
 | _enum of string_ | `"Curly braces"` | `"Curly braces"`, `"Quotation marks"` |
 
-#### `latex-workshop.bibtex-format.case`
+#### latex-workshop.bibtex-format.case
 
 Whether to use upper- or lowercase field names. (E.g. `AUTHOR = ...` vs `author = ...`).
 
 |       Type       | Default Value |       Possible Values        |
 | ---------------- | ------------- | ---------------------------- |
 | _enum of string_ | `"lowercase"` | `"UPPERCASE"`, `"lowercase"` |
+
+### latex-workshop.bibtex-format.trailingComma
+
+Keep the trailing comma of the last field item.
+
+|        Type        | Default Value |
+| ------------------ | ------------- |
+| _boolean_          | `false`       |
