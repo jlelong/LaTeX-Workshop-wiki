@@ -82,6 +82,8 @@ To check if a file is indeed listed by a `.gitignore` file, you can run
 git check-ignore -v full_path_to_the_file
 ```
 
+When [`latex-workshop.intellisense.includegraphics.preview.enabled`](#latex-workshopintellisenseincludegraphicspreviewenabled) is set to `true`, triggering graphics file completion shows a preview of the file. The preview of PDF files can be deactivated by setting [`latex-workshop.intellisense.includegraphics.preview.pdf.enabled`](#latex-workshopintellisenseincludegraphicspreviewpdfenabled) to `false`.
+
 ### Related settings
 
 - [`latex-workshop.intellisense.file.exclude`](#latex-workshopintellisensefileexclude)
@@ -92,6 +94,14 @@ git check-ignore -v full_path_to_the_file
 ### latex-workshop.intellisense.includegraphics.preview.enabled
 
 Enable preview for `\includegraphics` completion.
+
+| type      | default value |
+| --------- | ------------- |
+| _boolean_ | `true`        |
+
+### latex-workshop.intellisense.includegraphics.preview.pdf.enabled
+
+Enable preview for `\includegraphics` of PDF files.
 
 | type      | default value |
 | --------- | ------------- |
