@@ -15,6 +15,8 @@ You may also directly call one the following commands
 
 ## Previewing equations
 
+### On the fly
+
 When you move the mouse cursor over inline math, `\[`, `$$`, `\begin{align}`, and `\begin{...}` of other math environments, math preview on hover is rendered. When you move the mouse cursor over `\ref`, and other reference commands referring math equations, math preview on hover is also rendered.
 
 <img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/hover.gif" alt="Preview maths demo" height="120px">
@@ -32,6 +34,13 @@ The `tabular` environment is not supported.
 | [`latex-workshop.hover.preview.cursor.color`](#latex-workshophoverpreviewcursorcolor) | Define the cursor color |
 | [`latex-workshop.hover.preview.newcommand.parseTeXFile.enabled`](#latex-workshophoverpreviewnewcommandparseTeXFileenabled) | Add newcommands to preview |
 | [`latex-workshop.hover.preview.newcommand.newcommandFile`](#latex-workshophoverpreviewnewcommandnewcommandFile) | Path of a file containing newcommands |
+
+### Realtime math preview panel
+
+You can preview equation in realtime in a separate editor by using the _math preview panel_. The position of the editor is determined by [`latex-workshop.mathpreviewpanel.editorGroup`](#latex-workshopmathpreviewpaneleditorGroup)
+
+- To open the panel call _Open Math Preview Panel_ (internal command is `latex-workshop.openMathPreviewPanel`)
+- To close the panel call _Close Math Preview Panel"_ (internal command is `latex-workshop.closeMathPreviewPanel`)
 
 ## Previewing graphics
 
@@ -175,3 +184,19 @@ Texdoc arguments to see a package documentation.
 | _array_   | `["--view"]`  |
 
 The package name is automatically appended to the arguments.
+
+### latex-workshop.mathpreviewpanel.editorGroup
+
+The editor group in which to open the math preview panel.
+
+| type       | default value |
+| ---------- | ------------- |
+| _string_   | `"below"`     |
+
+The accepted values are:
+
+- current: Use the current editor group
+- left: Put the math preview panel in a new group on the left of the current one
+- right: Put the math preview panel in a new group on the right of the current one
+- above: Put the math preview panel in a new group above the current one
+- below: Put the math preview panel in a new group below the current one
