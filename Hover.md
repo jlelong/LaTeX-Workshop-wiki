@@ -42,7 +42,7 @@ You can preview equation in realtime in a separate editor by using the _math pre
 - To open the panel call _Open Math Preview Panel_ (internal command is `latex-workshop.openMathPreviewPanel`)
 - To close the panel call _Close Math Preview Panel"_ (internal command is `latex-workshop.closeMathPreviewPanel`)
 
-Only math environments with less than [`latex-workshop.hover.math.preview.maxLines`](latex-workshophovermathpreviewmaxLines) lines are properly updated.
+Only math environments with less than [`latex-workshop.hover.preview.maxLines`](latex-workshophoverpreviewmaxLines) lines are properly updated.
 
 ## Previewing graphics
 
@@ -203,7 +203,7 @@ The accepted values are:
 - above: Put the math preview panel in a new group above the current one
 - below: Put the math preview panel in a new group below the current one
 
-### latex-workshop.hover.math.preview.maxLines
+### latex-workshop.hover.preview.maxLines
 
 Maximum number of lines between the beginning of the math environment and the cursor position to allow preview.
 
