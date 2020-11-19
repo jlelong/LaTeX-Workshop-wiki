@@ -42,7 +42,7 @@ You can preview equation in realtime in a separate editor by using the _math pre
 - To open the panel call _Open Math Preview Panel_ (internal command is `latex-workshop.openMathPreviewPanel`)
 - To close the panel call _Close Math Preview Panel"_ (internal command is `latex-workshop.closeMathPreviewPanel`)
 
-Only math environments with less than [`latex-workshop.hover.preview.maxLines`](latex-workshophoverpreviewmaxLines) lines are properly updated.
+Only math environments with less than [`latex-workshop.hover.preview.maxLines`](#latex-workshophoverpreviewmaxLines) lines are properly updated.
 
 ## Previewing graphics
 
