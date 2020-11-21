@@ -252,7 +252,7 @@ To customize a color theme, you can refer to the [official documentation](https:
 
 ## Move the structure view and others to other places
 
-You can move the structure view and others with dragging and dropping. See the [release note](https://code.visualstudio.com/updates/v1_46#_flexible-layout).
+You can move the structure view and others with dragging and dropping. See the [release note](https://code.visualstudio.com/updates/v1_46#_flexible-layout). You can also hide the views in your right-click context menu. See the [document](https://code.visualstudio.com/docs/getstarted/userinterface#_views).
 
 ## Overriding snippets
 
