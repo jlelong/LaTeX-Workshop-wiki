@@ -41,6 +41,12 @@ To surround some selected text with an environment, call _LaTeX Workshop: Surrou
 
 <img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/surround-env.gif" alt="Surround with environment demo">
 
+Alternatively, you can select the text and insert the environment using either the `\envname` command or the `\beginend` snippet but not the `\begin` snippet.
+
+<img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/surround-envname.gif" alt="Surround with environment demo">
+
+<img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/surround-beginend.gif" alt="Surround with environment demo">
+
 ## Code folding
 
 The following regions (along with their `*`-starred versions) can be folded.
