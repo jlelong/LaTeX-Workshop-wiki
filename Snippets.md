@@ -214,6 +214,11 @@ To surround text with a command, just select some text and use <kbd>ctrl</kbd>+<
 
 <img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/wrap.gif" alt="wrap demo" height="140px">
 
+Alternatively, you can just select the text and enter the command using autocompletion
+
+<img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/wrap2.gif" alt="wrap demo" height="140px">
+
+
 ### With an environment
 
 To surround some selected text with an environment, call _LaTeX Workshop: Surround/wrap selection with \\begin{}...\\end{}_ from the **Command Palette** (command `latex-workshop.wrap-env`). A multi-cursor is added inside the braces, to insert the environment name.
