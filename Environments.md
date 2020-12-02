@@ -47,23 +47,3 @@ Alternatively, you can select the text and insert the environment using either t
 
 <img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/surround-beginend.gif" alt="Surround with environment demo">
 
-## Code folding
-
-The following regions (along with their `*`-starred versions) can be folded.
-
-|                          Region                         |
-| ------------------------------------------------------- |
-|         `\documentclass{} ... \begin{document}`         |
-|                        `\part{}`                        |
-|                       `\chapter{}`                      |
-| `\section{}`, `\subsection{}`, `\subsubsection{}`, etc. |
-|           `\begin{<envname>} ... \end{<envname>}`       |
-|                 `\begingroup ... \endgroup`             |
-
-The folding mechanism ignores comments, so comments can be used to fold code using the same keywords as above. This means commented out sections and the like can be easily folded for easier editing. To fold arbitrary regions, we recommend using the following comment.
-
-```latex
-%\begingroup
-...
-%\endgroup
-```

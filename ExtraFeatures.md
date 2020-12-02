@@ -34,6 +34,37 @@ Show the sectioning numbers in the outline/structure views.
 |----------|---------------|
 | _boolean | `true`        |
 
+## Code folding
+
+The following regions (along with their `*`-starred versions) can be folded.
+
+|                          Region                         |
+| ------------------------------------------------------- |
+|         `\documentclass{} ... \begin{document}`         |
+|                        `\part{}`                        |
+|                       `\chapter{}`                      |
+| `\section{}`, `\subsection{}`, `\subsubsection{}`, etc. |
+|           `\begin{<envname>} ... \end{<envname>}`       |
+|                 `\begingroup ... \endgroup`             |
+
+The folding mechanism ignores comments, so comments can be used to fold code using the same keywords as above. This means commented out sections and the like can be easily folded for easier editing. To fold arbitrary regions, we recommend using the following comments.
+
+```latex
+%\begingroup
+...
+%\endgroup
+```
+
+or
+
+```latex
+% region
+...
+% endregion
+```
+
+The keywords `region` and `endregion` may start with a capital letter and be preceded by the `#` sign.
+
 ## Counting words
 
 To count the number of words in the current document, call _Count words in LaTeX document_ from the Command Palette (the associated command is `latex-workshop.wordcount`)
