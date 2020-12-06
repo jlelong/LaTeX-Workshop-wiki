@@ -13,7 +13,6 @@
 - [Visual Studio Live Share is not supported](#visual-studio-live-share-is-not-supported)
 - [File watcher does not work when used with OneDrive or a network drive](#file-watcher-does-not-work-when-used-with-onedrive-or-a-network-drive)
 - [The directory ~/node_modules/ may cause errors](#the-directory-node_modules-may-cause-errors)
-- [The extension freezes when used with a network drive](#The-extension-freezes-when-used-with-a-network-drive)
 - [I cannot build from a subfile](#i-cannot-build-from-a-subfile)
 - [The Problem Pane displays wrong messages](#the-Problem-Pane-displays-wrong-messages)
 - [Encoding issues with file names in the Problem Pane](#Encoding-issues-with-file-names-in-the-Problem-Pane)
