@@ -36,7 +36,7 @@ The key `\` automatically triggers completion of LaTeX commands. Several mechani
 - A set of standard LaTeX commands is provided in the file [`data/commands.json`](https://github.com/James-Yu/LaTeX-Workshop/blob/master/data/commands.json). You may overwrite some of these commands by using the [`latex-workshop.intellisense.commandsJSON.replace`](#latex-workshopintellisensecommandsJSONreplace) configuration variable.
 - The files of a LaTeX project are searched for any already used commands in the form `mycommand` followed by several `{}` groups. Then, a snippet is dynamically built for each of them and they are added to the command completion list.
 - When [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled) is `true`, the command completion list is also populated with the commands provided by all the _standard_ packages used in the project (through `\usepackage`). The list of commands provided by every package is described [here](https://github.com/LaTeXing/LaTeX-cwl). Note that homemade packages are ignored in this mechanism because they do not come with a `.cwl` file.
-- If you use personal macro files and want them to be taken into account by intellisense but store them in some `texmf` structure or dedicated directory. Just add the directory containing the file to [`latex-workshop.latex.texDirs`](Multi-File-Projects#latex-workshoplatextexDirs). The file must be loaded in the LaTeX project through the `\input` macro.
+- If you use personal macro files and want them to be taken into account by intellisense but store them in some `texmf` structure or dedicated directory. Just add the directory containing the file to [`latex-workshop.latex.texDirs`](Compile#latex-workshoplatextexDirs). The file must be loaded in the LaTeX project through the `\input` macro.
 - The completion list can use either placeholders or tabstops. The default is to use tabstops, but it can be changed using [`latex-workshop.intellisense.useTabStops.enabled`](#latex-workshopintellisenseuseTabStopsenabled).
   - placeholders: they provide meaningful information on the arguments but prevent any autocompletion trigger.
   - tabstops: they enable us to directly trigger autocompletion again for citations and references.
@@ -50,7 +50,7 @@ The key `\` automatically triggers completion of LaTeX commands. Several mechani
 | [`latex-workshop.intellisense.unimathsymbols.enabled`](#latex-workshopintellisenseunimathsymbolsenabled)    | Show unimath symbols as suggestions when `\` pressed                           | `false` | _boolean_     |
 | [`latex-workshop.intellisense.useTabStops.enabled`](#latex-workshopintellisenseuseTabStopsenabled)          | Use tabstops in intellisense completion                                        | `true`  | _boolean_ |
 | [`latex-workshop.intellisense.optionalArgsEntries.enabled`](#latex-workshopintellisenseoptionalArgsEntriesenabled) | Add one completion item per command signature                           | `true`  | _boolean_ |
-| [`latex-workshop.latex.texDirs`](Multi-File-Projects#latex-workshoplatextexDirs)                            | List of paths to look for input `.tex` files.                                  | `[]`    | _array_ of _strings_ |
+| [`latex-workshop.latex.texDirs`](Compile#latex-workshoplatextexDirs)                            | List of paths to look for input `.tex` files.                                  | `[]`    | _array_ of _strings_ |
 
 ## Environments
 

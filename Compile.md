@@ -81,7 +81,7 @@ When the `subfiles` package is used, either the main file or any subfile contain
 
 A LaTeX file is typically built by calling the command _Build LaTeX project_ from the _Command Palette_ or from the _TeX_ badge. This command is bind to <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>b</kbd>. If you cannot use <kbd>ctrl</kbd>+<kbd>alt</kbd> in a keybinding, see [the FAQ](FAQ#i-cannot-use-ctrlalt-in-a-shortcut). The recipe called by this command is defined by [`latex-workshop.latex.recipe.default`](#latex-workshoplatexrecipedefault).
 
-If you have a multi-file project, see [multi-files-projects](Multi-File-Projects) for more details on how the root file is discovered.
+If you have a multi-file project, see [multi-files-projects](#multi-file-projects) for more details on how the root file is discovered.
 
 You can define several compiling toolchains to build LaTeX projects using [LaTeX recipes](#latex-recipes) and then call the command _Build with recipe_ to choose the appropriate toolchain for actually building the project. Alternatively, you can directly select the appropriate recipe from the _TeX_ badge.
 
@@ -233,7 +233,7 @@ When to trigger automatic building.
 
 - `"never"`: Disable the auto build feature
 - `"onSave"`: Build the project upon saving a `.tex` file.
-- `"onFileChange"`: Build the project upon detecting a file change in any of the dependencies. The file can even be modified outside vscode. See [here](Multi-File-Projects) for explanations on what dependencies are and how some of them can be ignored. See the [FAQ](FAQ#I-use-build-on-save-but-I-occasionally-want-to-save-without-building) for how to save without triggering the build when this feature is on. When a file changes, we wait for a delay before triggering the build. This delay is configured by [`latex-workshop.latex.watch.delay`](Multi-File-Projects#latex-workshoplatexwatchdelay)
+- `"onFileChange"`: Build the project upon detecting a file change in any of the dependencies. The file can even be modified outside vscode. See [here](#multi-file-projects) for explanations on what dependencies are and how some of them can be ignored. See the [FAQ](FAQ#I-use-build-on-save-but-I-occasionally-want-to-save-without-building) for how to save without triggering the build when this feature is on. When a file changes, we wait for a delay before triggering the build. This delay is configured by [`latex-workshop.latex.watch.delay`](#latex-workshoplatexwatchdelay)
 
 ### latex-workshop.latex.autoBuild.interval
 

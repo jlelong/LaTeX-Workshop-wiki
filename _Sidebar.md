@@ -11,7 +11,7 @@
   - [Using Docker](Install#using-docker)
   - [Using WSL](Install#using-wsl)
 - [Compiling](Compile)
-  - [Multi file projects](Compile#Multi-File-Projects)
+  - [Multi file projects](Compile#multi-file-projects)
   - [Building the document](Compile#building-the-document)
   - [Building a `.jnw` file](Compile#building-a-jnw-file)
   - [Building a `.rnw` file](Compile#building-a-rnw-file)
