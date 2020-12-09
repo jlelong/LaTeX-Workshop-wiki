@@ -407,7 +407,7 @@ When building the project, the [magic comments](#magic-comments) in the root fil
     "--tex-option=\"-file-line-error\"",
     "%DOC_EXT%"
   ],
-    "env": {}
+  "env": {}
 }]
 ```
 
