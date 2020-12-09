@@ -384,7 +384,7 @@ The `tools` in recipes can be defined in `latex-workshop.latex.tools`, in which 
   }
 ```
 
-You can also override PATH environment variable.
+You can also override the PATH environment variable. Notice that, in the property, only placeholders, e.g., `%DIR%`, take effect, and other variables, e.g., `$PATH`, are **not** expanded.
 
 To include a tool in a recipe, the tool's `name` should be included in the recipe's `tools` list.
 
