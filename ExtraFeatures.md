@@ -22,17 +22,25 @@ The structure of the document can be obtained
 
 Show the labels in the outline/structure views. Reload VSCode after changing the value.
 
-| type     | default value |
-|----------|---------------|
-| _boolean | `true`        |
+| type      | default value |
+|-----------|---------------|
+| _boolean_ | `true`        |
+
+### latex-workshop.view.outline.floats.enabled
+
+Show the floating objects (figures and tables) in the outline/structure views. Reload VSCode after changing the value.
+
+| type      | default value |
+|-----------|---------------|
+| _boolean_ | `true`        |
 
 ### latex-workshop.view.outline.numbers.enabled
 
 Show the sectioning numbers in the outline/structure views.
 
-| type     | default value |
-|----------|---------------|
-| _boolean | `true`        |
+| type      | default value |
+|-----------|---------------|
+| _boolean_ | `true`        |
 
 ## Code folding
 
