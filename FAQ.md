@@ -255,7 +255,7 @@ You can move the structure view and others with dragging and dropping. See the [
 
 ## Overriding snippets
 
-You can override some snippets provided by the extension by using the [`latex-workshop.intellisense.commandsJSON.replace`](Intellisense#latex-workshopintellisensecommandsJSONreplace) configuration variable.
+You can override some snippets provided by the extension by using the [`latex-workshop.intellisense.commandsJSON.replace`](Intellisense#latex-workshopintellisensecommandsJSONreplace) configuration variable. Since VS Code v1.52, you can hide snippets. See the [release note](https://code.visualstudio.com/updates/v1_52#_hide-extension-snippet).
 
 ## Where can I find the definitions of the placeholders
 
