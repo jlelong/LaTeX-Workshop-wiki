@@ -31,7 +31,7 @@ Any `\ref` related command is automatically completed with label keys.
 
 ## Commands
 
-The key `\` automatically triggers completion of LaTeX commands. Several mechanisms play together to build the list of available commands.
+The key `\` automatically triggers completion of LaTeX commands. You can define [additional triggers](#latex-workshopintellisensetriggerslatex). Several mechanisms play together to build the list of available commands.
 
 - A set of standard LaTeX commands is provided in the file [`data/commands.json`](https://github.com/James-Yu/LaTeX-Workshop/blob/master/data/commands.json). You may overwrite some of these commands by using the [`latex-workshop.intellisense.commandsJSON.replace`](#latex-workshopintellisensecommandsJSONreplace) configuration variable.
 - The files of a LaTeX project are searched for any already used commands in the form `mycommand` followed by several `{}` groups. Then, a snippet is dynamically built for each of them and they are added to the command completion list.
@@ -44,6 +44,7 @@ The key `\` automatically triggers completion of LaTeX commands. Several mechani
 
 | Setting key                                                                                                 | Description                                                                    | Default | Type      |
 | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ------- | --------- |
+| [`latex-workshop.intellisense.triggers.latex`](#latex-workshopintellisensetriggerslatex)                    | Additional trigger characters for intellisense of LaTeX documents.             | `[]` | _array_ of _strings_ |
 | [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled)                  | Enabling of auto-completion for commands and environments from loaded packages | `true`  | _boolean_ |
 | [`latex-workshop.intellisense.package.env.enabled`](#latex-workshopintellisensepackageenvenabled)           | Enable `\envname` snippets                                                     | `true`  | _boolean_ |
 | [`latex-workshop.intellisense.package.extra`](#latex-workshopintellisensepackageextra)                      | Extra packages to load for intellisense                                        | `[]` | _array_ of _strings_ |
@@ -145,6 +146,15 @@ Define which type of hint to show when intellisense provides citation suggestion
 | type     | default value |
 | -------- | ------------- |
 | _string_ | `"inline"`    |
+
+
+### latex-workshop.intellisense.triggers.latex
+
+Additional trigger characters for intellisense of LaTeX documents. You must reload VSCode to take into account a change in this configuration.
+
+|            type      | default value |
+| -------------------- | ------------- |
+| _array_ of _strings_ | `[]`          |
 
 ### latex-workshop.intellisense.package.enabled
 
