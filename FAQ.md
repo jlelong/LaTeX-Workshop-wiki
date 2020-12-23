@@ -48,6 +48,7 @@ The following extensions are known to cause issues when active at the same time 
 - [Prettify Symbols Mode](https://marketplace.visualstudio.com/items?itemName=siegebell.prettify-symbols-mode): high CPU load, Enter key delay
 - [Path Autocomplete](https://marketplace.visualstudio.com/items?itemName=ionutvmi.path-autocomplete): it may break autocompletion for bibliography citations.
 - [LaTeX Preview](https://marketplace.visualstudio.com/items?itemName=ajshort.latex-preview): Conflict with LaTeX Workshop.
+- [LaTeX language support](https://marketplace.visualstudio.com/items?itemName=torn4dom4n.latex-support): It does not work with some LaTeX Workshop's snippets.
 
 ## Using LaTeX Workshop with WSL
 
