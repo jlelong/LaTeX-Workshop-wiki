@@ -33,6 +33,7 @@
 - [Customizing a Color Theme](#customizing-a-color-theme)
 - [Move the structure view and others to other places](#move-the-structure-view-and-others-to-other-places)
 - [Overriding snippets](#overriding-snippets)
+- [Where can I find the definitions of the placeholders](#where-can-i-find-the-definitions-of-the-placeholders)
 - [Autocompletion for `\includegraphics` seems incomplete](#autocompletion-for-includegraphics-seems-incomplete)
 - [Environment variables in `.bashrc` don't take effect with VS Code Remote](#environment-variables-in-bashrc-dont-take-effect-with-vs-code-remote)
 - [Environment variables in `.zshrc` don't take effect with VS Code Remote](#environment-variables-in-zshrc-dont-take-effect-with-vs-code-remote)
