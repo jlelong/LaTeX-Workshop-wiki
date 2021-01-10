@@ -281,3 +281,7 @@ After editing these files, you have to kill `vscode-server`  on the remote host 
 ## You cannot use a tilde `~` in `PATH`
 
 You can not use a tilde `~` in the environment variable `PATH` as an abbreviation of your home directory.
+
+## `terminal.integrated.shellArgs.linux` doesn't take effect
+
+The setting `terminal.integrated.shellArgs.linux` is not related to the environment variable on the extension host. You cannot set `PATH` for LaTeX Workshop through the setting.
