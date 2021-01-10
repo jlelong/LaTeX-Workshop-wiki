@@ -37,6 +37,7 @@
 - [Environment variables in `.bashrc` don't take effect with VS Code Remote](#environment-variables-in-bashrc-dont-take-effect-with-vs-code-remote)
 - [Environment variables in `.zshrc` don't take effect with VS Code Remote](#environment-variables-in-zshrc-dont-take-effect-with-vs-code-remote)
 - [You cannot use a tilde `~` in `PATH`](#you-cannot-use-a-tilde--in-path)
+- [`terminal.integrated.shellArgs.linux` doesn't take effect](#terminalintegratedshellargslinux-doesnt-take-effect)
 
 
 ## Known incompatible Extensions
