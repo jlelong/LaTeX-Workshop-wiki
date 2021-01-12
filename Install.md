@@ -20,8 +20,6 @@ If you can not fix the setting of your system, you can also override PATH with t
 
 Notice that, to set the `PATH` environment variable for VS Code Remote Development, you usually have to edit `.bash_profile` or `.profile` instead of `.bashrc`. See the [document](https://code.visualstudio.com/docs/remote/troubleshooting#_configure-the-environment-for-the-remote-extension-host) for WSL and an [issue](https://github.com/microsoft/vscode-remote-release/issues/1671#issuecomment-542818686) for Remote SSH.
 
-The Flatpak versions of [VS Code](https://github.com/flathub/com.visualstudio.code) and [VS Codium](https://github.com/flathub/com.vscodium.codium) are running inside a container and cannot access SDKs on your host system. Therefore, you might want to switch to a different distribution (e.g. deb), to mitigate problems related to the PATH environment variable. 
-
 ## Settings
 
 You can modify settings through the menu of VS Code, `Preferences > Settings`.
