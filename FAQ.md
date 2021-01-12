@@ -37,6 +37,7 @@
 - [Environment variables in `.bashrc` don't take effect with VS Code Remote](#environment-variables-in-bashrc-dont-take-effect-with-vs-code-remote)
 - [Environment variables in `.zshrc` don't take effect with VS Code Remote](#environment-variables-in-zshrc-dont-take-effect-with-vs-code-remote)
 - [You cannot use a tilde `~` in `PATH`](#you-cannot-use-a-tilde--in-path)
+- [Problems with Snap and Flatpak versions of VS Code](#problems-with-snap-and-flatpak-versions-of-vs-code)
 
 
 ## Known incompatible Extensions
@@ -281,3 +282,7 @@ After editing these files, you have to kill `vscode-server`  on the remote host 
 ## You cannot use a tilde `~` in `PATH`
 
 You can not use a tilde `~` in the environment variable `PATH` as an abbreviation of your home directory.
+
+## Problems with Snap and Flatpak versions of VS Code
+
+These versions are sandboxed and are known to cause problems (e.g. [here](https://github.com/James-Yu/LaTeX-Workshop/issues/2437)). It is recommended to use other installation options, like the .deb package for Debian/Ubuntu based distributions. 
