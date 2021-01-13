@@ -291,12 +291,15 @@ You must reload VSCode to take into account a change in this configuration.
 
 LaTeX compilation typically generates several auxiliary files. They can be removed by calling _Clean up auxiliary files_ from the _Command Palette_ or from the _TeX_ badge. The associated internal command `latex-workshop.clean` is bind to <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>c</kbd>. If you cannot use <kbd>ctrl</kbd>+<kbd>alt</kbd> in a keybinding, see [the FAQ](FAQ#i-cannot-use-ctrlalt-in-a-shortcut).
 
-| Setting key                                            | Description                                                                                                               | Default   | Type               |
-| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------- | --------- | ------------------ |
-| [`latex-workshop.latex.autoBuild.cleanAndRetry.enabled`](#latex-workshoplatexautoBuildcleanAndRetryenabled) | Enable cleaning and building once more after errors in the build toolchain                                                | `true`    | _boolean_          |
-| [`latex-workshop.latex.autoClean.run`](#latex-workshoplatexautoCleanrun)                   | Define when LaTeX auxillary files should be deleted.                                                                      | `"never"` | _string_           |
-| [`latex-workshop.latex.clean.fileTypes`](#latex-workshoplatexcleanfileTypes)                 | Extensions of files to clean                                                                                              |           | _array of strings_ |
-| [`latex-workshop.latex.clean.subfolder.enabled`](#latex-workshoplatexcleansubfolderenabled)         | Clean LaTeX auxillary files recursively in sub-folders of [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutDir) | `false`   | _boolean_          |
+| Setting key  | Description | Default | Type  |
+| ------------ | ----------- | ------- | ----- |
+| [`latex-workshop.latex.autoBuild.cleanAndRetry.enabled`](#latex-workshoplatexautoBuildcleanAndRetryenabled) | Enable cleaning and building once more after errors in the build toolchain | `true`  | _boolean_ |
+| [`latex-workshop.latex.autoClean.run`](#latex-workshoplatexautoCleanrun) | Define when LaTeX auxillary files should be deleted. | `"never"` | _string_ |
+| [`latex-workshop.latex.clean.method`](#latex-workshoplatexcleanmethod) | Define the method used by the `clean` command to remove temporary files | `glob` | _enum_ of _strings_ |
+| [`latex-workshop.latex.clean.command`](#latex-workshoplatexcleancommand) | Define the command used to remove temporary files when [`latex-workshop.latex.clean.method`](#latex-workshoplatexcleanmethod) is set to `cleanMethod` | `latexmk` | _string_ |
+| [`latex-workshop.latex.clean.args`](#latex-workshoplatexcleanargs) | Arguments of [`latex-workshop.latex.clean.command`](#latex-workshoplatexcleancommand) | `["-c", "%TEX%"]` | _array_ of _string_ |
+| [`latex-workshop.latex.clean.fileTypes`](#latex-workshoplatexcleanfileTypes) | Extensions of files to clean |     | _array of strings_ |
+| [`latex-workshop.latex.clean.subfolder.enabled`](#latex-workshoplatexcleansubfolderenabled) | Clean LaTeX auxillary files recursively in sub-folders of [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutDir) | `false`   | _boolean_ |
 
 ### latex-workshop.latex.autoClean.run
 
@@ -335,6 +338,34 @@ This property must be an array of strings. File globs such as *.removeme, someth
 |         type         | default value  |
 | -------------------- | -------------- |
 | _array_ of _strings_ | `[ "*.aux", "*.bbl", "*.blg", "*.idx", "*.ind", "*.lof", "*.lot", "*.out", "*.toc", "*.acn", "*.acr", "*.alg", "*.glg", "*.glo", "*.gls", "*.fls", "*.log", "*.fdb_latexmk", "*.snm", "*.synctex(busy)", "*.synctex.gz(busy)", "*.nav" ]` |
+
+
+### latex-workshop.latex.clean.command
+
+The command to be used to remove temporary files when [`latex-workshop.latex.clean.method`](#latex-workshoplatexcleanmethod) is set to `cleanMethod`.
+
+| type     | default value |
+| -------- | ------------- |
+| _string_ | `latexmk`     |
+
+### latex-workshop.latex.clean.args
+
+The arguments of [`latex-workshop.latex.clean.command`](latex-workshoplatexcleancommand). The `%TEX%` placeholder is the full path of the tex file from which the clean command is called.
+
+| type                 | default value     |
+|----------------------|-------------------|
+| _array_ of _strings_ | `["-c", "%TEX%"]` |
+
+### latex-workshop.latex.clean.method
+
+Define the method used by the `clean` command to remove temporary files.
+
+| type                | default value             |
+|---------------------|---------------------------|
+| _enum_ of _strings_ | `"glob" | "cleanCommand"` |
+
+- `"glob"`: Clean all the files located in [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutDir) and matching the glob patterns listed in [`latex-workshop.latex.clean.fileTypes`](#latex-workshoplatexcleanfileTypes).
+- `"cleanCommand`": Run [`latex-workshop.latex.clean.command`](latex-workshoplatexcleancommand) to clean temporary files.
 
 ## LaTeX recipes
 
