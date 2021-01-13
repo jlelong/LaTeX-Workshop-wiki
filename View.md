@@ -298,7 +298,7 @@ Define if the hand tool is enabled by default in the PDF viewer.
 
 Define the background color for the PDF viewer.
 
-Possible values are any strings representing a color in CSS.
+Possible values are any strings representing a color in CSS. You must reopen the internal viewers or restart VS Code to take into account a change in this configuration.
 
 | type     | default value |
 | -------- | ------------- |
@@ -345,6 +345,8 @@ Enable the CSS invert filter. The possible choices are
 - `compat`: Enable the invert filter only if `invert > 0`.
 - `never`: Disable the invert filter.
 
+ You must reopen the internal viewers or restart VS Code to take into account a change in this configuration.
+
 | type   | default value | possible values                     |
 | ------ | ------------- | ---------------                     |
 | _enum_ | `compat`      | `auto`, `always`, `compat`, `never` |
@@ -353,7 +355,7 @@ Enable the CSS invert filter. The possible choices are
 
 Define the CSS invert filter level of the PDF viewer.
 
-This config can invert the color of PDF. Possible values are any floating point numbers from `0` to `1`.
+This config can invert the color of PDF. Possible values are any floating point numbers from `0` to `1`. You must reopen the internal viewers or restart VS Code to take into account a change in this configuration.
 
 | type     | default value |
 | -------- | ------------- |
