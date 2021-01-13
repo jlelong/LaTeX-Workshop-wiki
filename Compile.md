@@ -293,10 +293,10 @@ LaTeX compilation typically generates several auxiliary files. They can be remov
 
 | Setting key                                            | Description                                                                                                               | Default   | Type               |
 | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------- | --------- | ------------------ |
-| `latex-workshop.latex.autoBuild.cleanAndRetry.enabled` | Enable cleaning and building once more after errors in the build toolchain                                                | `true`    | _boolean_          |
-| `latex-workshop.latex.autoClean.run`                   | Define when LaTeX auxillary files should be deleted.                                                                      | `"never"` | _string_           |
-| `latex-workshop.latex.clean.fileTypes`                 | Extensions of files to clean                                                                                              |           | _array of strings_ |
-| `latex-workshop.latex.clean.subfolder.enabled`         | Clean LaTeX auxillary files recursively in sub-folders of [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutDir) | `false`   | _boolean_          |
+| [`latex-workshop.latex.autoBuild.cleanAndRetry.enabled`](#latex-workshoplatexautoBuildcleanAndRetryenabled) | Enable cleaning and building once more after errors in the build toolchain                                                | `true`    | _boolean_          |
+| [`latex-workshop.latex.autoClean.run`](#latex-workshoplatexautoCleanrun)                   | Define when LaTeX auxillary files should be deleted.                                                                      | `"never"` | _string_           |
+| [`latex-workshop.latex.clean.fileTypes`](#latex-workshoplatexcleanfileTypes)                 | Extensions of files to clean                                                                                              |           | _array of strings_ |
+| [`latex-workshop.latex.clean.subfolder.enabled`](#latex-workshoplatexcleansubfolderenabled)         | Clean LaTeX auxillary files recursively in sub-folders of [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutDir) | `false`   | _boolean_          |
 
 ### latex-workshop.latex.autoClean.run
 
@@ -307,6 +307,34 @@ LaTeX compilation typically generates several auxiliary files. They can be remov
 - `"never"`: Disable the auto cleaning feature
 - `"onFailed"`: Clean the project upon failed compilation.
 - `"onBuilt"`: Clean the project upon completing a compilation, whether it is successful or not.
+
+### latex-workshop.latex.autoBuild.cleanAndRetry.enabled
+
+Delete LaTeX auxiliary files when errors occur during build and retry.
+
+This property defines whether LaTeX Workshop will try to clean and build the project once again after errors happen in the build toolchain.
+
+| type      | default value |
+| --------- | ------------- |
+| _boolean_ | `true`        |
+
+### latex-workshop.latex.clean.subfolder.enabled
+
+Delete LaTeX auxiliary files recursively in sub-folders of [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutDir).
+
+| type      | default value |
+| --------- | ------------- |
+| _boolean_ | `true`        |
+
+### latex-workshop.latex.clean.fileTypes
+
+Files to be cleaned.
+
+This property must be an array of strings. File globs such as *.removeme, something?.aux can be used.
+
+|         type         | default value  |
+| -------------------- | -------------- |
+| _array_ of _strings_ | `[ "*.aux", "*.bbl", "*.blg", "*.idx", "*.ind", "*.lof", "*.lot", "*.out", "*.toc", "*.acn", "*.acr", "*.alg", "*.glg", "*.glo", "*.gls", "*.fls", "*.log", "*.fdb_latexmk", "*.snm", "*.synctex(busy)", "*.synctex.gz(busy)", "*.nav" ]` |
 
 ## LaTeX recipes
 
