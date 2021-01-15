@@ -178,6 +178,24 @@ Backward: Use `%{input}` and `%{line}` as placeholders.
 ],
 ```
 
+##### [Okular](https://apps.kde.org/en/okular) support 
+
+Add the following options to your configuration:
+
+```json
+"latex-workshop.view.pdf.viewer": "external",
+"latex-workshop.view.pdf.external.viewer.command": "okular",
+"latex-workshop.view.pdf.external.viewer.args": [
+    "--unique",
+    "%PDF%"
+],
+"latex-workshop.view.pdf.external.synctex.command": "okular",
+"latex-workshop.view.pdf.external.synctex.args": [
+    "--unique",
+    "%PDF%#src:%LINE%%TEX%"
+],
+```
+
 #### macOS
 
 ##### [Skim](https://skim-app.sourceforge.io)
