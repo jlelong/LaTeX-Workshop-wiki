@@ -196,6 +196,8 @@ Add the following options to your configuration:
 ],
 ```
 
+Thanks to [@miterion](https://github.com/miterion) for [figuring this out](https://miterion.de/post/vscodeplusokular/).
+
 #### macOS
 
 ##### [Skim](https://skim-app.sourceforge.io)
