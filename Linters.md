@@ -21,6 +21,8 @@ Auto load of `.chktexrc` configuration files is performed in the following order
 | [`latex-workshop.chktex.enabled`](#latex-workshopchktexenabled)        | Enable LaTeX linting with ChkTeX                        | `false`                                   | _boolean_            |
 | [`latex-workshop.chktex.path`](#latex-workshopchktexpath)              | Location of ChkTeX executable                           | `"chktex"`                                | _string_             |
 | [`latex-workshop.chktex.run`](#latex-workshopchktexrun)                | When to run ChkTeX (on file save or while typing)       | `"onSave"`                                | _enum_               |
+| [`latex-workshop.chktex.convertOutput.column.enabled`](#latex-workshopchktexconvertoutputcolumnenabled)                       | Enable converting ChkTeX outputs | `true`    | _boolean_            |
+| [`latex-workshop.chktex.convertOutput.column.chktexrcTabSize`](#latex-workshopchktexconvertoutputcolumnchktexrctabsize)       | `TabSize` number                 | `-1`      | _number_             |
 
 ### Details
 
@@ -83,3 +85,19 @@ When `latex-workshop.chktex.run` is set to `onType`, defines the delay in millis
 | type     | default value |
 | -------- | ------------- |
 | _number_ | `500`         |
+
+### latex-workshop.chktex.convertOutput.column.enabled
+
+Enable converting ChkTeX outputs' column numbers for non-ASCII characters.
+
+| type      | default value |
+| --------- | ------------- |
+| _boolean_ | `true`        |
+
+### latex-workshop.chktex.convertOutput.column.chktexrcTabSize
+
+Write the `TabSize` number from `.chktexrc`. The default value `-1` means that LaTeX Workshop will try to find `.chktexrc` and to read the value from it.
+
+| type     | default value |
+| -------- | ------------- |
+| _number_ | `-1`          |
