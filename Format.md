@@ -79,6 +79,14 @@ What kind of indentation to use before each field.
 | ---------------- | ------------- | ----------------------------------- |
 | _enum of string_ | `"2 spaces"`  | `"2 spaces"`, `"4 spaces"`, `"tab"` |
 
+### latex-workshop.bibtex-format.align-equal.enabled
+
+Align equal signs inside each entry.
+
+|        Type        | Default Value |
+| ------------------ | ------------- |
+| _boolean_          | `true`        |
+
 #### latex-workshop.bibtex-format.surround
 
 Whether to surround each field value in quotation marks or curly braces.
