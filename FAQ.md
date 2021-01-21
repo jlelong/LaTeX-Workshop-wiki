@@ -19,6 +19,7 @@
 - [I cannot use `ctrl`+`alt` in a shortcut](#i-cannot-use-ctrlalt-in-a-shortcut)
 - [Disable automatic build on save](#disable-automatic-build-on-save)
 - [I use build on save but I occasionally want to save without building](#I-use-build-on-save-but-I-occasionally-want-to-save-without-building)
+- [Auto build LaTeX results in always twice or infinite loop](#auto-build-latex-results-in-always-twice-or-infinite-loop)
 - [Large bibtex files are ignored](#large-bibtex-files-are-ignored)
 - [Path containing Chinese or `~` characters](#path-containing-chinese-or--characters)
 - [The LaTeX sidebar keeps reopening](#the-latex-sidebar-keeps-reopening)
@@ -131,6 +132,10 @@ Set the configuration variable `latex-workshop.latex.autoBuild.run` to `"never"`
 ## I use build on save but I occasionally want to save without building
 
 When `latex-workshop.latex.autoBuild.run` is set to `onSave`, building is triggered every time a file is saved inside VSCode. If you want to save a file without building it, you can use the `Save without Building` command from the _Command Palette_. A keybinding can be associated to the internal command `latex-workshop.saveWithoutBuilding` to access this feature more easily.
+
+## Auto build LaTeX results in always twice or infinite loop
+
+There is a possibility that LaTeX Workshop detects changes on files by build scripts during the build process and starts a new build process. That results in unintended multiple build processes. See [#2237](https://github.com/James-Yu/LaTeX-Workshop/issues/2237) and [#2487](https://github.com/James-Yu/LaTeX-Workshop/issues/2487). In that case, please change the setting [`latex-workshop.latex.autoBuild.run`](https://github.com/James-Yu/LaTeX-Workshop/wiki/Compile#latex-workshoplatexautobuildrun) to `"onSave"`.
 
 ## Large bibtex files are ignored
 
