@@ -75,9 +75,11 @@ The commands `latex-workshop.bibalign` and `latex-workshop.bibalignsort` provide
 
 What kind of indentation to use before each field.
 
-|       Type       | Default Value |          Possible Values            |
-| ---------------- | ------------- | ----------------------------------- |
-| _enum of string_ | `"2 spaces"`  | `"2 spaces"`, `"4 spaces"`, `"tab"` |
+|       Type       | Default Value |
+| ---------------- | ------------- |
+| _string_         | `"2 spaces"`  |
+
+The possible values are: `"tab"`, `"X spaces"` or simply `"X"` where `X` is a number.
 
 ### latex-workshop.bibtex-format.align-equal.enabled
 
