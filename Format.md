@@ -41,7 +41,7 @@ These commands can be accessed through Visual Studio Code's **Command Palette** 
 
 Whether to sort the file when calling VSCode formatting commands is set by [`latex-workshop.bibtex-format.sort.enabled`](latex-workshopbibtex-formatsortenabled). When formatting bibtex entries, you can decide to keep the trailing comma of the last field in each entry by setting [`latex-workshop.bibtex-format.trailingComma`](#latex-workshopbibtex-formattrailingComma) to `true`
 
-### Sorting
+### Sorting entries
 
 #### latex-workshop.bibtex-format.sortby
 
@@ -67,7 +67,7 @@ Sort content when calling VSCode formatter on a .bib file.
 | ------------------ | ------------- |
 | _boolean_          | `false`       |
 
-### Aligning
+### Aligning fields
 
 The commands `latex-workshop.bibalign` and `latex-workshop.bibalignsort` provide basic alignment of bibliography entries. This action can be configured through the following options.
 
@@ -81,7 +81,7 @@ What kind of indentation to use before each field.
 
 The possible values are: `"tab"`, `"X spaces"` or simply `"X"` where `X` is a number.
 
-### latex-workshop.bibtex-format.align-equal.enabled
+#### latex-workshop.bibtex-format.align-equal.enabled
 
 Align equal signs inside each entry.
 
@@ -105,10 +105,28 @@ Whether to use upper- or lowercase field names. (E.g. `AUTHOR = ...` vs `author 
 | ---------------- | ------------- | ---------------------------- |
 | _enum of string_ | `"lowercase"` | `"UPPERCASE"`, `"lowercase"` |
 
-### latex-workshop.bibtex-format.trailingComma
+#### latex-workshop.bibtex-format.trailingComma
 
 Keep the trailing comma of the last field item.
 
 |        Type        | Default Value |
 | ------------------ | ------------- |
 | _boolean_          | `false`       |
+
+### Sorting fields
+
+#### latex-workshop.bibtex-fields.sort.enabled
+
+Sort fields inside every entry. The sorting order is defined by [`latex-workshop.bibtex-fields.order`](latex-workshopbibtex-fieldsorder). This variable only has effect when formatting bibtex aligns fields. It is not possible to sort entries without aligning them.
+
+|        Type        | Default Value |
+| ------------------ | ------------- |
+| _boolean_          | `false`       |
+
+#### latex-workshop.bibtex-fields.order
+
+When [`latex-workshop.bibtex-fields.sort.enabled`](latex-workshopbibtex-fieldssortenabled) is true, sort fields according the order defined here and then alphabetically for not listed fields."
+
+|        Type        | Default Value |
+| ------------------ | ------------- |
+| _array of strings_ | `[ ]`         |
