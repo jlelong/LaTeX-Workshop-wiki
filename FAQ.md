@@ -126,6 +126,10 @@ If you experience encoding issues with file names displayed in the Problem Pane,
 
 The default shortcuts for commands related to build and view use the modifiers <kbd>ctrl</kbd>+<kbd>alt</kbd>. On some keyboard layouts, <kbd>ctrl</kbd>+<kbd>alt</kbd> is used to emulate <kbd>AltrGr</kbd>, which makes these shortcuts unusable. Alternatively, you can use <kbd>ctrl</kbd>+<kbd>l</kbd>, <kbd>alt</kbd>+<kbd>letter</kbd> instead of <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>letter</kbd> by setting `latex-workshop.bind.altKeymap.enabled` to `true`.
 
+## Auto build does not work sometimes
+
+Plese try setting [`latex-workshop.latex.watch.usePolling`](Compile#latex-workshoplatexwatchusepolling) to `true` or setting [`latex-workshop.latex.autoBuild.run`](Compile#latex-workshoplatexautobuildrun) to `onSave`.
+
 ## Disable automatic build on save
 
 Set the configuration variable `latex-workshop.latex.autoBuild.run` to `"never"`.
