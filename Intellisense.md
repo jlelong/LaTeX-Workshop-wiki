@@ -37,6 +37,14 @@ The key `\` automatically triggers completion of LaTeX commands. You can define 
 - The files of a LaTeX project are searched for any already used commands in the form `mycommand` followed by several `{}` groups. Then, a snippet is dynamically built for each of them and they are added to the command completion list.
 - When [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled) is `true`, the command completion list is also populated with the commands provided by all the _standard_ packages used in the project (through `\usepackage`). The list of commands provided by every package is described [here](https://github.com/LaTeXing/LaTeX-cwl). Note that homemade packages are ignored in this mechanism because they do not come with a `.cwl` file.
 - If you use personal macro files and want them to be taken into account by intellisense but store them in some `texmf` structure or dedicated directory. Just add the directory containing the file to [`latex-workshop.latex.texDirs`](Compile#latex-workshoplatextexDirs). The file must be loaded in the LaTeX project through the `\input` macro.
+- If you write your own package along with the corresponding `.cwl` file, you can use the Python script [pkgcommand.py](https://github.com/James-Yu/LaTeX-Workshop/master/dev/pkgcommand.py)
+
+    ```
+    python pkgcommand.py -i mypackage.cwl -o destdir
+    ```
+
+  You will find two files `mypackage_cmd.json` and `mypackage_env.json` in `destdir` containing intellisense data for command respectively environment completion. To enable the extension to load these files, add `destdir` to [`latex-workshop.intellisense.package.dirs`](#latex-workshopintellisensepackagedirs). Note it only works when [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled) is set to `true`.
+
 - The completion list can use either placeholders or tabstops. The default is to use tabstops, but it can be changed using [`latex-workshop.intellisense.useTabStops.enabled`](#latex-workshopintellisenseuseTabStopsenabled).
   - placeholders: they provide meaningful information on the arguments but prevent any autocompletion trigger.
   - tabstops: they enable us to directly trigger autocompletion again for citations and references.
@@ -48,6 +56,7 @@ The key `\` automatically triggers completion of LaTeX commands. You can define 
 | [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled)                  | Enabling of auto-completion for commands and environments from loaded packages | `true`  | _boolean_ |
 | [`latex-workshop.intellisense.package.env.enabled`](#latex-workshopintellisensepackageenvenabled)           | Enable `\envname` snippets                                                     | `true`  | _boolean_ |
 | [`latex-workshop.intellisense.package.extra`](#latex-workshopintellisensepackageextra)                      | Extra packages to load for intellisense                                        | `[]` | _array_ of _strings_ |
+| [`latex-workshop.intellisense.package.dirs`](#latex-workshopintellisensepackagedirs)                      | Extra directories where to look for intellisense data                                        | `[]` | _array_ of _strings_ |
 | [`latex-workshop.intellisense.unimathsymbols.enabled`](#latex-workshopintellisenseunimathsymbolsenabled)    | Show unimath symbols as suggestions when `\` pressed                           | `false` | _boolean_     |
 | [`latex-workshop.intellisense.useTabStops.enabled`](#latex-workshopintellisenseuseTabStopsenabled)          | Use tabstops in intellisense completion                                        | `true`  | _boolean_ |
 | [`latex-workshop.intellisense.optionalArgsEntries.enabled`](#latex-workshopintellisenseoptionalArgsEntriesenabled) | Add one completion item per command signature                           | `true`  | _boolean_ |
@@ -169,6 +178,16 @@ Auto-complete commands and environments from used packages.
 List of extra packages to always add to the auto-completion mechanism.
 
 When `latex-workshop.intellisense.package.enabled` is set to `true`, the commands and environments defined in these extra packages will be added to the intellisense suggestions
+
+|         type         | default value |
+| -------------------- | ------------- |
+| _array_ of _strings_ | `[]`          |
+
+### latex-workshop.intellisense.package.dirs
+
+List of extra directories to look for package completion files in addition to those provided by the extension.
+
+See the section on [Commands intellisense](#commands) to learn how to generate these files. Files found in these directories have a higher priority over the default ones. This setting is only relevant when `latex-workshop.intellisense.package.env.enable` is true.
 
 |         type         | default value |
 | -------------------- | ------------- |
