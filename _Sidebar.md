@@ -23,6 +23,8 @@
   - [Magic comments](Compile#magic-comments)
   - [Catching errors and warnings](Compile#catching-errors-and-warnings)
 - [Linting](Linters)
+  - [Duplicate labels](Linters#duplicate-labels)
+  - [Chktex](Linters#chktex)
 - [Viewing & SyncTeX](View)
   - [Internal PDF viewer](View#internal-pdf-viewer)
     - [Invert mode](View#invert-mode)
