@@ -1,5 +1,19 @@
 # Linting
 
+## Checking duplicate labels
+
+Duplicate labels are highlighted when [`latex-workshop.check.duplicatedLabels.enabled`](#latex-workshopcheckduplicatedLabelsenabled) is set to `true`. The computation of the duplicates is based on the data collected for intellisense, so we cannot update the duplicates more often than intellisense. When [`intellisense.update.aggressive.enabled`](Intellisense#latex-workshopintellisenseupdateaggressiveenabled) is set to `false`, duplicates are updated on file save. When [`intellisense.update.aggressive.enabled`](Intellisense#latex-workshopintellisenseupdateaggressiveenabled) is set to `true`, duplicates are updated after stopped typing for longer than [`latex-workshop.intellisense.update.delay`](Intellisense#latex-workshopintellisenseupdatedelay).
+
+### latex-workshop.check.duplicatedLabels.enabled
+
+Enable checking for duplicated labels.
+
+A new check is triggered every time the intellisense data is updated, see [`intellisense.update.aggressive.enabled`](Intellisense#latex-workshopintellisenseupdateaggressiveenabled) .
+
+| type      | default value |
+| --------- | ------------- |
+| _boolean_ | `true`        |
+
 ## ChkTeX
 
 The [ChkTeX](http://www.nongnu.org/chktex/) utility is a LaTeX semantic checker. Once installed, and the relevant setting enabled it is automatically run on any open TeX documents. It output is parsed by the extension and displayed in the _Problems_ panel.
@@ -9,8 +23,6 @@ Auto load of `.chktexrc` configuration files is performed in the following order
 1. Manually configured `-l` setting in `chktex.args`
 1. The `.chktexrc` file (if exists) in the same folder as the main LaTeX file
 1. The `.chktexrc` file (if exists) at the project root folder.
-
-## Relevant Settings
 
 ### Overview
 
