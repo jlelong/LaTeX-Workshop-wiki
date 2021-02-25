@@ -24,7 +24,7 @@ Auto load of `.chktexrc` configuration files is performed in the following order
 | [`latex-workshop.chktex.convertOutput.column.enabled`](#latex-workshopchktexconvertoutputcolumnenabled)                       | Enable converting ChkTeX outputs | `true`    | _boolean_            |
 | [`latex-workshop.chktex.convertOutput.column.chktexrcTabSize`](#latex-workshopchktexconvertoutputcolumnchktexrctabsize)       | `TabSize` number                 | `-1`      | _number_             |
 
-### Details
+### Configuration variables
 
 #### latex-workshop.chktex.args.active
 
@@ -70,7 +70,7 @@ This command will be joint with [`latex-workshop.chktex.args.active`](latex-work
 | -------- | ------------- |
 | _string_ | `"chktex"`    |
 
-### latex-workshop.chktex.run
+#### latex-workshop.chktex.run
 
 When LaTeX should be linted by ChkTeX. If set to `onSave`, the whole LaTeX project will be linted upon saving. If set to `onType`, the active document will be linted when input is stopped for a period of time defined in `latex-workshop.chktex.delay`, in addition to the behavior of `onSave`.
 
@@ -78,7 +78,7 @@ When LaTeX should be linted by ChkTeX. If set to `onSave`, the whole LaTeX proje
 | ------ | ------------- |
 | _enum_ | `"onSave"`    |
 
-### latex-workshop.chktex.delay
+#### latex-workshop.chktex.delay
 
 When `latex-workshop.chktex.run` is set to `onType`, defines the delay in milliseconds for chktex to wait after stopped typing. 
 
@@ -86,7 +86,7 @@ When `latex-workshop.chktex.run` is set to `onType`, defines the delay in millis
 | -------- | ------------- |
 | _number_ | `500`         |
 
-### latex-workshop.chktex.convertOutput.column.enabled
+#### latex-workshop.chktex.convertOutput.column.enabled
 
 Enable converting ChkTeX outputs' column numbers for non-ASCII characters.
 
@@ -94,7 +94,7 @@ Enable converting ChkTeX outputs' column numbers for non-ASCII characters.
 | --------- | ------------- |
 | _boolean_ | `true`        |
 
-### latex-workshop.chktex.convertOutput.column.chktexrcTabSize
+#### latex-workshop.chktex.convertOutput.column.chktexrcTabSize
 
 Write the `TabSize` number from `.chktexrc`. The default value `-1` means that LaTeX Workshop will try to find `.chktexrc` and to read the value from it.
 
