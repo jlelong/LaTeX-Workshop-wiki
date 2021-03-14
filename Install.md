@@ -10,7 +10,7 @@
 
 ## Installation
 
-Installing LaTeX Workshop is simple. You can find it in [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop), or simply run `ext install latex-workshop` in VS Code Quick Open (`ctrl`/`cmd` + `P`). See an [officail document](https://code.visualstudio.com/docs/editor/extension-gallery) for the details.
+Installing LaTeX Workshop is simple. You can find it in [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop), or simply run `ext install latex-workshop` in VS Code Quick Open (`ctrl`/`cmd` + `P`). See an [official document](https://code.visualstudio.com/docs/editor/extension-gallery) for the details.
 
 ## Setting PATH environment variable
 
