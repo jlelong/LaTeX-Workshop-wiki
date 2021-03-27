@@ -375,7 +375,7 @@ A LaTeX recipe refers to a sequence/array of commands which LaTeX Workshop execu
 - The second one run the following sequence of commands `pdflatex` → `bibtex` → `pdflatex` → `pdflatex`.
 
 ```json
-[
+"latex-workshop.latex.recipes": [
   {
     "name": "latexmk 🔃",
     "tools": [
@@ -397,7 +397,7 @@ A LaTeX recipe refers to a sequence/array of commands which LaTeX Workshop execu
 and each tool appearing in the `tools` field is defined `latex-workshop.latex.tools`. Its default value is given by
 
 ```json
-[
+"latex-workshop.latex.tools": [
   {
     "name": "latexmk",
     "command": "latexmk",
