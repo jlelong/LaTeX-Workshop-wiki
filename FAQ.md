@@ -135,6 +135,8 @@ The default shortcuts for commands related to build and view use the modifiers <
 
 Plese try setting [`latex-workshop.latex.watch.usePolling`](Compile#latex-workshoplatexwatchusepolling) to `true` or setting [`latex-workshop.latex.autoBuild.run`](Compile#latex-workshoplatexautobuildrun) to `onSave`.
 
+You must reload VSCode to take into account a change in this configuration.
+
 ## Disable automatic build on save
 
 Set the configuration variable `latex-workshop.latex.autoBuild.run` to `"never"`.
