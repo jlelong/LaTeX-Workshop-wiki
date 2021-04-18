@@ -42,7 +42,7 @@
 - [Environment variables in `.zshrc` don't take effect with VS Code Remote](#environment-variables-in-zshrc-dont-take-effect-with-vs-code-remote)
 - [You cannot use a tilde `~` in `PATH`](#you-cannot-use-a-tilde--in-path)
 - [`terminal.integrated.shellArgs.linux` doesn't take effect](#terminalintegratedshellargslinux-doesnt-take-effect)
-- [What kinds of commands does Hover Preview support?](#what-kinds-of-latex-commands-does-hover-preview-support)
+- [What kinds of LaTeX commands does Hover Preview support?](#what-kinds-of-latex-commands-does-hover-preview-support)
 
 
 ## Known incompatible Extensions
