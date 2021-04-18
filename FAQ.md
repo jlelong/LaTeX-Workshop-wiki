@@ -42,6 +42,7 @@
 - [Environment variables in `.zshrc` don't take effect with VS Code Remote](#environment-variables-in-zshrc-dont-take-effect-with-vs-code-remote)
 - [You cannot use a tilde `~` in `PATH`](#you-cannot-use-a-tilde--in-path)
 - [`terminal.integrated.shellArgs.linux` doesn't take effect](#terminalintegratedshellargslinux-doesnt-take-effect)
+- [What kinds of commands does Hover Preview support?](#what-kinds-of-latex-commands-does-hover-preview-support)
 
 
 ## Known incompatible Extensions
@@ -306,3 +307,10 @@ You can not use a tilde `~` in the environment variable `PATH` as an abbreviatio
 
 The setting `terminal.integrated.shellArgs.linux` is not related to the environment variable on the extension host. You cannot set `PATH` for LaTeX Workshop through the setting.
 
+## What kinds of LaTeX commands does Hover Preview support?
+
+We implement Hover Preview with MathJax. Please see the following for LaTeX commands supported by MathJax:
+
+- http://docs.mathjax.org/en/v2.7-latest/tex.html#supported-latex-commands
+
+Notice that MathJax does not support LaTeX packages.
