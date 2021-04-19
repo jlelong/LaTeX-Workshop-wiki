@@ -16,7 +16,7 @@ A new check is triggered every time the intellisense data is updated, see [`inte
 
 ## ChkTeX
 
-The [ChkTeX](http://www.nongnu.org/chktex/) utility is a LaTeX semantic checker. Once installed, and the relevant setting enabled it is automatically run on any open TeX documents. It output is parsed by the extension and displayed in the _Problems_ panel.
+The [ChkTeX](https://www.nongnu.org/chktex/) utility is a LaTeX semantic checker. Once installed, and the relevant setting enabled it is automatically run on any open TeX documents. It output is parsed by the extension and displayed in the _Problems_ panel.
 
 Auto load of `.chktexrc` configuration files is performed in the following order
 
