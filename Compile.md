@@ -632,14 +632,6 @@ Display error messages in popup notifications.
 | --------- | ------------- |
 | _boolean_ | `true`        |
 
-#### latex-workshop.message.update.show
-
-Display LaTeX Workshop update message on new versions.
-
-| type      | default value |
-| --------- | ------------- |
-| _boolean_ | `true`        |
-
 #### latex-workshop.latex.build.clearLog.everyRecipeStep.enabled
 
 Clear the LaTeX Compiler logs before every step of a recipe.
