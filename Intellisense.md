@@ -181,7 +181,7 @@ When `latex-workshop.intellisense.package.enabled` is set to `true`, the command
 
 List of extra directories to look for package completion files in addition to those provided by the extension.
 
-See the section on [Commands intellisense](#commands) to learn how to generate these files. Files found in these directories have a higher priority over the default ones. This setting is only relevant when [`latex-workshop.intellisense.package.env.enabled`](latex-workshopintellisensepackageenvenabled) is true.
+See the section on [Commands intellisense](#commands) to learn how to generate these files. Files found in these directories have a higher priority over the default ones. This setting is only relevant when [`latex-workshop.intellisense.package.env.enabled`](#latex-workshopintellisensepackageenvenabled) is true.
 
 |         type         | default value |
 | -------------------- | ------------- |

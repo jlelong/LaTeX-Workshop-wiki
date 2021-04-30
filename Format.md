@@ -39,7 +39,7 @@ BibTeX files can be formatted either by using the VSCode _Format Document_ or _F
 
 These commands can be accessed through Visual Studio Code's **Command Palette** (default <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>p</kbd> or <kbd>⌘</kbd>+<kbd>shift</kbd>+<kbd>p</kbd>).
 
-Whether to sort the file when calling VSCode formatting commands is set by [`latex-workshop.bibtex-format.sort.enabled`](latex-workshopbibtex-formatsortenabled). When formatting bibtex entries, you can decide to keep the trailing comma of the last field in each entry by setting [`latex-workshop.bibtex-format.trailingComma`](#latex-workshopbibtex-formattrailingComma) to `true`
+Whether to sort the file when calling VSCode formatting commands is set by [`latex-workshop.bibtex-format.sort.enabled`](#latex-workshopbibtex-formatsortenabled). When formatting bibtex entries, you can decide to keep the trailing comma of the last field in each entry by setting [`latex-workshop.bibtex-format.trailingComma`](#latex-workshopbibtex-formattrailingComma) to `true`
 
 ### Sorting entries
 
@@ -117,7 +117,7 @@ Keep the trailing comma of the last field item.
 
 #### latex-workshop.bibtex-fields.sort.enabled
 
-Sort fields inside every entry. The sorting order is defined by [`latex-workshop.bibtex-fields.order`](latex-workshopbibtex-fieldsorder). This variable only has effect when formatting bibtex aligns fields. It is not possible to sort entries without aligning them.
+Sort fields inside every entry. The sorting order is defined by [`latex-workshop.bibtex-fields.order`](#latex-workshopbibtex-fieldsorder). This variable only has effect when formatting bibtex aligns fields. It is not possible to sort entries without aligning them.
 
 |        Type        | Default Value |
 | ------------------ | ------------- |
@@ -125,7 +125,7 @@ Sort fields inside every entry. The sorting order is defined by [`latex-workshop
 
 #### latex-workshop.bibtex-fields.order
 
-When [`latex-workshop.bibtex-fields.sort.enabled`](latex-workshopbibtex-fieldssortenabled) is true, sort fields according the order defined here and then alphabetically for not listed fields."
+When [`latex-workshop.bibtex-fields.sort.enabled`](#latex-workshopbibtex-fieldssortenabled) is true, sort fields according the order defined here and then alphabetically for not listed fields."
 
 |        Type        | Default Value |
 | ------------------ | ------------- |

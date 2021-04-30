@@ -74,7 +74,7 @@ The full project will be linted from the root on file save.
 
 Define the location of ChkTeX executive file.
 
-This command will be joint with [`latex-workshop.chktex.args.active`](latex-workshopchktexargsactive) and  [`latex-workshop.chktex.args.root`](latex-workshopchktexargsroot) to form a complete ChkTeX command.
+This command will be joint with [`latex-workshop.chktex.args.active`](#latex-workshopchktexargsactive) and  [`latex-workshop.chktex.args.root`](#latex-workshopchktexargsroot) to form a complete ChkTeX command.
 
 "latex-workshop.chktex.path": "chktex"
 

@@ -350,7 +350,7 @@ The command to be used to remove temporary files when [`latex-workshop.latex.cle
 
 ### latex-workshop.latex.clean.args
 
-The arguments of [`latex-workshop.latex.clean.command`](latex-workshoplatexcleancommand). The `%TEX%` placeholder is the full path of the tex file from which the clean command is called.
+The arguments of [`latex-workshop.latex.clean.command`](#latex-workshoplatexcleancommand). The `%TEX%` placeholder is the full path of the tex file from which the clean command is called.
 
 | type                 | default value     |
 |----------------------|-------------------|
@@ -365,7 +365,7 @@ Define the method used by the `clean` command to remove temporary files.
 | _enum_ of _strings_ | `"glob" | "cleanCommand"` |
 
 - `"glob"`: Clean all the files located in [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutDir) and matching the glob patterns listed in [`latex-workshop.latex.clean.fileTypes`](#latex-workshoplatexcleanfileTypes).
-- `"cleanCommand`": Run [`latex-workshop.latex.clean.command`](latex-workshoplatexcleancommand) to clean temporary files.
+- `"cleanCommand`": Run [`latex-workshop.latex.clean.command`](#latex-workshoplatexcleancommand) to clean temporary files.
 
 ## LaTeX recipes
 
