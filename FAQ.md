@@ -15,6 +15,7 @@
 - [File watcher does not work when used with OneDrive or a network drive](#file-watcher-does-not-work-when-used-with-onedrive-or-a-network-drive)
 - [The directory ~/node_modules/ may cause errors](#the-directory-node_modules-may-cause-errors)
 - [I cannot build from a subfile](#i-cannot-build-from-a-subfile)
+- [LaTeX compilation is slow](#latex-compilation-is-slow)
 - [The Problem Pane displays wrong messages](#the-Problem-Pane-displays-wrong-messages)
 - [Encoding issues with file names in the Problem Pane](#Encoding-issues-with-file-names-in-the-Problem-Pane)
 - [I cannot use `ctrl`+`alt` in a shortcut](#i-cannot-use-ctrlalt-in-a-shortcut)
@@ -110,6 +111,10 @@ When your files are located inside `OneDrive` or a network drive, you have to se
 ## The directory ~/node_modules/ may cause errors
 
 The directory `~/node_modules/` in the home directory may cause errors on Mac and Linux. The modules in the directory might be unintentionally loaded by VSCode because of the [default behavior](https://nodejs.org/api/modules.html#modules_loading_from_node_modules_folders) of node.js, which would cause errors such as _Extension host terminated unexpectedly_. We recommend moving the directory `~/node_modules/` to `~/npm/node_modules/`.
+
+## LaTeX compilation is slow
+
+When LaTeX compilation is slow, try setting [`latex-workshop.progress.enabled`](Compile#latex-workshopprogressenabled) false.
 
 ## I cannot build from a subfile
 

@@ -96,7 +96,7 @@ The following settings are helpful to customize how to build a project and how t
 | [`latex-workshop.latex.magic.bib.args`](#magic-comments)  | Arguments for the `BIB program`                                                                       |          | _array_ of _strings_ |
 | [`latex-workshop.latex.build.forceRecipeUsage`](#latex-workshoplatexbuildforceRecipeUsage) | Force the use of recipes | false | _boolean_ |
 
-when [`latex-workshop.progress.enabled`](latex-workshopprogressenabled) is set, a progress bar indicates the building progress. It can be customized using the following configuration variables
+when [`latex-workshop.progress.enabled`](#latex-workshopprogressenabled) is set, a progress bar indicates the building progress. It can be customized using the following configuration variables
 
 - [`latex-workshop.progress.location`](#latex-workshopprogresslocation)
 - [`latex-workshop.progress.runIconType`](#latex-workshopprogressrunIconType)
@@ -580,9 +580,9 @@ The warnings and errors issued by the compiling toolchain are rendered in the _P
 
 The raw compiler logs can be accessed in the _Output Pane_, choose _LaTeX Compiler_. The default is to clear the logs before calling every tool of a recipe. If you prefer to keep the logs from all the tools of a recipe, set [`latex-workshop.latex.build.clearLog.everyRecipeStep.enabled`](#latex-workshoplatexbuildclearLogeveryRecipeStepenabled) to `false`.
 
-### Settings Details
+## Settings Details
 
-#### latex-workshop.message.log.show
+### latex-workshop.message.log.show
 
 Display LaTeX Workshop debug log in output panel.
 
@@ -592,7 +592,7 @@ This property defines whether LaTeX Workshop will output its debug log to the lo
 | --------- | ------------- |
 | _boolean_ | `true`        |
 
-#### latex-workshop.message.badbox.show
+### latex-workshop.message.badbox.show
 
 Show badbox information in the problems panel.
 
@@ -600,7 +600,7 @@ Show badbox information in the problems panel.
 | --------- | ------------- |
 | _boolean_ | `true`        |
 
-#### latex-workshop.message.latexlog.exclude
+### latex-workshop.message.latexlog.exclude
 
 Exclude log messages that matches the given regexp from the problems panel.
 
@@ -608,7 +608,7 @@ Exclude log messages that matches the given regexp from the problems panel.
 | -------------------- | ------------- |
 | _array_ of _strings_ | `[]`          |
 
-#### latex-workshop.message.information.show
+### latex-workshop.message.information.show
 
 Display information messages in popup notifications.
 
@@ -616,7 +616,7 @@ Display information messages in popup notifications.
 | --------- | ------------- |
 | _boolean_ | `false`       |
 
-#### latex-workshop.message.warning.show
+### latex-workshop.message.warning.show
 
 Display warning messages in popup notifications.
 
@@ -624,7 +624,7 @@ Display warning messages in popup notifications.
 | --------- | ------------- |
 | _boolean_ | `true`        |
 
-#### latex-workshop.message.error.show
+### latex-workshop.message.error.show
 
 Display error messages in popup notifications.
 
@@ -632,7 +632,7 @@ Display error messages in popup notifications.
 | --------- | ------------- |
 | _boolean_ | `true`        |
 
-#### latex-workshop.latex.build.clearLog.everyRecipeStep.enabled
+### latex-workshop.latex.build.clearLog.everyRecipeStep.enabled
 
 Clear the LaTeX Compiler logs before every step of a recipe.
 
@@ -642,7 +642,7 @@ Set this property to false to keep the logs of all tools in a recipe.
 | --------- | ------------- |
 | _boolean_ | `true`        |
 
-#### latex-workshop.progress.enabled
+### latex-workshop.progress.enabled
 
 Enable the progress bar and the LaTeX compilation info panel.
 
