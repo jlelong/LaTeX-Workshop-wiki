@@ -2,8 +2,8 @@
 
 ## Requirements
 
-- LaTeX distribution in system PATH. For example, [TeX Live](https://www.tug.org/texlive/).
-- Please note [MikTeX](https://miktex.org/) does not ship with SyncTeX. Please use [built-in synctex functionality](View#latex-workshopsynctexsynctexjsenabled).
+- LaTeX distribution in system PATH. For example, [TeX Live](https://www.tug.org/texlive/). We strongly recommend TeX Live.
+- Please note [MiKTeX](https://miktex.org/) does not ship with Perl and SyncTeX. You have to install Perl by yourself, which `latexmk` requires.
 - `latexmk` is required for the default recipe for building LaTeX projects to work. Alternatively, you can [set up your own LaTeX recipe](Compile#latex-recipes).
 - _Optional_: Install [ChkTeX](https://www.nongnu.org/chktex) to lint LaTeX projects.
 - _Optional_: Install [latexindent.pl](https://github.com/cmhughes/latexindent.pl) for formatting support if it is not provided by your LaTeX distribution. You also have to install a few standard Perl modules. See the [official document](https://latexindentpl.readthedocs.io/en/latest/appendices.html).
