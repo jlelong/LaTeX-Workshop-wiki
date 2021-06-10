@@ -51,7 +51,7 @@ In addtions to `LaTeX`, [LaTeX-Expl3](https://www.latex-project.org/latex3/code/
 
 Starting with 1.35.0, VS Code supports Docker with [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers). LaTeX Workshop works well with the extension. Try the extension at first.
 
-Starting with release 5.3.0, there is an experimental implementation on Docker support following the idea of [@Arxisos](https://github.com/Arxisos). You can set `latex-workshop.docker.enabled` to `true` to use a docker based LaTeX distribution. The docker image to be used is defined by `latex-workshop.docker.image.latex`, the default value is `tianon/latex`. It is advised that the image is 'pre-'pulled.
+Starting with release 5.3.0, there is an experimental implementation on Docker support following the idea of [@Arxisos](https://github.com/Arxisos). You can set `latex-workshop.docker.enabled` to `true` to use a docker based LaTeX distribution. The docker image to be used is defined by `latex-workshop.docker.image.latex`, the default value is empty. Please find an appropriate image by yourself and set the name to `latex-workshop.docker.image.latex`.
 
 [@Arxisos](https://github.com/Arxisos) created [snippets](https://github.com/Arxisos/LaTex-Workshop-Docker) for LaTeX binaries in docker, and [@lippertmarkus](https://github.com/lippertmarkus) had another [short description](https://github.com/James-Yu/LaTeX-Workshop/issues/302) on how to use Docker with LaTeX Workshop.
 You can set up the advanced configuration of Docker through [environment variables](https://docs.docker.com/engine/reference/commandline/cli/#environment-variables) with the `env` property of each [recipe](Compile#latex-recipes).
