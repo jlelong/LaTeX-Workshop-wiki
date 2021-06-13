@@ -20,6 +20,8 @@
 - [Encoding issues with file names in the Problem Pane](#Encoding-issues-with-file-names-in-the-Problem-Pane)
 - [I cannot use `ctrl`+`alt` in a shortcut](#i-cannot-use-ctrlalt-in-a-shortcut)
 - [Auto build does not work sometimes](#auto-build-does-not-work-sometimes)
+- [Suggestions for BibTeX files are not updated](#suggestions-for-bibtex-files-are-not-updated)
+- [The internal PDF viewer is not updated](#the-internal-pdf-viewer-is-not-updated)
 - [Disable automatic build on save](#disable-automatic-build-on-save)
 - [I use build on save but I occasionally want to save without building](#I-use-build-on-save-but-I-occasionally-want-to-save-without-building)
 - [Auto build LaTeX results in always twice or infinite loop](#auto-build-latex-results-in-always-twice-or-infinite-loop)
@@ -140,6 +142,18 @@ The default shortcuts for commands related to build and view use the modifiers <
 ## Auto build does not work sometimes
 
 Plese try setting [`latex-workshop.latex.watch.usePolling`](Compile#latex-workshoplatexwatchusepolling) to `true` or setting [`latex-workshop.latex.autoBuild.run`](Compile#latex-workshoplatexautobuildrun) to `onSave`.
+
+You must reload VSCode to take into account a change in this configuration.
+
+## Suggestions for BibTeX files are not updated
+
+Plese try setting [`latex-workshop.latex.watch.usePolling`](Compile#latex-workshoplatexwatchusepolling) to `true`.
+
+You must reload VSCode to take into account a change in this configuration.
+
+## The internal PDF viewer is not updated
+
+Plese try setting [`latex-workshop.latex.watch.usePolling`](Compile#latex-workshoplatexwatchusepolling) to `true`.
 
 You must reload VSCode to take into account a change in this configuration.
 
