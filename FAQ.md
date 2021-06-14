@@ -3,7 +3,7 @@
 - [Known incompatible extensions](#known-incompatible-extensions)
 - [Using LaTeX Workshop with WSL](#using-latex-workshop-with-wsl)
 - [Problems with Snap and Flatpak versions of VS Code](#problems-with-snap-and-flatpak-versions-of-vs-code)
-- [Graphical glitches with Linux under Virtual Box, VM Workstation Player, Crostini, and others.](#graphical-glitches-with-linux-under-virtual-box-vm-workstation-player-crostini-and-others)
+- [The PDF viewer is blank or has graphical glitches](#the-pdf-viewer-is-blank-or-has-graphical-glitches)
 - [Cygwin is not supported](#cygwin-is-not-supported)
 - [code-server is not supported](#code-server-is-not-supported)
 - [Eclipse Theia is not supported](#eclipse-theia-is-not-supported)
@@ -70,9 +70,9 @@ Also, in WSL2 file watchers might not work. For now, you have to set [`latex-wor
 
 These versions are sandboxed and are known to cause problems (e.g. [here](https://github.com/James-Yu/LaTeX-Workshop/issues/2437)). It is recommended to use other installation options, like the .deb package for Debian/Ubuntu based distributions.
 
-## Graphical glitches with Linux under Virtual Box, VM Workstation Player, [Crostini](https://chromium.googlesource.com/chromiumos/docs/+/master/containers_and_vms.md), and others
+## The PDF viewer is blank or has graphical glitches
 
-Display problems, e.g., on the PDF viewer, can occur with Linux, especially under Virtual Box and others. In that case, start VS Code with `--disable-gpu`. See [the official document](https://code.visualstudio.com/docs/supporting/FAQ#_vs-code-is-blank), [realted issue](https://github.com/microsoft/vscode/issues/92970), and [another issue](https://github.com/James-Yu/LaTeX-Workshop/issues/1935).
+If the PDF viewer is blank or has graphical glitches, please try restarting VS Code with the option `--disable-gpu`. See [the official document](https://code.visualstudio.com/docs/supporting/FAQ#_vs-code-is-blank), [realted issue](https://github.com/microsoft/vscode/issues/92970), and [another issue](https://github.com/James-Yu/LaTeX-Workshop/issues/1935).
 
 ## Cygwin is not supported
 
