@@ -66,7 +66,7 @@ Also, in WSL2 file watchers might not work. For now, you have to set [`latex-wor
 
 ## Problems with Snap and Flatpak versions of VS Code
 
-These versions are sandboxed and are known to cause problems (e.g. [here](https://github.com/James-Yu/LaTeX-Workshop/issues/2437)). It is recommended to use other installation options, like the .deb package for Debian/Ubuntu based distributions.
+These versions are sandboxed and are known to cause problems (e.g. [here](https://github.com/James-Yu/LaTeX-Workshop/issues/2437)). We strongly recommend not using the snap and flatpack versions of VS Code. We strongly recommend using other installation options, like the .deb package for Debian/Ubuntu based distributions.
 
 ## The PDF viewer is blank or has graphical glitches
 
