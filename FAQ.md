@@ -6,6 +6,7 @@
 - [The PDF viewer is blank or has graphical glitches](#the-pdf-viewer-is-blank-or-has-graphical-glitches)
 - [Cygwin is not supported](#cygwin-is-not-supported)
 - [code-server is not supported](#code-server-is-not-supported)
+- [Gitpod is not supported](#gitpod-is-not-supported)
 - [Eclipse Theia is not supported](#eclipse-theia-is-not-supported)
 - [Onivim 2 is not supported](#onivim-2-is-not-supported)
 - [Visual Studio Codespaces with self-hosted environments is not supported](#visual-studio-codespaces-with-self-hosted-environments-is-not-supported)
@@ -79,6 +80,10 @@ LaTeX Workshop does not support TeX Live installed through Cygwin. Please instal
 ## code-server is not supported
 
 LaTeX Workshop does not support [code-server](https://github.com/cdr/code-server).
+
+## Gitpod is not supported
+
+LaTeX Workshop does not support [Gitpod](https://github.com/gitpod-io/gitpod).
 
 ## Eclipse Theia is not supported
 
