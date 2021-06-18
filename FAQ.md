@@ -9,8 +9,7 @@
 - [Gitpod is not supported](#gitpod-is-not-supported)
 - [Eclipse Theia is not supported](#eclipse-theia-is-not-supported)
 - [Onivim 2 is not supported](#onivim-2-is-not-supported)
-- [Visual Studio Codespaces with self-hosted environments is not supported](#visual-studio-codespaces-with-self-hosted-environments-is-not-supported)
-- [Visual Studio Codespaces has an issue with the internal PDF viewer](#visual-studio-codespaces-has-an-issue-with-the-internal-pdf-viewer)
+- [GitHub Codespaces is not supported](#github-codespaces-is-not-supported)
 - [VSCodium is not officially supported](#vscodium-is-not-officially-supported)
 - [Visual Studio Live Share is not supported](#visual-studio-live-share-is-not-supported)
 - [The directory ~/node_modules/ may cause errors](#the-directory-node_modules-may-cause-errors)
@@ -93,13 +92,9 @@ LaTeX Workshop does not support [Eclipse Theia](https://github.com/eclipse-theia
 
 LaTeX Workshop does not support [Onivim 2](https://github.com/onivim/oni2).
 
-## Visual Studio Codespaces with self-hosted environments is not supported
+## GitHub Codespaces is not supported
 
-Visual Studio Codespaces with [self-hosted environments](https://docs.microsoft.com/en-us/visualstudio/codespaces/how-to/self-hosting-vscode) is not supported.
-
-## Visual Studio Codespaces has an issue with the internal PDF viewer
-
-Visual Studio Codespaces does not work well with the internal PDF viewer. See the [issue](https://github.com/MicrosoftDocs/vsonline/issues/11).
+LaTeX Workshop does not support [GitHub Codespaces](https://github.com/features/codespaces).
 
 ## VSCodium is not officially supported
 
