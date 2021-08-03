@@ -52,7 +52,7 @@ The key `\` automatically triggers completion of LaTeX commands. You can define 
 
 | Setting key                                                                                                 | Description                                                                    | Default | Type      |
 | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ------- | --------- |
-| [`latex-workshop.intellisense.triggers.latex`](#latex-workshopintellisensetriggerslatex)                    | Additional trigger characters for intellisense of LaTeX documents.             | `[]` | _array_ of _strings_ |
+| [`latex-workshop.intellisense.triggers.latex`](#latex-workshopintellisensetriggerslatex)                    | Additional trigger characters for intellisense of LaTeX documents.             | `["{"]` | _array_ of _strings_ |
 | [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled)                  | Enabling of auto-completion for commands and environments from loaded packages | `true`  | _boolean_ |
 | [`latex-workshop.intellisense.package.env.enabled`](#latex-workshopintellisensepackageenvenabled)           | Enable `\envname` snippets                                                     | `true`  | _boolean_ |
 | [`latex-workshop.intellisense.package.extra`](#latex-workshopintellisensepackageextra)                      | Extra packages to load for intellisense                                        | `[]` | _array_ of _strings_ |
@@ -157,7 +157,7 @@ Additional trigger characters for intellisense of LaTeX documents. You must relo
 
 |            type      | default value |
 | -------------------- | ------------- |
-| _array_ of _strings_ | `[]`          |
+| _array_ of _strings_ | `["{"]`          |
 
 ### latex-workshop.intellisense.package.enabled
 
