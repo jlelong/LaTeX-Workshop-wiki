@@ -131,19 +131,19 @@ The default shortcuts for commands related to build and view use the modifiers <
 
 ## Auto build does not work sometimes
 
-Plese try setting [`latex-workshop.latex.watch.usePolling`](Compile#latex-workshoplatexwatchusepolling) to `true` or setting [`latex-workshop.latex.autoBuild.run`](Compile#latex-workshoplatexautobuildrun) to `onSave`.
+Please try setting [`latex-workshop.latex.watch.usePolling`](Compile#latex-workshoplatexwatchusepolling) to `true` or setting [`latex-workshop.latex.autoBuild.run`](Compile#latex-workshoplatexautobuildrun) to `onSave`.
 
 You must reload VSCode to take into account a change in this configuration.
 
 ## Suggestions for BibTeX files are not updated
 
-Plese try setting [`latex-workshop.latex.watch.usePolling`](Compile#latex-workshoplatexwatchusepolling) to `true`.
+Please try setting [`latex-workshop.latex.watch.usePolling`](Compile#latex-workshoplatexwatchusepolling) to `true`.
 
 You must reload VSCode to take into account a change in this configuration.
 
 ## The internal PDF viewer is not updated
 
-Plese try setting [`latex-workshop.latex.watch.usePolling`](Compile#latex-workshoplatexwatchusepolling) to `true`.
+Please try setting [`latex-workshop.latex.watch.usePolling`](Compile#latex-workshoplatexwatchusepolling) to `true`.
 
 You must reload VSCode to take into account a change in this configuration.
 
