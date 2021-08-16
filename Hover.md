@@ -46,7 +46,7 @@ Only math environments with less than [`latex-workshop.hover.preview.maxLines`](
 
 ## Previewing graphics
 
-When [`latex-workshop.hover.preview.enabled`](#latex-workshophovercitationenabled) is set to `true`, moving the mouse over an argument of `\includegraphics` shows a preview the graphics file. Because previewing PDF file may freeze VSCode, it can be deactivated by setting [`latex-workshop.intellisense.includegraphics.preview.pdf.enabled`](Intellisense#latex-workshopintellisenseincludegraphicspreviewpdfenabled) to `false`.
+When [`latex-workshop.hover.preview.enabled`](#latex-workshophovercitationenabled) is set to `true`, moving the mouse over an argument of `\includegraphics` shows a preview of the graphics file. Because previewing PDF file may freeze VSCode, it can be deactivated by setting [`latex-workshop.intellisense.includegraphics.preview.pdf.enabled`](Intellisense#latex-workshopintellisenseincludegraphicspreviewpdfenabled) to `false`.
 
 ## Previewing citation details
 
