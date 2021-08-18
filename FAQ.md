@@ -25,6 +25,7 @@
 - [Auto build LaTeX results in always twice or infinite loop](#auto-build-latex-results-in-always-twice-or-infinite-loop)
 - [Large bibtex files are ignored](#large-bibtex-files-are-ignored)
 - [Path containing Chinese or `~` characters](#path-containing-chinese-or--characters)
+- [IME doesn't work well with LaTeX Workshop](#ime-doesnt-work-well-with-latex-workshop)
 - [The LaTeX sidebar keeps reopening](#the-latex-sidebar-keeps-reopening)
 - [Spell check](#spell-check)
 - [I cannot nest snippets](#i-cannot-nest-snippets)
@@ -170,6 +171,10 @@ the compilation does not work well. In such cases, please use `%DOCFILE%` instea
 
 On some platforms, `synctex` does not work well with the path containing non-ASCII characters either. In such cases, please use a built-in `synctex` functionality.
 See [Viewing & Synctex](View#latex-workshopsynctexsynctexjsenabled).
+
+## IME doesn't work well with LaTeX Workshop
+
+Please try setting [`latex-workshop.bind.enter.key`](Environments#latex-workshopbindenterkey) to `false`.
 
 ## The LaTeX sidebar keeps reopening
 

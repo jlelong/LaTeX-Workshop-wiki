@@ -47,3 +47,11 @@ Alternatively, you can select the text and insert the environment using either t
 
 <img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/surround-beginend.gif" alt="Surround with environment demo">
 
+### latex-workshop.bind.enter.key
+
+
+Enable the automatic insertion of `\item` on a newline when pressing `Enter` in a line starting in `\item`.
+
+| type      | default value |
+| --------- | ------------- |
+| _boolean_ | `true`        |
