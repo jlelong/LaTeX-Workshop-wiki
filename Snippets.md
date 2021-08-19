@@ -112,7 +112,6 @@ Greek Letters can be inserted using the LaTeX command, which will autocomplete o
 | `@s`   | `\sigma`      |
 | `@t`   | `\tau`        |
 | `@u`   | `\upsilon`    |
-| `@s`   | `\sigma`      |
 | `@o`   | `\omega`      |
 | `@&`   | `\wedge`      |
 | `@x`   | `\xi`         |
