@@ -18,6 +18,7 @@
 - [Encoding issues with file names in the Problem Pane](#Encoding-issues-with-file-names-in-the-Problem-Pane)
 - [I cannot use `ctrl`+`alt` in a shortcut](#i-cannot-use-ctrlalt-in-a-shortcut)
 - [Auto build does not work sometimes](#auto-build-does-not-work-sometimes)
+- [Saving a `.cls` file does not trigger auto build](#saving-a-cls-file-does-not-trigger-auto-build)
 - [Suggestions for BibTeX files are not updated](#suggestions-for-bibtex-files-are-not-updated)
 - [The internal PDF viewer is not updated](#the-internal-pdf-viewer-is-not-updated)
 - [Disable automatic build on save](#disable-automatic-build-on-save)
@@ -135,6 +136,10 @@ The default shortcuts for commands related to build and view use the modifiers <
 Please try setting [`latex-workshop.latex.watch.usePolling`](Compile#latex-workshoplatexwatchusepolling) to `true` or setting [`latex-workshop.latex.autoBuild.run`](Compile#latex-workshoplatexautobuildrun) to `onSave`.
 
 You must reload VSCode to take into account a change in this configuration.
+
+## Saving a `.cls` file does not trigger auto build
+
+You have to compile your project with `latexmk` or manually pass `-recorder` to your LaTeX compiler to produce a `.fls` file. Then, LaTeX Workshop will use it to compute the exact list of included files. See [Compile](Compile#the-dependencies).
 
 ## Suggestions for BibTeX files are not updated
 
