@@ -11,6 +11,7 @@
 - [Onivim 2 is not supported](#onivim-2-is-not-supported)
 - [GitHub Codespaces is not supported](#github-codespaces-is-not-supported)
 - [VSCodium is not officially supported](#vscodium-is-not-officially-supported)
+- [Code OSS on Arch Linux and Manjaro is not officially supported](#code-oss-on-arch-linux-and-manjaro-is-not-officially-supported)
 - [Visual Studio Live Share is not supported](#visual-studio-live-share-is-not-supported)
 - [The directory ~/node_modules/ may cause errors](#the-directory-node_modules-may-cause-errors)
 - [I cannot build from a subfile](#i-cannot-build-from-a-subfile)
@@ -101,6 +102,10 @@ LaTeX Workshop does not support [GitHub Codespaces](https://github.com/features/
 ## VSCodium is not officially supported
 
 [VSCodium](https://github.com/VSCodium/vscodium) is not officially supported. We do not help to resolve issues related to VSCodium.
+
+## Code OSS on Arch Linux and Manjaro is not officially supported
+
+[Open-source builds](https://archlinux.org/packages/community/x86_64/code/) of Visual Studio Code on Arch Linux and Manjaro are not officially supported. We do not help to resolve issues related to those builds. Please use [the official binary distribution](https://aur.archlinux.org/packages/visual-studio-code-bin/).
 
 ## Visual Studio Live Share is not supported
 
