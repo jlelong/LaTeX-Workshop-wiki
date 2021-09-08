@@ -11,6 +11,7 @@
 - [Onivim 2 is not supported](#onivim-2-is-not-supported)
 - [GitHub Codespaces is not supported](#github-codespaces-is-not-supported)
 - [VSCodium is not officially supported](#vscodium-is-not-officially-supported)
+- [Code OSS on Arch Linux and Manjaro is not officially supported](#code-oss-on-arch-linux-and-manjaro-is-not-officially-supported)
 - [Visual Studio Live Share is not supported](#visual-studio-live-share-is-not-supported)
 - [The directory ~/node_modules/ may cause errors](#the-directory-node_modules-may-cause-errors)
 - [I cannot build from a subfile](#i-cannot-build-from-a-subfile)
@@ -18,6 +19,7 @@
 - [Encoding issues with file names in the Problem Pane](#Encoding-issues-with-file-names-in-the-Problem-Pane)
 - [I cannot use `ctrl`+`alt` in a shortcut](#i-cannot-use-ctrlalt-in-a-shortcut)
 - [Auto build does not work sometimes](#auto-build-does-not-work-sometimes)
+- [Saving a `.cls` file does not trigger auto build](#saving-a-cls-file-does-not-trigger-auto-build)
 - [Suggestions for BibTeX files are not updated](#suggestions-for-bibtex-files-are-not-updated)
 - [The internal PDF viewer is not updated](#the-internal-pdf-viewer-is-not-updated)
 - [Disable automatic build on save](#disable-automatic-build-on-save)
@@ -101,6 +103,10 @@ LaTeX Workshop does not support [GitHub Codespaces](https://github.com/features/
 
 [VSCodium](https://github.com/VSCodium/vscodium) is not officially supported. We do not help to resolve issues related to VSCodium.
 
+## Code OSS on Arch Linux and Manjaro is not officially supported
+
+[Open-source builds](https://archlinux.org/packages/community/x86_64/code/) of Visual Studio Code on Arch Linux and Manjaro are not officially supported. We do not help to resolve issues related to those builds. Please use [the official binary distribution](https://aur.archlinux.org/packages/visual-studio-code-bin/).
+
 ## Visual Studio Live Share is not supported
 
 [Visual Studio Live Share](https://marketplace.visualstudio.com/items?itemName=ms-vsliveshare.vsliveshare) is not supported.
@@ -135,6 +141,10 @@ The default shortcuts for commands related to build and view use the modifiers <
 Please try setting [`latex-workshop.latex.watch.usePolling`](Compile#latex-workshoplatexwatchusepolling) to `true` or setting [`latex-workshop.latex.autoBuild.run`](Compile#latex-workshoplatexautobuildrun) to `onSave`.
 
 You must reload VSCode to take into account a change in this configuration.
+
+## Saving a `.cls` file does not trigger auto build
+
+You have to compile your project with `latexmk` or manually pass `-recorder` to your LaTeX compiler to produce a `.fls` file. Then, LaTeX Workshop will use it to compute the exact list of included files. See [Compile](Compile#the-dependencies).
 
 ## Suggestions for BibTeX files are not updated
 
