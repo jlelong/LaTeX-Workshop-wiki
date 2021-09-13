@@ -42,7 +42,7 @@ You must reload VSCode to take into account a change in this configuration.
 
 The PDF viewer provided with the extension internally uses [PDF.js](https://github.com/mozilla/pdf.js). The keybindings support by PDF.js are documented [here](https://github.com/mozilla/pdf.js/wiki/Frequently-Asked-Questions#faq-shortcuts).
 
-You can customize the look and feel of the internal PDF viewer. Of course, this is only relevant when using the internal PDF viewer for viewing the PDF produced by the building toolchain, ie when `latex-workshop.view.pdf.viewer` is set to `tab`. Although the PDF viewer should refresh automatically when needed, you can request it explicitly by calling the command `latex-workshop.refresh-viewer`.
+You can customize the look and feel of the internal PDF viewer. Of course, this is only relevant when using the internal PDF viewer for viewing the PDF produced by the building toolchain, ie when `latex-workshop.view.pdf.viewer` is set to `tab`. Although the PDF viewer should refresh automatically when needed, you can request it explicitly by calling the command `latex-workshop.refresh-viewer`. If you experience some focus issues after opening a viewer tab, consider increasing [`latex-workshop.view.pdf.tab.openDelay`](#latex-workshopviewpdftabopenDelay).
 
 Below are the detailed explanations for the different possible settings
 
@@ -258,8 +258,6 @@ PDF viewer used for [View on PDF] link on `\ref`.
 | ------- | ------------- | ----------------------------------------    |
 | _enum_  | `"auto"`      | `"auto"`, `"tabOrBrowser"`, or `"external"` |
 
-
-
 ### latex-workshop.view.pdf.tab.editorGroup
 
 Define the editor group to use for the viewer tab.
@@ -415,8 +413,6 @@ Define the CSS sepia filter level of the PDF viewer when the invert mode is enab
 | -------- | ------------- |
 | _number_ | `0`           |
 
-
-
 ### latex-workshop.view.pdf.internal.synctex.keybinding
 
 Which keybinding to use for the internal PDF viewer for reverse SyncTeX. You must reload VSCode or the PDF viewer to take into account a change in this configuration.
@@ -425,7 +421,15 @@ Which keybinding to use for the internal PDF viewer for reverse SyncTeX. You mus
 | ------ | -------------- |----------------------------------- |
 | _enum_ | `"ctrl-click"` | `"ctrl-click"` or `"double-click"` |
 
+### latex-workshop.view.pdf.tab.openDelay
 
+Define the delay in milliseconds to wait for a tab opening.
+
+Please increase the value if you encounter a focus issue after opening a tab.
+
+| type      | default value |
+| --------- | ------------- |
+| _number_  | `1000`        |
 
 ### latex-workshop.synctex.afterBuild.enabled
 
