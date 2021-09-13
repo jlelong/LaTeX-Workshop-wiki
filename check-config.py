@@ -8,7 +8,7 @@ import sys
 
 IGNORE_ENTRIES = [
     'latex-workshop-dev.*',
-    'latex-structure.toggle-follow-cursor',
+    'latex-workshop.structure-toggle-follow-cursor',
     'latex-workshop.citation',
     'latex-workshop.log',
     'latex-workshop.showCompilationPanel',
