@@ -10,6 +10,7 @@ IGNORE_ENTRIES = [
     'latex-workshop-dev.*',
     'latex-workshop.structure-toggle-follow-cursor',
     'latex-workshop.citation',
+    'latex-workshop.setViewer',
     'latex-workshop.log',
     'latex-workshop.showCompilationPanel',
     'latex-workshop.synctex',
