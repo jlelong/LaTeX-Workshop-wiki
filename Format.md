@@ -67,6 +67,14 @@ Sort content when calling VSCode formatter on a .bib file.
 | ------------------ | ------------- |
 | _boolean_          | `false`       |
 
+### latex-workshop.bibtex-entries.first
+
+When [`latex-workshop.bibtex-fields.sort.enabled`](#latex-workshopbibtex-formatsortenabled) is true, these fields are put at the top, in the order defined by the array.
+
+|        Type        | Default Value             |
+| ------------------ | ------------------------- |
+| _array of strings_ | `[ "xdata", "string" ]`   |
+
 ### Aligning fields
 
 The commands `latex-workshop.bibalign` and `latex-workshop.bibalignsort` provide basic alignment of bibliography entries. This action can be configured through the following options.
