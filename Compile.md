@@ -96,13 +96,6 @@ The following settings are helpful to customize how to build a project and how t
 | [`latex-workshop.latex.magic.bib.args`](#magic-comments)  | Arguments for the `BIB program`                                                                       |          | _array_ of _strings_ |
 | [`latex-workshop.latex.build.forceRecipeUsage`](#latex-workshoplatexbuildforceRecipeUsage) | Force the use of recipes | false | _boolean_ |
 
-when [`latex-workshop.progress.enabled`](#latex-workshopprogressenabled) is set, a progress bar indicates the building progress. It can be customized using the following configuration variables
-
-- [`latex-workshop.progress.location`](#latex-workshopprogresslocation)
-- [`latex-workshop.progress.runIconType`](#latex-workshopprogressrunIconType)
-- [`latex-workshop.progress.barLength`](#latex-workshopprogressbarLength)
-- [`latex-workshop.progress.barStyle`](#latex-workshopprogressbarStyle)
-
 ## Building a `.jnw` file
 
 Files associated to the `jlweave` language mode can be compiled using two different approaches, depending on how you would like code to be rendered
