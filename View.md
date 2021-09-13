@@ -12,7 +12,7 @@
 
 A document can be previewed a number of ways, namely the icon that appears in the top left of an open TeX document (see gif) <img src="https://raw.githubusercontent.com/James-Yu/LaTeX-Workshop/master/icons/view-pdf-light.svg" height="1em">, or by the shortcut <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>v</kbd> (see also the [FAQ](https://github.com/James-Yu/LaTeX-Workshop/wiki/FAQ#i-cannot-use-ctrlalt-in-a-shortcut) for an alternative shortcut). The command associated to these keybindings is `latex-workshop.view`. Note that each call to this command opens a new viewer.
 
-If you want to preview the PDF file in a separated window, you can do that with the browser selecting `View in web browser` in the side bar.
+If you want to preview the PDF file in a separated window, you can do that with the browser selecting `View in web browser` in the side bar (command `latex-workshop.viewInBrowser`).
 
 ## Viewing a PDF file
 
@@ -95,7 +95,7 @@ The javascript built-in version of SyncTeX is used by default. See [settings](#l
 
 ## External PDF viewer
 
-You can view PDF files with external PDF viewers. This function is not officially supported.
+You can view PDF files with external PDF viewers by calling _View LaTeX PDF file in external viewer_ (command `latex-workshop.viewExternal`) either from the _Command Palette_ or the _TeX badge_. This function is not officially supported.
 
 | Setting key                                                                                      | Description                                       | Default       | Type     |
 | ------------------------------------------------------------------------------------------------ | ------------------------------------------------- | ------------- | -------- |
