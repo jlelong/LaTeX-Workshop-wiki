@@ -320,9 +320,29 @@ The entries are formatted according to the variables already used for bibtex for
 
 - Inside an entry, when at the beginning of a line, intellisense suggests optional fields. the completion menu pops up after typing two characters but can also be manually triggered using <kbd>ctrl</kbd> + <kbd>space</kbd>. The available completions are described in [data/bibtex-optional-entries.json](https://github.com/James-Yu/LaTeX-Workshop/blob/master/data/bibtex-optional-entries.json).
 
+### latex-workshop.intellisense.citation.backend
+
+Backend to use for citation intellisense.
+
+ type                 | default value | possible values |
+| ------------------- | --------------|-----------------|
+| _enum_              | `"bibtex"`    | `"bibtex" \| "biblatex"` |
+
+### latex-workshop.intellisense.biblatexJSON.replace
+
+Dictionary of `"entry name": ["array", "of", "fields"]` to replace the default fields used in [data/bibtex-entries.json](https://github.com/James-Yu/LaTeX-Workshop/blob/master/data/bibtex-entries.json).
+
+This variable is used when [latex-workshop.intellisense.citation.backend](`latex-workshopintellisensecitationbackend`) is set to `biblatex`. Reload vscode to make any change in this configuration effective.
+
+| type                               | default value |
+|------------------------------------|---------------|
+| _dictionary_ of _string_: _string_ | `{}`          |
+
 ### latex-workshop.intellisense.bibtexJSON.replace
 
-Dictionary of `"entry name": ["array", "of", "fields"]` to replace the default fields used in [data/bibtex-entries.json](https://github.com/James-Yu/LaTeX-Workshop/blob/master/data/bibtex-entries.json). Reload vscode to make any change in this configuration effective.
+Dictionary of `"entry name": ["array", "of", "fields"]` to replace the default fields used in [data/bibtex-entries.json](https://github.com/James-Yu/LaTeX-Workshop/blob/master/data/bibtex-entries.json).
+
+This variable is used when [latex-workshop.intellisense.citation.backend](`latex-workshopintellisensecitationbackend`) is set to `bibtex`. Reload vscode to make any change in this configuration effective.
 
 | type                               | default value |
 |------------------------------------|---------------|
