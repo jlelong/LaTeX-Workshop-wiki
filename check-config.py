@@ -8,8 +8,9 @@ import sys
 
 IGNORE_ENTRIES = [
     'latex-workshop-dev.*',
-    'latex-structure.toggle-follow-cursor',
+    'latex-workshop.structure-toggle-follow-cursor',
     'latex-workshop.citation',
+    'latex-workshop.setViewer',
     'latex-workshop.log',
     'latex-workshop.showCompilationPanel',
     'latex-workshop.synctex',
@@ -50,7 +51,7 @@ def print_if_not_ignored(s):
     print(s)
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
+    if len(sys.argv) != 2 or sys.argv[1] == '-h':
         print("Usage: check-config.py LW-package.json")
         sys.exit(0)
 

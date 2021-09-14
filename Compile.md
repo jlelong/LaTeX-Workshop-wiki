@@ -25,7 +25,7 @@ If no root file is found, most of the features in LaTeX Workshop will not work.
 
 ### The dependencies
 
-Once the root file is determined, it is parsed to discover all the files it includes using `input`, `include`, `InputIfFileExists`, `subfile`, `import` and `subimport` and the process goes on recursively. All these files are called dependencies and are considered to define a LaTeX project. If you include some files located in some external directories, you can list these extra directories in [`latex-workshop.latex.texDirs`](#latex-workshoplatextexDirs).
+Once the root file is determined, it is parsed to discover all the files it includes using `input`, `include`, `InputIfFileExists`, `subfile`, `import` and `subimport` and the process goes on recursively. All these files are called dependencies and are considered to define a LaTeX project. If you include some files located in some external directories, you can list these extra directories in [`latex-workshop.latex.texDirs`](#latex-workshoplatextexDirs). If you need to strip off some environments before actually parsing the file, use [`latex-workshop.latex.verbatimEnvs`](latex-workshoplatexverbatimEnvs).
 
 Moreover, when a `.fls` file with the same basename as the root file exists, it is used to compute the full list of dependencies, ie all classes, packages, fonts, input `.tex` files, listings, graphs, ... All these files are parsed to provide intellisense completion. When  [`latex-workshop.latex.autoBuild.run`](Compile#auto-build-latex) is set to `onFileChange`, building is automatically triggered whenever any of the dependencies is modified. You can use [`latex-workshop.latex.watch.files.ignore`](#latex-workshoplatexwatchfilesignore) to prevent some files from being watched. The default is to ignore files inside your TeX distribution and files with `.code.tex` or `.sty` suffix.
 
@@ -77,6 +77,16 @@ When the `subfiles` package is used, either the main file or any subfile contain
 | -------------------- | ------------- |
 | _boolean_            | `false`       |
 
+### latex-workshop.latex.verbatimEnvs
+
+List environments with verbatim-like content.
+
+These environments are stripped off the `.tex` files before any parsing occurs. Note that this variable has no effect on syntax highlighting.
+
+| type                | default value                          |
+| ------------------- | -------------------------------------- |
+| _array_ of _strings | `["verbatim", "lstlisting", "minted"]` |
+
 ## Building the document
 
 A LaTeX file is typically built by calling the command _Build LaTeX project_ from the _Command Palette_ or from the _TeX_ badge. This command is bind to <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>b</kbd>. If you cannot use <kbd>ctrl</kbd>+<kbd>alt</kbd> in a keybinding, see [the FAQ](FAQ#i-cannot-use-ctrlalt-in-a-shortcut). The recipe called by this command is defined by [`latex-workshop.latex.recipe.default`](#latex-workshoplatexrecipedefault).
@@ -95,13 +105,6 @@ The following settings are helpful to customize how to build a project and how t
 | [`latex-workshop.latex.magic.args`](#magic-comments)      | Arguments for the `TeX program`                                                                       |          | _array_ of _strings_ |
 | [`latex-workshop.latex.magic.bib.args`](#magic-comments)  | Arguments for the `BIB program`                                                                       |          | _array_ of _strings_ |
 | [`latex-workshop.latex.build.forceRecipeUsage`](#latex-workshoplatexbuildforceRecipeUsage) | Force the use of recipes | false | _boolean_ |
-
-when [`latex-workshop.progress.enabled`](#latex-workshopprogressenabled) is set, a progress bar indicates the building progress. It can be customized using the following configuration variables
-
-- [`latex-workshop.progress.location`](#latex-workshopprogresslocation)
-- [`latex-workshop.progress.runIconType`](#latex-workshopprogressrunIconType)
-- [`latex-workshop.progress.barLength`](#latex-workshopprogressbarLength)
-- [`latex-workshop.progress.barStyle`](#latex-workshopprogressbarStyle)
 
 ## Building a `.jnw` file
 
@@ -578,7 +581,7 @@ Alternatively, you can directly define the args in the `.tex` file by using the 
 
 The warnings and errors issued by the compiling toolchain are rendered in the _Problems_ Pane. The following settings enable you to customize what you want to get in that panel. If the messages displayed in the panel seem to be wrong, see the [FAQ](FAQ#The-Problem-Pane-displays-wrong-messages).
 
-The raw compiler logs can be accessed in the _Output Pane_, choose _LaTeX Compiler_. The default is to clear the logs before calling every tool of a recipe. If you prefer to keep the logs from all the tools of a recipe, set [`latex-workshop.latex.build.clearLog.everyRecipeStep.enabled`](#latex-workshoplatexbuildclearLogeveryRecipeStepenabled) to `false`.
+The raw compiler logs can be accessed in the _Output Pane_, choose _LaTeX Compiler_. Alternatively, call _View LaTeX compiler logs_ from the _Command Palette_, the associated command is `latex-workshop.compilerlog`. The default is to clear the logs before calling every tool of a recipe. If you prefer to keep the logs from all the tools of a recipe, set [`latex-workshop.latex.build.clearLog.everyRecipeStep.enabled`](#latex-workshoplatexbuildclearLogeveryRecipeStepenabled) to `false`.
 
 ## Settings Details
 
