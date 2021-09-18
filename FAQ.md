@@ -318,7 +318,7 @@ Autocompletion for `includegraphics` takes into account the paths listed by the 
 
 ## Environment variables in `.bashrc` don't take effect with VS Code Remote
 
-Use `.bash_profile` or `.profile` instead of `.bashrc`. See [superuser](https://superuser.com/questions/183870/difference-between-bashrc-and-bash-profile) and the [reference manual](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Bash-Startup-Files).
+Use `.bash_profile` or `.profile` instead of `.bashrc`. See [superuser](https://superuser.com/questions/183870/difference-between-bashrc-and-bash-profile), [stackoverflow](https://stackoverflow.com/questions/18791486/differences-uses-and-similarities-between-bashrc-bash-profile-and-etc-profil), and the [reference manual](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Bash-Startup-Files).
 
 After editing these files, you have to kill `vscode-server`  on the remote host and restart it. Select `Remote-SSH: Kill VS Code Server on Host...` from the Command Palette (F1).
 
