@@ -605,7 +605,7 @@ Show badbox information in the problems panel.
 
 ### latex-workshop.message.bibtexlog.exclude
 
-Exclude log messages matching the given regexp from the problems panel.
+Exclude bibtex log messages matching the given regexp from the problems panel.
 
 | type                 | default value |
 | -------------------- | ------------- |
@@ -613,7 +613,7 @@ Exclude log messages matching the given regexp from the problems panel.
 
 ### latex-workshop.message.latexlog.exclude
 
-Exclude log messages matching the given regexp from the problems panel.
+Exclude latex log messages matching the given regexp from the problems panel.
 
 | type                 | default value |
 | -------------------- | ------------- |
