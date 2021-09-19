@@ -603,9 +603,17 @@ Show badbox information in the problems panel.
 | --------- | ------------- |
 | _boolean_ | `true`        |
 
+### latex-workshop.message.bibtexlog.exclude
+
+Exclude log messages matching the given regexp from the problems panel.
+
+| type                 | default value |
+| -------------------- | ------------- |
+| _array_ of _strings_ | `[]`          |
+
 ### latex-workshop.message.latexlog.exclude
 
-Exclude log messages that matches the given regexp from the problems panel.
+Exclude log messages matching the given regexp from the problems panel.
 
 | type                 | default value |
 | -------------------- | ------------- |
