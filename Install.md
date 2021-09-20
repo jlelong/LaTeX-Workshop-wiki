@@ -23,9 +23,11 @@ Notice that, to set the `PATH` environment variable for VS Code Remote Developme
 ## Settings
 
 You can modify settings through the menu of VS Code, `Preferences > Settings`.
-You can also modify settings by directly editing `settings.json`. See an [official doc](https://code.visualstudio.com/docs/getstarted/settings#_settings-file-locations) for the location of `settings.json`.
+You can also modify settings by directly editing `settings.json`. See an [official document](https://code.visualstudio.com/docs/getstarted/settings#_settings-file-locations) for the location of `settings.json`.
 
-You can also have different settings for each project with `.vscode/settings.json` at the root of each project workspace. See an [official doc](https://code.visualstudio.com/docs/getstarted/settings#_settings-file-locations).
+You can also have different settings for each project with `.vscode/settings.json` at the root of each project workspace. See an [official document](https://code.visualstudio.com/docs/getstarted/settings#_settings-file-locations).
+
+For language-specific editor settings, see an [official document](https://code.visualstudio.com/docs/getstarted/settings#_languagespecific-editor-settings).
 
 ## Usage
 
