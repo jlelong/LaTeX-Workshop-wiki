@@ -162,7 +162,6 @@ Some common mathematical symbols or commands have a dedicated snippet.
 | `@2`                 | `\sqrt{$1}`              |
 | `@I`                 | `\int_{$1}^{$2}`         |
 | <code>@&#124;</code> | <code>\Big &#124;</code> |
-| `@\` | `\setminus`   |
 | `@+`                 | `\bigcup`                |
 | `@-`                 | `\bigcap`                |
 | `@,`                 | `\nonumber`              |
