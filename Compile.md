@@ -330,7 +330,7 @@ Delete LaTeX auxiliary files recursively in sub-folders of [`latex-workshop.late
 
 | type      | default value |
 | --------- | ------------- |
-| _boolean_ | `true`        |
+| _boolean_ | `false`        |
 
 ### latex-workshop.latex.clean.fileTypes
 
