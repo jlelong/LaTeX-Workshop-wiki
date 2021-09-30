@@ -48,7 +48,7 @@
 - [You cannot use a tilde `~` in `PATH`](#you-cannot-use-a-tilde--in-path)
 - [`terminal.integrated.shellArgs.linux` doesn't take effect](#terminalintegratedshellargslinux-doesnt-take-effect)
 - [What kinds of LaTeX commands does Hover Preview support?](#what-kinds-of-latex-commands-does-hover-preview-support)
-
+- [Hover Preview fails to render math equation with errors](#hover-preview-fails-to-render-math-equation-with-errors)
 
 ## Known incompatible Extensions
 
@@ -343,3 +343,7 @@ We implement Hover Preview with MathJax. Please see the following for LaTeX comm
 - https://docs.mathjax.org/en/v2.7-latest/tex.html#supported-latex-commands
 
 Notice that MathJax does not support LaTeX packages.
+
+## Hover Preview fails to render math equation with errors
+
+Please try setting [`latex-workshop.hover.preview.newcommand.parseTeXFile.enabled`](https://github.com/James-Yu/LaTeX-Workshop/wiki/Hover#latex-workshophoverpreviewnewcommandparsetexfileenabled) to `false`.
