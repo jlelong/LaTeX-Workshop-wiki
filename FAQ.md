@@ -15,7 +15,7 @@
 - [Code OSS on Arch Linux and Manjaro is not officially supported](#code-oss-on-arch-linux-and-manjaro-is-not-officially-supported)
 - [Visual Studio Live Share is not supported](#visual-studio-live-share-is-not-supported)
 - [The directory ~/node_modules/ may cause errors](#the-directory-node_modules-may-cause-errors)
-- [I cannot build from a subfile](#i-cannot-build-from-a-subfile)
+- [LaTeX Workshop doesn't work with a multi-file project](#latex-workshop-doesnt-work-with-a-multi-file-project)
 - [The Problem Pane displays wrong messages](#the-Problem-Pane-displays-wrong-messages)
 - [Encoding issues with file names in the Problem Pane](#Encoding-issues-with-file-names-in-the-Problem-Pane)
 - [I cannot use `ctrl`+`alt` in a shortcut](#i-cannot-use-ctrlalt-in-a-shortcut)
@@ -120,9 +120,11 @@ LaTeX Workshop does not support [github.dev](https://github.com/github/dev).
 
 The directory `~/node_modules/` in the home directory may cause errors on Mac and Linux. The modules in the directory might be unintentionally loaded by VSCode because of the [default behavior](https://nodejs.org/api/modules.html#modules_loading_from_node_modules_folders) of node.js, which would cause errors such as _Extension host terminated unexpectedly_. We recommend moving the directory `~/node_modules/` to `~/npm/node_modules/`.
 
-## I cannot build from a subfile
+## LaTeX Workshop doesn't work with a multi-file project
 
 If you cannot build a multi file LaTeX project from a subfile, it means that the root file is not detected properly. See the [Multi file projects](Compile#multi-file-projects) section for details on how the root file is discovered. Note that you must open the directory (or one of its antecedents) containing all the project files in vscode for this mechanism to work.
+
+If you are directly calling LaTeX commands, `pdflatex`, and others in your recipe, please try passing `-recorder` to the LaTeX command in your recipe.
 
 ## The Problem Pane displays wrong messages
 
