@@ -491,6 +491,9 @@ LaTeX Workshop registers the following placeholders
 | `%TMPDIR%`      | A temporary folder for storing ancillary files |
 | `%OUTDIR%`      | The output directory configured in [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutDir) |
 | `%OUTDIR_W32%`  | The output directory configured in [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutDir) with `\` path separator on Windows |
+| `%WORKSPACE_FOLDER%`  | The current workspace path |
+| `%RELATIVE_DIR%`  | The root file directory relative to the workspace folder |
+| `%RELATIVE_DOC%`  | file root file path relative to the workspace folder |
 
 As most LaTeX compiler accepts root file name without extension, `%DOC%` and `%DOCFILE%` do not include the filename extension. Meanwhile, the `texify` tool requires the complete filename with its extension, hence the use of `%DOC_EXT%` in the configuration of `texify`.
 
