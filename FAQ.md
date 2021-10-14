@@ -128,6 +128,8 @@ If you are directly calling LaTeX commands, `pdflatex`, and others in your recip
 
 ## The Problem Pane displays wrong messages
 
+Please make sure at first that you call LaTeX compilers with an option `-file-line-error`.
+
 LaTeX compilers usually produce hard wrapped log messages, which makes them really hard to parse. To hopefully deal with complex log messages, we have decided to rely on non hard wrapped log messages. This can be achieved either
 
 - by setting the environment variable `max_print_line`. This is automatically done within the extension and works for the TeXLive distribution.
