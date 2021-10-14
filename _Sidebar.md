@@ -19,6 +19,7 @@
   - [Auto build LaTeX](Compile#auto-build-latex)
   - [Cleaning generated files](Compile#cleaning-generated-files)
   - [LaTeX recipes](Compile#latex-recipes)
+    - [Placeholders](Compile#placeholders)
   - [External build command](Compile#external-build-command)
   - [Magic comments](Compile#magic-comments)
   - [Catching errors and warnings](Compile#catching-errors-and-warnings)
