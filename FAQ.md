@@ -26,6 +26,7 @@
 - [Disable automatic build on save](#disable-automatic-build-on-save)
 - [I use build on save but I occasionally want to save without building](#I-use-build-on-save-but-I-occasionally-want-to-save-without-building)
 - [Auto build LaTeX results in always twice or infinite loop](#auto-build-latex-results-in-always-twice-or-infinite-loop)
+- [With TikZ, builds result in an infinite loop](#with-tikz-builds-result-in-an-infinite-loop)
 - [Large bibtex files are ignored](#large-bibtex-files-are-ignored)
 - [Path containing Chinese or `~` characters](#path-containing-chinese-or--characters)
 - [IME doesn't work well with LaTeX Workshop](#ime-doesnt-work-well-with-latex-workshop)
@@ -178,6 +179,11 @@ When `latex-workshop.latex.autoBuild.run` is set to `onSave`, building is trigge
 ## Auto build LaTeX results in always twice or infinite loop
 
 There is a possibility that LaTeX Workshop detects changes on files by build scripts during the build process and starts a new build process. That results in unintended multiple build processes. See [#2237](https://github.com/James-Yu/LaTeX-Workshop/issues/2237) and [#2487](https://github.com/James-Yu/LaTeX-Workshop/issues/2487). In that case, please change the setting [`latex-workshop.latex.autoBuild.run`](https://github.com/James-Yu/LaTeX-Workshop/wiki/Compile#latex-workshoplatexautobuildrun) to `"onSave"`.
+
+## With TikZ, builds result in an infinite loop
+
+When builds result in an infinite loop with TikZ or other advanced packages,
+please replace `-interaction=nonstopmode` with `-halt-on-error` in your recipe.
 
 ## Large bibtex files are ignored
 
