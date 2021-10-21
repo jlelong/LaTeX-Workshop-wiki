@@ -103,7 +103,7 @@ LaTeX Workshop does not support [GitHub Codespaces](https://github.com/features/
 
 ## github.dev is not supported
 
-LaTeX Workshop does not support [github.dev](https://github.com/github/dev).
+LaTeX Workshop does not support [github.dev](https://github.com/github/dev) and [vscode.dev](https://code.visualstudio.com/blogs/2021/10/20/vscode-dev).
 
 ## VSCodium is not officially supported
 
