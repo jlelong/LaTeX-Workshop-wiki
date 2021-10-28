@@ -4,9 +4,12 @@ LaTeX Workshop can work with [VS Code Remote Development extensions](https://mar
 
 You can also edit a TeX file on a remote server and preview the pdf file. However, when you use this feature on a remote server, please consider the following security risks.
 
-## Your TeX file can be edit by other users on the remote server
+## VS Code Remote Sever can be accessed by other users on the remote server
 
 VS Code Remote Development extensions start a server to host VS Code extensions on the remote server. Other users on the remote server can access the server.
+
+- https://code.visualstudio.com/docs/remote/troubleshooting#_improving-security-on-multiuser-servers
+- https://github.com/microsoft/vscode-remote-release/issues/1927#issuecomment-942462191
 
 ## Your PDF file can be read by other users on the remote server
 
