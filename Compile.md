@@ -365,10 +365,10 @@ Define the method used by the `clean` command to remove temporary files.
 
 | type                | default value             |
 |---------------------|---------------------------|
-| _enum_ of _strings_ | `"glob" | "cleanCommand"` |
+| _enum_ of _strings_ | `"glob"`                  |
 
 - `"glob"`: Clean all the files located in [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutDir) and matching the glob patterns listed in [`latex-workshop.latex.clean.fileTypes`](#latex-workshoplatexcleanfileTypes).
-- `"cleanCommand`": Run [`latex-workshop.latex.clean.command`](#latex-workshoplatexcleancommand) to clean temporary files.
+- `"cleanCommand"`: Run [`latex-workshop.latex.clean.command`](#latex-workshoplatexcleancommand) to clean temporary files.
 
 ## LaTeX recipes
 
