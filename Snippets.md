@@ -1,6 +1,6 @@
 # Snippets and shortcuts
 
-Many snippets are available to help users enter LaTeX commands or symbols. They are accessible from the _Snippet Panel_ (either from the TeX badge or from the _Command Palette_). If you want to associate a keybinding to the snippet panel, use the internal command `latex-workshop.showSnippetPanel`.
+Many snippets are available to help users enter LaTeX commands or symbols. _Snippet View_ is also available from the TeX badge.
 
 All commands are listed as <kbd>ctrl</kbd>+<kbd>some key</kbd>. If you're on Mac, don't worry we have written equivalents, so every time you see <kbd>ctrl</kbd> just imagine it's <kbd>⌘</kbd>.
 
