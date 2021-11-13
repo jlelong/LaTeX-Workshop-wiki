@@ -7,6 +7,7 @@
 - [Cygwin is not supported](#cygwin-is-not-supported)
 - [code-server is not supported](#code-server-is-not-supported)
 - [Gitpod is not supported](#gitpod-is-not-supported)
+- [openvscode-server is not supported](#openvscode-server-is-not-supported)
 - [Eclipse Theia is not supported](#eclipse-theia-is-not-supported)
 - [Onivim 2 is not supported](#onivim-2-is-not-supported)
 - [GitHub Codespaces is not supported](#github-codespaces-is-not-supported)
@@ -88,6 +89,10 @@ LaTeX Workshop does not support [code-server](https://github.com/cdr/code-server
 ## Gitpod is not supported
 
 LaTeX Workshop does not support [Gitpod](https://github.com/gitpod-io/gitpod).
+
+## openvscode-server is not supported
+
+LaTeX Workshop does not support [openvscode-server](https://github.com/gitpod-io/openvscode-server).
 
 ## Eclipse Theia is not supported
 
