@@ -89,7 +89,7 @@ To use the alternate shortcuts, set `latex-workshop.bind.altKeymap.enabled` to `
 
 ## Inserting Greek letters
 
-Greek Letters can be inserted using the LaTeX command, which will autocomplete or using `@` + letter
+Greek letters can be inserted using the following commands (`@` + the Roman letter). The prefix `@` is set by the configuration variable `latex-workshop.intellisense.snippets.trigger.latex` and can be replaced by any other non-alphabetical character. Setting `latex-workshop.intellisense.snippets.trigger.latex` to the empty string deactivates these snippets. Note that from an implementation point of view, these snippets are actually provided as intellisense completion.
 
 | Prefix | Letter        |
 | ------ | ------------- |
@@ -135,6 +135,13 @@ Greek Letters can be inserted using the LaTeX command, which will autocomplete o
 ## Handy mathematical snippets
 
 Some common mathematical symbols or commands have a dedicated snippet.
+| Prefix               | Command                  |
+| -------------------- | ------------------------ |
+| `__`                 | `_{$1}`                  |
+| `**`                 | `^{$1}`                  |
+| `...`                | `\dots`                  |
+
+The following commands are also as intellisense completion. The prefix `@` is set by the configuration variable `latex-workshop.intellisense.snippets.trigger.latex` and can be replaced by any other non-alphabetical character. Setting `latex-workshop.intellisense.snippets.trigger.latex` to the empty string deactivates these snippets.
 
 | Prefix               | Command                  |
 | -------------------- | ------------------------ |
