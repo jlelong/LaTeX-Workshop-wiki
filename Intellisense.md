@@ -86,7 +86,7 @@ We support intellisense for file completion inside the following commands : `inc
 
 Note that any file matching one of the patterns listed in the following variables is removed from the list: `files.exclude`, `latex-wokrshop.intellisense.file.exclude`.
 
-When [`latex-workshop.intellisense.includegraphics.preview.enabled`](#latex-workshopintellisenseincludegraphicspreviewenabled) is set to `true`, triggering graphics file completion shows a preview of the file. The preview of PDF files can be deactivated by setting [`latex-workshop.intellisense.includegraphics.preview.pdf.enabled`](#latex-workshopintellisenseincludegraphicspreviewpdfenabled) to `false`.
+When [`latex-workshop.intellisense.includegraphics.preview.enabled`](#latex-workshopintellisenseincludegraphicspreviewenabled) is set to `true`, triggering graphics file completion shows a preview of the file.
 
 ### Related settings
 
@@ -98,14 +98,6 @@ When [`latex-workshop.intellisense.includegraphics.preview.enabled`](#latex-work
 ### latex-workshop.intellisense.includegraphics.preview.enabled
 
 Enable preview for `\includegraphics` completion.
-
-| type      | default value |
-| --------- | ------------- |
-| _boolean_ | `true`        |
-
-### latex-workshop.intellisense.includegraphics.preview.pdf.enabled
-
-Enable preview for `\includegraphics` of PDF files.
 
 | type      | default value |
 | --------- | ------------- |
