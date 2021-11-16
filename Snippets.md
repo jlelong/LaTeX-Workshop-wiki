@@ -175,6 +175,8 @@ The following commands are also as intellisense completion. The prefix `@` is se
 
 ## Font commands
 
+The following shortcuts are toggle commands. When some text is selected, it gets surrounded by the font command. When no text is actually selected, either the cursor is already inside the font command in which case the font command is removed or the command is inserted at the cursor position. The shortcuts work with multi-selections and multi-cursors.
+
 | Prefix     | Shortcut                                                       | Command                  |
 | ---------- | -------------------------------------------------------------- | ------------------------ |
 | `fontsize` |                                                                | Opens font size select   |
@@ -194,6 +196,8 @@ The following commands are also as intellisense completion. The prefix `@` is se
 | `FBS`      | <kbd>ctrl</kbd>+<kbd>l</kbd>, <kbd>ctrl</kbd>+<kbd>minus</kbd> | `\textsubscript{${1}}`   |
 
 ## Mathematical font commands
+
+The following shortcuts are toggle commands. When some text is selected, it gets surrounded by the font command. When no text is actually selected, either the cursor is already inside the font command in which case the font command is removed or the command is inserted at the cursor position. The shortcuts work with multi-selections and multi-cursors.
 
 | Prefix | Shortcut                                                                    | Command          |
 |--------|-----------------------------------------------------------------------------|------------------|
