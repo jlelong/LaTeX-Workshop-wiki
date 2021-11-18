@@ -108,6 +108,7 @@ You can view PDF files with external PDF viewers by calling _View LaTeX PDF file
 
 Note: this function is not officially supported.
 
+<!--
 #### Windows
 
 The solution is simple, and works with `sumatraPDF`. Just add the following option to your configuration
@@ -127,6 +128,7 @@ The solution is simple, and works with `sumatraPDF`. Just add the following opti
 ```
 
 Do not forget to set the paths according to your installation.  You can also replace `code` with the `Code.exe` path.
+-->
 
 #### Linux 
 
