@@ -34,6 +34,7 @@ The `tabular` environment is not supported.
 | [`latex-workshop.hover.preview.cursor.color`](#latex-workshophoverpreviewcursorcolor) | Define the cursor color |
 | [`latex-workshop.hover.preview.newcommand.parseTeXFile.enabled`](#latex-workshophoverpreviewnewcommandparseTeXFileenabled) | Add newcommands to preview |
 | [`latex-workshop.hover.preview.newcommand.newcommandFile`](#latex-workshophoverpreviewnewcommandnewcommandFile) | Path of a file containing newcommands |
+| [`latex-workshop.hover.preview.mathjax.extensions`](#latex-workshophoverpreviewmathjaxextensions) | MathJax extensions to load |
 
 ### Realtime math preview panel
 
@@ -137,6 +138,14 @@ Set the path of a file containing newcommands to be used in Hover Preview. If th
 | type     | default value |
 | -------- | ------------- |
 | _string_ | ""            |
+
+### latex-workshop.hover.preview.mathjax.extensions
+
+MathJax extensions to load for Hover Preview. See [the list](https://docs.mathjax.org/en/latest/input/tex/extensions/index.html).
+
+| type     | default value |
+| -------- | ------------- |
+| _array_  | []            |
 
 ### latex-workshop.hover.preview.cursor.enabled
 
