@@ -354,7 +354,7 @@ The setting `terminal.integrated.shellArgs.linux` is not related to the environm
 
 We implement Hover Preview with MathJax. Please see the following for LaTeX commands supported by MathJax:
 
-- https://docs.mathjax.org/en/v2.7-latest/tex.html#supported-latex-commands
+- http://docs.mathjax.org/en/latest/input/tex/macros/index.html
 
 Notice that MathJax does not support LaTeX packages.
 
