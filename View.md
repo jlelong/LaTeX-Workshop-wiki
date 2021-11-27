@@ -108,10 +108,20 @@ You can view PDF files with external PDF viewers by calling _View LaTeX PDF file
 
 Note: this function is not officially supported.
 
-<!--
 #### Windows
 
-The solution is simple, and works with `sumatraPDF`. Just add the following option to your configuration
+#### SumatrAPDF
+
+The following configuration has been reported to work with SumatraPDF (see https://github.com/jlelong/LaTeX-Workshop-wiki/issues/89)
+
+In SumatrPDF, set
+
+```
+InverseSearchCmdLine = "D:\Code\VS code\Microsoft VS Code\Code.exe"  -g "%f":"%l" // the part of cli.js is deleted
+EnableTeXEnhancements = true
+```
+
+Add the following option to your VSCode configuration
 
 ```json
 "latex-workshop.view.pdf.viewer": "external",
@@ -127,10 +137,9 @@ The solution is simple, and works with `sumatraPDF`. Just add the following opti
 ],
 ```
 
-Do not forget to set the paths according to your installation.  You can also replace `code` with the `Code.exe` path.
--->
+Do not forget to set the paths according to your installation.
 
-#### Linux 
+#### Linux
 
 ##### [Evince](https://wiki.gnome.org/Apps/Evince) support
 
