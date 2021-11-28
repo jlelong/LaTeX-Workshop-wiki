@@ -117,7 +117,8 @@ The following configuration has been reported to work with SumatraPDF (see https
 In SumatrPDF, set
 
 ```
-InverseSearchCmdLine = "D:\Code\VS code\Microsoft VS Code\Code.exe"  -g "%f":"%l" // the part of cli.js is deleted
+// the part of cli.js is deleted
+InverseSearchCmdLine = "C:\Users\<username>\AppData\Local\Programs\Microsoft VS Code\Code.exe"  -g "%f":"%l"
 EnableTeXEnhancements = true
 ```
 
