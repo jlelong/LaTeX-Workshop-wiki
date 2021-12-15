@@ -110,35 +110,35 @@ Note: this function is not officially supported.
 
 #### Windows
 
-#### SumatrAPDF
+#### SumatraPDF
 
-The following configuration has been reported to work with SumatraPDF (see https://github.com/jlelong/LaTeX-Workshop-wiki/issues/89)
+The following configuration has been reported to work with SumatraPDF (see [here](https://forum.sumatrapdfreader.org/t/inverse-search-not-performed-for-vs-code-exe/4486/20))
 
-In SumatrPDF, set
+In `settings.txt` of SumatraPDF, set
 
 ```
 // the part of cli.js is deleted
-InverseSearchCmdLine = "C:\Users\<username>\AppData\Local\Programs\Microsoft VS Code\Code.exe"  -g "%f":"%l"
+InverseSearchCmdLine = "C:\Users\<Username>\AppData\Local\Programs\Microsoft VS Code\Code.exe" "C:\Users\<Username>\AppData\Local\Programs\Microsoft VS Code\resources\app\out\cli.js" --ms-enable-electron-run-as-node -r -g "%f:%l"
 EnableTeXEnhancements = true
 ```
 
-Add the following option to your VSCode configuration
+Add the following option to your `settings.json` in your VS Code
 
 ```json
 "latex-workshop.view.pdf.viewer": "external",
-"latex-workshop.view.pdf.external.synctex.command": "C:/Program Files/SumatraPDF/SumatraPDF.exe",
-"latex-workshop.view.pdf.external.synctex.args": [
+"latex-workshop.view.pdf.external.synctex.command": "C:/Users/zhang/AppData/Local/SumatraPDF/SumatraPDF.exe",
+  "latex-workshop.view.pdf.external.synctex.args": [
     "-forward-search",
     "%TEX%",
     "%LINE%",
     "-reuse-instance",
     "-inverse-search",
-    "code \"C:\\Users\\<name>\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\out\\cli.js\" -r -g \"%f:%l\"",
-    "%PDF%",
-],
+    "\"C:\\Users\\zhang\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe\" \"C:\\Users\\zhang\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\out\\cli.js\" --ms-enable-electron-run-as-node -r -g \"%f:%l\"",
+    "%PDF%"
+  ],
 ```
 
-Do not forget to set the paths according to your installation.
+*Do not forget to set the paths according to your installation.*
 
 #### Linux
 
