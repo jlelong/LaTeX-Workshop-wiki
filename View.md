@@ -133,7 +133,7 @@ Add the following option to your `settings.json` in your VS Code
     "%LINE%",
     "-reuse-instance",
     "-inverse-search",
-    "\"C:\\Users\\zhang\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe\" \"C:\\Users\\zhang\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\out\\cli.js\" --ms-enable-electron-run-as-node -r -g \"%f:%l\"",
+    "\"C:\\Users\\<Username>\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe\" \"C:\\Users\\<U>\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\out\\cli.js\" --ms-enable-electron-run-as-node -r -g \"%f:%l\"",
     "%PDF%"
   ],
 ```
