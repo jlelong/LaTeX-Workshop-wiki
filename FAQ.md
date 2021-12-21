@@ -15,6 +15,7 @@
 - [VSCodium is not officially supported](#vscodium-is-not-officially-supported)
 - [Code OSS on Arch Linux and Manjaro is not officially supported](#code-oss-on-arch-linux-and-manjaro-is-not-officially-supported)
 - [Visual Studio Live Share is not supported](#visual-studio-live-share-is-not-supported)
+- [LaTeX Utilities is not supported](#latex-utilities-is-not-supported)
 - [The directory ~/node_modules/ may cause errors](#the-directory-node_modules-may-cause-errors)
 - [LaTeX Workshop doesn't work with a multi-file project](#latex-workshop-doesnt-work-with-a-multi-file-project)
 - [The Problem Pane displays wrong messages](#the-Problem-Pane-displays-wrong-messages)
@@ -121,6 +122,10 @@ LaTeX Workshop does not support [github.dev](https://github.com/github/dev) and 
 ## Visual Studio Live Share is not supported
 
 [Visual Studio Live Share](https://marketplace.visualstudio.com/items?itemName=ms-vsliveshare.vsliveshare) is not supported.
+
+## LaTeX Utilities is not supported
+
+[LaTeX Utilities](https://github.com/tecosaur/LaTeX-Utilities) is not supported.
 
 ## The directory ~/node_modules/ may cause errors
 
