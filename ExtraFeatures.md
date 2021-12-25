@@ -18,13 +18,15 @@ This property is an array of case-sensitive strings in the order of the document
 
 The structure of the document can be obtained
 
-### latex-workshop.view.outline.labels.enabled
+### latex-workshop.view.outline.commands
 
-Show the labels in the outline/structure views. Reload VSCode after changing the value.
+The names of the commands to be shown in the outline/structure views. Reload VSCode after changing the value.
 
-| type      | default value |
-|-----------|---------------|
-| _boolean_ | `true`        |
+| type                  | default value      |
+|-----------------------|--------------------|
+| _array_ of _strings_  | `["label"]`        |
+
+The commands must be called in the form `\commandname{arg}`.
 
 ### latex-workshop.view.outline.floats.enabled
 
