@@ -12,7 +12,6 @@ IGNORE_ENTRIES = [
     'latex-workshop.citation',
     'latex-workshop.setViewer',
     'latex-workshop.log',
-    'latex-workshop.showCompilationPanel',
     'latex-workshop.synctex',
     'latex-workshop.tab'
 ]
