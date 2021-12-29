@@ -141,7 +141,7 @@ Set the path of a file containing newcommands to be used in Hover Preview. If th
 
 ### latex-workshop.hover.preview.mathjax.extensions
 
-MathJax extensions to load for Hover Preview. See [the list](https://docs.mathjax.org/en/latest/input/tex/extensions/index.html).
+MathJax extensions to load for Hover Preview. See [the list](https://docs.mathjax.org/en/latest/input/tex/extensions/index.html). Notice that extensions, `ams`, `color`, `newcommand`, `noerrors`, and `noundefined` are loaded by default. They cannot be disabled.
 
 | type     | default value |
 | -------- | ------------- |
