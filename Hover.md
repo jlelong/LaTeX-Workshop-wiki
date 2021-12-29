@@ -143,9 +143,9 @@ Set the path of a file containing newcommands to be used in Hover Preview. If th
 
 MathJax extensions to load for Hover Preview. See [the list](https://docs.mathjax.org/en/latest/input/tex/extensions/index.html). Notice that extensions, `ams`, `color`, `newcommand`, `noerrors`, and `noundefined` are loaded by default. They cannot be disabled.
 
-| type     | default value |
-| -------- | ------------- |
-| _array_  | []            |
+| type     | default value | possible values |
+| -------- | ------------- | -- |
+| _array_  | []            | `"amscd"`, `"bbox"`, `"boldsymbol"`, `"braket"`, `"bussproofs"`, `"cancel"`, `"cases"`, `"centernot"`, `"colortbl"`, `"empheq"`, `"enclose"`, `"extpfeil"`, `"gensymb"`, `"html"`, `"mathtools"`, `"mhchem"`, `"physics"`, `"textcomp"`, `"textmacros"`, `"unicode"`, `"upgreek"`, `"verb"` |
 
 ### latex-workshop.hover.preview.cursor.enabled
 
