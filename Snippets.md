@@ -202,7 +202,7 @@ The following shortcuts are toggle commands. When some text is selected, it gets
 | Prefix | Shortcut                                                                    | Command          |
 |--------|-----------------------------------------------------------------------------|------------------|
 | `MRM`  | <kbd>ctrl</kbd>+<kbd>m</kbd>, <kbd>ctrl</kbd>+<kbd>r</kbd>                  | `\mathrm{${1}}`  |
-| `MBF`  | <kbd>ctrl</kbd>+<kbd>m</kbd>, <kbd>ctrl</kbd>+<kbd>s</kbd>                  | `\mathsf{${1}}`  |
+| `MSF`  | <kbd>ctrl</kbd>+<kbd>m</kbd>, <kbd>ctrl</kbd>+<kbd>s</kbd>                  | `\mathsf{${1}}`  |
 | `MBF`  | <kbd>ctrl</kbd>+<kbd>m</kbd>, <kbd>ctrl</kbd>+<kbd>b</kbd>                  | `\mathbf{${1}}`  |
 | `MBB`  | <kbd>ctrl</kbd>+<kbd>m</kbd>, <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>b</kbd> | `\mathbb{${1}}`  |
 | `MCA`  | <kbd>ctrl</kbd>+<kbd>m</kbd>, <kbd>ctrl</kbd>+<kbd>c</kbd>                  | `\mathcal{${1}}` |
