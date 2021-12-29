@@ -120,7 +120,7 @@ Files associated to the `jlweave` language mode can be compiled using two differ
     \DefineVerbatimEnvironment{juliaterm}{Verbatim}{}
     ```
 
-    Then, the file can be compiled using the following recipe
+    Then, the file can be compiled using the following built-in recipe
 
     ```json
       {
@@ -154,7 +154,7 @@ Files associated to the `jlweave` language mode can be compiled using two differ
 
     and to pass the `-shell-escape` to the LaTeX compiler. See the [FAQ](FAQ#how-to-pass--shell-escape-to-latexmk) for explanations on how to add this flag.
 
-    Then, the file can be compiled using the following recipe
+    To compile the file, you need to define a new recipe containing
 
     ```json
       {
@@ -190,7 +190,7 @@ When using auto-build and the file has not been compiled inside the extension ye
 
 ## Building a `.rnw` file
 
-Files associated to the `rsweave` language mode can be automatically compiled using the following recipe definition
+Files associated to the `rsweave` language mode can be automatically compiled using the following built-in recipe.
 
 ```json
   {
