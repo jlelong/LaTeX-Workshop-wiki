@@ -18,7 +18,7 @@ After installing TeX Live, you must add the directory of TeX Live binaries to yo
 
 Notice that you have to restart VS Code and the operating system after changing the variable.
 
-If you can not fix the setting of your system, you can also override PATH with the `env` property of [LaTeX recipes](Compile#latex-recipes).
+If you can not fix the setting of your system, you can also override PATH with the `env` property of [LaTeX recipes](Compile#latex-tools).
 
 Notice that, to set the `PATH` environment variable for VS Code Remote Development, you usually have to edit `.bash_profile` or `.profile` instead of `.bashrc`. See the [document](https://code.visualstudio.com/docs/remote/troubleshooting#_configure-the-environment-for-the-remote-extension-host) for WSL and an [issue](https://github.com/microsoft/vscode-remote-release/issues/1671#issuecomment-542818686) for Remote SSH.
 
