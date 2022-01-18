@@ -452,7 +452,7 @@ You might have to use `"Path"` instead of `"PATH"` on Windows to override the PA
 
 To include a tool in a recipe, the tool's `name` should be included in the recipe's `tools` list.
 
-When building the project, the [magic comments](#magic-comments) in the root file are used if present, otherwise the first recipe is used. You can compile with another recipe by command `latex-workshop.recipes`. By default [`latexmk`](https://personal.psu.edu/jcc8/software/latexmk/) is used. This tool is bundled in most LaTeX distributions, and requires perl to execute. For non-perl users, the following `texify` toolchain from MikTeX may worth a try:
+When building the project, the first recipe is used. You can compile with another recipe by command `latex-workshop.recipes`. By default [`latexmk`](https://personal.psu.edu/jcc8/software/latexmk/) is used. This tool is bundled in most LaTeX distributions, and requires perl to execute. For non-perl users, the following `texify` toolchain from MikTeX may worth a try:
 
 ```json
 "latex-workshop.latex.recipes": [{
