@@ -550,11 +550,11 @@ If the rootFile is defined, you can use any of the placeholders defined in the [
 
 ## Magic comments
 
+Notice that magic comment is **disabled** by default. You have to enable it if you want to use the feature. See [the setting](#latex-workshoplatexbuildforcerecipeusage).
+
 ### TeX program and options
 
 LaTeX Workshop supports `% !TEX program` magic comment to specify the compiler program. However, it is advised to use the recipe system instead of magic program to define the building process, since the latter is only implemented for backward compatibility.
-
-Notice that magic comment is disabled by default. You have to enable it if you want to use the feature. See [the setting](#latex-workshoplatexbuildforceRecipeUsage).
 
 For `% !TEX program` magic comment, its arguments are defined in `latex-workshop.latex.magic.args`:
 
