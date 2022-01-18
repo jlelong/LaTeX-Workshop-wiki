@@ -452,7 +452,7 @@ Each `tool` is an object consisting of a `name`, a `command` to be spawned, its 
 
 You can also override the PATH environment variable. Notice that, in the property, only placeholders, e.g., `%DIR%`, take effect, and other variables, e.g., `$PATH`, are **not** expanded.
 
-Notice that You might have to use `"Path"` instead of `"PATH"` on Windows to override the PATH environment variable.
+Notice that you might have to use `"Path"` instead of `"PATH"` on Windows to override the PATH environment variable.
 
 ### Placeholders
 
