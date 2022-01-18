@@ -397,7 +397,11 @@ A LaTeX recipe refers to a sequence/array of commands which LaTeX Workshop execu
 ]
 ```
 
-and each tool appearing in the `tools` field is defined `latex-workshop.latex.tools`. Its default value is given by
+When building the project, the first recipe is used by default. See the [setting](#latex-workshoplatexrecipedefault). You can compile with another recipe by command `latex-workshop.recipes`. By default [`latexmk`](https://personal.psu.edu/jcc8/software/latexmk/) is used. This tool is bundled in most LaTeX distributions, and requires perl to execute.
+
+### LaTeX tools
+
+Each `tool` appearing in the `tools` field is defined `latex-workshop.latex.tools`. To include a tool in a recipe, the tool's `name` should be included in the recipe's `tools` list. Its default value is given by
 
 ```json
 "latex-workshop.latex.tools": [
@@ -438,7 +442,7 @@ and each tool appearing in the `tools` field is defined `latex-workshop.latex.to
 
 You can create multiple recipes with different tools. Each recipe is an object in the configuration list, consisting of a `name` field and a list of `tools` to be invoked in the recipe.
 
-The `tools` in recipes can be defined in `latex-workshop.latex.tools`, in which each command is a `tool`. Each tool is an object consisting of a `name`, a `command` to be spawned, its arguments (`args`) and some specific environment variables (`env`). The `env` entry is a dictionary. Imagine you want to use a `texmf` subdirectory local to your home project, just write
+Each `tool` is an object consisting of a `name`, a `command` to be spawned, its arguments (`args`) and some specific environment variables (`env`). The `env` entry is a dictionary. Imagine you want to use a `texmf` subdirectory local to your home project, just write
 
 ```json
   "env": {
@@ -448,37 +452,11 @@ The `tools` in recipes can be defined in `latex-workshop.latex.tools`, in which 
 
 You can also override the PATH environment variable. Notice that, in the property, only placeholders, e.g., `%DIR%`, take effect, and other variables, e.g., `$PATH`, are **not** expanded.
 
-You might have to use `"Path"` instead of `"PATH"` on Windows to override the PATH environment variable.
-
-To include a tool in a recipe, the tool's `name` should be included in the recipe's `tools` list.
-
-When building the project, the first recipe is used. You can compile with another recipe by command `latex-workshop.recipes`. By default [`latexmk`](https://personal.psu.edu/jcc8/software/latexmk/) is used. This tool is bundled in most LaTeX distributions, and requires perl to execute. For non-perl users, the following `texify` toolchain from MikTeX may worth a try:
-
-```json
-"latex-workshop.latex.recipes": [{
-  "name": "texify",
-  "tools": [
-    "texify"
-  ]
-}],
-"latex-workshop.latex.tools": [{
-  "name": "texify",
-  "command": "texify",
-  "args": [
-    "--synctex",
-    "--pdf",
-    "--tex-option=\"-interaction=nonstopmode\"",
-    "--tex-option=\"-file-line-error\"",
-    "%DOC_EXT%"
-  ],
-  "env": {}
-}]
-```
-
-The `args` and `env` parameters can contain symbols surrounded by `%`. These placeholders are replaced on-the-fly.
+Notice that You might have to use `"Path"` instead of `"PATH"` on Windows to override the PATH environment variable.
 
 ### Placeholders
 
+The `args` and `env` parameters of LaTeX tools can contain symbols surrounded by `%`. These placeholders are replaced on-the-fly.
 LaTeX Workshop registers the following placeholders
 | Placeholder     | Replaced by  |
 | --------------- | ------------------------------------------------------------ |
@@ -500,6 +478,31 @@ LaTeX Workshop registers the following placeholders
 As most LaTeX compiler accepts root file name without extension, `%DOC%` and `%DOCFILE%` do not include the filename extension. Meanwhile, the `texify` tool requires the complete filename with its extension, hence the use of `%DOC_EXT%` in the configuration of `texify`.
 
 Most commands accept the use of the `/` path separator even on Windows and most LaTeX tools even require its use. On the contrary, some Windows commands only work with the `\` path separator. So, we propose two versions of the placeholders. All placeholders without the `_W32` suffix always use the `/` path separator even on Windows. All placeholders with the `_W32` suffix use the `\` path separator on Windows. Note on Linux and Unix systems, placeholders with and without the `_W32` suffix are equivalent.
+
+### Misc
+
+For non-perl users, the following `texify` toolchain from MikTeX may worth a try:
+
+```json
+"latex-workshop.latex.recipes": [{
+  "name": "texify",
+  "tools": [
+    "texify"
+  ]
+}],
+"latex-workshop.latex.tools": [{
+  "name": "texify",
+  "command": "texify",
+  "args": [
+    "--synctex",
+    "--pdf",
+    "--tex-option=\"-interaction=nonstopmode\"",
+    "--tex-option=\"-file-line-error\"",
+    "%DOC_EXT%"
+  ],
+  "env": {}
+}]
+```
 
 ### latex-workshop.latex.recipe.default
 
