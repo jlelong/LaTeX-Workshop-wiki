@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- LaTeX distribution in system PATH. For example, [TeX Live](https://www.tug.org/texlive/). We strongly recommend TeX Live.
+- LaTeX distribution in system PATH. For example, [TeX Live](https://www.tug.org/texlive/). We **strongly recommend** TeX Live.
 - Please note [MiKTeX](https://miktex.org/) does not ship with Perl. You have to install Perl by yourself, which `latexmk` requires.
 - `latexmk` is required for the default recipe for building LaTeX projects to work. Alternatively, you can [set up your own LaTeX recipe](Compile#latex-recipes).
 - _Optional_: Install [ChkTeX](https://www.nongnu.org/chktex) to lint LaTeX projects.
@@ -53,14 +53,14 @@ In addtions to `LaTeX`, [LaTeX-Expl3](https://www.latex-project.org/latex3/code/
 
 ## Using Docker
 
-Starting with 1.35.0, VS Code supports Docker with [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers). LaTeX Workshop works well with the extension. Try the extension at first.
+VS Code supports Docker with [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers). LaTeX Workshop works well with the extension. We **strongly recommend** you to use the extension instead of our following experimental feature.
 
-Starting with release 5.3.0, there is an experimental implementation on Docker support following the idea of [@Arxisos](https://github.com/Arxisos). You can set `latex-workshop.docker.enabled` to `true` to use a docker based LaTeX distribution. The docker image to be used is defined by `latex-workshop.docker.image.latex`, the default value is empty. Please find an appropriate image by yourself and set the name to `latex-workshop.docker.image.latex`.
+LaTeX Workshop has an **experimental** implementation on Docker support following the idea of [@Arxisos](https://github.com/Arxisos). You can set `latex-workshop.docker.enabled` to `true` to use a docker based LaTeX distribution. The docker image to be used is defined by `latex-workshop.docker.image.latex`, the default value is empty. Please find an appropriate image by yourself and set the name to `latex-workshop.docker.image.latex`.
 
 [@Arxisos](https://github.com/Arxisos) created [snippets](https://github.com/Arxisos/LaTex-Workshop-Docker) for LaTeX binaries in docker, and [@lippertmarkus](https://github.com/lippertmarkus) had another [short description](https://github.com/James-Yu/LaTeX-Workshop/issues/302) on how to use Docker with LaTeX Workshop.
 You can set up the advanced configuration of Docker through [environment variables](https://docs.docker.com/engine/reference/commandline/cli/#environment-variables) with the `env` property of each [recipe](Compile#latex-recipes).
 
-With the Docker support, compiling subfiles with the `subfiles` package does not work. We recommend you to use [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers), which works well.
+With the experimental feature, compiling subfiles with the `subfiles` package does not work.
 
 ## Using WSL
 
