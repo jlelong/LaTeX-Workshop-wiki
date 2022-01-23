@@ -361,7 +361,7 @@ We implement Hover Preview with MathJax. Please see the following for LaTeX comm
 
 - http://docs.mathjax.org/en/latest/input/tex/macros/index.html
 
-Notice that MathJax does not support LaTeX packages.
+You can load [MathJax extensions](http://docs.mathjax.org/en/latest/input/tex/extensions/index.html) for basic LaTeX packages. See the [setting](Hover#latex-workshophoverpreviewmathjaxextensions). Notice that MathJax does not support other advaned LaTeX packages.
 
 ## Hover Preview fails to render math equation with errors
 
