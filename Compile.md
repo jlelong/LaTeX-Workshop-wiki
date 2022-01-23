@@ -401,7 +401,7 @@ When building the project, the first recipe is used by default. See the [setting
 
 ### LaTeX tools
 
-Each `tool` appearing in the `tools` field is defined `latex-workshop.latex.tools`. To include a tool in a recipe, the tool's `name` should be included in the recipe's `tools` list. Its default value is given by
+Each `tool` appearing in the `tools` field of recipes is defined `latex-workshop.latex.tools`. To include a tool in a recipe, the tool's `name` should be included in the recipe's `tools` list. Its default value is given by
 
 ```json
 "latex-workshop.latex.tools": [
