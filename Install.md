@@ -6,7 +6,7 @@
 - We don't recommend [MiKTeX](https://miktex.org/) because MiKTeX does not ship with Perl. If you choose MiKTeX, you have to install Perl by yourself, which `latexmk` requires. Without Perl, `latexmk` fails with errors.
 - `latexmk` is required for the default recipe for building LaTeX projects to work. Alternatively, you can [set up your own LaTeX recipe](Compile#latex-recipes).
 - _Optional_: Install [ChkTeX](https://www.nongnu.org/chktex) to lint LaTeX projects.
-- _Optional_: Install [latexindent.pl](https://github.com/cmhughes/latexindent.pl) for formatting support if it is not provided by your LaTeX distribution. You also have to install a few standard Perl modules. See the [official document](https://latexindentpl.readthedocs.io/en/latest/appendices.html).
+- _Optional_: Install [latexindent.pl](https://github.com/cmhughes/latexindent.pl) for formatting support if it is not provided by your LaTeX distribution. You also have to install a few standard Perl modules. See the [official document](https://latexindentpl.readthedocs.io/en/latest/sec-appendices.html#required-perl-modules).
 
 ## Installation
 
