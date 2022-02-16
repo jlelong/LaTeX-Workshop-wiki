@@ -53,7 +53,7 @@ In addtions to `LaTeX`, [LaTeX-Expl3](https://www.latex-project.org/latex3/code/
 
 ## Using Docker
 
-VS Code supports Docker with [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers). LaTeX Workshop works well with the extension. We **strongly recommend** you to use the extension instead of our following experimental feature.
+VS Code supports Docker with [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers). You can see [an example](https://github.com/James-Yu/LaTeX-Workshop/tree/master/samples/docker). LaTeX Workshop works well with the extension. We **strongly recommend** you to use the extension instead of our following experimental feature.
 
 LaTeX Workshop has an **experimental** implementation on Docker support following the idea of [@Arxisos](https://github.com/Arxisos). You can set `latex-workshop.docker.enabled` to `true` to use a docker based LaTeX distribution. The docker image to be used is defined by `latex-workshop.docker.image.latex`, the default value is empty. Please find an appropriate image by yourself and set the name to `latex-workshop.docker.image.latex`.
 
