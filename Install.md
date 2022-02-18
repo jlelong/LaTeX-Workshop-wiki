@@ -22,6 +22,8 @@ If you can not fix the setting of your system, you can also override PATH with t
 
 Notice that, to set the `PATH` environment variable for VS Code Remote Development, you usually have to edit `.bash_profile` or `.profile` instead of `.bashrc`. See the [document](https://code.visualstudio.com/docs/remote/troubleshooting#_configure-the-environment-for-the-remote-extension-host) for WSL and an [issue](https://github.com/microsoft/vscode-remote-release/issues/1671#issuecomment-542818686) for Remote SSH.
 
+If you want to know about environment variable itself, please read [Wikipedia](https://en.wikipedia.org/wiki/Environment_variable) and [stackexchange](https://unix.stackexchange.com/questions/91282/what-exactly-is-an-environment-variable).
+
 ## Settings
 
 You can modify settings through the menu of VS Code, `Preferences > Settings`.
