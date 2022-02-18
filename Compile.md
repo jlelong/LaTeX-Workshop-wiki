@@ -246,69 +246,6 @@ Force the use of the recipe system even when a magic comment defines a TeX comma
 | --------- | ---------------- |
 | _boolean_ | `true`          |
 
-## External build command
-
-Versatile though the recipe mechanism described above may be, it may fail to match your needs when building the whole LaTeX project is done by a personal script or a Makefile. For this particular case, we provide an external build command mechanism, which completely bypasses the recipe machinery. Just define your command along with its arguments using the following two configuration variables
-
-### latex-workshop.latex.external.build.command
-
-The external command to execute when calling `latex-workshop.build`.
-
-This is useful when compiling relies on a Makefile or a bespoke script. When defined, it completely bypasses the recipes and root file detection mechanism. The command is launched from the workspace directory.
-
-|   type    |  default value   |
-| --------- | ---------------- |
-| _string_  | `""`             |
-
-### latex-workshop.latex.external.build.args
-
-The arguments of [`latex-workshop.latex.external.build.command`](#latex-workshoplatexexternalbuildcommand) when calling `latex-workshop.build`
-
-If the rootFile is defined, you can use any of the placeholders defined in the [section on LaTeX Recipes](#LaTeX-recipes).
-
-|   type      |  default value   |
-| ---------   | ---------------- |
-| _string[]_  | `[]`             |
-
-## Magic comments
-
-Notice that magic comment is **disabled** by default. You have to enable it if you want to use the feature. See [the setting](#latex-workshoplatexbuildforcerecipeusage).
-
-### TeX program and options
-
-LaTeX Workshop supports `% !TEX program` magic comment to specify the compiler program. However, it is advised to use the recipe system instead of magic program to define the building process, since the latter is only implemented for backward compatibility.
-
-For `% !TEX program` magic comment, its arguments are defined in `latex-workshop.latex.magic.args`:
-
-```json
-"latex-workshop.latex.magic.args": [
-  "-synctex=1",
-  "-interaction=nonstopmode",
-  "-file-line-error",
-  "%DOC%"
-]
-```
-
-Alternatively, you can directly define the args in the `.tex` file by using the magic comment `% !TEX options`, which overrides `latex-workshop.latex.magic.args`. Note that it must contain the file to proceed. For instance, to reproduce the default behavior, you should use
-
-```
-% !TEX options = -synctex=1 -interaction=nonstopmode -file-line-error "%DOC%"
-```
-
-Suppose there is a line `% !TEX program = xelatex` in the root file. Upon building the project, LaTeX Workshop will parse the root file and figure out that `xelatex` should be used.
-
-### BIB program and options
-
-When using `% !TEX program` with bibliographies, a `bib` compiler must be defined with `% !BIB program` comment, e.g., `% !BIB program = bibtex`. Otherwise the extension will only run one-pass compilation with the specified LaTeX compiler. If needed, you can pass extra arguments to the `% !BIB program` using the `latex-workshop.latex.magic.bib.args` variable:
-
-```json
-"latex-workshop.latex.magic.bib.args": [
-  "%DOCFILE%"
-]
-```
-
-Alternatively, you can directly define the args in the `.tex` file by using the magic comment `% !BIB options`, which overrides `latex-workshop.latex.magic.bib.args`. Note that it must contain the file to proceed. For instance, to reproduce the default behavior, you should use `% !BIB options = "%DOCFILE%"`.
-
 ## Multi File projects
 
 While it is fine to write all contents in one `.tex` file, it is common to split things up for simplicity. For such LaTeX projects, the file with `\begin{document}` is considered as the root file, which serves as the entry point to the project. LaTeX Workshop intelligently finds the root file when a new document is opened, the active editor is changed, or any LaTeX Workshop command is executed.
@@ -555,6 +492,69 @@ Define the method used by the `clean` command to remove temporary files.
 
 - `"glob"`: Clean all the files located in [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutDir) and matching the glob patterns listed in [`latex-workshop.latex.clean.fileTypes`](#latex-workshoplatexcleanfileTypes).
 - `"cleanCommand"`: Run [`latex-workshop.latex.clean.command`](#latex-workshoplatexcleancommand) to clean temporary files.
+
+## External build command
+
+Versatile though the recipe mechanism described above may be, it may fail to match your needs when building the whole LaTeX project is done by a personal script or a Makefile. For this particular case, we provide an external build command mechanism, which completely bypasses the recipe machinery. Just define your command along with its arguments using the following two configuration variables
+
+### latex-workshop.latex.external.build.command
+
+The external command to execute when calling `latex-workshop.build`.
+
+This is useful when compiling relies on a Makefile or a bespoke script. When defined, it completely bypasses the recipes and root file detection mechanism. The command is launched from the workspace directory.
+
+|   type    |  default value   |
+| --------- | ---------------- |
+| _string_  | `""`             |
+
+### latex-workshop.latex.external.build.args
+
+The arguments of [`latex-workshop.latex.external.build.command`](#latex-workshoplatexexternalbuildcommand) when calling `latex-workshop.build`
+
+If the rootFile is defined, you can use any of the placeholders defined in the [section on LaTeX Recipes](#LaTeX-recipes).
+
+|   type      |  default value   |
+| ---------   | ---------------- |
+| _string[]_  | `[]`             |
+
+## Magic comments
+
+Notice that magic comment is **disabled** by default. You have to enable it if you want to use the feature. See [the setting](#latex-workshoplatexbuildforcerecipeusage).
+
+### TeX program and options
+
+LaTeX Workshop supports `% !TEX program` magic comment to specify the compiler program. However, it is advised to use the recipe system instead of magic program to define the building process, since the latter is only implemented for backward compatibility.
+
+For `% !TEX program` magic comment, its arguments are defined in `latex-workshop.latex.magic.args`:
+
+```json
+"latex-workshop.latex.magic.args": [
+  "-synctex=1",
+  "-interaction=nonstopmode",
+  "-file-line-error",
+  "%DOC%"
+]
+```
+
+Alternatively, you can directly define the args in the `.tex` file by using the magic comment `% !TEX options`, which overrides `latex-workshop.latex.magic.args`. Note that it must contain the file to proceed. For instance, to reproduce the default behavior, you should use
+
+```
+% !TEX options = -synctex=1 -interaction=nonstopmode -file-line-error "%DOC%"
+```
+
+Suppose there is a line `% !TEX program = xelatex` in the root file. Upon building the project, LaTeX Workshop will parse the root file and figure out that `xelatex` should be used.
+
+### BIB program and options
+
+When using `% !TEX program` with bibliographies, a `bib` compiler must be defined with `% !BIB program` comment, e.g., `% !BIB program = bibtex`. Otherwise the extension will only run one-pass compilation with the specified LaTeX compiler. If needed, you can pass extra arguments to the `% !BIB program` using the `latex-workshop.latex.magic.bib.args` variable:
+
+```json
+"latex-workshop.latex.magic.bib.args": [
+  "%DOCFILE%"
+]
+```
+
+Alternatively, you can directly define the args in the `.tex` file by using the magic comment `% !BIB options`, which overrides `latex-workshop.latex.magic.bib.args`. Note that it must contain the file to proceed. For instance, to reproduce the default behavior, you should use `% !BIB options = "%DOCFILE%"`.
 
 ## Building a `.jnw` file
 
