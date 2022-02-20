@@ -296,13 +296,14 @@ The default zoom level of the PDF viewer. This default value will be passed to t
 
 The default scroll mode of the PDF viewer. This default value will be passed to the viewer upon opening.
 
-| type   | default value | possible values |
-| ------ | ------------- | --------------- |
-| _enum_ | `0`           | `0`, `1`, `2`   |
+| type   | default value | possible values      |
+| ------ | ------------- | ---------------      |
+| _enum_ | `0`           | `0`, `1`, `2`, `3`   |
 
 - `0`: Vertical scroll
 - `1`: Horizontal scroll
 - `2`: Wrapped display
+- `3`: Page scroll
 
 ### latex-workshop.view.pdf.spreadMode
 
