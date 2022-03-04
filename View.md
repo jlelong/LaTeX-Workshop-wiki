@@ -95,7 +95,9 @@ The javascript built-in version of SyncTeX is used by default. See [settings](#l
 
 ## External PDF viewer
 
-You can view PDF files with external PDF viewers by calling _View LaTeX PDF file in external viewer_ (command `latex-workshop.viewExternal`) either from the _Command Palette_ or the _TeX badge_. This function is not officially supported.
+Note: **This function is not officially supported.**
+
+You can view PDF files with external PDF viewers by calling _View LaTeX PDF file in external viewer_ (command `latex-workshop.viewExternal`) either from the _Command Palette_ or the _TeX badge_.
 
 | Setting key                                                                                      | Description                                       | Default       | Type     |
 | ------------------------------------------------------------------------------------------------ | ------------------------------------------------- | ------------- | -------- |
@@ -106,7 +108,7 @@ You can view PDF files with external PDF viewers by calling _View LaTeX PDF file
 
 ### Using SyncTeX with an external viewer
 
-Note: this function is not officially supported.
+Note: **this function is not officially supported.**
 
 #### Windows
 
