@@ -151,7 +151,12 @@ This is trickier, but works. See [here](https://ubuntuforums.org/showthread.php?
     - for Python 3: [evince_synctex3.zip](files/evince_synctex3.zip)
 1. Unzip it in any folder in your PATH (for instance, `$HOME/bin/` or `$HOME/.local/bin`).
 1. Make sure that all files are executable with `chmod +rx evince2 evince_forward_search evince_backward_search`
-1. Add the following options to your configuration:
+2. Run `evince_forward_search` and `evince_backward_search` without arguments for check errors. If you have problems with python3, change the header of these files from `#!/usr/bin/python` to `#!/usr/bin/python3`. Use this lines to edit directly whit your preferred editor.
+   ```bash
+   vim `which evince_backward_search`
+   vim `which evince_forward_search`
+   ```
+4. Add the following options to your configuration:
 
     ```json
     "latex-workshop.view.pdf.viewer": "external",
