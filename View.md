@@ -157,7 +157,7 @@ This is trickier, but works. See [here](https://ubuntuforums.org/showthread.php?
 
     ```json
     "latex-workshop.view.pdf.viewer": "external",
-    "latex-workshop.view.pdf.external.viewer.command": "evince2".
+    "latex-workshop.view.pdf.external.viewer.command": "evince2",
     "latex-workshop.view.pdf.external.viewer.args": [
         "%PDF%"
     ],
