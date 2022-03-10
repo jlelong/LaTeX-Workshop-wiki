@@ -1,4 +1,4 @@
-# Playing with environments
+# Playing with environments and LaTeX syntax tree
 
 ## Inserting an environment
 
@@ -51,6 +51,14 @@ Alternatively, you can select the text and insert the environment using either t
 
 
 Enable the automatic insertion of `\item` on a newline when pressing `Enter` in a line starting in `\item`.
+
+| type      | default value |
+| --------- | ------------- |
+| _boolean_ | `true`        |
+
+### latex-workshop.selection.smart.latex.enabled
+
+Enable AST based smart selection. Command ids are `editor.action.smartSelect.expand` and `editor.action.smartSelect.shrink`.
 
 | type      | default value |
 | --------- | ------------- |
