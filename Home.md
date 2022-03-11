@@ -7,3 +7,7 @@ This project won't be successful without contributions from the community, espec
 - James Booth [`@jabooth`](https://github.com/jabooth)
 
 Thank you so much!
+
+## Request and contribute to this Wiki
+
+If you have a request or want to contribute to this Wiki, please open an issue at https://github.com/jlelong/LaTeX-Workshop-wiki/issues
