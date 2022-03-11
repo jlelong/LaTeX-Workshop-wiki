@@ -52,6 +52,7 @@
 - [`terminal.integrated.shellArgs.linux` doesn't take effect](#terminalintegratedshellargslinux-doesnt-take-effect)
 - [What kinds of LaTeX commands does Hover Preview support?](#what-kinds-of-latex-commands-does-hover-preview-support)
 - [Hover Preview fails to render math equation with errors](#hover-preview-fails-to-render-math-equation-with-errors)
+- [The file `settings.json` doesn't have default values of settings](#the-file-settingsjson-doesnt-have-default-values-of-settings)
 
 ## Known incompatible Extensions
 
@@ -366,3 +367,7 @@ You can load [MathJax extensions](http://docs.mathjax.org/en/latest/input/tex/ex
 ## Hover Preview fails to render math equation with errors
 
 Please try setting [`latex-workshop.hover.preview.newcommand.parseTeXFile.enabled`](https://github.com/James-Yu/LaTeX-Workshop/wiki/Hover#latex-workshophoverpreviewnewcommandparsetexfileenabled) to `false`.
+
+## The file `settings.json` doesn't have default values of settings
+
+Enter a configuration id you want to configurate, e.g. `"latex-workshop.latex.recipes"`, then trigger auto-completion of VS Code. Related issues, [#127819](https://github.com/microsoft/vscode/issues/127819), [#134908](https://github.com/microsoft/vscode/issues/134908).
