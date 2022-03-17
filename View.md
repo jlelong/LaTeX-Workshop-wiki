@@ -142,6 +142,34 @@ Add the following option to your `settings.json` in your VS Code
 
 *Do not forget to set the paths according to your installation.*
 
+##### [Sioyek](https://sioyek.info/)
+The configuration is described [here](https://sioyek-documentation.readthedocs.io/en/latest/usage.html#synctex).
+
+Edit Sioyek's `prefs.config` to include the line
+
+```
+inverse_search_command "C:\path\to\vscode\Code.exe" "C:\path\to\vscode\resources\app\out\cli.js" --ms-enable-electron-run-as-node -r -g "%1:%2"
+```
+
+Add the following to your VSCode `settings.json`:
+
+```json
+    "latex-workshop.view.pdf.external.viewer.command": "C:\\path\\to\\sioyek\\sioyek.exe",
+    "latex-workshop.view.pdf.external.synctex.command": "C:\\path\\to\\sioyek\\sioyek.exe",
+    "latex-workshop.view.pdf.external.synctex.args": [
+        "--inverse-search",
+        "\"C:\\path\\to\\vscode\\Code.exe\" \"C:\\path\\to\\vscode\\resources\\app\\out\\cli.js\" --ms-enable-electron-run-as-node -r -g \"%1:%2\"",
+        "--reuse-instance",
+        "--forward-search-file",
+        "%TEX%",
+        "--forward-search-line",
+        "%LINE%",
+        "%PDF%"
+    ],
+```
+*Do not forget to set the paths according to your installation.*
+
+
 #### Linux
 
 ##### [Evince](https://wiki.gnome.org/Apps/Evince) support
