@@ -213,6 +213,16 @@ The accepted values are:
 - above: Put the math preview panel in a new group above the current one
 - below: Put the math preview panel in a new group below the current one
 
+### latex-workshop.mathpreviewpanel.cursor.enabled
+
+**This feature is experimental. If you report an issue to us on this feature, we may not fix it. We will not accept any pull requests.**
+Render a cursor on the math preview panel.
+
+| type       | default value |
+| ---------- | ------------- |
+| _boolean_  | `false`       |
+
+
 ### latex-workshop.hover.preview.maxLines
 
 Maximum number of lines between the beginning of the math environment and the cursor position to allow preview.

@@ -77,7 +77,7 @@ The keywords `region` and `endregion` may start with a capital letter and be pre
 
 ## Counting words
 
-To count the number of words in the current document, call _Count words in LaTeX document_ from the Command Palette (the associated command is `latex-workshop.wordcount`). Setting [`latex-workshop.texcount.autorun`](latex-workshop.texcount.autorun) to `onSave` counts the number of words on every file save and displays it in the status bar.
+To count the number of words in the current document, call _Count words in LaTeX document_ from the Command Palette (the associated command is `latex-workshop.wordcount`). Setting [`latex-workshop.texcount.autorun`](#latex-workshop.texcount.autorun) to `onSave` counts the number of words on every file save and displays it in the status bar.
 
 ### latex-workshop.texcount.autorun
 
@@ -89,7 +89,7 @@ When to call `texcount`. Default is never.
 
 ### latex-workshop.texcount.interval
 
-The minimal time interval between two consecutive runs of `texcount` in milliseconds when `latex-workshop.texcount.run` is set to `onSave`.
+The minimal time interval between two consecutive runs of `texcount` in milliseconds when [`latex-workshop.texcount.autorun`](#latex-workshop.texcount.autorun) is set to `onSave`.
 
 | type     | default value |
 |----------|---------------|

@@ -89,7 +89,7 @@ To use the alternate shortcuts, set `latex-workshop.bind.altKeymap.enabled` to `
 
 ## Inserting Greek letters
 
-Greek letters can be inserted using the following commands (`@` + the Roman letter). The prefix `@` is set by the configuration variable `latex-workshop.intellisense.snippets.trigger.latex` and can be replaced by any other non-alphabetical character. Setting `latex-workshop.intellisense.snippets.trigger.latex` to the empty string deactivates these snippets. Note that from an implementation point of view, these snippets are actually provided as intellisense completion.
+Greek letters can be inserted using the following commands (`@` + the Roman letter). The prefix `@` is set by the configuration variable `latex-workshop.intellisense.atSuggestion.trigger.latex` and can be replaced by any other non-alphabetical character. Setting `latex-workshop.intellisense.atSuggestion.trigger.latex` to the empty string deactivates these snippets. Note that from an implementation point of view, these snippets are actually provided as intellisense completion.
 
 | Prefix | Letter        |
 | ------ | ------------- |
@@ -141,7 +141,7 @@ Some common mathematical symbols or commands have a dedicated snippet.
 | `**`                 | `^{$1}`                  |
 | `...`                | `\dots`                  |
 
-The following commands are also as intellisense completion. The prefix `@` is set by the configuration variable `latex-workshop.intellisense.snippets.trigger.latex` and can be replaced by any other non-alphabetical character. Setting `latex-workshop.intellisense.snippets.trigger.latex` to the empty string deactivates these snippets.
+The following commands are also as intellisense completion. The prefix `@` is set by the configuration variable `latex-workshop.intellisense.atSuggestion.trigger.latex` and can be replaced by any other non-alphabetical character. Setting `latex-workshop.intellisense.atSuggestion.trigger.latex` to the empty string deactivates these snippets.
 
 | Prefix               | Command                  |
 | -------------------- | ------------------------ |
