@@ -17,9 +17,15 @@ IGNORE_ENTRIES = [
 ]
 
 def get_from_package(pkgfile):
-    with open(pkgfile, 'r') as fp:
+    with open(pkgfile, 'r', encoding='utf8') as fp:
         package_file_content = json.load(fp)
-        variables = package_file_content['contributes']['configuration']['properties']
+        all_variables = package_file_content['contributes']['configuration']['properties']
+        variables = {}
+        for key in all_variables.keys():
+            entry = all_variables[key]
+            subkeys = entry.keys()
+            if 'deprecationMessage' not in subkeys and 'markdownDeprecationMessage' not in subkeys:
+                variables[key] = entry
         commands = package_file_content['contributes']['commands']
         variable_names = set(variables.keys())
         commands_names = set([e['command'] for e in commands])
@@ -34,7 +40,7 @@ def get_variables_from_wiki():
             (_, ext) = os.path.splitext(filepath)
             if ext != '.md':
                 continue
-            with open(f, 'r') as fp:
+            with open(f, 'r', encoding='utf8') as fp:
                 content = fp.read()
                 for match in re.finditer(r'latex-workshop(\.[a-zA-Z-]+)+', content):
                     if match:
