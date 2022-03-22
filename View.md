@@ -22,7 +22,7 @@ The extension also allows to view any PDF file possibly not related to a LaTeX p
 
 Delay before reloading a PDF file after last change, in milliseconds.
 
-You must reload VSCode to take into account a change in this configuration.
+Reload vscode to make any change in this configuration effective.
 
 | type               | default value |
 | ------------------ | ------------- |
@@ -458,7 +458,7 @@ Define the CSS sepia filter level of the PDF viewer when the invert mode is enab
 
 ### latex-workshop.view.pdf.internal.synctex.keybinding
 
-Which keybinding to use for the internal PDF viewer for reverse SyncTeX. You must reload VSCode or the PDF viewer to take into account a change in this configuration.
+Which keybinding to use for the internal PDF viewer for reverse SyncTeX. Reload vscode to make any change in this configuration effective.
 
 | type   | default value  | possible values                    |
 | ------ | -------------- |----------------------------------- |

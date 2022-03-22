@@ -193,7 +193,7 @@ Defines what to show as suggestion labels when intellisense provides citation su
 
 ### latex-workshop.intellisense.citation.format
 
-List of fields to display for citation preview and intellisense. You must reload VSCode to take into account a change in this configuration.
+List of fields to display for citation preview and intellisense. Reload vscode to make any change in this configuration effective.
 
 |         type         | default value |
 | -------------------- | ------------- |
@@ -220,7 +220,7 @@ Define which type of hint to show when intellisense provides citation suggestion
 
 ### latex-workshop.intellisense.triggers.latex
 
-Additional trigger characters for intellisense of LaTeX documents. You must reload VSCode to take into account a change in this configuration.
+Additional trigger characters for intellisense of LaTeX documents. Reload vscode to make any change in this configuration effective.
 
 |            type      | default value |
 | -------------------- | ------------- |

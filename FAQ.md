@@ -161,7 +161,7 @@ The default shortcuts for commands related to build and view use the modifiers <
 
 Please try setting [`latex-workshop.latex.watch.usePolling`](Compile#latex-workshoplatexwatchusepolling) to `true` or setting [`latex-workshop.latex.autoBuild.run`](Compile#latex-workshoplatexautobuildrun) to `onSave`.
 
-You must reload VSCode to take into account a change in this configuration.
+Reload vscode to make any change in this configuration effective.
 
 ## Saving a `.cls` file does not trigger auto build
 
@@ -171,13 +171,13 @@ You have to compile your project with `latexmk` or manually pass `-recorder` to 
 
 Please try setting [`latex-workshop.latex.watch.usePolling`](Compile#latex-workshoplatexwatchusepolling) to `true`.
 
-You must reload VSCode to take into account a change in this configuration.
+Reload vscode to make any change in this configuration effective.
 
 ## The internal PDF viewer is not updated
 
 Please try setting [`latex-workshop.latex.watch.usePolling`](Compile#latex-workshoplatexwatchusepolling) to `true`.
 
-You must reload VSCode to take into account a change in this configuration.
+Reload vscode to make any change in this configuration effective.
 
 ## Disable automatic build on save
 
