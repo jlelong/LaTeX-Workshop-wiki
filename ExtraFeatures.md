@@ -20,7 +20,7 @@ The structure of the document can be obtained
 
 ### latex-workshop.view.outline.commands
 
-The names of the commands to be shown in the outline/structure views. Reload VSCode after changing the value.
+The names of the commands to be shown in the outline/structure views. Reload vscode to make any change in this configuration effective.
 
 | type                  | default value      |
 |-----------------------|--------------------|
@@ -30,7 +30,7 @@ The commands must be called in the form `\commandname{arg}`.
 
 ### latex-workshop.view.outline.floats.enabled
 
-Show the floating objects (figures and tables) in the outline/structure views. Reload VSCode after changing the value.
+Show the floating objects (figures and tables) in the outline/structure views. Reload vscode to make any change in this configuration effective.
 
 | type      | default value |
 |-----------|---------------|

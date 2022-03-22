@@ -65,7 +65,7 @@ Use polling to watch changes on files.
 
 When TeX files are placed on network drives or OneDrive, this option should be turned on. Setting this option to true might lead to high CPU utilization.
 
-You must reload VSCode to take into account a change in this configuration.
+Reload vscode to make any change in this configuration effective.
 
 | type                 | default value |
 | -------------------- | ------------- |
@@ -75,7 +75,7 @@ You must reload VSCode to take into account a change in this configuration.
 
 Interval of polling, in milliseconds.
 
-You must reload VSCode to take into account a change in this configuration.
+Reload vscode to make any change in this configuration effective.
 
 | type               | default value |
 | ------------------ | ------------- |
