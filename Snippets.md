@@ -87,51 +87,6 @@ This functionality has two keybindings
 
 To use the alternate shortcuts, set `latex-workshop.bind.altKeymap.enabled` to `true`.
 
-## Inserting Greek letters
-
-Greek letters can be inserted using the following commands (`@` + the Roman letter). The prefix `@` is set by the configuration variable `latex-workshop.intellisense.atSuggestion.trigger.latex` and can be replaced by any other non-alphabetical character. Setting `latex-workshop.intellisense.atSuggestion.trigger.latex` to the empty string deactivates these snippets. Note that from an implementation point of view, these snippets are actually provided as intellisense completion.
-
-| Prefix | Letter        |
-| ------ | ------------- |
-| `@a`   | `\alpha`      |
-| `@b`   | `\beta`       |
-| `@c`   | `\chi`        |
-| `@d`   | `\delta`      |
-| `@e`   | `\epsilon`    |
-| `@f`   | `\phi`        |
-| `@g`   | `\gamma`      |
-| `@h`   | `\eta`        |
-| `@i`   | `\iota`       |
-| `@k`   | `\kappa`      |
-| `@l`   | `\lambda`     |
-| `@m`   | `\mu`         |
-| `@n`   | `\nu`         |
-| `@p`   | `\pi`         |
-| `@q`   | `\theta`      |
-| `@r`   | `\rho`        |
-| `@s`   | `\sigma`      |
-| `@t`   | `\tau`        |
-| `@u`   | `\upsilon`    |
-| `@o`   | `\omega`      |
-| `@&`   | `\wedge`      |
-| `@x`   | `\xi`         |
-| `@y`   | `\psi`        |
-| `@z`   | `\zeta`       |
-| `@D`   | `\Delta`      |
-| `@F`   | `\Phi`        |
-| `@G`   | `\Gamma`      |
-| `@Q`   | `\Theta`      |
-| `@L`   | `\Lambda`     |
-| `@X`   | `\Xi`         |
-| `@Y`   | `\Psi`        |
-| `@S`   | `\Sigma`      |
-| `@U`   | `\Upsilon`    |
-| `@W`   | `\Omega`      |
-| `@ve`  | `\varepsilon` |
-| `@vf`  | `\varphi`     |
-| `@vs`  | `\varsigma`   |
-| `@vq`  | `\vartheta`   |
-
 ## Handy mathematical snippets
 
 Some common mathematical symbols or commands have a dedicated snippet.
@@ -141,39 +96,7 @@ Some common mathematical symbols or commands have a dedicated snippet.
 | `**`                 | `^{$1}`                  |
 | `...`                | `\dots`                  |
 
-The following commands are also as intellisense completion. The prefix `@` is set by the configuration variable `latex-workshop.intellisense.atSuggestion.trigger.latex` and can be replaced by any other non-alphabetical character. Setting `latex-workshop.intellisense.atSuggestion.trigger.latex` to the empty string deactivates these snippets.
-
-| Prefix               | Command                  |
-| -------------------- | ------------------------ |
-| `@(`                 | `\left( $1 \right)`      |
-| `@{`                 | `\left\{ $1 \right\}`    |
-| `@[`                 | `\left[ $1 \right]`      |
-| `__`                 | `_{$1}`                  |
-| `**`                 | `^{$1}`                  |
-| `...`                | `\dots`                  |
-| `@.`                 | `\cdot`                  |
-| `@8`                 | `\infty`                 |
-| `@6`                 | `\partial`               |
-| `@/`                 | `\frac{$1}{$2}`          |
-| `@%`                 | `\frac{$1}{$2}`          |
-| `@^`                 | `\Hat{$1}`               |
-| `@_`                 | `\bar{$1}`               |
-| `@@`                 | `\circ`                  |
-| `@0`                 | `^\circ`                 |
-| `@;`                 | `\dot{$1}`               |
-| `@:`                 | `\ddot{$1}`              |
-| `@=`                 | `\equiv`                 |
-| `@*`                 | `\times`                 |
-| `@<`                 | `\leq`                   |
-| `@>`                 | `\geq`                   |
-| `@2`                 | `\sqrt{$1}`              |
-| `@I`                 | `\int_{$1}^{$2}`         |
-| <code>@&#124;</code> | <code>\Big &#124;</code> |
-| `@+`                 | `\bigcup`                |
-| `@-`                 | `\bigcap`                |
-| `@,`                 | `\nonumber`              |
-
-## Font commands
+## Font commands and snippets
 
 The following shortcuts are toggle commands. When some text is selected, it gets surrounded by the font command. When no text is actually selected, either the cursor is already inside the font command in which case the font command is removed or the command is inserted at the cursor position. The shortcuts work with multi-selections and multi-cursors.
 
@@ -195,7 +118,7 @@ The following shortcuts are toggle commands. When some text is selected, it gets
 | `FSS`      | <kbd>ctrl</kbd>+<kbd>l</kbd>, <kbd>ctrl</kbd>+<kbd>6</kbd>     | `\textsuperscript{${1}}` |
 | `FBS`      | <kbd>ctrl</kbd>+<kbd>l</kbd>, <kbd>ctrl</kbd>+<kbd>minus</kbd> | `\textsubscript{${1}}`   |
 
-## Mathematical font commands
+## Mathematical font commands and snippets
 
 The following shortcuts are toggle commands. When some text is selected, it gets surrounded by the font command. When no text is actually selected, either the cursor is already inside the font command in which case the font command is removed or the command is inserted at the cursor position. The shortcuts work with multi-selections and multi-cursors.
 
@@ -226,7 +149,6 @@ To surround text with a command, just select some text and use <kbd>ctrl</kbd>+<
 Alternatively, you can just select the text and enter the command using autocompletion
 
 <img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/wrap2.gif" alt="wrap demo" height="140px">
-
 
 ### With an environment
 

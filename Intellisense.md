@@ -29,7 +29,7 @@ Any `\ref` related command is automatically completed with label keys.
 
 <img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/ref.gif" alt="intellisense demo" height="80px">
 
-## Commands
+## Commands starting with `\`
 
 The key `\` automatically triggers completion of LaTeX commands. You can define [additional triggers](#latex-workshopintellisensetriggerslatex). Several mechanisms play together to build the list of available commands.
 
@@ -50,17 +50,17 @@ The key `\` automatically triggers completion of LaTeX commands. You can define 
   - tabstops: they enable us to directly trigger autocompletion again for citations and references.
 - We provide one entry in the intellisense completion list per LaTeX command signature. If you feel, it makes the completion list too long, set [`latex-workshop.intellisense.optionalArgsEntries.enabled`](#latex-workshopintellisenseoptionalArgsEntriesenabled) to `false`.
 
-| Setting key                                                                                                 | Description                                                                    | Default | Type      |
-| ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ------- | --------- |
-| [`latex-workshop.intellisense.triggers.latex`](#latex-workshopintellisensetriggerslatex)                    | Additional trigger characters for intellisense of LaTeX documents.             | `["{"]` | _array_ of _strings_ |
-| [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled)                  | Enabling of auto-completion for commands and environments from loaded packages | `true`  | _boolean_ |
-| [`latex-workshop.intellisense.package.env.enabled`](#latex-workshopintellisensepackageenvenabled)           | Enable `\envname` snippets                                                     | `true`  | _boolean_ |
-| [`latex-workshop.intellisense.package.extra`](#latex-workshopintellisensepackageextra)                      | Extra packages to load for intellisense                                        | `[]` | _array_ of _strings_ |
-| [`latex-workshop.intellisense.package.dirs`](#latex-workshopintellisensepackagedirs)                      | Extra directories where to look for intellisense data                                        | `[]` | _array_ of _strings_ |
-| [`latex-workshop.intellisense.unimathsymbols.enabled`](#latex-workshopintellisenseunimathsymbolsenabled)    | Show unimath symbols as suggestions when `\` pressed                           | `false` | _boolean_     |
-| [`latex-workshop.intellisense.useTabStops.enabled`](#latex-workshopintellisenseuseTabStopsenabled)          | Use tabstops in intellisense completion                                        | `true`  | _boolean_ |
-| [`latex-workshop.intellisense.optionalArgsEntries.enabled`](#latex-workshopintellisenseoptionalArgsEntriesenabled) | Add one completion item per command signature                           | `true`  | _boolean_ |
-| [`latex-workshop.latex.texDirs`](Compile#latex-workshoplatextexDirs)                            | List of paths to look for input `.tex` files.                                  | `[]`    | _array_ of _strings_ |
+| Setting key | Description | Default | Type |
+| ----------- | ----------- | ------- | ---- |
+| [`latex-workshop.intellisense.triggers.latex`](#latex-workshopintellisensetriggerslatex) | Additional trigger characters for intellisense of LaTeX documents. | `["{"]` | _array_ of _strings_ |
+| [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled) | Enabling of auto-completion for commands and environments from loaded packages | `true` | _boolean_ |
+| [`latex-workshop.intellisense.package.env.enabled`](#latex-workshopintellisensepackageenvenabled) | Enable `\envname` snippets | `true` | _boolean_ |
+| [`latex-workshop.intellisense.package.extra`](#latex-workshopintellisensepackageextra) | Extra packages to load for intellisense | `[]` | _array_ of _strings_ |
+| [`latex-workshop.intellisense.package.dirs`](#latex-workshopintellisensepackagedirs) | Extra directories where to look for intellisense data | `[]` | _array_ of _strings_ |
+| [`latex-workshop.intellisense.unimathsymbols.enabled`](#latex-workshopintellisenseunimathsymbolsenabled) | Show unimath symbols as suggestions when `\` pressed | `false` | _boolean_ |
+| [`latex-workshop.intellisense.useTabStops.enabled`](#latex-workshopintellisenseuseTabStopsenabled) | Use tabstops in intellisense completion | `true` | _boolean_ |
+| [`latex-workshop.intellisense.optionalArgsEntries.enabled`](#latex-workshopintellisenseoptionalArgsEntriesenabled) | Add one completion item per command signature | `true` | _boolean_ |
+| [`latex-workshop.latex.texDirs`](Compile#latex-workshoplatextexDirs) | List of paths to look for input `.tex` files. | `[]` | _array_ of _strings_ |
 
 ## Environments
 
@@ -92,6 +92,82 @@ When [`latex-workshop.intellisense.includegraphics.preview.enabled`](#latex-work
 
 - [`latex-workshop.intellisense.file.exclude`](#latex-workshopintellisensefileexclude)
 - [`latex-workshop.intellisense.file.base`](#latex-workshopintellisensefilebase)
+
+## `@` suggestions
+
+Next to intellisense for anything starting with `\`, we provide an independent intellisense mechanism triggered by `@`.  The trigger character `@` is set by the configuration variable [`latex-workshop.intellisense.atSuggestion.trigger.latex`](#latex-workshopintellisenseatSuggestiontriggerlatex) and can be replaced by any other non-alphabetical character. Setting [`latex-workshop.intellisense.atSuggestion.trigger.latex`](#latex-workshopintellisenseatSuggestiontriggerlatex) to the empty string deactivates these suggestions. You can remove, modify or define new suggestions using the setting [`latex-workshop.intellisense.atSuggestionJSON.replace`](#latex-workshopintellisenseatSuggestionJSONreplace).
+
+### Inserting Greek letters
+
+| Prefix | Letter        |
+| ------ | ------------- |
+| `@a`   | `\alpha`      |
+| `@b`   | `\beta`       |
+| `@c`   | `\chi`        |
+| `@d`   | `\delta`      |
+| `@e`   | `\epsilon`    |
+| `@f`   | `\phi`        |
+| `@g`   | `\gamma`      |
+| `@h`   | `\eta`        |
+| `@i`   | `\iota`       |
+| `@k`   | `\kappa`      |
+| `@l`   | `\lambda`     |
+| `@m`   | `\mu`         |
+| `@n`   | `\nu`         |
+| `@p`   | `\pi`         |
+| `@q`   | `\theta`      |
+| `@r`   | `\rho`        |
+| `@s`   | `\sigma`      |
+| `@t`   | `\tau`        |
+| `@u`   | `\upsilon`    |
+| `@o`   | `\omega`      |
+| `@&`   | `\wedge`      |
+| `@x`   | `\xi`         |
+| `@y`   | `\psi`        |
+| `@z`   | `\zeta`       |
+| `@D`   | `\Delta`      |
+| `@F`   | `\Phi`        |
+| `@G`   | `\Gamma`      |
+| `@Q`   | `\Theta`      |
+| `@L`   | `\Lambda`     |
+| `@X`   | `\Xi`         |
+| `@Y`   | `\Psi`        |
+| `@S`   | `\Sigma`      |
+| `@U`   | `\Upsilon`    |
+| `@W`   | `\Omega`      |
+| `@ve`  | `\varepsilon` |
+| `@vf`  | `\varphi`     |
+| `@vs`  | `\varsigma`   |
+| `@vq`  | `\vartheta`   |
+
+## Handy mathematical helpers
+
+| Prefix               | Command                  |
+| -------------------- | ------------------------ |
+| `@(`                 | `\left( $1 \right)`      |
+| `@{`                 | `\left\{ $1 \right\}`    |
+| `@[`                 | `\left[ $1 \right]`      |
+| `@.`                 | `\cdot`                  |
+| `@8`                 | `\infty`                 |
+| `@6`                 | `\partial`               |
+| `@/`                 | `\frac{$1}{$2}`          |
+| `@%`                 | `\frac{$1}{$2}`          |
+| `@^`                 | `\Hat{$1}`               |
+| `@_`                 | `\bar{$1}`               |
+| `@@`                 | `\circ`                  |
+| `@0`                 | `^\circ`                 |
+| `@;`                 | `\dot{$1}`               |
+| `@:`                 | `\ddot{$1}`              |
+| `@=`                 | `\equiv`                 |
+| `@*`                 | `\times`                 |
+| `@<`                 | `\leq`                   |
+| `@>`                 | `\geq`                   |
+| `@2`                 | `\sqrt{$1}`              |
+| `@I`                 | `\int_{$1}^{$2}`         |
+| <code>@&#124;</code> | <code>\Big &#124;</code> |
+| `@+`                 | `\bigcup`                |
+| `@-`                 | `\bigcap`                |
+| `@,`                 | `\nonumber`              |
 
 ## Configuration variables
 
@@ -141,7 +217,6 @@ Define which type of hint to show when intellisense provides citation suggestion
 | type     | default value |
 | -------- | ------------- |
 | _string_ | `"inline"`    |
-
 
 ### latex-workshop.intellisense.triggers.latex
 
@@ -224,7 +299,23 @@ When `\` is typed, show unimath symbols in the dropdown selector.
 
 ### latex-workshop.intellisense.commandsJSON.replace
 
-Dictionary of `"snippet name": "snippet action"` to replace the default snippets in `data/commands.json`. Snippet actions should not begin with a `\`. See `data/commands.json` for the list of snippet names. An empty action removes the snippet. E.g. `{ "[": "[ ${1} \\]", "figure": "" }`. Reload vscode to make any change in this configuration effective
+Dictionary of `"command name": "command action"` to replace the default snippets in `data/commands.json`. Command actions must not contain the leading `\`. See `data/commands.json` for the list of command names. An empty action removes the command. E.g. `{ "[": "[ ${1} \\]", "figure": "" }`. Reload vscode to make any change in this configuration effective
+
+| type                               | default value |
+|------------------------------------|---------------|
+| _dictionary_ of _string_: _string_ | `{}`          |
+
+### latex-workshop.intellisense.atSuggestion.trigger.latex
+
+Character to trigger `@` suggestions as part of intellisense. Set this variable to `''` to deactivate these suggestions. Reload vscode to make any change in this configuration effective.
+
+|type      | default value |
+|----------|---------------|
+| _string_ | `@`           |
+
+### latex-workshop.intellisense.atSuggestionJSON.replace
+
+Dictionary of `"prefix": "snippet command"` to replace the default suggestions in `data/at-suggestions.json` or to define a new suggestion. An empty action removes the suggestion from the default list. E.g. `{ "@.": "\cdot", "@6": "" }`. Note that in this setting, the prefix must start with `@`, no matter what the true trigger character defined by [`latex-workshop.intellisense.atSuggestion.trigger.latex`](#latex-workshopintellisenseatSuggestiontriggerlatex) is.
 
 | type                               | default value |
 |------------------------------------|---------------|
