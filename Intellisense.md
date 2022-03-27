@@ -10,16 +10,16 @@ Then, when citation commands like `\cite` and its derivatives are automatically 
 
 If you use very large bibtex files, you may experience temporary freezing. Hence, files larger than 5MB are ignored (see [`latex-workshop.intellisense.citation.maxfilesizeMB`](#latex-workshopintellisensecitationmaxfilesizeMB)).
 
-| Setting key                                                                                               | Description                                                                    | Default        | Type                                            |
-| --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | -------------- | ----------------------------------------------- |
-| [`latex-workshop.intellisense.citation.label`](#latex-workshopintellisensecitationlabel)                  | Citation property used as suggestion                                           | `"bibtex key"` | _string_: "bibtex key" \| "title" \| "authors"  |
-| [`latex-workshop.intellisense.citation.format`](#latex-workshopintellisensecitationformat) | List of fields to display | | _array_ of _strings_ |
-| [`latex-workshop.intellisense.citation.maxfilesizeMB`](#latex-workshopintellisensecitationmaxfilesizeMB)  | Maximum bibtex file size (in MB)                                               | `5`            | _float_                                         |
-| [`latex-workshop.intellisense.citation.type`](#latex-workshopintellisensecitationtype)                    | Type of vs code suggestion to use                                              | `"inline"`     | _string_: "inline" \| "browser" (dropdown menu) |
-| [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled)                | Enabling of auto-completion for commands and environments from loaded packages | `false`        | _boolean_                                       |
-| [`latex-workshop.latex.bibDirs`](#latex-workshoplatexbibDirs)                                             | List of paths to look for `.bib` files.                                        | `[]`           | _array_ of _strings_                            |
-| [`latex-workshop.kpsewhich.enabled`](#latex-workshopkpsewhichenabled)                | Use `kpsewhich` to resolve `.bib` files.                                        | `false`           | _boolean_                            |
-| [`latex-workshop.kpsewhich.path`](#latex-workshopkpsewhichpath)                                             | location of the kpsewhich executable file.  | `"kpsewhich"`           | _string_ |
+| Setting key | Description | Default | Type |
+|-------------|-------------|---------|------|
+| [`latex-workshop.intellisense.citation.label`](#latex-workshopintellisensecitationlabel) | Citation property used as suggestion label | `"bibtex key"` | _string_: "bibtex key" \| "title" \| "authors" |
+| [`latex-workshop.intellisense.citation.format`](#latex-workshopintellisensecitationformat) | List of fields to display and to use for filtering suggestions| | _array_ of _strings_ |
+| [`latex-workshop.intellisense.citation.maxfilesizeMB`](#latex-workshopintellisensecitationmaxfilesizeMB) | Maximum bibtex file size (in MB) | `5` | _float_ |
+| [`latex-workshop.intellisense.citation.type`](#latex-workshopintellisensecitationtype) | Type of vs code suggestion to use | `"inline"` | _string_: "inline" \| "browser" (dropdown menu) |
+| [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled) | Enabling of auto-completion for commands and environments from loaded packages | `false` | _boolean_ |
+| [`latex-workshop.latex.bibDirs`](#latex-workshoplatexbibDirs) | List of paths to look for `.bib` files. | `[]` | _array_ of _strings_ |
+| [`latex-workshop.kpsewhich.enabled`](#latex-workshopkpsewhichenabled) | Use `kpsewhich` to resolve `.bib` files. | `false` | _boolean_ |
+| [`latex-workshop.kpsewhich.path`](#latex-workshopkpsewhichpath) | location of the kpsewhich executable file. | `"kpsewhich"` | _string_ |
 
 ## References
 
@@ -181,7 +181,7 @@ Enable preview for `\includegraphics` completion.
 
 ### latex-workshop.intellisense.citation.label
 
-Defines what to show as suggestion labels when intellisense provides citation suggestions.
+Define what field to show as suggestion labels when intellisense provides citation suggestions in [inline](#latex-workshopintellisensecitationtype) mode.
 
 - bibtex key: Show bibtex keys in the inline intellisense.
 - title: Show publication titles in the inline intellisense.
@@ -193,11 +193,11 @@ Defines what to show as suggestion labels when intellisense provides citation su
 
 ### latex-workshop.intellisense.citation.format
 
-List of fields to display for citation preview and intellisense. Reload vscode to make any change in this configuration effective.
+List of fields to display for citation preview and intellisense. This list is also used as the filter text to narrow down the intellisense suggestions.
 
-|         type         | default value |
-| -------------------- | ------------- |
-| _array_ of _strings_ | `["author", "title", "journal", "publisher", "booktitle", "year"]`          |
+| type                 | default value                                                      |
+|----------------------|--------------------------------------------------------------------|
+| _array_ of _strings_ | `["author", "title", "journal", "publisher", "booktitle", "year"]` |
 
 ### latex-workshop.intellisense.citation.maxfilesizeMB
 
