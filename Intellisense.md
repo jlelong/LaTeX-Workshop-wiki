@@ -183,9 +183,9 @@ Enable preview for `\includegraphics` completion.
 
 Define what field to show as suggestion labels when intellisense provides citation suggestions in [inline](#latex-workshopintellisensecitationtype) mode.
 
-- bibtex key: Show bibtex keys in the inline intellisense.
-- title: Show publication titles in the inline intellisense.
-- authors: Show publication authors in the inline intellisense.
+- `bibtex key`: Show bibtex keys in the inline intellisense.
+- `title`: Show publication titles in the inline intellisense.
+- `author`: Show publication authors in the inline intellisense.
 
 | type     | default value  |
 | -------- | -------------- |
