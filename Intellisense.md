@@ -8,13 +8,13 @@ Every file of a LaTeX project is parsed to look for bibliography resources, eith
 
 Then, when citation commands like `\cite` and its derivatives are automatically completed with bibliography entries found in the various resources.
 
-If you use very large bibtex files, you may experience temporary freezing. Hence, files larger than 5MB are ignored (see [`latex-workshop.intellisense.citation.maxfilesizeMB`](#latex-workshopintellisensecitationmaxfilesizeMB)).
+If you use very large bibtex files, you may experience temporary freezing. Hence, files larger than 5MB are ignored (see [`latex-workshop.bibtex.maxFileSize`](#latex-workshopbibtexmaxFileSize)).
 
 | Setting key | Description | Default | Type |
 |-------------|-------------|---------|------|
 | [`latex-workshop.intellisense.citation.label`](#latex-workshopintellisensecitationlabel) | Citation property used as suggestion label | `"bibtex key"` | _string_: "bibtex key" \| "title" \| "authors" |
 | [`latex-workshop.intellisense.citation.format`](#latex-workshopintellisensecitationformat) | List of fields to display and to use for filtering suggestions| | _array_ of _strings_ |
-| [`latex-workshop.intellisense.citation.maxfilesizeMB`](#latex-workshopintellisensecitationmaxfilesizeMB) | Maximum bibtex file size (in MB) | `5` | _float_ |
+| [`latex-workshop.bibtex.maxFileSize`](#latex-workshopbibtexmaxFileSize) | Maximum bibtex file size (in MB) | `5` | _float_ |
 | [`latex-workshop.intellisense.citation.type`](#latex-workshopintellisensecitationtype) | Type of vs code suggestion to use | `"inline"` | _string_: "inline" \| "browser" (dropdown menu) |
 | [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled) | Enabling of auto-completion for commands and environments from loaded packages | `false` | _boolean_ |
 | [`latex-workshop.latex.bibDirs`](#latex-workshoplatexbibDirs) | List of paths to look for `.bib` files. | `[]` | _array_ of _strings_ |
@@ -199,7 +199,7 @@ List of fields to display for citation preview and intellisense. This list is al
 |----------------------|--------------------------------------------------------------------|
 | _array_ of _strings_ | `["author", "title", "journal", "publisher", "booktitle", "year"]` |
 
-### latex-workshop.intellisense.citation.maxfilesizeMB
+### latex-workshop.bibtex.maxFileSize
 
 Define the maximum bibtex file size for the extension to parse in MB.
 
