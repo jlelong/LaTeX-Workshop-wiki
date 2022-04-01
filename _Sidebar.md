@@ -39,7 +39,7 @@
 - [Intellisense](Intellisense)
   - [Citations](Intellisense#Citations)
   - [References](Intellisense#References)
-  - [Commands](Intellisense#Commands)
+  - [Commands](Intellisense#commands-starting-with-)
   - [Environments](Intellisense#Environments)
   - [Files](Intellisense#files)
   - [Bibtex Files](Intellisense#bibtex-files)
