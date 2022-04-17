@@ -123,3 +123,9 @@ We support the following the programming languages inside a LaTeX document
 - `R` code using [knitr](https://yihui.org/knitr/) or [Sweave](https://stat.ethz.ch/R-manual/R-devel/library/utils/doc/Sweave.pdf). See [Building a `.rnw` file](Compile#Building-a-rnw-file) for how to compile LaTeX files using Sweave. We use the `rsweave` language mode for this and recognize the following file extensions   `.rnw`, `.Rnw`, `.Rtex`, `.rtex`, `.snw` and `.Snw`.
 
 For syntax highlighting to be properly working, you need to install the VSCode extension that gives support for the corresponding programming language.
+
+## Mixing markdown and LaTeX code
+
+The [`markdown` package](https://texlive.mycozy.space/macros/generic/markdown/markdown.html) allows to mix LaTeX and Markdown code inside the markdown environment. If you want to use this package, keep the `.tex` extension to your file but set its language to `markdown_latex_combined`.
+
+Note that the language `markdown_latex_combined` **is not meant** to be used for `.md` files using LaTeX code.
