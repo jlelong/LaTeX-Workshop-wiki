@@ -72,5 +72,6 @@
   - [Code folding](ExtraFeatures#code-folding)
   - [Counting words](ExtraFeatures#counting-words)
   - [Literate programming support using LaTeX](ExtraFeatures#Literate-programming-support-using-LaTeX)
+  - [Mixing LaTeX and Markdown inside a LaTeX document](ExtraFeatures#Mixing-markdown-and-LaTeX-code)
 - [VS Code Remote Development](Remote)
 - [FAQ and common issues](FAQ)
