@@ -223,20 +223,6 @@ If you like to work with no sidebar in Visual Studio Code and yet the LaTeX side
 
 Nesting snippets requires to have intellisense automatically triggered inside snippets. This can be achieved by setting `editor.suggest.snippetsPreventQuickSuggestions` to `false`.
 
-## Some `@` snippets are not `TAB` completed
-
-This is mostly related to the `editor.quickSuggestions` setting. The following value works well
-
-```json
-"editor.quickSuggestions": {
-        "other": true,
-        "comments": false,
-        "strings": false
-      }
-```
-
-It is known that setting `"other": false` will prevent some `@` snippets from being `TAB` expanded.
-
 ## How to pass `-shell-escape` to `latexmk`
 
 Some packages such as `minted` requires `LaTeX` compilers to use the `-shell-escape` flag. Passing this flag can be achieved in several different ways.
