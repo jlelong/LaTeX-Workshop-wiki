@@ -53,6 +53,7 @@
 - [What kinds of LaTeX commands does Hover Preview support?](#what-kinds-of-latex-commands-does-hover-preview-support)
 - [Hover Preview fails to render math equation with errors](#hover-preview-fails-to-render-math-equation-with-errors)
 - [The file `settings.json` doesn't have default values of settings](#the-file-settingsjson-doesnt-have-default-values-of-settings)
+- [Why don't you integrate the recipe system with the VS Code task feature?](#why-dont-you-integrate-the-recipe-system-with-the-vs-code-task-feature)
 
 ## Known incompatible Extensions
 
@@ -357,3 +358,7 @@ Please try setting [`latex-workshop.hover.preview.newcommand.parseTeXFile.enable
 ## The file `settings.json` doesn't have default values of settings
 
 Enter a configuration id you want to configurate, e.g. `"latex-workshop.latex.recipes"`, then trigger auto-completion of VS Code. Related issues, [#127819](https://github.com/microsoft/vscode/issues/127819), [#134908](https://github.com/microsoft/vscode/issues/134908).
+
+## Why don't you integrate the recipe system with the VS Code task feature?
+
+The VS Code task feature doesn't fit our needs.
