@@ -54,6 +54,7 @@
 - [Hover Preview fails to render math equation with errors](#hover-preview-fails-to-render-math-equation-with-errors)
 - [The file `settings.json` doesn't have default values of settings](#the-file-settingsjson-doesnt-have-default-values-of-settings)
 - [Why don't you integrate the recipe system with the VS Code task feature?](#why-dont-you-integrate-the-recipe-system-with-the-vs-code-task-feature)
+- [How to prevent the internal PDF viewer from opening when selecting a PDF file in the explorer?](#how-to-prevent-the-internal-pdf-viewer-from-opening-when-selecting-a-pdf-file-in-the-explorer)
 
 ## Known incompatible Extensions
 
@@ -362,3 +363,7 @@ Enter a configuration id you want to configurate, e.g. `"latex-workshop.latex.re
 ## Why don't you integrate the recipe system with the VS Code task feature?
 
 The VS Code task feature doesn't fit our needs.
+
+## How to prevent the internal PDF viewer from opening when selecting a PDF file in the explorer?
+
+Set `"workbench.list.openMode": "doubleClick"` in `settings.json`. See [the document](https://code.visualstudio.com/docs/getstarted/settings#_default-settings).
