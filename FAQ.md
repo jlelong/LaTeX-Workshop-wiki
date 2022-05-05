@@ -116,11 +116,11 @@ LaTeX Workshop does not support [github.dev](https://github.com/github/dev) and 
 
 ## VSCodium is not officially supported
 
-[VSCodium](https://github.com/VSCodium/vscodium) is not officially supported. We do not help to resolve issues related to VSCodium.
+[VSCodium](https://github.com/VSCodium/vscodium) is not officially supported due to the maintenance burden. We do not help to resolve issues related to VSCodium.
 
 ## Code OSS on Arch Linux and Manjaro is not officially supported
 
-[Open-source builds](https://archlinux.org/packages/community/x86_64/code/) of Visual Studio Code on Arch Linux and Manjaro are not officially supported. We do not help to resolve issues related to those builds. Please use [the official binary distribution](https://aur.archlinux.org/packages/visual-studio-code-bin/).
+[Open-source builds](https://archlinux.org/packages/community/x86_64/code/) of Visual Studio Code on Arch Linux and Manjaro are not officially supported due to the maintenance burden. We do not help to resolve issues related to those builds. Please use [the official binary distribution](https://aur.archlinux.org/packages/visual-studio-code-bin/).
 
 ## Visual Studio Live Share is not supported
 
