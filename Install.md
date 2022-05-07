@@ -16,7 +16,7 @@ Installing LaTeX Workshop is simple. You can find it in [Visual Studio Code Mark
 
 After installing TeX Live, you must add the directory of TeX Live binaries to your PATH environment variable except on Windows. See the [official document](https://www.tug.org/texlive/quickinstall.html). LaTeX Workshop never touches the variable. If VS Code cannot find executables of TeX, it means that **the setting of your system is broken**. For the ways of setting environment variables on Windows, see [link](https://docs.telerik.com/teststudio/features/test-runners/add-path-environment-variables) or [link](https://www.computerhope.com/issues/ch000549.htm). On macOS and Linux, see the  [documentation](https://github.com/rbenv/rbenv/wiki/unix-shell-initialization) by the rbenv dev team.  Very detailed information is also available on [stackoverflow](https://stackoverflow.com/questions/135688/setting-environment-variables-on-os-x) for macOS.
 
-Notice that you have to restart VS Code and the operating system after changing the variable.
+Notice that you have to **restart VS Code and the operating system** after changing the variable.
 
 If you can not fix the setting of your system, you can also override PATH with the `env` property of [LaTeX tools](Compile#latex-tools) in LaTeX recipes.
 
