@@ -285,9 +285,8 @@ The default PDF viewer.
 
 | type     | default value  | possible values                                 |
 | -------- | -------------- | --------------------------------------------    |
-| _string_ | `"none"`       | `"none"`, `"browser"`, `"tab"`, or `"external"` |
+| _string_ | `"tab"`        | `"browser"`, `"tab"`, or `"external"`           |
 
-- `"none"`: Undetermined viewer. A viewer selector will pop up upon viewing PDF.
 - `"browser"`: Open PDF with the default web browser. SyncTeX and other features available.
 - `"tab"`: Open PDF with the built-in tab viewer. SyncTeX and other features available.
 - `"external"`: **Experimental** Open PDF with the external viewer set in "View > Pdf > External: command"
