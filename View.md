@@ -33,7 +33,7 @@ Reload vscode to make any change in this configuration effective.
 | Setting key                                                                                      | Description                                       | Default       | Type     |
 | ------------------------------------------------------------------------------------------------ | ------------------------------------------------- | ------------- | -------- |
 | [`latex-workshop.latex.outDir`](#latex-workshoplatexoutDir)                                      | Where to find the PDF files                       | `"%DIR%"`     | _string_ |
-| [`latex-workshop.view.pdf.viewer`](#latex-workshopviewpdfviewer)                                 | The default PDF viewer                            | (see details) | _string_ |
+| [`latex-workshop.view.pdf.viewer`](#latex-workshopviewpdfviewer)                                 | The default PDF viewer                            | `"tab"`       | _string_ |
 | [`latex-workshop.view.pdf.ref.viewer`](#latex-workshopviewpdfrefviewer)                          | The PDF viewer to preview `\ref`                  | (see details) | _string_ |
 
 
@@ -287,8 +287,8 @@ The default PDF viewer.
 | -------- | -------------- | --------------------------------------------    |
 | _string_ | `"tab"`        | `"browser"`, `"tab"`, or `"external"`           |
 
-- `"browser"`: Open PDF with the default web browser. SyncTeX and other features available.
 - `"tab"`: Open PDF with the built-in tab viewer. SyncTeX and other features available.
+- `"browser"`: Open PDF with the default web browser. SyncTeX and other features available.
 - `"external"`: **Experimental** Open PDF with the external viewer set in "View > Pdf > External: command"
 
 ### latex-workshop.view.pdf.ref.viewer
