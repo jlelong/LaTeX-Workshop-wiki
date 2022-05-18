@@ -114,7 +114,7 @@ Note: **this function is not officially supported.**
 
 #### SumatraPDF
 
-The following configuration has been reported to work with SumatraPDF (see [here](https://forum.sumatrapdfreader.org/t/inverse-search-not-performed-for-vs-code-exe/4486/20))
+The following configuration has been reported to work with SumatraPDF (see [here](https://forum.sumatrapdfreader.org/t/inverse-search-not-performed-for-vs-code-exe/4486/#:~:text=DigNative))
 
 In `settings.txt` of SumatraPDF, set
 
@@ -199,7 +199,7 @@ This is trickier, but works. See [here](https://ubuntuforums.org/showthread.php?
 
 To make this work both ways, first open the pdf file with the external viewer.
 
-##### [Zathura](https://en.wikipedia.org/wiki/Zathura_(document_viewer)) support 
+##### [Zathura](https://en.wikipedia.org/wiki/Zathura_(document_viewer)) support
 
 Forward: `--synctex-forward` flag
 
@@ -220,7 +220,7 @@ Backward: Use `%{input}` and `%{line}` as placeholders.
 ],
 ```
 
-##### [Okular](https://apps.kde.org/en/okular) support 
+##### [Okular](https://apps.kde.org/en/okular) support
 
 Add the following options to your configuration:
 
