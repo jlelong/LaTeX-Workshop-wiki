@@ -16,7 +16,7 @@ If you use very large bibtex files, you may experience temporary freezing. Hence
 | [`latex-workshop.intellisense.citation.format`](#latex-workshopintellisensecitationformat) | List of fields to display and to use for filtering suggestions| | _array_ of _strings_ |
 | [`latex-workshop.bibtex.maxFileSize`](#latex-workshopbibtexmaxFileSize) | Maximum bibtex file size (in MB) | `5` | _float_ |
 | [`latex-workshop.intellisense.citation.type`](#latex-workshopintellisensecitationtype) | Type of vs code suggestion to use | `"inline"` | _string_: "inline" \| "browser" (dropdown menu) |
-| [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled) | Enabling of auto-completion for commands and environments from loaded packages | `false` | _boolean_ |
+| [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled) | Enabling of auto-completion for commands and environments from loaded packages | `true` | _boolean_ |
 | [`latex-workshop.latex.bibDirs`](#latex-workshoplatexbibDirs) | List of paths to look for `.bib` files. | `[]` | _array_ of _strings_ |
 | [`latex-workshop.kpsewhich.enabled`](#latex-workshopkpsewhichenabled) | Use `kpsewhich` to resolve `.bib` files. | `false` | _boolean_ |
 | [`latex-workshop.kpsewhich.path`](#latex-workshopkpsewhichpath) | location of the kpsewhich executable file. | `"kpsewhich"` | _string_ |
@@ -68,7 +68,7 @@ There are three different ways to insert a new environment
 
 _ **The `\begin / \end` snippet**. Type `\begin` and autocomplete with _Insert `\begin / \end`_. It will leave you with a multi-cursor inside the braces of `\begin{}` and `\end{}` and a list of environments will pop up.
 
-  <img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/begin-end.gif" alt="begin/end with multi-cursor demo"> 
+  <img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/begin-end.gif" alt="begin/end with multi-cursor demo">
 
 - **The `\begin` only approach**. Type `\begin` and directly choose the environment name from the list. It will automatically add the closing command. Note that this approach enables us to take into account extra arguments. For instance, the `alignat*` environment takes the number of "equation columns" `{n}` as a mandatory argument. Note that dealing with extra arguments is not possible with the `\begin / \end` snippet.
 
