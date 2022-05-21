@@ -10,8 +10,7 @@
 - [openvscode-server is not supported](#openvscode-server-is-not-supported)
 - [Eclipse Theia is not supported](#eclipse-theia-is-not-supported)
 - [Onivim 2 is not supported](#onivim-2-is-not-supported)
-- [GitHub Codespaces is not supported](#github-codespaces-is-not-supported)
-- [github.dev is not supported](#githubdev-is-not-supported)
+- [The github.dev web-based editor is not supported](#the-githubdev-web-based-editor-is-not-supported)
 - [VSCodium is not officially supported](#vscodium-is-not-officially-supported)
 - [Code OSS on Arch Linux and Manjaro is not officially supported](#code-oss-on-arch-linux-and-manjaro-is-not-officially-supported)
 - [Visual Studio Live Share is not supported](#visual-studio-live-share-is-not-supported)
@@ -106,13 +105,9 @@ LaTeX Workshop does not support [Eclipse Theia](https://github.com/eclipse-theia
 
 LaTeX Workshop does not support [Onivim 2](https://github.com/onivim/oni2).
 
-## GitHub Codespaces is not supported
+## The github.dev web-based editor is not supported
 
-LaTeX Workshop does not support [GitHub Codespaces](https://github.com/features/codespaces).
-
-## github.dev is not supported
-
-LaTeX Workshop does not support [github.dev](https://github.com/github/dev) and [vscode.dev](https://code.visualstudio.com/blogs/2021/10/20/vscode-dev).
+LaTeX Workshop does not support [the github.dev web-based editor](https://docs.github.com/en/codespaces/the-githubdev-web-based-editor) and [vscode.dev](https://code.visualstudio.com/blogs/2021/10/20/vscode-dev).
 
 ## VSCodium is not officially supported
 
