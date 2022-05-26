@@ -39,7 +39,7 @@
 - [LaTeX-Workshop shadows vscode's default keybindings](#latex-workshop-shadows-vscodes-default-keybindings)
 - [Syntax Highlighting does not work for most elements](#syntax-highlighting-does-not-work-for-most-elements)
 - [Install an older version of LaTeX Workshop](#install-an-older-version-of-latex-workshop)
-- [Donwgrade VS Code to an older version](#donwgrade-vs-code-to-an-older-version)
+- [Downgrade VS Code to an older version](#downgrade-vs-code-to-an-older-version)
 - [Customizing a Color Theme](#customizing-a-color-theme)
 - [Move the structure view and others to other places](#move-the-structure-view-and-others-to-other-places)
 - [Overriding snippets](#overriding-snippets)
@@ -54,6 +54,7 @@
 - [The file `settings.json` doesn't have default values of settings](#the-file-settingsjson-doesnt-have-default-values-of-settings)
 - [Why don't you integrate the recipe system with the VS Code task feature?](#why-dont-you-integrate-the-recipe-system-with-the-vs-code-task-feature)
 - [How to prevent the internal PDF viewer from opening when selecting a PDF file in the explorer?](#how-to-prevent-the-internal-pdf-viewer-from-opening-when-selecting-a-pdf-file-in-the-explorer)
+- [Can I define my own listing environment?](can-i-define-my-own-listing-environment)
 
 ## Known incompatible Extensions
 
@@ -280,7 +281,7 @@ Please change VS Code theme you are using. For example, **Visual Studio Dark** a
 
 You can install older versions of LaTeX Workshop by right-clicking it in the extension panel of VS Code and selecting `Install Another Version`.
 
-## Donwgrade VS Code to an older version
+## Downgrade VS Code to an older version
 
 You can downgrade VS Code to an older version with binaries in [each release note](https://code.visualstudio.com/updates/v1_46).
 
@@ -362,3 +363,7 @@ The VS Code task feature doesn't fit our needs.
 ## How to prevent the internal PDF viewer from opening when selecting a PDF file in the explorer?
 
 Set `"workbench.list.openMode": "doubleClick"` in `settings.json`. See [the document](https://code.visualstudio.com/docs/getstarted/settings#_default-settings).
+
+## Can I define my own listing environment?
+
+Any environment matching `[a-zA-Z]*code` is considered as a code / listing environment. This is the best we can offer as the textmate engine used for colorization does not allow user configuration.
