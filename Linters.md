@@ -20,7 +20,7 @@ The [ChkTeX](https://www.nongnu.org/chktex/) utility is a LaTeX semantic checker
 
 Auto load of `.chktexrc` configuration files is performed in the following order
 
-1. Manually configured `-l` setting in `chktex.args`
+1. Manually configured `-l` setting in `chktex.exec.args`
 1. The `.chktexrc` file (if exists) in the same folder as the main LaTeX file
 1. The `.chktexrc` file (if exists) at the project root folder.
 
@@ -29,15 +29,15 @@ Auto load of `.chktexrc` configuration files is performed in the following order
 | Setting key                                                            | Description                                             | Default                                   | Type                 |
 | ---------------------------------------------------------------------- | ------------------------------------------------------- | ----------------------------------------- | -------------------- |
 | [`latex-workshop.chktex.enabled`](#latex-workshopchktexenabled)        | Enable LaTeX linting with ChkTeX                        | `false`                                   | _boolean_            |
-| [`latex-workshop.chktex.path`](#latex-workshopchktexpath)              | Location of ChkTeX executable                           | `"chktex"`                                | _string_             |
-| [`latex-workshop.chktex.args`](#latex-workshopchktexargsactive) | Arguments to be passed to ChkTeX | `["-wall", "-n22", "-n30", "-e16", "-q"]` | _array_ of _strings_ |
+| [`latex-workshop.chktex.exec.path`](#latex-workshopchktexexecpath)              | Location of ChkTeX executable                           | `"chktex"`                                | _string_             |
+| [`latex-workshop.chktex.exec.args`](#latex-workshopchktexexecargsactive) | Arguments to be passed to ChkTeX | `["-wall", "-n22", "-n30", "-e16", "-q"]` | _array_ of _strings_ |
 | [`latex-workshop.chktex.run`](#latex-workshopchktexrun)                | When to run ChkTeX (on file save or while typing)       | `"onSave"`                                | _enum_               |
 | [`latex-workshop.chktex.convertOutput.column.enabled`](#latex-workshopchktexconvertoutputcolumnenabled)                       | Enable converting ChkTeX outputs | `true`    | _boolean_            |
 | [`latex-workshop.chktex.convertOutput.column.chktexrcTabSize`](#latex-workshopchktexconvertoutputcolumnchktexrctabsize)       | `TabSize` number                 | `-1`      | _number_             |
 
 ### Configuration variables
 
-#### latex-workshop.chktex.args
+#### latex-workshop.chktex.exec.args
 
 Linter arguments to check LaTeX syntax
 
@@ -60,13 +60,13 @@ The full project will be linted from the root on file save.
 | --------- | ------------- |
 | _boolean_ | `false`       |
 
-#### latex-workshop.chktex.path
+#### latex-workshop.chktex.exec.path
 
 Define the location of ChkTeX executive file.
 
-This command will be joint with [`latex-workshop.chktex.args`](#latex-workshopchktexargs) to form a complete ChkTeX command.
+This command will be joint with [`latex-workshop.chktex.exec.args`](#latex-workshopchktexexecargs) to form a complete ChkTeX command.
 
-"latex-workshop.chktex.path": "chktex"
+"latex-workshop.chktex.exec.path": "chktex"
 
 | type     | default value |
 | -------- | ------------- |
