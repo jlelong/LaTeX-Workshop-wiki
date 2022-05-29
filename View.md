@@ -3,6 +3,7 @@
 <img src="https://raw.githubusercontent.com/James-Yu/LaTeX-Workshop/master/demo_media/synctex.gif" alt="intellisense demo" height="180px">
 
 - [Internal PDF viewer](#internal-pdf-viewer)
+  - [Color](#color)
   - [Invert mode](#invert-mode)
 - [SyncTeX](#synctex)
 - [External PDF viewer](#external-pdf-viewer)
@@ -68,9 +69,9 @@ Additional settings for the internal viewer:
 
 |                                    Setting key                                                                   |                Description                            |
 | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------|
-| [`latex-workshop.view.pdf.color.light.pageColorsForeground`](#latex-workshopviewpdfcolordarkpagecolorsforeground)| The foreground color in light mode                    |
-| [`latex-workshop.view.pdf.color.light.pageColorsBackground`](#latex-workshopviewpdfcolordarkpagecolorsbackground)| The background color in light mode                    |
-| [`latex-workshop.view.pdf.color.light.backgroundColor`](#latex-workshopviewpdfcolordarkbackgroundcolor)          | The background color of the viewer in light mode      |
+| [`latex-workshop.view.pdf.color.light.pageColorsForeground`](#latex-workshopviewpdfcolorlightpagecolorsforeground)| The foreground color in light mode                    |
+| [`latex-workshop.view.pdf.color.light.pageColorsBackground`](#latex-workshopviewpdfcolorlightpagecolorsbackground)| The background color in light mode                    |
+| [`latex-workshop.view.pdf.color.light.backgroundColor`](#latex-workshopviewpdfcolorlightkbackgroundcolor)          | The background color of the viewer in light mode      |
 | [`latex-workshop.view.pdf.color.dark.pageColorsForeground`](#latex-workshopviewpdfcolordarkpagecolorsforeground) | The foreground color in dark mode                     |
 | [`latex-workshop.view.pdf.color.dark.pageColorsBackground`](#latex-workshopviewpdfcolordarkpagecolorsbackground) | The background color in dark mode                     |
 | [`latex-workshop.view.pdf.color.dark.backgroundColor`](#latex-workshopviewpdfcolordarkbackgroundcolor)           | The background color of the viewer in dark mode       |
