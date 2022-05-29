@@ -29,6 +29,7 @@
   - [Chktex](Linters#chktex)
 - [Viewing & SyncTeX](View)
   - [Internal PDF viewer](View#internal-pdf-viewer)
+    - [Color](View#color)
     - [Invert mode](View#invert-mode)
   - [SyncTeX](View#synctex)
   - [External PDF viewer](View#external-pdf-viewer)

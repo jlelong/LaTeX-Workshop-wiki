@@ -71,7 +71,7 @@ Additional settings for the internal viewer:
 | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------|
 | [`latex-workshop.view.pdf.color.light.pageColorsForeground`](#latex-workshopviewpdfcolorlightpagecolorsforeground)| The foreground color in light mode                    |
 | [`latex-workshop.view.pdf.color.light.pageColorsBackground`](#latex-workshopviewpdfcolorlightpagecolorsbackground)| The background color in light mode                    |
-| [`latex-workshop.view.pdf.color.light.backgroundColor`](#latex-workshopviewpdfcolorlightkbackgroundcolor)          | The background color of the viewer in light mode      |
+| [`latex-workshop.view.pdf.color.light.backgroundColor`](#latex-workshopviewpdfcolorlightbackgroundcolor)          | The background color of the viewer in light mode      |
 | [`latex-workshop.view.pdf.color.dark.pageColorsForeground`](#latex-workshopviewpdfcolordarkpagecolorsforeground) | The foreground color in dark mode                     |
 | [`latex-workshop.view.pdf.color.dark.pageColorsBackground`](#latex-workshopviewpdfcolordarkpagecolorsbackground) | The background color in dark mode                     |
 | [`latex-workshop.view.pdf.color.dark.backgroundColor`](#latex-workshopviewpdfcolordarkbackgroundcolor)           | The background color of the viewer in dark mode       |
