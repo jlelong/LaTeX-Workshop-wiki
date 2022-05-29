@@ -64,6 +64,17 @@ Additional settings for the internal viewer:
 | [`latex-workshop.viewer.pdf.internal.port`](#latex-workshopviewerpdfinternalport)                        | Which port internal viewer server communicates through |
 | [`latex-workshop.viewer.pdf.internal.keyboardEvent`](#latex-workshopviewerpdfinternalkeyboardevent)      | The shortcuts of VS Code on the internal viewer        |
 
+### Color
+
+|                                    Setting key                                                                   |                Description                            |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------|
+| [`latex-workshop.view.pdf.color.light.pageColorsForeground`](#latex-workshopviewpdfcolordarkpagecolorsforeground)| The foreground color in light mode                    |
+| [`latex-workshop.view.pdf.color.light.pageColorsBackground`](#latex-workshopviewpdfcolordarkpagecolorsbackground)| The background color in light mode                    |
+| [`latex-workshop.view.pdf.color.light.backgroundColor`](#latex-workshopviewpdfcolordarkbackgroundcolor)          | The background color of the viewer in light mode      |
+| [`latex-workshop.view.pdf.color.dark.pageColorsForeground`](#latex-workshopviewpdfcolordarkpagecolorsforeground) | The foreground color in dark mode                     |
+| [`latex-workshop.view.pdf.color.dark.pageColorsBackground`](#latex-workshopviewpdfcolordarkpagecolorsbackground) | The background color in dark mode                     |
+| [`latex-workshop.view.pdf.color.dark.backgroundColor`](#latex-workshopviewpdfcolordarkbackgroundcolor)           | The background color of the viewer in dark mode       |
+
 ### Invert mode
 
 A kind of dark mode for the PDF viewer is available. Set `latex-workshop.view.pdf.invert` to about `0.9` to `1.0`.
@@ -354,16 +365,6 @@ Define if the hand tool is enabled by default in the PDF viewer.
 | --------- | ------------- |
 | _boolean_ | `false`       |
 
-### latex-workshop.view.pdf.backgroundColor
-
-Define the background color for the PDF viewer.
-
-Possible values are any strings representing a color in CSS. You must reopen the internal viewers or restart VS Code to take into account a change in this configuration.
-
-| type     | default value |
-| -------- | ------------- |
-| _string_ | `"#ffffff"`   |
-
 ### latex-workshop.view.pdf.trim
 
 The default trim mode of the PDF viewer
@@ -395,6 +396,53 @@ Rebroadcast KeyboardEvent on the internal PDF viewers. If the keyboard shortcuts
 | ------ | ------------- |--------------------|
 | _enum_ | `auto`        | `auto`, `force`, `never` |
 
+### latex-workshop.view.pdf.color.light.pageColorsForeground
+
+The foreground color of the document when the OS appearance is light. The string must represent a color in HTML. Reload vscode to make any change in this configuration effective.
+
+| type     | default value |
+| -------- | ------------- |
+| _string_ | `""`   |
+
+### latex-workshop.view.pdf.color.light.pageColorsBackground
+
+The background color of the document when the OS appearance is light. The string must represent a color in HTML. Reload vscode to make any change in this configuration effective.
+
+| type     | default value |
+| -------- | ------------- |
+| _string_ | `""`   |
+
+### latex-workshop.view.pdf.color.light.backgroundColor
+
+The background color of the viewer when the OS appearance is light. The string must represent a color in HTML. Reload vscode to make any change in this configuration effective.
+
+| type     | default value |
+| -------- | ------------- |
+| _string_ | `"#ffffff"`   |
+
+### latex-workshop.view.pdf.color.dark.pageColorsForeground
+
+The foreground color of the document when the OS appearance is dark. The string must represent a color in HTML. Reload vscode to make any change in this configuration effective.
+
+| type     | default value |
+| -------- | ------------- |
+| _string_ | `""`   |
+
+### latex-workshop.view.pdf.color.dark.pageColorsBackground
+
+The background color of the document when the OS appearance is dark. The string must represent a color in HTML. Reload vscode to make any change in this configuration effective.
+
+| type     | default value |
+| -------- | ------------- |
+| _string_ | `""`   |
+
+### latex-workshop.view.pdf.color.dark.backgroundColor
+
+The background color of the viewer when the OS appearance is dark. The string must represent a color in HTML. Reload vscode to make any change in this configuration effective.
+
+| type     | default value |
+| -------- | ------------- |
+| _string_ | `"#ffffff"`   |
 
 ### latex-workshop.view.pdf.invertMode.enabled
 
