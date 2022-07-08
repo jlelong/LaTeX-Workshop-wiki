@@ -179,8 +179,8 @@ Add the following to your VSCode `settings.json`:
         "%PDF%"
     ],
 ```
-*Do not forget to set the paths according to your installation.*
 
+*Do not forget to set the paths according to your installation.*
 
 #### Linux
 
@@ -222,7 +222,7 @@ Backward: Use `%{input}` and `%{line}` as placeholders.
 "latex-workshop.view.pdf.external.viewer.command": "zathura",
 "latex-workshop.view.pdf.external.viewer.args": [
     "--synctex-editor-command",
-    "code --reuse-window -g \"%{input}:%{line}\"",
+    "code -r -g \"%{input}:%{line}\"",
     "%PDF%"
 ],
 "latex-workshop.view.pdf.external.synctex.command": "zathura",
@@ -230,6 +230,16 @@ Backward: Use `%{input}` and `%{line}` as placeholders.
     "--synctex-forward=%LINE%:0:%TEX%",
     "%PDF%"
 ],
+```
+
+According to https://unix.stackexchange.com/a/700749, you may need to add `--no-sandbox` when calling `code`
+
+```json
+"latex-workshop.view.pdf.external.viewer.args": [
+    "--synctex-editor-command",
+    "code --no-sandbox -r -g \"%{input}:%{line}\"",
+    "%PDF%"
+]
 ```
 
 ##### [Okular](https://apps.kde.org/en/okular) support
