@@ -78,7 +78,7 @@ Additional settings for the internal viewer:
 
 ### Invert mode
 
-A kind of dark mode for the PDF viewer is available. Set `latex-workshop.view.pdf.invert` to about `0.9` to `1.0`.
+A kind of dark mode for the PDF viewer is available. Set `latex-workshop.view.pdf.invert` to about `0.9` to `1.0`. You must reopen the internal viewers or restart VS Code to take into account a change in this configuration.
 
 |                                    Setting key                                    |                Description                   |
 | --------------------------------------------------------------------------------- | -----------------------------------------    |
@@ -483,7 +483,7 @@ This config can invert the color of PDF. Possible values are any floating point 
 
 ### latex-workshop.view.pdf.invertMode.brightness
 
-Define the CSS brightness filter level of the PDF viewer when the invert mode is enabled. Possible values are from `0` to `2`.
+Define the CSS brightness filter level of the PDF viewer when the invert mode is enabled. Possible values are from `0` to `2`. You must reopen the internal viewers or restart VS Code to take into account a change in this configuration.
 
 | type     | default value |
 | -------- | ------------- |
@@ -492,7 +492,7 @@ Define the CSS brightness filter level of the PDF viewer when the invert mode is
 
 ### latex-workshop.view.pdf.invertMode.grayscale
 
-Define the CSS grayscale filter level of the PDF viewer when the invert mode is enabled. Possible values are from `0` to `1`.
+Define the CSS grayscale filter level of the PDF viewer when the invert mode is enabled. Possible values are from `0` to `1`. You must reopen the internal viewers or restart VS Code to take into account a change in this configuration.
 
 | type     | default value |
 | -------- | ------------- |
@@ -500,7 +500,7 @@ Define the CSS grayscale filter level of the PDF viewer when the invert mode is 
 
 ### latex-workshop.view.pdf.invertMode.hueRotate
 
-Define the CSS hue-rotate filter angle of the PDF viewer when the invert mode is enabled. Possible values are from `0` to `360`.
+Define the CSS hue-rotate filter angle of the PDF viewer when the invert mode is enabled. Possible values are from `0` to `360`. You must reopen the internal viewers or restart VS Code to take into account a change in this configuration.
 
 | type     | default value |
 | -------- | ------------- |
@@ -508,7 +508,7 @@ Define the CSS hue-rotate filter angle of the PDF viewer when the invert mode is
 
 ### latex-workshop.view.pdf.invertMode.sepia
 
-Define the CSS sepia filter level of the PDF viewer when the invert mode is enabled. Possible values are from `0` to `1`.
+Define the CSS sepia filter level of the PDF viewer when the invert mode is enabled. Possible values are from `0` to `1`. You must reopen the internal viewers or restart VS Code to take into account a change in this configuration.
 
 | type     | default value |
 | -------- | ------------- |
