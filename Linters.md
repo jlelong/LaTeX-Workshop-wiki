@@ -4,7 +4,7 @@
 
 Duplicate labels are highlighted when [`latex-workshop.check.duplicatedLabels.enabled`](#latex-workshopcheckduplicatedLabelsenabled) is set to `true`. The computation of the duplicates is based on the data collected for intellisense, so we cannot update the duplicates more often than intellisense. When [`intellisense.update.aggressive.enabled`](Intellisense#latex-workshopintellisenseupdateaggressiveenabled) is set to `false`, duplicates are updated on file save. When [`intellisense.update.aggressive.enabled`](Intellisense#latex-workshopintellisenseupdateaggressiveenabled) is set to `true`, duplicates are updated after stopped typing for longer than [`latex-workshop.intellisense.update.delay`](Intellisense#latex-workshopintellisenseupdatedelay).
 
-### latex-workshop.check.duplicatedLabels.enabled
+#### latex-workshop.check.duplicatedLabels.enabled
 
 Enable checking for duplicated labels.
 
@@ -14,9 +14,32 @@ A new check is triggered every time the intellisense data is updated, see [`inte
 | --------- | ------------- |
 | _boolean_ | `true`        |
 
-## ChkTeX
+## Linting
 
-The [ChkTeX](https://www.nongnu.org/chktex/) utility is a LaTeX semantic checker. Once installed, and the relevant setting enabled it is automatically run on any open TeX documents. It output is parsed by the extension and displayed in the _Problems_ panel.
+LaTeX Workshop currently supports two LaTeX linters, namely, [`ChkTeX`](#chktex) and [`LaCheck`](#lacheck). These two linters can be enabled/disabled separately by [`latex-workshop.linting.chktex.enabled`](#latex-workshoplintingchktexenabled) and [`latex-workshop.linting.lacheck.enabled`](#latex-workshoplintinglacheckenabled), respectively.
+
+The linter behavior is controlled by the following two configuration items.
+
+#### latex-workshop.linting.run
+
+When LaTeX should be linted. If set to `onSave`, the whole LaTeX project will be linted upon saving. If set to `onType`, the active document will be linted when input is stopped for a period of time defined in [`latex-workshop.linting.delay`](#latex-workshoplintingdelay), in addition to the behavior of `onSave`.
+
+| type   | default value |
+| ------ | ------------- |
+| _enum_ | `"onSave"`    |
+
+#### latex-workshop.linting.delay
+
+When [`latex-workshop.linting.run`](#latex-workshoplintingrun) is set to `onType`, defines the delay in milliseconds for linter to wait after stopped typing. 
+
+| type     | default value |
+| -------- | ------------- |
+| _number_ | `500`         |
+
+
+### ChkTeX
+
+The [ChkTeX](https://www.nongnu.org/chktex/) utility is a LaTeX semantic checker. Once installed, and the relevant setting enabled it is automatically run on any open TeX documents. Its output is parsed by the extension and displayed in the _Problems_ panel.
 
 Auto load of `.chktexrc` configuration files is performed in the following order
 
@@ -24,31 +47,19 @@ Auto load of `.chktexrc` configuration files is performed in the following order
 1. The `.chktexrc` file (if exists) in the same folder as the main LaTeX file
 1. The `.chktexrc` file (if exists) at the project root folder.
 
-### Overview
+<!-- ### Overview
 
 | Setting key                                                            | Description                                             | Default                                   | Type                 |
 | ---------------------------------------------------------------------- | ------------------------------------------------------- | ----------------------------------------- | -------------------- |
-| [`latex-workshop.chktex.enabled`](#latex-workshopchktexenabled)        | Enable LaTeX linting with ChkTeX                        | `false`                                   | _boolean_            |
-| [`latex-workshop.chktex.exec.path`](#latex-workshopchktexexecpath)              | Location of ChkTeX executable                           | `"chktex"`                                | _string_             |
-| [`latex-workshop.chktex.exec.args`](#latex-workshopchktexexecargsactive) | Arguments to be passed to ChkTeX | `["-wall", "-n22", "-n30", "-e16", "-q"]` | _array_ of _strings_ |
-| [`latex-workshop.chktex.run`](#latex-workshopchktexrun)                | When to run ChkTeX (on file save or while typing)       | `"onSave"`                                | _enum_               |
-| [`latex-workshop.chktex.convertOutput.column.enabled`](#latex-workshopchktexconvertoutputcolumnenabled)                       | Enable converting ChkTeX outputs | `true`    | _boolean_            |
-| [`latex-workshop.chktex.convertOutput.column.chktexrcTabSize`](#latex-workshopchktexconvertoutputcolumnchktexrctabsize)       | `TabSize` number                 | `-1`      | _number_             |
+| [`latex-workshop.linting.chktex.enabled`](#latex-workshoplintingchktexenabled)        | Enable LaTeX linting with ChkTeX                        | `false`                                   | _boolean_            |
+| [`latex-workshop.linting.chktex.exec.path`](#latex-workshoplintingchktexexecpath)              | Location of ChkTeX executable                           | `"chktex"`                                | _string_             |
+| [`latex-workshop.linting.chktex.exec.args`](#latex-workshoplintingchktexexecargsactive) | Arguments to be passed to ChkTeX | `["-wall", "-n22", "-n30", "-e16", "-q"]` | _array_ of _strings_ |
+| [`latex-workshop.linting.chktex.convertOutput.column.enabled`](#latex-workshoplintingchktexconvertoutputcolumnenabled)                       | Enable converting ChkTeX outputs | `true`    | _boolean_            |
+| [`latex-workshop.linting.chktex.convertOutput.column.chktexrcTabSize`](#latex-workshoplintingchktexconvertoutputcolumnchktexrctabsize)       | `TabSize` number                 | `-1`      | _number_             |
 
-### Configuration variables
+### Configuration variables -->
 
-#### latex-workshop.chktex.exec.args
-
-Linter arguments to check LaTeX syntax
-
-Arguments must be in separate strings in the array. Additional arguments, i.e., `-I0 -f%f:%l:%c:%d:%k:%n:%m\n` will be appended when constructing the command. Current file contents will be piped to the command through stdin.
-
-| type                 | default value                             |
-| -------------------- | ----------------------------------------- |
-| _array_ of _strings_ | `["-wall", "-n22", "-n30", "-e16", "-q"]` |
-
-
-#### latex-workshop.chktex.enabled
+#### latex-workshop.linting.chktex.enabled
 
 Enable linting LaTeX with ChkTeX.
 
@@ -60,35 +71,27 @@ The full project will be linted from the root on file save.
 | --------- | ------------- |
 | _boolean_ | `false`       |
 
-#### latex-workshop.chktex.exec.path
+#### latex-workshop.linting.chktex.exec.path
 
 Define the location of ChkTeX executive file.
 
-This command will be joint with [`latex-workshop.chktex.exec.args`](#latex-workshopchktexexecargs) to form a complete ChkTeX command.
-
-"latex-workshop.chktex.exec.path": "chktex"
+This command will be joint with [`latex-workshop.linting.chktex.exec.args`](#latex-workshoplintingchktexexecargs) to form a complete ChkTeX command.
 
 | type     | default value |
 | -------- | ------------- |
 | _string_ | `"chktex"`    |
 
-#### latex-workshop.chktex.run
+#### latex-workshop.linting.chktex.exec.args
 
-When LaTeX should be linted by ChkTeX. If set to `onSave`, the whole LaTeX project will be linted upon saving. If set to `onType`, the active document will be linted when input is stopped for a period of time defined in `latex-workshop.chktex.delay`, in addition to the behavior of `onSave`.
+Linter arguments to check LaTeX syntax
 
-| type   | default value |
-| ------ | ------------- |
-| _enum_ | `"onSave"`    |
+Arguments must be in separate strings in the array. Additional arguments, i.e., `-I0 -f%f:%l:%c:%d:%k:%n:%m\n` will be appended when constructing the command. Current file contents will be piped to the command through stdin.
 
-#### latex-workshop.chktex.delay
+| type                 | default value                             |
+| -------------------- | ----------------------------------------- |
+| _array_ of _strings_ | `["-wall", "-n22", "-n30", "-e16", "-q"]` |
 
-When `latex-workshop.chktex.run` is set to `onType`, defines the delay in milliseconds for chktex to wait after stopped typing. 
-
-| type     | default value |
-| -------- | ------------- |
-| _number_ | `500`         |
-
-#### latex-workshop.chktex.convertOutput.column.enabled
+#### latex-workshop.linting.chktex.convertOutput.column.enabled
 
 Enable converting ChkTeX outputs' column numbers for non-ASCII characters.
 
@@ -96,10 +99,37 @@ Enable converting ChkTeX outputs' column numbers for non-ASCII characters.
 | --------- | ------------- |
 | _boolean_ | `true`        |
 
-#### latex-workshop.chktex.convertOutput.column.chktexrcTabSize
+#### latex-workshop.linting.chktex.convertOutput.column.chktexrcTabSize
 
 Write the `TabSize` number from `.chktexrc`. The default value `-1` means that LaTeX Workshop will try to find `.chktexrc` and to read the value from it.
 
 | type     | default value |
 | -------- | ------------- |
 | _number_ | `-1`          |
+
+
+### LaCheck
+
+The [LaCheck](https://ctan.org/pkg/lacheck) utility is a consistency checker for LaTeX documents. Once installed, and the relevant setting enabled it is automatically run on any open TeX documents. Its output is parsed by the extension and displayed in the _Problems_ panel. Detailed introduction to LaCheck can be found [here](https://linux.die.net/man/1/lacheck).
+
+#### latex-workshop.linting.lacheck.enabled
+
+Enable linting LaTeX with LaCheck.
+
+The active document will be linted when no document changes for a defined period of time.
+
+The full project will be linted from the root on file save.
+
+| type      | default value |
+| --------- | ------------- |
+| _boolean_ | `false`       |
+
+#### latex-workshop.linting.chktex.exec.path
+
+Define the location of LaCheck executive file.
+
+"latex-workshop.chktex.exec.path": "chktex"
+
+| type     | default value |
+| -------- | ------------- |
+| _string_ | `"lacheck"`    |
