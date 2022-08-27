@@ -172,3 +172,4 @@ For those who major in mathematics, you must use the inline math formulas (i.e.,
 }
 ```
 Then you just need to enter <kbd>d</kbd>+<kbd>d</kbd> and return to get the double dollars with cursor between them.
+<img src="https://github.com/SwitWu/LaTeX-Workshop-wiki/blob/master/configureSnippets.gif" alt="wrap demo" height="140px">
