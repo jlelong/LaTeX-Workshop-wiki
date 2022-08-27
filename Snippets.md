@@ -155,3 +155,20 @@ Alternatively, you can just select the text and enter the command using autocomp
 To surround some selected text with an environment, call _LaTeX Workshop: Surround/wrap selection with \\begin{}...\\end{}_ from the **Command Palette** (command `latex-workshop.wrap-env`). A multi-cursor is added inside the braces, to insert the environment name.
 
 <img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/surround-env.gif" alt="Surround with environment demo">
+
+## User-defined snippets
+
+VScode provides the function for users to **define their own snippets**. Do as follows: click <kbd>Code</kbd>+<kbd>
+Preferences</kbd>+<kbd>Configure User Snippets</kbd>, then enter `latex.json` in the inputbox and return to edit the `latex.json` file.
+
+Here we give an example:
+
+For those who major in mathematics, you must use the inline math formulas (i.e., formulas surrounded by two dollars `$<formula>$`) frequently. If you feel troublesome to input the dollars symbols since you have to press the <kbd>shift</kbd> button every time. You can define a code snippet as follows:
+```json
+"inline-math": {
+  "prefix": "dd",
+  "body": ["\\$$0\\$"],
+  "description": "Insert inline math formula"
+}
+```
+Then you just need to enter <kbd>d</kbd>+<kbd>d</kbd> and return to get the double dollars with cursor between them.
