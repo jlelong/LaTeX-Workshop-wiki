@@ -69,12 +69,14 @@ Additional settings for the internal viewer:
 
 |                                    Setting key                                                                   |                Description                            |
 | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------|
-| [`latex-workshop.view.pdf.color.light.pageColorsForeground`](#latex-workshopviewpdfcolorlightpagecolorsforeground)| The foreground color in light mode                    |
-| [`latex-workshop.view.pdf.color.light.pageColorsBackground`](#latex-workshopviewpdfcolorlightpagecolorsbackground)| The background color in light mode                    |
-| [`latex-workshop.view.pdf.color.light.backgroundColor`](#latex-workshopviewpdfcolorlightbackgroundcolor)          | The background color of the viewer in light mode      |
+| [`latex-workshop.view.pdf.color.light.pageColorsForeground`](#latex-workshopviewpdfcolorlightpagecolorsforeground)| The foreground color in light mode                   |
+| [`latex-workshop.view.pdf.color.light.pageColorsBackground`](#latex-workshopviewpdfcolorlightpagecolorsbackground)| The background color in light mode                   |
+| [`latex-workshop.view.pdf.color.light.backgroundColor`](#latex-workshopviewpdfcolorlightbackgroundcolor)         | The background color of the viewer in light mode      |
+| [`latex-workshop.view.pdf.color.light.pageBorderColor`](#latex-workshopviewpdfcolorlightpagebordercolor)         | The border color of pages in light mode               |
 | [`latex-workshop.view.pdf.color.dark.pageColorsForeground`](#latex-workshopviewpdfcolordarkpagecolorsforeground) | The foreground color in dark mode                     |
 | [`latex-workshop.view.pdf.color.dark.pageColorsBackground`](#latex-workshopviewpdfcolordarkpagecolorsbackground) | The background color in dark mode                     |
 | [`latex-workshop.view.pdf.color.dark.backgroundColor`](#latex-workshopviewpdfcolordarkbackgroundcolor)           | The background color of the viewer in dark mode       |
+| [`latex-workshop.view.pdf.color.dark.pageBorderColor`](#latex-workshopviewpdfcolordarkpagebordercolor)           | The border color of pages in dark mode                |
 
 ### Invert mode
 
@@ -431,6 +433,14 @@ The background color of the viewer when the OS appearance is light. The string m
 | -------- | ------------- |
 | _string_ | `"#ffffff"`   |
 
+### latex-workshop.view.pdf.color.light.pageBorderColor
+
+The border color of pages when the OS appearance is light. The string must represent a color in HTML. Reload vscode to make any change in this configuration effective.
+
+| type     | default value |
+| -------- | ------------- |
+| _string_ | `"lightgrey"` |
+
 ### latex-workshop.view.pdf.color.dark.pageColorsForeground
 
 The foreground color of the document when the OS appearance is dark. The string must represent a color in HTML. Reload vscode to make any change in this configuration effective.
@@ -454,6 +464,14 @@ The background color of the viewer when the OS appearance is dark. The string mu
 | type     | default value |
 | -------- | ------------- |
 | _string_ | `"#ffffff"`   |
+
+### latex-workshop.view.pdf.color.dark.pageBorderColor
+
+The border color of pages when the OS appearance is dark. The string must represent a color in HTML. Reload vscode to make any change in this configuration effective.
+
+| type     | default value |
+| -------- | ------------- |
+| _string_ | `"lightgrey"` |
 
 ### latex-workshop.view.pdf.invertMode.enabled
 
