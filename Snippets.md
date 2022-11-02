@@ -26,6 +26,7 @@ Some environments have a dedicated snippet in the form `BXY` where `XY` are the 
 | `BCAS` | `cases`          |
 | `BFR`  | `frame`          |
 | `BFI`  | `figure`         |
+| `BTA`  | `table`          |
 
 ## Sectioning
 
@@ -47,10 +48,10 @@ For instance, typing `SSE` + `TAB` expands to `\section{}` with the cursor insid
 
 ### Selecting a whole section
 
-The current section along with all its subsections can be selected by calling the command `latex-workshop.select-section`. Repeated calls ends in expanding the selection in two ways:
+The current section along with all its subsections can be selected by calling the command `latex-workshop.select-section`. Repeated calls end in expanding the selection in two ways:
 
 - First, outer sections are selected
-- If there is not outer section, the selection is expanded upwards be selection the previous section.
+- If there is no outer section, the selection is expanded upwards by selecting the previous section.
 
 ### Promoting/demoting sectioning levels
 
@@ -74,7 +75,7 @@ yields
 \subsubsection{Content}
 ```
 
-To recursively promote/demote a section and and all its subsections, first call `latex-workshop.select-section` to select the section and all its subsections and then call `latex-workshop.promote-sectioning` or `latex-workshop.demote-sectioning`.
+To recursively promote/demote a section and all its subsections, first, call `latex-workshop.select-section` to select the section and all its subsections and then call `latex-workshop.promote-sectioning` or `latex-workshop.demote-sectioning`.
 
 #### Keybindings
 
