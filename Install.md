@@ -3,14 +3,16 @@
 ## Requirements
 
 - LaTeX distribution in system PATH. For example, [TeX Live](https://www.tug.org/texlive/). We **strongly recommend** TeX Live.
-  - For a lighter-weight distribution based on TeX Live, see [TinyTeX](https://github.com/rstudio/tinytex-releases).
+  - For a lighter-weight distribution based on TeX Live, see <a href="https://yihui.org/tinytex">TinyTeX</a>.<br>
     <details><!-- empty line below, so that markdown works -->
-  
-      The TinyTeX distributions contain only a small subset of the 4000+ packages downloaded by TeX Live.
-      Additional packages can be installed with `tlmgr install <pkgname>`.
-      Note that these distributions do not include offline documentation.
-      The [_Show package documentation_ functionality][showdoc] of LaTeX Workshop will therefore not work
-      (you can instead use the CTAN link also provided in the popup to download the docs).
+
+    The [TinyTeX distributions](https://github.com/rstudio/tinytex-releases#releases)
+    contain only a small subset of the 4000+ packages downloaded by TeX Live.
+    Additional packages can be installed with `tlmgr install <pkgname>`.
+
+    Note that TinyTeX does not include offline documentation.
+    LaTeX Workshop's [_"Show package documentation"_ functionality][showdoc] will therefore not work.
+    (You can instead use the CTAN link, also provided in the hover popup, to download the docs).
     </details>
     
 - We don't recommend [MiKTeX](https://miktex.org/) because MiKTeX does not ship with Perl. If you choose MiKTeX, you have to install Perl by yourself, which `latexmk` requires. Without Perl, `latexmk` fails with errors.
