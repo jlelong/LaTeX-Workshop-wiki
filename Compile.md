@@ -337,7 +337,7 @@ These environments are stripped off the `.tex` files before any parsing occurs. 
 
 The warnings and errors issued by the compiling toolchain are rendered in the _Problems_ Pane. The following settings enable you to customize what you want to get in that panel. If the messages displayed in the panel seem to be wrong, see the [FAQ](FAQ#The-Problem-Pane-displays-wrong-messages).
 
-You have to call LaTeX compilers with an option `-file-line-error` in your [recipes](#latex-recipes).
+You have to call LaTeX compilers with an option `-file-line-error` in your [recipes](#latex-recipes). `--max-print-line=10000` is another option that you may consider adding to your tool when applicable.
 
 Notice that problems are not displayed when you compile a LaTeX document in draft mode. See an [issue](https://github.com/James-Yu/LaTeX-Workshop/issues/2893#issuecomment-936312853).
 
