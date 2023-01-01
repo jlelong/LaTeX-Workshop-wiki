@@ -307,7 +307,7 @@ Dictionary of `"command name": "command action"` to replace the default snippets
 
 ### latex-workshop.intellisense.atSuggestion.trigger.latex
 
-Character to trigger `@` suggestions as part of intellisense. Set this variable to `''` to deactivate these suggestions. Reload vscode to make any change in this configuration effective.
+Character to trigger `@` suggestions as part of intellisense. Set this variable to `''` to deactivate these suggestions.
 
 |type      | default value |
 |----------|---------------|
