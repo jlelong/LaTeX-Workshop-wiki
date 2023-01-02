@@ -94,7 +94,7 @@ You must reload VSCode to take into account a change in this configuration.
 
 ## LaTeX recipes
 
-A LaTeX recipe refers to a sequence/array of commands which LaTeX Workshop executes sequentially when building LaTeX projects. It is defined by `latex-workshop.latex.recipes`. By default, LaTeX Workshop includes two basic recipes defined by the variables `latex-workshop.latex.recipes` and `latex-workshop.latex.tools`:
+A LaTeX recipe refers to a sequence/array of commands which LaTeX Workshop executes sequentially when building LaTeX projects. It is defined by `latex-workshop.latex.recipes`. By default, LaTeX Workshop includes several basic recipes defined by the variables `latex-workshop.latex.recipes` and `latex-workshop.latex.tools`. Below are two popular examples:
 
 - The first one simply relies on the `latexmk` command
 - The second one run the following sequence of commands `pdflatex` → `bibtex` → `pdflatex` → `pdflatex`.
@@ -102,13 +102,13 @@ A LaTeX recipe refers to a sequence/array of commands which LaTeX Workshop execu
 ```json
 "latex-workshop.latex.recipes": [
   {
-    "name": "latexmk 🔃",
+    "name": "latexmk",
     "tools": [
       "latexmk"
     ]
   },
   {
-    "name": "pdflatex ➞ bibtex ➞ pdflatex × 2",
+    "name": "pdflatex -> bibtex -> pdflatex * 2",
     "tools": [
       "pdflatex",
       "bibtex",
