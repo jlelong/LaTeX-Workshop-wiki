@@ -45,9 +45,7 @@ The key `\` automatically triggers completion of LaTeX commands. You can define 
 
   You will find two files `mypackage_cmd.json` and `mypackage_env.json` in `destdir` containing intellisense data for command respectively environment completion. To enable the extension to load these files, add `destdir` to [`latex-workshop.intellisense.package.dirs`](#latex-workshopintellisensepackagedirs). Note it only works when [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled) is set to `true`.
 
-- The completion list can use either placeholders or tabstops. The default is to use tabstops, but it can be changed using [`latex-workshop.intellisense.useTabStops.enabled`](#latex-workshopintellisenseuseTabStopsenabled).
-  - placeholders: they provide meaningful information on the arguments but prevent any autocompletion trigger.
-  - tabstops: they enable us to directly trigger autocompletion again for citations and references.
+- Many snippets use text hints of the form `${\d:some_tex}` for their argument. You may prefer to hide instead by setting[`latex-workshop.intellisense.argumentHint.enabled`](#latex-workshopintellisenseargumentHintenabled) to `true`.
 - We provide one entry in the intellisense completion list per LaTeX command signature. If you feel, it makes the completion list too long, set [`latex-workshop.intellisense.optionalArgsEntries.enabled`](#latex-workshopintellisenseoptionalArgsEntriesenabled) to `false`.
 
 | Setting key | Description | Default | Type |
@@ -58,7 +56,7 @@ The key `\` automatically triggers completion of LaTeX commands. You can define 
 | [`latex-workshop.intellisense.package.extra`](#latex-workshopintellisensepackageextra) | Extra packages to load for intellisense | `[]` | _array_ of _strings_ |
 | [`latex-workshop.intellisense.package.dirs`](#latex-workshopintellisensepackagedirs) | Extra directories where to look for intellisense data | `[]` | _array_ of _strings_ |
 | [`latex-workshop.intellisense.unimathsymbols.enabled`](#latex-workshopintellisenseunimathsymbolsenabled) | Show unimath symbols as suggestions when `\` pressed | `false` | _boolean_ |
-| [`latex-workshop.intellisense.useTabStops.enabled`](#latex-workshopintellisenseuseTabStopsenabled) | Use tabstops in intellisense completion | `true` | _boolean_ |
+| [`latex-workshop.intellisense.argumentHint.enabled`](#latex-workshopintellisenseargumentHintenabled) | Hide argument hints in intellisense completion | `false` | _boolean_ |
 | [`latex-workshop.intellisense.optionalArgsEntries.enabled`](#latex-workshopintellisenseoptionalArgsEntriesenabled) | Add one completion item per command signature | `true` | _boolean_ |
 | [`latex-workshop.latex.texDirs`](Compile#latex-workshoplatextexDirs) | List of paths to look for input `.tex` files. | `[]` | _array_ of _strings_ |
 
@@ -271,13 +269,13 @@ Many LaTeX commands can have several signatures, each with different arguments. 
 | --------- | ------------- |
 | _boolean_ | `true`        |
 
-### latex-workshop.intellisense.useTabStops.enabled
+### latex-workshop.intellisense.argumentHint.enabled
 
-Use tabstops instead of placeholders in intellisense. Tabstops enable us to directly trigger autocompletion again (particularly useful for citations and references). On the contrary, placeholders prevent any direct call to autocompletion but they provide more information on the arguments meaning.
+Many snippets use text hints of the form `${\d:some_tex}` for their argument. You may prefer to hide instead by setting this configuration to `true`.
 
 | type      | default value |
 | --------- | ------------- |
-| _boolean_ | `true`        |
+| _boolean_ | `false`        |
 
 Reload vscode after change.
 

@@ -55,7 +55,6 @@ Below are the detailed explanations for the different possible settings
 | [`latex-workshop.view.pdf.spreadMode`](#latex-workshopviewpdfspreadMode)          | The default spread mode of the PDF viewer    |
 | [`latex-workshop.view.pdf.hand`](#latex-workshopviewpdfhand)                      | Enable the hand tool                         |
 | [`latex-workshop.view.pdf.trim`](#latex-workshopviewpdftrim)                      | The default trim mode of the PDF viewer      |
-| [`latex-workshop.view.pdf.backgroundColor`](#latex-workshopviewpdfbackgroundcolor)| The background color of the PDF viewer       |
 
 Additional settings for the internal viewer:
 

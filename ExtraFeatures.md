@@ -28,9 +28,33 @@ The names of the commands to be shown in the outline/structure views. Reload vsc
 
 The commands must be called in the form `\commandname{arg}`.
 
+### latex-workshop.view.outline.fastparse.enabled
+
+**Experimental** Use fast LaTeX parsing algorithm to build outline/structure. This is done by inheritly removing texts and comments before building AST. Enabling this will not tamper the document, but may result in incomplete outline/structure.
+
+| type      | default value |
+|-----------|---------------|
+| _boolean_ | `true`        |
+
 ### latex-workshop.view.outline.floats.enabled
 
-Show the floating objects (figures and tables) in the outline/structure views. Reload vscode to make any change in this configuration effective.
+Show the floating objects (figures and tables) in the outline/structure views.
+
+| type      | default value |
+|-----------|---------------|
+| _boolean_ | `true`        |
+
+### latex-workshop.view.outline.floats.number.enabled
+
+Show the float number in the outline/structure views.
+
+| type      | default value |
+|-----------|---------------|
+| _boolean_ | `true`        |
+
+### latex-workshop.view.outline.floats.caption.enabled
+
+Show the float caption in the outline/structure views.
 
 | type      | default value |
 |-----------|---------------|
