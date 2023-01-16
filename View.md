@@ -19,7 +19,7 @@ If you want to preview the PDF file in a separated window, you can do that with 
 
 The extension also allows to view any PDF file possibly not related to a LaTeX project. To open such a PDF file, it is sufficient to open from the _Explorer_. Any PDF file opened this is way is monitored by a file watcher to be automatically reloaded when it changes on disk. Note that this is a different mechanism as the one used for PDF files related to LaTeX projects, which get reloaded after every successful building.
 
-### latex-workshop.latex.pdfWatch.delay
+### latex-workshop.latex.watch.pdf.delay
 
 Delay before reloading a PDF file after last change, in milliseconds.
 
