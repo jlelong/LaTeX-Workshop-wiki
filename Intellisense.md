@@ -34,7 +34,7 @@ Any `\ref` related command is automatically completed with label keys.
 
 The key `\` automatically triggers completion of LaTeX commands. You can define [additional triggers](#latex-workshopintellisensetriggerslatex). Several mechanisms play together to build the list of available commands.
 
-- A set of standard LaTeX commands is provided in the file [`data/commands.json`](https://github.com/James-Yu/LaTeX-Workshop/blob/master/data/commands.json). You may overwrite some of these commands by using the [`latex-workshop.intellisense.commandsJSON.replace`](#latex-workshopintellisensecommandsJSONreplace) configuration variable.
+- A set of standard LaTeX commands is provided in the file [`data/commands.json`](https://github.com/James-Yu/LaTeX-Workshop/blob/master/data/commands.json). You may overwrite some of these commands or add new ones by using the [`latex-workshop.intellisense.command.user`](#latex-workshopintellisensecommanduser) configuration variable.
 - The files of a LaTeX project are searched for any already used commands in the form `mycommand` followed by several `{}` groups. Then, a snippet is dynamically built for each of them and they are added to the command completion list.
 - When [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled) is `true`, the command completion list is also populated with the commands provided by all the _standard_ packages used in the project (through `\usepackage`). The list of commands provided by every package is described [here](https://github.com/LaTeXing/LaTeX-cwl). Note that homemade packages are ignored in this mechanism because they do not come with a `.cwl` file.
 - If you use personal macro files and want them to be taken into account by intellisense but store them in some `texmf` structure or dedicated directory. Just add the directory containing the file to [`latex-workshop.latex.texDirs`](Compile#latex-workshoplatextexDirs). The file must be loaded in the LaTeX project through the `\input` macro.
@@ -46,9 +46,7 @@ The key `\` automatically triggers completion of LaTeX commands. You can define 
 
   You will find two files `mypackage_cmd.json` and `mypackage_env.json` in `destdir` containing intellisense data for command respectively environment completion. To enable the extension to load these files, add `destdir` to [`latex-workshop.intellisense.package.dirs`](#latex-workshopintellisensepackagedirs). Note it only works when [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled) is set to `true`.
 
-- The completion list can use either placeholders or tabstops. The default is to use tabstops, but it can be changed using [`latex-workshop.intellisense.useTabStops.enabled`](#latex-workshopintellisenseuseTabStopsenabled).
-  - placeholders: they provide meaningful information on the arguments but prevent any autocompletion trigger.
-  - tabstops: they enable us to directly trigger autocompletion again for citations and references.
+- Many snippets use text hints of the form `${\d:some_tex}` for their argument. You may prefer to hide instead by setting[`latex-workshop.intellisense.argumentHint.enabled`](#latex-workshopintellisenseargumentHintenabled) to `true`.
 - We provide one entry in the intellisense completion list per LaTeX command signature. If you feel, it makes the completion list too long, set [`latex-workshop.intellisense.optionalArgsEntries.enabled`](#latex-workshopintellisenseoptionalArgsEntriesenabled) to `false`.
 
 | Setting key | Description | Default | Type |
@@ -59,7 +57,7 @@ The key `\` automatically triggers completion of LaTeX commands. You can define 
 | [`latex-workshop.intellisense.package.extra`](#latex-workshopintellisensepackageextra) | Extra packages to load for intellisense | `[]` | _array_ of _strings_ |
 | [`latex-workshop.intellisense.package.dirs`](#latex-workshopintellisensepackagedirs) | Extra directories where to look for intellisense data | `[]` | _array_ of _strings_ |
 | [`latex-workshop.intellisense.unimathsymbols.enabled`](#latex-workshopintellisenseunimathsymbolsenabled) | Show unimath symbols as suggestions when `\` pressed | `false` | _boolean_ |
-| [`latex-workshop.intellisense.useTabStops.enabled`](#latex-workshopintellisenseuseTabStopsenabled) | Use tabstops in intellisense completion | `true` | _boolean_ |
+| [`latex-workshop.intellisense.argumentHint.enabled`](#latex-workshopintellisenseargumentHintenabled) | Hide argument hints in intellisense completion | `false` | _boolean_ |
 | [`latex-workshop.intellisense.optionalArgsEntries.enabled`](#latex-workshopintellisenseoptionalArgsEntriesenabled) | Add one completion item per command signature | `true` | _boolean_ |
 | [`latex-workshop.latex.texDirs`](Compile#latex-workshoplatextexDirs) | List of paths to look for input `.tex` files. | `[]` | _array_ of _strings_ |
 
@@ -96,7 +94,7 @@ When [`latex-workshop.intellisense.includegraphics.preview.enabled`](#latex-work
 
 ## `@` suggestions
 
-Next to intellisense for anything starting with `\`, we provide an independent intellisense mechanism triggered by `@`.  The trigger character `@` is set by the configuration variable [`latex-workshop.intellisense.atSuggestion.trigger.latex`](#latex-workshopintellisenseatSuggestiontriggerlatex) and can be replaced by any other non-alphabetical character. Setting [`latex-workshop.intellisense.atSuggestion.trigger.latex`](#latex-workshopintellisenseatSuggestiontriggerlatex) to the empty string deactivates these suggestions. You can remove, modify or define new suggestions using the setting [`latex-workshop.intellisense.atSuggestionJSON.replace`](#latex-workshopintellisenseatSuggestionJSONreplace).
+Next to intellisense for anything starting with `\`, we provide an independent intellisense mechanism triggered by `@`.  The trigger character `@` is set by the configuration variable [`latex-workshop.intellisense.atSuggestion.trigger.latex`](#latex-workshopintellisenseatSuggestiontriggerlatex) and can be replaced by any other non-alphabetical character. Setting [`latex-workshop.intellisense.atSuggestion.trigger.latex`](#latex-workshopintellisenseatSuggestiontriggerlatex) to the empty string deactivates these suggestions. You can remove, modify or define new suggestions using the setting [`latex-workshop.intellisense.atSuggestion.user`](#latex-workshopintellisenseatSuggestionuser).
 
 ### Inserting Greek letters
 
@@ -272,13 +270,13 @@ Many LaTeX commands can have several signatures, each with different arguments. 
 | --------- | ------------- |
 | _boolean_ | `true`        |
 
-### latex-workshop.intellisense.useTabStops.enabled
+### latex-workshop.intellisense.argumentHint.enabled
 
-Use tabstops instead of placeholders in intellisense. Tabstops enable us to directly trigger autocompletion again (particularly useful for citations and references). On the contrary, placeholders prevent any direct call to autocompletion but they provide more information on the arguments meaning.
+Many snippets use text hints of the form `${\d:some_tex}` for their argument. You may prefer to hide instead by setting this configuration to `true`.
 
 | type      | default value |
 | --------- | ------------- |
-| _boolean_ | `true`        |
+| _boolean_ | `false`        |
 
 Reload vscode after change.
 
@@ -306,9 +304,9 @@ When `\` is typed, show unimath symbols in the dropdown selector.
 | --------- | ------------- |
 | _boolean_ | `false`       |
 
-### latex-workshop.intellisense.commandsJSON.replace
+### latex-workshop.intellisense.command.user
 
-Dictionary of `"command name": "command action"` to replace the default snippets in `data/commands.json`. Command actions must not contain the leading `\`. See `data/commands.json` for the list of command names. An empty action removes the command. E.g. `{ "[": "[ ${1} \\]", "figure": "" }`. Reload vscode to make any change in this configuration effective
+Dictionary of `"command name": "command snippet"` to add to, replace, or remove the default ones in `data/commands.json`. The key of the dictionary is the command name with optional braces indicating the command arguments. The value of the dictionary is the snippet to be inserted. If the key is identical to a default command suggestion defined in `data/commands.json`, the new value in the dictionary is used for suggestion. If the value is an empty string, the command is removed from suggestion. Leading backslashes will be added to both the name and snippet by the extension, so don't include them in this config. For example, `{"mycommand[]{}": "notsamecommand[${2:option}]{$TM_SELECTED_TEXT$1}", "parbox{}{}": "parbox{${2:width}}{$TM_SELECTED_TEXT$1}", "overline{}": ""}` adds a new command with name `mycommand[]{}` that inserts `\\notsamecommand[]{}`, replaces the default snippet of `\\parbox{}{}` to make it include current selected text, and removes `\\overline{}` from suggestion.
 
 | type                               | default value |
 |------------------------------------|---------------|
@@ -322,9 +320,9 @@ Character to trigger `@` suggestions as part of intellisense. Set this variable 
 |----------|---------------|
 | _string_ | `@`           |
 
-### latex-workshop.intellisense.atSuggestionJSON.replace
+### latex-workshop.intellisense.atSuggestion.user
 
-Dictionary of `"prefix": "snippet command"` to replace the default suggestions in `data/at-suggestions.json` or to define a new suggestion. An empty action removes the suggestion from the default list. E.g. `{ "@.": "\cdot", "@6": "" }`. Note that in this setting, the prefix must start with `@`, no matter what the true trigger character defined by [`latex-workshop.intellisense.atSuggestion.trigger.latex`](#latex-workshopintellisenseatSuggestiontriggerlatex) is.
+Dictionary of `"@prefix": "snippet command"` to add to, replace, or remove the default suggestions in `data/at-suggestions.json`. The key of the dictionary is the triggering string, which **must** starts with `@` regardless of [`latex-workshop.intellisense.atSuggestion.trigger.latex`](#latex-workshopintellisenseatSuggestiontriggerlatex). The value of the dictionary is the snippet to be inserted. If the key is identical to a default snippet defined in `data/at-suggestions.json`, the new value in the dictionary is used for suggestion. If the value is an empty string, the snippet is removed from suggestion. For example, `{ "@.": "\\cdot", "@6": "" }`.
 
 | type                               | default value |
 |------------------------------------|---------------|

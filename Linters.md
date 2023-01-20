@@ -47,18 +47,6 @@ Auto load of `.chktexrc` configuration files is performed in the following order
 1. The `.chktexrc` file (if exists) in the same folder as the main LaTeX file
 1. The `.chktexrc` file (if exists) at the project root folder.
 
-<!-- ### Overview
-
-| Setting key                                                            | Description                                             | Default                                   | Type                 |
-| ---------------------------------------------------------------------- | ------------------------------------------------------- | ----------------------------------------- | -------------------- |
-| [`latex-workshop.linting.chktex.enabled`](#latex-workshoplintingchktexenabled)        | Enable LaTeX linting with ChkTeX                        | `false`                                   | _boolean_            |
-| [`latex-workshop.linting.chktex.exec.path`](#latex-workshoplintingchktexexecpath)              | Location of ChkTeX executable                           | `"chktex"`                                | _string_             |
-| [`latex-workshop.linting.chktex.exec.args`](#latex-workshoplintingchktexexecargsactive) | Arguments to be passed to ChkTeX | `["-wall", "-n22", "-n30", "-e16", "-q"]` | _array_ of _strings_ |
-| [`latex-workshop.linting.chktex.convertOutput.column.enabled`](#latex-workshoplintingchktexconvertoutputcolumnenabled)                       | Enable converting ChkTeX outputs | `true`    | _boolean_            |
-| [`latex-workshop.linting.chktex.convertOutput.column.chktexrcTabSize`](#latex-workshoplintingchktexconvertoutputcolumnchktexrctabsize)       | `TabSize` number                 | `-1`      | _number_             |
-
-### Configuration variables -->
-
 #### latex-workshop.linting.chktex.enabled
 
 Enable linting LaTeX with ChkTeX.
@@ -124,11 +112,11 @@ The full project will be linted from the root on file save.
 | --------- | ------------- |
 | _boolean_ | `false`       |
 
-#### latex-workshop.linting.chktex.exec.path
+#### latex-workshop.linting.lacheck.exec.path
 
 Define the location of LaCheck executive file.
 
-"latex-workshop.chktex.exec.path": "chktex"
+"latex-workshop.linting.lacheck.exec.path": "lacheck"
 
 | type     | default value |
 | -------- | ------------- |
