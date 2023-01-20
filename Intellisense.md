@@ -23,7 +23,8 @@ If you use very large bibtex files, you may experience temporary freezing. Hence
 
 ## References
 
-Similarly as for the citation mechanism, all files of a LaTeX project are search for labels. We scan labels defined as `\label{...}` or `label={...}`. If you do prefer to ignore `label={...}`, set [`latex-workshop.intellisense.label.keyval`](#latex-workshopintellisenselabelkeyval) to false.
+Similarly as for the citation mechanism, all files of a LaTeX project are search for labels. We scan labels defined as `\label{...}` or `label={...}`. If you do prefer to ignore `label={...}`, set [`latex-workshop.intellisense.label.keyval`](#latex-workshopintellisenselabelkeyval) to `false`.
+Label definition with commands other than `\label{...}` can be set in [`latex-workshop.intellisense.label.command`](#latex-workshopintellisenselabelcommand).
 
 Any `\ref` related command is automatically completed with label keys.
 
@@ -280,6 +281,14 @@ Use tabstops instead of placeholders in intellisense. Tabstops enable us to dire
 | _boolean_ | `true`        |
 
 Reload vscode after change.
+
+### latex-workshop.intellisense.label.command
+
+The name of LaTeX commands that indicates a label definition. The command must accept one mandatory argument of the label reference string, e.g, `\linelabel{ref-str}`.
+
+| type                 | default value            |
+| -------------------- | ------------------------ |
+| _array_ of _strings_ | `["label", "linelabel"]` |
 
 ### latex-workshop.intellisense.label.keyval
 
