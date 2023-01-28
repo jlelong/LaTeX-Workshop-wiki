@@ -263,6 +263,30 @@ Add the following options to your configuration:
 
 Thanks to [@miterion](https://github.com/miterion) for [figuring this out](https://miterion.de/post/vscodeplusokular/).
 
+##### [qpdfview](https://code.launchpad.net/qpdfview) support
+
+Forward:
+
+```json
+"latex-workshop.view.pdf.viewer":"external",
+"latex-workshop.view.pdf.external.viewer.command": "qpdfview",
+"latex-workshop.view.pdf.external.viewer.args": [
+    "--unique",
+    "%PDF%"
+],
+"latex-workshop.view.pdf.external.synctex.command": "qpdfview",
+"latex-workshop.view.pdf.external.synctex.args": [
+    "--unique",
+    "%PDF%#src:%TEX%:%LINE%:0",
+],
+```
+
+Backward:
+
+Goto **Edit > Settings... > Behavior > Source editor** and set the command to
+
+`code --goto "%1:%2"`
+
 #### macOS
 
 ##### [Skim](https://skim-app.sourceforge.io)
