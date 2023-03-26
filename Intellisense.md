@@ -233,6 +233,16 @@ Auto-complete commands and environments from used packages.
 | --------- | ------------- |
 | _boolean_ | `true`        |
 
+### latex-workshop.intellisense.package.exclude
+
+List of packages to exclude from the auto-completion mechanism.
+
+When `latex-workshop.intellisense.package.enabled` is set to `true`, the commands and environments defined in these packages will not be added to the intellisense suggestions. This setting has a higher priority over `latex-workshop.intellisense.package.extra`. You may include the string "lw-default" in the list to remove all default commands and environments.
+
+|         type         | default value |
+| -------------------- | ------------- |
+| _array_ of _strings_ | `[]`          |
+
 ### latex-workshop.intellisense.package.extra
 
 List of extra packages to always add to the auto-completion mechanism.

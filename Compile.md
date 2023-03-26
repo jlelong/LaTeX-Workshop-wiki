@@ -12,6 +12,7 @@ The following settings are helpful to customize how to build a project and how t
 
 | Setting key                                               | Description                                                                                           | Default  | Type                 |
 | --------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | -------- | -------------------- |
+| [`latex-workshop.latex.jobname`](#latex-workshoplatexjobname) | 
 | [`latex-workshop.latex.autoBuild.run`](#auto-build-latex) | When the extension shall auto build LaTeX project using [the default (first) recipe](#latex-recipes). | `onFileChange` | _string_             |
 | [`latex-workshop.latex.recipes`](#latex-recipes)          | Sequence of tools to run for building                                                                 |          | _JSON object_        |
 | [`latex-workshop.latex.tools`](#latex-recipes)            | Tools available for building                                                                          |          | _JSON object_        |
@@ -26,6 +27,16 @@ It is possible to terminate the current compilation by calling `Kill LaTeX compi
 ## Auto build LaTeX
 
 Besides manually calling the `Build LaTeX Project` command to compile a document, you may also let the extension automatically start compiling it upon file change. This can be defined in `latex-workshop.latex.autoBuild.run`. The recipe called by auto build is defined by [`latex-workshop.latex.recipe.default`](#latex-workshoplatexrecipedefault).
+
+### latex-workshop.latex.jobname
+
+The jobname argument of the compiling tool, which is used by the extension to find project files (e.g., PDF and SyncTeX files).
+
+|   type   |  default value   |
+| -------- | ---------------- |
+| _string_ | `""`             |
+
+This config should be set identical to the value provided to the `-jobname=` argument, and should not have placeholders. Leave the config empty to ignore jobname and keep the default behavior.
 
 ### latex-workshop.latex.autoBuild.run
 
@@ -330,6 +341,14 @@ Show badbox information in the problems panel.
 | type      | default value |
 | --------- | ------------- |
 | _boolean_ | `true`        |
+
+### latex-workshop.message.biberlog.exclude
+
+Exclude biber log messages matching the given regexp from the problems panel.
+
+| type                 | default value |
+| -------------------- | ------------- |
+| _array_ of _strings_ | `[]`          |
 
 ### latex-workshop.message.bibtexlog.exclude
 
