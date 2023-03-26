@@ -28,9 +28,9 @@ The names of the commands to be shown in the outline/structure views. Reload vsc
 
 The commands must be called in the form `\commandname{arg}`.
 
-### latex-workshop.view.outline.fastparse.enabled
+### latex-workshop.intellisense.fastparse.enabled
 
-**Experimental** Use fast LaTeX parsing algorithm to build outline/structure. This is done by inheritly removing texts and comments before building AST. Enabling this will not tamper the document, but may result in incomplete outline/structure.
+Use fast LaTeX parsing algorithm to build outline/structure. This is done by inherently removing texts and comments before building AST. Enabling this will not tamper the document, but may result in incomplete outline/structure.
 
 | type      | default value |
 |-----------|---------------|

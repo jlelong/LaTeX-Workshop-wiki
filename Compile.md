@@ -37,7 +37,7 @@ When to trigger automatic building.
 
 - `"never"`: Disable the auto build feature
 - `"onSave"`: Build the project upon saving a `.tex` file.
-- `"onFileChange"`: Build the project upon detecting a file change in any of the dependencies. The file can even be modified outside vscode. See [here](#multi-file-projects) for explanations on what dependencies are and how some of them can be ignored. See the [FAQ](FAQ#I-use-build-on-save-but-I-occasionally-want-to-save-without-building) for how to save without triggering the build when this feature is on. When a file changes, we wait for a delay before triggering the build. This delay is configured by [`latex-workshop.latex.watch.delay`](#latex-workshoplatexwatchdelay)
+- `"onFileChange"`: Build the project upon detecting a file change in any of the dependencies. The file can even be modified outside vscode. See [here](#multi-file-projects) for explanations on what dependencies are and how some of them can be ignored. See the [FAQ](FAQ#I-use-build-on-save-but-I-occasionally-want-to-save-without-building) for how to save without triggering the build when this feature is on.
 
 ### latex-workshop.latex.autoBuild.interval
 
@@ -58,38 +58,6 @@ With the default value, we do not watch files inside the `texmf` tree of the LaT
 |         type         | default value  |
 | -------------------- | -------------- |
 | _array_ of _strings_ | `["**/*.bbx", "**/*.cbx", "**/*.cfg", "**/*.clo", "**/*.cnf", "**/*.def", "**/*.fmt", "**/*.lbx", "**/*.map", "**/*.pfb", "**/*.tfm", "**/texmf-{dist,var}/**", "C:/**texmf/**", "/usr/local/share/miktex-texmf/**", "/Library/Application Support/MiKTeX/texmfs/**"]` |
-
-### latex-workshop.latex.watch.usePolling
-
-Use polling to watch changes on files.
-
-When TeX files are placed on network drives or OneDrive, this option should be turned on. Setting this option to true might lead to high CPU utilization.
-
-Reload vscode to make any change in this configuration effective.
-
-| type                 | default value |
-| -------------------- | ------------- |
-| _boolean_            | `false`       |
-
-### latex-workshop.latex.watch.interval
-
-Interval of polling, in milliseconds.
-
-Reload vscode to make any change in this configuration effective.
-
-| type               | default value |
-| ------------------ | ------------- |
-| _number_           | `300`         |
-
-### latex-workshop.latex.watch.delay
-
-Delay before starting builds, in milliseconds.
-
-You must reload VSCode to take into account a change in this configuration.
-
-| type               | default value |
-| ------------------ | ------------- |
-| _number_           | `250`         |
 
 
 ## LaTeX recipes

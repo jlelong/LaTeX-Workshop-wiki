@@ -72,7 +72,7 @@ The following extensions are known to cause issues when active at the same time 
 
 Starting with 1.35.0, VS Code supports WSL through [Remote - WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl). LaTeX Workshop works well with the extension.
 
-Also, in WSL2 file watchers might not work. For now, you have to set [`latex-workshop.latex.watch.usePolling`](Compile#latex-workshoplatexwatchusepolling) to `true`, and restart VS Code. See https://github.com/microsoft/WSL/issues/4739 for more information about the issue. Alternatively, you can set `latex-workshop.saveWithoutBuilding: onSave` to only trigger a build upon saving a file as it does not require file watchers to work.
+See https://github.com/microsoft/WSL/issues/4739 for more information about the issue. Alternatively, you can set `latex-workshop.saveWithoutBuilding: onSave` to only trigger a build upon saving a file as it does not require file watchers to work.
 
 ## Problems with Snap and Flatpak versions of VS Code
 
@@ -157,25 +157,13 @@ The default shortcuts for commands related to build and view use the modifiers <
 
 ## Auto build does not work sometimes
 
-Please try setting [`latex-workshop.latex.watch.usePolling`](Compile#latex-workshoplatexwatchusepolling) to `true` or setting [`latex-workshop.latex.autoBuild.run`](Compile#latex-workshoplatexautobuildrun) to `onSave`.
+Please try setting [`latex-workshop.latex.autoBuild.run`](Compile#latex-workshoplatexautobuildrun) to `onSave`.
 
 Reload vscode to make any change in this configuration effective.
 
 ## Saving a `.cls` file does not trigger auto build
 
 You have to compile your project with `latexmk` or manually pass `-recorder` to your LaTeX compiler to produce a `.fls` file. Then, LaTeX Workshop will use it to compute the exact list of included files. See [Compile](Compile#the-dependencies).
-
-## Suggestions for BibTeX files are not updated
-
-Please try setting [`latex-workshop.latex.watch.usePolling`](Compile#latex-workshoplatexwatchusepolling) to `true`.
-
-Reload vscode to make any change in this configuration effective.
-
-## The internal PDF viewer is not updated
-
-Please try setting [`latex-workshop.latex.watch.usePolling`](Compile#latex-workshoplatexwatchusepolling) to `true`.
-
-Reload vscode to make any change in this configuration effective.
 
 ## Disable automatic build on save
 
@@ -310,7 +298,7 @@ You can move the structure view and others with dragging and dropping. See the [
 
 ## Overriding snippets
 
-You can override some snippets provided by the extension by using the [`latex-workshop.intellisense.commandsJSON.replace`](Intellisense#latex-workshopintellisensecommandsJSONreplace) configuration variable. Since VS Code v1.52, you can hide snippets. See the [release note](https://code.visualstudio.com/updates/v1_52#_hide-extension-snippet).
+You can override some snippets provided by the extension by using the [`latex-workshop.intellisense.command.user`](Intellisense#latex-workshopintellisensecommanduser) configuration variable. Since VS Code v1.52, you can hide snippets. See the [release note](https://code.visualstudio.com/updates/v1_52#_hide-extension-snippet).
 
 ## Where can I find the definitions of the placeholders
 

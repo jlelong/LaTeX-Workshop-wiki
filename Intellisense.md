@@ -94,7 +94,7 @@ When [`latex-workshop.intellisense.includegraphics.preview.enabled`](#latex-work
 
 ## `@` suggestions
 
-Next to intellisense for anything starting with `\`, we provide an independent intellisense mechanism triggered by `@`.  The trigger character `@` is set by the configuration variable [`latex-workshop.intellisense.atSuggestion.trigger.latex`](#latex-workshopintellisenseatSuggestiontriggerlatex) and can be replaced by any other non-alphabetical character. Setting [`latex-workshop.intellisense.atSuggestion.trigger.latex`](#latex-workshopintellisenseatSuggestiontriggerlatex) to the empty string deactivates these suggestions. You can remove, modify or define new suggestions using the setting [`latex-workshop.intellisense.atSuggestion.user`](#latex-workshopintellisenseatSuggestionuser).
+Next to intellisense for anything starting with `\`, we provide an independent intellisense mechanism triggered by `@`.  The trigger character `@` is set by the configuration variable [`latex-workshop.intellisense.atSuggestion.trigger.latex`](#latex-workshopintellisenseatsuggestiontriggerlatex) and can be replaced by any other non-alphabetical character. Setting [`latex-workshop.intellisense.atSuggestion.trigger.latex`](#latex-workshopintellisenseatsuggestiontriggerlatex) to the empty string deactivates these suggestions. You can remove, modify or define new suggestions using the setting [`latex-workshop.intellisense.atSuggestion.user`](#latex-workshopintellisenseatSuggestionuser).
 
 ### Inserting Greek letters
 
@@ -322,7 +322,7 @@ Character to trigger `@` suggestions as part of intellisense. Set this variable 
 
 ### latex-workshop.intellisense.atSuggestion.user
 
-Dictionary of `"@prefix": "snippet command"` to add to, replace, or remove the default suggestions in `data/at-suggestions.json`. The key of the dictionary is the triggering string, which **must** starts with `@` regardless of [`latex-workshop.intellisense.atSuggestion.trigger.latex`](#latex-workshopintellisenseatSuggestiontriggerlatex). The value of the dictionary is the snippet to be inserted. If the key is identical to a default snippet defined in `data/at-suggestions.json`, the new value in the dictionary is used for suggestion. If the value is an empty string, the snippet is removed from suggestion. For example, `{ "@.": "\\cdot", "@6": "" }`.
+Dictionary of `"@prefix": "snippet command"` to add to, replace, or remove the default suggestions in `data/at-suggestions.json`. The key of the dictionary is the triggering string, which **must** starts with `@` regardless of [`latex-workshop.intellisense.atSuggestion.trigger.latex`](#latex-workshopintellisenseatsuggestiontriggerlatex). The value of the dictionary is the snippet to be inserted. If the key is identical to a default snippet defined in `data/at-suggestions.json`, the new value in the dictionary is used for suggestion. If the value is an empty string, the snippet is removed from suggestion. For example, `{ "@.": "\\cdot", "@6": "" }`.
 
 | type                               | default value |
 |------------------------------------|---------------|
