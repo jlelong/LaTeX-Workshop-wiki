@@ -100,6 +100,8 @@ A LaTeX recipe refers to a sequence/array of commands which LaTeX Workshop execu
 
 When building the project, the first recipe is used by default. See the [setting](#latex-workshoplatexrecipedefault). You can compile with another recipe by command `latex-workshop.recipes`. By default [`latexmk`](https://personal.psu.edu/jcc8/software/latexmk/) is used. This tool is bundled in most LaTeX distributions, and requires perl to execute.
 
+If you want to preset a per-file recipe, you may also consider place the LaTeX Workshop-specific derivative `%!LW recipe=recipe-name` at the top of your root file, similar to the wider recognized `%!TeX root=root-file` magic comment.
+
 ### LaTeX tools
 
 Each `tool` appearing in the `tools` field of recipes is defined `latex-workshop.latex.tools`. To include a tool in a recipe, the tool's `name` should be included in the recipe's `tools` list. Its default value is given by
@@ -233,7 +235,7 @@ While it is fine to write all contents in one `.tex` file, it is common to split
 
 To find the root file, LaTeX Workshop will follow the steps below, stopping whenever one is found:
 
-1. **Magic comment** `% !TEX root = relative/or/absolute/path/to/root/file.tex`. If such comments exist in the currently active editor, the referred file is set as root. You can use the command `latex-workshop.addtexroot` to help you insert the magic comment.
+1. **Magic comment** `% !TEX root = relative/or/absolute/path/to/root/file.tex`. If such comments exist in the currently active editor, the referred file is set as root. You can use the command `latex-workshop.addtexroot` to help you insert the magic comment. Note that magic comments need you to set [`latex-workshop.latex.build.forceRecipeUsage`](#latex-workshoplatexbuildforcerecipeusage) to `false`. The default `true` disables magic comments.
 1. **Self check** If current active editor contains `\documentclass[...]{...}` (the `[...]` is optional), it is set as root.
 1. **Root directory check** LaTeX Workshop iterates through all `.tex` files in the root folder of the workspace. The first one containing `\documentclass[...]{...}` (the `[...]` is optional) and which includes the file in the active editor is set as the root file. To avoid parsing all `.tex` files in the workspace, you can narrow the search by specifying [`latex-workshop.latex.search.rootFiles.include`](#latex-workshoplatexsearchrootfilesinclude) and/or [`latex-workshop.latex.search.rootFiles.exclude`](#latex-workshoplatexsearchrootfilesexclude).
 1. **The `subfiles` package case** The main file is used to provide intellisense. The non-interactive functions `autobuild`, `autoclean` and forward `synctex` rely on the value of the configuration variable [`latex-workshop.latex.rootFile.useSubFile`](#latex-workshoplatexrootfileusesubfile) to choose between the main file and the subfile.
