@@ -171,7 +171,7 @@ LaTeX Workshop registers the following placeholders
 | `%DOCFILE_EXT%` | The root file name with the extension |
 | `%DIR%`         | The root file directory |
 | `%DIR_W32%`     | The root file directory with `\` path separator on Windows |
-| `%TMPDIR%`      | A temporary folder for storing ancillary files |
+| `%TMPDIR%`      | A temporary folder for storing auxilary files |
 | `%OUTDIR%`      | The output directory configured in [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutDir) |
 | `%OUTDIR_W32%`  | The output directory configured in [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutDir) with `\` path separator on Windows |
 | `%WORKSPACE_FOLDER%`  | The current workspace path |
