@@ -67,6 +67,7 @@ The following extensions are known to cause issues when active at the same time 
 - [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense): it may break autocompletion for bibliography citations.
 - [LaTeX Preview](https://marketplace.visualstudio.com/items?itemName=ajshort.latex-preview): Conflict with LaTeX Workshop.
 - [LaTeX language support](https://marketplace.visualstudio.com/items?itemName=torn4dom4n.latex-support): It does not work with some LaTeX Workshop's snippets.
+- [Elastic Tabstops Mono](https://marketplace.visualstudio.com/items?itemName=isral.elastic-tabstops-mono): Delay when pressing `Enter`. You can disable this keybinding by setting [`latex-workshop.bind.enter.key`](Environments#latex-workshopbindenterkey) to `false`.
 
 ## Using LaTeX Workshop with WSL
 
