@@ -65,7 +65,7 @@ The key `\` automatically triggers completion of LaTeX commands. You can define 
 
 There are three different ways to insert a new environment
 
-_ **The `\begin / \end` snippet**. Type `\begin` and autocomplete with _Insert `\begin / \end`_. It will leave you with a multi-cursor inside the braces of `\begin{}` and `\end{}` and a list of environments will pop up.
+- **The `\begin / \end` snippet**. Type `\begin` and autocomplete with _Insert `\begin / \end`_. It will leave you with a multi-cursor inside the braces of `\begin{}` and `\end{}` and a list of environments will pop up.
 
   <img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/begin-end.gif" alt="begin/end with multi-cursor demo">
 
