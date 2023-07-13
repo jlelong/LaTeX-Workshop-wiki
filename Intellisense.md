@@ -73,7 +73,7 @@ There are three different ways to insert a new environment
 
   <img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/begin-options.gif" alt="begin with options demo">
 
-- **The `\envname` approach**. Standard environments can be inserted by typing `\` followed by the environment name. This approach can deal with extra arguments
+- **The `\envname` approach**. Standard environments can be inserted by typing `\` followed by the environment name. This approach can deal with extra arguments.
 
   <img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/env-cmd.gif" alt="\envname demo">
 
@@ -81,7 +81,7 @@ Completion for environments is based on a set of predefined environments enriche
 
 ## Files
 
-We support intellisense for file completion inside the following commands : `include`, `includegraphics`, `input`, and all the commands from the `import` package. For the `includegraphics` command, when some paths are defined by the `\graphicspath` command, only the files located under these directories are liste.
+We support intellisense for file completion inside the following commands : `include`, `includegraphics`, `input`, and all the commands from the `import` package. For the `includegraphics` command, when some paths are defined by the `\graphicspath` command, only the files located under these directories are listed.
 
 Note that any file matching one of the patterns listed in the following variables is removed from the list: `files.exclude`, `latex-wokrshop.intellisense.file.exclude`.
 
@@ -170,7 +170,7 @@ Next to intellisense for anything starting with `\`, we provide an independent i
 
 ## Configuration variables
 
-### latex-workshop.intellisense.includegraphics.preview.enabled
+### `latex-workshop.intellisense.includegraphics.preview.enabled`
 
 Enable preview for `\includegraphics` completion.
 
@@ -178,7 +178,7 @@ Enable preview for `\includegraphics` completion.
 | --------- | ------------- |
 | _boolean_ | `true`        |
 
-### latex-workshop.intellisense.citation.label
+### `latex-workshop.intellisense.citation.label`
 
 Define what field to show as suggestion labels when intellisense provides citation suggestions in [inline](#latex-workshopintellisensecitationtype) mode.
 
@@ -190,7 +190,7 @@ Define what field to show as suggestion labels when intellisense provides citati
 | -------- | -------------- |
 | _string_ | `"bibtex key"` |
 
-### latex-workshop.intellisense.citation.format
+### `latex-workshop.intellisense.citation.format`
 
 List of fields to display for citation preview and intellisense. This list is also used as the filter text to narrow down the intellisense suggestions.
 
@@ -198,7 +198,7 @@ List of fields to display for citation preview and intellisense. This list is al
 |----------------------|--------------------------------------------------------------------|
 | _array_ of _strings_ | `["author", "title", "journal", "publisher", "booktitle", "year"]` |
 
-### latex-workshop.bibtex.maxFileSize
+### `latex-workshop.bibtex.maxFileSize`
 
 Define the maximum bibtex file size for the extension to parse in MB.
 
@@ -206,7 +206,7 @@ Define the maximum bibtex file size for the extension to parse in MB.
 | ------- | ------------- |
 | _float_ | `5`           |
 
-### latex-workshop.intellisense.citation.type
+### `latex-workshop.intellisense.citation.type`
 
 Define which type of hint to show when intellisense provides citation suggestions.
 
@@ -217,7 +217,7 @@ Define which type of hint to show when intellisense provides citation suggestion
 | -------- | ------------- |
 | _string_ | `"inline"`    |
 
-### latex-workshop.intellisense.triggers.latex
+### `latex-workshop.intellisense.triggers.latex`
 
 Additional trigger characters for intellisense of LaTeX documents. Reload vscode to make any change in this configuration effective.
 
@@ -225,7 +225,7 @@ Additional trigger characters for intellisense of LaTeX documents. Reload vscode
 | -------------------- | ------------- |
 | _array_ of _strings_ | `["{"]`          |
 
-### latex-workshop.intellisense.package.enabled
+### `latex-workshop.intellisense.package.enabled`
 
 Auto-complete commands and environments from used packages.
 
@@ -233,7 +233,7 @@ Auto-complete commands and environments from used packages.
 | --------- | ------------- |
 | _boolean_ | `true`        |
 
-### latex-workshop.intellisense.package.exclude
+### `latex-workshop.intellisense.package.exclude`
 
 List of packages to exclude from the auto-completion mechanism.
 
@@ -243,7 +243,7 @@ When `latex-workshop.intellisense.package.enabled` is set to `true`, the command
 | -------------------- | ------------- |
 | _array_ of _strings_ | `[]`          |
 
-### latex-workshop.intellisense.package.extra
+### `latex-workshop.intellisense.package.extra`
 
 List of extra packages to always add to the auto-completion mechanism.
 
@@ -253,7 +253,7 @@ When `latex-workshop.intellisense.package.enabled` is set to `true`, the command
 | -------------------- | ------------- |
 | _array_ of _strings_ | `[]`          |
 
-### latex-workshop.intellisense.package.dirs
+### `latex-workshop.intellisense.package.dirs`
 
 List of extra directories to look for package completion files in addition to those provided by the extension.
 
@@ -263,7 +263,7 @@ See the section on [Commands intellisense](#commands) to learn how to generate t
 | -------------------- | ------------- |
 | _array_ of _strings_ | `[]`          |
 
-### latex-workshop.intellisense.package.env.enabled
+### `latex-workshop.intellisense.package.env.enabled`
 
 If true, every environment provided by an included package is available by a snippet `\envname`. Only applies when `latex-workshop.intellisense.package.enabled` is true.
 
@@ -272,7 +272,7 @@ If true, every environment provided by an included package is available by a sni
 | _boolean_ | `true`        |
 
 
-### latex-workshop.intellisense.optionalArgsEntries.enabled
+### `latex-workshop.intellisense.optionalArgsEntries.enabled`
 
 Many LaTeX commands can have several signatures, each with different arguments. If set to True, the intellisense completion list will have one entry for each form of a given command.
 
@@ -280,7 +280,7 @@ Many LaTeX commands can have several signatures, each with different arguments. 
 | --------- | ------------- |
 | _boolean_ | `true`        |
 
-### latex-workshop.intellisense.argumentHint.enabled
+### `latex-workshop.intellisense.argumentHint.enabled`
 
 Many snippets use text hints of the form `${\d:some_tex}` for their argument. You may prefer to hide instead by setting this configuration to `true`.
 
@@ -290,7 +290,7 @@ Many snippets use text hints of the form `${\d:some_tex}` for their argument. Yo
 
 Reload vscode after change.
 
-### latex-workshop.intellisense.label.command
+### `latex-workshop.intellisense.label.command`
 
 The name of LaTeX commands that indicates a label definition. The command must accept one mandatory argument of the label reference string, e.g, `\linelabel{ref-str}`.
 
@@ -298,7 +298,7 @@ The name of LaTeX commands that indicates a label definition. The command must a
 | -------------------- | ------------------------ |
 | _array_ of _strings_ | `["label", "linelabel"]` |
 
-### latex-workshop.intellisense.label.keyval
+### `latex-workshop.intellisense.label.keyval`
 
 Scan for labels defined as `label={some tex}` to add to the reference intellisense menu. The braces are mandatory.
 
@@ -306,7 +306,7 @@ Scan for labels defined as `label={some tex}` to add to the reference intellisen
 | --------- | ------------- |
 | _boolean_ | `true`        |
 
-### latex-workshop.intellisense.unimathsymbols.enabled
+### `latex-workshop.intellisense.unimathsymbols.enabled`
 
 When `\` is typed, show unimath symbols in the dropdown selector.
 
@@ -314,7 +314,7 @@ When `\` is typed, show unimath symbols in the dropdown selector.
 | --------- | ------------- |
 | _boolean_ | `false`       |
 
-### latex-workshop.intellisense.command.user
+### `latex-workshop.intellisense.command.user`
 
 Dictionary of `"command name": "command snippet"` to add to, replace, or remove the default ones in `data/commands.json`. The key of the dictionary is the command name with optional braces indicating the command arguments. The value of the dictionary is the snippet to be inserted. If the key is identical to a default command suggestion defined in `data/commands.json`, the new value in the dictionary is used for suggestion. If the value is an empty string, the command is removed from suggestion. Leading backslashes will be added to both the name and snippet by the extension, so don't include them in this config. For example, `{"mycommand[]{}": "notsamecommand[${2:option}]{$TM_SELECTED_TEXT$1}", "parbox{}{}": "parbox{${2:width}}{$TM_SELECTED_TEXT$1}", "overline{}": ""}` adds a new command with name `mycommand[]{}` that inserts `\\notsamecommand[]{}`, replaces the default snippet of `\\parbox{}{}` to make it include current selected text, and removes `\\overline{}` from suggestion.
 
@@ -322,7 +322,7 @@ Dictionary of `"command name": "command snippet"` to add to, replace, or remove 
 |------------------------------------|---------------|
 | _dictionary_ of _string_: _string_ | `{}`          |
 
-### latex-workshop.intellisense.atSuggestion.trigger.latex
+### `latex-workshop.intellisense.atSuggestion.trigger.latex`
 
 Character to trigger `@` suggestions as part of intellisense. Set this variable to `''` to deactivate these suggestions.
 
@@ -330,7 +330,7 @@ Character to trigger `@` suggestions as part of intellisense. Set this variable 
 |----------|---------------|
 | _string_ | `@`           |
 
-### latex-workshop.intellisense.atSuggestion.user
+### `latex-workshop.intellisense.atSuggestion.user`
 
 Dictionary of `"@prefix": "snippet command"` to add to, replace, or remove the default suggestions in `data/at-suggestions.json`. The key of the dictionary is the triggering string, which **must** starts with `@` regardless of [`latex-workshop.intellisense.atSuggestion.trigger.latex`](#latex-workshopintellisenseatsuggestiontriggerlatex). The value of the dictionary is the snippet to be inserted. If the key is identical to a default snippet defined in `data/at-suggestions.json`, the new value in the dictionary is used for suggestion. If the value is an empty string, the snippet is removed from suggestion. For example, `{ "@.": "\\cdot", "@6": "" }`.
 
@@ -338,7 +338,7 @@ Dictionary of `"@prefix": "snippet command"` to add to, replace, or remove the d
 |------------------------------------|---------------|
 | _dictionary_ of _string_: _string_ | `{}`          |
 
-### latex-workshop.latex.bibDirs
+### `latex-workshop.latex.bibDirs`
 
 List of directories where to look for `.bib` files.
 
@@ -348,7 +348,7 @@ Absolute paths are required. This setting is only used by the intellisense featu
 | -------------------- | ------------- |
 | _array_ of _strings_ | `[]`          |
 
-### latex-workshop.kpsewhich.path
+### `latex-workshop.kpsewhich.path`
 
 Define the location of the kpsewhich executable file.
 
@@ -356,7 +356,7 @@ Define the location of the kpsewhich executable file.
 | --------- | ----------------- |
 | _string_  | `"kpsewhich"`     |
 
-### latex-workshop.kpsewhich.enabled
+### `latex-workshop.kpsewhich.enabled`
 
 Use `kpsewhich -format=.bib` to resolve bibliography files in addition to looking into the directories listed in [`latex-workshop.latex.bibDirs`](#latex-workshoplatexbibDirs).
 
@@ -367,7 +367,7 @@ The `ksepwhich` executable is defined by [`latex-workshop.kpsewhich.path`](#late
 | _boolean_ | `false`       |
 
 
-### latex-workshop.intellisense.file.exclude
+### `latex-workshop.intellisense.file.exclude`
 
 Patterns to ignore in file completion
 
@@ -375,7 +375,7 @@ Patterns to ignore in file completion
 | -------------------- | ------------- |
 | _array_ of _strings_ | `[ "**/*.aux", "**/*.bbl", "**/*.bcf", "**/*.blg", "**/*.idx", "**/*.ind", "**/*.lof", "**/*.lot", "**/*.out", "**/*.toc", "**/*.acn", "**/*.acr", "**/*.alg", "**/*.glg", "**/*.glo", "**/*.gls", "**/*.ist", "**/*.fls", "**/*.log", "**/*.fdb_latexmk", "**/*.synctex.gz", "**/*.run.xml" ]`          |
 
-### latex-workshop.intellisense.file.base
+### `latex-workshop.intellisense.file.base`
 
 Specify the base directory for file completion. The possible choices are
 
@@ -387,7 +387,7 @@ Specify the base directory for file completion. The possible choices are
 | -------------------- | ------------- |
 | _enum_               | `"root relative"\|"file relative"\|"both"` |
 
-### latex-workshop.intellisense.update.aggressive.enabled
+### `latex-workshop.intellisense.update.aggressive.enabled`
 
 Defines whether the extension aggressively parses the changed content after stopped typing.
 
@@ -397,7 +397,7 @@ Disable this config will let the extension only update intellisense after saving
 | --------- | ------------- |
 | _boolean_ | `false`       |
 
-### latex-workshop.intellisense.update.delay
+### `latex-workshop.intellisense.update.delay`
 
 Defines the delay in milliseconds for the extension to update current active file content for intellisense after stopped typing.
 
@@ -420,7 +420,7 @@ The entries are formatted according to the variables already used for bibtex for
 
 - Inside an entry, when at the beginning of a line, intellisense suggests optional fields. the completion menu pops up after typing two characters but can also be manually triggered using <kbd>ctrl</kbd> + <kbd>space</kbd>. The available completions are described in [data/bibtex-optional-entries.json](https://github.com/James-Yu/LaTeX-Workshop/blob/master/data/bibtex-optional-entries.json).
 
-### latex-workshop.intellisense.citation.backend
+### `latex-workshop.intellisense.citation.backend`
 
 Backend to use for citation intellisense.
 
@@ -428,7 +428,7 @@ Backend to use for citation intellisense.
 | ------------------- | --------------|-----------------|
 | _enum_              | `"bibtex"`    | `"bibtex" \| "biblatex"` |
 
-### latex-workshop.intellisense.biblatexJSON.replace
+### `latex-workshop.intellisense.biblatexJSON.replace`
 
 Dictionary of `"entry name": ["array", "of", "fields"]` to replace the default fields used in [data/bibtex-entries.json](https://github.com/James-Yu/LaTeX-Workshop/blob/master/data/bibtex-entries.json).
 
@@ -438,7 +438,7 @@ This variable is used when [latex-workshop.intellisense.citation.backend](`latex
 |------------------------------------|---------------|
 | _dictionary_ of _string_: _string_ | `{}`          |
 
-### latex-workshop.intellisense.bibtexJSON.replace
+### `latex-workshop.intellisense.bibtexJSON.replace`
 
 Dictionary of `"entry name": ["array", "of", "fields"]` to replace the default fields used in [data/bibtex-entries.json](https://github.com/James-Yu/LaTeX-Workshop/blob/master/data/bibtex-entries.json).
 
