@@ -75,7 +75,7 @@ When [`latex-workshop.hover.command.enabled`](#latex-workshophovercommandenabled
 
 ## Configuration variables
 
-### latex-workshop.hover.ref.enabled
+### `latex-workshop.hover.ref.enabled`
 
 Enable Hover on References.
 
@@ -83,7 +83,7 @@ Enable Hover on References.
 | --------- | ------------- |
 | _boolean_ | `true`        |
 
-### latex-workshop.hover.ref.number.enabled
+### `latex-workshop.hover.ref.number.enabled`
 
 Show the number assigned to the reference in the previous compilation.
 
@@ -91,7 +91,7 @@ Show the number assigned to the reference in the previous compilation.
 | --------- | ------------- |
 | _boolean_ | `true`        |
 
-### latex-workshop.hover.citation.enabled
+### `latex-workshop.hover.citation.enabled`
 
 Enable Hover on Citations.
 
@@ -99,7 +99,7 @@ Enable Hover on Citations.
 | --------- | ------------- |
 | _boolean_ | `true`        |
 
-### latex-workshop.hover.command.enabled
+### `latex-workshop.hover.command.enabled`
 
 Enable Hover on Commands to show the possible signatures.
 
@@ -107,7 +107,7 @@ Enable Hover on Commands to show the possible signatures.
 | --------- | ------------- |
 | _boolean_ | `true`        |
 
-### latex-workshop.hover.preview.enabled
+### `latex-workshop.hover.preview.enabled`
 
 Enable preview on hover.
 
@@ -115,7 +115,7 @@ Enable preview on hover.
 | --------- | ------------- |
 | _boolean_ | `true`        |
 
-### latex-workshop.hover.preview.scale
+### `latex-workshop.hover.preview.scale`
 
 Scale of preview on hover.
 
@@ -123,7 +123,7 @@ Scale of preview on hover.
 | -------- | ------------- |
 | _number_ | `1`           |
 
-### latex-workshop.hover.preview.newcommand.parseTeXFile.enabled
+### `latex-workshop.hover.preview.newcommand.parseTeXFile.enabled`
 
 Enable newcommands defined in the current TeX file to be included in Hover Preview. We currently only support commands defined on **a single line**.
 
@@ -131,7 +131,7 @@ Enable newcommands defined in the current TeX file to be included in Hover Previ
 | --------- | ------------- |
 | _boolean_ | `true`        |
 
-### latex-workshop.hover.preview.newcommand.newcommandFile
+### `latex-workshop.hover.preview.newcommand.newcommandFile`
 
 Set the path of a file containing newcommands to be used in Hover Preview. If the path is relative, it is joined with the root dir.
 
@@ -139,7 +139,7 @@ Set the path of a file containing newcommands to be used in Hover Preview. If th
 | -------- | ------------- |
 | _string_ | ""            |
 
-### latex-workshop.hover.preview.mathjax.extensions
+### `latex-workshop.hover.preview.mathjax.extensions`
 
 MathJax extensions to load for Hover Preview. See [the list](https://docs.mathjax.org/en/latest/input/tex/extensions/index.html). Notice that extensions, `ams`, `color`, `newcommand`, `noerrors`, and `noundefined` are loaded by default. They cannot be disabled.
 
@@ -147,7 +147,7 @@ MathJax extensions to load for Hover Preview. See [the list](https://docs.mathja
 | -------- | ------------- | -- |
 | _array_  | []            | `"amscd"`, `"bbox"`, `"boldsymbol"`, `"braket"`, `"bussproofs"`, `"cancel"`, `"cases"`, `"centernot"`, `"colortbl"`, `"empheq"`, `"enclose"`, `"extpfeil"`, `"gensymb"`, `"html"`, `"mathtools"`, `"mhchem"`, `"physics"`, `"textcomp"`, `"textmacros"`, `"unicode"`, `"upgreek"`, `"verb"` |
 
-### latex-workshop.hover.preview.cursor.enabled
+### `latex-workshop.hover.preview.cursor.enabled`
 
 Render cursor in math preview on hover at the current position.
 
@@ -155,7 +155,7 @@ Render cursor in math preview on hover at the current position.
 | --------- | ------------- |
 | _boolean_ | `true`        |
 
-### latex-workshop.hover.preview.cursor.symbol
+### `latex-workshop.hover.preview.cursor.symbol`
 
 Define the cursor symbol in math preview on hover.
 
@@ -163,7 +163,7 @@ Define the cursor symbol in math preview on hover.
 | -------- | ------------- |
 | _string_ | `\ddagger`    |
 
-### latex-workshop.hover.preview.cursor.color
+### `latex-workshop.hover.preview.cursor.color`
 
 Define the color of the cursor in math preview on hover.
 
@@ -171,7 +171,7 @@ Define the color of the cursor in math preview on hover.
 | -------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | _string_ | "auto"        | `"auto"`, `"black"`, `"blue"`, `"brown"`, `"cyan"`, `"darkgray"`, `"gray"`, `"green"`, `"lightgray"`, `"lime"`, `"magenta"`, `"olive"`, `"orange"`, `"pink"`, `"purple"`, `"red"`, `"teal"`, `"violet"`, `"white"`, `"yellow"` |
 
-### latex-workshop.view.pdf.ref.viewer
+### `latex-workshop.view.pdf.ref.viewer`
 
 PDF viewer used for `[View on PDF]` link on hover over `\ref`, and other reference commands.
 
@@ -179,7 +179,7 @@ PDF viewer used for `[View on PDF]` link on hover over `\ref`, and other referen
 | -------- | ------------- | ---------------------------------------- |
 | _string_ | "auto"        | `"auto"`, `"tabOrBrowser"`, `"external"` |
 
-### latex-workshop.texdoc.path
+### `latex-workshop.texdoc.path`
 
 Define the location of texdoc executable.
 
@@ -187,7 +187,7 @@ Define the location of texdoc executable.
 | --------- | ------------- |
 | _string_  | "texdoc"      |
 
-### latex-workshop.texdoc.args
+### `latex-workshop.texdoc.args`
 
 Texdoc arguments to see a package documentation.
 
@@ -197,7 +197,7 @@ Texdoc arguments to see a package documentation.
 
 The package name is automatically appended to the arguments.
 
-### latex-workshop.mathpreviewpanel.editorGroup
+### `latex-workshop.mathpreviewpanel.editorGroup`
 
 The editor group in which to open the math preview panel.
 
@@ -213,7 +213,7 @@ The accepted values are:
 - above: Put the math preview panel in a new group above the current one
 - below: Put the math preview panel in a new group below the current one
 
-### latex-workshop.mathpreviewpanel.cursor.enabled
+### `latex-workshop.mathpreviewpanel.cursor.enabled`
 
 **This feature is experimental. If you report an issue to us on this feature, we may not fix it. We will not accept any pull requests.**
 Render a cursor on the math preview panel.
@@ -223,7 +223,7 @@ Render a cursor on the math preview panel.
 | _boolean_  | `false`       |
 
 
-### latex-workshop.hover.preview.maxLines
+### `latex-workshop.hover.preview.maxLines`
 
 Maximum number of lines between the beginning of the math environment and the cursor position to allow preview.
 

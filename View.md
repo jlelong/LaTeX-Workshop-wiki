@@ -19,7 +19,7 @@ If you want to preview the PDF file in a separated window, you can do that with 
 
 The extension also allows to view any PDF file possibly not related to a LaTeX project. To open such a PDF file, it is sufficient to open from the _Explorer_. Any PDF file opened this is way is monitored by a file watcher to be automatically reloaded when it changes on disk. Note that this is a different mechanism as the one used for PDF files related to LaTeX projects, which get reloaded after every successful building.
 
-### latex-workshop.latex.watch.pdf.delay
+### `latex-workshop.latex.watch.pdf.delay`
 
 Delay before reloading a PDF file after last change, in milliseconds.
 
@@ -317,7 +317,7 @@ Forward: Edit `settings.json` as follows, then use
 
 ## Settings details
 
-### latex-workshop.latex.outDir
+### `latex-workshop.latex.outDir`
 
 The directory where the extension tries to find project files (e.g., PDF and SyncTeX generated files).
 
@@ -328,7 +328,7 @@ The following placeholders defined in the [recipes section](Compile#placeholders
 | -------- | ------------- |
 | _string_ | `"%DIR%"`     |
 
-### latex-workshop.view.pdf.viewer
+### `latex-workshop.view.pdf.viewer`
 
 The default PDF viewer.
 
@@ -340,7 +340,7 @@ The default PDF viewer.
 - `"browser"`: Open PDF with the default web browser. SyncTeX and other features available.
 - `"external"`: **Experimental** Open PDF with the external viewer set in "View > Pdf > External: command"
 
-### latex-workshop.view.pdf.ref.viewer
+### `latex-workshop.view.pdf.ref.viewer`
 
 PDF viewer used for [View on PDF] link on `\ref`.
 
@@ -348,7 +348,7 @@ PDF viewer used for [View on PDF] link on `\ref`.
 | ------- | ------------- | ----------------------------------------    |
 | _enum_  | `"auto"`      | `"auto"`, `"tabOrBrowser"`, or `"external"` |
 
-### latex-workshop.view.pdf.tab.editorGroup
+### `latex-workshop.view.pdf.tab.editorGroup`
 
 Define the editor group to use for the viewer tab.
 
@@ -362,7 +362,7 @@ Define the editor group to use for the viewer tab.
 - `"above"`: Put the viewer tab in a new group above the current one
 - `"below"`: Put the viewer tab in a new group below the current one
 
-### latex-workshop.view.pdf.zoom
+### `latex-workshop.view.pdf.zoom`
 
 The default zoom level of the PDF viewer. This default value will be passed to the viewer upon opening.
 
@@ -370,7 +370,7 @@ The default zoom level of the PDF viewer. This default value will be passed to t
 | -------- | ------------- | ----------------------------------------------------------------------------------------------------------------- |
 | _string_ | `"auto"`      | `"auto"`, `"page-actual"`, `"page-fit"`, `"page-width"`, one-based scale values (e.g., 0.5 for 50%, 2.0 for 200%) |
 
-### latex-workshop.view.pdf.scrollMode
+### `latex-workshop.view.pdf.scrollMode`
 
 The default scroll mode of the PDF viewer. This default value will be passed to the viewer upon opening.
 
@@ -383,7 +383,7 @@ The default scroll mode of the PDF viewer. This default value will be passed to 
 - `2`: Wrapped display
 - `3`: Page scroll
 
-### latex-workshop.view.pdf.spreadMode
+### `latex-workshop.view.pdf.spreadMode`
 
 The default spread mode of the PDF viewer. This default value will be passed to the viewer upon opening.
 
@@ -395,7 +395,7 @@ The default spread mode of the PDF viewer. This default value will be passed to 
 - `1`: Odd spread
 - `2`: Even spread
 
-### latex-workshop.view.pdf.hand
+### `latex-workshop.view.pdf.hand`
 
 Define if the hand tool is enabled by default in the PDF viewer.
 
@@ -403,7 +403,7 @@ Define if the hand tool is enabled by default in the PDF viewer.
 | --------- | ------------- |
 | _boolean_ | `false`       |
 
-### latex-workshop.view.pdf.trim
+### `latex-workshop.view.pdf.trim`
 
 The default trim mode of the PDF viewer
 
@@ -416,7 +416,7 @@ The default trim mode of the PDF viewer
 - `2`: Trim 10% at margin
 - `3`: Trim 15% at margin
 
-### latex-workshop.viewer.pdf.internal.port
+### `latex-workshop.viewer.pdf.internal.port`
 
 Defines the port on which the internal viewer listens for events such as synctex or refreshing the viewer. The default value of `0` means that the port is chosen randomly by the extension.
 
@@ -426,7 +426,7 @@ Defines the port on which the internal viewer listens for events such as synctex
 
 Note: keep this value set to `0` unless you know what you are doing.
 
-### latex-workshop.viewer.pdf.internal.keyboardEvent
+### `latex-workshop.viewer.pdf.internal.keyboardEvent`
 
 Rebroadcast KeyboardEvent on the internal PDF viewers. If the keyboard shortcuts of VS Code do not work well on the internal viewer, change this setting. You must reopen the internal viewers or restart VS Code to take into account a change in this configuration.
 
@@ -434,7 +434,7 @@ Rebroadcast KeyboardEvent on the internal PDF viewers. If the keyboard shortcuts
 | ------ | ------------- |--------------------|
 | _enum_ | `auto`        | `auto`, `force`, `never` |
 
-### latex-workshop.view.pdf.color.light.pageColorsForeground
+### `latex-workshop.view.pdf.color.light.pageColorsForeground`
 
 The foreground color of the document when the OS appearance is light. The string must represent a color in HTML. Reload vscode to make any change in this configuration effective.
 
@@ -442,7 +442,7 @@ The foreground color of the document when the OS appearance is light. The string
 | -------- | ------------- |
 | _string_ | `""`   |
 
-### latex-workshop.view.pdf.color.light.pageColorsBackground
+### `latex-workshop.view.pdf.color.light.pageColorsBackground`
 
 The background color of the document when the OS appearance is light. The string must represent a color in HTML. Reload vscode to make any change in this configuration effective.
 
@@ -450,7 +450,7 @@ The background color of the document when the OS appearance is light. The string
 | -------- | ------------- |
 | _string_ | `""`   |
 
-### latex-workshop.view.pdf.color.light.backgroundColor
+### `latex-workshop.view.pdf.color.light.backgroundColor`
 
 The background color of the viewer when the OS appearance is light. The string must represent a color in HTML. Reload vscode to make any change in this configuration effective.
 
@@ -458,7 +458,7 @@ The background color of the viewer when the OS appearance is light. The string m
 | -------- | ------------- |
 | _string_ | `"#ffffff"`   |
 
-### latex-workshop.view.pdf.color.light.pageBorderColor
+### `latex-workshop.view.pdf.color.light.pageBorderColor`
 
 The border color of pages when the OS appearance is light. The string must represent a color in HTML. Reload vscode to make any change in this configuration effective.
 
@@ -466,7 +466,7 @@ The border color of pages when the OS appearance is light. The string must repre
 | -------- | ------------- |
 | _string_ | `"lightgrey"` |
 
-### latex-workshop.view.pdf.color.dark.pageColorsForeground
+### `latex-workshop.view.pdf.color.dark.pageColorsForeground`
 
 The foreground color of the document when the OS appearance is dark. The string must represent a color in HTML. Reload vscode to make any change in this configuration effective.
 
@@ -474,7 +474,7 @@ The foreground color of the document when the OS appearance is dark. The string 
 | -------- | ------------- |
 | _string_ | `""`   |
 
-### latex-workshop.view.pdf.color.dark.pageColorsBackground
+### `latex-workshop.view.pdf.color.dark.pageColorsBackground`
 
 The background color of the document when the OS appearance is dark. The string must represent a color in HTML. Reload vscode to make any change in this configuration effective.
 
@@ -482,7 +482,7 @@ The background color of the document when the OS appearance is dark. The string 
 | -------- | ------------- |
 | _string_ | `""`   |
 
-### latex-workshop.view.pdf.color.dark.backgroundColor
+### `latex-workshop.view.pdf.color.dark.backgroundColor`
 
 The background color of the viewer when the OS appearance is dark. The string must represent a color in HTML. Reload vscode to make any change in this configuration effective.
 
@@ -490,7 +490,7 @@ The background color of the viewer when the OS appearance is dark. The string mu
 | -------- | ------------- |
 | _string_ | `"#ffffff"`   |
 
-### latex-workshop.view.pdf.color.dark.pageBorderColor
+### `latex-workshop.view.pdf.color.dark.pageBorderColor`
 
 The border color of pages when the OS appearance is dark. The string must represent a color in HTML. Reload vscode to make any change in this configuration effective.
 
@@ -498,7 +498,7 @@ The border color of pages when the OS appearance is dark. The string must repres
 | -------- | ------------- |
 | _string_ | `"lightgrey"` |
 
-### latex-workshop.view.pdf.invertMode.enabled
+### `latex-workshop.view.pdf.invertMode.enabled`
 
 Enable the CSS invert filter. The possible choices are
 
@@ -513,7 +513,7 @@ Enable the CSS invert filter. The possible choices are
 | ------ | ------------- | ---------------                     |
 | _enum_ | `compat`      | `auto`, `always`, `compat`, `never` |
 
-### latex-workshop.view.pdf.invert
+### `latex-workshop.view.pdf.invert`
 
 Define the CSS invert filter level of the PDF viewer.
 
@@ -524,7 +524,7 @@ This config can invert the color of PDF. Possible values are any floating point 
 | _number_ | `0`           |
 
 
-### latex-workshop.view.pdf.invertMode.brightness
+### `latex-workshop.view.pdf.invertMode.brightness`
 
 Define the CSS brightness filter level of the PDF viewer when the invert mode is enabled. Possible values are from `0` to `2`. You must reopen the internal viewers or restart VS Code to take into account a change in this configuration.
 
@@ -533,7 +533,7 @@ Define the CSS brightness filter level of the PDF viewer when the invert mode is
 | _number_ | `1`           |
 
 
-### latex-workshop.view.pdf.invertMode.grayscale
+### `latex-workshop.view.pdf.invertMode.grayscale`
 
 Define the CSS grayscale filter level of the PDF viewer when the invert mode is enabled. Possible values are from `0` to `1`. You must reopen the internal viewers or restart VS Code to take into account a change in this configuration.
 
@@ -541,7 +541,7 @@ Define the CSS grayscale filter level of the PDF viewer when the invert mode is 
 | -------- | ------------- |
 | _number_ | `0.6`         |
 
-### latex-workshop.view.pdf.invertMode.hueRotate
+### `latex-workshop.view.pdf.invertMode.hueRotate`
 
 Define the CSS hue-rotate filter angle of the PDF viewer when the invert mode is enabled. Possible values are from `0` to `360`. You must reopen the internal viewers or restart VS Code to take into account a change in this configuration.
 
@@ -549,7 +549,7 @@ Define the CSS hue-rotate filter angle of the PDF viewer when the invert mode is
 | -------- | ------------- |
 | _number_ | `180`         |
 
-### latex-workshop.view.pdf.invertMode.sepia
+### `latex-workshop.view.pdf.invertMode.sepia`
 
 Define the CSS sepia filter level of the PDF viewer when the invert mode is enabled. Possible values are from `0` to `1`. You must reopen the internal viewers or restart VS Code to take into account a change in this configuration.
 
@@ -557,7 +557,7 @@ Define the CSS sepia filter level of the PDF viewer when the invert mode is enab
 | -------- | ------------- |
 | _number_ | `0`           |
 
-### latex-workshop.view.pdf.internal.synctex.keybinding
+### `latex-workshop.view.pdf.internal.synctex.keybinding`
 
 Which keybinding to use for the internal PDF viewer for reverse SyncTeX. Reload vscode to make any change in this configuration effective.
 
@@ -565,7 +565,7 @@ Which keybinding to use for the internal PDF viewer for reverse SyncTeX. Reload 
 | ------ | -------------- |----------------------------------- |
 | _enum_ | `"ctrl-click"` | `"ctrl-click"` or `"double-click"` |
 
-### latex-workshop.view.pdf.tab.openDelay
+### `latex-workshop.view.pdf.tab.openDelay`
 
 Define the delay in milliseconds to wait for a tab opening.
 
@@ -575,7 +575,7 @@ Please increase the value if you encounter a focus issue after opening a tab.
 | --------- | ------------- |
 | _number_  | `1000`        |
 
-### latex-workshop.synctex.afterBuild.enabled
+### `latex-workshop.synctex.afterBuild.enabled`
 
 Execute forward synctex at cursor position after compiling LaTeX project.
 
@@ -583,7 +583,7 @@ Execute forward synctex at cursor position after compiling LaTeX project.
 | --------- | ------------- |
 | _boolean_ | `false`       |
 
-### latex-workshop.synctex.path
+### `latex-workshop.synctex.path`
 
 Define the location of SyncTeX executive file.
 
@@ -594,7 +594,7 @@ Additional arguments, e.g., synctex modes and position of click, will be appende
 | _string_ | `"synctex"`   |
 
 
-### latex-workshop.synctex.synctexjs.enabled
+### `latex-workshop.synctex.synctexjs.enabled`
 
 Enable using a builtin synctex function. The command set in latex-workshop.synctex.path will not be used.
 This builtin synctex works well even if the path of TeX files contains non-ASCII characters.
@@ -606,7 +606,7 @@ This builtin synctex works well even if the path of TeX files contains non-ASCII
 
 
 
-### latex-workshop.view.pdf.external.viewer.command
+### `latex-workshop.view.pdf.external.viewer.command`
 
 The command to execute when using external viewer. When left empty, the default PDF viewer provided by the operating system is used.
 
@@ -620,7 +620,7 @@ This function is not officially supported. `%PDF%` is the placeholder for the ab
     "latex-workshop.view.pdf.external.viewer.command": "/usr/bin/okular",
 ```
 
-### latex-workshop.view.pdf.external.viewer.args
+### `latex-workshop.view.pdf.external.viewer.args`
 
 This works with `latex-workshop.view.pdf.external.viewer.command` to provide the arguments to the external viewer.
 
@@ -638,7 +638,7 @@ e.g.
 ```
 
 
-### latex-workshop.view.pdf.external.synctex.command
+### `latex-workshop.view.pdf.external.synctex.command`
 
 The command to execute when forward synctex to external viewer.
 
@@ -648,7 +648,7 @@ The command to execute when forward synctex to external viewer.
 
 Note: this function is not officially supported.
 
-### latex-workshop.view.pdf.external.synctex.args
+### `latex-workshop.view.pdf.external.synctex.args`
 
 The arguments to apply to the external forward synctex command. %LINE% is the line number, %PDF% is the placeholder for the absolute path to the generated PDF file, and %TEX% is the source LaTeX file path with `.tex` extension from which syncTeX is fired.
 
