@@ -100,7 +100,8 @@ The javascript built-in version of SyncTeX is used by default. See [settings](#l
 
 **Forward/Direct** synctex (source to pdf) can either be activated by selecting 'Navigate, select, and edit' > 'SyncTeX from cursor' in the side bar, or by the shortcut <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>j</kbd> (<kbd>cmd</kbd>+<kbd>option</kbd>+<kbd>j</kbd> on Mac), see also the [FAQ](https://github.com/James-Yu/LaTeX-Workshop/wiki/FAQ#i-cannot-use-ctrlalt-in-a-shortcut) for an alternative shortcut.
 
-**Backward/Reverse** synctex (pdf to source) is activated by selecting the relevant element of the pdf preview. When using the internal viewer, the keybinding to select an element is defined by [`latex-workshop.view.pdf.internal.synctex.keybinding`](#latex-workshopviewpdfinternalsynctexkeybinding).
+**Backward/Reverse** synctex (pdf to source) is activated by pointing at the relevant element of the pdf preview. When using the internal viewer, the default keybinding to point at an element in the pdf preview is `ctrl+click`. It can be changed to `double-click` using the setting [`latex-workshop.view.pdf.internal.synctex.keybinding`](#latex-workshopviewpdfinternalsynctexkeybinding).
+
 
 | Setting key                                                                                        | Description                               | Default       | Type      |
 | -------------------------------------------------------------------------------------------------- | ----------------------------------------- | ------------- | --------- |
