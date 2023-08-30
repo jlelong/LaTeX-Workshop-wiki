@@ -6,7 +6,7 @@ The structure of the LaTeX project (`\chapter`, `\section`, `\subsection`, ...) 
 
 Note that the Explorer panel also contains an outline view but it only shows the structure of the current file and does not take into account any included file.
 
-###`latex-workshop.view.outline.sections`
+### `latex-workshop.view.outline.sections`
 
 The section names of LaTeX outline hierarchy. It is also used by the folding mechanism. See [Code folding](Environments#code-folding) for more details.
 
@@ -18,7 +18,7 @@ This property is an array of case-sensitive strings in the order of the document
 
 The structure of the document can be obtained
 
-###`latex-workshop.view.outline.commands`
+### `latex-workshop.view.outline.commands`
 
 The names of the commands to be shown in the outline/structure views. Reload vscode to make any change in this configuration effective.
 
@@ -28,7 +28,7 @@ The names of the commands to be shown in the outline/structure views. Reload vsc
 
 The commands must be called in the form `\commandname{arg}`.
 
-###`latex-workshop.intellisense.fastparse.enabled`
+### `latex-workshop.intellisense.fastparse.enabled`
 
 Use fast LaTeX parsing algorithm to build outline/structure. This is done by inherently removing texts and comments before building AST. Enabling this will not tamper the document, but may result in incomplete outline/structure.
 
@@ -36,7 +36,7 @@ Use fast LaTeX parsing algorithm to build outline/structure. This is done by inh
 |-----------|---------------|
 | _boolean_ | `true`        |
 
-###`latex-workshop.view.outline.floats.enabled`
+### `latex-workshop.view.outline.floats.enabled`
 
 Show the floating objects (figures and tables) in the outline/structure views.
 
@@ -44,7 +44,7 @@ Show the floating objects (figures and tables) in the outline/structure views.
 |-----------|---------------|
 | _boolean_ | `true`        |
 
-###`latex-workshop.view.outline.floats.number.enabled`
+### `latex-workshop.view.outline.floats.number.enabled`
 
 Show the float number in the outline/structure views.
 
@@ -52,7 +52,7 @@ Show the float number in the outline/structure views.
 |-----------|---------------|
 | _boolean_ | `true`        |
 
-###`latex-workshop.view.outline.floats.caption.enabled`
+### `latex-workshop.view.outline.floats.caption.enabled`
 
 Show the float caption in the outline/structure views.
 
@@ -60,7 +60,7 @@ Show the float caption in the outline/structure views.
 |-----------|---------------|
 | _boolean_ | `true`        |
 
-###`latex-workshop.view.outline.numbers.enabled`
+### `latex-workshop.view.outline.numbers.enabled`
 
 Show the sectioning numbers in the outline/structure views.
 
@@ -103,7 +103,7 @@ The keywords `region` and `endregion` may start with a capital letter and be pre
 
 To count the number of words in the current document, call _Count words in LaTeX document_ from the Command Palette (the associated command is `latex-workshop.wordcount`). Setting [`latex-workshop.texcount.autorun`](#latex-workshop.texcount.autorun) to `onSave` counts the number of words on every file save and displays it in the status bar.
 
-###`latex-workshop.texcount.autorun`
+### `latex-workshop.texcount.autorun`
 
 When to call `texcount`. Default is never.
 
@@ -111,7 +111,7 @@ When to call `texcount`. Default is never.
 |----------|-----------------------|
 | _string_ | `"onSave" | "never"`  |
 
-###`latex-workshop.texcount.interval`
+### `latex-workshop.texcount.interval`
 
 The minimal time interval between two consecutive runs of `texcount` in milliseconds when [`latex-workshop.texcount.autorun`](#latex-workshop.texcount.autorun) is set to `onSave`.
 
@@ -119,7 +119,7 @@ The minimal time interval between two consecutive runs of `texcount` in millisec
 |----------|---------------|
 | _number_ | 1000          |
 
-###`latex-workshop.texcount.path`
+### `latex-workshop.texcount.path`
 
 Define the location of TeXCount executive file/script
 
@@ -129,7 +129,7 @@ Define the location of TeXCount executive file/script
 
 This command will be joint with `latex-workshop.texcount.args` and required arguments to form a complete command of TeXCount
 
-###`latex-workshop.texcount.args`
+### `latex-workshop.texcount.args`
 
 TeXCount arguments to count words in LaTeX document of the entire project from the root file, or the current document.
 
