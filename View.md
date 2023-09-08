@@ -248,7 +248,7 @@ According to https://unix.stackexchange.com/a/700749, you may need to add `--no-
 
 ##### [Okular](https://apps.kde.org/en/okular) support
 
-Add the following options to your configuration:
+For forward search, add the following options to your configuration:
 
 ```json
 "latex-workshop.view.pdf.viewer": "external",
@@ -265,6 +265,15 @@ Add the following options to your configuration:
 ```
 
 Thanks to [@miterion](https://github.com/miterion) for [figuring this out](https://miterion.de/post/vscodeplusokular/).
+
+For backward search, configure Okular to use vscode as editor: 
+
+Goto **Settings > Configure Okular... > Editor** and choose **Custom Text Editor** as editor while inserting `code -r --goto %f:%l` as the command. 
+Make sure to not have okular installed via snap otherwise it can not execute arbitary binaries.  
+
+To use it, make sure the browse tool is enabled (**Tools > Browse**), and simply left click while holding **Shift** ([see here](https://docs.kde.org/trunk5/en/okular/okular/inverse_search.html)).
+
+Thanks to [@zyrikby](https://github.com/zyrikby) for [figuring this out](https://zhauniarovich.com/post/2023/2023-03-configuring-forward-and-inverse-search-in-latex-workshop-and-okular/).
 
 ##### [qpdfview](https://code.launchpad.net/qpdfview) support
 
