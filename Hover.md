@@ -48,7 +48,7 @@ Only math environments with less than [`latex-workshop.hover.preview.maxLines`](
 
 ## Previewing graphics
 
-When [`latex-workshop.hover.preview.enabled`](#latex-workshophovercitationenabled) is set to `true`, moving the mouse over an argument of `\includegraphics` shows a preview of the graphics file.
+When [`latex-workshop.hover.preview.enabled`](#latex-workshophoverpreviewenabled) is set to `true`, moving the mouse over an argument of `\includegraphics` shows a preview of the graphics file.
 
 ## Previewing citation details
 
