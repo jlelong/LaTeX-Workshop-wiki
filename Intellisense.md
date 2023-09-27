@@ -44,7 +44,7 @@ The key `\` automatically triggers completion of LaTeX commands. You can define 
     python pkgcommand.py -i mypackage.cwl -o destdir
     ```
 
-  You will find two files `mypackage_cmd.json` and `mypackage_env.json` in `destdir` containing intellisense data for command respectively environment completion. To enable the extension to load these files, add `destdir` to [`latex-workshop.intellisense.package.dirs`](#latex-workshopintellisensepackagedirs). Note it only works when [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled) is set to `true`.
+  You will find a file `mypackage.json` in `destdir` containing intellisense data for command respectively environment completion. To enable the extension to load these files, add `destdir` to [`latex-workshop.intellisense.package.dirs`](#latex-workshopintellisensepackagedirs). Note it only works when [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled) is set to `true` and you have imported this package in LaTeX, i.e., `\usepackage{mypackage}`.
 
 - Many snippets use text hints of the form `${\d:some_tex}` for their argument. You may prefer to hide instead by setting[`latex-workshop.intellisense.argumentHint.enabled`](#latex-workshopintellisenseargumentHintenabled) to `true`.
 - We provide one entry in the intellisense completion list per LaTeX command signature. If you feel, it makes the completion list too long, set [`latex-workshop.intellisense.optionalArgsEntries.enabled`](#latex-workshopintellisenseoptionalArgsEntriesenabled) to `false`.
