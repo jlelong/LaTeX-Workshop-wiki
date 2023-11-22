@@ -43,7 +43,7 @@ Reload vscode to make any change in this configuration effective.
 
 The PDF viewer provided with the extension internally uses [PDF.js](https://github.com/mozilla/pdf.js). The keybindings support by PDF.js are documented [here](https://github.com/mozilla/pdf.js/wiki/Frequently-Asked-Questions#faq-shortcuts).
 
-You can customize the look and feel of the internal PDF viewer. Of course, this is only relevant when using the internal PDF viewer for viewing the PDF produced by the building toolchain, ie when `latex-workshop.view.pdf.viewer` is set to `tab`. Although the PDF viewer should refresh automatically when needed, you can request it explicitly by calling the command `latex-workshop.refresh-viewer`. If you experience some focus issues after opening a viewer tab, consider increasing [`latex-workshop.view.pdf.tab.openDelay`](#latex-workshopviewpdftabopenDelay).
+You can customize the look and feel of the internal PDF viewer. Of course, this is only relevant when using the internal PDF viewer for viewing the PDF produced by the building toolchain, ie when `latex-workshop.view.pdf.viewer` is set to `tab`. Although the PDF viewer should refresh automatically when needed, you can request it explicitly by calling the command `latex-workshop.refresh-viewer`.
 
 Below are the detailed explanations for the different possible settings
 
@@ -574,16 +574,6 @@ Which keybinding to use for the internal PDF viewer for reverse SyncTeX. Reload 
 | type   | default value  | possible values                    |
 | ------ | -------------- |----------------------------------- |
 | _enum_ | `"ctrl-click"` | `"ctrl-click"` or `"double-click"` |
-
-### `latex-workshop.view.pdf.tab.openDelay`
-
-Define the delay in milliseconds to wait for a tab opening.
-
-Please increase the value if you encounter a focus issue after opening a tab.
-
-| type      | default value |
-| --------- | ------------- |
-| _number_  | `1000`        |
 
 ### `latex-workshop.synctex.afterBuild.enabled`
 
