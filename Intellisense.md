@@ -23,8 +23,7 @@ If you use very large bibtex files, you may experience temporary freezing. Hence
 
 ## References
 
-Similarly as for the citation mechanism, all files of a LaTeX project are search for labels. We scan labels defined as `\label{...}` or `label={...}`. If you do prefer to ignore `label={...}`, set [`latex-workshop.intellisense.label.keyval`](#latex-workshopintellisenselabelkeyval) to `false`.
-Label definition with commands other than `\label{...}` can be set in [`latex-workshop.intellisense.label.command`](#latex-workshopintellisenselabelcommand).
+Similarly as for the citation mechanism, all files of a LaTeX project are search for labels. We scan labels defined by `\label{...}` in the whole document or by `label={...}` but only inside the first argument of an environment.  Label definition with commands other than `\label{...}` can be set in [`latex-workshop.intellisense.label.command`](#latex-workshopintellisenselabelcommand).
 
 Any `\ref` related command is automatically completed with label keys.
 
@@ -297,14 +296,6 @@ The name of LaTeX commands that indicates a label definition. The command must a
 | type                 | default value            |
 | -------------------- | ------------------------ |
 | _array_ of _strings_ | `["label", "linelabel"]` |
-
-### `latex-workshop.intellisense.label.keyval`
-
-Scan for labels defined as `label={some tex}` to add to the reference intellisense menu. The braces are mandatory.
-
-| type      | default value |
-| --------- | ------------- |
-| _boolean_ | `true`        |
 
 ### `latex-workshop.intellisense.unimathsymbols.enabled`
 
