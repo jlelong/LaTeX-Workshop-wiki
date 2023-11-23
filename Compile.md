@@ -227,6 +227,14 @@ Force the use of the recipe system even when a magic comment defines a TeX comma
 | --------- | ---------------- |
 | _boolean_ | `true`          |
 
+### `latex-workshop.latex.build.rootfileInStatus`
+
+Include the name of the root file being built in the status bar.
+
+|   type    |  default value   |
+| --------- | ---------------- |
+| _boolean_ | `false`          |
+
 ## Multi File projects
 
 While it is fine to write all contents in one `.tex` file, it is common to split things up for simplicity. For such LaTeX projects, the file with `\documentclass[]{}` is considered as the root file, which serves as the entry point to the project. LaTeX Workshop intelligently finds the root file when a new document is opened, the active editor is changed, or any LaTeX Workshop command is executed.
