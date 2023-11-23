@@ -227,6 +227,14 @@ Force the use of the recipe system even when a magic comment defines a TeX comma
 | --------- | ---------------- |
 | _boolean_ | `true`          |
 
+### `latex-workshop.latex.build.rootfileInStatus`
+
+Include the name of the root file being built in the status bar.
+
+|   type    |  default value   |
+| --------- | ---------------- |
+| _boolean_ | `false`          |
+
 ## Multi File projects
 
 While it is fine to write all contents in one `.tex` file, it is common to split things up for simplicity. For such LaTeX projects, the file with `\documentclass[]{}` is considered as the root file, which serves as the entry point to the project. LaTeX Workshop intelligently finds the root file when a new document is opened, the active editor is changed, or any LaTeX Workshop command is executed.
@@ -236,8 +244,8 @@ While it is fine to write all contents in one `.tex` file, it is common to split
 To find the root file, LaTeX Workshop will follow the steps below, stopping whenever one is found:
 
 1. **Magic comment** `% !TEX root = relative/or/absolute/path/to/root/file.tex`. If such comments exist in the currently active editor, the referred file is set as root. You can use the command `latex-workshop.addtexroot` to help you insert the magic comment. Note that magic comments need you to set [`latex-workshop.latex.build.forceRecipeUsage`](#latex-workshoplatexbuildforcerecipeusage) to `false`. The default `true` disables magic comments.
-1. **Self check** If current active editor contains `\documentclass[...]{...}` (the `[...]` is optional), it is set as root.
-1. **Root directory check** LaTeX Workshop iterates through all `.tex` files in the root folder of the workspace. The first one containing `\documentclass[...]{...}` (the `[...]` is optional) and which includes the file in the active editor is set as the root file. To avoid parsing all `.tex` files in the workspace, you can narrow the search by specifying [`latex-workshop.latex.search.rootFiles.include`](#latex-workshoplatexsearchrootfilesinclude) and/or [`latex-workshop.latex.search.rootFiles.exclude`](#latex-workshoplatexsearchrootfilesexclude).
+1. **Self check** If current active editor contains `\documentclass[...]{...}` (the `[...]` is optional) or `\begin{document}` depending on the value of [`latex-workshop.latex.rootFile.indicator`](#latex-workshoplatexrootFileindicator), it is set as root.
+1. **Root directory check** LaTeX Workshop iterates through all `.tex` files in the root folder of the workspace. The first one containing `\documentclass[...]{...}` (the `[...]` is optional) or `\begin{document}` depending on the value of [`latex-workshop.latex.rootFile.indicator`](#latex-workshoplatexrootFileindicator), and which includes the file in the active editor is set as the root file. To avoid parsing all `.tex` files in the workspace, you can narrow the search by specifying [`latex-workshop.latex.search.rootFiles.include`](#latex-workshoplatexsearchrootfilesinclude) and/or [`latex-workshop.latex.search.rootFiles.exclude`](#latex-workshoplatexsearchrootfilesexclude).
 1. **The `subfiles` package case** The main file is used to provide intellisense. The non-interactive functions `autobuild`, `autoclean` and forward `synctex` rely on the value of the configuration variable [`latex-workshop.latex.rootFile.useSubFile`](#latex-workshoplatexrootfileusesubfile) to choose between the main file and the subfile.
     - if [`latex-workshop.latex.rootFile.doNotPrompt`](#latex-workshoplatexrootFiledoNotPrompt) is `false`,  all the interactive commands `build`, `clean` and `view` use a quick pick box to ask the user which file is to be considered as the root File.
     - if [`latex-workshop.latex.rootFile.doNotPrompt`](#latex-workshoplatexrootFiledoNotPrompt) is `true`,  all the interactive commands `build`, `clean` and `view` use variable [`latex-workshop.latex.rootFile.useSubFile`](#latex-workshoplatexrootFileuseSubFile) to choose between the main file and the subfile automatically.
@@ -257,6 +265,14 @@ Once the root file is determined, it is parsed to discover all the files it incl
 Moreover, when a `.fls` file with the same basename as the root file exists, it is used to compute the full list of dependencies, ie all classes, packages, fonts, input `.tex` files, listings, graphs, ... All these files are parsed to provide intellisense completion. When  [`latex-workshop.latex.autoBuild.run`](Compile#auto-build-latex) is set to `onFileChange`, building is automatically triggered whenever any of the dependencies is modified. You can use [`latex-workshop.latex.watch.files.ignore`](#latex-workshoplatexwatchfilesignore) to prevent some files from being watched. The default is to ignore files inside your TeX distribution and files with `.code.tex` or `.sty` suffix.
 
 ### Relevant settings
+
+#### `latex-workshop.latex.rootFile.indicator`
+
+|         type         | default value | Possible values |
+| -------------------- | ------------- |-----------------|
+| _enum of strings_ | `\documentclass[]{}` | `\documentclass[]{}`, `begin{document}` |
+
+Determine if the root file is detected based on the presence of `\documentclass[]{}` or `\begin{document}`.
 
 #### `latex-workshop.latex.search.rootFiles.include`
 

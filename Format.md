@@ -55,8 +55,8 @@ The commands `latex-workshop.bibsort` and `latex-workshop.bibalignsort` will sor
 
 When sorting BibTeX files, how to handle duplicates that appear. Duplicates are decided by `latex-workshop.bibtex-format.sortby`.
 
-|        Type       |      Default Value       | Possible Values                                                         |
-| ----------------- | ------------------------ | ----------------------------------------------------------------------- |
+|        Type       |      Default Value       | Possible Values    |
+| ----------------- | ------------------------ | ------------- |
 | _enum of string_  | `"Highlight Duplicates"` | `"Ignore Duplicates"`, `"Highlight Duplicates"`, `"Comment Duplicates"` |
 
 #### `latex-workshop.bibtex-format.sort.enabled`

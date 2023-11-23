@@ -103,11 +103,12 @@ The javascript built-in version of SyncTeX is used by default. See [settings](#l
 **Backward/Reverse** synctex (pdf to source) is activated by pointing at the relevant element of the pdf preview. When using the internal viewer, the default keybinding to point at an element in the pdf preview is `ctrl+click`. It can be changed to `double-click` using the setting [`latex-workshop.view.pdf.internal.synctex.keybinding`](#latex-workshopviewpdfinternalsynctexkeybinding).
 
 
-| Setting key                                                                                        | Description                               | Default       | Type      |
-| -------------------------------------------------------------------------------------------------- | ----------------------------------------- | ------------- | --------- |
-| [`latex-workshop.synctex.afterBuild.enabled`](#latex-workshopsynctexafterBuildenabled)             | Forward synctex at cursor after compiling | `false`       | _boolean_ |
-| [`latex-workshop.synctex.path`](#latex-workshopsynctexpath)                                        | SyncTeX location                          | `"synctex"`   | _string_  |
-| [`latex-workshop.synctex.synctexjs.enabled`](#latex-workshopsynctexsynctexjsenabled)               | Enable using a built-in synctex function. | `true`        | _boolean_ |
+| Setting key  | Description  | Default | Type      |
+| ----- | ------------- | ------------- | --------- |
+| [`latex-workshop.synctex.afterBuild.enabled`](#latex-workshopsynctexafterBuildenabled) | Forward synctex at cursor after compiling | `false` | _boolean_ |
+| [`latex-workshop.synctex.path`](#latex-workshopsynctexpath) | SyncTeX location | `"synctex"` | _string_  |
+| [`latex-workshop.synctex.synctexjs.enabled`](#latex-workshopsynctexsynctexjsenabled) | Enable using a built-in synctex function. | `true`| _boolean_ |
+| [`latex-workshop.synctex.indicator.enabled`](#latex-workshopsynctexindicatorenabled) | Show a red indicator after a forward synctex | `false` | _boolean_ |
 
 ## External PDF viewer
 
@@ -115,8 +116,8 @@ Note: **this function is not officially supported.**
 
 You can view PDF files with external PDF viewers by calling _View LaTeX PDF file in external viewer_ (command `latex-workshop.viewExternal`) either from the _Command Palette_ or the _TeX badge_.
 
-| Setting key                                                                                      | Description                                       | Default       | Type     |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------- | ------------- | -------- |
+| Setting key   | Description   | Default  | Type     |
+| -------- | ----------- | ------------- | -------- |
 | [`latex-workshop.view.pdf.external.viewer.command`](#latex-workshopviewpdfexternalviewercommand) | The command to execute when using external viewer | (see details) | _string_ |
 | [`latex-workshop.view.pdf.external.viewer.args`](#latex-workshopviewpdfexternalviewerargs)       | The arguments to supply to the above command      | (see details) | _array_  |
 | [`latex-workshop.view.pdf.external.synctex.command`](#latex-workshopviewpdfexternalsynctexcommand) | SyncTeX command for the external viewer   | (see details) | _string_  |
@@ -342,9 +343,9 @@ The following placeholders defined in the [recipes section](Compile#placeholders
 
 The default PDF viewer.
 
-| type     | default value  | possible values                                 |
-| -------- | -------------- | --------------------------------------------    |
-| _string_ | `"tab"`        | `"browser"`, `"tab"`, or `"external"`           |
+| type     | default value  | possible values                        |
+| -------- | -------------- | -------------------------------------- |
+| _string_ | `"tab"`        | `"browser"`, `"tab"`, or `"external"`  |
 
 - `"tab"`: Open PDF with the built-in tab viewer. SyncTeX and other features available.
 - `"browser"`: Open PDF with the default web browser. SyncTeX and other features available.
@@ -603,8 +604,13 @@ This builtin synctex works well even if the path of TeX files contains non-ASCII
 | --------- | ------------- |
 | _boolean_ | `true`        |
 
+### `latex-workshop.synctex.indicator.enabled`
 
+Define the visibility of SyncTeX indicator (a red highlighting circle) after a forward SyncTeX in the PDF viewer.
 
+| type      | default value |
+| --------- | ------------- |
+| _boolean_ | `false`       |
 
 ### `latex-workshop.view.pdf.external.viewer.command`
 
@@ -657,3 +663,11 @@ The arguments to apply to the external forward synctex command. %LINE% is the li
 | _array_       | `["%LINE%", "%PDF%", "%TEX%" ]` |
 
 Note: this function is not officially supported.
+
+### `latex-workshop.codespaces.portforwarding.openDelay`
+
+Delay to wait for GitHub Codespaces Authentication of port forwarding to be resolved, in milliseconds.
+
+| type     | default value |
+| -------- | ------------- |
+| _number_ | `20000`       |
