@@ -663,3 +663,11 @@ The arguments to apply to the external forward synctex command. %LINE% is the li
 | _array_       | `["%LINE%", "%PDF%", "%TEX%" ]` |
 
 Note: this function is not officially supported.
+
+### `latex-workshop.codespaces.portforwarding.openDelay`
+
+Delay to wait for GitHub Codespaces Authentication of port forwarding to be resolved, in milliseconds.
+
+| type     | default value |
+| -------- | ------------- |
+| _number_ | `20000`       |
