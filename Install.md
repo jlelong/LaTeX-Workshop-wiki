@@ -2,7 +2,7 @@
 
 ## Requirements
 The only requirement is a compatible LaTeX distribution in the system PATH. For example, [TeX Live](https://www.tug.org/texlive/). We **strongly recommend** TeX Live. Other possible choices are:
-  - <a href="https://yihui.org/tinytex">TinyTeX</a> as a lighter-weight distribution based on TeX Live, see .<br>
+  - <a href="https://yihui.org/tinytex">TinyTeX</a> as a lighter-weight distribution based on TeX Live.<br>
     <details><!-- empty line below, so that markdown works -->
 
     The [TinyTeX distributions](https://github.com/rstudio/tinytex-releases#releases)
@@ -14,13 +14,13 @@ The only requirement is a compatible LaTeX distribution in the system PATH. For 
     (You can instead use the CTAN link, also provided in the hover popup, to download the docs).
     </details>
 
-  - [MiKTeX](https://miktex.org/) another light-weight distribution with a covinient automatic on-demand package install. Note however, that **for MiKTeX to work correctly with Latex Workshop, you need to install [Perl](https://strawberryperl.com/)**.
+  - [MiKTeX](https://miktex.org/) is another lightweight distribution with a convenient automatic on-demand package install. Note, however, that **for MiKTeX to work correctly with Latex Workshop, you need to install [Perl](https://strawberryperl.com/)**.
     <details><!-- empty line below, so that markdown works -->
 
     MiKTeX does not ship with Perl. Without Perl, `latexmk` fails with errors. `latexmk` is required for the default recipe for building LaTeX projects to work. Alternatively, you can [set up your own LaTeX recipe](Compile#latex-recipes).
     </details>
-
-Other usefull tools:
+    
+Other useful tools:
 - _Optional_: [ChkTeX](https://www.nongnu.org/chktex) to lint LaTeX projects.
 - _Optional_: [latexindent.pl](https://github.com/cmhughes/latexindent.pl) for formatting support if it is not provided by your LaTeX distribution. You also have to install a few standard Perl modules. See the [official document](https://latexindentpl.readthedocs.io/en/latest/sec-appendices.html#required-perl-modules).
 
