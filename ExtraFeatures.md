@@ -60,6 +60,22 @@ Show the sectioning numbers in the outline/structure views.
 |-----------|---------------|
 | _boolean_ | `true`        |
 
+### `latex-workshop.view.outline.follow.editor`
+
+Scrolling the editor will also reveal the corresponding structure items.
+
+| type      | default value |
+|-----------|---------------|
+| _boolean_ | `true`        |
+
+### `latex-workshop.view.outline.sync.viewer`
+
+Clicking on a structure item will also call `synctex` to scroll the PDF viewer to the corresponding location.
+
+| type      | default value |
+|-----------|---------------|
+| _boolean_ | `false`       |
+
 ## Code folding
 
 The following regions (along with their `*`-starred versions) can be folded.

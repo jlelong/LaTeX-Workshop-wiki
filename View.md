@@ -31,13 +31,11 @@ Reload vscode to make any change in this configuration effective.
 
 ## Basic settings
 
-| Setting key                                                                                      | Description                                       | Default       | Type     |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------- | ------------- | -------- |
-| [`latex-workshop.latex.outDir`](#latex-workshoplatexoutDir)                                      | Where to find the PDF files                       | `"%DIR%"`     | _string_ |
-| [`latex-workshop.view.pdf.viewer`](#latex-workshopviewpdfviewer)                                 | The default PDF viewer                            | `"tab"`       | _string_ |
-| [`latex-workshop.view.pdf.ref.viewer`](#latex-workshopviewpdfrefviewer)                          | The PDF viewer to preview `\ref`                  | (see details) | _string_ |
-
-
+| Setting key                                                             | Description                      | Default       | Type     |
+|-------------------------------------------------------------------------|----------------------------------|---------------|----------|
+| [`latex-workshop.latex.outDir`](#latex-workshoplatexoutDir)             | Where to find the PDF files      | `"%DIR%"`     | _string_ |
+| [`latex-workshop.view.pdf.viewer`](#latex-workshopviewpdfviewer)        | The default PDF viewer           | `"tab"`       | _string_ |
+| [`latex-workshop.view.pdf.ref.viewer`](#latex-workshopviewpdfrefviewer) | The PDF viewer to preview `\ref` | (see details) | _string_ |
 
 ## Internal PDF viewer
 
