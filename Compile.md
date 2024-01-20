@@ -206,6 +206,7 @@ For non-perl users, the following `texify` toolchain from MikTeX may worth a try
   "env": {}
 }]
 ```
+But beware that the texify command-line utility does not work properly with BibLaTeX package and its helper program biber.
 
 ### `latex-workshop.latex.recipe.default`
 
