@@ -207,6 +207,8 @@ For non-perl users, the following `texify` toolchain from MikTeX may worth a try
 }]
 ```
 
+Beware that the`texify` command-line utility does not work properly with BibLaTeX package and its helper program `biber`. See for instance https://tex.stackexchange.com/q/299171/102825,  https://miktex-users.narkive.com/gVVlkEcr/miktex-pdf-texify-using-biber-instead-of-bibtex, https://sourceforge.net/p/miktex/mailman/message/26469477/.
+
 ### `latex-workshop.latex.recipe.default`
 
 Define which recipe is used by the _Build LaTeX project_ command.
