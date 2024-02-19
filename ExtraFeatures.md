@@ -145,7 +145,13 @@ TeXCount arguments to count words in LaTeX document of the entire project from t
 |----------------------|---------------|
 | _array_ of _strings_ | `[]`          |
 
-Arguments must be in separate strings in the array. Additional arguments, i.e., `-merge %DOC%` for the project and the current document path for counting current file will be appended when constructing the command.
+Arguments must be in separate strings in the array.
+Additional arguments, i.e., `-merge %DOC%` for the project and the current document path for counting current file, will be appended when constructing the command.
+Note that if `latex-workshop.texcount.args` already contains `-merge`, it will not be added again.
+To use the `-inc` mode of `texcount` instead, set this to `["-merge", "-inc", "-total"]`;
+  the `-merge` is to prevent LaTeX Workshop appending `-merge` at the end,
+  the `-inc` then immediately overrides this setting,
+  and the `-total` ensures that LaTex Workshop is able to parse the output.
 
 ## Literate programming support using LaTeX
 
