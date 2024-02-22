@@ -1,23 +1,23 @@
 # Intellisense
 
-This extension provides a variety of intellisense completions for different LaTeX features; notably for citations, commands, environments, labels, and file names. Intellisense suggestions are updated on file save but a more aggressive updating strategy can be used by setting [`intellisense.update.aggressive.enabled`](#latex-workshopintellisenseupdateaggressiveenabled) to `true`, which triggers update after no key has been stroked for the delay defined by [`latex-workshop.intellisense.update.delay`](#latex-workshopintellisenseupdatedelay). Most of the intellisense data are obtained by parsing the project files. Some environments should be considered as verbatim like and therefore be skipped. The list of such environments can be configured by [`latex-workshop.latex.verbatimEnvs`](Compile#latex-workshoplatexverbatimEnvs)
+This extension provides a variety of intellisense completions for different LaTeX features; notably for citations, commands, environments, labels, and file names. Intellisense suggestions are updated on file save but a more aggressive updating strategy can be used by setting [`intellisense.update.aggressive.enabled`](#latex-workshopintellisenseupdateaggressiveenabled) to `true`, which triggers update after no key has been stroked for the delay defined by [`latex-workshop.intellisense.update.delay`](#latex-workshopintellisenseupdatedelay). Most of the intellisense data are obtained by parsing the project files. Some environments should be considered as verbatim like and therefore be skipped. The list of such environments can be configured by [`latex-workshop.latex.verbatimEnvs`](Compile#latex-workshoplatexverbatimenvs)
 
 ## Citations
 
-Every file of a LaTeX project is parsed to look for bibliography resources, either directly in a `thebibliography` environment or given by the `bibliography` or `addbibresource` commands or variants of them. If some of these resources are located outside the project directly, you need to list the directories where to look for them in [`latex-workshop.latex.bibDirs`](#latex-workshoplatexbibDirs). You can also rely on the `kpsewhich` command to resolve bibliography files by setting [`latex-workshop.kpsewhich.enabled`](#latex-workshopkpsewhichenabled) to true.
+Every file of a LaTeX project is parsed to look for bibliography resources, either directly in a `thebibliography` environment or given by the `bibliography` or `addbibresource` commands or variants of them. If some of these resources are located outside the project directly, you need to list the directories where to look for them in [`latex-workshop.latex.bibDirs`](#latex-workshoplatexbibdirs). You can also rely on the `kpsewhich` command to resolve bibliography files by setting [`latex-workshop.kpsewhich.enabled`](#latex-workshopkpsewhichenabled) to true.
 
 Then, when citation commands like `\cite` and its derivatives are automatically completed with bibliography entries found in the various resources.
 
-If you use very large bibtex files, you may experience temporary freezing. Hence, files larger than 5MB are ignored (see [`latex-workshop.bibtex.maxFileSize`](#latex-workshopbibtexmaxFileSize)).
+If you use very large bibtex files, you may experience temporary freezing. Hence, files larger than 5MB are ignored (see [`latex-workshop.bibtex.maxFileSize`](#latex-workshopbibtexmaxfilesize)).
 
 | Setting key | Description | Default | Type |
 |-------------|-------------|---------|------|
 | [`latex-workshop.intellisense.citation.label`](#latex-workshopintellisensecitationlabel) | Citation property used as suggestion label | `"bibtex key"` | _string_: "bibtex key" \| "title" \| "authors" |
 | [`latex-workshop.intellisense.citation.format`](#latex-workshopintellisensecitationformat) | List of fields to display and to use for filtering suggestions| | _array_ of _strings_ |
-| [`latex-workshop.bibtex.maxFileSize`](#latex-workshopbibtexmaxFileSize) | Maximum bibtex file size (in MB) | `5` | _float_ |
+| [`latex-workshop.bibtex.maxFileSize`](#latex-workshopbibtexmaxfilesize) | Maximum bibtex file size (in MB) | `5` | _float_ |
 | [`latex-workshop.intellisense.citation.type`](#latex-workshopintellisensecitationtype) | Type of vs code suggestion to use | `"inline"` | _string_: "inline" \| "browser" (dropdown menu) |
 | [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled) | Enabling of auto-completion for commands and environments from loaded packages | `true` | _boolean_ |
-| [`latex-workshop.latex.bibDirs`](#latex-workshoplatexbibDirs) | List of paths to look for `.bib` files. | `[]` | _array_ of _strings_ |
+| [`latex-workshop.latex.bibDirs`](#latex-workshoplatexbibdirs) | List of paths to look for `.bib` files. | `[]` | _array_ of _strings_ |
 | [`latex-workshop.kpsewhich.enabled`](#latex-workshopkpsewhichenabled) | Use `kpsewhich` to resolve `.bib` files. | `false` | _boolean_ |
 | [`latex-workshop.kpsewhich.path`](#latex-workshopkpsewhichpath) | location of the kpsewhich executable file. | `"kpsewhich"` | _string_ |
 
@@ -36,7 +36,7 @@ The key `\` automatically triggers completion of LaTeX commands. You can define 
 - A set of standard LaTeX commands is provided in the file [`data/commands.json`](https://github.com/James-Yu/LaTeX-Workshop/blob/master/data/commands.json). You may overwrite some of these commands or add new ones by using the [`latex-workshop.intellisense.command.user`](#latex-workshopintellisensecommanduser) configuration variable.
 - The files of a LaTeX project are searched for any already used commands in the form `mycommand` followed by several `{}` groups. Then, a snippet is dynamically built for each of them and they are added to the command completion list.
 - When [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled) is `true`, the command completion list is also populated with the commands provided by all the _standard_ packages used in the project (through `\usepackage`). The list of commands provided by every package is described [here](https://github.com/LaTeXing/LaTeX-cwl). Note that homemade packages are ignored in this mechanism because they do not come with a `.cwl` file.
-- If you use personal macro files and want them to be taken into account by intellisense but store them in some `texmf` structure or dedicated directory. Just add the directory containing the file to [`latex-workshop.latex.texDirs`](Compile#latex-workshoplatextexDirs). The file must be loaded in the LaTeX project through the `\input` macro.
+- If you use personal macro files and want them to be taken into account by intellisense but store them in some `texmf` structure or dedicated directory. Just add the directory containing the file to [`latex-workshop.latex.texDirs`](Compile#latex-workshoplatextexdirs). The file must be loaded in the LaTeX project through the `\input` macro.
 - If you write your own package along with the corresponding `.cwl` file, you can use the Python script [pkgcommand.py](https://github.com/James-Yu/LaTeX-Workshop/blob/master/dev/pkgcommand.py)
 
     ```
@@ -45,8 +45,8 @@ The key `\` automatically triggers completion of LaTeX commands. You can define 
 
   You will find a file `mypackage.json` in `destdir` containing intellisense data for command respectively environment completion. To enable the extension to load these files, add `destdir` to [`latex-workshop.intellisense.package.dirs`](#latex-workshopintellisensepackagedirs). Note it only works when [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled) is set to `true` and you have imported this package in LaTeX, i.e., `\usepackage{mypackage}`.
 
-- Many snippets use text hints of the form `${\d:some_tex}` for their argument. You may prefer to hide instead by setting[`latex-workshop.intellisense.argumentHint.enabled`](#latex-workshopintellisenseargumentHintenabled) to `true`.
-- We provide one entry in the intellisense completion list per LaTeX command signature. If you feel, it makes the completion list too long, set [`latex-workshop.intellisense.optionalArgsEntries.enabled`](#latex-workshopintellisenseoptionalArgsEntriesenabled) to `false`.
+- Many snippets use text hints of the form `${\d:some_tex}` for their argument. You may prefer to hide instead by setting[`latex-workshop.intellisense.argumentHint.enabled`](#latex-workshopintellisenseargumenthintenabled) to `true`.
+- We provide one entry in the intellisense completion list per LaTeX command signature. If you feel, it makes the completion list too long, set [`latex-workshop.intellisense.optionalArgsEntries.enabled`](#latex-workshopintellisenseoptionalargsentriesenabled) to `false`.
 
 | Setting key | Description | Default | Type |
 | ----------- | ----------- | ------- | ---- |
@@ -56,9 +56,9 @@ The key `\` automatically triggers completion of LaTeX commands. You can define 
 | [`latex-workshop.intellisense.package.extra`](#latex-workshopintellisensepackageextra) | Extra packages to load for intellisense | `[]` | _array_ of _strings_ |
 | [`latex-workshop.intellisense.package.dirs`](#latex-workshopintellisensepackagedirs) | Extra directories where to look for intellisense data | `[]` | _array_ of _strings_ |
 | [`latex-workshop.intellisense.unimathsymbols.enabled`](#latex-workshopintellisenseunimathsymbolsenabled) | Show unimath symbols as suggestions when `\` pressed | `false` | _boolean_ |
-| [`latex-workshop.intellisense.argumentHint.enabled`](#latex-workshopintellisenseargumentHintenabled) | Hide argument hints in intellisense completion | `false` | _boolean_ |
-| [`latex-workshop.intellisense.optionalArgsEntries.enabled`](#latex-workshopintellisenseoptionalArgsEntriesenabled) | Add one completion item per command signature | `true` | _boolean_ |
-| [`latex-workshop.latex.texDirs`](Compile#latex-workshoplatextexDirs) | List of paths to look for input `.tex` files. | `[]` | _array_ of _strings_ |
+| [`latex-workshop.intellisense.argumentHint.enabled`](#latex-workshopintellisenseargumenthintenabled) | Hide argument hints in intellisense completion | `false` | _boolean_ |
+| [`latex-workshop.intellisense.optionalArgsEntries.enabled`](#latex-workshopintellisenseoptionalargsentriesenabled) | Add one completion item per command signature | `true` | _boolean_ |
+| [`latex-workshop.latex.texDirs`](Compile#latex-workshoplatextexdirs) | List of paths to look for input `.tex` files. | `[]` | _array_ of _strings_ |
 
 ## Environments
 
@@ -93,7 +93,7 @@ When [`latex-workshop.intellisense.includegraphics.preview.enabled`](#latex-work
 
 ## `@` suggestions
 
-Next to intellisense for anything starting with `\`, we provide an independent intellisense mechanism triggered by `@`.  The trigger character `@` is set by the configuration variable [`latex-workshop.intellisense.atSuggestion.trigger.latex`](#latex-workshopintellisenseatsuggestiontriggerlatex) and can be replaced by any other non-alphabetical character. Setting [`latex-workshop.intellisense.atSuggestion.trigger.latex`](#latex-workshopintellisenseatsuggestiontriggerlatex) to the empty string deactivates these suggestions. You can remove, modify or define new suggestions using the setting [`latex-workshop.intellisense.atSuggestion.user`](#latex-workshopintellisenseatSuggestionuser).
+Next to intellisense for anything starting with `\`, we provide an independent intellisense mechanism triggered by `@`.  The trigger character `@` is set by the configuration variable [`latex-workshop.intellisense.atSuggestion.trigger.latex`](#latex-workshopintellisenseatsuggestiontriggerlatex) and can be replaced by any other non-alphabetical character. Setting [`latex-workshop.intellisense.atSuggestion.trigger.latex`](#latex-workshopintellisenseatsuggestiontriggerlatex) to the empty string deactivates these suggestions. You can remove, modify or define new suggestions using the setting [`latex-workshop.intellisense.atSuggestion.user`](#latex-workshopintellisenseatsuggestionuser).
 
 ### Inserting Greek letters
 
@@ -256,7 +256,7 @@ When `latex-workshop.intellisense.package.enabled` is set to `true`, the command
 
 List of extra directories to look for package completion files in addition to those provided by the extension.
 
-See the section on [Commands intellisense](#commands) to learn how to generate these files. Files found in these directories have a higher priority over the default ones. This setting is only relevant when [`latex-workshop.intellisense.package.env.enabled`](#latex-workshopintellisensepackageenvenabled) is true.
+See the section on [Commands intellisense](#commands-starting-with-) to learn how to generate these files. Files found in these directories have a higher priority over the default ones. This setting is only relevant when [`latex-workshop.intellisense.package.env.enabled`](#latex-workshopintellisensepackageenvenabled) is true.
 
 |         type         | default value |
 | -------------------- | ------------- |
@@ -349,7 +349,7 @@ Define the location of the kpsewhich executable file.
 
 ### `latex-workshop.kpsewhich.enabled`
 
-Use `kpsewhich -format=.bib` to resolve bibliography files in addition to looking into the directories listed in [`latex-workshop.latex.bibDirs`](#latex-workshoplatexbibDirs).
+Use `kpsewhich -format=.bib` to resolve bibliography files in addition to looking into the directories listed in [`latex-workshop.latex.bibDirs`](#latex-workshoplatexbibdirs).
 
 The `ksepwhich` executable is defined by [`latex-workshop.kpsewhich.path`](#latex-workshopkpsewhichpath).
 
@@ -402,7 +402,7 @@ This config works only when [`intellisense.update.aggressive.enabled`](#latex-wo
 
 Two types of completion are available for BibTeX files
 
-- Hitting `@` triggers completion for adding a new entry. The available completions are described in [data/bibtex-entries.json](https://github.com/James-Yu/LaTeX-Workshop/blob/master/data/bibtex-entries.json). The user can override any entry by redefining it in the variable [`latex-workshop.intellisense.bibtexJSON.replace`].
+- Hitting `@` triggers completion for adding a new entry. The available completions are described in [data/bibtex-entries.json](https://github.com/James-Yu/LaTeX-Workshop/blob/master/data/bibtex-entries.json). The user can override any entry by redefining it in the variable [`latex-workshop.intellisense.bibtexJSON.replace`](#latex-workshopintellisensebibtexjsonreplace).
 The entries are formatted according to the variables already used for bibtex formatting:
 
   - [`latex-workshop.bibtex-format.tab`](Format#latex-workshopbibtex-formattab)

@@ -2,9 +2,9 @@
 
 ## Duplicate labels
 
-Duplicate labels are highlighted when [`latex-workshop.check.duplicatedLabels.enabled`](#latex-workshopcheckduplicatedLabelsenabled) is set to `true`. The computation of the duplicates is based on the data collected for intellisense, so we cannot update the duplicates more often than intellisense. When [`intellisense.update.aggressive.enabled`](Intellisense#latex-workshopintellisenseupdateaggressiveenabled) is set to `false`, duplicates are updated on file save. When [`intellisense.update.aggressive.enabled`](Intellisense#latex-workshopintellisenseupdateaggressiveenabled) is set to `true`, duplicates are updated after stopped typing for longer than [`latex-workshop.intellisense.update.delay`](Intellisense#latex-workshopintellisenseupdatedelay).
+Duplicate labels are highlighted when [`latex-workshop.check.duplicatedLabels.enabled`](#latex-workshopcheckduplicatedlabelsenabled) is set to `true`. The computation of the duplicates is based on the data collected for intellisense, so we cannot update the duplicates more often than intellisense. When [`intellisense.update.aggressive.enabled`](Intellisense#latex-workshopintellisenseupdateaggressiveenabled) is set to `false`, duplicates are updated on file save. When [`intellisense.update.aggressive.enabled`](Intellisense#latex-workshopintellisenseupdateaggressiveenabled) is set to `true`, duplicates are updated after stopped typing for longer than [`latex-workshop.intellisense.update.delay`](Intellisense#latex-workshopintellisenseupdatedelay).
 
-#### `latex-workshop.check.duplicatedLabels.enabled`
+### `latex-workshop.check.duplicatedLabels.enabled`
 
 Enable checking for duplicated labels.
 
@@ -20,7 +20,7 @@ LaTeX Workshop currently supports two LaTeX linters, namely, [`ChkTeX`](#chktex)
 
 The linter behavior is controlled by the following two configuration items.
 
-#### `latex-workshop.linting.run`
+### `latex-workshop.linting.run`
 
 When LaTeX should be linted. If set to `onSave`, the whole LaTeX project will be linted upon saving. If set to `onType`, the active document will be linted when input is stopped for a period of time defined in [`latex-workshop.linting.delay`](#latex-workshoplintingdelay), in addition to the behavior of `onSave`.
 

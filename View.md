@@ -33,7 +33,7 @@ Reload vscode to make any change in this configuration effective.
 
 | Setting key                                                             | Description                      | Default       | Type     |
 |-------------------------------------------------------------------------|----------------------------------|---------------|----------|
-| [`latex-workshop.latex.outDir`](#latex-workshoplatexoutDir)             | Where to find the PDF files      | `"%DIR%"`     | _string_ |
+| [`latex-workshop.latex.outDir`](#latex-workshoplatexoutdir)             | Where to find the PDF files      | `"%DIR%"`     | _string_ |
 | [`latex-workshop.view.pdf.viewer`](#latex-workshopviewpdfviewer)        | The default PDF viewer           | `"tab"`       | _string_ |
 | [`latex-workshop.view.pdf.ref.viewer`](#latex-workshopviewpdfrefviewer) | The PDF viewer to preview `\ref` | (see details) | _string_ |
 
@@ -47,10 +47,10 @@ Below are the detailed explanations for the different possible settings
 
 |                                    Setting key                                    |                Description                   |
 | --------------------------------------------------------------------------------- | -----------------------------------------    |
-| [`latex-workshop.view.pdf.tab.editorGroup`](#latex-workshopviewpdftabeditorGroup) | Define the editor group for the tab viewer   |
+| [`latex-workshop.view.pdf.tab.editorGroup`](#latex-workshopviewpdftabeditorgroup) | Define the editor group for the tab viewer   |
 | [`latex-workshop.view.pdf.zoom`](#latex-workshopviewpdfzoom)                      | The default zoom level of the PDF viewer     |
-| [`latex-workshop.view.pdf.scrollMode`](#latex-workshopviewpdfscrollMode)          | The default scroll mode of the PDF viewer    |
-| [`latex-workshop.view.pdf.spreadMode`](#latex-workshopviewpdfspreadMode)          | The default spread mode of the PDF viewer    |
+| [`latex-workshop.view.pdf.scrollMode`](#latex-workshopviewpdfscrollmode)          | The default scroll mode of the PDF viewer    |
+| [`latex-workshop.view.pdf.spreadMode`](#latex-workshopviewpdfspreadmode)          | The default spread mode of the PDF viewer    |
 | [`latex-workshop.view.pdf.hand`](#latex-workshopviewpdfhand)                      | Enable the hand tool                         |
 | [`latex-workshop.view.pdf.trim`](#latex-workshopviewpdftrim)                      | The default trim mode of the PDF viewer      |
 
@@ -103,7 +103,7 @@ The javascript built-in version of SyncTeX is used by default. See [settings](#l
 
 | Setting key  | Description  | Default | Type      |
 | ----- | ------------- | ------------- | --------- |
-| [`latex-workshop.synctex.afterBuild.enabled`](#latex-workshopsynctexafterBuildenabled) | Forward synctex at cursor after compiling | `false` | _boolean_ |
+| [`latex-workshop.synctex.afterBuild.enabled`](#latex-workshopsynctexafterbuildenabled) | Forward synctex at cursor after compiling | `false` | _boolean_ |
 | [`latex-workshop.synctex.path`](#latex-workshopsynctexpath) | SyncTeX location | `"synctex"` | _string_  |
 | [`latex-workshop.synctex.synctexjs.enabled`](#latex-workshopsynctexsynctexjsenabled) | Enable using a built-in synctex function. | `true`| _boolean_ |
 | [`latex-workshop.synctex.indicator.enabled`](#latex-workshopsynctexindicatorenabled) | Show a red indicator after a forward synctex | `false` | _boolean_ |

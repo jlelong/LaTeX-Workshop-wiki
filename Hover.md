@@ -32,19 +32,19 @@ The `tabular` environment is not supported.
 | [`latex-workshop.hover.preview.cursor.enabled`](#latex-workshophoverpreviewcursorenabled) | Render cursor in hover preview |
 | [`latex-workshop.hover.preview.cursor.symbol`](#latex-workshophoverpreviewcursorsymbol) | Define the cursor symbol |
 | [`latex-workshop.hover.preview.cursor.color`](#latex-workshophoverpreviewcursorcolor) | Define the cursor color |
-| [`latex-workshop.hover.preview.newcommand.parseTeXFile.enabled`](#latex-workshophoverpreviewnewcommandparseTeXFileenabled) | Add newcommands to preview |
-| [`latex-workshop.hover.preview.newcommand.newcommandFile`](#latex-workshophoverpreviewnewcommandnewcommandFile) | Path of a file containing newcommands |
+| [`latex-workshop.hover.preview.newcommand.parseTeXFile.enabled`](#latex-workshophoverpreviewnewcommandparsetexfileenabled) | Add newcommands to preview |
+| [`latex-workshop.hover.preview.newcommand.newcommandFile`](#latex-workshophoverpreviewnewcommandnewcommandfile) | Path of a file containing newcommands |
 | [`latex-workshop.hover.preview.mathjax.extensions`](#latex-workshophoverpreviewmathjaxextensions) | MathJax extensions to load |
 
 ### Realtime math preview panel
 
-You can preview equation in realtime in a separate editor by using the _math preview panel_. The position of the editor is determined by [`latex-workshop.mathpreviewpanel.editorGroup`](#latex-workshopmathpreviewpaneleditorGroup)
+You can preview equation in realtime in a separate editor by using the _math preview panel_. The position of the editor is determined by [`latex-workshop.mathpreviewpanel.editorGroup`](#latex-workshopmathpreviewpaneleditorgroup)
 
 - To open the panel call _Open Math Preview Panel_ (internal command is `latex-workshop.openMathPreviewPanel`)
 - To close the panel call _Close Math Preview Panel"_ (internal command is `latex-workshop.closeMathPreviewPanel`)
 - To toggle the panel call _Toggle Math Preview Panel_ (internal command is `latex-workshop.toggleMathPreviewPanel`)
 
-Only math environments with less than [`latex-workshop.hover.preview.maxLines`](#latex-workshophoverpreviewmaxLines) lines are properly updated.
+Only math environments with less than [`latex-workshop.hover.preview.maxLines`](#latex-workshophoverpreviewmaxlines) lines are properly updated.
 
 ## Previewing graphics
 
@@ -52,13 +52,13 @@ When [`latex-workshop.hover.preview.enabled`](#latex-workshophoverpreviewenabled
 
 ## Previewing citation details
 
-When [`latex-workshop.hover.citation.enabled`](#latex-workshophovercitationenabled) is set to `true`, moving the mouse over an argument of a `\cite` related command displays the details of the bibliography as a tooltip. See [`latex-workshop.intellisense.citation.format`](Intelissense##latex-workshopintellisensecitationformat)
+When [`latex-workshop.hover.citation.enabled`](#latex-workshophovercitationenabled) is set to `true`, moving the mouse over an argument of a `\cite` related command displays the details of the bibliography as a tooltip. See [`latex-workshop.intellisense.citation.format`](Intellisense#latex-workshopintellisensecitationformat)
 
 <img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/hover-cite.gif" alt="Hover on \cite demo">
 
 ## Previewing references
 
-When [`latex-workshop.hover.ref.enabled`](#latex-workshophoverrefenabled) is set to `true`, moving the mouse over a `\ref` related command displays the piece of `tex` with the corresponding label as a tooltip. Moreover, if the label refers to a math environment as described in [Preview equations](#Preview-equations), math preview is rendered instead of showing the tex content. The tooltip has a `View on pdf` link to jump to the corresponding location in the `PDF` viewer. It only calls `synctex` as if you were directly calling _SyncTeX from cursor_ and therefore it requires a PDF viewer for the current `.tex` file to be opened.
+When [`latex-workshop.hover.ref.enabled`](#latex-workshophoverrefenabled) is set to `true`, moving the mouse over a `\ref` related command displays the piece of `tex` with the corresponding label as a tooltip. Moreover, if the label refers to a math environment as described in [Previewing equations](#previewing-equations), math preview is rendered instead of showing the tex content. The tooltip has a `View on pdf` link to jump to the corresponding location in the `PDF` viewer. It only calls `synctex` as if you were directly calling _SyncTeX from cursor_ and therefore it requires a PDF viewer for the current `.tex` file to be opened.
 
 <img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/hover-ref.gif" alt="Hover on \ref demo" height="300px">
 

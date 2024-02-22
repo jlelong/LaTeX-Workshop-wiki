@@ -17,15 +17,13 @@
 - [LaTeX Utilities is not supported](#latex-utilities-is-not-supported)
 - [The directory ~/node_modules/ may cause errors](#the-directory-node_modules-may-cause-errors)
 - [LaTeX Workshop doesn't work with a multi-file project](#latex-workshop-doesnt-work-with-a-multi-file-project)
-- [The Problem Pane displays wrong messages](#the-Problem-Pane-displays-wrong-messages)
-- [Encoding issues with file names in the Problem Pane](#Encoding-issues-with-file-names-in-the-Problem-Pane)
+- [The Problem Pane displays wrong messages](#the-problem-pane-displays-wrong-messages)
+- [Encoding issues with file names in the Problem Pane](#encoding-issues-with-file-names-in-the-problem-pane)
 - [I cannot use `ctrl`+`alt` in a shortcut](#i-cannot-use-ctrlalt-in-a-shortcut)
 - [Auto build does not work sometimes](#auto-build-does-not-work-sometimes)
 - [Saving a `.cls` file does not trigger auto build](#saving-a-cls-file-does-not-trigger-auto-build)
-- [Suggestions for BibTeX files are not updated](#suggestions-for-bibtex-files-are-not-updated)
-- [The internal PDF viewer is not updated](#the-internal-pdf-viewer-is-not-updated)
 - [Disable automatic build on save](#disable-automatic-build-on-save)
-- [I use build on save but I occasionally want to save without building](#I-use-build-on-save-but-I-occasionally-want-to-save-without-building)
+- [I use build on save but I occasionally want to save without building](#i-use-build-on-save-but-i-occasionally-want-to-save-without-building)
 - [Auto build LaTeX results in always twice or infinite loop](#auto-build-latex-results-in-always-twice-or-infinite-loop)
 - [With TikZ, builds result in an infinite loop](#with-tikz-builds-result-in-an-infinite-loop)
 - [Large bibtex files are ignored](#large-bibtex-files-are-ignored)
@@ -34,7 +32,6 @@
 - [The LaTeX sidebar keeps reopening](#the-latex-sidebar-keeps-reopening)
 - [Spell check](#spell-check)
 - [I cannot nest snippets](#i-cannot-nest-snippets)
-- [Some `@` snippets are not `TAB` completed](#some--snippets-are-not-tab-completed)
 - [How to pass `-shell-escape` to `latexmk`](#how-to-pass--shell-escape-to-latexmk)
 - [LaTeX-Workshop shadows vscode's default keybindings](#latex-workshop-shadows-vscodes-default-keybindings)
 - [Syntax Highlighting does not work for most elements](#syntax-highlighting-does-not-work-for-most-elements)
@@ -54,7 +51,7 @@
 - [The file `settings.json` doesn't have default values of settings](#the-file-settingsjson-doesnt-have-default-values-of-settings)
 - [Why don't you integrate the recipe system with the VS Code task feature?](#why-dont-you-integrate-the-recipe-system-with-the-vs-code-task-feature)
 - [How to prevent the internal PDF viewer from opening when selecting a PDF file in the explorer?](#how-to-prevent-the-internal-pdf-viewer-from-opening-when-selecting-a-pdf-file-in-the-explorer)
-- [Can I define my own listing environment?](can-i-define-my-own-listing-environment)
+- [Can I define my own listing environment?](#can-i-define-my-own-listing-environment)
 
 ## Known incompatible Extensions
 
@@ -185,7 +182,7 @@ please replace `-interaction=nonstopmode` with `-halt-on-error` in your recipe.
 
 ## Large bibtex files are ignored
 
-Bibtex files listed in a project are parsed for citation completion. This may induce significant slow down with large bibtex files. You can configure the maximum size of bibtex files parsed by the extension with [`latex-workshop.bibtex.maxFileSize`](Intellisense#latex-workshopbibtexmaxFileSize).
+Bibtex files listed in a project are parsed for citation completion. This may induce significant slow down with large bibtex files. You can configure the maximum size of bibtex files parsed by the extension with [`latex-workshop.bibtex.maxFileSize`](Intellisense#latex-workshopbibtexmaxfilesize).
 
 ## Path containing Chinese or `~` characters
 
