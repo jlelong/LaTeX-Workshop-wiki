@@ -429,8 +429,8 @@ LaTeX compilation typically generates several auxiliary files. They can be remov
 | [`latex-workshop.latex.autoBuild.cleanAndRetry.enabled`](#latex-workshoplatexautobuildcleanandretryenabled) | Enable cleaning and building once more after errors in the build toolchain | `true`  | _boolean_ |
 | [`latex-workshop.latex.autoClean.run`](#latex-workshoplatexautocleanrun) | Define when LaTeX auxillary files should be deleted. | `"never"` | _string_ |
 | [`latex-workshop.latex.clean.method`](#latex-workshoplatexcleanmethod) | Define the method used by the `clean` command to remove temporary files | `glob` | _enum_ of _strings_ |
-| [`latex-workshop.latex.clean.command`](#latex-workshoplatexcleancommand) | Define the command used to remove temporary files when [`latex-workshop.latex.clean.method`](#latex-workshoplatexcleanmethod) is set to `cleanMethod` | `latexmk` | _string_ |
-| [`latex-workshop.latex.clean.args`](#latex-workshoplatexcleanargs) | Arguments of [`latex-workshop.latex.clean.command`](#latex-workshoplatexcleancommand) | `["-c", "%TEX%"]` | _array_ of _string_ |
+| [`latex-workshop.latex.clean.command`](#latex-workshoplatexcleancommand) | Define the command used to remove temporary files when [`latex-workshop.latex.clean.method`](#latex-workshoplatexcleanmethod) is set to `command` | `latexmk` | _string_ |
+| [`latex-workshop.latex.clean.args`](#latex-workshoplatexcleanargs) | Arguments of [`latex-workshop.latex.clean.command`](#latex-workshoplatexcleancommand) | `["-outdir=%OUTDIR%", "-c", "%TEX%"]` | _array_ of _string_ |
 | [`latex-workshop.latex.clean.fileTypes`](#latex-workshoplatexcleanfiletypes) | Extensions of files to clean |     | _array of strings_ |
 | [`latex-workshop.latex.clean.subfolder.enabled`](#latex-workshoplatexcleansubfolderenabled) | Clean LaTeX auxillary files recursively in sub-folders of [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutdir) | `false`   | _boolean_ |
 
@@ -477,7 +477,7 @@ Users can also specify glob patterns like `emptyfolder*/` to remove empty folder
 
 ### `latex-workshop.latex.clean.command`
 
-The command to be used to remove temporary files when [`latex-workshop.latex.clean.method`](#latex-workshoplatexcleanmethod) is set to `cleanMethod`.
+The command to be used to remove temporary files when [`latex-workshop.latex.clean.method`](#latex-workshoplatexcleanmethod) is set to `command`.
 
 | type     | default value |
 | -------- | ------------- |
@@ -489,7 +489,7 @@ The arguments of [`latex-workshop.latex.clean.command`](#latex-workshoplatexclea
 
 | type                 | default value     |
 |----------------------|-------------------|
-| _array_ of _strings_ | `["-c", "%TEX%"]` |
+| _array_ of _strings_ | `["-outdir=%OUTDIR%", "-c", "%TEX%"]` |
 
 ### `latex-workshop.latex.clean.method`
 
@@ -497,10 +497,10 @@ Define the method used by the `clean` command to remove temporary files.
 
 | type                | default value             |
 |---------------------|---------------------------|
-| _enum_ of _strings_ | `"glob"`                  |
+| _enum_ of _strings_ | `"command"`                  |
 
 - `"glob"`: Clean all the files located in [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutdir) and matching the glob patterns listed in [`latex-workshop.latex.clean.fileTypes`](#latex-workshoplatexcleanfiletypes).
-- `"cleanCommand"`: Run [`latex-workshop.latex.clean.command`](#latex-workshoplatexcleancommand) to clean temporary files.
+- `"command"`: Run [`latex-workshop.latex.clean.command`](#latex-workshoplatexcleancommand) to clean temporary files.
 
 ## External build command
 
