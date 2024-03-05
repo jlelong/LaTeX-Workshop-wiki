@@ -10,14 +10,14 @@ You can define several compiling toolchains to build LaTeX projects using [LaTeX
 
 The following settings are helpful to customize how to build a project and how to deal with failures.
 
-| Setting key                                               | Description                                                                                           | Default  | Type                 |
-| --------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | -------- | -------------------- |
-| [`latex-workshop.latex.jobname`](#latex-workshoplatexjobname) | 
-| [`latex-workshop.latex.autoBuild.run`](#auto-build-latex) | When the extension shall auto build LaTeX project using [the default (first) recipe](#latex-recipes). | `onFileChange` | _string_             |
-| [`latex-workshop.latex.recipes`](#latex-recipes)          | Sequence of tools to run for building                                                                 |          | _JSON object_        |
-| [`latex-workshop.latex.tools`](#latex-recipes)            | Tools available for building                                                                          |          | _JSON object_        |
-| [`latex-workshop.latex.magic.args`](#magic-comments)      | Arguments for the `TeX program`                                                                       |          | _array_ of _strings_ |
-| [`latex-workshop.latex.magic.bib.args`](#magic-comments)  | Arguments for the `BIB program`                                                                       |          | _array_ of _strings_ |
+| Setting key | Description | Default | Type |
+|-------------|-------------|---------|------|
+| [`latex-workshop.latex.jobname`](#latex-workshoplatexjobname) | The jobname argument of the compiling tool | `""` | _string_ |
+| [`latex-workshop.latex.autoBuild.run`](#auto-build-latex) | When the extension shall auto build LaTeX project using [the default (first) recipe](#latex-recipes). | `onFileChange` | _string_ |
+| [`latex-workshop.latex.recipes`](#latex-recipes) | Sequence of tools to run for building | | _JSON object_ |
+| [`latex-workshop.latex.tools`](#latex-recipes) | Tools available for building | | _JSON object_ |
+| [`latex-workshop.latex.magic.args`](#magic-comments) | Arguments for the `TeX program` | | _array_ of _strings_ |
+| [`latex-workshop.latex.magic.bib.args`](#magic-comments) | Arguments for the `BIB program` | | _array_ of _strings_ |
 | [`latex-workshop.latex.build.forceRecipeUsage`](#latex-workshoplatexbuildforcerecipeusage) | Force the use of recipes | true | _boolean_ |
 
 ## Terminating the current compilation
@@ -69,7 +69,6 @@ With the default value, we do not watch files inside the `texmf` tree of the LaT
 |         type         | default value  |
 | -------------------- | -------------- |
 | _array_ of _strings_ | `["**/*.bbx", "**/*.cbx", "**/*.cfg", "**/*.clo", "**/*.cnf", "**/*.def", "**/*.fmt", "**/*.lbx", "**/*.map", "**/*.pfb", "**/*.tfm", "**/texmf-{dist,var}/**", "C:/**texmf/**", "/usr/local/share/miktex-texmf/**", "/Library/Application Support/MiKTeX/texmfs/**"]` |
-
 
 ## LaTeX recipes
 
@@ -171,7 +170,7 @@ LaTeX Workshop registers the following placeholders
 | `%DOCFILE_EXT%` | The root file name with the extension |
 | `%DIR%`         | The root file directory |
 | `%DIR_W32%`     | The root file directory with `\` path separator on Windows |
-| `%TMPDIR%`      | A temporary folder for storing auxilary files |
+| `%TMPDIR%`      | A temporary folder for storing auxiliary files |
 | `%OUTDIR%`      | The output directory configured in [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutdir) |
 | `%OUTDIR_W32%`  | The output directory configured in [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutdir) with `\` path separator on Windows |
 | `%WORKSPACE_FOLDER%`  | The current workspace path |
@@ -212,7 +211,7 @@ Beware that the`texify` command-line utility does not work properly with BibLaTe
 ### `latex-workshop.latex.recipe.default`
 
 Define which recipe is used by the _Build LaTeX project_ command.
-It also applies to auto build. Recipes are refered to by their names as defined in `latex-workshop.latex.recipes`. Note there are two special values:
+It also applies to auto build. Recipes are referred to by their names as defined in `latex-workshop.latex.recipes`. Note there are two special values:
 
 - `"first"`: Use the first recipe defined in [`latex-workshop.latex.recipes`](#latex-recipes).
 - `"lastUsed"`: Use the last used recipe by the command _LaTeX Workshop: Build with recipe_.
@@ -473,7 +472,6 @@ Users can also specify glob patterns like `emptyfolder*/` to remove empty folder
 |         type         | default value  |
 | -------------------- | -------------- |
 | _array_ of _strings_ | `[ "*.aux", "*.bbl", "*.blg", "*.idx", "*.ind", "*.lof", "*.lot", "*.out", "*.toc", "*.acn", "*.acr", "*.alg", "*.glg", "*.glo", "*.gls", "*.fls", "*.log", "*.fdb_latexmk", "*.snm", "*.synctex(busy)", "*.synctex.gz(busy)", "*.nav" ]` |
-
 
 ### `latex-workshop.latex.clean.command`
 

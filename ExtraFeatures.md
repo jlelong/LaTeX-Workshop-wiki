@@ -117,7 +117,7 @@ When to call `texcount`. Default is never.
 
 | type     | default value         |
 |----------|-----------------------|
-| _string_ | `"onSave" | "never"`  |
+| _string_ | `"onSave" \| "never"`  |
 
 ### `latex-workshop.texcount.interval`
 
