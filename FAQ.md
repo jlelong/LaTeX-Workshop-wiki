@@ -52,6 +52,7 @@
 - [Why don't you integrate the recipe system with the VS Code task feature?](#why-dont-you-integrate-the-recipe-system-with-the-vs-code-task-feature)
 - [How to prevent the internal PDF viewer from opening when selecting a PDF file in the explorer?](#how-to-prevent-the-internal-pdf-viewer-from-opening-when-selecting-a-pdf-file-in-the-explorer)
 - [Can I define my own listing environment?](#can-i-define-my-own-listing-environment)
+- [Why PDF refresh and SyncTeX stop functioning after my computer slept and waked?](#why-pdf-refresh-and-synctex-stop-functioning-after-my-computer-slept-and-waked)
 
 ## Known incompatible Extensions
 
