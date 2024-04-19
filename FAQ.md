@@ -353,3 +353,7 @@ Set `"workbench.list.openMode": "doubleClick"` in `settings.json`. See [the docu
 ## Can I define my own listing environment?
 
 Any environment matching `[a-zA-Z]*code` is considered as a code / listing environment. This is the best we can offer as the textmate engine used for colorization does not allow user configuration.
+
+## Why PDF refresh and SyncTeX stop functioning after my computer slept and waked?
+
+We have some logic trying to reconnect PDF viewer back with the extension. However, it may not work for some particular computer-network combinations. The most reliable solution is to close and reopen the PDF viewer.
