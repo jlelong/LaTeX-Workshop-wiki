@@ -92,7 +92,7 @@ A kind of dark mode for the PDF viewer is available. Set `latex-workshop.view.pd
 
 ## SyncTeX
 
-The javascript built-in version of SyncTeX is used by default. See [settings](#latex-workshopsynctexsynctexjsenabled). See [Using SyncTeX with an external viewer](#using-synctex-with-an-external-viewer) also.
+The javascript built-in version of SyncTeX is used for backward sync by default. See [Using SyncTeX with an external viewer](#using-synctex-with-an-external-viewer) also.
 
 ### Usage
 
@@ -105,8 +105,7 @@ The javascript built-in version of SyncTeX is used by default. See [settings](#l
 | ----- | ------------- | ------------- | --------- |
 | [`latex-workshop.synctex.afterBuild.enabled`](#latex-workshopsynctexafterbuildenabled) | Forward synctex at cursor after compiling | `false` | _boolean_ |
 | [`latex-workshop.synctex.path`](#latex-workshopsynctexpath) | SyncTeX location | `"synctex"` | _string_  |
-| [`latex-workshop.synctex.synctexjs.enabled`](#latex-workshopsynctexsynctexjsenabled) | Enable using a built-in synctex function. | `true`| _boolean_ |
-| [`latex-workshop.synctex.indicator.enabled`](#latex-workshopsynctexindicatorenabled) | Show a red indicator after a forward synctex | `false` | _boolean_ |
+| [`latex-workshop.synctex.indicator`](#latex-workshopsynctexindicator) | Define the visibility and style of SyncTeX indicator after a forward SyncTeX in the PDF viewer. | `rectangle` | _string_ |
 
 ## External PDF viewer
 
@@ -592,23 +591,13 @@ Additional arguments, e.g., synctex modes and position of click, will be appende
 | -------- | ------------- |
 | _string_ | `"synctex"`   |
 
+### `latex-workshop.synctex.indicator`
 
-### `latex-workshop.synctex.synctexjs.enabled`
+Define the visibility and style of SyncTeX indicator after a forward SyncTeX in the PDF viewer.
 
-Enable using a builtin synctex function. The command set in latex-workshop.synctex.path will not be used.
-This builtin synctex works well even if the path of TeX files contains non-ASCII characters.
-
-| type      | default value |
-| --------- | ------------- |
-| _boolean_ | `true`        |
-
-### `latex-workshop.synctex.indicator.enabled`
-
-Define the visibility of SyncTeX indicator (a red highlighting circle) after a forward SyncTeX in the PDF viewer.
-
-| type      | default value |
-| --------- | ------------- |
-| _boolean_ | `false`       |
+| type      | default value | possible values                        |
+| --------- | ------------- |--------------------------------------- |
+| _enum_    | `"rectangle"` | `"none"`, "`circle`", or `"rectangle"` |
 
 ### `latex-workshop.view.pdf.external.viewer.command`
 
