@@ -329,8 +329,7 @@ Forward: Edit `settings.json` as follows, then use
 
 The directory where the extension tries to find project files (e.g., PDF and SyncTeX generated files).
 
-Both relative and absolute paths are supported. Relative path start from the root file location, so beware if it is located in sub-directory. Note that the LaTeX toolchain should output files to this path. The default [recipes](Compile#Latex-recipes), which relies on `latexmk`, takes care of putting all the generated files to the directory specified by `latex-workshop.latex.outDir`. The path given to this option must not contain a trailing slash.
-The following placeholders defined in the [recipes section](Compile#placeholders) can be used.
+Both relative and absolute paths are supported. Relative path start from the root file location, so beware if it is located in sub-directory. The path must not contain a trailing slash. The LaTeX toolchain should output files to this path. For a list of supported placeholders, please visit https://github.com/James-Yu/LaTeX-Workshop/wiki/Compile#placeholders. Note that if this config is set to %DIR% (default value) or %DIR_W32%, the extension will try to parse the last LaTeX tools used and look for `-out-directory=` and `-outdir=`, and automatically determine the output directory. This means that you can safely ignore this config if you use `latexmk` and do not manually `mv` the output files in your recipe.
 
 | type     | default value |
 | -------- | ------------- |
