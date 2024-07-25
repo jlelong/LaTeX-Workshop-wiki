@@ -427,7 +427,7 @@ LaTeX compilation typically generates several auxiliary files. They can be remov
 | ------------ | ----------- | ------- | ----- |
 | [`latex-workshop.latex.autoBuild.cleanAndRetry.enabled`](#latex-workshoplatexautobuildcleanandretryenabled) | Enable cleaning and building once more after errors in the build toolchain | `true`  | _boolean_ |
 | [`latex-workshop.latex.autoClean.run`](#latex-workshoplatexautocleanrun) | Define when LaTeX auxillary files should be deleted. | `"never"` | _string_ |
-| [`latex-workshop.latex.clean.method`](#latex-workshoplatexcleanmethod) | Define the method used by the `clean` command to remove temporary files | `glob` | _enum_ of _strings_ |
+| [`latex-workshop.latex.clean.method`](#latex-workshoplatexcleanmethod) | Define the method used by the `clean` command to remove temporary files | `command` | _enum_ of _strings_ |
 | [`latex-workshop.latex.clean.command`](#latex-workshoplatexcleancommand) | Define the command used to remove temporary files when [`latex-workshop.latex.clean.method`](#latex-workshoplatexcleanmethod) is set to `command` | `latexmk` | _string_ |
 | [`latex-workshop.latex.clean.args`](#latex-workshoplatexcleanargs) | Arguments of [`latex-workshop.latex.clean.command`](#latex-workshoplatexcleancommand) | `["-outdir=%OUTDIR%", "-c", "%TEX%"]` | _array_ of _string_ |
 | [`latex-workshop.latex.clean.fileTypes`](#latex-workshoplatexcleanfiletypes) | Extensions of files to clean |     | _array of strings_ |
