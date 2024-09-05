@@ -37,14 +37,7 @@ The key `\` automatically triggers completion of LaTeX commands. You can define 
 - The files of a LaTeX project are searched for any already used commands in the form `mycommand` followed by several `{}` groups. Then, a snippet is dynamically built for each of them and they are added to the command completion list.
 - When [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled) is `true`, the command completion list is also populated with the commands provided by all the _standard_ packages used in the project (through `\usepackage`). The list of commands provided by every package is described [here](https://github.com/LaTeXing/LaTeX-cwl). Note that homemade packages are ignored in this mechanism because they do not come with a `.cwl` file.
 - If you use personal macro files and want them to be taken into account by intellisense but store them in some `texmf` structure or dedicated directory. Just add the directory containing the file to [`latex-workshop.latex.texDirs`](Compile#latex-workshoplatextexdirs). The file must be loaded in the LaTeX project through the `\input` macro.
-- If you write your own package along with the corresponding `.cwl` file, you can use the Python script [pkgcommand.py](https://github.com/James-Yu/LaTeX-Workshop/blob/master/dev/pkgcommand.py)
-
-    ```
-    python pkgcommand.py -i mypackage.cwl -o destdir
-    ```
-
-  You will find a file `mypackage.json` in `destdir` containing intellisense data for command respectively environment completion. To enable the extension to load these files, add `destdir` to [`latex-workshop.intellisense.package.dirs`](#latex-workshopintellisensepackagedirs). Note it only works when [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled) is set to `true` and you have imported this package in LaTeX, i.e., `\usepackage{mypackage}`.
-
+- If you write your own package along with the corresponding `.cwl` file, you can use the Typescript script [parse-cwl.ts](https://github.com/James-Yu/LaTeX-Workshop/blob/master/dev/parse-cwl.ts). For details on how to run this script, please read https://github.com/James-Yu/LaTeX-Workshop/tree/master/dev#parse-cwlts . Place the generated `<mypackage>.json` file in a folder defined in [`latex-workshop.intellisense.package.dirs`](#latex-workshopintellisensepackagedirs). Note it only works when [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled) is set to `true` and you have imported this package in LaTeX, i.e., `\usepackage{mypackage}`.
 - Many snippets use text hints of the form `${\d:some_tex}` for their argument. You may prefer to hide instead by setting[`latex-workshop.intellisense.argumentHint.enabled`](#latex-workshopintellisenseargumenthintenabled) to `true`.
 - We provide one entry in the intellisense completion list per LaTeX command signature. If you feel, it makes the completion list too long, set [`latex-workshop.intellisense.optionalArgsEntries.enabled`](#latex-workshopintellisenseoptionalargsentriesenabled) to `false`.
 
