@@ -97,7 +97,7 @@ A LaTeX recipe refers to a sequence/array of commands which LaTeX Workshop execu
 ]
 ```
 
-When building the project, the first recipe is used by default. See the [setting](#latex-workshoplatexrecipedefault). You can compile with another recipe by command `latex-workshop.recipes`. By default [`latexmk`](https://personal.psu.edu/jcc8/software/latexmk/) is used. This tool is bundled in most LaTeX distributions, and requires perl to execute.
+When building the project, the first recipe is used by default. See the [setting](#latex-workshoplatexrecipedefault). You can compile with another recipe by command `latex-workshop.recipes`. By default [`latexmk`](https://ctan.org/pkg/latexmk) is used. This tool is bundled in most LaTeX distributions, and requires perl to execute.
 
 If you want to preset a per-file recipe, you may also consider place the LaTeX Workshop-specific derivative `%!LW recipe=recipe-name` at the top of your root file, similar to the wider recognized `%!TeX root=root-file` magic comment.
 
