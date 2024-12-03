@@ -17,6 +17,7 @@ If you use very large bibtex files, you may experience temporary freezing. Hence
 | [`latex-workshop.bibtex.maxFileSize`](#latex-workshopbibtexmaxfilesize) | Maximum bibtex file size (in MB) | `5` | _float_ |
 | [`latex-workshop.intellisense.citation.type`](#latex-workshopintellisensecitationtype) | Type of vs code suggestion to use | `"inline"` | _string_: "inline" \| "browser" (dropdown menu) |
 | [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled) | Enabling of auto-completion for commands and environments from loaded packages | `true` | _boolean_ |
+| [`latex-workshop.intellisense.package.unusual`](#latex-workshopintellisensepackageunusual) | Auto-complete less used commands and environments from loaded packages | `false` | _boolean_ |
 | [`latex-workshop.latex.bibDirs`](#latex-workshoplatexbibdirs) | List of paths to look for `.bib` files. | `[]` | _array_ of _strings_ |
 | [`latex-workshop.kpsewhich.bibtex.enabled`](#latex-workshopkpsewhichbibtexenabled) | Use `kpsewhich` to resolve `.bib` files. | `true` | _boolean_ |
 | [`latex-workshop.kpsewhich.class.enabled`](#latex-workshopkpsewhichclassenabled) | Use `kpsewhich` to resolve `.cls` files. | `true` | _boolean_ |
@@ -36,7 +37,8 @@ The key `\` automatically triggers completion of LaTeX commands. You can define 
 
 - A set of standard LaTeX commands is provided in the file [`data/commands.json`](https://github.com/James-Yu/LaTeX-Workshop/blob/master/data/commands.json). You may overwrite some of these commands or add new ones by using the [`latex-workshop.intellisense.command.user`](#latex-workshopintellisensecommanduser) configuration variable.
 - The files of a LaTeX project are searched for any already used commands in the form `mycommand` followed by several `{}` groups. Then, a snippet is dynamically built for each of them and they are added to the command completion list.
-- When [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled) is `true`, the command completion list is also populated with the commands provided by all the _standard_ packages used in the project (through `\usepackage`). The list of commands provided by every package is described [here](https://github.com/LaTeXing/LaTeX-cwl). Note that homemade packages are ignored in this mechanism because they do not come with a `.cwl` file.
+- When [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled) is `true`, the command completion list is also populated with the commands provided by all the _standard_ packages used in the project (through `\usepackage`). The list of commands provided by every package is described [here](https://github.com/texstudio-org/texstudio/tree/master/completion). Note that homemade packages are ignored in this mechanism because they do not come with a `.cwl` file.
+- Moreover, when [`latex-workshop.intellisense.package.unusual`](#latex-workshopintellisensepackageunusual) is also `true`, the command completion list is further populated with the less used commands provided by all the _standard_ packages used in the project. The less used commands are marked with `*` classifier in `.cwl` files, see [here](https://texstudio-org.github.io/background.html#classification-format).
 - If you use personal macro files and want them to be taken into account by intellisense but store them in some `texmf` structure or dedicated directory. Just add the directory containing the file to [`latex-workshop.latex.texDirs`](Compile#latex-workshoplatextexdirs). The file must be loaded in the LaTeX project through the `\input` macro.
 - If you write your own package along with the corresponding `.cwl` file, you can use the Typescript script [parse-cwl.ts](https://github.com/James-Yu/LaTeX-Workshop/blob/master/dev/parse-cwl.ts). For details on how to run this script, please read https://github.com/James-Yu/LaTeX-Workshop/tree/master/dev#parse-cwlts . Place the generated `<mypackage>.json` file in a folder defined in [`latex-workshop.intellisense.package.dirs`](#latex-workshopintellisensepackagedirs). Note it only works when [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled) is set to `true` and you have imported this package in LaTeX, i.e., `\usepackage{mypackage}`.
 - Many snippets use text hints of the form `${\d:some_tex}` for their argument. You may prefer to hide instead by setting[`latex-workshop.intellisense.argumentHint.enabled`](#latex-workshopintellisenseargumenthintenabled) to `false`.
@@ -71,7 +73,7 @@ There are three different ways to insert a new environment
 
   <img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/env-cmd.gif" alt="\envname demo">
 
-Completion for environments is based on a set of predefined environments enriched with those defined by the included packages when [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled) is `true`. Moreover, when [`latex-workshop.intellisense.package.env.enabled`](#latex-workshopintellisensepackageenvenabled) is also `true`, environments provided by used packages can be inserted by using the `\envname` approach. On top of this, any custom environment is added to the completion list after being used once.
+Completion for environments is based on a set of predefined environments enriched with those defined by the included packages when [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled) is `true`. Then, when [`latex-workshop.intellisense.package.unusual`](#latex-workshopintellisensepackageunusual) is also `true`, less used environments are shown in the completion list. Moreover, when [`latex-workshop.intellisense.package.env.enabled`](#latex-workshopintellisensepackageenvenabled) is also `true`, environments provided by used packages can be inserted by using the `\envname` approach. On top of this, any custom environment is added to the completion list after being used once.
 
 ## Files
 
@@ -226,6 +228,14 @@ Auto-complete commands and environments from used packages.
 | type      | default value |
 | --------- | ------------- |
 | _boolean_ | `true`        |
+
+### `latex-workshop.intellisense.package.unusual`
+
+Auto-complete less used commands and environments from used packages. This config is only effective when [`latex-workshop.intellisense.package.enabled`](#latex-workshopintellisensepackageenabled) is `true`.
+
+| type      | default value |
+| --------- | ------------- |
+| _boolean_ | `false`       |
 
 ### `latex-workshop.intellisense.package.exclude`
 
