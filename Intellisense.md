@@ -50,6 +50,7 @@ The key `\` automatically triggers completion of LaTeX commands. You can define 
 | [`latex-workshop.intellisense.package.extra`](#latex-workshopintellisensepackageextra) | Extra packages to load for intellisense | `[]` | _array_ of _strings_ |
 | [`latex-workshop.intellisense.package.dirs`](#latex-workshopintellisensepackagedirs) | Extra directories where to look for intellisense data | `[]` | _array_ of _strings_ |
 | [`latex-workshop.intellisense.unimathsymbols.enabled`](#latex-workshopintellisenseunimathsymbolsenabled) | Show unimath symbols as suggestions when `\` pressed | `false` | _boolean_ |
+| [`latex-workshop.intellisense.subsuperscript.enabled`](#latex-workshopintellisensesubsuperscriptenabled) | Show sub- or super-scripts used in the current project as suggestions when `_{` or `^{` typed | `false` | _boolean_ |
 | [`latex-workshop.intellisense.argumentHint.enabled`](#latex-workshopintellisenseargumenthintenabled) | Show argument hints in intellisense completion | `true` | _boolean_ |
 | [`latex-workshop.intellisense.optionalArgsEntries.enabled`](#latex-workshopintellisenseoptionalargsentriesenabled) | Add one completion item per command signature | `true` | _boolean_ |
 | [`latex-workshop.latex.texDirs`](Compile#latex-workshoplatextexdirs) | List of paths to look for input `.tex` files. | `[]` | _array_ of _strings_ |
@@ -294,6 +295,14 @@ The name of LaTeX commands that indicates a label definition. The command must a
 ### `latex-workshop.intellisense.unimathsymbols.enabled`
 
 When `\` is typed, show unimath symbols in the dropdown selector.
+
+| type      | default value |
+| --------- | ------------- |
+| _boolean_ | `false`       |
+
+### `latex-workshop.intellisense.subsuperscript.enabled`
+
+When `_{` or `^{` are typed, show sub- or super-scripts used in the current project.
 
 | type      | default value |
 | --------- | ------------- |
