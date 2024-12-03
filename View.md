@@ -59,8 +59,8 @@ Additional settings for the internal viewer:
 | Setting key                                                                                              | Description                                            |
 | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
 | [`latex-workshop.view.pdf.internal.synctex.keybinding`](#latex-workshopviewpdfinternalsynctexkeybinding) | How to trigger synctex with the internal viewer        |
-| [`latex-workshop.viewer.pdf.internal.port`](#latex-workshopviewerpdfinternalport)                        | Which port internal viewer server communicates through |
-| [`latex-workshop.viewer.pdf.internal.keyboardEvent`](#latex-workshopviewerpdfinternalkeyboardevent)      | The shortcuts of VS Code on the internal viewer        |
+| [`latex-workshop.view.pdf.internal.port`](#latex-workshopviewpdfinternalport)                        | Which port internal viewer server communicates through |
+| [`latex-workshop.view.pdf.internal.keyboardEvent`](#latex-workshopviewpdfinternalkeyboardevent)      | The shortcuts of VS Code on the internal viewer        |
 
 The internal viewer listens on localhost. In some very specific use cases, one might require to change the host to listen on. As that may create a severe security breach, this cannot be changed by a permanent setting but only by calling the function `latex-workshop.changeHostName`(_Change server listening hostname_). This change will not remain across VS Code reloads. It can also be reset by calling `latex-workshop.resetHostName` (_Reset server listening hostname to 127.0.0.1_).
 
@@ -423,7 +423,7 @@ The default trim mode of the PDF viewer
 - `2`: Trim 10% at margin
 - `3`: Trim 15% at margin
 
-### `latex-workshop.viewer.pdf.internal.port`
+### `latex-workshop.view.pdf.internal.port`
 
 Defines the port on which the internal viewer listens for events such as synctex or refreshing the viewer. The default value of `0` means that the port is chosen randomly by the extension.
 
@@ -433,7 +433,7 @@ Defines the port on which the internal viewer listens for events such as synctex
 
 Note: keep this value set to `0` unless you know what you are doing.
 
-### `latex-workshop.viewer.pdf.internal.keyboardEvent`
+### `latex-workshop.view.pdf.internal.keyboardEvent`
 
 Rebroadcast KeyboardEvent on the internal PDF viewers. If the keyboard shortcuts of VS Code do not work well on the internal viewer, change this setting. You must reopen the internal viewers or restart VS Code to take into account a change in this configuration.
 
