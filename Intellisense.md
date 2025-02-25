@@ -8,11 +8,14 @@ Every file of a LaTeX project is parsed to look for bibliography resources, eith
 
 Then, when citation commands like `\cite` and its derivatives are automatically completed with bibliography entries found in the various resources.
 
+When VS Code provides citation suggestions, they are selected (filtered) from all parsed bibliograph entries by comparing the input characters and the `filterText` of each entry, which is defined by [`latex-workshop.intellisense.citation.filterText`](#latex-workshopintellisensecitationfiltertext). Note that due to the internal limit by VS Code, only the first 128 characters of `filterText` is used (reference [here](https://github.com/microsoft/vscode/issues/74133)). Therefore, the order of BibTeX fields matters if `"other fields"` is used in [`latex-workshop.intellisense.citation.filterText`](#latex-workshopintellisensecitationfiltertext).
+
 If you use very large bibtex files, you may experience temporary freezing. Hence, files larger than 5MB are ignored (see [`latex-workshop.bibtex.maxFileSize`](#latex-workshopbibtexmaxfilesize)).
 
 | Setting key | Description | Default | Type |
 |-------------|-------------|---------|------|
-| [`latex-workshop.intellisense.citation.label`](#latex-workshopintellisensecitationlabel) | Citation property used as suggestion label | `"bibtex key"` | _string_: "bibtex key" \| "title" \| "authors" |
+| [`latex-workshop.intellisense.citation.label`](#latex-workshopintellisensecitationfiltertext) | Citation property used as suggestion label | `"bibtex key"` | _string_: "bibtex key" \| "title" \| "authors" |
+| [`latex-workshop.intellisense.citation.filterText`](#latex-workshopintellisensecitationlabel) | Citation property used as filtering text | `["bibtex key", "title", "other fields"]` | Array of _string_s: "bibtex key" \| "title" \| "other fields" |
 | [`latex-workshop.intellisense.citation.format`](#latex-workshopintellisensecitationformat) | List of fields to display and to use for filtering suggestions| | _array_ of _strings_ |
 | [`latex-workshop.bibtex.maxFileSize`](#latex-workshopbibtexmaxfilesize) | Maximum bibtex file size (in MB) | `5` | _float_ |
 | [`latex-workshop.intellisense.citation.type`](#latex-workshopintellisensecitationtype) | Type of vs code suggestion to use | `"inline"` | _string_: "inline" \| "browser" (dropdown menu) |
@@ -173,6 +176,18 @@ Enable preview for `\includegraphics` completion.
 | type      | default value |
 | --------- | ------------- |
 | _boolean_ | `true`        |
+
+### `latex-workshop.intellisense.citation.filterText`
+
+Defines what contents are used to filter citation entries when user types characters in [inline](#latex-workshopintellisensecitationtype) mode. Sorting is somewhat controlled by the order of contents defined by this config.
+
+- `bibtex key`: BibTeX keys.
+- `title`: Publication titles.
+- `author`: Other BibTeX fields except for title, order preserved as defined in BibTeX.
+
+| type               | default value                             |
+| ------------------ | ----------------------------------------- |
+| Array of _string_s | `["bibtex key", "title", "other fields"]` |
 
 ### `latex-workshop.intellisense.citation.label`
 
