@@ -161,3 +161,19 @@ We support the following the programming languages inside a LaTeX document
 - `R` code using [knitr](https://yihui.org/knitr/) or [Sweave](https://stat.ethz.ch/R-manual/R-devel/library/utils/doc/Sweave.pdf). See [Building a `.rnw` file](Compile#Building-a-rnw-file) for how to compile LaTeX files using Sweave. We use the `rsweave` language mode for this and recognize the following file extensions   `.rnw`, `.Rnw`, `.Rtex`, `.rtex`, `.snw` and `.Snw`.
 
 For syntax highlighting to be properly working, you need to install the VSCode extension that gives support for the corresponding programming language.
+
+## Collaborative editing using LiveShare (experimental)
+
+The LiveShare extension has some limitations when it comes to interacting with the filesystem and does not support sharing binary files. However, a workaround has been developed with the following features:
+
+- View pdf by clicking on the pdf file
+- View pdf by the view command
+- Auto refresh pdf view when the pdf file changes
+- Inverse and forward synctex
+
+To get started as a host, you need to:
+1. Start a LiveShare session
+2. Allow for port sharing when prompted. If you miss the prompt, execute the `Share` command.
+3. The PDF viewer and LaTeX compiler must be running on the host.
+4. Share your invitation link and start collaborating!
+5. The guests will acquire the port on connect, but can reacquire it using the same `Share` command.
