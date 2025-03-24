@@ -162,9 +162,9 @@ We support the following the programming languages inside a LaTeX document
 
 For syntax highlighting to be properly working, you need to install the VSCode extension that gives support for the corresponding programming language.
 
-## Collaborative editing using LiveShare (experimental)
+## Collaborative editing using Live Share (experimental)
 
-The LiveShare extension has some limitations when it comes to interacting with the filesystem and does not support sharing binary files. However, a workaround has been developed with the following features:
+The Live Share extension has some limitations when it comes to interacting with the filesystem and does not support sharing binary files. However, a workaround has been developed with the following features:
 
 - View pdf by clicking on the pdf file
 - View pdf by the view command
@@ -172,7 +172,7 @@ The LiveShare extension has some limitations when it comes to interacting with t
 - Inverse and forward synctex
 
 To get started as a host, you need to:
-1. Start a LiveShare session
+1. Start a Live Share session
 2. Allow for port sharing when prompted. If you miss the prompt, execute the `Share` command.
 3. The PDF viewer and LaTeX compiler must be running on the host.
 4. Share your invitation link and start collaborating!
