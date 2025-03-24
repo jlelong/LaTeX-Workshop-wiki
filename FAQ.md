@@ -117,9 +117,9 @@ LaTeX Workshop does not support [the github.dev web-based editor](https://docs.g
 
 [Open-source builds](https://archlinux.org/packages/community/x86_64/code/) of Visual Studio Code on Arch Linux and Manjaro are not officially supported due to the maintenance burden. We do not help to resolve issues related to those builds. Please use [the official binary distribution](https://aur.archlinux.org/packages/visual-studio-code-bin/).
 
-## Visual Studio Live Share is not supported
+## Visual Studio Live Share has experimental support
 
-[Visual Studio Live Share](https://marketplace.visualstudio.com/items?itemName=ms-vsliveshare.vsliveshare) is not supported.
+[Visual Studio Live Share](https://marketplace.visualstudio.com/items?itemName=ms-vsliveshare.vsliveshare) is supported, but uses workarounds that may cause issues. See [Collaboration using Live Share](ExtraFeatures#Collaborative-editing-using-Live-Share-(experimental))
 
 ## LaTeX Utilities is not supported
 
