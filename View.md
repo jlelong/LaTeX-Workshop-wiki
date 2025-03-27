@@ -21,13 +21,13 @@ The extension also allows to view any PDF file possibly not related to a LaTeX p
 
 ### `latex-workshop.latex.watch.pdf.delay`
 
-Delay before reloading a PDF file after last change, in milliseconds.
-
-Reload vscode to make any change in this configuration effective.
+Defines the time delay before confirming a PDF-like binary file is fully changed.
 
 | type               | default value |
 | ------------------ | ------------- |
 | _number_            | `250`         |
+
+Increase this value if you encounter repeated viewer refreshes and/or loss of PDF scrolling position. LaTeX Workshop internally monitors file change events and initiates auto-builds and/or PDF viewing refresh. When LaTeX is changing large files (particularly binary files like PDFs), multiple consecutive file change events may be emitted, potentially causing file corruption issues. We use this config to control the file polling delay before confirming that the file change has been stabilized. Note that non-binary files such as `.tex`, `.bib`, and `.cls` are not affected.
 
 ## Basic settings
 
@@ -555,6 +555,25 @@ Define the CSS hue-rotate filter angle of the PDF viewer when the invert mode is
 | type     | default value |
 | -------- | ------------- |
 | _number_ | `180`         |
+
+### `latex-workshop.view.pdf.reload.transition`
+
+The transition animation between PDF page reloads.
+
+| type   | default value  | possible values      |
+| ------ | -------------- |----------------------|
+| _enum_ | `"fade"`       | `"none"` or `"fade"` |
+
+- `"none"`: No transition animation
+- `"fade"`: Fading transition animation
+
+### `latex-workshop.view.pdf.toolbar.hide.timeout`
+
+The timeout delay in second to hide the toolbar. Setting this value to zero will disable toolbar hiding.
+
+| type     | default value |
+| -------- | ------------- |
+| _number_ | `1`           |
 
 ### `latex-workshop.view.pdf.invertMode.sepia`
 

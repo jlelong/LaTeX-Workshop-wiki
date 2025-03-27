@@ -12,6 +12,7 @@ The following settings are helpful to customize how to build a project and how t
 
 | Setting key | Description | Default | Type |
 |-------------|-------------|---------|------|
+| [`latex-workshop.latex.extraExts`](#latex-workshoplatexextraExts) | List of extra file extensions to be considered as LaTeX files | `[]`, _array_ of _strings_ |
 | [`latex-workshop.latex.jobname`](#latex-workshoplatexjobname) | The jobname argument of the compiling tool | `""` | _string_ |
 | [`latex-workshop.latex.autoBuild.run`](#auto-build-latex) | When the extension shall auto build LaTeX project using [the default (first) recipe](#latex-recipes). | `onFileChange` | _string_ |
 | [`latex-workshop.latex.recipes`](#latex-recipes) | Sequence of tools to run for building | | _JSON object_ |
@@ -27,6 +28,14 @@ It is possible to terminate the current compilation by calling `Kill LaTeX compi
 ## Auto build LaTeX
 
 Besides manually calling the `Build LaTeX Project` command to compile a document, you may also let the extension automatically start compiling it upon file change. This can be defined in `latex-workshop.latex.autoBuild.run`. The recipe called by auto build is defined by [`latex-workshop.latex.recipe.default`](#latex-workshoplatexrecipedefault).
+
+### `latex-workshop.latex.extraExts`
+
+The list of extra file extensions to be considered as LaTeX files.
+
+|         type         | default value  |
+| -------------------- | -------------- |
+| _array_ of _strings_ | `[]`           |
 
 ### `latex-workshop.latex.jobname`
 
@@ -69,6 +78,16 @@ With the default value, we do not watch files inside the `texmf` tree of the LaT
 |         type         | default value  |
 | -------------------- | -------------- |
 | _array_ of _strings_ | `["**/*.bbx", "**/*.cbx", "**/*.cfg", "**/*.clo", "**/*.cnf", "**/*.def", "**/*.fmt", "**/*.lbx", "**/*.map", "**/*.pfb", "**/*.tfm", "**/texmf-{dist,var}/**", "C:/**texmf/**", "/usr/local/share/miktex-texmf/**", "/Library/Application Support/MiKTeX/texmfs/**"]` |
+
+### `latex-workshop.latex.watch.delay`
+
+Defines the time delay before confirming a non-binary file is indeed deleted.
+
+| type               | default value |
+| ------------------ | ------------- |
+| _number_            | `250`         |
+
+Increase this value if your toolchain involves external file changes with a delete-then-create pattern. LaTeX Workshop internally monitors file change events and initiates auto-builds, intellisense parsing, latex importing, and/or PDF viewing refresh. We use this config to control the file polling delay before confirming that the file deletion is not a delete-then-create.
 
 ## LaTeX recipes
 
