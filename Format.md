@@ -49,13 +49,13 @@ Define the path of the `tex-fmt` executable. If `tex-fmt` is in the `PATH`, sett
 | -------- | ------------- |
 | _string_ | `"tex-fmt"`   |
 
-#### `latex-workshop.formatting.tex-fmt.doNotWrap`
+#### `latex-workshop.formatting.tex-fmt.args`
 
-Do not wrap the output of `tex-fmt`. This setting adds `--keep` flag to `tex-fmt`. Turning this off may wrap magic comments, and/or has unintended side effects.
+DDefine the command line arguments for tex-fmt. Refer to https://github.com/WGUNDERWOOD/tex-fmt?tab=readme-ov-file#usage for more information about the arguments. Note that `--stdin` is added by the extension, so no need to add it again. For key-value arguments, separate the key and value in two strings, e.g., `[\"--tab\", \"4\"]`.
 
-| Type      | Default Value |
-| --------- | ------------- |
-| _boolean_ | `true`        |
+| Type                 | Default Value   |
+| -------------------- | --------------- |
+| _Array_ of _strings_ | `[""--nowrap"]` |
 
 ## Bibtex files
 
