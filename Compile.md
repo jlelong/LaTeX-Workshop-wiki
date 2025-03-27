@@ -377,8 +377,10 @@ This property defines whether LaTeX Workshop will output its debug log to the lo
 Show badbox information in the problems panel.
 
 | type      | default value |
-| --------- | ------------- |
-| _boolean_ | `true`        |
+| --------- | --------------|
+| _enum_    | `"both"`      |
+
+Possible values are `both`, `overfull`, `underfull` or `none`.
 
 ### `latex-workshop.message.biberlog.exclude`
 
