@@ -12,7 +12,7 @@ The following settings are helpful to customize how to build a project and how t
 
 | Setting key | Description | Default | Type |
 |-------------|-------------|---------|------|
-| [`latex-workshop.latex.extraExts`](#latex-workshoplatexextraExts) | List of extra file extensions to be considered as LaTeX files | `[]`, _array_ of _strings_ |
+| [`latex-workshop.latex.extraExts`](#latex-workshoplatexextraexts) | List of extra file extensions to be considered as LaTeX files | `[]`| _array_ of _strings_ |
 | [`latex-workshop.latex.jobname`](#latex-workshoplatexjobname) | The jobname argument of the compiling tool | `""` | _string_ |
 | [`latex-workshop.latex.autoBuild.run`](#auto-build-latex) | When the extension shall auto build LaTeX project using [the default (first) recipe](#latex-recipes). | `onFileChange` | _string_ |
 | [`latex-workshop.latex.recipes`](#latex-recipes) | Sequence of tools to run for building | | _JSON object_ |
@@ -179,6 +179,7 @@ Notice that you might have to use `"Path"` instead of `"PATH"` on Windows to ove
 
 The `args` and `env` parameters of LaTeX tools can contain symbols surrounded by `%`. These placeholders are replaced on-the-fly.
 LaTeX Workshop registers the following placeholders
+
 | Placeholder     | Replaced by  |
 | --------------- | ------------------------------------------------------------ |
 | `%DOC%`         | The root file full path without the extension |
