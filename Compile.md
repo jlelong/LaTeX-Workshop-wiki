@@ -77,7 +77,7 @@ With the default value, we do not watch files inside the `texmf` tree of the LaT
 
 |         type         | default value  |
 | -------------------- | -------------- |
-| _array_ of _strings_ | `["**/*.bbx", "**/*.cbx", "**/*.cfg", "**/*.clo", "**/*.cnf", "**/*.def", "**/*.fmt", "**/*.lbx", "**/*.map", "**/*.pfb", "**/*.tfm", "**/texmf-{dist,var}/**", "C:/**texmf/**", "/usr/local/share/miktex-texmf/**", "/Library/Application Support/MiKTeX/texmfs/**"]` |
+| _array_ of _strings_ | `[ "**/*.bbx", "**/*.bbl", "**/*.cbx", "**/*.cfg", "**/*.clo", "**/*.cnf", "**/*.def", "**/*.dfu", "**/*.enc", "**/*.fd", "**/*.fmt", "**/*.lbx", "**/*.map", "**/*.mkii", "**/*.pfb", "**/*.tfm", "**/*.vf", "**/*.code.tex", "**/*.sty", "**/texmf-{dist,var}/**", "**/Local/MiKTeX/**", "**/Local/Programs/MiKTeX/**", "**/Roaming/MiKTeX/**", "**/Program*/MiKTeX*/**", "**/.miktex/texmfs/**", "/var/cache/miktex-texmf/**", "/usr/local/share/miktex-texmf/**", "**/Library/Application Support/MiKTeX/texmfs/**", "/dev/null"]` |
 
 ### `latex-workshop.latex.watch.delay`
 
@@ -493,7 +493,7 @@ Users can also specify glob patterns like `emptyfolder*/` to remove empty folder
 
 |         type         | default value  |
 | -------------------- | -------------- |
-| _array_ of _strings_ | `[ "*.aux", "*.bbl", "*.blg", "*.idx", "*.ind", "*.lof", "*.lot", "*.out", "*.toc", "*.acn", "*.acr", "*.alg", "*.glg", "*.glo", "*.gls", "*.fls", "*.log", "*.fdb_latexmk", "*.snm", "*.synctex(busy)", "*.synctex.gz(busy)", "*.nav" ]` |
+| _array_ of _strings_ | `[ "%DOCFILE%.aux", "%DOCFILE%.bbl", "%DOCFILE%.blg", "%DOCFILE%.idx", "%DOCFILE%.ind", "%DOCFILE%.lof", "%DOCFILE%.lot", "%DOCFILE%.out", "%DOCFILE%.toc", "%DOCFILE%.acn", "%DOCFILE%.acr", "%DOCFILE%.alg", "%DOCFILE%.glg", "%DOCFILE%.glo", "%DOCFILE%.gls", "%DOCFILE%.fls", "%DOCFILE%.log", "%DOCFILE%.fdb_latexmk", "%DOCFILE%.snm", "%DOCFILE%.synctex(busy)", "%DOCFILE%.synctex.gz(busy)", "%DOCFILE%.nav", "%DOCFILE%.vrb"]` |
 
 ### `latex-workshop.latex.clean.command`
 

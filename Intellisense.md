@@ -230,11 +230,11 @@ Define which type of hint to show when intellisense provides citation suggestion
 
 ### `latex-workshop.intellisense.triggers.latex`
 
-Additional trigger characters for intellisense of LaTeX documents. Reload vscode to make any change in this configuration effective.
+Additional trigger characters for intellisense of LaTeX documents.
 
 |            type      | default value |
 | -------------------- | ------------- |
-| _array_ of _strings_ | `["{"]`          |
+| _array_ of _strings_ | `[]`          |
 
 ### `latex-workshop.intellisense.package.enabled`
 
@@ -401,7 +401,7 @@ Patterns to ignore in file completion
 
 | type                 | default value |
 | -------------------- | ------------- |
-| _array_ of _strings_ | `[ "**/*.aux", "**/*.bbl", "**/*.bcf", "**/*.blg", "**/*.idx", "**/*.ind", "**/*.lof", "**/*.lot", "**/*.out", "**/*.toc", "**/*.acn", "**/*.acr", "**/*.alg", "**/*.glg", "**/*.glo", "**/*.gls", "**/*.ist", "**/*.fls", "**/*.log", "**/*.fdb_latexmk", "**/*.synctex.gz", "**/*.run.xml" ]`          |
+| _array_ of _strings_ |  `["**/*.aux", "**/*.bbl", "**/*.bcf", "**/*.blg", "**/*.idx", "**/*.ind", "**/*.lof", "**/*.lot", "**/*.out", "**/*.toc", "**/*.acn", "**/*.acr", "**/*.alg", "**/*.glg", "**/*.glo", "**/*.gls", "**/*.ist", "**/*.fls", "**/*.log", "**/*.nav", "**/*.snm", "**/*.fdb_latexmk", "**/*.synctex.gz", "**/*.run.xml"]` |
 
 ### `latex-workshop.intellisense.file.base`
 
@@ -411,9 +411,9 @@ Specify the base directory for file completion. The possible choices are
 - Completion from the current file directory
 - both
 
-| type                 | default value |
-| -------------------- | ------------- |
-| _enum_               | `"root relative"\|"file relative"\|"both"` |
+| type   | default value | possible values                                |
+| -------| ------------- | -----------------------------------------------|
+| _enum_ | `"root relative"` | `"root relative", "file relative", "both"` |
 
 ### `latex-workshop.intellisense.update.aggressive.enabled`
 

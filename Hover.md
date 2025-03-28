@@ -137,7 +137,7 @@ Set the path of a file containing newcommands to be used in Hover Preview. If th
 
 | type     | default value |
 | -------- | ------------- |
-| _string_ | ""            |
+| _string_ | `""`          |
 
 ### `latex-workshop.hover.preview.mathjax.extensions`
 
@@ -145,7 +145,7 @@ MathJax extensions to load for Hover Preview. See [the list](https://docs.mathja
 
 | type     | default value | possible values |
 | -------- | ------------- | -- |
-| _array_  | []            | `"amscd"`, `"bbox"`, `"boldsymbol"`, `"braket"`, `"bussproofs"`, `"cancel"`, `"cases"`, `"centernot"`, `"colortbl"`, `"empheq"`, `"enclose"`, `"extpfeil"`, `"gensymb"`, `"html"`, `"mathtools"`, `"mhchem"`, `"physics"`, `"textcomp"`, `"textmacros"`, `"unicode"`, `"upgreek"`, `"verb"` |
+| _array_  | `[]`          | `"amscd"`, `"bbox"`, `"boldsymbol"`, `"braket"`, `"bussproofs"`, `"cancel"`, `"cases"`, `"centernot"`, `"colortbl"`, `"empheq"`, `"enclose"`, `"extpfeil"`, `"gensymb"`, `"html"`, `"mathtools"`, `"mhchem"`, `"physics"`, `"textcomp"`, `"textmacros"`, `"unicode"`, `"upgreek"`, `"verb"` |
 
 ### `latex-workshop.hover.preview.cursor.enabled`
 
@@ -161,15 +161,15 @@ Define the cursor symbol in math preview on hover.
 
 | type     | default value |
 | -------- | ------------- |
-| _string_ | `\ddagger`    |
+| _string_ | `"\!\|\!"`    |
 
 ### `latex-workshop.hover.preview.cursor.color`
 
 Define the color of the cursor in math preview on hover.
 
-| type     | default value | possible values                                                                                                                                                                                                                |
-| -------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| _string_ | "auto"        | `"auto"`, `"black"`, `"blue"`, `"brown"`, `"cyan"`, `"darkgray"`, `"gray"`, `"green"`, `"lightgray"`, `"lime"`, `"magenta"`, `"olive"`, `"orange"`, `"pink"`, `"purple"`, `"red"`, `"teal"`, `"violet"`, `"white"`, `"yellow"` |
+| type     | default value | possible values  |
+| -------- | ------------- | ---------------- |
+| _string_ | `"auto"`      | `"auto"`, `"black"`, `"blue"`, `"brown"`, `"cyan"`, `"darkgray"`, `"gray"`, `"green"`, `"lightgray"`, `"lime"`, `"magenta"`, `"olive"`, `"orange"`, `"pink"`, `"purple"`, `"red"`, `"teal"`, `"violet"`, `"white"`, `"yellow"` |
 
 ### `latex-workshop.view.pdf.ref.viewer`
 
@@ -177,7 +177,7 @@ PDF viewer used for `[View on PDF]` link on hover over `\ref`, and other referen
 
 | type     | default value | possible values                          |
 | -------- | ------------- | ---------------------------------------- |
-| _string_ | "auto"        | `"auto"`, `"tabOrBrowser"`, `"external"` |
+| _string_ |`"auto"`       | `"auto"`, `"tabOrBrowser"`, `"external"` |
 
 ### `latex-workshop.texdoc.path`
 
@@ -185,7 +185,7 @@ Define the location of texdoc executable.
 
 | type      | default value |
 | --------- | ------------- |
-| _string_  | "texdoc"      |
+| _string_  | `"texdoc"`    |
 
 ### `latex-workshop.texdoc.args`
 

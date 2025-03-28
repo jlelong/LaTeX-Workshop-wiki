@@ -115,9 +115,9 @@ To count the number of words in the current document, call _Count words in LaTeX
 
 When to call `texcount`. Default is never.
 
-| type     | default value         |
-|----------|-----------------------|
-| _string_ | `"onSave" \| "never"`  |
+| type     | default value   | possible values      |
+|----------|-----------------|----------------------|
+| _string_ | `"never"`       | `"onSave", "never"`  |
 
 ### `latex-workshop.texcount.interval`
 
