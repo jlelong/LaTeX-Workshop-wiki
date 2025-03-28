@@ -16,20 +16,22 @@ IGNORE_ENTRIES = [
     'latex-workshop.tab'
 ]
 
-def get_from_package(pkgfile):
-    with open(pkgfile, 'r', encoding='utf8') as fp:
-        package_file_content = json.load(fp)
-        all_variables = package_file_content['contributes']['configuration']['properties']
-        variables = {}
-        for key in all_variables.keys():
-            entry = all_variables[key]
-            subkeys = entry.keys()
-            if 'deprecationMessage' not in subkeys and 'markdownDeprecationMessage' not in subkeys:
-                variables[key] = entry
-        commands = package_file_content['contributes']['commands']
-        variable_names = set(variables.keys())
-        commands_names = set([e['command'] for e in commands])
-    return (variable_names, commands_names)
+def get_commands_from_package(package_file_content):
+    commands = package_file_content['contributes']['commands']
+    commands_names = set((e['command'] for e in commands))
+    return commands_names
+
+
+def get_variables_from_package(package_file_content):
+    all_variables = package_file_content['contributes']['configuration']['properties']
+    variables = {}
+    for key in all_variables.keys():
+        entry = all_variables[key]
+        subkeys = entry.keys()
+        if 'deprecationMessage' not in subkeys and 'markdownDeprecationMessage' not in subkeys:
+            variables[key] = entry
+    variable_names = set(variables.keys())
+    return variable_names
 
 
 def get_variables_from_wiki():
@@ -60,7 +62,11 @@ if __name__ == "__main__":
         print("Usage: check-config.py LW-package.json")
         sys.exit(0)
 
-    vars_package, commands_package = get_from_package(sys.argv[1])
+    with open(sys.argv[1], 'r', encoding='utf8') as fp:
+        package_file_content = json.load(fp)
+
+    commands_package = get_commands_from_package(package_file_content)
+    vars_package = get_variables_from_package(package_file_content)
     vars_wiki = get_variables_from_wiki()
 
     print('--> Variables in package.json but not in the wiki:')
