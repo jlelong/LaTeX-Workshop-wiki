@@ -5,6 +5,7 @@ import os
 import fnmatch
 import re
 import sys
+import typing
 
 IGNORE_ENTRIES = [
     'latex-workshop-dev.*',
@@ -29,9 +30,8 @@ def get_variables_from_package(package_file_content):
         entry = all_variables[key]
         subkeys = entry.keys()
         if 'deprecationMessage' not in subkeys and 'markdownDeprecationMessage' not in subkeys:
-            variables[key] = entry
-    variable_names = set(variables.keys())
-    return variable_names
+            variables[key] = entry['default']
+    return variables
 
 
 def get_variables_from_wiki():
@@ -48,6 +48,47 @@ def get_variables_from_wiki():
                     if match:
                         variables.add(match.group(0))
     return variables
+
+def check_equal_values(variable: str, actual: str, expected: any):
+    expected = str(expected)
+    # Use ' and not "
+    actual = actual.replace('"', "'")
+    expected = expected.replace('"', "'")
+    # use lower case
+    actual = actual.lower()
+    expected = expected.lower()
+    # | is escaped in markdown
+    actual = actual.replace('\|','|')
+    if actual.replace(' ', '') != expected.replace(' ', ''):
+        print(f"Default value mismatch for {variable}")
+        print(f'\texpected: {expected}')
+        print(f'\tactual: {actual}')
+
+
+def check_default_value(variable: str, default_value: str ):
+    for dirpath, _, filenames in os.walk('.'):
+        for f in filenames:
+            filepath = os.path.join(dirpath, f)
+            (_, ext) = os.path.splitext(filepath)
+            if ext != '.md':
+                continue
+            with open(f, 'r', encoding='utf8') as fp:
+                content = fp.read()
+                match = re.search(r'^#{2,}\s*`' + re.escape(variable) + r'`([^#]*)(?:^#|\Z)', content, re.MULTILINE)
+                if match:
+                    var_description = match.group(1)
+                    # Extract the default value: `text` in the second column
+                    match_description = re.search(r'\|[^\|]*\|\s*`"?(.*?)"?`\s*\|', var_description, re.MULTILINE)
+                    if match_description:
+                        description_default = match_description.group(1)
+                        # print(description_default)
+
+                        check_equal_values(variable, description_default, default_value)
+
+                    else:
+                        print(f'No default value found for {variable}')
+                    return
+
 
 def print_if_not_ignored(s):
     """
@@ -67,10 +108,11 @@ if __name__ == "__main__":
 
     commands_package = get_commands_from_package(package_file_content)
     vars_package = get_variables_from_package(package_file_content)
+    var_names_package = set(vars_package.keys())
     vars_wiki = get_variables_from_wiki()
 
     print('--> Variables in package.json but not in the wiki:')
-    for e in sorted(vars_package.difference(vars_wiki)):
+    for e in sorted(var_names_package.difference(vars_wiki)):
         print_if_not_ignored("\t" + e)
     print('--> Commands in package.json but not in the wiki:')
     for e in sorted(commands_package.difference(vars_wiki)):
@@ -79,3 +121,6 @@ if __name__ == "__main__":
     all_package = commands_package.union(vars_package)
     for e in sorted(vars_wiki.difference(all_package)):
         print_if_not_ignored("\t" + e)
+
+    for key, value in vars_package.items():
+        check_default_value(key, value)
