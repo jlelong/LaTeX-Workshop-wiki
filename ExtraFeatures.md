@@ -172,6 +172,7 @@ The Live Share extension has some limitations when it comes to interacting with 
 - Inverse and forward synctex
 
 To get started as a host, you need to:
+
 1. Start a Live Share session
 2. Allow for port sharing when prompted. If you miss the prompt, execute the `Share` command.
 3. The PDF viewer and LaTeX compiler must be running on the host.
