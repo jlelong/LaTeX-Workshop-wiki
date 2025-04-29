@@ -122,7 +122,7 @@ You can view PDF files with external PDF viewers by calling _View LaTeX PDF file
 
 ### Using SyncTeX with an external viewer
 
-Note: **this function is not officially supported.**
+Note: As of mid-2025, this function is [not working](https://github.com/James-Yu/LaTeX-Workshop/issues/4584). **This function is not officially supported.**
 
 #### Windows
 
