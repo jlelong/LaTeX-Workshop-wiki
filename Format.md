@@ -51,7 +51,7 @@ Define the path of the `tex-fmt` executable. If `tex-fmt` is in the `PATH`, sett
 
 #### `latex-workshop.formatting.tex-fmt.args`
 
-DDefine the command line arguments for tex-fmt. Refer to https://github.com/WGUNDERWOOD/tex-fmt?tab=readme-ov-file#usage for more information about the arguments. Note that `--stdin` is added by the extension, so no need to add it again. For key-value arguments, separate the key and value in two strings, e.g., `[\"--tab\", \"4\"]`.
+DDefine the command line arguments for tex-fmt. Refer to https://github.com/WGUNDERWOOD/tex-fmt?tab=readme-ov-file#usage for more information about the arguments. Note that `--stdin` is added by the extension, so no need to add it again. For key-value arguments, separate the key and value in two strings, e.g., `[\"--tabsize\", \"4\"]`.
 
 | Type                 | Default Value   |
 | -------------------- | --------------- |
