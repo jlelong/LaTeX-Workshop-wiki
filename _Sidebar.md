@@ -42,6 +42,7 @@
 - [Intellisense](Intellisense)
   - [Citations](Intellisense#Citations)
   - [References](Intellisense#References)
+  - [Gloassaries](Intellisense#Gloassaries)
   - [Commands](Intellisense#commands-starting-with-)
   - [Environments](Intellisense#Environments)
   - [Files](Intellisense#files)

@@ -26,13 +26,22 @@ If you use very large bibtex files, you may experience temporary freezing. Hence
 | [`latex-workshop.kpsewhich.class.enabled`](#latex-workshopkpsewhichclassenabled) | Use `kpsewhich` to resolve `.cls` files. | `true` | _boolean_ |
 | [`latex-workshop.kpsewhich.path`](#latex-workshopkpsewhichpath) | location of the kpsewhich executable file. | `"kpsewhich"` | _string_ |
 
+
 ## References
 
-Similarly as for the citation mechanism, all files of a LaTeX project are search for labels. We scan labels defined by `\label{...}` in the whole document or by `label={...}` but only inside the first argument of an environment.  Label definition with commands other than `\label{...}` can be set in [`latex-workshop.intellisense.label.command`](#latex-workshopintellisenselabelcommand).
+Similarly as for the citation mechanism, all files of a LaTeX project are searched for labels. We scan labels defined by `\label{...}` in the whole document or by `label={...}` but only inside the first argument of an environment.  Label definition with commands other than `\label{...}` can be set in [`latex-workshop.intellisense.label.command`](#latex-workshopintellisenselabelcommand).
 
 Any `\ref` related command is automatically completed with label keys.
 
 <img src="https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/ref.gif" alt="intellisense demo" height="80px">
+
+## Glossaries
+
+Similarly to references, all files of a LaTeX project are searched for glossary and acronym entries typically defined by `\(new|provide|longnew|longprovide)glossaryentry`, `\newacronym`, `\newabbreviation`, `\newabbr`.
+
+We also support getting glossary and acronym definitions from bibtex files as used by `bib2gls`.
+
+We use all these entries to provide completion for most glossary and acronym commandes.
 
 ## Commands starting with `\`
 
