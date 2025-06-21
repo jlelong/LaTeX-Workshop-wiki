@@ -59,6 +59,14 @@ When to trigger automatic building.
 - `"onSave"`: Build the project upon saving a `.tex` file.
 - `"onFileChange"`: Build the project upon detecting a file change in any of the dependencies. The file can even be modified outside vscode. See [here](#multi-file-projects) for explanations on what dependencies are and how some of them can be ignored. See the [FAQ](FAQ#I-use-build-on-save-but-I-occasionally-want-to-save-without-building) for how to save without triggering the build when this feature is on.
 
+### `latex-workshop.autoBuild.onSave.files.ignore`
+
+Files to ignore from the auto-build on save mechanism, This property must be an array of glob patterns. The patterns are matched against the absolute file path.
+
+|         type         | default value  |
+| -------------------- | -------------- |
+| _array_ of _strings_ | `[ "**/*.sty", "**/*.cls"]`|
+
 ### `latex-workshop.latex.autoBuild.interval`
 
 The minimal time interval between two consecutive auto builds in milliseconds.
@@ -70,6 +78,8 @@ The minimal time interval between two consecutive auto builds in milliseconds.
 ### `latex-workshop.latex.watch.files.ignore`
 
 Files to be ignored from the watching mechanism used for triggering autobuild.
+
+This configuration will not affect `build-on-save`, see [`latex-workshop.autoBuild.onSave.files.ignore](#latex-workshop.autoBuildonSavefilesignore)
 
 This property must be an array of globs pattern. The patterns are matched against the absolute file path. To ignore everything inside the `texmf` tree, `**/texmf/**` can be used.
 
