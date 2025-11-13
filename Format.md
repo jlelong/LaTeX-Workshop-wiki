@@ -10,6 +10,14 @@ Please note that you need to first ensure installing these formatters, otherwise
 
 ### Relevant settings
 
+### `latex-workshop.format.fixQuotes.enabled`
+
+Enable automatic conversion of \"...\" to ``...'' during formatting.
+
+| type      | default value |
+| --------- | ------------- |
+| _boolean_ | `false`       |
+
 #### `latex-workshop.formatting.latex`
 
 Define the program to format the LaTeX document.

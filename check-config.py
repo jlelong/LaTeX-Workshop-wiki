@@ -14,7 +14,10 @@ IGNORE_ENTRIES = [
     'latex-workshop.setViewer',
     'latex-workshop.log',
     'latex-workshop.synctex',
-    'latex-workshop.tab'
+    'latex-workshop.tab',
+    'latex-workshop.checkcitations',
+    'latex-workshop.hostPort',
+    'latex-workshop.revealOutputDir'
 ]
 
 def get_commands_from_package(package_file_content):
@@ -58,7 +61,7 @@ def check_equal_values(variable: str, actual: str, expected: any):
     actual = actual.lower()
     expected = expected.lower()
     # | is escaped in markdown
-    actual = actual.replace('\|','|')
+    actual = actual.replace('\\|','|')
     if actual.replace(' ', '') != expected.replace(' ', ''):
         print(f"Default value mismatch for {variable}")
         print(f'\texpected: {expected}')

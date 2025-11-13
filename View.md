@@ -61,6 +61,8 @@ Additional settings for the internal viewer:
 | [`latex-workshop.view.pdf.internal.synctex.keybinding`](#latex-workshopviewpdfinternalsynctexkeybinding) | How to trigger synctex with the internal viewer        |
 | [`latex-workshop.view.pdf.internal.port`](#latex-workshopviewpdfinternalport)                        | Which port internal viewer server communicates through |
 | [`latex-workshop.view.pdf.internal.keyboardEvent`](#latex-workshopviewpdfinternalkeyboardevent)      | The shortcuts of VS Code on the internal viewer        |
+| [`latex-workshop.view.pdf.sidebar.open`](#latex-workshop.view.pdf.sidebar.open)      | The default state of the PDF viewer sidebar |
+| [`latex-workshop.view.pdf.sidebar.view`](#latex-workshop.view.pdf.sidebar.view)      | The default view of the PDF viewer sidebar |
 
 The internal viewer listens on localhost. In some very specific use cases, one might require to change the host to listen on. As that may create a severe security breach, this cannot be changed by a permanent setting but only by calling the function `latex-workshop.changeHostName`(_Change server listening hostname_). This change will not remain across VS Code reloads. It can also be reset by calling `latex-workshop.resetHostName` (_Reset server listening hostname to 127.0.0.1_).
 
@@ -440,6 +442,28 @@ Rebroadcast KeyboardEvent on the internal PDF viewers. If the keyboard shortcuts
 | type   | default value | possible values    |
 | ------ | ------------- |--------------------|
 | _enum_ | `auto`        | `auto`, `force`, `never` |
+
+### `latex-workshop.view.pdf.sidebar.open`
+
+The default state of the PDF viewer sidebar.
+
+| type   | default value | possible values        |
+| ------ | ------------- |------------------------|
+| _enum_ | `off`        | `off`, `on`, `persist` |
+
+- `off`: the sidebar is closed
+- `on`: the sidebar is opened
+- `persist`: the on/off state is remembered across PDF viewer sessions.
+
+### `latex-workshop.view.pdf.sidebar.view`
+
+The default view of the PDF viewer sidebar.
+
+| type   | default value | possible values    |
+| ------ | ------------- |--------------------|
+| _enum_ | `thumbnails`  |  `thumbnails`,`outline`,`attachments`,`layers`, `persist` |
+
+Possible values are `thumbnails`, `outline`, `attachments`, `layers`, and `persist` (the last used view is remembered across PDF viewer sessions).
 
 ### `latex-workshop.view.pdf.color.light.pageColorsForeground`
 
