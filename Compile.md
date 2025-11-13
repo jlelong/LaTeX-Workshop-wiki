@@ -275,7 +275,7 @@ While it is fine to write all contents in one `.tex` file, it is common to split
 To find the root file, LaTeX Workshop will follow the steps below, stopping whenever one is found:
 
 1. **Magic comment** `% !TEX root = relative/or/absolute/path/to/root/file.tex`. If such comments exist in the currently active editor, the referred file is set as root. You can use the command `latex-workshop.addtexroot` to help you insert the magic comment. Note that magic comments need you to set [`latex-workshop.latex.build.forceRecipeUsage`](#latex-workshoplatexbuildforcerecipeusage) to `false`. The default `true` disables magic comments.
-1. **Self check** If current active editor contains `\documentclass[...]{...}` (the `[...]` is optional) or `\begin{document}` depending on the value of [`latex-workshop.latex.rootFile.indicator`](#latex-workshoplatexrootfileindicator), it is set as root.
+1. **Self check** If current active editor contains `\documentclass[...]{...}` (the `[...]` is optional), `\begin{document}`, `\starttext` or `\startTEXpage` depending on the value of [`latex-workshop.latex.rootFile.indicator`](#latex-workshoplatexrootfileindicator), it is set as root.
 1. **Root directory check** LaTeX Workshop iterates through all `.tex` files in the root folder of the workspace. The first one containing `\documentclass[...]{...}` (the `[...]` is optional) or `\begin{document}` depending on the value of [`latex-workshop.latex.rootFile.indicator`](#latex-workshoplatexrootfileindicator), and which includes the file in the active editor is set as the root file. To avoid parsing all `.tex` files in the workspace, you can narrow the search by specifying [`latex-workshop.latex.search.rootFiles.include`](#latex-workshoplatexsearchrootfilesinclude) and/or [`latex-workshop.latex.search.rootFiles.exclude`](#latex-workshoplatexsearchrootfilesexclude).
 1. **The `subfiles` package case** The main file is used to provide intellisense. The non-interactive functions `autobuild`, `autoclean` and forward `synctex` rely on the value of the configuration variable [`latex-workshop.latex.rootFile.useSubFile`](#latex-workshoplatexrootfileusesubfile) to choose between the main file and the subfile.
     - if [`latex-workshop.latex.rootFile.doNotPrompt`](#latex-workshoplatexrootfiledonotprompt) is `false`,  all the interactive commands `build`, `clean` and `view` use a quick pick box to ask the user which file is to be considered as the root File.
@@ -301,9 +301,9 @@ Moreover, when a `.fls` file with the same basename as the root file exists, it 
 
 |         type         | default value | Possible values |
 | -------------------- | ------------- |-----------------|
-| _enum of strings_ | `\documentclass[]{}` | `\documentclass[]{}`, `begin{document}` |
+| _enum of strings_ | `\documentclass[]{}` | `\documentclass[]{}`, `\begin{document}`, `\starttext`, `startTEXpage` |
 
-Determine if the root file is detected based on the presence of `\documentclass[]{}` or `\begin{document}`.
+Determine if the root file is detected based on the presence of `\documentclass[]{}` or `\begin{document}` for LaTeX documents, or `\starttext` or `\startTEXpage` for ConTeXt documents.
 
 #### `latex-workshop.latex.search.rootFiles.include`
 
