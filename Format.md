@@ -12,7 +12,7 @@ Please note that you need to first ensure installing these formatters, otherwise
 
 ### `latex-workshop.format.fixQuotes.enabled`
 
-Enable automatic conversion of \"...\" to ``...'' during formatting.
+Enable automatic conversion of `"..."` to ` ``...''` during formatting.
 
 | type      | default value |
 | --------- | ------------- |
@@ -20,7 +20,7 @@ Enable automatic conversion of \"...\" to ``...'' during formatting.
 
 ### `latex-workshop.format.fixMath.enabled`
 
-EEnable automatic conversion of $...$ to \\(...\\) and $$...$$ to \\[...\\] during formatting.
+Enable automatic conversion of `$...$` to `\(...\)` and `$$...$$` to `\[...\]` during formatting.
 
 | type      | default value |
 | --------- | ------------- |
