@@ -18,6 +18,14 @@ Enable automatic conversion of \"...\" to ``...'' during formatting.
 | --------- | ------------- |
 | _boolean_ | `false`       |
 
+### `latex-workshop.format.fixMath.enabled`
+
+EEnable automatic conversion of $...$ to \\(...\\) and $$...$$ to \\[...\\] during formatting.
+
+| type      | default value |
+| --------- | ------------- |
+| _boolean_ | `false`       |
+
 #### `latex-workshop.formatting.latex`
 
 Define the program to format the LaTeX document.
