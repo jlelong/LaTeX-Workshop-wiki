@@ -355,7 +355,7 @@ When the `subfiles` package is used, either the main file or any subfile contain
 
 List environments with verbatim-like content.
 
-These environments are stripped off the `.tex` files before any parsing occurs. Note that this variable has no effect on syntax highlighting.
+These environments are stripped off the `.tex` files before any parsing occurs. The environment names are not case sensitive and star `*` versions are automatically added. Note that this variable has no effect on syntax highlighting.
 
 | type                | default value                          |
 | ------------------- | -------------------------------------- |
