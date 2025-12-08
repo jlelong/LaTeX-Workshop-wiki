@@ -20,6 +20,8 @@ The following settings are helpful to customize how to build a project and how t
 | [`latex-workshop.latex.magic.args`](#magic-comments) | Arguments for the `TeX program` | | _array_ of _strings_ |
 | [`latex-workshop.latex.magic.bib.args`](#magic-comments) | Arguments for the `BIB program` | | _array_ of _strings_ |
 | [`latex-workshop.latex.build.forceRecipeUsage`](#latex-workshoplatexbuildforcerecipeusage) | Force the use of recipes | true | _boolean_ |
+| [`latex-workshop.latex.build.fromWorkspaceFolder`](#latex-workshoplatexbuildfromWorkspaceFolder) | Run recipe from workspace folder | false | _boolean_ |
+
 
 ## Terminating the current compilation
 
@@ -256,7 +258,17 @@ Force the use of the recipe system even when a magic comment defines a TeX comma
 
 |   type    |  default value   |
 | --------- | ---------------- |
-| _boolean_ | `true`          |
+| _boolean_ | `true`           |
+
+### `latex-workshop.latex.build.fromWorkspaceFolder`
+
+Run the recipe from the workspace folder.
+
+If false, the recipe is run from the directory containing the root file. The setting has no effect on external commands `#latex-workshop.latex.external.build.command`.
+
+|   type    |  default value   |
+| --------- | ---------------- |
+| _boolean_ | `false`          |
 
 ### `latex-workshop.latex.build.rootfileInStatus`
 
