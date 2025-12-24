@@ -279,10 +279,9 @@ You can also override the PATH environment variable. Notice that, in the propert
 
 Notice that on Windows you might have to use `"Path"` instead of `"PATH"` to override the PATH environment variable.
 
-Notice that, when this extension is used on [Windows Subsystem for Linux](https://learn.microsoft.com/windows/wsl/setup/environment#use-visual-studio-code), to call TeX executables installed on **Windows file system**, you must add extension `.exe` to those valuse of `command`s as the following (or those executables will not respond to the commands):
+Notice that, when this extension is used on [Windows Subsystem for Linux](https://learn.microsoft.com/windows/wsl/setup/environment#use-visual-studio-code), to call TeX executables installed on **Windows file system**, you must add the  `.exe` extension to the values of `command`s (or those executables will not respond to the commands). For instance, the `latexmk` tool must be defined as
 
 ```json
-"latex-workshop.latex.tools": [
   {
     "name": "latexmk",
     "command": "latexmk.exe",
@@ -295,27 +294,7 @@ Notice that, when this extension is used on [Windows Subsystem for Linux](https:
       "%DOC%"
     ],
     "env": {}
-  },
-  {
-    "name": "pdflatex",
-    "command": "pdflatex.exe",
-    "args": [
-      "-synctex=1",
-      "-interaction=nonstopmode",
-      "-file-line-error",
-      "%DOC%"
-    ],
-    "env": {}
-  },
-  {
-    "name": "bibtex",
-    "command": "bibtex.exe",
-    "args": [
-      "%DOCFILE%"
-    ],
-    "env": {}
   }
-]
 ```
 
 ### Placeholders
