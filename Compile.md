@@ -277,7 +277,25 @@ Each `tool` is an object consisting of a `name`, a `command` to be spawned, its 
 
 You can also override the PATH environment variable. Notice that, in the property, only placeholders, e.g., `%DIR%`, take effect, and other variables, e.g., `$PATH`, are **not** expanded.
 
-Notice that you might have to use `"Path"` instead of `"PATH"` on Windows to override the PATH environment variable.
+Notice that on Windows you might have to use `"Path"` instead of `"PATH"` to override the PATH environment variable.
+
+Notice that, when this extension is used on [Windows Subsystem for Linux](https://learn.microsoft.com/windows/wsl/setup/environment#use-visual-studio-code), to call TeX executables installed on **Windows file system**, you must add the  `.exe` extension to the values of `command`s (or those executables will not respond to the commands). For instance, the `latexmk` tool must be defined as
+
+```json
+  {
+    "name": "latexmk",
+    "command": "latexmk.exe",
+    "args": [
+      "-synctex=1",
+      "-interaction=nonstopmode",
+      "-file-line-error",
+      "-pdf",
+      "-outdir=%OUTDIR%",
+      "%DOC%"
+    ],
+    "env": {}
+  }
+```
 
 ### Placeholders
 
