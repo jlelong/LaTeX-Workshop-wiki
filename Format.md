@@ -149,7 +149,15 @@ Whether to surround each field value in quotation marks or curly braces.
 | ---------------- | ---------------- | ------------------------------------- |
 | _enum of string_ | `"Curly braces"` | `"Curly braces"`, `"Quotation marks"` |
 
-#### `latex-workshop.bibtex-format.case`
+#### `latex-workshop.bibtex-format.case.type`
+
+Whether to use upper- or lowercase type names. (E.g. `ARTICLE = ...` vs `article = ...`).
+
+| Type             | Default Value | Possible Values              |
+| ---------------- | ------------- | ---------------------------- |
+| _enum of string_ | `"lowercase"` | `"UPPERCASE"`, `"lowercase"` |
+
+#### `latex-workshop.bibtex-format.case.field`
 
 Whether to use upper- or lowercase field names. (E.g. `AUTHOR = ...` vs `author = ...`).
 
