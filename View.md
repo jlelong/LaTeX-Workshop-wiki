@@ -135,8 +135,7 @@ The following configuration has been reported to work with SumatraPDF (see [here
 In `settings.txt` of SumatraPDF, set
 
 ```
-// the part of cli.js is deleted
-InverseSearchCmdLine = "C:\Users\<Username>\AppData\Local\Programs\Microsoft VS Code\Code.exe" "C:\Users\<Username>\AppData\Local\Programs\Microsoft VS Code\resources\app\out\cli.js" --ms-enable-electron-run-as-node -r -g "%f:%l"
+InverseSearchCmdLine = "C:\Users\<Username>\AppData\Local\Programs\Microsoft VS Code\Code.exe" -r -g "%f:%l"
 EnableTeXEnhancements = true
 ```
 
@@ -148,10 +147,7 @@ Add the following option to your `settings.json` in your VS Code
   "latex-workshop.view.pdf.external.synctex.args": [
     "-forward-search",
     "%TEX%",
-    "%LINE%",
-    "-reuse-instance",
-    "-inverse-search",
-    "\"C:\\Users\\<Username>\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe\" \"C:\\Users\\<U>\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\out\\cli.js\" --ms-enable-electron-run-as-node -r -g \"%f:%l\"",
+    "%LINE%"
     "%PDF%"
   ],
 ```
