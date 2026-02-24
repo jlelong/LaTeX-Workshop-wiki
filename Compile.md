@@ -19,7 +19,7 @@ The following settings are helpful to customize how to build a project and how t
 | [`latex-workshop.latex.tools`](#latex-recipes) | Tools available for building | | _JSON object_ |
 | [`latex-workshop.latex.magic.args`](#magic-comments) | Arguments for the `TeX program` | | _array_ of _strings_ |
 | [`latex-workshop.latex.magic.bib.args`](#magic-comments) | Arguments for the `BIB program` | | _array_ of _strings_ |
-| [`latex-workshop.latex.build.forceRecipeUsage`](#latex-workshoplatexbuildforcerecipeusage) | Force the use of recipes | true | _boolean_ |
+| [`latex-workshop.latex.build.enableMagicComments`](#latex-workshoplatexbuildenableMagicComments) | Enable magic comments | true | _boolean_ |
 | [`latex-workshop.latex.build.fromWorkspaceFolder`](#latex-workshoplatexbuildfromWorkspaceFolder) | Run recipe from workspace folder | false | _boolean_ |
 
 
@@ -397,16 +397,16 @@ While it is fine to write all contents in one `.tex` file, it is common to split
 
 To find the root file, LaTeX Workshop will follow the steps below, stopping whenever one is found:
 
-1. **Magic comment** `% !TEX root = relative/or/absolute/path/to/root/file.tex`. If such comments exist in the currently active editor, the referred file is set as root. You can use the command `latex-workshop.addtexroot` to help you insert the magic comment. Note that magic comments need you to set [`latex-workshop.latex.build.forceRecipeUsage`](#latex-workshoplatexbuildforcerecipeusage) to `false`. The default `true` disables magic comments.
-1. **Self check** If current active editor contains `\documentclass[...]{...}` (the `[...]` is optional), `\begin{document}`, `\starttext` or `\startTEXpage` depending on the value of [`latex-workshop.latex.rootFile.indicator`](#latex-workshoplatexrootfileindicator), it is set as root.
-1. **Root directory check** LaTeX Workshop iterates through all `.tex` files in the root folder of the workspace. The first one containing `\documentclass[...]{...}` (the `[...]` is optional) or `\begin{document}` depending on the value of [`latex-workshop.latex.rootFile.indicator`](#latex-workshoplatexrootfileindicator), and which includes the file in the active editor is set as the root file. To avoid parsing all `.tex` files in the workspace, you can narrow the search by specifying [`latex-workshop.latex.search.rootFiles.include`](#latex-workshoplatexsearchrootfilesinclude) and/or [`latex-workshop.latex.search.rootFiles.exclude`](#latex-workshoplatexsearchrootfilesexclude).
-1. **The `subfiles` package case** The main file is used to provide intellisense. The non-interactive functions `autobuild`, `autoclean` and forward `synctex` rely on the value of the configuration variable [`latex-workshop.latex.rootFile.useSubFile`](#latex-workshoplatexrootfileusesubfile) to choose between the main file and the subfile.
+1. **Magic comment** `% !TEX root = relative/or/absolute/path/to/root/file.tex`. If such comments exist in the currently active editor, the referred file is set as root. You can use the command `latex-workshop.addtexroot` to help you insert the magic comment. Note that magic comments are only taken into account when [`latex-workshop.latex.build.enableMagicComments`](#latex-workshoplatexbuildenableMagicComments) to `true`.
+2. **Self check** If current active editor contains `\documentclass[...]{...}` (the `[...]` is optional), `\begin{document}`, `\starttext` or `\startTEXpage` depending on the value of [`latex-workshop.latex.rootFile.indicator`](#latex-workshoplatexrootfileindicator), it is set as root.
+3. **Root directory check** LaTeX Workshop iterates through all `.tex` files in the root folder of the workspace. The first one containing `\documentclass[...]{...}` (the `[...]` is optional) or `\begin{document}` depending on the value of [`latex-workshop.latex.rootFile.indicator`](#latex-workshoplatexrootfileindicator), and which includes the file in the active editor is set as the root file. To avoid parsing all `.tex` files in the workspace, you can narrow the search by specifying [`latex-workshop.latex.search.rootFiles.include`](#latex-workshoplatexsearchrootfilesinclude) and/or [`latex-workshop.latex.search.rootFiles.exclude`](#latex-workshoplatexsearchrootfilesexclude).
+4. **The `subfiles` package case** The main file is used to provide intellisense. The non-interactive functions `autobuild`, `autoclean` and forward `synctex` rely on the value of the configuration variable [`latex-workshop.latex.rootFile.useSubFile`](#latex-workshoplatexrootfileusesubfile) to choose between the main file and the subfile.
     - if [`latex-workshop.latex.rootFile.doNotPrompt`](#latex-workshoplatexrootfiledonotprompt) is `false`,  all the interactive commands `build`, `clean` and `view` use a quick pick box to ask the user which file is to be considered as the root File.
     - if [`latex-workshop.latex.rootFile.doNotPrompt`](#latex-workshoplatexrootfiledonotprompt) is `true`,  all the interactive commands `build`, `clean` and `view` use variable [`latex-workshop.latex.rootFile.useSubFile`](#latex-workshoplatexrootfileusesubfile) to choose between the main file and the subfile automatically.
 
     Note that each subfile has to be compiled from its respective directory, where LaTeX is able to locate all included text files or images. However, following the discussion in [1895](https://github.com/James-Yu/LaTeX-Workshop/issues/1895) we decided that all paths should be relative to the root file directory. Hence, the recipe is launched from the root file directory and the `-cd` option must be added to `latexmk`. As discussed in [1932](https://github.com/James-Yu/LaTeX-Workshop/issues/1932), this option breaks `makeindex` (this should be solved in the next release of `latexmk`). So the solution is to add a `.latexmkrc` file in the root file directory containing `$do_cd = 1;`
 
-1. **The `.fls` files** LaTeX compilers when called with the `-recorder` option produce a file with `.fls` extension containing all the files _input_ and _output_ during compilation. The list of _input_ files contains all classes, packages, fonts, input `.tex` files, listings, graphs, ... Using `latexmk` always produces a `.fls` file.
+5. **The `.fls` files** LaTeX compilers when called with the `-recorder` option produce a file with `.fls` extension containing all the files _input_ and _output_ during compilation. The list of _input_ files contains all classes, packages, fonts, input `.tex` files, listings, graphs, ... Using `latexmk` always produces a `.fls` file.
 
 If no root file is found, most of the features in LaTeX Workshop will not work.
 
@@ -681,7 +681,7 @@ If the rootFile is defined, you can use any of the placeholders defined in the [
 
 ## Magic comments
 
-Notice that magic comment is **disabled** by default. You have to enable it if you want to use the feature. See [the setting](#latex-workshoplatexbuildforcerecipeusage).
+Magic comments can be disabled by setting [`latex-workshop.latex.build.enableMagicComments`](#latex-workshoplatexbuildenableMagicComments) to `false`.
 
 ### TeX program and options
 
