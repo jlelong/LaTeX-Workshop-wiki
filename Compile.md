@@ -363,14 +363,6 @@ It also applies to auto build. Recipes are referred to by their names as defined
 | -------- | ------------- |
 | _string_ | `"first"`     |
 
-### `latex-workshop.latex.build.forceRecipeUsage`
-
-Force the use of the recipe system even when a magic comment defines a TeX command.
-
-|   type    |  default value   |
-| --------- | ---------------- |
-| _boolean_ | `true`           |
-
 ### `latex-workshop.latex.build.fromWorkspaceFolder`
 
 Run the recipe from the workspace folder.
