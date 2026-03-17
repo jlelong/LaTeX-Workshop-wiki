@@ -130,7 +130,7 @@ A LaTeX recipe refers to a sequence/array of commands which LaTeX Workshop execu
 
 When building the project, the first recipe is used by default. See the [setting](#latex-workshoplatexrecipedefault). You can compile with another recipe by command `latex-workshop.recipes`. By default [`latexmk`](https://ctan.org/pkg/latexmk) is used. This tool is bundled in most LaTeX distributions, and requires perl to execute.
 
-If you want to preset a per-file recipe, you may also consider place the LaTeX Workshop-specific derivative `%!LW recipe=recipe-name` at the top of your root file, similar to the wider recognized `%!TeX root=root-file` magic comment.
+If you want to preset a per-file recipe, you may also consider place the LaTeX Workshop-specific derivative `%!LW recipe=recipe-name` at the top of your root file, similar to the wider recognized `%!TeX root=root-file` magic comment. See 
 
 ### LaTeX tools
 
@@ -673,7 +673,20 @@ If the rootFile is defined, you can use any of the placeholders defined in the [
 
 ## Magic comments
 
-Magic comments can be disabled by setting [`latex-workshop.latex.build.enableMagicComments`](#latex-workshoplatexbuildenableMagicComments) to `false`.
+Magic comments can be disabled by setting [`latex-workshop.latex.build.enableMagicComments`](#latex-workshoplatexbuildenableMagicComments) to `false`. When set to `true`, here is the priority order
+
+- Calling a recipe from the TeX badge overrides any magic comments.
+- If build is called without any recipe name (ie with <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>b</kbd> or using the build icon)
+  - If a % !LW recipe comment is present, use the recipe given by the magic comment.
+  - If a % !TEX program comment is present, use it as a tool to build the file instead of calling a defined recipe.
+
+### Root file
+
+Use `% !TEX root = relative/or/absolute/path/to/root/file.tex`, to use `relative/or/absolute/path/to/root/file.tex` as the root file when calling `build`.
+
+### Recipe name
+
+Use `%!LW recipe=recipe-name` to define which recipe to use to build the file. Note that this is ignored when calling a given recipe from the TeX Panel. It is only taken into account when `build` is called by clicking on the green triangle or using the keybinding <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>b</kbd>
 
 ### TeX program and options
 
