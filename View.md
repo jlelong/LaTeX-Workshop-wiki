@@ -33,7 +33,7 @@ Increase this value if you encounter repeated viewer refreshes and/or loss of PD
 
 | Setting key                                                             | Description                      | Default       | Type     |
 |-------------------------------------------------------------------------|----------------------------------|---------------|----------|
-| [`latex-workshop.latex.outDir`](#latex-workshoplatexoutdir)             | Where to find the PDF files      | `"%DIR%"`     | _string_ |
+| [`latex-workshop.latex.outDir`](Compile#latex-workshoplatexoutdir)             | Where to find the PDF files      | `"%DIR%"`     | _string_ |
 | [`latex-workshop.view.pdf.viewer`](#latex-workshopviewpdfviewer)        | The default PDF viewer           | `"tab"`       | _string_ |
 | [`latex-workshop.view.pdf.ref.viewer`](#latex-workshopviewpdfrefviewer) | The PDF viewer to preview `\ref` | (see details) | _string_ |
 
@@ -322,28 +322,6 @@ Forward: Edit `settings.json` as follows, then use
 ```
 
 ## Settings details
-
-### `latex-workshop.latex.outDir`
-
-The directory where the extension tries to find project files (e.g., PDF and SyncTeX generated files).
-
-Both relative and absolute paths are supported. Relative path start from the root file location, so beware if it is located in sub-directory. The path must not contain a trailing slash. The LaTeX toolchain should output files to this path. For a list of supported placeholders, please visit https://github.com/James-Yu/LaTeX-Workshop/wiki/Compile#placeholders. Note that if this config is set to `%DIR%` (default value) or `%DIR_W32%`, the extension will try to parse the last LaTeX tools used and look for `-out-directory=` and `-outdir=`, and automatically determine the output directory. This means that you can safely ignore this config if you use `latexmk` and do not manually `mv` the output files in your recipe.
-
-| type     | default value |
-| -------- | ------------- |
-| _string_ | `"%DIR%"`     |
-
-### `latex-workshop.latex.auxDir`
-
-The directory where the extension tries to find auxiliary project files (e.g., aux, fls).
-
-Both relative and absolute paths are supported. Relative path start from the root file location, so beware if it is located in sub-directory. The path must not contain a trailing slash. The LaTeX toolchain should output auxiliary files to this path. For a list of supported placeholders, please visit https://github.com/James-Yu/LaTeX-Workshop/wiki/Compile#placeholders. Note that if this config is set to `%OUTDIR%` (default value), the extension will try to parse the last LaTeX tools used and look for `-aux-directory=` and `-auxdir=`, and automatically determine the auxiliary directory.
-
-| type     | default value |
-| -------- | ------------- |
-| _string_ | `"%OUTDIR%"`  |
-
-
 
 ### `latex-workshop.view.pdf.viewer`
 

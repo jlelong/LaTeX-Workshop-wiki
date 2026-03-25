@@ -21,6 +21,8 @@ The following settings are helpful to customize how to build a project and how t
 | [`latex-workshop.latex.magic.bib.args`](#magic-comments) | Arguments for the `BIB program` | | _array_ of _strings_ |
 | [`latex-workshop.latex.build.enableMagicComments`](#latex-workshoplatexbuildenableMagicComments) | Enable magic comments | true | _boolean_ |
 | [`latex-workshop.latex.build.fromWorkspaceFolder`](#latex-workshoplatexbuildfromWorkspaceFolder) | Run recipe from workspace folder | false | _boolean_ |
+| [`latex-workshop.latex.outDir`](#latex-workshoplatexoutdir) | Where to produce the PDF files | `"%DIR%"` | _string_ |
+| [`latex-workshop.latex.auxDir`](Compile#latex-workshoplatexoutdir) | Where to create auxiliary files | `"%OUTDIR%"` | _string_ |
 
 
 ## Terminating the current compilation
@@ -313,8 +315,8 @@ LaTeX Workshop registers the following placeholders
 | `%DIR%`         | The root file directory |
 | `%DIR_W32%`     | The root file directory with `\` path separator on Windows |
 | `%TMPDIR%`      | A temporary folder for storing auxiliary files |
-| `%OUTDIR%`      | The output directory configured in [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutdir) |
-| `%OUTDIR_W32%`  | The output directory configured in [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutdir) with `\` path separator on Windows |
+| `%OUTDIR%`      | The output directory configured in [`latex-workshop.latex.outDir`](#latex-workshoplatexoutdir) |
+| `%OUTDIR_W32%`  | The output directory configured in [`latex-workshop.latex.outDir`](#latex-workshoplatexoutdir) with `\` path separator on Windows |
 | `%AUXDIR%`      | The output directory configured in [`latex-workshop.latex.auxDir`](View#latex-workshoplatexauxdir) |
 | `%WORKSPACE_FOLDER%`  | The current workspace path |
 | `%RELATIVE_DIR%`  | The root file directory relative to the workspace folder |
@@ -387,11 +389,15 @@ While it is fine to write all contents in one `.tex` file, it is common to split
 
 ### The root file
 
+Root file discovery is largely influenced by the file opened in the active editor.
+
 To find the root file, LaTeX Workshop will follow the steps below, stopping whenever one is found:
 
 1. **Magic comment** `% !TEX root = relative/or/absolute/path/to/root/file.tex`. If such comments exist in the currently active editor, the referred file is set as root. You can use the command `latex-workshop.addtexroot` to help you insert the magic comment. Note that magic comments are only taken into account when [`latex-workshop.latex.build.enableMagicComments`](#latex-workshoplatexbuildenableMagicComments) to `true`.
 2. **Self check** If current active editor contains `\documentclass[...]{...}` (the `[...]` is optional), `\begin{document}`, `\starttext` or `\startTEXpage` depending on the value of [`latex-workshop.latex.rootFile.indicator`](#latex-workshoplatexrootfileindicator), it is set as root.
-3. **Root directory check** LaTeX Workshop iterates through all `.tex` files in the root folder of the workspace. The first one containing `\documentclass[...]{...}` (the `[...]` is optional) or `\begin{document}` depending on the value of [`latex-workshop.latex.rootFile.indicator`](#latex-workshoplatexrootfileindicator), and which includes the file in the active editor is set as the root file. To avoid parsing all `.tex` files in the workspace, you can narrow the search by specifying [`latex-workshop.latex.search.rootFiles.include`](#latex-workshoplatexsearchrootfilesinclude) and/or [`latex-workshop.latex.search.rootFiles.exclude`](#latex-workshoplatexsearchrootfilesexclude).
+3. **Root directory check** LaTeX Workshop iterates through all `.tex` files in the root folder of the workspace. The first one containing `\documentclass[...]{...}` (the `[...]` is optional) or `\begin{document}` depending on the value of [`latex-workshop.latex.rootFile.indicator`](#latex-workshoplatexrootfileindicator), and which includes the file in the active editor is set as the root file. File inclusion is computed using a regex based static parsing of `.tex` files looking for `include`, `input`, `import` and variants of them. Note we cannot compute file inclusions if user defined macros are used to include files.
+
+   To avoid parsing all `.tex` files in the workspace, you can narrow the search by specifying [`latex-workshop.latex.search.rootFiles.include`](#latex-workshoplatexsearchrootfilesinclude) and/or [`latex-workshop.latex.search.rootFiles.exclude`](#latex-workshoplatexsearchrootfilesexclude).
 4. **The `subfiles` package case** The main file is used to provide intellisense. The non-interactive functions `autobuild`, `autoclean` and forward `synctex` rely on the value of the configuration variable [`latex-workshop.latex.rootFile.useSubFile`](#latex-workshoplatexrootfileusesubfile) to choose between the main file and the subfile.
     - if [`latex-workshop.latex.rootFile.doNotPrompt`](#latex-workshoplatexrootfiledonotprompt) is `false`,  all the interactive commands `build`, `clean` and `view` use a quick pick box to ask the user which file is to be considered as the root File.
     - if [`latex-workshop.latex.rootFile.doNotPrompt`](#latex-workshoplatexrootfiledonotprompt) is `true`,  all the interactive commands `build`, `clean` and `view` use variable [`latex-workshop.latex.rootFile.useSubFile`](#latex-workshoplatexrootfileusesubfile) to choose between the main file and the subfile automatically.
@@ -400,7 +406,11 @@ To find the root file, LaTeX Workshop will follow the steps below, stopping when
 
 5. **The `.fls` files** LaTeX compilers when called with the `-recorder` option produce a file with `.fls` extension containing all the files _input_ and _output_ during compilation. The list of _input_ files contains all classes, packages, fonts, input `.tex` files, listings, graphs, ... Using `latexmk` always produces a `.fls` file.
 
-If no root file is found, most of the features in LaTeX Workshop will not work.
+If no root file is found, most of the features in LaTeX Workshop will not work. If you need to debug file inclusion, you can search the logs for
+
+- `root file`
+- `Input a file.tex from MASTER.tex`: it comes from the static parsing of `include`, `input`, `import`, ...
+- `Found ... from .fls`
 
 **Note**: for all this to work, you have to open the directory (or one of its antecedents) containing the whole LaTeX project.
 
@@ -487,6 +497,28 @@ Notice that problems are not displayed when you compile a LaTeX document in draf
 The raw compiler logs can be accessed in the _Output Pane_, choose _LaTeX Compiler_. Alternatively, call _View LaTeX compiler logs_ from the _Command Palette_, the associated command is `latex-workshop.compilerlog`. The default is to clear the logs before calling every tool of a recipe. If you prefer to keep the logs from all the tools of a recipe, set [`latex-workshop.latex.build.clearLog.everyRecipeStep.enabled`](#latex-workshoplatexbuildclearlogeveryrecipestepenabled) to `false`.
 
 ## Settings Details
+
+### `latex-workshop.latex.outDir`
+
+The directory where the extension tries to find project files (e.g., PDF and SyncTeX generated files).
+
+Both relative and absolute paths are supported. Relative path start from the root file location, so beware if it is located in sub-directory. The path must not contain a trailing slash. The LaTeX toolchain should output files to this path. For a list of supported placeholders, please visit https://github.com/James-Yu/LaTeX-Workshop/wiki/Compile#placeholders. Note that if this config is set to `%DIR%` (default value) or `%DIR_W32%`, the extension will try to parse the last LaTeX tools used and look for `-out-directory=` and `-outdir=`, and automatically determine the output directory. This means that you can safely ignore this config if you use `latexmk` and do not manually `mv` the output files in your recipe.
+
+| type     | default value |
+| -------- | ------------- |
+| _string_ | `"%DIR%"`     |
+
+### `latex-workshop.latex.auxDir`
+
+The directory where the extension tries to find auxiliary project files (e.g., aux, fls).
+
+| type     | default value |
+| -------- | ------------- |
+| _string_ | `"%OUTDIR%"`  |
+
+Both relative and absolute paths are supported. Relative path start from the root file location, so beware if it is located in sub-directory. The path must not contain a trailing slash. The LaTeX toolchain should output auxiliary files to this path. See the list of [supported placeholders](Compile#placeholders), Note that if this config is set to `%OUTDIR%` (default value), the extension will try to parse the last LaTeX tools used and look for `-aux-directory=` and `-auxdir=`, and automatically determine the auxiliary directory.
+
+Note that for compilation to succeed, it is sometimes required to reproduce in `auxdir` the directory hierarchy of the project. We create directories in `auxdir` using the computed list of files included in the root file. So, compilation may fail if LaTeX-Workshop cannot properly detect [files inclusion](#the-root-file).
 
 ### `latex-workshop.message.log.show`
 
@@ -578,7 +610,7 @@ LaTeX compilation typically generates several auxiliary files. They can be remov
 | [`latex-workshop.latex.clean.command`](#latex-workshoplatexcleancommand) | Define the command used to remove temporary files when [`latex-workshop.latex.clean.method`](#latex-workshoplatexcleanmethod) is set to `command` | `latexmk` | _string_ |
 | [`latex-workshop.latex.clean.args`](#latex-workshoplatexcleanargs) | Arguments of [`latex-workshop.latex.clean.command`](#latex-workshoplatexcleancommand) | `["-outdir=%OUTDIR%", "-c", "%TEX%"]` | _array_ of _string_ |
 | [`latex-workshop.latex.clean.fileTypes`](#latex-workshoplatexcleanfiletypes) | Extensions of files to clean |     | _array of strings_ |
-| [`latex-workshop.latex.clean.subfolder.enabled`](#latex-workshoplatexcleansubfolderenabled) | Clean LaTeX auxillary files recursively in sub-folders of [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutdir) | `false`   | _boolean_ |
+| [`latex-workshop.latex.clean.subfolder.enabled`](#latex-workshoplatexcleansubfolderenabled) | Clean LaTeX auxillary files recursively in sub-folders of [`latex-workshop.latex.outDir`](#latex-workshoplatexoutdir) | `false`   | _boolean_ |
 
 ### `latex-workshop.latex.autoClean.run`
 
@@ -602,7 +634,7 @@ This property defines whether LaTeX Workshop will try to clean and build the pro
 
 ### `latex-workshop.latex.clean.subfolder.enabled`
 
-Delete LaTeX auxiliary files recursively in sub-folders of [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutdir).
+Delete LaTeX auxiliary files recursively in sub-folders of [`latex-workshop.latex.outDir`](#latex-workshoplatexoutdir).
 
 | type      | default value |
 | --------- | ------------- |
@@ -644,7 +676,7 @@ Define the method used by the `clean` command to remove temporary files.
 |---------------------|---------------------------|
 | _enum_ of _strings_ | `"command"`                  |
 
-- `"glob"`: Clean all the files located in [`latex-workshop.latex.outDir`](View#latex-workshoplatexoutdir) and matching the glob patterns listed in [`latex-workshop.latex.clean.fileTypes`](#latex-workshoplatexcleanfiletypes).
+- `"glob"`: Clean all the files located in [`latex-workshop.latex.outDir`](#latex-workshoplatexoutdir) and matching the glob patterns listed in [`latex-workshop.latex.clean.fileTypes`](#latex-workshoplatexcleanfiletypes).
 - `"command"`: Run [`latex-workshop.latex.clean.command`](#latex-workshoplatexcleancommand) to clean temporary files.
 
 ## External build command
