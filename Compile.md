@@ -564,6 +564,14 @@ Exclude latex log messages matching the given regexp from the problems panel.
 | -------------------- | ------------- |
 | _array_ of _strings_ | `[]`          |
 
+### `latex-workshop.message.dvipdfmxlog.exclude`
+
+Exclude dvipdfmx log messages matching the given regexp from the problems panel.
+
+| type                 | default value |
+| -------------------- | ------------- |
+| _array_ of _strings_ | `[]`          |
+
 ### `latex-workshop.message.information.show`
 
 Display information messages in popup notifications.
