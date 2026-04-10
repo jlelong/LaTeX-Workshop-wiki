@@ -25,7 +25,7 @@ You **MUST NOT** build an untrusted LaTeX document with VS Code Remote Developme
 
 See the comment: https://github.com/microsoft/vscode-remote-release/issues/6608#issuecomment-1112960548
 
-> you should only connect to VS Code servers that you trust. So you should only connect to SSH machines that you trust and only create dev containers from definitions that you trust (i.e. **you should not use dev containers as a sandbox**).
+You should only connect to VS Code servers that you trust. So you should only connect to SSH machines that you trust and only create dev containers from definitions that you trust (i.e. **you should not use dev containers as a sandbox**).
 
 ## Using `code serve-web` behind a reverse proxy
 
@@ -50,8 +50,8 @@ To make the PDF viewer accessible, the reverse proxy must also forward the PDF s
 
 3. Set `latex-workshop.view.pdf.internal.urlPrefix` to the externally reachable URL, e.g., `https://yourdomain.com/latex-workshop-pdf`.
 
-> **Security warning:** The PDF server exposes PDFs without any authentication. Although the URL contains a base64-encoded path of the PDF file and the server only serves files currently being viewed, anyone who knows or obtains the correct URL can read the file. If the proxied path is publicly reachable, consider restricting access (e.g., same authentication as `code serve-web`, VPN, or IP allowlist).
+**Security warning:** The PDF server exposes PDFs without any authentication. Although the URL contains a base64-encoded path of the PDF file and the server only serves files currently being viewed, anyone who knows or obtains the correct URL can read the file. If the proxied path is publicly reachable, consider restricting access (e.g., same authentication as `code serve-web`, VPN, or IP allowlist).
 
-> **Note:** LaTeX Workshop listens on `127.0.0.1` by default. If your reverse proxy runs on a different machine, use a tool like `socat` to forward the port locally first.
+**Note:** LaTeX Workshop listens on `127.0.0.1` by default. If your reverse proxy runs on a different machine, use a tool like `socat` to forward the port locally first.
 
-> **Note:** This setup is only needed for environments like `code serve-web` where the browser cannot reach the extension's local port directly. In setups with automatic port forwarding (such as `code tunnel`, Codespaces, Remote-SSH, or [`code-server`](https://github.com/coder/code-server)), the PDF viewer works out of the box without any of the configuration above.
+**Note:** This setup is only needed for environments like `code serve-web` where the browser cannot reach the extension's local port directly. In setups with automatic port forwarding (such as `code tunnel`, Codespaces, Remote-SSH, or [`code-server`](https://github.com/coder/code-server)), the PDF viewer works out of the box without any of the configuration above.
