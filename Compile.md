@@ -20,7 +20,7 @@ The following settings are helpful to customize how to build a project and how t
 | [`latex-workshop.latex.magic.args`](#magic-comments) | Arguments for the `TeX program` | | _array_ of _strings_ |
 | [`latex-workshop.latex.magic.bib.args`](#magic-comments) | Arguments for the `BIB program` | | _array_ of _strings_ |
 | [`latex-workshop.latex.build.enableMagicComments`](#latex-workshoplatexbuildenableMagicComments) | Enable magic comments | true | _boolean_ |
-| [`latex-workshop.latex.build.fromWorkspaceFolder`](#latex-workshoplatexbuildfromWorkspaceFolder) | Run recipe from workspace folder | false | _boolean_ |
+| [`latex-workshop.latex.build.fromFolder`](#latex-workshoplatexbuildfromFolder) | Run recipe from the given folder | `""` | _string_ |
 | [`latex-workshop.latex.outDir`](#latex-workshoplatexoutdir) | Where to produce the PDF files | `"%DIR%"` | _string_ |
 | [`latex-workshop.latex.auxDir`](Compile#latex-workshoplatexoutdir) | Where to create auxiliary files | `"%OUTDIR%"` | _string_ |
 
@@ -321,6 +321,8 @@ LaTeX Workshop registers the following placeholders
 | `%WORKSPACE_FOLDER%`  | The current workspace path |
 | `%RELATIVE_DIR%`  | The root file directory relative to the workspace folder |
 | `%RELATIVE_DOC%`  | file root file path relative to the workspace folder |
+| `%RELATIVE_CWD_DIR%`  | The root file directory relative to the working folder defined in [`latex-workshop.latex.build.fromFolder`](#latex-workshoplatexbuildfromFolder) |
+| `%RELATIVE_CWD_DOC%`  | file root file path relative to the working folder defined in [`latex-workshop.latex.build.fromFolder`](#latex-workshoplatexbuildfromFolder) |
 
 As most LaTeX compiler accepts root file name without extension, `%DOC%` and `%DOCFILE%` do not include the filename extension. Meanwhile, the `texify` tool requires the complete filename with its extension, hence the use of `%DOC_EXT%` in the configuration of `texify`.
 
@@ -365,15 +367,16 @@ It also applies to auto build. Recipes are referred to by their names as defined
 | -------- | ------------- |
 | _string_ | `"first"`     |
 
-### `latex-workshop.latex.build.fromWorkspaceFolder`
+### `latex-workshop.latex.build.fromFolder`
 
-Run the recipe from the workspace folder.
 
-If false, the recipe is run from the directory containing the root file. The setting has no effect on external commands `#latex-workshop.latex.external.build.command`.
+Run the recipe from the given folder.
+
+The default empty value runs the recipe from the directory containing the root file. Relative paths are resolved from the workspace folder containing the root file; if no workspace folder contains the root file, they are resolved from the root file's directory. The setting has no effect on external commands `#latex-workshop.latex.external.build.command`.
 
 |   type    |  default value   |
 | --------- | ---------------- |
-| _boolean_ | `false`          |
+| _string_  | `""`          |
 
 ### `latex-workshop.latex.build.rootfileInStatus`
 
