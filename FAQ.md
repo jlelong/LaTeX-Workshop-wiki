@@ -205,7 +205,7 @@ If you like to work with no sidebar in Visual Studio Code and yet the LaTeX side
 
 ## Spell check
 
-[LTeX](https://marketplace.visualstudio.com/items?itemName=valentjn.vscode-ltex) is a great tool for checking spelling, grammar and style in many languages. If you only need spell checking, [Code Spellchecker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) does a great job, too.
+[Code Spellchecker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) does a great job, too.
 
 ## I cannot nest snippets
 

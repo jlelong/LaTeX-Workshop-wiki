@@ -113,7 +113,7 @@ Sort content when calling VSCode formatter on a .bib file.
 
 ### `latex-workshop.bibtex-entries.first`
 
-When [`latex-workshop.bibtex-fields.sort.enabled`](#latex-workshopbibtex-formatsortenabled) is true, these fields are put at the top, in the order defined by the array.
+When [`latex-workshop.bibtex-fields.sort.enabled`](#latex-workshopbibtex-formatsortenabled) is true, these entry types are put at the top, in the order defined by the array.
 
 | Type               | Default Value           |
 | ------------------ | ----------------------- |

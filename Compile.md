@@ -369,14 +369,13 @@ It also applies to auto build. Recipes are referred to by their names as defined
 
 ### `latex-workshop.latex.build.fromFolder`
 
-
 Run the recipe from the given folder.
 
-The default empty value runs the recipe from the directory containing the root file. Relative paths are resolved from the workspace folder containing the root file; if no workspace folder contains the root file, they are resolved from the root file's directory. The setting has no effect on external commands `#latex-workshop.latex.external.build.command`.
+The default empty value runs the recipe from the directory containing the root file. Relative paths are resolved from the workspace folder containing the root file; if no workspace folder contains the root file, they are resolved from the root file's directory. The setting has no effect on external commands [`latex-workshop.latex.external.build.command`](#latex-workshoplatexexternalbuildcommand).
 
-|   type    |  default value   |
-| --------- | ---------------- |
-| _string_  | `""`          |
+|   type   |  default value   |
+| -------- | ---------------- |
+| _string_ | `""`             |
 
 ### `latex-workshop.latex.build.rootfileInStatus`
 
