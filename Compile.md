@@ -269,7 +269,7 @@ Each `tool` appearing in the `tools` field of recipes is defined `latex-workshop
 
 You can create multiple recipes with different tools. Each recipe is an object in the configuration list, consisting of a `name` field and a list of `tools` to be invoked in the recipe.
 
-Each `tool` is an object consisting of a `name`, a `command` to be spawned, its arguments (`args`) and some specific environment variables (`env`). The `env` entry is a dictionary. Imagine you want to use a `texmf` subdirectory local to your home project, just write
+Each `tool` is an object consisting of a `name`, a `command` to be spawned, its arguments (`args`), some optional specific environment variables (`env`), and an optional working directory override defined in `cwd`. The `env` entry is a dictionary. Imagine you want to use a `texmf` subdirectory local to your home project, just write
 
 ```json
   "env": {
@@ -294,14 +294,13 @@ Notice that, when this extension is used on [Windows Subsystem for Linux](https:
       "-pdf",
       "-outdir=%OUTDIR%",
       "%DOC%"
-    ],
-    "env": {}
+    ]
   }
 ```
 
 ### Placeholders
 
-The `args` and `env` parameters of LaTeX tools can contain symbols surrounded by `%`. These placeholders are replaced on-the-fly.
+The `args`, `env`, and `cwd` of LaTeX tools can contain symbols surrounded by `%`. These placeholders are replaced on-the-fly.
 LaTeX Workshop registers the following placeholders
 
 | Placeholder     | Replaced by  |
