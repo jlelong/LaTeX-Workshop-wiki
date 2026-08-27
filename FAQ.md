@@ -82,11 +82,11 @@ These versions are sandboxed and are known to cause problems (e.g. [here](https:
 
 ## The PDF viewer is blank or has graphical glitches
 
-If the PDF viewer is blank or has graphical glitches, please try restarting VS Code with the option `--disable-gpu`. See [the official document](https://code.visualstudio.com/docs/supporting/FAQ#_vs-code-is-blank), [realted issue](https://github.com/microsoft/vscode/issues/92970), and [another issue](https://github.com/James-Yu/LaTeX-Workshop/issues/1935).
+If the PDF viewer is blank or has graphical glitches, please try restarting VS Code with the option `--disable-gpu`. See [the official document](https://code.visualstudio.com/docs/supporting/FAQ#_vs-code-is-blank), [related issue](https://github.com/microsoft/vscode/issues/92970), and [another issue](https://github.com/James-Yu/LaTeX-Workshop/issues/1935).
 
 ## Cygwin is not supported
 
-LaTeX Workshop does not support TeX Live installed through Cygwin. Please install TeX Live and other TeX distributions independently of Cygwin.
+LaTeX Workshop does not support TeX Live installed through Cygwin. Please install TeX Live and other TeX distributions independently of Cygwin, or install a third-party shim like [Cygshim](https://github.com/edemaine/cygshim).
 
 ## code-server is not supported
 
