@@ -317,7 +317,7 @@ LaTeX Workshop registers the following placeholders
 | `%TMPDIR%`      | A temporary folder for storing auxiliary files |
 | `%OUTDIR%`      | The output directory configured in [`latex-workshop.latex.outDir`](#latex-workshoplatexoutdir) |
 | `%OUTDIR_W32%`  | The output directory configured in [`latex-workshop.latex.outDir`](#latex-workshoplatexoutdir) with `\` path separator on Windows |
-| `%AUXDIR%`      | The output directory configured in [`latex-workshop.latex.auxDir`](View#latex-workshoplatexauxdir) |
+| `%AUXDIR%`      | The output directory configured in [`latex-workshop.latex.auxDir`](#latex-workshoplatexauxdir) |
 | `%WORKSPACE_FOLDER%`  | The current workspace path |
 | `%RELATIVE_DIR%`  | The root file directory relative to the workspace folder |
 | `%RELATIVE_DOC%`  | file root file path relative to the workspace folder |
